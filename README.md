@@ -7,6 +7,7 @@ http://apbcss.com/
 ## Table of contents
 
 * [Quick start](#quick-start)
+* [What's included](#What's-included)
 * [Creators](#creators)
 * [Copyright and license](#copyright-and-license)
 
