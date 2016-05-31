@@ -6,21 +6,32 @@ http://apbcss.com/
 
 ## Quick start
 
-**Clone the repo**
+**Clone the repo:**
 ```
 git clone git@github.com:webcyou/atomic-package.git
 ```
 
-**Install with Bower**
+**Install with [Bower](http://bower.io):**
 ```
 bower install atomic-package
 ```
 
-**Install with npm**
+**Install with [npm](https://www.npmjs.com):**
 ```
 npm install atomic-package
 ```
+### What's included
 
+```
+atomic-package/
+├── css/
+│   ├── atomic-package.css
+│   ├── atomic-package.min.css
+│   └── atomic-package-theme.css
+└── js/
+    ├── atomic-package.js
+    └── atomic-package.min.js
+```
 
 ## Creators
 
