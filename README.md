@@ -1,4 +1,4 @@
-# AtomicPackage
+# Atomic Package
 ## APB CSS (Atomic Parts Base CSS) + JavaScript framework.
 
 **APB CSS**
