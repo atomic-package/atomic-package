@@ -1,0 +1,9 @@
+*.DS_Store
+.cache
+Thumbs.db
+*.iml
+*.idea
+
+# Folders to ignore
+bower_components
+node_modules
