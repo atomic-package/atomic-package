@@ -16,7 +16,7 @@ git clone git@github.com:webcyou/atomic-package.git
 bower install atomic-package
 ```
 
-*Install with npm*
+**Install with npm**
 ```
 npm install atomic-package
 ```
