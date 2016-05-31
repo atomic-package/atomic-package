@@ -7,13 +7,20 @@ http://apbcss.com/
 ## Quick start
 
 **Clone the repo**
-`git clone git@github.com:webcyou/atomic-package.git`
+```
+git clone git@github.com:webcyou/atomic-package.git
+```
 
 **Install with Bower**
-'bower install atomic-package'
+```
+bower install atomic-package
+```
 
 *Install with npm*
-'npm install atomic-package'
+```
+npm install atomic-package
+```
+
 
 ## Creators
 
