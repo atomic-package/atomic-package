@@ -1,17 +1,19 @@
 {{ partial "header.html" . }}
+<section id="top">
+    <div class="container">
 
-<div id="main-content" class="main-content">
+        <div id="primary" class="content-area">
+            <div id="content" class="site-content" role="main">
 
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
+                {{ range first 10 (where .Data.Pages "Section" "post") }}
+                {{ partial "content.html" . }}
+                {{ end }}
 
-            {{ range first 10 (where .Data.Pages "Section" "post") }}
-            {{ partial "content.html" . }}
-            {{ end }}
+            </div><!-- #content -->
+        </div><!-- #primary -->
+        {{ partial "sidebar.html" . }}
+    </div><!-- #main-content -->
+</section>
 
-        </div><!-- #content -->
-    </div><!-- #primary -->
-    {{ partial "sidebar.html" . }}
-</div><!-- #main-content -->
 
 {{ partial "footer.html" . }}
