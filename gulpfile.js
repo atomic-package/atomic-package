@@ -37,7 +37,7 @@ gulp.task('clean-dir', function() {
     del([RELEASE_DIR + '/*'], {force: true});
 });
 
-gulp.task('clean-ts', function(cb) {
+gulp.task('ts.clean', function(cb) {
     del([RELEASE_DIR + '/**/*.ts'], {force: true}, cb);
 });
 
@@ -55,13 +55,6 @@ gulp.task('compass', function() {
         }));
 });
 
-gulp.task('copy-js', function () {
-    gulp.src([
-            SOURCE_DIR + '/js/' + '**/*.js',
-            '!' + SOURCE_DIR + '/js/' + '**/contrib/*.js'
-    ]).pipe(gulp.dest( RELEASE_DIR + '/js/' ));
-});
-
 
 // JavaScript uglify
 gulp.task('uglify-contrib', function () {
@@ -72,7 +65,7 @@ gulp.task('uglify-contrib', function () {
 });
 
 
-gulp.task('cssmin', function () {
+gulp.task('css.min', function () {
     gulp.src(RELEASE_DIR + '/css/**/*.css')
         .pipe(cssmin())
         .pipe(rename({
@@ -82,13 +75,11 @@ gulp.task('cssmin', function () {
 });
 
 // typescript
-gulp.task('typescript', function () {
-    gulp.src([
-            SOURCE_DIR + '/ts/**/*.ts'
-    ])
+gulp.task('ts', function () {
+    gulp.src(tsFiles)
         .pipe(plumber())
         .pipe(typescript({ removeComments: true, module: 'commonjs' }))
-        .pipe(gulp.dest(RELEASE_DIR + '/js/'));
+        .pipe(gulp.dest(SOURCE_DIR + '/js/'));
 });
 
 
@@ -99,16 +90,60 @@ gulp.task('tsd', function () {
     }, callback);
 });
 
+
+gulp.task('css.dist', function() {
+    gulp.src(scssFiles)
+        .pipe(plumber())
+        .pipe(compass({
+            style: 'expanded',
+            specify: DIST_DIR + '/scss/atomic-pack.scss',
+            css: RELEASE_DIR + '/css',
+            sass: SOURCE_DIR + '/scss',
+            imagesDir: ''
+        }));
+});
+
+gulp.task('js.copy', function() {
+    gulp.src([
+            SOURCE_DIR + '/js/' + '**/*.js',
+            '!' + SOURCE_DIR + '/js/' + '**/contrib/*.js'
+    ]).pipe(gulp.dest( RELEASE_DIR + '/js/' ));
+});
+
+gulp.task('js.concat', function() {
+    gulp.src(jsFiles)
+        .pipe(plumber())
+        .pipe(concat('atomic-package.js'))
+        .pipe(gulp.dest( RELEASE_DIR + '/js/'));
+});
+
+gulp.task('js.dist', function() {
+    gulp.src(jsFiles)
+        .pipe(plumber())
+        .pipe(concat('atomic-package.js'))
+        .pipe(gulp.dest(DIST_DIR));
+
+    gulp.src(DIST_DIR + 'atomic-package.js')
+        .pipe(plumber())
+        .pipe(uglify({
+            preserveComments: 'some' // ! から始まるコメントを残すオプションを追加
+        }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(DIST_DIR));
+});
+
 // ファイル更新監視
 gulp.task('watch', function() {
     // compass
     gulp.watch([scssFiles],['compass']);
     // css min
-    gulp.watch([cssFiles],['cssmin']);
+    gulp.watch([cssFiles],['css.min']);
     // js
-    gulp.watch([jsFiles],['copy-js']);
+    gulp.watch([jsFiles],['js.copy']);
     // typescript
-    gulp.watch([tsFiles],['build-typescript']);
+    gulp.watch([tsFiles],['build.ts']);
 });
 
 
@@ -136,19 +171,20 @@ gulp.task('connect', function() {
 
 
 // Build Task
-gulp.task('build-ui', ['compass']);
-gulp.task('build-typescript', ['typescript']);
-gulp.task('build-javascript', ['copy-js', 'uglify-contrib']);
+gulp.task('build.ui', ['compass']);
+gulp.task('build.ts', ['ts']);
+gulp.task('build.js', ['js.copy', 'uglify-contrib']);
 
+gulp.task('dist', ['css.dist', 'js.dist']);
 
 // All task
 gulp.task('default', function(callback) {
     runSequence(
         'clean-dir',
         'compass',
-        'build-ui',
-        'build-typescript',
-        'build-javascript',
+        'build.ui',
+        'build.ts',
+        'build.js',
         'watch',
         callback
     );
