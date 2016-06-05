@@ -4,6 +4,7 @@
   "description": "APB CSS (Atomic Parts Base CSS) + JavaScript framework.",
   "main": "index.js",
   "scripts": {
+    "boot": "docs/boot.sh & gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
