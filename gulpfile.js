@@ -1,8 +1,9 @@
 var gulp = require("gulp"),
     path = require('path'),
     foreach = require('gulp-foreach'),
-    compass = require('gulp-compass'),
+    sass = require('gulp-sass'),
     cssmin = require('gulp-cssmin'),
+    sourcemaps = require('gulp-sourcemaps'),
     connect = require('gulp-connect'),
     watch = require('gulp-watch'),
     clean = require('gulp-clean'),
@@ -53,16 +54,16 @@ gulp.task('ts.clean', function(cb) {
 });
 
 
-// compass
-gulp.task('compass', function() {
+// Sass, CSS
+gulp.task('sass', function () {
   return gulp.src(scssFiles)
-    .pipe(plumber())
-    .pipe(compass({
-        style: 'expanded',
-        css: RELEASE_DIR + '/css/',
-        sass: SOURCE_DIR + '/scss/',
-        imagesDir: ''
-    }));
+    .pipe(sass({
+      outputStyle: 'expanded'
+    })
+    .pipe(sourcemaps.init())
+    .on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(RELEASE_DIR + '/css/'));
 });
 
 gulp.task('css.copy', function() {
@@ -202,7 +203,7 @@ gulp.task('build.ui', function(callback) {
 
 gulp.task('build.css', function(callback) {
   return runSequence(
-    'compass',
+    'sass',
     'css.min',
     'css.copy',
     callback
