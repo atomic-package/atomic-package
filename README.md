@@ -34,6 +34,7 @@ atomic-package/
 ├── css/
 │   ├── atomic-package.css
 │   ├── atomic-package.min.css
+│   ├── atomic-package-theme.min.css
 │   └── atomic-package-theme.css
 └── js/
     ├── atomic-package.js
