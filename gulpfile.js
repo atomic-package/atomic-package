@@ -76,12 +76,15 @@ gulp.task('css.copy.dist', function() {
 });
 
 gulp.task('css.min', function () {
-    return gulp.src(RELEASE_DIR + '/css/**/*.css')
-        .pipe(cssmin())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(RELEASE_DIR + '/css/'));
+    return gulp.src([
+        RELEASE_DIR + '/css/**/*.css',
+        '!' + RELEASE_DIR + '/css/**/*min.css'
+      ])
+      .pipe(cssmin())
+      .pipe(rename({
+        suffix: '.min'
+      }))
+      .pipe(gulp.dest(RELEASE_DIR + '/css/'));
 });
 
 // JavaScript uglify
@@ -120,7 +123,10 @@ gulp.task('tsd', function () {
 //});
 
 gulp.task('js.min', function() {
-  return gulp.src(RELEASE_DIR + '/js/**/*.js')
+  return gulp.src([
+      RELEASE_DIR + '/js/**/*.js',
+      '!' + RELEASE_DIR + '/js/**/*min.js'
+    ])
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
