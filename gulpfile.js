@@ -2,6 +2,7 @@ var gulp = require("gulp"),
     path = require('path'),
     foreach = require('gulp-foreach'),
     sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
     cssmin = require('gulp-cssmin'),
     sourcemaps = require('gulp-sourcemaps'),
     connect = require('gulp-connect'),
@@ -57,17 +58,25 @@ gulp.task('ts.clean', function(cb) {
 // Sass, CSS
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
+    //.pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'expanded'
+      outputStyle: 'expanded',
+      sourcemap: true
     })
-    .pipe(sourcemaps.init())
     .on('error', sass.logError))
-    .pipe(sourcemaps.write())
+//    .pipe(sourcemaps.write('maps', {
+//      includeContent: false,
+//      sourceRoot: RELEASE_DIR + '/css/maps/'
+//    }))
     .pipe(gulp.dest(RELEASE_DIR + '/css/'));
 });
 
 gulp.task('css.copy', function() {
   return gulp.src(cssFiles)
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', 'ie 8', 'ios 5', 'android 2.3'],
+      cascade: false
+    }))
     .pipe(gulp.dest( DOCS_DIR + '/static/css/' ));
 });
 

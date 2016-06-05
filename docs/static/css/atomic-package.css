@@ -268,6 +268,9 @@ h4 {
 
 .btn.primary {
   background: #404040;
+  background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#282828));
+  background: -webkit-linear-gradient(top, #404040, #282828);
+  background: linear-gradient(top, #404040, #282828);
 }
 
 .btn.primary:hover {
@@ -276,6 +279,8 @@ h4 {
 
 .btn.secondly {
   background: #EEEEEE;
+  -webkit-box-shadow: inset #E5E5E5 0 0 1px 1px;
+  box-shadow: inset #E5E5E5 0 0 1px 1px;
 }
 
 .btn.secondly > a,
