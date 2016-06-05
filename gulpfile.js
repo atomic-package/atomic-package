@@ -14,7 +14,8 @@ var gulp = require("gulp"),
     server = require('gulp-express'),
     plumber = require('gulp-plumber'),
     del = require('del'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    exec = require('child_process').execSync;
 
 var SOURCE_DIR = '.',
     DOCS_DIR = 'docs',
@@ -153,6 +154,12 @@ gulp.task('watch', function() {
 gulp.task('docs.copy', function() {
   return gulp.src(docsFiles)
     .pipe(gulp.dest( DOCS_DIR + '/public/' ));
+});
+
+gulp.task('docs.boot', function() {
+  console.log("Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)");
+  console.log("Press Ctrl+C to stop");
+  return exec(DOCS_DIR + '/boot.sh');
 });
 
 /**
