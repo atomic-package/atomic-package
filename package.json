@@ -11,12 +11,12 @@
     "url": "git+https://github.com/webcyou/atomic-package.git"
   },
   "keywords": [
-    "APB",
+    "APBCSS",
     "CSS",
-    "Atomic",
-    "Parts",
-    "Base",
-    "CSS",
+    "Atomic Design",
+    "UI Parts",
+    "Atomic Base",
+    "JavaScript",
     "framework"
   ],
   "author": "daisuke.takayama",

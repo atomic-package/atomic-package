@@ -33,6 +33,10 @@ var jsFiles = [
       RELEASE_DIR + '/js/*.js'
     ];
 
+var docsFiles = [
+      DOCS_DIR + '/static/css/*.css',
+      DOCS_DIR + '/static/js/*.js'
+    ];
 
 // Clean Task
 gulp.task('clean.release', function() {
@@ -135,12 +139,21 @@ gulp.task('js.copy.dist', function() {
 
 // ファイル更新監視
 gulp.task('watch', function() {
-    // SCSS
-    gulp.watch([scssFiles],['build.css']);
-    // typescript
-    gulp.watch([tsFiles],['build.js']);
+  // SCSS
+  gulp.watch([scssFiles],['build.css']);
+
+  // typescript
+  gulp.watch([tsFiles],['build.js']);
+
+  // docs files
+  gulp.watch([docsFiles],['docs.copy']);
 });
 
+
+gulp.task('docs.copy', function() {
+  return gulp.src(docsFiles)
+    .pipe(gulp.dest( DOCS_DIR + '/public/' ));
+});
 
 /**
  * Gulp Server
@@ -148,8 +161,7 @@ gulp.task('watch', function() {
 gulp.task('server', ['connect'], function() {
     gulp.watch([
             SOURCE_DIR + '/scss/**/*.*',
-            SOURCE_DIR + '/ts/**/*.*',
-            SOURCE_DIR + '/js/**/*.*'
+            SOURCE_DIR + '/ts/**/*.*'
     ]).on('change', function(changedFile) {
         gulp.src(changedFile.path).pipe(connect.reload());
     });

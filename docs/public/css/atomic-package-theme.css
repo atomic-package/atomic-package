@@ -4,9 +4,7 @@
 /*
  * Reset Style
 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, address, em, img, small, strong, b, i,
-dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, canvas, footer,
-header, menu, nav, section, time, audio, video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strike, strong, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,12 +18,27 @@ body {
   line-height: 1;
 }
 
-article, footer, header, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
 
-ul {
+ol, ul {
   list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
@@ -68,7 +81,7 @@ input, select {
 body {
   margin: 0;
   padding: 0;
-  background: #eee;
+  background: #fff;
   font-size: 14px;
   text-align: left;
   font-family: arial, "Hiragino Kaku Gothic Pro", sans-serif;
@@ -183,7 +196,7 @@ h1 .text {
 
 /* Atomic */
 h2 {
-  font-size: 74px;
+  font-size: 18px;
   color: #333;
   /* State */
   /* Skin */
@@ -199,7 +212,7 @@ h2.yellow {
 h3 {
   padding-bottom: 6px;
   border-bottom: #E5A45B 2px solid;
-  font-size: 40px;
+  font-size: 16px;
   color: #333;
 }
 
@@ -207,7 +220,7 @@ h3 {
 h4 {
   padding-left: 6px;
   border-left: #E5A45B 5px solid;
-  font-size: 30px;
+  font-size: 14px;
   color: #333;
 }
 
