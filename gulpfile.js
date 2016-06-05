@@ -1,5 +1,6 @@
 var gulp = require("gulp"),
     path = require('path'),
+    foreach = require('gulp-foreach'),
     compass = require('gulp-compass'),
     cssmin = require('gulp-cssmin'),
     connect = require('gulp-connect'),
@@ -16,14 +17,17 @@ var gulp = require("gulp"),
     runSequence = require('run-sequence');
 
 var SOURCE_DIR = '.',
-    RELEASE_DIR = 'docs/static',
+    DOCS_DIR = 'docs',
+    RELEASE_DIR = 'docs/dist',
     DIST_DIR = 'dist';
 
 var tsFiles = [ SOURCE_DIR + '/ts/**/*.ts' ];
-var scssFiles = [ SOURCE_DIR + '/scss/**/*.scss' ];
+var scssFiles = [
+      SOURCE_DIR + '/scss/**/*.scss'
+      //SOURCE_DIR + '/scss/atomic-package'
+    ];
 var cssFiles = [
-      RELEASE_DIR + '/css/**/*.css',
-      DIST_DIR + '/css/**/*.css'
+      RELEASE_DIR + '/css/**/*.css'
     ];
 
 var jsFiles = [
@@ -44,26 +48,20 @@ gulp.task('ts.clean', function(cb) {
 
 // compass
 gulp.task('compass', function() {
-    return gulp.src(scssFiles)
-        .pipe(plumber())
-        .pipe(compass({
-            style: 'expanded',
-            specify: SOURCE_DIR + '/scss/atomic-pack.scss',
-            css: RELEASE_DIR + '/css',
-            sass: SOURCE_DIR + '/scss',
-            imagesDir: ''
-        }));
+  return gulp.src(scssFiles)
+    .pipe(plumber())
+    .pipe(compass({
+        style: 'expanded',
+        css: RELEASE_DIR + '/css/',
+        sass: SOURCE_DIR + '/scss/',
+        imagesDir: ''
+    }));
 });
 
-
-// JavaScript uglify
-gulp.task('uglify-contrib', function () {
-    gulp.src([])
-        .pipe(uglify())
-        .pipe(concat('contrib.js'))
-        .pipe(gulp.dest(RELEASE_DIR + '/js/'));
+gulp.task('css.copy', function(a) {
+  gulp.src(cssFiles)
+    .pipe(gulp.dest( DOCS_DIR + '/static/css/' ));
 });
-
 
 gulp.task('css.min', function () {
     gulp.src(RELEASE_DIR + '/css/**/*.css')
@@ -72,6 +70,26 @@ gulp.task('css.min', function () {
             suffix: '.min'
         }))
         .pipe(gulp.dest(RELEASE_DIR + '/css/'));
+});
+
+gulp.task('css.dist', function() {
+    gulp.src(scssFiles)
+        .pipe(plumber())
+        .pipe(compass({
+            style: 'expanded',
+            specify: DIST_DIR + '/scss/atomic-package/atomic-package.scss',
+            css: RELEASE_DIR + '/css',
+            sass: SOURCE_DIR + '/scss/atomic-package/',
+            imagesDir: ''
+        }));
+});
+
+// JavaScript uglify
+gulp.task('uglify-contrib', function () {
+    gulp.src([])
+        .pipe(uglify())
+        .pipe(concat('contrib.js'))
+        .pipe(gulp.dest(RELEASE_DIR + '/js/'));
 });
 
 // typescript
@@ -88,19 +106,6 @@ gulp.task('tsd', function () {
         command: 'reinstall',
         config: './tsd.json'
     }, callback);
-});
-
-
-gulp.task('css.dist', function() {
-    gulp.src(scssFiles)
-        .pipe(plumber())
-        .pipe(compass({
-            style: 'expanded',
-            specify: DIST_DIR + '/scss/atomic-pack.scss',
-            css: RELEASE_DIR + '/css',
-            sass: SOURCE_DIR + '/scss',
-            imagesDir: ''
-        }));
 });
 
 gulp.task('js.copy', function() {
@@ -182,6 +187,7 @@ gulp.task('default', function(callback) {
     runSequence(
         'clean-dir',
         'compass',
+        'css.copy',
         'build.ui',
         'build.ts',
         'build.js',
