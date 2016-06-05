@@ -28,8 +28,7 @@
   &.secondly {
     background: #EEEEEE;
     box-shadow: inset #E5E5E5 0 0 1px 1px;
-    box-shadow: inset #E5E5E5 0 0 1px 1px;
-    background(linear-gradient(top, #EEEEEE, #E5E5E5);
+    background: linear-gradient(top, #EEEEEE, #E5E5E5);
     > a,
     > input { color: #000000; }
     &:hover { background: #EAEAEA; }

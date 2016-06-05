@@ -281,6 +281,9 @@ h4 {
   background: #EEEEEE;
   -webkit-box-shadow: inset #E5E5E5 0 0 1px 1px;
   box-shadow: inset #E5E5E5 0 0 1px 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#E5E5E5));
+  background: -webkit-linear-gradient(top, #EEEEEE, #E5E5E5);
+  background: linear-gradient(top, #EEEEEE, #E5E5E5);
 }
 
 .btn.secondly > a,

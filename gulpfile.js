@@ -37,8 +37,7 @@ var jsFiles = [
     ];
 
 var docsFiles = [
-      DOCS_DIR + '/static/css/*.css',
-      DOCS_DIR + '/static/js/*.js'
+      DOCS_DIR + '/static/**/*.++'
     ];
 
 // Clean Task
@@ -60,8 +59,7 @@ gulp.task('sass', function () {
   return gulp.src(scssFiles)
     //.pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'expanded',
-      sourcemap: true
+      outputStyle: 'expanded'
     })
     .on('error', sass.logError))
 //    .pipe(sourcemaps.write('maps', {
