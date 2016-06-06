@@ -161,6 +161,7 @@ gulp.task('watch', function() {
 
   // docs files
   gulp.watch([docsFiles],['docs.copy']);
+
 });
 
 
@@ -264,5 +265,3 @@ gulp.task('default', function(callback) {
         callback
     );
 });
-
-
