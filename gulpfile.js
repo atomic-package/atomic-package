@@ -1,6 +1,5 @@
 var gulp = require("gulp"),
     path = require('path'),
-    foreach = require('gulp-foreach'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssmin = require('gulp-cssmin'),
