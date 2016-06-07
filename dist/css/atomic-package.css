@@ -75,16 +75,28 @@ input, select {
   vertical-align: middle;
 }
 
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  line-height: 1;
+  font-size: 14px;
+}
+
 /*
  * Base Style
 */
+html,
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
   font-size: 14px;
-  text-align: left;
   font-family: arial, "Hiragino Kaku Gothic Pro", sans-serif;
+}
+
+body {
+  background: #fff;
+  text-align: left;
 }
 
 section {
@@ -119,6 +131,19 @@ a {
 -------------------------------------------------- */
 /* Footer Style
 -------------------------------------------------- */
+footer {
+  /* Atomic */
+}
+
+footer.footer {
+  padding: 20px 0;
+  border-top: #333 1px solid;
+}
+
+footer.footer .text.copy {
+  text-align: center;
+}
+
 /* Paragraph style
 -------------------------------------------------- */
 /*
@@ -132,21 +157,27 @@ a {
   /* Module */
   /* Atomic */
 }
+
 .text.orange {
   color: #E5A45B;
 }
+
 .text.center {
   text-align: center;
 }
+
 .text.note {
   color: #BC0000;
 }
+
 .text.success {
   color: #6A9E00;
 }
+
 .text .icon.ban {
   margin: 0 4px -10px 0;
 }
+
 .text strong {
   color: #DC7F28;
 }
@@ -156,9 +187,11 @@ a {
   /* State */
   /* Module */
 }
+
 .thumbnail.center {
   text-align: center;
 }
+
 .thumbnail.apbCSSType {
   margin: 40px 0;
 }
@@ -176,52 +209,55 @@ a {
  * Title Style
 */
 /* Atomic */
-h1 {
+/* Atomic */
+h1.title {
+  font-size: 28px;
   /* Atomic */
   /* Atomic */
   /* Atomic */
 }
-h1 a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  line-height: 38px;
-}
-h1 .mainLogo {
+
+h1.title .mainLogo {
   float: left;
 }
-h1 .text {
+
+h1.title .text {
   margin-left: 38px;
 }
 
 /* Atomic */
-h2 {
-  font-size: 74px;
-  color: #333;
+h2.title {
+  font-size: 24px;
   /* State */
   /* Skin */
 }
-h2.center {
+
+h2.title.center {
   text-align: center;
 }
-h2.yellow {
+
+h2.title.yellow {
   color: #F6D667;
 }
 
 /* Atomic */
-h3 {
-  padding-bottom: 6px;
-  border-bottom: #E5A45B 2px solid;
-  font-size: 40px;
-  color: #333;
+h3.title {
+  font-size: 22px;
 }
 
 /* Atomic */
-h4 {
-  padding-left: 6px;
-  border-left: #E5A45B 5px solid;
-  font-size: 30px;
-  color: #333;
+h4.title {
+  font-size: 20px;
+}
+
+/* Atomic */
+h5.title {
+  font-size: 18px;
+}
+
+/* Atomic */
+h6.title {
+  font-size: 16px;
 }
 
 /* Navigation & Menu Style
@@ -232,89 +268,171 @@ h4 {
  * Button Style
 */
 /* Atomic */
-.btn {
+.btn,
+.btn:not(a) {
   position: relative;
-  width: 200px;
-  height: 40px;
-  border-radius: 6px;
+  width: 80px;
   /* Atomic */
-  /* Module */
   /* Skin */
   /* State */
   /* Atomic */
 }
-.btn a {
+
+.btn > a,
+.btn > button,
+.btn > input,
+.btn:not(a) > a,
+.btn:not(a) > button,
+.btn:not(a) > input {
   display: block;
-  line-height: 40px;
+  width: 100%;
+  padding: 6px 12px;
+  background: #fff;
+  border: #e0e0e0 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
 }
-.btn.primary {
+
+.btn.primary > a,
+.btn.primary > button,
+.btn.primary > input,
+.btn:not(a).primary > a,
+.btn:not(a).primary > button,
+.btn:not(a).primary > input {
   background: #404040;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQwNDA0MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI4MjgyOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #404040), color-stop(100%, #282828));
-  background: -moz-linear-gradient(top, #404040, #282828);
-  background: -webkit-linear-gradient(top, #404040, #282828);
-  background: linear-gradient(to bottom, #404040, #282828);
+  background: linear-gradient(top, #404040, #282828);
+  color: #fff;
 }
-.btn.primary:hover {
+
+.btn.primary > a:hover,
+.btn.primary > button:hover,
+.btn.primary > input:hover,
+.btn:not(a).primary > a:hover,
+.btn:not(a).primary > button:hover,
+.btn:not(a).primary > input:hover {
   background: #303030;
 }
-.btn.secondly {
-  background: #EEEEEE;
-  -moz-box-shadow: inset #E5E5E5 0 0 1px 1px;
-  -webkit-box-shadow: inset #E5E5E5 0 0 1px 1px;
-  box-shadow: inset #E5E5E5 0 0 1px 1px;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #e5e5e5));
-  background: -moz-linear-gradient(top, #eeeeee, #e5e5e5);
-  background: -webkit-linear-gradient(top, #eeeeee, #e5e5e5);
-  background: linear-gradient(to bottom, #eeeeee, #e5e5e5);
-}
+
 .btn.secondly > a,
-.btn.secondly > input {
+.btn.secondly > button,
+.btn.secondly > input,
+.btn:not(a).secondly > a,
+.btn:not(a).secondly > button,
+.btn:not(a).secondly > input {
+  background: #EEEEEE;
+  box-shadow: inset #E5E5E5 0 0 1px 1px;
+  background: linear-gradient(top, #EEEEEE, #E5E5E5);
+  color: #fff;
+}
+
+.btn.secondly > a > a,
+.btn.secondly > a > input,
+.btn.secondly > button > a,
+.btn.secondly > button > input,
+.btn.secondly > input > a,
+.btn.secondly > input > input,
+.btn:not(a).secondly > a > a,
+.btn:not(a).secondly > a > input,
+.btn:not(a).secondly > button > a,
+.btn:not(a).secondly > button > input,
+.btn:not(a).secondly > input > a,
+.btn:not(a).secondly > input > input {
   color: #000000;
 }
-.btn.secondly:hover {
+
+.btn.secondly > a:hover,
+.btn.secondly > button:hover,
+.btn.secondly > input:hover,
+.btn:not(a).secondly > a:hover,
+.btn:not(a).secondly > button:hover,
+.btn:not(a).secondly > input:hover {
   background: #EAEAEA;
 }
-.btn.green {
+
+.btn.green > a,
+.btn.green > button,
+.btn.green > input,
+.btn:not(a).green > a,
+.btn:not(a).green > button,
+.btn:not(a).green > input {
   background: #2A8000;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJkODkwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI0NmUwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2d8900), color-stop(100%, #246e00));
-  background: -moz-linear-gradient(top, #2d8900, #246e00);
-  background: -webkit-linear-gradient(top, #2d8900, #246e00);
-  background: linear-gradient(to bottom, #2d8900, #246e00);
+  color: #fff;
 }
-.btn.green:hover {
+
+.btn.green > a:hover,
+.btn.green > button:hover,
+.btn.green > input:hover,
+.btn:not(a).green > a:hover,
+.btn:not(a).green > button:hover,
+.btn:not(a).green > input:hover {
   background: #267400;
 }
-.btn.orange {
+
+.btn.orange > a,
+.btn.orange > button,
+.btn.orange > input,
+.btn:not(a).orange > a,
+.btn:not(a).orange > button,
+.btn:not(a).orange > input {
   background: #FA9600;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYzcwYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZhOTYwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc70a), color-stop(100%, #fa9600));
-  background: -moz-linear-gradient(top, #ffc70a, #fa9600);
-  background: -webkit-linear-gradient(top, #ffc70a, #fa9600);
-  background: linear-gradient(to bottom, #ffc70a, #fa9600);
+  color: #fff;
 }
-.btn.orange:hover {
+
+.btn.orange > a:hover,
+.btn.orange > button:hover,
+.btn.orange > input:hover,
+.btn:not(a).orange > a:hover,
+.btn:not(a).orange > button:hover,
+.btn:not(a).orange > input:hover {
   background: #FCAE05;
 }
-.btn.l {
+
+.btn.red > a,
+.btn.red > button,
+.btn.red > input,
+.btn:not(a).red > a,
+.btn:not(a).red > button,
+.btn:not(a).red > input {
+  background: #FF0000;
+  color: #fff;
+}
+
+.btn.red > a:hover,
+.btn.red > button:hover,
+.btn.red > input:hover,
+.btn:not(a).red > a:hover,
+.btn:not(a).red > button:hover,
+.btn:not(a).red > input:hover {
+  background: #FCAE05;
+}
+
+.btn.l,
+.btn:not(a).l {
   width: 260px;
 }
-.btn.center {
+
+.btn.center,
+.btn:not(a).center {
   margin: 0 auto;
 }
-.btn.disable {
+
+.btn.disable,
+.btn:not(a).disable {
   opacity: 0.4;
 }
-.btn .icon {
+
+.btn .icon,
+.btn:not(a) .icon {
   /* Module */
 }
-.btn .icon.social {
+
+.btn .icon.social,
+.btn:not(a) .icon.social {
   margin: 0px 6px -11px -34px;
 }
 
@@ -322,6 +440,93 @@ h4 {
 -------------------------------------------------- */
 /* List Style
 -------------------------------------------------- */
+/*
+ * List Style
+*/
+.list.disc, .list.circle, .list.square, .list.lowerRoman, .list.upperRoman, .list.lowerGreek, .list.upperRoman, .list.lowerGreek, .list.decimal, .list.decimalLeadingZero, .list.lowerLatin, .list.upperLatin, .list.lowerAlpha, .list.upperAlpha, .list.cjkIdeographic, .list.hiragana, .list.katakana, .list.hiraganaIroha, .list.katakanaIroha, .list.hebrew, .list.armenian, .list.georgian {
+  padding-left: 24px;
+}
+
+.list.disc {
+  list-style-type: disc;
+}
+
+.list.circle {
+  list-style-type: circle;
+}
+
+.list.square {
+  list-style-type: square;
+}
+
+.list.lowerRoman {
+  list-style-type: lower-roman;
+}
+
+.list.upperRoman {
+  list-style-type: upper-roman;
+}
+
+.list.lowerGreek {
+  list-style-type: lower-greek;
+}
+
+.list.decimal {
+  list-style-type: decimal;
+}
+
+.list.decimalLeadingZero {
+  list-style-type: decimal-leading-zero;
+}
+
+.list.lowerLatin {
+  list-style-type: lower-latin;
+}
+
+.list.upperLatin {
+  list-style-type: upper-latin;
+}
+
+.list.lowerAlpha {
+  list-style-type: lower-alpha;
+}
+
+.list.upperAlpha {
+  list-style-type: upper-alpha;
+}
+
+.list.cjkIdeographic {
+  list-style-type: cjk-ideographic;
+}
+
+.list.hiragana {
+  list-style-type: hiragana;
+}
+
+.list.katakana {
+  list-style-type: katakana;
+}
+
+.list.hiraganaIroha {
+  list-style-type: hiragana-iroha;
+}
+
+.list.katakanaIroha {
+  list-style-type: katakana-iroha;
+}
+
+.list.hebrew {
+  list-style-type: hebrew;
+}
+
+.list.armenian {
+  list-style-type: armenian;
+}
+
+.list.georgian {
+  list-style-type: georgian;
+}
+
 /* Icon Style
 -------------------------------------------------- */
 /* Modal Style
