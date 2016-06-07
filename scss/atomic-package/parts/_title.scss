@@ -1,9 +1,17 @@
 /*
  * Title Style
 */
+/* Atomic */
+.title {
+  &.border {
+
+  }
+  
+}
 
 /* Atomic */
-h1 {
+h1.title {
+  font-size: 28px;
 
   /* Atomic */
   a {
@@ -21,9 +29,8 @@ h1 {
 }
 
 /* Atomic */
-h2 {
-  font-size: 18px;
-  color: #333;
+h2.title {
+  font-size: 24px;
 
   /* State */
   &.center {
@@ -37,17 +44,21 @@ h2 {
 }
 
 /* Atomic */
-h3 {
-  padding-bottom: 6px;
-  border-bottom: #E5A45B 2px solid;
-  font-size: 16px;
-  color: #333;
+h3.title {
+  font-size: 22px;
 }
 
 /* Atomic */
-h4 {
-  padding-left: 6px;
-  border-left: #E5A45B 5px solid;
-  font-size: 14px;
-  color: #333;
+h4.title {
+  font-size: 20px;
+}
+
+/* Atomic */
+h5.title {
+  font-size: 18px;
+}
+
+/* Atomic */
+h6.title {
+  font-size: 16px;
 }

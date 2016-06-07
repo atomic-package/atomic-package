@@ -133,6 +133,19 @@ a {
 -------------------------------------------------- */
 /* Footer Style
 -------------------------------------------------- */
+footer {
+  /* Atomic */
+}
+
+footer.footer {
+  padding: 20px 0;
+  border-top: #333 1px solid;
+}
+
+footer.footer .text.copy {
+  text-align: center;
+}
+
 /* Paragraph style
 -------------------------------------------------- */
 /*
@@ -198,50 +211,55 @@ a {
  * Title Style
 */
 /* Atomic */
-h1 {
+/* Atomic */
+h1.title {
+  font-size: 28px;
   /* Atomic */
   /* Atomic */
   /* Atomic */
 }
 
-h1 .mainLogo {
+h1.title .mainLogo {
   float: left;
 }
 
-h1 .text {
+h1.title .text {
   margin-left: 38px;
 }
 
 /* Atomic */
-h2 {
-  font-size: 18px;
-  color: #333;
+h2.title {
+  font-size: 24px;
   /* State */
   /* Skin */
 }
 
-h2.center {
+h2.title.center {
   text-align: center;
 }
 
-h2.yellow {
+h2.title.yellow {
   color: #F6D667;
 }
 
 /* Atomic */
-h3 {
-  padding-bottom: 6px;
-  border-bottom: #E5A45B 2px solid;
-  font-size: 16px;
-  color: #333;
+h3.title {
+  font-size: 22px;
 }
 
 /* Atomic */
-h4 {
-  padding-left: 6px;
-  border-left: #E5A45B 5px solid;
-  font-size: 14px;
-  color: #333;
+h4.title {
+  font-size: 20px;
+}
+
+/* Atomic */
+h5.title {
+  font-size: 18px;
+}
+
+/* Atomic */
+h6.title {
+  font-size: 16px;
 }
 
 /* Navigation & Menu Style
@@ -430,6 +448,93 @@ h4 {
 -------------------------------------------------- */
 /* List Style
 -------------------------------------------------- */
+/*
+ * List Style
+*/
+.list.disc, .list.circle, .list.square, .list.lowerRoman, .list.upperRoman, .list.lowerGreek, .list.upperRoman, .list.lowerGreek, .list.decimal, .list.decimalLeadingZero, .list.lowerLatin, .list.upperLatin, .list.lowerAlpha, .list.upperAlpha, .list.cjkIdeographic, .list.hiragana, .list.katakana, .list.hiraganaIroha, .list.katakanaIroha, .list.hebrew, .list.armenian, .list.georgian {
+  padding-left: 24px;
+}
+
+.list.disc {
+  list-style-type: disc;
+}
+
+.list.circle {
+  list-style-type: circle;
+}
+
+.list.square {
+  list-style-type: square;
+}
+
+.list.lowerRoman {
+  list-style-type: lower-roman;
+}
+
+.list.upperRoman {
+  list-style-type: upper-roman;
+}
+
+.list.lowerGreek {
+  list-style-type: lower-greek;
+}
+
+.list.decimal {
+  list-style-type: decimal;
+}
+
+.list.decimalLeadingZero {
+  list-style-type: decimal-leading-zero;
+}
+
+.list.lowerLatin {
+  list-style-type: lower-latin;
+}
+
+.list.upperLatin {
+  list-style-type: upper-latin;
+}
+
+.list.lowerAlpha {
+  list-style-type: lower-alpha;
+}
+
+.list.upperAlpha {
+  list-style-type: upper-alpha;
+}
+
+.list.cjkIdeographic {
+  list-style-type: cjk-ideographic;
+}
+
+.list.hiragana {
+  list-style-type: hiragana;
+}
+
+.list.katakana {
+  list-style-type: katakana;
+}
+
+.list.hiraganaIroha {
+  list-style-type: hiragana-iroha;
+}
+
+.list.katakanaIroha {
+  list-style-type: katakana-iroha;
+}
+
+.list.hebrew {
+  list-style-type: hebrew;
+}
+
+.list.armenian {
+  list-style-type: armenian;
+}
+
+.list.georgian {
+  list-style-type: georgian;
+}
+
 /* Icon Style
 -------------------------------------------------- */
 /* Modal Style

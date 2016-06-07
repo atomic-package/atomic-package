@@ -1,0 +1,13 @@
+footer {
+
+  /* Atomic */
+  &.footer {
+    padding: 20px 0;
+    border-top: #333 1px solid;
+
+    .text.copy {
+      text-align: center;
+    }
+  }
+
+}
