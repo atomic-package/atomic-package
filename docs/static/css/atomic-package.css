@@ -75,16 +75,30 @@ input, select {
   vertical-align: middle;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  line-height: 1;
+  font-size: 14px;
+}
+
 /*
  * Base Style
 */
+html,
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
   font-size: 14px;
-  text-align: left;
   font-family: arial, "Hiragino Kaku Gothic Pro", sans-serif;
+}
+
+body {
+  background: #fff;
+  text-align: left;
 }
 
 section {
@@ -190,13 +204,6 @@ h1 {
   /* Atomic */
 }
 
-h1 a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  line-height: 38px;
-}
-
 h1 .mainLogo {
   float: left;
 }
@@ -245,89 +252,177 @@ h4 {
  * Button Style
 */
 /* Atomic */
-.btn {
+.btn,
+.btn:not(a) {
   position: relative;
-  width: 200px;
-  height: 40px;
-  border-radius: 6px;
+  width: 80px;
   /* Atomic */
-  /* Module */
   /* Skin */
   /* State */
   /* Atomic */
 }
 
-.btn a {
+.btn > a,
+.btn > button,
+.btn > input,
+.btn:not(a) > a,
+.btn:not(a) > button,
+.btn:not(a) > input {
   display: block;
-  line-height: 40px;
+  width: 100%;
+  padding: 6px 12px;
+  background: #fff;
+  border: #e0e0e0 1px solid;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.btn.primary {
+.btn.primary > a,
+.btn.primary > button,
+.btn.primary > input,
+.btn:not(a).primary > a,
+.btn:not(a).primary > button,
+.btn:not(a).primary > input {
   background: #404040;
   background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#282828));
   background: -webkit-linear-gradient(top, #404040, #282828);
   background: linear-gradient(top, #404040, #282828);
+  color: #fff;
 }
 
-.btn.primary:hover {
+.btn.primary > a:hover,
+.btn.primary > button:hover,
+.btn.primary > input:hover,
+.btn:not(a).primary > a:hover,
+.btn:not(a).primary > button:hover,
+.btn:not(a).primary > input:hover {
   background: #303030;
 }
 
-.btn.secondly {
+.btn.secondly > a,
+.btn.secondly > button,
+.btn.secondly > input,
+.btn:not(a).secondly > a,
+.btn:not(a).secondly > button,
+.btn:not(a).secondly > input {
   background: #EEEEEE;
   -webkit-box-shadow: inset #E5E5E5 0 0 1px 1px;
   box-shadow: inset #E5E5E5 0 0 1px 1px;
   background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#E5E5E5));
   background: -webkit-linear-gradient(top, #EEEEEE, #E5E5E5);
   background: linear-gradient(top, #EEEEEE, #E5E5E5);
+  color: #fff;
 }
 
-.btn.secondly > a,
-.btn.secondly > input {
+.btn.secondly > a > a,
+.btn.secondly > a > input,
+.btn.secondly > button > a,
+.btn.secondly > button > input,
+.btn.secondly > input > a,
+.btn.secondly > input > input,
+.btn:not(a).secondly > a > a,
+.btn:not(a).secondly > a > input,
+.btn:not(a).secondly > button > a,
+.btn:not(a).secondly > button > input,
+.btn:not(a).secondly > input > a,
+.btn:not(a).secondly > input > input {
   color: #000000;
 }
 
-.btn.secondly:hover {
+.btn.secondly > a:hover,
+.btn.secondly > button:hover,
+.btn.secondly > input:hover,
+.btn:not(a).secondly > a:hover,
+.btn:not(a).secondly > button:hover,
+.btn:not(a).secondly > input:hover {
   background: #EAEAEA;
 }
 
-.btn.green {
+.btn.green > a,
+.btn.green > button,
+.btn.green > input,
+.btn:not(a).green > a,
+.btn:not(a).green > button,
+.btn:not(a).green > input {
   background: #2A8000;
+  color: #fff;
 }
 
-.btn.green:hover {
+.btn.green > a:hover,
+.btn.green > button:hover,
+.btn.green > input:hover,
+.btn:not(a).green > a:hover,
+.btn:not(a).green > button:hover,
+.btn:not(a).green > input:hover {
   background: #267400;
 }
 
-.btn.orange {
+.btn.orange > a,
+.btn.orange > button,
+.btn.orange > input,
+.btn:not(a).orange > a,
+.btn:not(a).orange > button,
+.btn:not(a).orange > input {
   background: #FA9600;
+  color: #fff;
 }
 
-.btn.orange:hover {
+.btn.orange > a:hover,
+.btn.orange > button:hover,
+.btn.orange > input:hover,
+.btn:not(a).orange > a:hover,
+.btn:not(a).orange > button:hover,
+.btn:not(a).orange > input:hover {
   background: #FCAE05;
 }
 
-.btn.l {
+.btn.red > a,
+.btn.red > button,
+.btn.red > input,
+.btn:not(a).red > a,
+.btn:not(a).red > button,
+.btn:not(a).red > input {
+  background: #FF0000;
+  color: #fff;
+}
+
+.btn.red > a:hover,
+.btn.red > button:hover,
+.btn.red > input:hover,
+.btn:not(a).red > a:hover,
+.btn:not(a).red > button:hover,
+.btn:not(a).red > input:hover {
+  background: #FCAE05;
+}
+
+.btn.l,
+.btn:not(a).l {
   width: 260px;
 }
 
-.btn.center {
+.btn.center,
+.btn:not(a).center {
   margin: 0 auto;
 }
 
-.btn.disable {
+.btn.disable,
+.btn:not(a).disable {
   opacity: 0.4;
 }
 
-.btn .icon {
+.btn .icon,
+.btn:not(a) .icon {
   /* Module */
 }
 
-.btn .icon.social {
+.btn .icon.social,
+.btn:not(a) .icon.social {
   margin: 0px 6px -11px -34px;
 }
 

@@ -1,15 +1,16 @@
 /*
  * Base Style
 */
-html {
-}
+html,
 body {
   margin: 0;
   padding: 0;
-  background: $baseBgColor;
   font-size: 14px;
-  text-align: left;
   font-family: $fontfamily;
+}
+body {
+  background: $baseBgColor;
+  text-align: left;
 }
 section {
   position: relative;

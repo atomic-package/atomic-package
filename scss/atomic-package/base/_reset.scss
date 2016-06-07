@@ -53,3 +53,11 @@ hr {
   outline: 0;
 }
 input, select { vertical-align: middle; }
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  line-height: 1;
+  font-size: 14px;
+}

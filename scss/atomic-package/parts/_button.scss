@@ -3,48 +3,77 @@
 */
 
 /* Atomic */
-.btn {
+.btn,
+.btn:not(a) {
   position: relative;
-  width: 200px;
-  height: 40px;
-  border-radius: 6px;
+  width: 80px;
 
   /* Atomic */
-  a {
+  > a,
+  > button,
+  > input {
     display: block;
-    line-height: 40px;
+    width: 100%;
+    padding: 6px 12px;
+    background: #fff;
+    border: #e0e0e0 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
     text-align: center;
     text-decoration: none;
-    color: #fff;
-    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
   }
 
-  /* Module */
-  &.primary {
+  /* Skin */
+  &.primary > a,
+  &.primary > button,
+  &.primary > input {
     background: #404040;
     background: linear-gradient(top, #404040, #282828);
+    color: #fff;
     &:hover { background: #303030; }
   }
-  &.secondly {
+
+  &.secondly > a,
+  &.secondly > button,
+  &.secondly > input {
     background: #EEEEEE;
     box-shadow: inset #E5E5E5 0 0 1px 1px;
     background: linear-gradient(top, #EEEEEE, #E5E5E5);
+    color: #fff;
     > a,
     > input { color: #000000; }
     &:hover { background: #EAEAEA; }
   }
 
-  /* Skin */
-  &.green {
+  &.green > a,
+  &.green > button,
+  &.green > input {
     background: #2A8000;
     //@include background(linear-gradient(top, #2D8900, #246E00));
+    color: #fff;
     &:hover { background: #267400; }
   }
-  &.orange {
+
+  &.orange > a,
+  &.orange > button,
+  &.orange > input {
     background: #FA9600;
     //@include background(linear-gradient(top, #FFC70A, #FA9600));
+    color: #fff;
     &:hover { background: #FCAE05; }
   }
+
+  &.red > a,
+  &.red > button,
+  &.red > input {
+    background: #FF0000;
+    color: #fff;
+    &:hover { background: #FCAE05; }
+  }
+
   &.l { width: 260px; }
 
   /* State */
