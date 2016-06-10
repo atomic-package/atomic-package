@@ -185,24 +185,49 @@ footer.footer .text.copy {
 }
 
 /* Atomic */
-.thumbnail {
-  /* State */
-  /* Module */
-}
-
-.thumbnail.center {
-  text-align: center;
-}
-
-.thumbnail.apbCSSType {
-  margin: 40px 0;
-}
-
-/* Atomic */
 .label {
   padding: 6px 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+/* thumbnail */
+/* Atomic */
+.thumbnail,
+.thumbnail:not(img) {
+  /* Skin */
+  /* Skin */
+  /* Skin */
+  /* State */
+}
+
+.thumbnail.round img,
+.thumbnail:not(img).round img {
+  border-radius: 4px;
+}
+
+.thumbnail.circle img,
+.thumbnail:not(img).circle img {
+  border-radius: 22.5px;
+}
+
+.thumbnail.center,
+.thumbnail:not(img).center {
+  text-align: center;
+}
+
+img.thumbnail {
+  /* Skin */
+  /* Skin */
+  /* Skin */
+}
+
+img.thumbnail.round {
+  border-radius: 4px;
+}
+
+img.thumbnail.circle {
+  border-radius: 22.5px;
 }
 
 /* Title Style

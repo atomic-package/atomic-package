@@ -36,22 +36,50 @@
 }
 
 /* Atomic */
-.thumbnail {
+.label {
+  padding: 6px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* thumbnail */
+/* Atomic */
+.thumbnail,
+.thumbnail:not(img) {
+  /* Skin */
+  &.round {
+    img {
+      border-radius: 4px;
+    }
+  }
+
+  /* Skin */
+  &.circle {
+    img {
+      border-radius: $thumbnailWidth / 2;
+    }
+  }
+
+  /* Skin */
+  &.frame {}
 
   /* State */
   &.center {
     text-align: center;
   }
-
-  /* Module */
-  &.apbCSSType {
-    margin: 40px 0;
-  }
 }
 
-/* Atomic */
-.label {
-  padding: 6px 0;
-  font-size: 18px;
-  font-weight: bold;
+img.thumbnail {
+  /* Skin */
+  &.round {
+    border-radius: 4px;
+  }
+
+  /* Skin */
+  &.circle {
+    border-radius: $thumbnailWidth / 2;
+  }
+
+  /* Skin */
+  &.frame {}
 }
