@@ -289,6 +289,36 @@ h6.title {
 
 /* Navigation & Menu Style
 -------------------------------------------------- */
+/*
+ * Navigation & Menu Style
+*/
+.menu .menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-right: #999 1px solid;
+}
+
+.menu .menuList li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-top: #999 1px solid;
+  border-bottom: #999 1px solid;
+  border-left: #999 1px solid;
+}
+
+.menu .menuList li a {
+  display: block;
+  min-height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*
