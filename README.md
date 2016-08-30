@@ -1,6 +1,9 @@
 # Atomic Package
 ## APB CSS (Atomic Parts Base CSS) + JavaScript framework.
 
+[![GitHub version](https://badge.fury.io/gh/webcyou%2Fatomic-package.svg)](https://badge.fury.io/gh/webcyou%2Fatomic-package)
+[![npm version](https://badge.fury.io/js/atomic-package.svg)](https://badge.fury.io/js/atomic-package)
+
 **APB CSS**
 http://apbcss.com/
 
