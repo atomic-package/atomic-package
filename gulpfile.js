@@ -35,6 +35,8 @@ var jsFiles = [
       RELEASE_DIR + '/js/*.js'
     ];
 
+var fontFiles = [ SOURCE_DIR + '/fonts/**/**' ];
+
 var docsFiles = [
       DOCS_DIR + '/static/**/*.++'
     ];
@@ -151,6 +153,18 @@ gulp.task('js.copy.dist', function() {
     .pipe(gulp.dest( DIST_DIR + '/js/' ));
 });
 
+// Fonts
+gulp.task('font.copy', function() {
+  return gulp.src(fontFiles)
+    .pipe(gulp.dest( DOCS_DIR + '/static/font/' ));
+});
+
+gulp.task('font.copy.dist', function() {
+  return gulp.src(fontFiles)
+    .pipe(gulp.dest( DIST_DIR + '/font/' ));
+});
+
+
 // ファイル更新監視
 gulp.task('watch', function() {
   // SCSS
@@ -203,7 +217,7 @@ gulp.task('connect', function() {
  **/
 gulp.task('build.ui', function(callback) {
   return runSequence(
-    ['build.css', 'build.js'],
+    ['build.css', 'build.js', 'build.font'],
     callback
   );
 });
@@ -226,6 +240,13 @@ gulp.task('build.js', function(callback) {
   );
 });
 
+gulp.task('build.font', function(callback) {
+  return runSequence(
+    'font.copy',
+    callback
+  );
+});
+
 /**
  * Output Task
  **/
@@ -233,7 +254,7 @@ gulp.task('dist', function(callback) {
   return runSequence(
     'clean.release',
     'clean.dist',
-    ['css.dist', 'js.dist'],
+    ['css.dist', 'js.dist', 'font.dist'],
     callback
   );
 });
@@ -250,6 +271,14 @@ gulp.task('js.dist', function(callback) {
   return runSequence(
     'build.js',
     'js.copy.dist',
+    callback
+  );
+});
+
+gulp.task('font.dist', function(callback) {
+  return runSequence(
+    'build.font',
+    'font.copy.dist',
     callback
   );
 });
