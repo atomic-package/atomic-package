@@ -343,13 +343,13 @@ h6.title {
   display: block;
   width: 100%;
   padding: 6px 12px;
-  background: #fff;
-  border: #e0e0e0 1px solid;
+  background: #F6F6F6;
+  border: #CBCBCB 1px solid;
   border-radius: 4px;
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  color: #333;
+  color: #666;
   cursor: pointer;
   font-size: 14px;
 }
@@ -360,18 +360,9 @@ h6.title {
 .btn:not(a).primary > a,
 .btn:not(a).primary > button,
 .btn:not(a).primary > input {
-  background: #404040;
-  background: linear-gradient(top, #404040, #282828);
+  background: #0099D4;
+  border: #008FC3 1px solid;
   color: #fff;
-}
-
-.btn.primary > a:hover,
-.btn.primary > button:hover,
-.btn.primary > input:hover,
-.btn:not(a).primary > a:hover,
-.btn:not(a).primary > button:hover,
-.btn:not(a).primary > input:hover {
-  background: #303030;
 }
 
 .btn.secondly > a,
@@ -381,8 +372,8 @@ h6.title {
 .btn:not(a).secondly > button,
 .btn:not(a).secondly > input {
   background: #EEEEEE;
-  box-shadow: inset #E5E5E5 0 0 1px 1px;
-  background: linear-gradient(top, #EEEEEE, #E5E5E5);
+  border: #000 1px solid;
+  background: linear-gradient(top, #404040, #282828);
   color: #fff;
 }
 
@@ -401,32 +392,15 @@ h6.title {
   color: #000000;
 }
 
-.btn.secondly > a:hover,
-.btn.secondly > button:hover,
-.btn.secondly > input:hover,
-.btn:not(a).secondly > a:hover,
-.btn:not(a).secondly > button:hover,
-.btn:not(a).secondly > input:hover {
-  background: #EAEAEA;
-}
-
 .btn.green > a,
 .btn.green > button,
 .btn.green > input,
 .btn:not(a).green > a,
 .btn:not(a).green > button,
 .btn:not(a).green > input {
-  background: #2A8000;
+  background: #81BA41;
+  border: #669433 1px solid;
   color: #fff;
-}
-
-.btn.green > a:hover,
-.btn.green > button:hover,
-.btn.green > input:hover,
-.btn:not(a).green > a:hover,
-.btn:not(a).green > button:hover,
-.btn:not(a).green > input:hover {
-  background: #267400;
 }
 
 .btn.orange > a,
@@ -435,17 +409,9 @@ h6.title {
 .btn:not(a).orange > a,
 .btn:not(a).orange > button,
 .btn:not(a).orange > input {
-  background: #FA9600;
+  background: #F0AD4E;
+  border: #E38D13 1px solid;
   color: #fff;
-}
-
-.btn.orange > a:hover,
-.btn.orange > button:hover,
-.btn.orange > input:hover,
-.btn:not(a).orange > a:hover,
-.btn:not(a).orange > button:hover,
-.btn:not(a).orange > input:hover {
-  background: #FCAE05;
 }
 
 .btn.red > a,
@@ -454,17 +420,9 @@ h6.title {
 .btn:not(a).red > a,
 .btn:not(a).red > button,
 .btn:not(a).red > input {
-  background: #FF0000;
+  background: #D52D47;
+  border: #B02B3E 1px solid;
   color: #fff;
-}
-
-.btn.red > a:hover,
-.btn.red > button:hover,
-.btn.red > input:hover,
-.btn:not(a).red > a:hover,
-.btn:not(a).red > button:hover,
-.btn:not(a).red > input:hover {
-  background: #FCAE05;
 }
 
 .btn.l,

@@ -5,6 +5,7 @@
   line-height: 1;
   font-family: FontAwesome;
 
+  // Adapted from http://fortawesome.github.com/Font-Awesome (Version 4.6.0)
   &.ap-glass::before { content: "\f000"; }
   &.ap-music::before { content: "\f001"; }
   &.ap-search::before { content: "\f002"; }
