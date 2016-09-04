@@ -39,9 +39,14 @@ atomic-package/
 │   ├── atomic-package.min.css
 │   ├── atomic-package-theme.min.css
 │   └── atomic-package-theme.css
-└── js/
-    ├── atomic-package.js
-    └── atomic-package.min.js
+├── js/
+│   ├── atomic-package.js
+│   └── atomic-package.min.js
+└── fonts/
+    ├── FontAwesome.otf
+    ├── fontawesome-webfont.ttf
+    ├── fontawesome-webfont.woff
+    └── fontawesome-webfont.woff2
 ```
 
 ## Documentation
