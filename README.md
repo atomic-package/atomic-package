@@ -65,7 +65,7 @@ Open `http://localhost:1313' in your browser.
 
 ## Creators
 
-**Diasuke Takayama**
+**Daisuke Takayama**
 * [@webcyou](https://twitter.com/webcyou)
 * [@panicdragon](https://twitter.com/panicdragon)
 * <https://github.com/webcyou>
