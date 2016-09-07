@@ -1,3 +1,5 @@
+[](https://github.com/webcyou/atomic-package/tree/master/design/logo_main.png)
+
 # Atomic Package
 ## APB CSS (Atomic Parts Base CSS) + JavaScript framework.
 
