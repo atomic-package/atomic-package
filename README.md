@@ -1,4 +1,6 @@
 # Atomic Package
+![](https://github.com/webcyou/atomic-package/blob/master/design/logo_main_large.png)
+
 ## APB CSS (Atomic Parts Base CSS) + JavaScript framework.
 
 [![GitHub version](https://badge.fury.io/gh/webcyou%2Fatomic-package.svg)](https://badge.fury.io/gh/webcyou%2Fatomic-package)
