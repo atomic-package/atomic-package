@@ -335,7 +335,8 @@ h6.title {
 .btn,
 .btn:not(a) {
   position: relative;
-  width: 80px;
+  display: inline-block;
+  min-width: 120px;
   /* Atomic */
   /* Skin */
   /* State */
@@ -348,12 +349,12 @@ h6.title {
 .btn:not(a) > a,
 .btn:not(a) > button,
 .btn:not(a) > input {
-  display: block;
+  display: inline-block;
   width: 100%;
-  padding: 6px 12px;
+  padding: 0 12px;
   background: #F6F6F6;
-  border: #CBCBCB 1px solid;
   border-radius: 4px;
+  border: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
@@ -361,6 +362,77 @@ h6.title {
   color: #666;
   cursor: pointer;
   font-size: 14px;
+  line-height: 30px;
+}
+
+.btn.ss,
+.btn:not(a).ss {
+  min-width: 65px;
+}
+
+.btn.ss > a,
+.btn.ss > button,
+.btn.ss > input,
+.btn:not(a).ss > a,
+.btn:not(a).ss > button,
+.btn:not(a).ss > input {
+  min-height: 20px;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+.btn.small,
+.btn:not(a).small {
+  min-width: 90px;
+}
+
+.btn.small > a,
+.btn.small > button,
+.btn.small > input,
+.btn:not(a).small > a,
+.btn:not(a).small > button,
+.btn:not(a).small > input {
+  min-height: 25px;
+  padding: 0 10px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.btn.large,
+.btn:not(a).large {
+  min-width: 140px;
+}
+
+.btn.large > a,
+.btn.large > button,
+.btn.large > input,
+.btn:not(a).large > a,
+.btn:not(a).large > button,
+.btn:not(a).large > input {
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+.btn.ll,
+.btn:not(a).ll {
+  min-width: 170px;
+}
+
+.btn.ll > a,
+.btn.ll > button,
+.btn.ll > input,
+.btn:not(a).ll > a,
+.btn:not(a).ll > button,
+.btn:not(a).ll > input {
+  min-height: 50px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
 }
 
 .btn.primary > a,
@@ -369,8 +441,10 @@ h6.title {
 .btn:not(a).primary > a,
 .btn:not(a).primary > button,
 .btn:not(a).primary > input {
-  background: #0099D4;
-  border: #008FC3 1px solid;
+  background: #0BACD3;
+  border-right: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 1px inset;
   color: #fff;
 }
 
