@@ -1,44 +1,57 @@
 'use strict';
 var e = eval, global = e('this');
-var AtomicPackage;
-(function (AtomicPackage_1) {
+var AtomicPackages;
+(function (AtomicPackages) {
     var AtomicPackage = (function () {
-        function AtomicPackage() {
+        function AtomicPackage(option) {
+            if (AtomicPackage._instance) {
+                if (option !== void 0) {
+                    AtomicPackage._instance.model = new AtomicPackages.AtomicPackageModel(option);
+                    AtomicPackage._instance.view = new AtomicPackages.AtomicPackageView(AtomicPackage._instance.model);
+                }
+                return AtomicPackage._instance;
+            }
+            else {
+                this.model = new AtomicPackages.AtomicPackageModel(option);
+                this.view = new AtomicPackages.AtomicPackageView(this.model);
+                AtomicPackage._instance = this;
+            }
         }
+        AtomicPackage._instance = null;
         return AtomicPackage;
     }());
-    AtomicPackage_1.AtomicPackage = AtomicPackage;
-})(AtomicPackage || (AtomicPackage = {}));
+    AtomicPackages.AtomicPackage = AtomicPackage;
+})(AtomicPackages || (AtomicPackages = {}));
 if (typeof (module) !== 'undefined') {
     if (typeof (module).exports.AP === 'undefined') {
         (module).exports.AP = {};
     }
-    (module).exports.AP = AtomicPackage.AtomicPackage;
+    (module).exports.AP = AtomicPackages.AtomicPackage;
 }
 if (typeof (global) !== 'undefined') {
     if (typeof global['AP'] === 'undefined') {
         global['AP'] = {};
     }
-    global['AP'] = AtomicPackage.AtomicPackage;
+    global['AP'] = AtomicPackages.AtomicPackage;
 }
-var AtomicPackage;
-(function (AtomicPackage) {
+var AtomicPackages;
+(function (AtomicPackages) {
     var AtomicPackageModel = (function () {
-        function AtomicPackageModel() {
+        function AtomicPackageModel(option) {
         }
         return AtomicPackageModel;
     }());
-    AtomicPackage.AtomicPackageModel = AtomicPackageModel;
-})(AtomicPackage || (AtomicPackage = {}));
-var AtomicPackage;
-(function (AtomicPackage) {
+    AtomicPackages.AtomicPackageModel = AtomicPackageModel;
+})(AtomicPackages || (AtomicPackages = {}));
+var AtomicPackages;
+(function (AtomicPackages) {
     var AtomicPackageView = (function () {
-        function AtomicPackageView() {
+        function AtomicPackageView(model) {
         }
         return AtomicPackageView;
     }());
-    AtomicPackage.AtomicPackageView = AtomicPackageView;
-})(AtomicPackage || (AtomicPackage = {}));
+    AtomicPackages.AtomicPackageView = AtomicPackageView;
+})(AtomicPackages || (AtomicPackages = {}));
 var Model;
 (function (Model) {
     var Button = (function () {

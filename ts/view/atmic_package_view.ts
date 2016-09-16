@@ -3,8 +3,12 @@
  */
 /// <reference path='../_all.ts' />
 
-module AtomicPackage {
+module AtomicPackages {
   export class AtomicPackageView {
+    constructor(
+      model: AtomicPackageModel
+      ) {
 
+    }
   }
 }
