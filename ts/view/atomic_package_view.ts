@@ -11,7 +11,6 @@ module AtomicPackages {
     constructor(
       controller: AtomicPackageController
       ) {
-
     }
   }
 }

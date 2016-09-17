@@ -167,6 +167,7 @@ gulp.task('font.copy.dist', function() {
 
 // ファイル更新監視
 gulp.task('watch', function() {
+
   // SCSS
   gulp.watch([scssFiles],['build.css']);
 
