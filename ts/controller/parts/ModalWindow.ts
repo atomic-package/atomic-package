@@ -14,6 +14,11 @@ module Controller {
   import Trigger = AtomicPackageModel.ModalWindowTrigger;
   import TriggerView = AtomicPackageView.ModalWindowTrigger;
 
+  /**
+   * ModalWindow Controller Class
+   * @public
+   * @param option
+   **/
   export class ModalWindow {
     private _created_modal_window_num: number = 0;
     private list: Modal[] = [];
@@ -28,8 +33,6 @@ module Controller {
       document.addEventListener("DOMContentLoaded", () => {
         this.createFromElement(document.querySelectorAll('.' + this._DEFAULT_CLASS_NAME));
         this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
-
-        console.log(this);
       });
     }
 
@@ -40,7 +43,7 @@ module Controller {
       return ++this._created_modal_window_num;
     }
 
-    private createFromElement(nodeList: NodeList) {
+    private createFromElement(nodeList: NodeList): void {
       for(var i: number = 0; i < nodeList.length; i++) {
         this.create({
           className: nodeList[i].className,
@@ -54,22 +57,30 @@ module Controller {
         this.backDrop = BackDrop.fromData({
           view: new BackDropView
         });
+
+        this.setBackDropCallBack();
       }
     }
 
     private createTriggerFromElement(nodeList: NodeList) {
       for(var i: number = 0; i < nodeList.length; i++) {
+        var triggerView = TriggerView.fromData(nodeList[i]);
+
         this.triggerList.push(Trigger.fromData({
           targetClassName: '',
           targetIdName: '',
           targetId: 0,
-          view: TriggerView.fromData(nodeList[i])
+          view: triggerView
         }));
       }
 
       this.setTriggerCallBack();
+    }
 
-      console.log(this.triggerList);
+    private setBackDropCallBack() {
+      this.backDrop.view.click(() => {
+        this.close('all');
+      }, true);
     }
 
     private setTriggerCallBack() {
@@ -119,7 +130,6 @@ module Controller {
 
         this.backDrop.show();
       }
-      //console.log(this.list);
     }
 
     public close(data: any): void {
@@ -158,7 +168,6 @@ module Controller {
           view: null
         }));
       }
-      //console.log(this.list);
     }
 
     public destroy(data: any): void {

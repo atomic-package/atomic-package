@@ -5,11 +5,14 @@ var AtomicPackages;
         }
         AtomicPackageModel.search = function (dataList, type) {
             var key = Object.keys(type)[0];
-            console.log(dataList);
-            console.log(type);
-            return dataList.filter(function (data) {
-                return (data[key] == type[key]);
-            });
+            if (type === 'all') {
+                return dataList;
+            }
+            else {
+                return dataList.filter(function (data) {
+                    return (data[key] == type[key]);
+                });
+            }
         };
         AtomicPackageModel.checkType = function (data) {
             switch (typeof data) {
@@ -20,8 +23,11 @@ var AtomicPackages;
                     if (/^#/.test(data)) {
                         return { idName: data.substr(1) };
                     }
-                    else {
+                    else if (/^\./.test(data)) {
                         return { className: data.substr(1) };
+                    }
+                    else if (/all/gi.test(data)) {
+                        return 'all';
                     }
                     break;
             }
@@ -64,8 +70,17 @@ var AtomicPackageView;
         function ModalWindowBackDrop() {
             this._BACKDROP_ELEMENT_CLASS_NAME = 'modalWindowBackDrop';
             this._SHOW_CLASS_NAME = 'show';
+            this.callBackFunction = function () { };
             this.createElement();
+            this.setEventListener();
         }
+        ModalWindowBackDrop.prototype.setEventListener = function () {
+            var _this = this;
+            this.node.addEventListener('click', function (e) {
+                e.preventDefault();
+                _this.click(_this.callBackFunction);
+            }, false);
+        };
         ModalWindowBackDrop.prototype.createElement = function () {
             this.node = document.createElement("div");
             this.node.classList.add(this._BACKDROP_ELEMENT_CLASS_NAME);
@@ -77,6 +92,12 @@ var AtomicPackageView;
         ModalWindowBackDrop.prototype.hide = function () {
             if (this.node.classList.contains(this._SHOW_CLASS_NAME)) {
                 this.node.classList.remove(this._SHOW_CLASS_NAME);
+            }
+        };
+        ModalWindowBackDrop.prototype.click = function (fn, isFirst) {
+            this.callBackFunction = fn;
+            if (!isFirst) {
+                fn();
             }
         };
         return ModalWindowBackDrop;
@@ -202,7 +223,6 @@ var Controller;
             document.addEventListener("DOMContentLoaded", function () {
                 _this.createFromElement(document.querySelectorAll('.' + _this._DEFAULT_CLASS_NAME));
                 _this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
-                console.log(_this);
             });
         }
         ModalWindow.prototype.createId = function () {
@@ -220,19 +240,26 @@ var Controller;
                 this.backDrop = BackDrop.fromData({
                     view: new BackDropView
                 });
+                this.setBackDropCallBack();
             }
         };
         ModalWindow.prototype.createTriggerFromElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
+                var triggerView = TriggerView.fromData(nodeList[i]);
                 this.triggerList.push(Trigger.fromData({
                     targetClassName: '',
                     targetIdName: '',
                     targetId: 0,
-                    view: TriggerView.fromData(nodeList[i])
+                    view: triggerView
                 }));
             }
             this.setTriggerCallBack();
-            console.log(this.triggerList);
+        };
+        ModalWindow.prototype.setBackDropCallBack = function () {
+            var _this = this;
+            this.backDrop.view.click(function () {
+                _this.close('all');
+            }, true);
         };
         ModalWindow.prototype.setTriggerCallBack = function () {
             var _this = this;

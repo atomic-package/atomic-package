@@ -40,8 +40,8 @@ module AtomicPackageView {
     public createElement() {
 
     }
-
   }
+
 
   /**
    * ModalWindowBackDrop Class
@@ -51,31 +51,55 @@ module AtomicPackageView {
   export class ModalWindowBackDrop {
     private _BACKDROP_ELEMENT_CLASS_NAME: string = 'modalWindowBackDrop';
     private _SHOW_CLASS_NAME: string = 'show';
+
+    private callBackFunction: Function = () => {};
     private node: any;
 
     constructor(
       ) {
       this.createElement();
+      this.setEventListener();
     }
 
-    public createElement() {
+    /**
+     * Private Function
+     **/
+    private setEventListener(): void {
+      this.node.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.click(this.callBackFunction);
+      }, false);
+    }
+
+    /**
+     * Public Function
+     **/
+    public createElement(): void {
       this.node = document.createElement("div");
       this.node.classList.add(this._BACKDROP_ELEMENT_CLASS_NAME);
 
       document.body.appendChild(this.node);
     }
 
-    public show() {
+    public show(): void {
       this.node.classList.add(this._SHOW_CLASS_NAME);
     }
 
-    public hide() {
+    public hide(): void {
       if(this.node.classList.contains(this._SHOW_CLASS_NAME)) {
         this.node.classList.remove(this._SHOW_CLASS_NAME);
       }
     }
 
+    public click(fn, isFirst?): void {
+      this.callBackFunction = fn;
+
+      if(!isFirst) {
+        fn();
+      }
+    }
   }
+
 
   /**
    * ModalWindowTrigger Class
@@ -99,8 +123,8 @@ module AtomicPackageView {
       );
     }
 
-    private setEventListener() {
-      this.node.addEventListener('click',(e) => {
+    private setEventListener(): void {
+      this.node.addEventListener('click', (e) => {
         e.preventDefault();
         this.open(this.callBackFunction);
       }, false);
@@ -108,6 +132,7 @@ module AtomicPackageView {
 
     public open(fn, isFirst?): void {
       this.callBackFunction = fn;
+
       if(!isFirst) {
         fn(this.target);
       }

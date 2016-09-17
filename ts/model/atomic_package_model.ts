@@ -22,12 +22,14 @@ module AtomicPackages {
     public static search(dataList: any[], type): any[] {
       var key: string = Object.keys(type)[0];
 
-      console.log(dataList);
-      console.log(type);
+      if(type === 'all') {
+        return dataList;
 
-      return dataList.filter((data: any) => {
-        return (data[key] == type[key]);
-      });
+      } else {
+        return dataList.filter((data: any) => {
+          return (data[key] == type[key]);
+        });
+      }
     }
 
     public static checkType(data: any): Type {
@@ -39,8 +41,10 @@ module AtomicPackages {
         case 'string':
           if(/^#/.test(data)) {
             return { idName: data.substr(1) };
-          } else {
+          } else if(/^\./.test(data)) {
             return { className: data.substr(1) };
+          } else if(/all/gi.test(data)) {
+            return 'all';
           }
           break;
       }
