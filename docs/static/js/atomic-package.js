@@ -280,9 +280,8 @@ var Controller;
         };
         ModalWindow.prototype.createTriggerFromElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
-                var triggerView = TriggerView.fromData(nodeList[i]);
                 this.triggerList.push(Trigger.fromData({
-                    view: triggerView
+                    view: TriggerView.fromData(nodeList[i])
                 }));
             }
             this.setTriggerCallBack();
@@ -353,13 +352,13 @@ var Controller;
                     id: idNumber,
                     className: data.className ? data.className : this._DEFAULT_CLASS_NAME,
                     idName: data.idName ? data.idName : String(this._DEFAULT_ID_NAME + idNumber),
-                    view: data.view
+                    view: data.view ? data.view : null
                 }));
             }
             else {
                 var idNumber = this.createId();
                 this.list.push(Modal.fromData({
-                    id: this.createId(),
+                    id: idNumber,
                     className: this._DEFAULT_CLASS_NAME,
                     idName: String(this._DEFAULT_ID_NAME + idNumber),
                     view: null
@@ -384,7 +383,8 @@ var Controller;
         };
         ModalWindow.prototype.update = function () {
         };
-        ModalWindow.prototype.getElement = function () {
+        ModalWindow.prototype.getElements = function (data) {
+            return APModel.search(this.list, APModel.checkType(data));
         };
         return ModalWindow;
     }());

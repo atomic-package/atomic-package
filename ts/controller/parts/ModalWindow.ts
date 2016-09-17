@@ -58,20 +58,16 @@ module Controller {
         this.backDrop = BackDrop.fromData({
           view: new BackDropView
         });
-
         this.setBackDropCallBack();
       }
     }
 
     private createTriggerFromElement(nodeList: NodeList): void {
       for(var i: number = 0; i < nodeList.length; i++) {
-        var triggerView = TriggerView.fromData(nodeList[i]);
-
         this.triggerList.push(Trigger.fromData({
-          view: triggerView
+          view: TriggerView.fromData(nodeList[i])
         }));
       }
-
       this.setTriggerCallBack();
     }
 
@@ -129,7 +125,6 @@ module Controller {
         matchModals.forEach((modal: Modal) => {
           modal.open();
         });
-
         this.backDrop.show();
       }
     }
@@ -158,13 +153,13 @@ module Controller {
           id: idNumber,
           className: data.className ? data.className : this._DEFAULT_CLASS_NAME,
           idName: data.idName ? data.idName : String(this._DEFAULT_ID_NAME + idNumber),
-          view: data.view
+          view: data.view ? data.view : null
         }));
       } else {
         var idNumber: number = this.createId();
 
         this.list.push(Modal.fromData({
-          id: this.createId(),
+          id: idNumber,
           className: this._DEFAULT_CLASS_NAME,
           idName: String(this._DEFAULT_ID_NAME + idNumber),
           view: null
@@ -194,8 +189,8 @@ module Controller {
 
     }
 
-    public getElement() {
-
+    public getElements(data: any): Modal[] {
+      return APModel.search(this.list, APModel.checkType(data));
     }
   }
 }
