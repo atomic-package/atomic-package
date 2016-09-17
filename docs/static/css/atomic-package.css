@@ -3170,6 +3170,21 @@ h6.title {
 
 /* Modal Style
 -------------------------------------------------- */
+.modalWindow {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 800px;
+  min-height: 400px;
+  background: #fff;
+  z-index: 5000;
+}
+
+.modalWindow.open {
+  display: block;
+}
+
 .modalWindowBackDrop {
   display: none;
   position: fixed;

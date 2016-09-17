@@ -4,8 +4,7 @@
 /// <reference path='../_all.ts' />
 /// <reference path='../model/atomic_package_model.ts' />
 /// <reference path='../view/atomic_package_view.ts' />
-/// <reference path='parts/ModalWindow.ts' />
-/// <reference path='parts/Button.ts' />
+/// <reference path='parts/_all.ts' />
 
 module AtomicPackages {
   import ModalWindow = Controller.ModalWindow;

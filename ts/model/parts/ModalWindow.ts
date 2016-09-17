@@ -4,6 +4,11 @@
 /// <reference path='../../_all.ts' />
 
 module AtomicPackageModel {
+  /**
+   * ModalWindow Class
+   * @public
+   * @param option
+   **/
   export class ModalWindow {
     constructor(
       public id: number,
@@ -44,7 +49,11 @@ module AtomicPackageModel {
     }
   }
 
-
+  /**
+   * ModalWindowBackDrop Class
+   * @public
+   * @param option
+  **/
   export class ModalWindowBackDrop {
     constructor(
       public isShow: boolean,
@@ -53,8 +62,6 @@ module AtomicPackageModel {
     }
 
     static fromData(data: any): ModalWindowBackDrop {
-      console.log(data);
-
       return new ModalWindowBackDrop(
         data.isShow ? data.isShow: false,
         data.view ? data.view: null
@@ -71,4 +78,27 @@ module AtomicPackageModel {
       this.view.hide();
     }
   }
+
+  /**
+   * ModalWindowTrigger Class
+   * @public
+   * @param option
+   **/
+  export class ModalWindowTrigger {
+    constructor(
+      public view: any
+      ){
+    }
+
+    static fromData(data: any): ModalWindowTrigger {
+      return new ModalWindowTrigger(
+        data.view ? data.view: null
+      );
+    }
+
+    public open() {
+
+    }
+  }
+
 }

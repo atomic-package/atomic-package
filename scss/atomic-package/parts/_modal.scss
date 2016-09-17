@@ -1,7 +1,18 @@
 
 .modalWindow {
-
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 800px;
+  min-height: 400px;
+  background: #fff;
+  z-index: 5000;
+  &.open {
+    display: block;
+  }
 }
+
 .modalWindowBackDrop {
   display: none;
   position: fixed;

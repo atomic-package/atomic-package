@@ -22,6 +22,9 @@ module AtomicPackages {
     public static search(dataList: any[], type): any[] {
       var key: string = Object.keys(type)[0];
 
+      console.log(dataList);
+      console.log(type);
+
       return dataList.filter((data: any) => {
         return (data[key] == type[key]);
       });
@@ -31,6 +34,14 @@ module AtomicPackages {
       switch(typeof data) {
         case 'number':
           return { id: data };
+          break;
+
+        case 'string':
+          if(/^#/.test(data)) {
+            return { idName: data.substr(1) };
+          } else {
+            return { className: data.substr(1) };
+          }
           break;
       }
     }

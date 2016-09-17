@@ -11,19 +11,24 @@ module Controller {
   import View = AtomicPackageView.ModalWindow;
   import BackDrop = AtomicPackageModel.ModalWindowBackDrop;
   import BackDropView = AtomicPackageView.ModalWindowBackDrop;
+  import Trigger = AtomicPackageModel.ModalWindowTrigger;
+  import TriggerView = AtomicPackageView.ModalWindowTrigger;
 
   export class ModalWindow {
-    private _created_modal_window_num = 0;
+    private _created_modal_window_num: number = 0;
     private list: Modal[] = [];
     private backDrop: BackDrop = null;
+    private triggerList: Trigger[] = [];
 
-    private _DEFAULT_ID_NAME = 'modalWindow';
-    private _DEFAULT_CLASS_NAME = 'modalWindow';
+    private _DEFAULT_ID_NAME: string = 'modalWindow';
+    private _DEFAULT_CLASS_NAME: string = 'modalWindow';
 
     constructor(
       ) {
       document.addEventListener("DOMContentLoaded", () => {
         this.createFromElement(document.querySelectorAll('.' + this._DEFAULT_CLASS_NAME));
+        this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
+
         console.log(this);
       });
     }
@@ -44,11 +49,35 @@ module Controller {
         });
       }
 
+      // create BackDrop
       if(nodeList.length > 0 && this.backDrop === null) {
         this.backDrop = BackDrop.fromData({
           view: new BackDropView
         });
       }
+    }
+
+    private createTriggerFromElement(nodeList: NodeList) {
+      for(var i: number = 0; i < nodeList.length; i++) {
+        this.triggerList.push(Trigger.fromData({
+          targetClassName: '',
+          targetIdName: '',
+          targetId: 0,
+          view: TriggerView.fromData(nodeList[i])
+        }));
+      }
+
+      this.setTriggerCallBack();
+
+      console.log(this.triggerList);
+    }
+
+    private setTriggerCallBack() {
+      this.triggerList.forEach((trigger: Trigger) => {
+        trigger.view.open((target) => {
+          this.open(target);
+        }, true);
+      });
     }
 
     private matchModal(searchModals: Modal[]): Modal[] {
@@ -90,7 +119,7 @@ module Controller {
 
         this.backDrop.show();
       }
-      console.log(this.list);
+      //console.log(this.list);
     }
 
     public close(data: any): void {
@@ -103,6 +132,7 @@ module Controller {
           modal.close();
         });
       }
+
       if(!this.openCheck()) {
         this.backDrop.hide();
       }
@@ -128,8 +158,7 @@ module Controller {
           view: null
         }));
       }
-
-      console.log(this.list);
+      //console.log(this.list);
     }
 
     public destroy(data: any): void {
