@@ -13,15 +13,10 @@ module AtomicPackages {
 
   export class AtomicPackageModel {
     private controller: AtomicPackageController;
-    private view: AtomicPackageView;
-
-    private modalWindow: Model.ModalWindow;
 
     constructor(
       controller: AtomicPackageController
       ) {
-
-      //this.modalWindow = Model.ModalWindow.fromData({})
     }
 
     public static search(dataList: any[], type): any[] {

@@ -25,14 +25,12 @@ module AtomicPackages {
         }
         return AtomicPackage._instance;
       } else {
-        var controller = new AtomicPackages.AtomicPackageController(option);
+        var controller = new AtomicPackages.AtomicPackageController();
 
         this.modal = controller.modal;
         this.btn = controller.btn;
 
         AtomicPackage._instance = this;
-
-        console.log(this);
       }
     }
   }

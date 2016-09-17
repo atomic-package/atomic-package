@@ -18,9 +18,7 @@ module AtomicPackages {
     public modal: Controller.ModalWindow;
     public btn: Controller.Button;
 
-
     constructor(
-      option?: any
       ) {
       this.model = new AtomicPackages.AtomicPackageModel(this);
       this.view = new AtomicPackages.AtomicPackageView(this);

@@ -3,31 +3,59 @@
  */
 /// <reference path='../../_all.ts' />
 /// <reference path="../../model/parts/ModalWindow.ts" />
+/// <reference path="../../view/parts/ModalWindow.ts" />
 
 module Controller {
-  import APModal = AtomicPackages.AtomicPackageModel;
-  import Modal = Model.ModalWindow;
+  import APModel = AtomicPackages.AtomicPackageModel;
+  import Modal = AtomicPackageModel.ModalWindow;
+  import View = AtomicPackageView.ModalWindow;
+  import BackDrop = AtomicPackageModel.ModalWindowBackDrop;
+  import BackDropView = AtomicPackageView.ModalWindowBackDrop;
 
   export class ModalWindow {
-    private created_modal_window_num = 0;
+    private _created_modal_window_num = 0;
     private list: Modal[] = [];
+    private backDrop: BackDrop = null;
+
+    private _DEFAULT_ID_NAME = 'modalWindow';
+    private _DEFAULT_CLASS_NAME = 'modalWindow';
 
     constructor(
       ) {
+      document.addEventListener("DOMContentLoaded", () => {
+        this.createFromElement(document.querySelectorAll('.' + this._DEFAULT_CLASS_NAME));
+        console.log(this);
+      });
     }
 
     /**
      * Private Function
     **/
     private createId(): number {
-      return ++this.created_modal_window_num;
+      return ++this._created_modal_window_num;
+    }
+
+    private createFromElement(nodeList: NodeList) {
+      for(var i: number = 0; i < nodeList.length; i++) {
+        this.create({
+          className: nodeList[i].className,
+          idName: nodeList[i].id ? nodeList[i].id : null,
+          view: View.fromData(nodeList[i])
+        });
+      }
+
+      if(nodeList.length > 0 && this.backDrop === null) {
+        this.backDrop = BackDrop.fromData({
+          view: new BackDropView
+        });
+      }
     }
 
     private matchModal(searchModals: Modal[]): Modal[] {
       var matchModals: Modal[] = [];
 
-      this.list.forEach((modal: Modal, i: number) => {
-        searchModals.forEach((searchModal: Modal, n: number) => {
+      this.list.forEach((modal: Modal) => {
+        searchModals.forEach((searchModal: Modal) => {
           if(modal == searchModal) {
             matchModals.push(modal);
           }
@@ -36,11 +64,22 @@ module Controller {
       return matchModals;
     }
 
+    private openCheck(): boolean {
+      var isOpen = false;
+
+      this.list.forEach((modal: Modal) => {
+        if(modal.isOpen) {
+          isOpen = true;
+        }
+      });
+      return isOpen;
+    }
+
     /**
      * Public Function
     **/
-    public open(data: any) {
-      var searchModals = APModal.search(this.list, APModal.checkType(data));
+    public open(data: any): void {
+      var searchModals: Modal[] = APModel.search(this.list, APModel.checkType(data));
 
       if(searchModals.length > 0) {
         var matchModals: Modal[] = this.matchModal(searchModals);
@@ -48,11 +87,14 @@ module Controller {
         matchModals.forEach((modal: Modal) => {
           modal.open();
         });
+
+        this.backDrop.show();
       }
+      console.log(this.list);
     }
 
-    public close(data: any) {
-      var searchModals = APModal.search(this.list, APModal.checkType(data));
+    public close(data: any): void {
+      var searchModals: Modal[] = APModel.search(this.list, APModel.checkType(data));
 
       if(searchModals.length > 0) {
         var matchModals: Modal[] = this.matchModal(searchModals);
@@ -61,24 +103,46 @@ module Controller {
           modal.close();
         });
       }
+      if(!this.openCheck()) {
+        this.backDrop.hide();
+      }
     }
 
-    public create() {
-      this.list.push(Modal.fromData({
-        id: this.createId()
-      }));
+    public create(data: any): void {
+      if(data !== void 0) {
+        var idNumber: number = this.createId();
+
+        this.list.push(Modal.fromData({
+          id: idNumber,
+          className: data.className ? data.className : this._DEFAULT_CLASS_NAME,
+          idName: data.idName ? data.idName : String(this._DEFAULT_ID_NAME + idNumber),
+          view: data.view
+        }));
+      } else {
+        var idNumber: number = this.createId();
+
+        this.list.push(Modal.fromData({
+          id: this.createId(),
+          className: this._DEFAULT_CLASS_NAME,
+          idName: String(this._DEFAULT_ID_NAME + idNumber),
+          view: null
+        }));
+      }
+
       console.log(this.list);
     }
 
-    public destroy(data: any) {
-      var searchModals = APModal.search(this.list, APModal.checkType(data)),
+    public destroy(data: any): void {
+      var searchModals = APModel.search(this.list, APModel.checkType(data)),
           newList: Modal[] = [];
 
       if(searchModals.length > 0) {
-        this.list.forEach((modal: Modal, i: number) => {
-          searchModals.forEach((searchModal: Modal, n: number) => {
+        this.list.forEach((modal: Modal) => {
+          searchModals.forEach((searchModal: Modal) => {
             if(modal !== searchModal) {
               newList.push(modal);
+            } else {
+              modal.destroy();
             }
           });
         });

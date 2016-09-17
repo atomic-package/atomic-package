@@ -3,28 +3,73 @@
  */
 /// <reference path='../../_all.ts' />
 
-module View {
-  var created_modal_window_num = 0;
-
+module AtomicPackageView {
   export class ModalWindow {
-    constructor(
-      public id: number,
-      public className: string,
-      public idName: string
-      ) {
+    private _OPEN_CLASS_NAME = 'open';
 
+    constructor(
+      public node: any
+      ) {
     }
 
     static fromData(data: any): ModalWindow {
       return new ModalWindow(
-        data.id ? data.id : 0,
-        data.className ? data.className : '',
-        data.idName ? data.idName : ''
+        data ? data : null
       );
     }
 
-    private createId(): number {
-      return ++created_modal_window_num;
+    public open() {
+      this.node.classList.add(this._OPEN_CLASS_NAME);
     }
+
+    public close() {
+      if(this.node.classList.contains(this._OPEN_CLASS_NAME)) {
+        this.node.classList.remove(this._OPEN_CLASS_NAME);
+      }
+    }
+
+    public addIdName(idName: string) {
+      this.node.id = idName;
+    }
+
+    public destroy(): void {
+      var DOM = document.getElementById(this.node.id);
+      DOM.parentNode.removeChild(DOM);
+    }
+
+    public createElement() {
+
+    }
+
   }
+
+
+  export class ModalWindowBackDrop {
+    private _SHOW_CLASS_NAME = 'show';
+
+    private node: any;
+
+    constructor(
+      ) {
+      this.createElement();
+    }
+
+    public createElement() {
+      this.node = document.createElement("div");
+      this.node.classList.add('modalWindowBackDrop');
+      document.body.appendChild(this.node);
+    }
+
+    public show() {
+      this.node.classList.add(this._SHOW_CLASS_NAME);
+    }
+
+    public hide() {
+      if(this.node.classList.contains(this._SHOW_CLASS_NAME)) {
+        this.node.classList.remove(this._SHOW_CLASS_NAME);
+      }
+    }
+
+  }
+
 }
