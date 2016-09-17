@@ -23,7 +23,7 @@ var SOURCE_DIR = '.',
     RELEASE_DIR = 'docs/dist',
     DIST_DIR = 'dist';
 
-var tsFiles = [ SOURCE_DIR + '/ts/**/*.ts' ];
+var tsFiles = [ SOURCE_DIR + '/ts/**/*.ts', '!node_modules/**' ];
 var scssFiles = [ SOURCE_DIR + '/scss/**/*.scss' ];
 
 var cssFiles = [
