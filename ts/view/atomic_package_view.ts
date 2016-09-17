@@ -5,8 +5,10 @@
 
 module AtomicPackages {
   export class AtomicPackageView {
+    private controller: AtomicPackageController;
+
     constructor(
-      model: AtomicPackageModel
+      controller: AtomicPackageController
       ) {
 
     }

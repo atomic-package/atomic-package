@@ -4,27 +4,30 @@
 /// <reference path='../../_all.ts' />
 
 module Model {
-  var created_modal_window_num = 0;
-
   export class ModalWindow {
     constructor(
       public id: number,
       public className: string,
-      public idName: string
+      public idName: string,
+      public isOpen: boolean
       ) {
-
     }
 
     static fromData(data: any): ModalWindow {
       return new ModalWindow(
-        data.id ? data.id : 0,
+        data.id ? data.id : 1,
         data.className ? data.className : '',
-        data.idName ? data.idName : ''
+        data.idName ? data.idName : '',
+        data.isOpen ? data.isOpen : false
       );
     }
 
-    private createId(): number {
-      return ++created_modal_window_num;
+    public open() {
+      this.isOpen = true;
+    }
+
+    public close() {
+      this.isOpen = false;
     }
   }
 }

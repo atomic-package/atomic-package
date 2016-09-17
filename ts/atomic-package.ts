@@ -2,6 +2,7 @@
  * Author: Daisuke Takayama
  */
 /// <reference path='_all.ts' />
+/// <reference path='controller/atomic_package_controller.ts' />
 
 'use strict';
 var e = eval, global: NodeJS.Global = e('this');
@@ -10,40 +11,41 @@ module AtomicPackages {
   export class AtomicPackage {
     private static _instance: AtomicPackage = null;
 
-    private model: AtomicPackageModel;
-    private view: AtomicPackageView;
+    public modal: any;
+    public btn: any;
 
     constructor(
       option?: any
       ) {
+      //var controller = new AtomicPackages.AtomicPackageController(option);
       if (AtomicPackage._instance) {
         if (option !== void 0) {
-          AtomicPackage._instance.model = new AtomicPackages.AtomicPackageModel(option);
-          AtomicPackage._instance.view = new AtomicPackages.AtomicPackageView(AtomicPackage._instance.model);
+//          var controller = new AtomicPackages.AtomicPackageController(option);
+//          AtomicPackage._instance.controller = new AtomicPackages.AtomicPackageController(option);
         }
-
         return AtomicPackage._instance;
       } else {
-        this.model = new AtomicPackages.AtomicPackageModel(option);
-        this.view = new AtomicPackages.AtomicPackageView(this.model);
+        var controller = new AtomicPackages.AtomicPackageController(option);
+
+        this.modal = controller.modal;
+        this.btn = controller.btn;
 
         AtomicPackage._instance = this;
+
+        console.log(this);
       }
     }
-
   }
 }
 
 if (typeof (module) !== 'undefined') {
   if (typeof (module).exports.AP === 'undefined') {
-    (module).exports.AP = {};
+    (module).exports.AP = new AtomicPackages.AtomicPackage();
   }
-  (module).exports.AP = AtomicPackages.AtomicPackage;
 }
 
 if (typeof (global) !== 'undefined') {
   if (typeof global['AP'] === 'undefined') {
-    global['AP'] = {};
+    global['AP'] = new AtomicPackages.AtomicPackage({});
   }
-  global['AP'] = AtomicPackages.AtomicPackage;
 }
