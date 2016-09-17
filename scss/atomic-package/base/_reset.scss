@@ -21,11 +21,13 @@ ol, ul { list-style: none; }
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -38,12 +40,16 @@ a {
   vertical-align: baseline;
   background: transparent;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 em, b { font-style: normal; }
+
 img { vertical-align: top; }
+
 hr {
   display: block;
   height: 1px;
@@ -52,6 +58,7 @@ hr {
   border: 0;
   outline: 0;
 }
+
 input, select { vertical-align: middle; }
 
 button {
@@ -60,4 +67,10 @@ button {
   background: none;
   line-height: 1;
   font-size: 14px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  outline: none;
 }

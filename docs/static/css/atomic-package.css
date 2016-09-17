@@ -92,6 +92,14 @@ button {
   font-size: 14px;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
 /*
  * Base Style
 */
@@ -3205,6 +3213,68 @@ h6.title {
 */
 /* Form Style
 -------------------------------------------------- */
+/*
+ * Form Style
+*/
+/* Atomic */
+/* checkbox */
+input[type="checkbox"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: #1397E1 2px solid;
+  background: #fff;
+}
+
+input[type="checkbox"]:checked {
+  background: #1397E1;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  top: 4px;
+  left: 3px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="radio"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: #1397E1 2px solid;
+  border-radius: 10px;
+  background: #fff;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #1397E1;
+}
+
+input[type="radio"]:disabled {
+  opacity: 0.5;
+}
+
+/* input class style */
+.input {
+  display: inline-block;
+}
+
 /* Animation Style
 -------------------------------------------------- */
 /* Media Queries Style
