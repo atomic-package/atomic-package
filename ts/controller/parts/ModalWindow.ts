@@ -33,6 +33,7 @@ module Controller {
       document.addEventListener("DOMContentLoaded", () => {
         this.createFromElement(document.querySelectorAll('.' + this._DEFAULT_CLASS_NAME));
         this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
+        this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal-close]'));
       });
     }
 
@@ -62,14 +63,11 @@ module Controller {
       }
     }
 
-    private createTriggerFromElement(nodeList: NodeList) {
+    private createTriggerFromElement(nodeList: NodeList): void {
       for(var i: number = 0; i < nodeList.length; i++) {
         var triggerView = TriggerView.fromData(nodeList[i]);
 
         this.triggerList.push(Trigger.fromData({
-          targetClassName: '',
-          targetIdName: '',
-          targetId: 0,
           view: triggerView
         }));
       }
@@ -77,16 +75,20 @@ module Controller {
       this.setTriggerCallBack();
     }
 
-    private setBackDropCallBack() {
+    private setBackDropCallBack(): void {
       this.backDrop.view.click(() => {
         this.close('all');
       }, true);
     }
 
-    private setTriggerCallBack() {
+    private setTriggerCallBack(): void {
       this.triggerList.forEach((trigger: Trigger) => {
         trigger.view.open((target) => {
           this.open(target);
+        }, true);
+
+        trigger.view.close((target) => {
+          this.close(target);
         }, true);
       });
     }

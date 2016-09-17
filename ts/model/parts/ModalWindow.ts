@@ -95,10 +95,6 @@ module AtomicPackageModel {
         data.view ? data.view: null
       );
     }
-
-    public open() {
-
-    }
   }
 
 }

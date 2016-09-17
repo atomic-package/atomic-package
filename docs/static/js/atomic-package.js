@@ -104,24 +104,60 @@ var AtomicPackageView;
     }());
     AtomicPackageView.ModalWindowBackDrop = ModalWindowBackDrop;
     var ModalWindowTrigger = (function () {
-        function ModalWindowTrigger(node, target) {
+        function ModalWindowTrigger(node, target, isOpener) {
             this.node = node;
             this.target = target;
-            this.callBackFunction = function () { };
+            this.isOpener = isOpener;
+            this.openCallBackFunction = function () { };
+            this.closeCallBackFunction = function () { };
+            this.setTarget(this.node);
             this.setEventListener();
         }
         ModalWindowTrigger.fromData = function (data) {
-            return new ModalWindowTrigger(data ? data : null, data.dataset.apModal ? data.dataset.apModal : data.hash);
+            return new ModalWindowTrigger(data ? data : null, null, true);
+        };
+        ModalWindowTrigger.prototype.setTarget = function (node) {
+            if (node.dataset.apModalClose !== undefined) {
+                this.isOpener = false;
+                if (node.dataset.apModalClose) {
+                    this.target = node.dataset.apModalClose;
+                }
+                else if ((/^#./gi).test(node.hash)) {
+                    this.target = node.hash;
+                }
+                else {
+                    this.target = 'all';
+                }
+            }
+            else if (node.dataset.apModal !== undefined) {
+                if (node.dataset.apModal) {
+                    this.target = node.dataset.apModal;
+                }
+                else {
+                    this.target = node.hash;
+                }
+            }
         };
         ModalWindowTrigger.prototype.setEventListener = function () {
             var _this = this;
             this.node.addEventListener('click', function (e) {
                 e.preventDefault();
-                _this.open(_this.callBackFunction);
+                if (_this.isOpener) {
+                    _this.open(_this.openCallBackFunction);
+                }
+                else {
+                    _this.close(_this.closeCallBackFunction);
+                }
             }, false);
         };
         ModalWindowTrigger.prototype.open = function (fn, isFirst) {
-            this.callBackFunction = fn;
+            this.openCallBackFunction = fn;
+            if (!isFirst) {
+                fn(this.target);
+            }
+        };
+        ModalWindowTrigger.prototype.close = function (fn, isFirst) {
+            this.closeCallBackFunction = fn;
             if (!isFirst) {
                 fn(this.target);
             }
@@ -196,8 +232,6 @@ var AtomicPackageModel;
         ModalWindowTrigger.fromData = function (data) {
             return new ModalWindowTrigger(data.view ? data.view : null);
         };
-        ModalWindowTrigger.prototype.open = function () {
-        };
         return ModalWindowTrigger;
     }());
     AtomicPackageModel.ModalWindowTrigger = ModalWindowTrigger;
@@ -223,6 +257,7 @@ var Controller;
             document.addEventListener("DOMContentLoaded", function () {
                 _this.createFromElement(document.querySelectorAll('.' + _this._DEFAULT_CLASS_NAME));
                 _this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
+                _this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal-close]'));
             });
         }
         ModalWindow.prototype.createId = function () {
@@ -247,9 +282,6 @@ var Controller;
             for (var i = 0; i < nodeList.length; i++) {
                 var triggerView = TriggerView.fromData(nodeList[i]);
                 this.triggerList.push(Trigger.fromData({
-                    targetClassName: '',
-                    targetIdName: '',
-                    targetId: 0,
                     view: triggerView
                 }));
             }
@@ -266,6 +298,9 @@ var Controller;
             this.triggerList.forEach(function (trigger) {
                 trigger.view.open(function (target) {
                     _this.open(target);
+                }, true);
+                trigger.view.close(function (target) {
+                    _this.close(target);
                 }, true);
             });
         };

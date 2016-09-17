@@ -107,31 +107,69 @@ module AtomicPackageView {
    * @param option
    **/
   export class ModalWindowTrigger {
-    private callBackFunction: Function = () => {};
+    private openCallBackFunction: Function = () => {};
+    private closeCallBackFunction: Function = () => {};
 
     constructor(
       public node: any,
-      public target: any
+      public target: any,
+      public isOpener: boolean
       ) {
+      this.setTarget(this.node);
       this.setEventListener();
     }
 
     static fromData(data: any): ModalWindowTrigger {
       return new ModalWindowTrigger(
         data ? data : null,
-        data.dataset.apModal ? data.dataset.apModal : data.hash
+        null,
+        true
       );
+    }
+
+    private setTarget(node) {
+      if(node.dataset.apModalClose !== undefined) {
+        this.isOpener = false;
+
+        if(node.dataset.apModalClose) {
+          this.target = node.dataset.apModalClose;
+        } else if((/^#./gi).test(node.hash)) {
+          this.target = node.hash;
+        } else {
+          this.target = 'all';
+        }
+
+      } else if(node.dataset.apModal !== undefined) {
+        if(node.dataset.apModal) {
+          this.target = node.dataset.apModal;
+        } else {
+          this.target = node.hash;
+        }
+      }
     }
 
     private setEventListener(): void {
       this.node.addEventListener('click', (e) => {
         e.preventDefault();
-        this.open(this.callBackFunction);
+
+        if(this.isOpener) {
+          this.open(this.openCallBackFunction);
+        } else {
+          this.close(this.closeCallBackFunction);
+        }
       }, false);
     }
 
     public open(fn, isFirst?): void {
-      this.callBackFunction = fn;
+      this.openCallBackFunction = fn;
+
+      if(!isFirst) {
+        fn(this.target);
+      }
+    }
+
+    public close(fn, isFirst?): void {
+      this.closeCallBackFunction = fn;
 
       if(!isFirst) {
         fn(this.target);
