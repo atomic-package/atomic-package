@@ -3,41 +3,10 @@
     <div class="container">
 
         <h2>ボタン (Wrap Style)</h2>
-        <p class="btn"><a href="">Button</a></p>
-        <p class="btn primary"><a href="">Primary</a></p>
-        <p class="btn secondly"><a href="">Secondly</a></p>
-        <p class="btn green"><a href="">Success</a></p>
-        <p class="btn orange"><a href="">Warning</a></p>
-        <p class="btn red"><a href="">Danger</a></p>
+        {{ partial "parts/btn.html" . }}
 
+        <h2>ボタングループ</h2>
 
-        <h3>button Element</h3>
-        <p class="btn"><button>Button</button></p>
-        <p class="btn primary"><button>Button</button></p>
-        <p class="btn secondly"><button>Button</button></p>
-        <p class="btn green"><button>Success</button></p>
-        <p class="btn orange"><button>Warning</button></p>
-        <p class="btn red"><button>Danger</button></p>
-
-        <h3>input Element</h3>
-        <p class="btn"><input type="submit" value="Button"/></p>
-        <p class="btn primary"><input type="submit" value="Button"/></p>
-        <p class="btn secondly"><input type="submit" value="Button"/></p>
-        <p class="btn green"><input type="submit" value="Button"/></p>
-        <p class="btn orange"><input type="submit" value="Button"/></p>
-        <p class="btn red"><input type="submit" value="Button"/></p>
-
-        <h2>ボタン (サイズ)</h2>
-        <p class="btn primary ss"><a href="">Mini button</a></p>
-        <p class="btn primary small"><a href="">Small button</a></p>
-        <p class="btn primary"><a href="">Default button</a></p>
-        <p class="btn primary large"><a href="">Large button</a></p>
-        <p class="btn primary ll"><a href="">Big button</a></p>
-
-        <h2>ボタン (Style)</h2>
-        <a class="btn" href="">Button</a>
-        <button class="btn primary" value="ボタン"></button>
-        <input class="btn primary" type="submit" value="ボタン"/>
 
         <h2>タイトル</h2>
 
@@ -143,6 +112,8 @@
         <p class="text">テキストテキストテキストテキストテキストテキスト</p>
         <p class="text">テキストテキストテキストテキストテキスト</p>
         <p class="text">テキストテキストテキストテキストテキスト</p>
+
+        <p class="text">テキスト<span class="string">テ</span>キストテキストテキストテキスト</p>
         <p class="text link"><a href="">テキストテキスト</a></p>
         <p class="text copy">コピーライト</p>
 
