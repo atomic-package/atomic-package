@@ -447,6 +447,15 @@ if (typeof (global) !== 'undefined') {
         global['AP'] = new AtomicPackages.AtomicPackage({});
     }
 }
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var Button = (function () {
+        function Button() {
+        }
+        return Button;
+    }());
+    AtomicPackageView.Button = Button;
+})(AtomicPackageView || (AtomicPackageView = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var Utility = (function () {
@@ -528,12 +537,3 @@ var Model;
     }());
     Model.Button = Button;
 })(Model || (Model = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
-    var Button = (function () {
-        function Button() {
-        }
-        return Button;
-    }());
-    AtomicPackageView.Button = Button;
-})(AtomicPackageView || (AtomicPackageView = {}));
