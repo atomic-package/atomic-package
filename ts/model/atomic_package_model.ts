@@ -20,7 +20,11 @@ module AtomicPackages {
       ) {
     }
 
-    public static search(dataList: any[], type): any[] {
+    private static isArray(data): boolean {
+      return Array.isArray(data) || /^\[/.test(data);
+    }
+
+    private static getSearchItems(dataList: any[], type: any) {
       var key: string = Object.keys(type)[0];
 
       if(type === 'all') {
@@ -33,8 +37,59 @@ module AtomicPackages {
       }
     }
 
+    private static stringToArray(data: any) {
+      if(typeof data === 'string') {
+        var splitList = data.replace(/^\[/g , '').replace(/\]$/g , '').split(","),
+            newSplitList = [];
+
+        splitList.forEach((item: any) => {
+          newSplitList.push(this.stringToNumber(item));
+        });
+
+        return newSplitList;
+      } else {
+        return data;
+      }
+    }
+
+    private static stringToNumber(data: any) {
+      if(parseInt(data, 10)) {
+        return parseInt(data, 10);
+      } else {
+        return data;
+      }
+    }
+
+    public static search(dataList: any[], type: any): any[] {
+      if(this.isArray(type)) {
+        var keys = [],
+            searchItems = [],
+            resultItem = [];
+
+        this.stringToArray(type).forEach((item: any) => {
+          keys.push(this.checkType(item));
+        });
+
+        keys.forEach((key: any) => {
+          searchItems = this.getSearchItems(dataList, key);
+
+          searchItems.forEach((item: any) => {
+            resultItem.push(item);
+          });
+        });
+
+        return resultItem;
+      } else {
+        return this.getSearchItems(dataList, this.checkType(type));
+      }
+    }
+
     public static checkType(data: any): Type {
       switch(typeof data) {
+        case 'object':
+          return data;
+          break;
+
         case 'number':
           return { id: data };
           break;
@@ -46,6 +101,8 @@ module AtomicPackages {
             return { className: data.substr(1) };
           } else if(/all/gi.test(data)) {
             return 'all';
+          } else if(this.stringToNumber(data)) {
+            return { id: data };
           }
           break;
       }

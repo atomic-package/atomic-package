@@ -16,6 +16,8 @@ module SwitcherModel {
       public className: string,
       public idName: string,
       public items: TriggerItem[],
+      public itemLength: number,
+      public selectedNumber: number,
       public view: any
       ) {
     }
@@ -26,6 +28,8 @@ module SwitcherModel {
         data.className ? data.className : '',
         data.idName ? data.idName : '',
         data.items ? data.items : null,
+        data.selectedNumber ? data.selectedNumber : 1,
+        data.items.length,
         data.view ? data.view : null
       );
     }
@@ -40,9 +44,10 @@ module SwitcherModel {
   export class TriggerItem {
     constructor(
       public id: number,
+      public parentId: number,
       public className: string,
       public idName: string,
-      public items: boolean,
+      public isSelected: boolean,
       public view: any
       ) {
     }
@@ -50,9 +55,10 @@ module SwitcherModel {
     static fromData(data: any): TriggerItem {
       return new TriggerItem(
         data.id ? data.id : 1,
+        data.parentId ? data.parentId : 1,
         data.className ? data.className : '',
         data.idName ? data.idName : '',
-        data.isOpen ? data.isOpen : false,
+        data.isSelected ? data.isSelected : false,
         data.view ? data.view : null
       );
     }
@@ -69,6 +75,7 @@ module SwitcherModel {
       public className: string,
       public idName: string,
       public items: ContentsItem[],
+      public selectedNumber: number,
       public view: any
       ) {
     }
@@ -79,6 +86,7 @@ module SwitcherModel {
         data.className ? data.className : '',
         data.idName ? data.idName : '',
         data.items ? data.items : null,
+        data.selectedNumber ? data.selectedNumber : 1,
         data.view ? data.view : null
       );
     }
@@ -92,9 +100,10 @@ module SwitcherModel {
   export class ContentsItem {
     constructor(
       public id: number,
+      public parentId: number,
       public className: string,
       public idName: string,
-      public items: boolean,
+      public isShow: boolean,
       public view: any
       ) {
     }
@@ -102,9 +111,10 @@ module SwitcherModel {
     static fromData(data: any): ContentsItem {
       return new ContentsItem(
         data.id ? data.id : 1,
+        data.parentId ? data.parentId : 1,
         data.className ? data.className : '',
         data.idName ? data.idName : '',
-        data.isOpen ? data.isOpen : false,
+        data.isShow ? data.isShow : false,
         data.view ? data.view : null
       );
     }

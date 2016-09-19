@@ -3,7 +3,10 @@ var AtomicPackages;
     var Model = (function () {
         function Model() {
         }
-        Model.search = function (dataList, type) {
+        Model.isArray = function (data) {
+            return Array.isArray(data) || /^\[/.test(data);
+        };
+        Model.getSearchItems = function (dataList, type) {
             var key = Object.keys(type)[0];
             if (type === 'all') {
                 return dataList;
@@ -14,8 +17,51 @@ var AtomicPackages;
                 });
             }
         };
+        Model.stringToArray = function (data) {
+            var _this = this;
+            if (typeof data === 'string') {
+                var splitList = data.replace(/^\[/g, '').replace(/\]$/g, '').split(","), newSplitList = [];
+                splitList.forEach(function (item) {
+                    newSplitList.push(_this.stringToNumber(item));
+                });
+                return newSplitList;
+            }
+            else {
+                return data;
+            }
+        };
+        Model.stringToNumber = function (data) {
+            if (parseInt(data, 10)) {
+                return parseInt(data, 10);
+            }
+            else {
+                return data;
+            }
+        };
+        Model.search = function (dataList, type) {
+            var _this = this;
+            if (this.isArray(type)) {
+                var keys = [], searchItems = [], resultItem = [];
+                this.stringToArray(type).forEach(function (item) {
+                    keys.push(_this.checkType(item));
+                });
+                keys.forEach(function (key) {
+                    searchItems = _this.getSearchItems(dataList, key);
+                    searchItems.forEach(function (item) {
+                        resultItem.push(item);
+                    });
+                });
+                return resultItem;
+            }
+            else {
+                return this.getSearchItems(dataList, this.checkType(type));
+            }
+        };
         Model.checkType = function (data) {
             switch (typeof data) {
+                case 'object':
+                    return data;
+                    break;
                 case 'number':
                     return { id: data };
                     break;
@@ -28,6 +74,9 @@ var AtomicPackages;
                     }
                     else if (/all/gi.test(data)) {
                         return 'all';
+                    }
+                    else if (this.stringToNumber(data)) {
+                        return { id: data };
                     }
                     break;
             }
@@ -324,7 +373,7 @@ var ModalWindowController;
             return isOpen;
         };
         ModalWindow.prototype.open = function (data) {
-            var searchModals = APModel.search(this.list, APModel.checkType(data));
+            var searchModals = APModel.search(this.list, data);
             if (searchModals.length > 0) {
                 var matchModals = this.matchModal(searchModals);
                 matchModals.forEach(function (modal) {
@@ -334,7 +383,7 @@ var ModalWindowController;
             }
         };
         ModalWindow.prototype.close = function (data) {
-            var searchModals = APModel.search(this.list, APModel.checkType(data));
+            var searchModals = APModel.search(this.list, data);
             if (searchModals.length > 0) {
                 var matchModals = this.matchModal(searchModals);
                 matchModals.forEach(function (modal) {
@@ -366,7 +415,7 @@ var ModalWindowController;
             }
         };
         ModalWindow.prototype.destroy = function (data) {
-            var searchModals = APModel.search(this.list, APModel.checkType(data)), newList = [];
+            var searchModals = APModel.search(this.list, data), newList = [];
             if (searchModals.length > 0) {
                 this.list.forEach(function (modal) {
                     searchModals.forEach(function (searchModal) {
@@ -384,7 +433,7 @@ var ModalWindowController;
         ModalWindow.prototype.update = function () {
         };
         ModalWindow.prototype.getElements = function (data) {
-            return APModel.search(this.list, APModel.checkType(data));
+            return APModel.search(this.list, data);
         };
         return ModalWindow;
     }());
@@ -420,57 +469,62 @@ var ButtonController;
 var SwitcherModel;
 (function (SwitcherModel) {
     var Trigger = (function () {
-        function Trigger(id, className, idName, items, view) {
+        function Trigger(id, className, idName, items, itemLength, selectedNumber, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.items = items;
+            this.itemLength = itemLength;
+            this.selectedNumber = selectedNumber;
             this.view = view;
         }
         Trigger.fromData = function (data) {
-            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.view ? data.view : null);
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data.items.length, data.view ? data.view : null);
         };
         return Trigger;
     }());
     SwitcherModel.Trigger = Trigger;
     var TriggerItem = (function () {
-        function TriggerItem(id, className, idName, items, view) {
+        function TriggerItem(id, parentId, className, idName, isSelected, view) {
             this.id = id;
+            this.parentId = parentId;
             this.className = className;
             this.idName = idName;
-            this.items = items;
+            this.isSelected = isSelected;
             this.view = view;
         }
         TriggerItem.fromData = function (data) {
-            return new TriggerItem(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isOpen ? data.isOpen : false, data.view ? data.view : null);
+            return new TriggerItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isSelected ? data.isSelected : false, data.view ? data.view : null);
         };
         return TriggerItem;
     }());
     SwitcherModel.TriggerItem = TriggerItem;
     var Contents = (function () {
-        function Contents(id, className, idName, items, view) {
+        function Contents(id, className, idName, items, selectedNumber, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.items = items;
+            this.selectedNumber = selectedNumber;
             this.view = view;
         }
         Contents.fromData = function (data) {
-            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.view ? data.view : null);
+            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data.view ? data.view : null);
         };
         return Contents;
     }());
     SwitcherModel.Contents = Contents;
     var ContentsItem = (function () {
-        function ContentsItem(id, className, idName, items, view) {
+        function ContentsItem(id, parentId, className, idName, isShow, view) {
             this.id = id;
+            this.parentId = parentId;
             this.className = className;
             this.idName = idName;
-            this.items = items;
+            this.isShow = isShow;
             this.view = view;
         }
         ContentsItem.fromData = function (data) {
-            return new ContentsItem(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isOpen ? data.isOpen : false, data.view ? data.view : null);
+            return new ContentsItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isShow ? data.isShow : false, data.view ? data.view : null);
         };
         return ContentsItem;
     }());
@@ -490,9 +544,20 @@ var SwitcherController;
     var Switcher = (function () {
         function Switcher() {
             this._created_switcher_num = 0;
+            this.triggerList = [];
+            this.contentsList = [];
         }
         Switcher.prototype.createId = function () {
             return ++this._created_switcher_num;
+        };
+        Switcher.prototype.createFromElement = function (nodeList) {
+            for (var i = 0; i < nodeList.length; i++) {
+                this.create({});
+            }
+        };
+        Switcher.prototype.create = function (data) {
+        };
+        Switcher.prototype.select = function (data) {
         };
         return Switcher;
     }());

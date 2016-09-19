@@ -118,7 +118,7 @@ module ModalWindowController {
      * Public Function
     **/
     public open(data: any): void {
-      var searchModals: Modal[] = APModel.search(this.list, APModel.checkType(data));
+      var searchModals: Modal[] = APModel.search(this.list, data);
 
       if(searchModals.length > 0) {
         var matchModals: Modal[] = this.matchModal(searchModals);
@@ -131,7 +131,7 @@ module ModalWindowController {
     }
 
     public close(data: any): void {
-      var searchModals: Modal[] = APModel.search(this.list, APModel.checkType(data));
+      var searchModals: Modal[] = APModel.search(this.list, data);
 
       if(searchModals.length > 0) {
         var matchModals: Modal[] = this.matchModal(searchModals);
@@ -169,7 +169,7 @@ module ModalWindowController {
     }
 
     public destroy(data: any): void {
-      var searchModals = APModel.search(this.list, APModel.checkType(data)),
+      var searchModals = APModel.search(this.list, data),
           newList: Modal[] = [];
 
       if(searchModals.length > 0) {
@@ -191,7 +191,7 @@ module ModalWindowController {
     }
 
     public getElements(data: any): Modal[] {
-      return APModel.search(this.list, APModel.checkType(data));
+      return APModel.search(this.list, data);
     }
   }
 }
