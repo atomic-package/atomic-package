@@ -5,7 +5,12 @@
 /// <reference path='parts/ModalWindow.ts' />
 
 module AtomicPackages {
-  export class AtomicPackageView {
+
+  /**
+   * AtomicPackage View Class
+   * @public
+   **/
+  export class View {
     constructor(
       ) {
     }

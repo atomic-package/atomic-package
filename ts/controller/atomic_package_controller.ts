@@ -15,9 +15,9 @@ module AtomicPackages {
    * AtomicPackage Controller Class
    * @public
   **/
-  export class AtomicPackageController {
-    private model: AtomicPackageModel;
-    private view: AtomicPackageView;
+  export class Controller {
+    private model: Model;
+    private view: View;
 
     public modal: ModalWindow;
     public btn: Button;
@@ -25,8 +25,8 @@ module AtomicPackages {
 
     constructor(
       ) {
-      this.model = new AtomicPackages.AtomicPackageModel();
-      this.view  = new AtomicPackages.AtomicPackageView();
+      this.model = new AtomicPackages.Model();
+      this.view  = new AtomicPackages.View();
 
       this.modal    = new ModalWindow();
       this.btn      = new Button();

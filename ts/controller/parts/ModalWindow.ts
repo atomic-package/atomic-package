@@ -6,7 +6,7 @@
 /// <reference path="../../view/parts/ModalWindow.ts" />
 
 module ModalWindowController {
-  import APModel = AtomicPackages.AtomicPackageModel;
+  import APModel = AtomicPackages.Model;
 
   import Modal        = ModalWindowModel.ModalWindow;
   import ModalView    = ModalWindowView.ModalWindow;

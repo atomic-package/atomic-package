@@ -11,7 +11,11 @@ module AtomicPackages {
     length?: number;
   }
 
-  export class AtomicPackageModel {
+  /**
+   * AtomicPackage Model Class
+   * @public
+   **/
+  export class Model {
     constructor(
       ) {
     }

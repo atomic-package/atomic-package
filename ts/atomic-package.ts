@@ -8,6 +8,11 @@
 var e = eval, global: NodeJS.Global = e('this');
 
 module AtomicPackages {
+
+  /**
+   * AtomicPackage Main Class
+   * @public
+  **/
   export class AtomicPackage {
     private static _instance: AtomicPackage = null;
 
@@ -22,10 +27,10 @@ module AtomicPackages {
         return AtomicPackage._instance;
 
       } else {
-        var controller = new AtomicPackages.AtomicPackageController();
+        var controller = new AtomicPackages.Controller();
 
-        this.modal = controller.modal;
-        this.btn = controller.btn;
+        this.modal    = controller.modal;
+        this.btn      = controller.btn;
         this.switcher = controller.switcher;
 
         AtomicPackage._instance = this;

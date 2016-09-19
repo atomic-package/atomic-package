@@ -1,9 +1,9 @@
 var AtomicPackages;
 (function (AtomicPackages) {
-    var AtomicPackageModel = (function () {
-        function AtomicPackageModel() {
+    var Model = (function () {
+        function Model() {
         }
-        AtomicPackageModel.search = function (dataList, type) {
+        Model.search = function (dataList, type) {
             var key = Object.keys(type)[0];
             if (type === 'all') {
                 return dataList;
@@ -14,7 +14,7 @@ var AtomicPackages;
                 });
             }
         };
-        AtomicPackageModel.checkType = function (data) {
+        Model.checkType = function (data) {
             switch (typeof data) {
                 case 'number':
                     return { id: data };
@@ -32,9 +32,9 @@ var AtomicPackages;
                     break;
             }
         };
-        return AtomicPackageModel;
+        return Model;
     }());
-    AtomicPackages.AtomicPackageModel = AtomicPackageModel;
+    AtomicPackages.Model = Model;
 })(AtomicPackages || (AtomicPackages = {}));
 var ModalWindowView;
 (function (ModalWindowView) {
@@ -168,12 +168,12 @@ var ModalWindowView;
 })(ModalWindowView || (ModalWindowView = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
-    var AtomicPackageView = (function () {
-        function AtomicPackageView() {
+    var View = (function () {
+        function View() {
         }
-        return AtomicPackageView;
+        return View;
     }());
-    AtomicPackages.AtomicPackageView = AtomicPackageView;
+    AtomicPackages.View = View;
 })(AtomicPackages || (AtomicPackages = {}));
 var ModalWindowModel;
 (function (ModalWindowModel) {
@@ -238,7 +238,7 @@ var ModalWindowModel;
 })(ModalWindowModel || (ModalWindowModel = {}));
 var ModalWindowController;
 (function (ModalWindowController) {
-    var APModel = AtomicPackages.AtomicPackageModel;
+    var APModel = AtomicPackages.Model;
     var Modal = ModalWindowModel.ModalWindow;
     var ModalView = ModalWindowView.ModalWindow;
     var BackDrop = ModalWindowModel.ModalWindowBackDrop;
@@ -611,17 +611,17 @@ var AtomicPackages;
     var ModalWindow = ModalWindowController.ModalWindow;
     var Button = ButtonController.Button;
     var Switcher = SwitcherController.Switcher;
-    var AtomicPackageController = (function () {
-        function AtomicPackageController() {
-            this.model = new AtomicPackages.AtomicPackageModel();
-            this.view = new AtomicPackages.AtomicPackageView();
+    var Controller = (function () {
+        function Controller() {
+            this.model = new AtomicPackages.Model();
+            this.view = new AtomicPackages.View();
             this.modal = new ModalWindow();
             this.btn = new Button();
             this.switcher = new Switcher();
         }
-        return AtomicPackageController;
+        return Controller;
     }());
-    AtomicPackages.AtomicPackageController = AtomicPackageController;
+    AtomicPackages.Controller = Controller;
 })(AtomicPackages || (AtomicPackages = {}));
 'use strict';
 var e = eval, global = e('this');
@@ -633,7 +633,7 @@ var AtomicPackages;
                 return AtomicPackage._instance;
             }
             else {
-                var controller = new AtomicPackages.AtomicPackageController();
+                var controller = new AtomicPackages.Controller();
                 this.modal = controller.modal;
                 this.btn = controller.btn;
                 this.switcher = controller.switcher;
