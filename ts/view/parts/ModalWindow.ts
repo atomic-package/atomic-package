@@ -3,7 +3,13 @@
  */
 /// <reference path='../../_all.ts' />
 
-module AtomicPackageView {
+module ModalWindowView {
+
+  /**
+   * ModalWindow Class
+   * @public
+   * @param option
+  **/
   export class ModalWindow {
     private _OPEN_CLASS_NAME = 'open';
 

@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module AtomicPackageModel {
+module ModalWindowModel {
   /**
    * ModalWindow Class
    * @public

@@ -3,7 +3,8 @@
  */
 /// <reference path='../../_all.ts' />
 
-module AtomicPackageView {
+module SwitcherView {
+
   /**
    * Switcher Class
    * @public

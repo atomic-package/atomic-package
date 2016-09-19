@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/ScrollSpy.ts" />
 /// <reference path="../../view/parts/ScrollSpy.ts" />
 
-module Controller {
+module ScrollSpyController {
   /**
    * ScrollSpy Class
    * @public

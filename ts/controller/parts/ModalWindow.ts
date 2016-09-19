@@ -5,15 +5,15 @@
 /// <reference path="../../model/parts/ModalWindow.ts" />
 /// <reference path="../../view/parts/ModalWindow.ts" />
 
-module Controller {
+module ModalWindowController {
   import APModel = AtomicPackages.AtomicPackageModel;
 
-  import Modal        = AtomicPackageModel.ModalWindow;
-  import ModalView    = AtomicPackageView.ModalWindow;
-  import BackDrop     = AtomicPackageModel.ModalWindowBackDrop;
-  import BackDropView = AtomicPackageView.ModalWindowBackDrop;
-  import Trigger      = AtomicPackageModel.ModalWindowTrigger;
-  import TriggerView  = AtomicPackageView.ModalWindowTrigger;
+  import Modal        = ModalWindowModel.ModalWindow;
+  import ModalView    = ModalWindowView.ModalWindow;
+  import BackDrop     = ModalWindowModel.ModalWindowBackDrop;
+  import BackDropView = ModalWindowView.ModalWindowBackDrop;
+  import Trigger      = ModalWindowModel.ModalWindowTrigger;
+  import TriggerView  = ModalWindowView.ModalWindowTrigger;
 
   /**
    * ModalWindow Controller Class

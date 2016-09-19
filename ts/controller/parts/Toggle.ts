@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/Toggle.ts" />
 /// <reference path="../../view/parts/Toggle.ts" />
 
-module Controller {
+module ToggleController {
   /**
    * Toggle Class
    * @public

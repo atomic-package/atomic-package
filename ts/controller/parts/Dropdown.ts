@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/Dropdown.ts" />
 /// <reference path="../../view/parts/Dropdown.ts" />
 
-module Controller {
+module DropdownController {
   /**
    * Dropdown Class
    * @public

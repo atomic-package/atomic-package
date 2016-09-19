@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/SideMenu.ts" />
 /// <reference path="../../view/parts/SideMenu.ts" />
 
-module Controller {
+module SideMenuController {
   /**
    * SideMenu Class
    * @public

@@ -36,8 +36,8 @@ var AtomicPackages;
     }());
     AtomicPackages.AtomicPackageModel = AtomicPackageModel;
 })(AtomicPackages || (AtomicPackages = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
+var ModalWindowView;
+(function (ModalWindowView) {
     var ModalWindow = (function () {
         function ModalWindow(node) {
             this.node = node;
@@ -65,7 +65,7 @@ var AtomicPackageView;
         };
         return ModalWindow;
     }());
-    AtomicPackageView.ModalWindow = ModalWindow;
+    ModalWindowView.ModalWindow = ModalWindow;
     var ModalWindowBackDrop = (function () {
         function ModalWindowBackDrop() {
             this._BACKDROP_ELEMENT_CLASS_NAME = 'modalWindowBackDrop';
@@ -102,7 +102,7 @@ var AtomicPackageView;
         };
         return ModalWindowBackDrop;
     }());
-    AtomicPackageView.ModalWindowBackDrop = ModalWindowBackDrop;
+    ModalWindowView.ModalWindowBackDrop = ModalWindowBackDrop;
     var ModalWindowTrigger = (function () {
         function ModalWindowTrigger(node, target, isOpener) {
             this.node = node;
@@ -164,8 +164,8 @@ var AtomicPackageView;
         };
         return ModalWindowTrigger;
     }());
-    AtomicPackageView.ModalWindowTrigger = ModalWindowTrigger;
-})(AtomicPackageView || (AtomicPackageView = {}));
+    ModalWindowView.ModalWindowTrigger = ModalWindowTrigger;
+})(ModalWindowView || (ModalWindowView = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var AtomicPackageView = (function () {
@@ -175,8 +175,8 @@ var AtomicPackages;
     }());
     AtomicPackages.AtomicPackageView = AtomicPackageView;
 })(AtomicPackages || (AtomicPackages = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
+var ModalWindowModel;
+(function (ModalWindowModel) {
     var ModalWindow = (function () {
         function ModalWindow(id, className, idName, isOpen, view) {
             this.id = id;
@@ -205,7 +205,7 @@ var AtomicPackageModel;
         };
         return ModalWindow;
     }());
-    AtomicPackageModel.ModalWindow = ModalWindow;
+    ModalWindowModel.ModalWindow = ModalWindow;
     var ModalWindowBackDrop = (function () {
         function ModalWindowBackDrop(isShow, view) {
             this.isShow = isShow;
@@ -224,7 +224,7 @@ var AtomicPackageModel;
         };
         return ModalWindowBackDrop;
     }());
-    AtomicPackageModel.ModalWindowBackDrop = ModalWindowBackDrop;
+    ModalWindowModel.ModalWindowBackDrop = ModalWindowBackDrop;
     var ModalWindowTrigger = (function () {
         function ModalWindowTrigger(view) {
             this.view = view;
@@ -234,17 +234,17 @@ var AtomicPackageModel;
         };
         return ModalWindowTrigger;
     }());
-    AtomicPackageModel.ModalWindowTrigger = ModalWindowTrigger;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var Controller;
-(function (Controller) {
+    ModalWindowModel.ModalWindowTrigger = ModalWindowTrigger;
+})(ModalWindowModel || (ModalWindowModel = {}));
+var ModalWindowController;
+(function (ModalWindowController) {
     var APModel = AtomicPackages.AtomicPackageModel;
-    var Modal = AtomicPackageModel.ModalWindow;
-    var ModalView = AtomicPackageView.ModalWindow;
-    var BackDrop = AtomicPackageModel.ModalWindowBackDrop;
-    var BackDropView = AtomicPackageView.ModalWindowBackDrop;
-    var Trigger = AtomicPackageModel.ModalWindowTrigger;
-    var TriggerView = AtomicPackageView.ModalWindowTrigger;
+    var Modal = ModalWindowModel.ModalWindow;
+    var ModalView = ModalWindowView.ModalWindow;
+    var BackDrop = ModalWindowModel.ModalWindowBackDrop;
+    var BackDropView = ModalWindowView.ModalWindowBackDrop;
+    var Trigger = ModalWindowModel.ModalWindowTrigger;
+    var TriggerView = ModalWindowView.ModalWindowTrigger;
     var ModalWindow = (function () {
         function ModalWindow() {
             var _this = this;
@@ -388,166 +388,229 @@ var Controller;
         };
         return ModalWindow;
     }());
-    Controller.ModalWindow = ModalWindow;
-})(Controller || (Controller = {}));
-var Model;
-(function (Model) {
+    ModalWindowController.ModalWindow = ModalWindow;
+})(ModalWindowController || (ModalWindowController = {}));
+var ButtonModel;
+(function (ButtonModel) {
     var Button = (function () {
         function Button() {
         }
         return Button;
     }());
-    Model.Button = Button;
-})(Model || (Model = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
+    ButtonModel.Button = Button;
+})(ButtonModel || (ButtonModel = {}));
+var ButtonView;
+(function (ButtonView) {
     var Button = (function () {
         function Button() {
         }
         return Button;
     }());
-    AtomicPackageView.Button = Button;
-})(AtomicPackageView || (AtomicPackageView = {}));
-var Controller;
-(function (Controller) {
+    ButtonView.Button = Button;
+})(ButtonView || (ButtonView = {}));
+var ButtonController;
+(function (ButtonController) {
     var Button = (function () {
         function Button() {
         }
         return Button;
     }());
-    Controller.Button = Button;
-})(Controller || (Controller = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
+    ButtonController.Button = Button;
+})(ButtonController || (ButtonController = {}));
+var SwitcherModel;
+(function (SwitcherModel) {
+    var Trigger = (function () {
+        function Trigger(id, className, idName, items, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.view = view;
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.view ? data.view : null);
+        };
+        return Trigger;
+    }());
+    SwitcherModel.Trigger = Trigger;
+    var TriggerItem = (function () {
+        function TriggerItem(id, className, idName, items, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.view = view;
+        }
+        TriggerItem.fromData = function (data) {
+            return new TriggerItem(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isOpen ? data.isOpen : false, data.view ? data.view : null);
+        };
+        return TriggerItem;
+    }());
+    SwitcherModel.TriggerItem = TriggerItem;
+    var Contents = (function () {
+        function Contents(id, className, idName, items, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.view = view;
+        }
+        Contents.fromData = function (data) {
+            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.view ? data.view : null);
+        };
+        return Contents;
+    }());
+    SwitcherModel.Contents = Contents;
+    var ContentsItem = (function () {
+        function ContentsItem(id, className, idName, items, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.view = view;
+        }
+        ContentsItem.fromData = function (data) {
+            return new ContentsItem(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isOpen ? data.isOpen : false, data.view ? data.view : null);
+        };
+        return ContentsItem;
+    }());
+    SwitcherModel.ContentsItem = ContentsItem;
+})(SwitcherModel || (SwitcherModel = {}));
+var SwitcherView;
+(function (SwitcherView) {
     var Switcher = (function () {
         function Switcher() {
         }
         return Switcher;
     }());
-    AtomicPackageModel.Switcher = Switcher;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
+    SwitcherView.Switcher = Switcher;
+})(SwitcherView || (SwitcherView = {}));
+var SwitcherController;
+(function (SwitcherController) {
     var Switcher = (function () {
         function Switcher() {
+            this._created_switcher_num = 0;
         }
+        Switcher.prototype.createId = function () {
+            return ++this._created_switcher_num;
+        };
         return Switcher;
     }());
-    AtomicPackageView.Switcher = Switcher;
-})(AtomicPackageView || (AtomicPackageView = {}));
-var Controller;
-(function (Controller) {
-    var Switcher = (function () {
-        function Switcher() {
-        }
-        return Switcher;
-    }());
-    Controller.Switcher = Switcher;
-})(Controller || (Controller = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
+    SwitcherController.Switcher = Switcher;
+})(SwitcherController || (SwitcherController = {}));
+var DropdownModel;
+(function (DropdownModel) {
     var Dropdown = (function () {
         function Dropdown() {
         }
         return Dropdown;
     }());
-    AtomicPackageModel.Dropdown = Dropdown;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
+    DropdownModel.Dropdown = Dropdown;
+})(DropdownModel || (DropdownModel = {}));
+var DropdownView;
+(function (DropdownView) {
     var Dropdown = (function () {
         function Dropdown() {
         }
         return Dropdown;
     }());
-    AtomicPackageView.Dropdown = Dropdown;
-})(AtomicPackageView || (AtomicPackageView = {}));
-var Controller;
-(function (Controller) {
+    DropdownView.Dropdown = Dropdown;
+})(DropdownView || (DropdownView = {}));
+var DropdownController;
+(function (DropdownController) {
     var Dropdown = (function () {
         function Dropdown() {
         }
         return Dropdown;
     }());
-    Controller.Dropdown = Dropdown;
-})(Controller || (Controller = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
+    DropdownController.Dropdown = Dropdown;
+})(DropdownController || (DropdownController = {}));
+var ScrollSpyModel;
+(function (ScrollSpyModel) {
     var ScrollSpy = (function () {
         function ScrollSpy() {
         }
         return ScrollSpy;
     }());
-    AtomicPackageModel.ScrollSpy = ScrollSpy;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var Controller;
-(function (Controller) {
+    ScrollSpyModel.ScrollSpy = ScrollSpy;
+})(ScrollSpyModel || (ScrollSpyModel = {}));
+var ScrollSpyView;
+(function (ScrollSpyView) {
     var ScrollSpy = (function () {
         function ScrollSpy() {
         }
         return ScrollSpy;
     }());
-    Controller.ScrollSpy = ScrollSpy;
-})(Controller || (Controller = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
+    ScrollSpyView.ScrollSpy = ScrollSpy;
+})(ScrollSpyView || (ScrollSpyView = {}));
+var ScrollSpyController;
+(function (ScrollSpyController) {
+    var ScrollSpy = (function () {
+        function ScrollSpy() {
+        }
+        return ScrollSpy;
+    }());
+    ScrollSpyController.ScrollSpy = ScrollSpy;
+})(ScrollSpyController || (ScrollSpyController = {}));
+var SmoothScrollModel;
+(function (SmoothScrollModel) {
     var SmoothScroll = (function () {
         function SmoothScroll() {
         }
         return SmoothScroll;
     }());
-    AtomicPackageModel.SmoothScroll = SmoothScroll;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
+    SmoothScrollModel.SmoothScroll = SmoothScroll;
+})(SmoothScrollModel || (SmoothScrollModel = {}));
+var SmoothScrollView;
+(function (SmoothScrollView) {
     var SmoothScroll = (function () {
         function SmoothScroll() {
         }
         return SmoothScroll;
     }());
-    AtomicPackageView.SmoothScroll = SmoothScroll;
-})(AtomicPackageView || (AtomicPackageView = {}));
-var Controller;
-(function (Controller) {
+    SmoothScrollView.SmoothScroll = SmoothScroll;
+})(SmoothScrollView || (SmoothScrollView = {}));
+var SmoothScrollController;
+(function (SmoothScrollController) {
     var SmoothScroll = (function () {
         function SmoothScroll() {
         }
         return SmoothScroll;
     }());
-    Controller.SmoothScroll = SmoothScroll;
-})(Controller || (Controller = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
+    SmoothScrollController.SmoothScroll = SmoothScroll;
+})(SmoothScrollController || (SmoothScrollController = {}));
+var ToggleModel;
+(function (ToggleModel) {
     var Toggle = (function () {
         function Toggle() {
         }
         return Toggle;
     }());
-    AtomicPackageModel.Toggle = Toggle;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
+    ToggleModel.Toggle = Toggle;
+})(ToggleModel || (ToggleModel = {}));
+var ToggleView;
+(function (ToggleView) {
     var Toggle = (function () {
         function Toggle() {
         }
         return Toggle;
     }());
-    AtomicPackageView.Toggle = Toggle;
-})(AtomicPackageView || (AtomicPackageView = {}));
-var Controller;
-(function (Controller) {
+    ToggleView.Toggle = Toggle;
+})(ToggleView || (ToggleView = {}));
+var ToggleController;
+(function (ToggleController) {
     var Toggle = (function () {
         function Toggle() {
         }
         return Toggle;
     }());
-    Controller.Toggle = Toggle;
-})(Controller || (Controller = {}));
+    ToggleController.Toggle = Toggle;
+})(ToggleController || (ToggleController = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
-    var ModalWindow = Controller.ModalWindow;
-    var Button = Controller.Button;
-    var Switcher = Controller.Switcher;
+    var ModalWindow = ModalWindowController.ModalWindow;
+    var Button = ButtonController.Button;
+    var Switcher = SwitcherController.Switcher;
     var AtomicPackageController = (function () {
         function AtomicPackageController() {
             this.model = new AtomicPackages.AtomicPackageModel();
@@ -592,6 +655,33 @@ if (typeof (global) !== 'undefined') {
         global['AP'] = new AtomicPackages.AtomicPackage({});
     }
 }
+var SideMenuModel;
+(function (SideMenuModel) {
+    var SideMenu = (function () {
+        function SideMenu() {
+        }
+        return SideMenu;
+    }());
+    SideMenuModel.SideMenu = SideMenu;
+})(SideMenuModel || (SideMenuModel = {}));
+var SideMenuView;
+(function (SideMenuView) {
+    var SideMenu = (function () {
+        function SideMenu() {
+        }
+        return SideMenu;
+    }());
+    SideMenuView.SideMenu = SideMenu;
+})(SideMenuView || (SideMenuView = {}));
+var SideMenuController;
+(function (SideMenuController) {
+    var SideMenu = (function () {
+        function SideMenu() {
+        }
+        return SideMenu;
+    }());
+    SideMenuController.SideMenu = SideMenu;
+})(SideMenuController || (SideMenuController = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var Utility = (function () {
@@ -664,30 +754,3 @@ var AtomicPackages;
     }());
     AtomicPackages.Utility = Utility;
 })(AtomicPackages || (AtomicPackages = {}));
-var AtomicPackageModel;
-(function (AtomicPackageModel) {
-    var SideMenu = (function () {
-        function SideMenu() {
-        }
-        return SideMenu;
-    }());
-    AtomicPackageModel.SideMenu = SideMenu;
-})(AtomicPackageModel || (AtomicPackageModel = {}));
-var AtomicPackageView;
-(function (AtomicPackageView) {
-    var SideMenu = (function () {
-        function SideMenu() {
-        }
-        return SideMenu;
-    }());
-    AtomicPackageView.SideMenu = SideMenu;
-})(AtomicPackageView || (AtomicPackageView = {}));
-var Controller;
-(function (Controller) {
-    var SideMenu = (function () {
-        function SideMenu() {
-        }
-        return SideMenu;
-    }());
-    Controller.SideMenu = SideMenu;
-})(Controller || (Controller = {}));

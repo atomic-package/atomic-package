@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module AtomicPackageView {
+module DropdownView {
   /**
    * Dropdown Class
    * @public

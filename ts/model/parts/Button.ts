@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module Model {
+module ButtonModel {
   export class Button {
 
   }

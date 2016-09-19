@@ -7,9 +7,9 @@
 /// <reference path='parts/_all.ts' />
 
 module AtomicPackages {
-  import ModalWindow = Controller.ModalWindow;
-  import Button      = Controller.Button;
-  import Switcher    = Controller.Switcher;
+  import ModalWindow = ModalWindowController.ModalWindow;
+  import Button      = ButtonController.Button;
+  import Switcher    = SwitcherController.Switcher;
 
   /**
    * AtomicPackage Controller Class

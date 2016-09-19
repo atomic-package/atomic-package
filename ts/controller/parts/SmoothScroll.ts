@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/SmoothScroll.ts" />
 /// <reference path="../../view/parts/SmoothScroll.ts" />
 
-module Controller {
+module SmoothScrollController {
   /**
    * SmoothScroll Class
    * @public

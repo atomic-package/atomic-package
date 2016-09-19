@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module AtomicPackageView {
+module ButtonView {
   export class Button {
 
   }
