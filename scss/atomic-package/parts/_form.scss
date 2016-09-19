@@ -51,6 +51,14 @@ input[type="radio"] {
   }
 }
 
+input[type="text"],
+input[type="search"],
+input[type="password"] {
+  border: #3D3D3D 1px solid;
+  height: 28px;
+  box-sizing: border-box;
+}
+
 /* input class style */
 .input {
   display: inline-block;

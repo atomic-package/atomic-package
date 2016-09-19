@@ -13,22 +13,20 @@ module AtomicPackages {
 
     public modal: any;
     public btn: any;
+    public switcher: any;
 
     constructor(
       option?: any
       ) {
-      //var controller = new AtomicPackages.AtomicPackageController(option);
       if (AtomicPackage._instance) {
-        if (option !== void 0) {
-//          var controller = new AtomicPackages.AtomicPackageController(option);
-//          AtomicPackage._instance.controller = new AtomicPackages.AtomicPackageController(option);
-        }
         return AtomicPackage._instance;
+
       } else {
         var controller = new AtomicPackages.AtomicPackageController();
 
         this.modal = controller.modal;
         this.btn = controller.btn;
+        this.switcher = controller.switcher;
 
         AtomicPackage._instance = this;
       }

@@ -7,12 +7,13 @@
 
 module Controller {
   import APModel = AtomicPackages.AtomicPackageModel;
-  import Modal = AtomicPackageModel.ModalWindow;
-  import View = AtomicPackageView.ModalWindow;
-  import BackDrop = AtomicPackageModel.ModalWindowBackDrop;
+
+  import Modal        = AtomicPackageModel.ModalWindow;
+  import ModalView    = AtomicPackageView.ModalWindow;
+  import BackDrop     = AtomicPackageModel.ModalWindowBackDrop;
   import BackDropView = AtomicPackageView.ModalWindowBackDrop;
-  import Trigger = AtomicPackageModel.ModalWindowTrigger;
-  import TriggerView = AtomicPackageView.ModalWindowTrigger;
+  import Trigger      = AtomicPackageModel.ModalWindowTrigger;
+  import TriggerView  = AtomicPackageView.ModalWindowTrigger;
 
   /**
    * ModalWindow Controller Class
@@ -49,7 +50,7 @@ module Controller {
         this.create({
           className: nodeList[i].className,
           idName: nodeList[i].id ? nodeList[i].id : null,
-          view: View.fromData(nodeList[i])
+          view: ModalView.fromData(nodeList[i])
         });
       }
 

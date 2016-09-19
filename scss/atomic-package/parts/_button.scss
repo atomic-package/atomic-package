@@ -1,6 +1,57 @@
 /*
  * Button Style
 */
+$btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+
+@mixin baseBtnStyle {
+  display: inline-block;
+  width: 100%;
+  min-height: 30px;
+  padding: 0 12px;
+  background: #F6F6F6;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 28px;
+  vertical-align: top;
+}
+
+/* Primary */
+@mixin primaryBtnStyle {
+  background: #0BACD3;
+  box-shadow: $btnShadow;
+  color: #fff;
+}
+
+@mixin secondlyBtnStyle {
+  background: #0BACD3;
+  box-shadow: $btnShadow;
+  color: #fff;
+}
+
+@mixin greenBtnStyle {
+  background: #81BA41;
+  box-shadow: $btnShadow;
+  color: #fff;
+}
+
+@mixin orangeBtnStyle {
+  background: #F0AD4E;
+  box-shadow: $btnShadow;
+  color: #fff;
+}
+
+@mixin redBtnStyle {
+  background: #D52D47;
+  box-shadow: $btnShadow;
+  color: #fff;
+}
+
 
 /* Atomic */
 .btn,
@@ -8,25 +59,14 @@
   position: relative;
   display: inline-block;
   min-width: 120px;
+  box-sizing: border-box;
+  vertical-align: middle;
 
   /* Atomic */
   > a,
   > button,
   > input {
-    display: inline-block;
-    width: 100%;
-    min-height: 30px;
-    padding: 0 12px;
-    background: #F6F6F6;
-    border-radius: 4px;
-    border: none;
-    box-sizing: border-box;
-    text-align: center;
-    text-decoration: none;
-    color: #666;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 28px;
+    @include baseBtnStyle;
   }
 
   &.ss {
@@ -80,10 +120,7 @@
   &.primary > a,
   &.primary > button,
   &.primary > input {
-    background: #0BACD3;
-    border-right: 6px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 1px inset;
-    color: #fff;
+    @include primaryBtnStyle;
     //&:hover { background: #303030; }
   }
 
@@ -91,8 +128,6 @@
   &.secondly > button,
   &.secondly > input {
     background: #EEEEEE;
-    border: #000 1px solid;
-    //box-shadow: inset #E5E5E5 0 0 1px 1px;
     background: linear-gradient(top, #404040, #282828);
     color: #fff;
     > a,
@@ -103,27 +138,21 @@
   &.green > a,
   &.green > button,
   &.green > input {
-    background: #81BA41;
-    border: #669433 1px solid;
-    color: #fff;
+    @include greenBtnStyle;
     //&:hover { background: #267400; }
   }
 
   &.orange > a,
   &.orange > button,
   &.orange > input {
-    background: #F0AD4E;
-    border: #E38D13 1px solid;
-    color: #fff;
+    @include orangeBtnStyle;
     //&:hover { background: #FCAE05; }
   }
 
   &.red > a,
   &.red > button,
   &.red > input {
-    background: #D52D47;
-    border: #B02B3E 1px solid;
-    color: #fff;
+    @include redBtnStyle;
     //&:hover { background: #FCAE05; }
   }
 
@@ -146,28 +175,12 @@ a,
 button,
 input {
   &.btn {
-    display: inline-block;
-    min-width: 120px;
-    min-height: 30px;
-    padding: 0 12px;
-    background: #F6F6F6;
-    border-radius: 4px;
-    border: none;
-    box-sizing: border-box;
-    text-align: center;
-    text-decoration: none;
-    color: #666;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 30px;
-    vertical-align: top;
+    @include baseBtnStyle;
+    width: auto;
 
     /* Skin */
     &.primary {
-      background: #0BACD3;
-      border-right: 6px;
-      box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 1px inset;
-      color: #fff;
+      @include primaryBtnStyle;
       //&:hover { background: #303030; }
     }
 
@@ -183,23 +196,17 @@ input {
     }
 
     &.green {
-      background: #81BA41;
-      border: #669433 1px solid;
-      color: #fff;
+      @include greenBtnStyle;
       //&:hover { background: #267400; }
     }
 
     &.orange {
-      background: #F0AD4E;
-      border: #E38D13 1px solid;
-      color: #fff;
+      @include orangeBtnStyle;
       //&:hover { background: #FCAE05; }
     }
 
     &.red {
-      background: #D52D47;
-      border: #B02B3E 1px solid;
-      color: #fff;
+      @include redBtnStyle;
       //&:hover { background: #FCAE05; }
     }
   }
@@ -226,9 +233,22 @@ input {
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
     }
-    & + .btn,
-    & + .btn a {
-      border-left: none;
+
+    &.btn + .primary {
+      border-left: #0889a8 1px solid;
     }
+    &.btn + .secondly {
+      border-left: #0889a8 1px solid;
+    }
+    &.btn + .green {
+      border-left: #40986c 1px solid;
+    }
+    &.btn + .orange {
+      border-left: #c38a3a 1px solid;
+    }
+    &.btn + .red {
+      border-left: #af4450 1px solid;
+    }
+
   }
 }

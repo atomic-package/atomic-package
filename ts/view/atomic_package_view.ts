@@ -6,10 +6,7 @@
 
 module AtomicPackages {
   export class AtomicPackageView {
-    private controller: AtomicPackageController;
-
     constructor(
-      controller: AtomicPackageController
       ) {
     }
   }

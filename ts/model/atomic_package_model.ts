@@ -12,10 +12,7 @@ module AtomicPackages {
   }
 
   export class AtomicPackageModel {
-    private controller: AtomicPackageController;
-
     constructor(
-      controller: AtomicPackageController
       ) {
     }
 

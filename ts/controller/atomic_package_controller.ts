@@ -8,22 +8,29 @@
 
 module AtomicPackages {
   import ModalWindow = Controller.ModalWindow;
-  import Button = Controller.Button;
+  import Button      = Controller.Button;
+  import Switcher    = Controller.Switcher;
 
+  /**
+   * AtomicPackage Controller Class
+   * @public
+  **/
   export class AtomicPackageController {
     private model: AtomicPackageModel;
     private view: AtomicPackageView;
 
-    public modal: Controller.ModalWindow;
-    public btn: Controller.Button;
+    public modal: ModalWindow;
+    public btn: Button;
+    public switcher: Switcher;
 
     constructor(
       ) {
-      this.model = new AtomicPackages.AtomicPackageModel(this);
-      this.view = new AtomicPackages.AtomicPackageView(this);
+      this.model = new AtomicPackages.AtomicPackageModel();
+      this.view  = new AtomicPackages.AtomicPackageView();
 
-      this.modal = new ModalWindow();
-      this.btn = new Button();
+      this.modal    = new ModalWindow();
+      this.btn      = new Button();
+      this.switcher = new Switcher();
 
     }
   }

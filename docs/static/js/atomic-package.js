@@ -1,7 +1,7 @@
 var AtomicPackages;
 (function (AtomicPackages) {
     var AtomicPackageModel = (function () {
-        function AtomicPackageModel(controller) {
+        function AtomicPackageModel() {
         }
         AtomicPackageModel.search = function (dataList, type) {
             var key = Object.keys(type)[0];
@@ -169,7 +169,7 @@ var AtomicPackageView;
 var AtomicPackages;
 (function (AtomicPackages) {
     var AtomicPackageView = (function () {
-        function AtomicPackageView(controller) {
+        function AtomicPackageView() {
         }
         return AtomicPackageView;
     }());
@@ -240,7 +240,7 @@ var Controller;
 (function (Controller) {
     var APModel = AtomicPackages.AtomicPackageModel;
     var Modal = AtomicPackageModel.ModalWindow;
-    var View = AtomicPackageView.ModalWindow;
+    var ModalView = AtomicPackageView.ModalWindow;
     var BackDrop = AtomicPackageModel.ModalWindowBackDrop;
     var BackDropView = AtomicPackageView.ModalWindowBackDrop;
     var Trigger = AtomicPackageModel.ModalWindowTrigger;
@@ -268,7 +268,7 @@ var Controller;
                 this.create({
                     className: nodeList[i].className,
                     idName: nodeList[i].id ? nodeList[i].id : null,
-                    view: View.fromData(nodeList[i])
+                    view: ModalView.fromData(nodeList[i])
                 });
             }
             if (nodeList.length > 0 && this.backDrop === null) {
@@ -390,6 +390,24 @@ var Controller;
     }());
     Controller.ModalWindow = ModalWindow;
 })(Controller || (Controller = {}));
+var Model;
+(function (Model) {
+    var Button = (function () {
+        function Button() {
+        }
+        return Button;
+    }());
+    Model.Button = Button;
+})(Model || (Model = {}));
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var Button = (function () {
+        function Button() {
+        }
+        return Button;
+    }());
+    AtomicPackageView.Button = Button;
+})(AtomicPackageView || (AtomicPackageView = {}));
 var Controller;
 (function (Controller) {
     var Button = (function () {
@@ -399,16 +417,144 @@ var Controller;
     }());
     Controller.Button = Button;
 })(Controller || (Controller = {}));
+var AtomicPackageModel;
+(function (AtomicPackageModel) {
+    var Switcher = (function () {
+        function Switcher() {
+        }
+        return Switcher;
+    }());
+    AtomicPackageModel.Switcher = Switcher;
+})(AtomicPackageModel || (AtomicPackageModel = {}));
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var Switcher = (function () {
+        function Switcher() {
+        }
+        return Switcher;
+    }());
+    AtomicPackageView.Switcher = Switcher;
+})(AtomicPackageView || (AtomicPackageView = {}));
+var Controller;
+(function (Controller) {
+    var Switcher = (function () {
+        function Switcher() {
+        }
+        return Switcher;
+    }());
+    Controller.Switcher = Switcher;
+})(Controller || (Controller = {}));
+var AtomicPackageModel;
+(function (AtomicPackageModel) {
+    var Dropdown = (function () {
+        function Dropdown() {
+        }
+        return Dropdown;
+    }());
+    AtomicPackageModel.Dropdown = Dropdown;
+})(AtomicPackageModel || (AtomicPackageModel = {}));
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var Dropdown = (function () {
+        function Dropdown() {
+        }
+        return Dropdown;
+    }());
+    AtomicPackageView.Dropdown = Dropdown;
+})(AtomicPackageView || (AtomicPackageView = {}));
+var Controller;
+(function (Controller) {
+    var Dropdown = (function () {
+        function Dropdown() {
+        }
+        return Dropdown;
+    }());
+    Controller.Dropdown = Dropdown;
+})(Controller || (Controller = {}));
+var AtomicPackageModel;
+(function (AtomicPackageModel) {
+    var ScrollSpy = (function () {
+        function ScrollSpy() {
+        }
+        return ScrollSpy;
+    }());
+    AtomicPackageModel.ScrollSpy = ScrollSpy;
+})(AtomicPackageModel || (AtomicPackageModel = {}));
+var Controller;
+(function (Controller) {
+    var ScrollSpy = (function () {
+        function ScrollSpy() {
+        }
+        return ScrollSpy;
+    }());
+    Controller.ScrollSpy = ScrollSpy;
+})(Controller || (Controller = {}));
+var AtomicPackageModel;
+(function (AtomicPackageModel) {
+    var SmoothScroll = (function () {
+        function SmoothScroll() {
+        }
+        return SmoothScroll;
+    }());
+    AtomicPackageModel.SmoothScroll = SmoothScroll;
+})(AtomicPackageModel || (AtomicPackageModel = {}));
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var SmoothScroll = (function () {
+        function SmoothScroll() {
+        }
+        return SmoothScroll;
+    }());
+    AtomicPackageView.SmoothScroll = SmoothScroll;
+})(AtomicPackageView || (AtomicPackageView = {}));
+var Controller;
+(function (Controller) {
+    var SmoothScroll = (function () {
+        function SmoothScroll() {
+        }
+        return SmoothScroll;
+    }());
+    Controller.SmoothScroll = SmoothScroll;
+})(Controller || (Controller = {}));
+var AtomicPackageModel;
+(function (AtomicPackageModel) {
+    var Toggle = (function () {
+        function Toggle() {
+        }
+        return Toggle;
+    }());
+    AtomicPackageModel.Toggle = Toggle;
+})(AtomicPackageModel || (AtomicPackageModel = {}));
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var Toggle = (function () {
+        function Toggle() {
+        }
+        return Toggle;
+    }());
+    AtomicPackageView.Toggle = Toggle;
+})(AtomicPackageView || (AtomicPackageView = {}));
+var Controller;
+(function (Controller) {
+    var Toggle = (function () {
+        function Toggle() {
+        }
+        return Toggle;
+    }());
+    Controller.Toggle = Toggle;
+})(Controller || (Controller = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var ModalWindow = Controller.ModalWindow;
     var Button = Controller.Button;
+    var Switcher = Controller.Switcher;
     var AtomicPackageController = (function () {
         function AtomicPackageController() {
-            this.model = new AtomicPackages.AtomicPackageModel(this);
-            this.view = new AtomicPackages.AtomicPackageView(this);
+            this.model = new AtomicPackages.AtomicPackageModel();
+            this.view = new AtomicPackages.AtomicPackageView();
             this.modal = new ModalWindow();
             this.btn = new Button();
+            this.switcher = new Switcher();
         }
         return AtomicPackageController;
     }());
@@ -421,14 +567,13 @@ var AtomicPackages;
     var AtomicPackage = (function () {
         function AtomicPackage(option) {
             if (AtomicPackage._instance) {
-                if (option !== void 0) {
-                }
                 return AtomicPackage._instance;
             }
             else {
                 var controller = new AtomicPackages.AtomicPackageController();
                 this.modal = controller.modal;
                 this.btn = controller.btn;
+                this.switcher = controller.switcher;
                 AtomicPackage._instance = this;
             }
         }
@@ -447,15 +592,6 @@ if (typeof (global) !== 'undefined') {
         global['AP'] = new AtomicPackages.AtomicPackage({});
     }
 }
-var AtomicPackageView;
-(function (AtomicPackageView) {
-    var Button = (function () {
-        function Button() {
-        }
-        return Button;
-    }());
-    AtomicPackageView.Button = Button;
-})(AtomicPackageView || (AtomicPackageView = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var Utility = (function () {
@@ -528,12 +664,30 @@ var AtomicPackages;
     }());
     AtomicPackages.Utility = Utility;
 })(AtomicPackages || (AtomicPackages = {}));
-var Model;
-(function (Model) {
-    var Button = (function () {
-        function Button() {
+var AtomicPackageModel;
+(function (AtomicPackageModel) {
+    var SideMenu = (function () {
+        function SideMenu() {
         }
-        return Button;
+        return SideMenu;
     }());
-    Model.Button = Button;
-})(Model || (Model = {}));
+    AtomicPackageModel.SideMenu = SideMenu;
+})(AtomicPackageModel || (AtomicPackageModel = {}));
+var AtomicPackageView;
+(function (AtomicPackageView) {
+    var SideMenu = (function () {
+        function SideMenu() {
+        }
+        return SideMenu;
+    }());
+    AtomicPackageView.SideMenu = SideMenu;
+})(AtomicPackageView || (AtomicPackageView = {}));
+var Controller;
+(function (Controller) {
+    var SideMenu = (function () {
+        function SideMenu() {
+        }
+        return SideMenu;
+    }());
+    Controller.SideMenu = SideMenu;
+})(Controller || (Controller = {}));
