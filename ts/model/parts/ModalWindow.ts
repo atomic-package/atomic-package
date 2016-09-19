@@ -17,7 +17,6 @@ module ModalWindowModel {
       public isOpen: boolean,
       public view: any
       ) {
-      this.addIdName();
     }
 
     static fromData(data: any): ModalWindow {
@@ -28,10 +27,6 @@ module ModalWindowModel {
         data.isOpen ? data.isOpen : false,
         data.view ? data.view: null
       );
-    }
-
-    public addIdName() {
-      this.view.addIdName(this.idName);
     }
 
     public open() {

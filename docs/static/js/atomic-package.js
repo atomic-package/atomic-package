@@ -87,13 +87,34 @@ var AtomicPackages;
 })(AtomicPackages || (AtomicPackages = {}));
 var ModalWindowView;
 (function (ModalWindowView) {
+    var _created_modal_window_num = 0;
     var ModalWindow = (function () {
-        function ModalWindow(node) {
+        function ModalWindow(id, idName, className, isOpen, node) {
+            this.id = id;
+            this.idName = idName;
+            this.className = className;
+            this.isOpen = isOpen;
             this.node = node;
             this._OPEN_CLASS_NAME = 'open';
+            this._DEFAULT_ID_NAME = 'modalWindow';
+            this._DEFAULT_CLASS_NAME = 'modalWindow';
+            this.id = this.createModalWindowId();
+            if (this.idName == null) {
+                this.idName = String(this._DEFAULT_ID_NAME + this.id);
+                this.node.id = this.idName;
+            }
+            if (this.className == null) {
+                this.className = this._DEFAULT_CLASS_NAME;
+            }
         }
         ModalWindow.fromData = function (data) {
-            return new ModalWindow(data ? data : null);
+            return new ModalWindow(0, data.id ? data.id : null, data.className ? data.className : null, false, data ? data : null);
+        };
+        ModalWindow.create = function () {
+            this.fromData({});
+        };
+        ModalWindow.prototype.createModalWindowId = function () {
+            return ++_created_modal_window_num;
         };
         ModalWindow.prototype.open = function () {
             this.node.classList.add(this._OPEN_CLASS_NAME);
@@ -233,13 +254,9 @@ var ModalWindowModel;
             this.idName = idName;
             this.isOpen = isOpen;
             this.view = view;
-            this.addIdName();
         }
         ModalWindow.fromData = function (data) {
             return new ModalWindow(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isOpen ? data.isOpen : false, data.view ? data.view : null);
-        };
-        ModalWindow.prototype.addIdName = function () {
-            this.view.addIdName(this.idName);
         };
         ModalWindow.prototype.open = function () {
             this.isOpen = true;
@@ -297,11 +314,9 @@ var ModalWindowController;
     var ModalWindow = (function () {
         function ModalWindow() {
             var _this = this;
-            this._created_modal_window_num = 0;
             this.list = [];
             this.backDrop = null;
             this.triggerList = [];
-            this._DEFAULT_ID_NAME = 'modalWindow';
             this._DEFAULT_CLASS_NAME = 'modalWindow';
             document.addEventListener("DOMContentLoaded", function () {
                 _this.createFromElement(document.querySelectorAll('.' + _this._DEFAULT_CLASS_NAME));
@@ -309,16 +324,9 @@ var ModalWindowController;
                 _this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal-close]'));
             });
         }
-        ModalWindow.prototype.createId = function () {
-            return ++this._created_modal_window_num;
-        };
         ModalWindow.prototype.createFromElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
-                this.create({
-                    className: nodeList[i].className,
-                    idName: nodeList[i].id ? nodeList[i].id : null,
-                    view: ModalView.fromData(nodeList[i])
-                });
+                this.createModalModel(ModalView.fromData(nodeList[i]));
             }
             if (nodeList.length > 0 && this.backDrop === null) {
                 this.backDrop = BackDrop.fromData({
@@ -334,6 +342,15 @@ var ModalWindowController;
                 }));
             }
             this.setTriggerCallBack();
+        };
+        ModalWindow.prototype.createModalModel = function (modalView) {
+            this.create({
+                id: modalView.id,
+                idName: modalView.idName,
+                className: modalView.className,
+                isOpen: modalView.isOpen,
+                view: modalView
+            });
         };
         ModalWindow.prototype.setBackDropCallBack = function () {
             var _this = this;
@@ -396,22 +413,10 @@ var ModalWindowController;
         };
         ModalWindow.prototype.create = function (data) {
             if (data !== void 0) {
-                var idNumber = this.createId();
-                this.list.push(Modal.fromData({
-                    id: idNumber,
-                    className: data.className ? data.className : this._DEFAULT_CLASS_NAME,
-                    idName: data.idName ? data.idName : String(this._DEFAULT_ID_NAME + idNumber),
-                    view: data.view ? data.view : null
-                }));
+                this.list.push(Modal.fromData(data));
             }
             else {
-                var idNumber = this.createId();
-                this.list.push(Modal.fromData({
-                    id: idNumber,
-                    className: this._DEFAULT_CLASS_NAME,
-                    idName: String(this._DEFAULT_ID_NAME + idNumber),
-                    view: null
-                }));
+                this.list.push(Modal.fromData(ModalView.create()));
             }
         };
         ModalWindow.prototype.destroy = function (data) {

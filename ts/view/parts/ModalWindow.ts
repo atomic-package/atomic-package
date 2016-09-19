@@ -4,6 +4,7 @@
 /// <reference path='../../_all.ts' />
 
 module ModalWindowView {
+  var _created_modal_window_num: number = 0;
 
   /**
    * ModalWindow Class
@@ -13,15 +14,45 @@ module ModalWindowView {
   export class ModalWindow {
     private _OPEN_CLASS_NAME = 'open';
 
+    private _DEFAULT_ID_NAME: string = 'modalWindow';
+    private _DEFAULT_CLASS_NAME: string = 'modalWindow';
+
     constructor(
+      public id: number,
+      public idName: string,
+      public className: string,
+      public isOpen: boolean,
       public node: any
       ) {
+      this.id = this.createModalWindowId();
+
+      if(this.idName == null) {
+        this.idName = String(this._DEFAULT_ID_NAME + this.id);
+        this.node.id = this.idName;
+      }
+
+      if(this.className == null) {
+        this.className = this._DEFAULT_CLASS_NAME;
+      }
+
     }
 
     static fromData(data: any): ModalWindow {
       return new ModalWindow(
+        0,
+        data.id ? data.id : null,
+        data.className ? data.className : null,
+        false,
         data ? data : null
       );
+    }
+
+    static create() {
+      this.fromData({});
+    }
+
+    private createModalWindowId(): number {
+      return ++_created_modal_window_num;
     }
 
     public open() {
