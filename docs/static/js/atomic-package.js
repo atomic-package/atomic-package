@@ -532,28 +532,93 @@ var SwitcherModel;
 })(SwitcherModel || (SwitcherModel = {}));
 var SwitcherView;
 (function (SwitcherView) {
-    var Switcher = (function () {
-        function Switcher() {
+    var _created_trigger_num = 0;
+    var _created_trigger_item_num = 0;
+    var Trigger = (function () {
+        function Trigger(id, node) {
+            this.id = id;
+            this.node = node;
+            this.id = this.createTriggerId();
         }
-        return Switcher;
+        Trigger.fromData = function (data) {
+            return new Trigger(0, data ? data : null);
+        };
+        Trigger.prototype.createTriggerId = function () {
+            return ++_created_trigger_num;
+        };
+        Trigger.prototype.getChildren = function (children) {
+            var lastChidren = [];
+            for (var i = 0; i < children.length; i++) {
+                lastChidren.push(TriggerItem.fromData({
+                    parentId: this.id,
+                    view: this.getLastChild(children[i])
+                }));
+            }
+        };
+        Trigger.prototype.getLastChild = function (child) {
+            if (child.children.length > 0) {
+                return this.getLastChild(child.children[0]);
+            }
+            else {
+                return child;
+            }
+        };
+        Trigger.prototype.getItemNode = function () {
+            this.getChildren(this.node.children);
+        };
+        return Trigger;
     }());
-    SwitcherView.Switcher = Switcher;
+    SwitcherView.Trigger = Trigger;
+    var TriggerItem = (function () {
+        function TriggerItem(id, parentId, className, idName, view) {
+            this.id = id;
+            this.parentId = parentId;
+            this.className = className;
+            this.idName = idName;
+            this.view = view;
+            this.id = this.createTriggerItemId();
+        }
+        TriggerItem.fromData = function (data) {
+            return new TriggerItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.view ? data.view : null);
+        };
+        TriggerItem.prototype.createTriggerItemId = function () {
+            return ++_created_trigger_item_num;
+        };
+        return TriggerItem;
+    }());
+    SwitcherView.TriggerItem = TriggerItem;
 })(SwitcherView || (SwitcherView = {}));
 var SwitcherController;
 (function (SwitcherController) {
+    var TriggerView = SwitcherView.Trigger;
     var Switcher = (function () {
         function Switcher() {
-            this._created_switcher_num = 0;
+            var _this = this;
+            this._created_contents_num = 0;
             this.triggerList = [];
             this.contentsList = [];
+            document.addEventListener("DOMContentLoaded", function () {
+                _this.createFromTriggerElement(document.querySelectorAll('[data-ap-switcher]'));
+            });
         }
-        Switcher.prototype.createId = function () {
-            return ++this._created_switcher_num;
+        Switcher.prototype.createContentsId = function () {
+            return ++this._created_contents_num;
         };
-        Switcher.prototype.createFromElement = function (nodeList) {
+        Switcher.prototype.createFromTriggerElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
-                this.create({});
+                this.createTriggerModel(TriggerView.fromData(nodeList[i]));
             }
+        };
+        Switcher.prototype.createTriggerModel = function (triggerView) {
+            this.create({
+                id: triggerView.id,
+                className: triggerView.node.className,
+                idName: triggerView.node.id ? triggerView.node.id : null,
+                items: triggerView.getItemNode(),
+                itemLength: triggerView.node.children.length,
+                selectedNumber: null,
+                view: triggerView.node
+            });
         };
         Switcher.prototype.create = function (data) {
         };
