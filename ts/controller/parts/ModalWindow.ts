@@ -25,14 +25,16 @@ module ModalWindowController {
     private backDrop: BackDrop = null;
     private triggerList: Trigger[] = [];
 
-    private _DEFAULT_CLASS_NAME: string = 'modalWindow';
-
     constructor(
       ) {
-      document.addEventListener("DOMContentLoaded", () => {
-        this.createFromElement(document.querySelectorAll('.' + this._DEFAULT_CLASS_NAME));
-        this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
-        this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal-close]'));
+      ModalView.fetchElements((data) => {
+        data.modal.forEach((nodeList: NodeList) => {
+          this.createFromElement(nodeList);
+        });
+
+        data.trigger.forEach((nodeList: NodeList) => {
+          this.createTriggerFromElement(nodeList);
+        });
       });
     }
 

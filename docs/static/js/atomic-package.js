@@ -110,8 +110,20 @@ var ModalWindowView;
         ModalWindow.fromData = function (data) {
             return new ModalWindow(0, data.id ? data.id : null, data.className ? data.className : null, false, data ? data : null);
         };
+        ModalWindow.fetchElements = function (callback) {
+            var modalElements = {
+                modal: [],
+                trigger: []
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                modalElements.modal.push(document.querySelectorAll('.modalWindow'));
+                modalElements.trigger.push(document.querySelectorAll('[data-ap-modal]'));
+                modalElements.trigger.push(document.querySelectorAll('[data-ap-modal-close]'));
+                callback(modalElements);
+            });
+        };
         ModalWindow.create = function () {
-            this.fromData({});
+            return this.fromData({});
         };
         ModalWindow.prototype.createModalWindowId = function () {
             return ++_created_modal_window_num;
@@ -317,11 +329,13 @@ var ModalWindowController;
             this.list = [];
             this.backDrop = null;
             this.triggerList = [];
-            this._DEFAULT_CLASS_NAME = 'modalWindow';
-            document.addEventListener("DOMContentLoaded", function () {
-                _this.createFromElement(document.querySelectorAll('.' + _this._DEFAULT_CLASS_NAME));
-                _this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal]'));
-                _this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal-close]'));
+            ModalView.fetchElements(function (data) {
+                data.modal.forEach(function (nodeList) {
+                    _this.createFromElement(nodeList);
+                });
+                data.trigger.forEach(function (nodeList) {
+                    _this.createTriggerFromElement(nodeList);
+                });
             });
         }
         ModalWindow.prototype.createFromElement = function (nodeList) {

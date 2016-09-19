@@ -34,9 +34,11 @@ module ModalWindowView {
       if(this.className == null) {
         this.className = this._DEFAULT_CLASS_NAME;
       }
-
     }
 
+    /**
+     * Static Function
+    **/
     static fromData(data: any): ModalWindow {
       return new ModalWindow(
         0,
@@ -47,14 +49,35 @@ module ModalWindowView {
       );
     }
 
-    static create() {
-      this.fromData({});
+    static fetchElements(callback) {
+      var modalElements = {
+        modal: [],
+        trigger: []
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        modalElements.modal.push(document.querySelectorAll('.modalWindow'));
+        modalElements.trigger.push(document.querySelectorAll('[data-ap-modal]'));
+        modalElements.trigger.push(document.querySelectorAll('[data-ap-modal-close]'));
+
+        callback(modalElements);
+      });
     }
 
+    static create() {
+      return this.fromData({});
+    }
+
+    /**
+     * Private Function
+    **/
     private createModalWindowId(): number {
       return ++_created_modal_window_num;
     }
 
+    /**
+     * Public Function
+    **/
     public open() {
       this.node.classList.add(this._OPEN_CLASS_NAME);
     }
