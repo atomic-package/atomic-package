@@ -20,6 +20,9 @@ module AtomicPackages {
       ) {
     }
 
+    /**
+     * Private Static Function
+    **/
     private static isArray(data): boolean {
       return Array.isArray(data) || /^\[/.test(data);
     }
@@ -37,7 +40,7 @@ module AtomicPackages {
       }
     }
 
-    private static stringToArray(data: any) {
+    private static stringToArray(data: any): any {
       if(typeof data === 'string') {
         var splitList = data.replace(/^\[/g , '').replace(/\]$/g , '').split(","),
             newSplitList = [];
@@ -52,7 +55,7 @@ module AtomicPackages {
       }
     }
 
-    private static stringToNumber(data: any) {
+    private static stringToNumber(data: any): any {
       if(parseInt(data, 10)) {
         return parseInt(data, 10);
       } else {
@@ -60,31 +63,7 @@ module AtomicPackages {
       }
     }
 
-    public static search(dataList: any[], type: any): any[] {
-      if(this.isArray(type)) {
-        var keys = [],
-            searchItems = [],
-            resultItem = [];
-
-        this.stringToArray(type).forEach((item: any) => {
-          keys.push(this.checkType(item));
-        });
-
-        keys.forEach((key: any) => {
-          searchItems = this.getSearchItems(dataList, key);
-
-          searchItems.forEach((item: any) => {
-            resultItem.push(item);
-          });
-        });
-
-        return resultItem;
-      } else {
-        return this.getSearchItems(dataList, this.checkType(type));
-      }
-    }
-
-    public static checkType(data: any): Type {
+    private static checkType(data: any): Type {
       switch(typeof data) {
         case 'object':
           return data;
@@ -108,5 +87,31 @@ module AtomicPackages {
       }
     }
 
+    /**
+     * Public Static Function
+    **/
+    public static search(dataList: any[], type: any): any[] {
+      if(this.isArray(type)) {
+        var keys = [],
+            searchItems = [],
+            resultItem = [];
+
+        this.stringToArray(type).forEach((item: any) => {
+          keys.push(this.checkType(item));
+        });
+
+        keys.forEach((key: any) => {
+          searchItems = this.getSearchItems(dataList, key);
+
+          searchItems.forEach((item: any) => {
+            resultItem.push(item);
+          });
+        });
+
+        return resultItem;
+      } else {
+        return this.getSearchItems(dataList, this.checkType(type));
+      }
+    }
   }
 }

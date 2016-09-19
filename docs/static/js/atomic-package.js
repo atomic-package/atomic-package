@@ -38,25 +38,6 @@ var AtomicPackages;
                 return data;
             }
         };
-        Model.search = function (dataList, type) {
-            var _this = this;
-            if (this.isArray(type)) {
-                var keys = [], searchItems = [], resultItem = [];
-                this.stringToArray(type).forEach(function (item) {
-                    keys.push(_this.checkType(item));
-                });
-                keys.forEach(function (key) {
-                    searchItems = _this.getSearchItems(dataList, key);
-                    searchItems.forEach(function (item) {
-                        resultItem.push(item);
-                    });
-                });
-                return resultItem;
-            }
-            else {
-                return this.getSearchItems(dataList, this.checkType(type));
-            }
-        };
         Model.checkType = function (data) {
             switch (typeof data) {
                 case 'object':
@@ -79,6 +60,25 @@ var AtomicPackages;
                         return { id: data };
                     }
                     break;
+            }
+        };
+        Model.search = function (dataList, type) {
+            var _this = this;
+            if (this.isArray(type)) {
+                var keys = [], searchItems = [], resultItem = [];
+                this.stringToArray(type).forEach(function (item) {
+                    keys.push(_this.checkType(item));
+                });
+                keys.forEach(function (key) {
+                    searchItems = _this.getSearchItems(dataList, key);
+                    searchItems.forEach(function (item) {
+                        resultItem.push(item);
+                    });
+                });
+                return resultItem;
+            }
+            else {
+                return this.getSearchItems(dataList, this.checkType(type));
             }
         };
         return Model;
