@@ -32,9 +32,9 @@ module SwitcherView {
     }
 
     private getChildren(children) {
-      var lastChidren = [];
+      var lastChildren = [];
       for(var i: number = 0; i < children.length; i++) {
-        lastChidren.push(
+        lastChildren.push(
           TriggerItem.fromData({
             parentId: this.id,
             view: this.getLastChild(children[i])
@@ -72,6 +72,7 @@ module SwitcherView {
       public view: any
       ) {
       this.id = this.createTriggerItemId();
+
     }
 
     static fromData(data: any): TriggerItem {

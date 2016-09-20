@@ -571,9 +571,9 @@ var SwitcherView;
             return ++_created_trigger_num;
         };
         Trigger.prototype.getChildren = function (children) {
-            var lastChidren = [];
+            var lastChildren = [];
             for (var i = 0; i < children.length; i++) {
-                lastChidren.push(TriggerItem.fromData({
+                lastChildren.push(TriggerItem.fromData({
                     parentId: this.id,
                     view: this.getLastChild(children[i])
                 }));
