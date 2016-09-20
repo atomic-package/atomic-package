@@ -88,6 +88,7 @@ var AtomicPackages;
 var ModalWindowView;
 (function (ModalWindowView) {
     var _created_modal_window_num = 0;
+    var _created_trigger_num = 0;
     var ModalWindow = (function () {
         function ModalWindow(id, idName, className, isOpen, node) {
             this.id = id;
@@ -186,7 +187,8 @@ var ModalWindowView;
     }());
     ModalWindowView.ModalWindowBackDrop = ModalWindowBackDrop;
     var ModalWindowTrigger = (function () {
-        function ModalWindowTrigger(node, target, isOpener) {
+        function ModalWindowTrigger(id, node, target, isOpener) {
+            this.id = id;
             this.node = node;
             this.target = target;
             this.isOpener = isOpener;
@@ -196,7 +198,10 @@ var ModalWindowView;
             this.setEventListener();
         }
         ModalWindowTrigger.fromData = function (data) {
-            return new ModalWindowTrigger(data ? data : null, null, true);
+            return new ModalWindowTrigger(0, data ? data : null, null, true);
+        };
+        ModalWindowTrigger.prototype.createTriggerId = function () {
+            return ++_created_trigger_num;
         };
         ModalWindowTrigger.prototype.setTarget = function (node) {
             if (node.dataset.apModalClose !== undefined) {

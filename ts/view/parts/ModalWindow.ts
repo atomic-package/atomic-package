@@ -5,6 +5,7 @@
 
 module ModalWindowView {
   var _created_modal_window_num: number = 0;
+  var _created_trigger_num: number = 0;
 
   /**
    * ModalWindow Class
@@ -171,6 +172,7 @@ module ModalWindowView {
     private closeCallBackFunction: Function = () => {};
 
     constructor(
+      public id: number,
       public node: any,
       public target: any,
       public isOpener: boolean
@@ -181,10 +183,18 @@ module ModalWindowView {
 
     static fromData(data: any): ModalWindowTrigger {
       return new ModalWindowTrigger(
+        0,
         data ? data : null,
         null,
         true
       );
+    }
+
+    /**
+     * Private Function
+     **/
+    private createTriggerId(): number {
+      return ++_created_trigger_num;
     }
 
     private setTarget(node) {
