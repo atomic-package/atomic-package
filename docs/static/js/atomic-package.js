@@ -1222,12 +1222,229 @@ var ToggleController;
     }());
     ToggleController.Toggle = Toggle;
 })(ToggleController || (ToggleController = {}));
+var SideMenuModel;
+(function (SideMenuModel) {
+    var APModel = AtomicPackages.Model;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, target, targetId, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.target = target;
+            this.targetId = targetId;
+            this.view = view;
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.target ? data.target : null, data.targetId ? data.targetId : [], data ? data : null);
+        };
+        Trigger.prototype.setTargetId = function (contentsViewList) {
+            var searchContents = APModel.search(contentsViewList, this.target);
+            if (searchContents) {
+                for (var i = 0; i < searchContents.length; i++) {
+                    this.targetId.push(searchContents[i].id);
+                }
+            }
+        };
+        return Trigger;
+    }());
+    SideMenuModel.Trigger = Trigger;
+    var Contents = (function () {
+        function Contents(id, className, idName, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.view = view;
+        }
+        Contents.fromData = function (data) {
+            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data ? data : null);
+        };
+        Contents.prototype.toggle = function (trigger) {
+            for (var i = 0; i < trigger.targetId.length; i++) {
+                if (trigger.targetId[i] == this.id) {
+                    this.view.toggle();
+                }
+            }
+        };
+        return Contents;
+    }());
+    SideMenuModel.Contents = Contents;
+})(SideMenuModel || (SideMenuModel = {}));
+var SideMenuView;
+(function (SideMenuView) {
+    var APModel = AtomicPackages.Model;
+    var _created_toggle_trigger_num = 0, _created_toggle_contents_num = 0;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, target, node) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.target = target;
+            this.node = node;
+            this.toggleCallBackFunction = function () { };
+            this.id = this.createTriggerId();
+            this.setEventListener();
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apSide ? data.dataset.apSide : null, data ? data : null);
+        };
+        Trigger.fetchElements = function (callback) {
+            var sideMenuElements = {
+                trigger: [],
+                contents: []
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                var selectors = [];
+                sideMenuElements.trigger.push(document.querySelectorAll('[data-ap-side]'));
+                sideMenuElements.trigger.forEach(function (nodeList) {
+                    nodeList.forEach(function (node) {
+                        if (node.dataset.apSide) {
+                            selectors.push(node.dataset.apSide);
+                        }
+                    });
+                });
+                selectors = APModel.uniq(selectors);
+                for (var i = 0; i < selectors.length; i++) {
+                    sideMenuElements.contents.push(document.querySelectorAll(selectors[i]));
+                }
+                callback(sideMenuElements);
+            });
+        };
+        Trigger.prototype.createTriggerId = function () {
+            return ++_created_toggle_trigger_num;
+        };
+        Trigger.prototype.setEventListener = function () {
+            var _this = this;
+            this.node.addEventListener('click', function (e) {
+                e.preventDefault();
+                _this.toggle(_this.toggleCallBackFunction);
+            }, false);
+        };
+        Trigger.prototype.toggle = function (fn, isFirst) {
+            this.toggleCallBackFunction = fn;
+            if (!isFirst) {
+                fn(this);
+            }
+        };
+        Trigger.prototype.getItemNode = function (node) {
+        };
+        Trigger.prototype.resetSelectedClassName = function () {
+        };
+        return Trigger;
+    }());
+    SideMenuView.Trigger = Trigger;
+    var Contents = (function () {
+        function Contents(id, idName, className, toggleClassName, node) {
+            this.id = id;
+            this.idName = idName;
+            this.className = className;
+            this.toggleClassName = toggleClassName;
+            this.node = node;
+            this._DEFAULT_TOGGLE_CLASS_NAME = 'active';
+            this.id = this.createContentsId();
+            if (!this.toggleClassName) {
+                this.toggleClassName = this._DEFAULT_TOGGLE_CLASS_NAME;
+            }
+        }
+        Contents.fromData = function (data) {
+            return new Contents(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data.toggleClassName ? data.toggleClassName : null, data ? data : null);
+        };
+        Contents.prototype.createContentsId = function () {
+            return ++_created_toggle_contents_num;
+        };
+        Contents.prototype.toggleClass = function () {
+            if (this.node.classList.contains(this.toggleClassName)) {
+                this.node.classList.remove(this.toggleClassName);
+            }
+            else {
+                this.node.classList.add(this.toggleClassName);
+            }
+        };
+        Contents.prototype.getItemNode = function (node) {
+        };
+        Contents.prototype.toggle = function () {
+            this.toggleClass();
+        };
+        return Contents;
+    }());
+    SideMenuView.Contents = Contents;
+})(SideMenuView || (SideMenuView = {}));
+var SideMenuController;
+(function (SideMenuController) {
+    var Trigger = SideMenuModel.Trigger;
+    var Contents = SideMenuModel.Contents;
+    var TriggerView = SideMenuView.Trigger;
+    var ContentsView = SideMenuView.Contents;
+    var SideMenu = (function () {
+        function SideMenu() {
+            var _this = this;
+            this.triggerList = [];
+            this.contentsList = [];
+            TriggerView.fetchElements(function (data) {
+                data.trigger.forEach(function (nodeList) {
+                    _this.createFromTriggerElement(nodeList);
+                });
+                data.contents.forEach(function (nodeList) {
+                    _this.createFromContentsElement(nodeList);
+                });
+            });
+        }
+        SideMenu.prototype.createFromTriggerElement = function (nodeList) {
+            for (var i = 0; i < nodeList.length; i++) {
+                this.createTriggerModel(TriggerView.fromData(nodeList[i]));
+            }
+            this.setTriggerCallBack();
+        };
+        SideMenu.prototype.createFromContentsElement = function (nodeList) {
+            for (var i = 0; i < nodeList.length; i++) {
+                this.createContentsModel(ContentsView.fromData(nodeList[i]));
+            }
+        };
+        SideMenu.prototype.createTriggerModel = function (triggerView) {
+            this.create(triggerView);
+        };
+        SideMenu.prototype.createContentsModel = function (contentsView) {
+            this.createContents(contentsView);
+        };
+        SideMenu.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.contentsList);
+            }
+        };
+        SideMenu.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function (triggerView) {
+                    _this.toggleContents(trigger);
+                }, true);
+            });
+        };
+        SideMenu.prototype.toggleContents = function (trigger) {
+            for (var i = 0; i < this.contentsList.length; i++) {
+                this.contentsList[i].toggle(trigger);
+            }
+        };
+        SideMenu.prototype.create = function (data) {
+            this.triggerList.push(Trigger.fromData(data));
+        };
+        SideMenu.prototype.createContents = function (data) {
+            this.contentsList.push(Contents.fromData(data));
+            this.setTriggerTargetId();
+        };
+        SideMenu.prototype.select = function (data) {
+        };
+        SideMenu.prototype.resetSelected = function (data) {
+        };
+        return SideMenu;
+    }());
+    SideMenuController.SideMenu = SideMenu;
+})(SideMenuController || (SideMenuController = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var ModalWindow = ModalWindowController.ModalWindow;
     var Button = ButtonController.Button;
     var Switcher = SwitcherController.Switcher;
     var Toggle = ToggleController.Toggle;
+    var SideMenu = SideMenuController.SideMenu;
     var Controller = (function () {
         function Controller() {
             this.model = new AtomicPackages.Model();
@@ -1236,6 +1453,7 @@ var AtomicPackages;
             this.btn = new Button();
             this.switcher = new Switcher();
             this.toggle = new Toggle();
+            this.sideMenu = new SideMenu();
         }
         return Controller;
     }());
@@ -1256,6 +1474,7 @@ var AtomicPackages;
                 this.btn = controller.btn;
                 this.switcher = controller.switcher;
                 this.toggle = controller.toggle;
+                this.sideMenu = controller.sideMenu;
                 AtomicPackage._instance = this;
             }
         }
@@ -1274,33 +1493,6 @@ if (typeof (global) !== 'undefined') {
         global['AP'] = new AtomicPackages.AtomicPackage({});
     }
 }
-var SideMenuModel;
-(function (SideMenuModel) {
-    var SideMenu = (function () {
-        function SideMenu() {
-        }
-        return SideMenu;
-    }());
-    SideMenuModel.SideMenu = SideMenu;
-})(SideMenuModel || (SideMenuModel = {}));
-var SideMenuView;
-(function (SideMenuView) {
-    var SideMenu = (function () {
-        function SideMenu() {
-        }
-        return SideMenu;
-    }());
-    SideMenuView.SideMenu = SideMenu;
-})(SideMenuView || (SideMenuView = {}));
-var SideMenuController;
-(function (SideMenuController) {
-    var SideMenu = (function () {
-        function SideMenu() {
-        }
-        return SideMenu;
-    }());
-    SideMenuController.SideMenu = SideMenu;
-})(SideMenuController || (SideMenuController = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
     var Utility = (function () {

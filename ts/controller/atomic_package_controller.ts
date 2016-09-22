@@ -11,6 +11,7 @@ module AtomicPackages {
   import Button      = ButtonController.Button;
   import Switcher    = SwitcherController.Switcher;
   import Toggle      = ToggleController.Toggle;
+  import SideMenu    = SideMenuController.SideMenu;
 
   /**
    * AtomicPackage Controller Class
@@ -24,6 +25,7 @@ module AtomicPackages {
     public btn: Button;
     public switcher: Switcher;
     public toggle: Toggle;
+    public sideMenu: SideMenu;
 
     constructor(
       ) {
@@ -34,6 +36,7 @@ module AtomicPackages {
       this.btn      = new Button();
       this.switcher = new Switcher();
       this.toggle   = new Toggle();
+      this.sideMenu = new SideMenu();
 
     }
   }

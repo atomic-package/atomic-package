@@ -401,6 +401,15 @@
             <div>えええええ</div>
         </div>
 
+
+        <p data-ap-side="#sideMenu">サイドメニュー</p>
+
+        <div class="sideMenu" id="sideMenu">
+            <p>あああああああああ</p>
+            <p>いいいいいいいいいい</p>
+        </div>
+
+
         <style>
             .switcherContents > div {
                 display: none;
@@ -410,6 +419,16 @@
             }
             #toggleContents.active {
                 font-size: 20px;
+            }
+            .sideMenu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: #ccc;
+                display: none;
+            }
+            .sideMenu.active {
+                display: block;
             }
         </style>
 

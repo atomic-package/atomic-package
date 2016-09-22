@@ -5,3 +5,5 @@
 /// <reference path='./ScrollSpy.ts' />
 /// <reference path='./SmoothScroll.ts' />
 /// <reference path='./Toggle.ts' />
+/// <reference path='./SideMenu.ts' />
+
