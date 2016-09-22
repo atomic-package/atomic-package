@@ -7,11 +7,12 @@
 /// <reference path='parts/_all.ts' />
 
 module AtomicPackages {
-  import ModalWindow = ModalWindowController.ModalWindow;
-  import Button      = ButtonController.Button;
-  import Switcher    = SwitcherController.Switcher;
-  import Toggle      = ToggleController.Toggle;
-  import SideMenu    = SideMenuController.SideMenu;
+  import ModalWindow  = ModalWindowController.ModalWindow;
+  import Button       = ButtonController.Button;
+  import Switcher     = SwitcherController.Switcher;
+  import Toggle       = ToggleController.Toggle;
+  import SideMenu     = SideMenuController.SideMenu;
+  import SmoothScroll = SmoothScrollController.SmoothScroll;
 
   /**
    * AtomicPackage Controller Class
@@ -26,17 +27,19 @@ module AtomicPackages {
     public switcher: Switcher;
     public toggle: Toggle;
     public sideMenu: SideMenu;
+    public smoothScroll: SmoothScroll;
 
     constructor(
       ) {
       this.model = new AtomicPackages.Model();
       this.view  = new AtomicPackages.View();
 
-      this.modal    = new ModalWindow();
-      this.btn      = new Button();
-      this.switcher = new Switcher();
-      this.toggle   = new Toggle();
-      this.sideMenu = new SideMenu();
+      this.modal        = new ModalWindow();
+      this.btn          = new Button();
+      this.switcher     = new Switcher();
+      this.toggle       = new Toggle();
+      this.sideMenu     = new SideMenu();
+      this.smoothScroll = new SmoothScroll();
 
     }
   }
