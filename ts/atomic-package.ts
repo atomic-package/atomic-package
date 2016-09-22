@@ -19,6 +19,7 @@ module AtomicPackages {
     public modal: any;
     public btn: any;
     public switcher: any;
+    public toggle: any;
 
     constructor(
       option?: any
@@ -32,6 +33,7 @@ module AtomicPackages {
         this.modal    = controller.modal;
         this.btn      = controller.btn;
         this.switcher = controller.switcher;
+        this.toggle   = controller.toggle;
 
         AtomicPackage._instance = this;
       }

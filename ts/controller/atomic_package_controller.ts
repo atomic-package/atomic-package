@@ -10,6 +10,7 @@ module AtomicPackages {
   import ModalWindow = ModalWindowController.ModalWindow;
   import Button      = ButtonController.Button;
   import Switcher    = SwitcherController.Switcher;
+  import Toggle      = ToggleController.Toggle;
 
   /**
    * AtomicPackage Controller Class
@@ -22,6 +23,7 @@ module AtomicPackages {
     public modal: ModalWindow;
     public btn: Button;
     public switcher: Switcher;
+    public toggle: Toggle;
 
     constructor(
       ) {
@@ -31,6 +33,7 @@ module AtomicPackages {
       this.modal    = new ModalWindow();
       this.btn      = new Button();
       this.switcher = new Switcher();
+      this.toggle   = new Toggle();
 
     }
   }

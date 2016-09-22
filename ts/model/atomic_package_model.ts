@@ -115,5 +115,18 @@ module AtomicPackages {
         return this.getSearchItems(dataList, this.checkType(type));
       }
     }
+
+    public static uniq(stringArr) {
+      var newArr = stringArr.filter((x, i, self) => {
+        return self.indexOf(x) === i;
+      });
+      return newArr;
+    }
+
+    public static flattenArray(array) {
+      return [].concat.apply(array);
+    }
+
+
   }
 }

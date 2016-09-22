@@ -359,6 +359,15 @@
 
         </table>
 
+        <h2>toggle</h2>
+        <a href="" data-ap-toggle="#toggleContents">トグル</a>
+
+        <p data-ap-toggle="#toggleContents">トグル2</p>
+
+        <div id="toggleContents">トグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツ</div>
+
+        <h2>switcher</h2>
+
         <ul class="switcher" data-ap-switcher="#switcherContents">
             <li><a href="">switcher001</a></li>
             <li>switcher002</li>
@@ -387,6 +396,9 @@
             }
             .switcherContents > .show {
                 display: block;
+            }
+            #toggleContents.active {
+                font-size: 20px;
             }
         </style>
 

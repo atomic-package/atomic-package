@@ -6,15 +6,13 @@
 /// <reference path="../../view/parts/Switcher.ts" />
 
 module SwitcherController {
-  import APModel = AtomicPackages.Model;
-
-  import Trigger  = SwitcherModel.Trigger;
+  import Trigger      = SwitcherModel.Trigger;
   import TriggerItem  = SwitcherModel.TriggerItem;
-  import Contents = SwitcherModel.Contents;
+  import Contents     = SwitcherModel.Contents;
 
-  import TriggerView  = SwitcherView.Trigger;
+  import TriggerView      = SwitcherView.Trigger;
   import TriggerItemView  = SwitcherView.TriggerItem;
-  import ContentsView  = SwitcherView.Contents;
+  import ContentsView     = SwitcherView.Contents;
 
   /**
    * Switcher Controller Class
@@ -35,7 +33,6 @@ module SwitcherController {
           this.createFromContentsElement(nodeList);
         });
       });
-      console.log(this);
     }
 
     private setTriggerCallBack(): void {
