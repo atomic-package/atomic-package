@@ -7,6 +7,8 @@ var AtomicPackages;
             return Array.isArray(data) || /^\[/.test(data);
         };
         Model.getSearchItems = function (dataList, type) {
+            if (!type)
+                return;
             var key = Object.keys(type)[0];
             if (type === 'all') {
                 return dataList;
@@ -259,6 +261,14 @@ var AtomicPackages;
     var View = (function () {
         function View() {
         }
+        View.getFirstChildLastNode = function (child) {
+            if (child.children.length > 0) {
+                return this.getFirstChildLastNode(child.children[0]);
+            }
+            else {
+                return child;
+            }
+        };
         return View;
     }());
     AtomicPackages.View = View;
@@ -493,20 +503,23 @@ var ButtonController;
 })(ButtonController || (ButtonController = {}));
 var SwitcherModel;
 (function (SwitcherModel) {
+    var APModel = AtomicPackages.Model;
     var Trigger = (function () {
-        function Trigger(id, className, idName, items, itemLength, selectedNumber, view) {
+        function Trigger(id, className, idName, items, itemLength, selectedNumber, target, targetId, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.items = items;
             this.itemLength = itemLength;
             this.selectedNumber = selectedNumber;
+            this.target = target;
+            this.targetId = targetId;
             this.view = view;
             this.items = this.createItem(this.items);
             this.items[selectedNumber - 1].select();
         }
         Trigger.fromData = function (data) {
-            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.items.length, data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.items.length, data.selectedNumber ? data.selectedNumber : 1, data.target ? data.target : null, data.targetId ? data.targetId : [], data ? data : null);
         };
         Trigger.prototype.createItem = function (items) {
             var itemModels = [];
@@ -523,17 +536,24 @@ var SwitcherModel;
         Trigger.prototype.setSelectedNumber = function (item) {
             this.selectedNumber = item.itemNumber;
         };
+        Trigger.prototype.setTargetId = function (contentsViewList) {
+            var searchContents = APModel.search(contentsViewList, this.target);
+            if (searchContents) {
+                for (var i = 0; i < searchContents.length; i++) {
+                    this.targetId.push(searchContents[i].id);
+                }
+            }
+        };
         Trigger.prototype.resetSelected = function () {
             this.items.forEach(function (item) {
                 item.reset();
             });
         };
-        Trigger.prototype.select = function (id) {
-            var selectItem = this.searchItem(id);
+        Trigger.prototype.select = function (itemId) {
+            var selectItem = this.searchItem(itemId);
             this.resetSelected();
             this.setSelectedNumber(selectItem);
             selectItem.select();
-            console.log(this);
         };
         return Trigger;
     }());
@@ -570,9 +590,35 @@ var SwitcherModel;
             this.items = items;
             this.selectedNumber = selectedNumber;
             this.view = view;
+            this.items = this.createItem(this.items);
+            this.items[selectedNumber - 1].select();
         }
         Contents.fromData = function (data) {
-            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data.view ? data.view : null);
+            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+        };
+        Contents.prototype.createItem = function (items) {
+            var itemModels = [];
+            for (var i = 0; i < items.length; i++) {
+                itemModels.push(ContentsItem.fromData(items[i]));
+            }
+            return itemModels;
+        };
+        Contents.prototype.selectItem = function (itemNumber) {
+            this.selectedNumber = itemNumber;
+            this.items[this.selectedNumber - 1].select();
+        };
+        Contents.prototype.resetSelected = function () {
+            this.items.forEach(function (item) {
+                item.reset();
+            });
+        };
+        Contents.prototype.select = function (trigger) {
+            this.resetSelected();
+            for (var i = 0; i < trigger.targetId.length; i++) {
+                if (trigger.targetId[i] == this.id) {
+                    this.selectItem(trigger.selectedNumber);
+                }
+            }
         };
         return Contents;
     }());
@@ -587,7 +633,15 @@ var SwitcherModel;
             this.view = view;
         }
         ContentsItem.fromData = function (data) {
-            return new ContentsItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isShow ? data.isShow : false, data.view ? data.view : null);
+            return new ContentsItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isShow ? data.isShow : false, data ? data : null);
+        };
+        ContentsItem.prototype.reset = function () {
+            this.isShow = false;
+            this.view.resetItem();
+        };
+        ContentsItem.prototype.select = function () {
+            this.isShow = true;
+            this.view.selectItem();
         };
         return ContentsItem;
     }());
@@ -595,21 +649,23 @@ var SwitcherModel;
 })(SwitcherModel || (SwitcherModel = {}));
 var SwitcherView;
 (function (SwitcherView) {
-    var _created_trigger_num = 0;
-    var _created_trigger_item_num = 0;
+    var APView = AtomicPackages.View;
+    var _created_trigger_num = 0, _created_trigger_item_num = 0;
+    var _created_contents_num = 0, _created_contents_item_num = 0;
     var Trigger = (function () {
-        function Trigger(id, className, idName, items, selectedNumber, node) {
+        function Trigger(id, className, idName, items, selectedNumber, target, node) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.items = items;
             this.selectedNumber = selectedNumber;
+            this.target = target;
             this.node = node;
             this.id = this.createTriggerId();
             this.items = this.getItemNode(this.node);
         }
         Trigger.fromData = function (data) {
-            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 1, data.dataset.apSwitcher ? data.dataset.apSwitcher : null, data ? data : null);
         };
         Trigger.fetchElements = function (callback) {
             var switcherElements = {
@@ -618,6 +674,13 @@ var SwitcherView;
             };
             document.addEventListener("DOMContentLoaded", function () {
                 switcherElements.trigger.push(document.querySelectorAll('[data-ap-switcher]'));
+                switcherElements.trigger.forEach(function (nodeList) {
+                    nodeList.forEach(function (node) {
+                        if (node.dataset.apSwitcher) {
+                            switcherElements.contents.push(document.querySelectorAll(node.dataset.apSwitcher));
+                        }
+                    });
+                });
                 callback(switcherElements);
             });
         };
@@ -630,18 +693,10 @@ var SwitcherView;
                 lastChildren.push(TriggerItem.fromData({
                     parentId: this.id,
                     itemNumber: i + 1,
-                    node: this.getLastChild(node.children[i])
+                    node: APView.getFirstChildLastNode(node.children[i])
                 }));
             }
             return lastChildren;
-        };
-        Trigger.prototype.getLastChild = function (child) {
-            if (child.children.length > 0) {
-                return this.getLastChild(child.children[0]);
-            }
-            else {
-                return child;
-            }
         };
         Trigger.prototype.getItemNode = function (node) {
             return this.getChildren(node);
@@ -691,12 +746,6 @@ var SwitcherView;
                 this.node.classList.add(this._SELECT_CLASS_NAME);
             }
         };
-        TriggerItem.prototype.resetItem = function () {
-            this.removeSelectClass();
-        };
-        TriggerItem.prototype.selectItem = function () {
-            this.addSelectClass();
-        };
         TriggerItem.prototype.select = function (fn, isFirst) {
             this.selectCallBackFunction = fn;
             if (!isFirst) {
@@ -706,38 +755,124 @@ var SwitcherView;
         TriggerItem.prototype.reset = function (fn, isFirst) {
             this.resetCallBackFunction = fn;
         };
+        TriggerItem.prototype.resetItem = function () {
+            this.removeSelectClass();
+        };
+        TriggerItem.prototype.selectItem = function () {
+            this.addSelectClass();
+        };
         return TriggerItem;
     }());
     SwitcherView.TriggerItem = TriggerItem;
+    var Contents = (function () {
+        function Contents(id, idName, className, items, selectedNumber, node) {
+            this.id = id;
+            this.idName = idName;
+            this.className = className;
+            this.items = items;
+            this.selectedNumber = selectedNumber;
+            this.node = node;
+            this.id = this.createContentsId();
+            this.items = this.getItemNode(this.node);
+        }
+        Contents.fromData = function (data) {
+            return new Contents(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+        };
+        Contents.prototype.createContentsId = function () {
+            return ++_created_contents_num;
+        };
+        Contents.prototype.getChildren = function (node) {
+            var lastChildren = [];
+            for (var i = 0; i < node.children.length; i++) {
+                lastChildren.push(ContentsItem.fromData({
+                    parentId: this.id,
+                    itemNumber: i + 1,
+                    node: APView.getFirstChildLastNode(node.children[i])
+                }));
+            }
+            return lastChildren;
+        };
+        Contents.prototype.getItemNode = function (node) {
+            return this.getChildren(node);
+        };
+        return Contents;
+    }());
+    SwitcherView.Contents = Contents;
+    var ContentsItem = (function () {
+        function ContentsItem(id, parentId, className, idName, itemNumber, isSelected, node) {
+            this.id = id;
+            this.parentId = parentId;
+            this.className = className;
+            this.idName = idName;
+            this.itemNumber = itemNumber;
+            this.isSelected = isSelected;
+            this.node = node;
+            this._SELECT_CLASS_NAME = 'show';
+            this.id = this.createContentsItemId();
+        }
+        ContentsItem.fromData = function (data) {
+            return new ContentsItem(0, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.itemNumber ? data.itemNumber : 1, data.isSelected ? data.isSelected : false, data.node ? data.node : null);
+        };
+        ContentsItem.prototype.createContentsItemId = function () {
+            return ++_created_contents_item_num;
+        };
+        ContentsItem.prototype.removeSelectClass = function () {
+            if (this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+                this.node.classList.remove(this._SELECT_CLASS_NAME);
+            }
+        };
+        ContentsItem.prototype.addSelectClass = function () {
+            if (!this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+                this.node.classList.add(this._SELECT_CLASS_NAME);
+            }
+        };
+        ContentsItem.prototype.resetItem = function () {
+            this.removeSelectClass();
+        };
+        ContentsItem.prototype.selectItem = function () {
+            this.addSelectClass();
+        };
+        return ContentsItem;
+    }());
+    SwitcherView.ContentsItem = ContentsItem;
 })(SwitcherView || (SwitcherView = {}));
 var SwitcherController;
 (function (SwitcherController) {
     var Trigger = SwitcherModel.Trigger;
+    var Contents = SwitcherModel.Contents;
     var TriggerView = SwitcherView.Trigger;
+    var ContentsView = SwitcherView.Contents;
     var Switcher = (function () {
         function Switcher() {
             var _this = this;
-            this._created_contents_num = 0;
             this.triggerList = [];
             this.contentsList = [];
             TriggerView.fetchElements(function (data) {
                 data.trigger.forEach(function (nodeList) {
                     _this.createFromTriggerElement(nodeList);
                 });
+                data.contents.forEach(function (nodeList) {
+                    _this.createFromContentsElement(nodeList);
+                });
             });
+            console.log(this);
         }
         Switcher.prototype.setTriggerCallBack = function () {
+            var _this = this;
             this.triggerList.forEach(function (trigger) {
                 var parent = trigger;
                 trigger.items.forEach(function (item) {
-                    item.view.select(function (node) {
-                        parent.select(node.id);
+                    item.view.select(function (view) {
+                        parent.select(view.id);
+                        _this.selectContents(parent);
                     }, true);
                 });
             });
         };
-        Switcher.prototype.createContentsId = function () {
-            return ++this._created_contents_num;
+        Switcher.prototype.selectContents = function (trigger) {
+            for (var i = 0; i < this.contentsList.length; i++) {
+                this.contentsList[i].select(trigger);
+            }
         };
         Switcher.prototype.createFromTriggerElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
@@ -745,11 +880,28 @@ var SwitcherController;
             }
             this.setTriggerCallBack();
         };
+        Switcher.prototype.createFromContentsElement = function (nodeList) {
+            for (var i = 0; i < nodeList.length; i++) {
+                this.createContentsModel(ContentsView.fromData(nodeList[i]));
+            }
+        };
         Switcher.prototype.createTriggerModel = function (triggerView) {
             this.create(triggerView);
         };
+        Switcher.prototype.createContentsModel = function (contentsView) {
+            this.createContents(contentsView);
+        };
+        Switcher.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.contentsList);
+            }
+        };
         Switcher.prototype.create = function (data) {
             this.triggerList.push(Trigger.fromData(data));
+        };
+        Switcher.prototype.createContents = function (data) {
+            this.contentsList.push(Contents.fromData(data));
+            this.setTriggerTargetId();
         };
         Switcher.prototype.select = function (data) {
         };

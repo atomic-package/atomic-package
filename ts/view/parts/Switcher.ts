@@ -4,8 +4,13 @@
 /// <reference path='../../_all.ts' />
 
 module SwitcherView {
-   var _created_trigger_num: number = 0;
-   var _created_trigger_item_num: number = 0;
+  import APView = AtomicPackages.View;
+
+  var _created_trigger_num: number = 0,
+      _created_trigger_item_num: number = 0;
+
+  var _created_contents_num: number = 0,
+      _created_contents_item_num: number = 0;
 
   /**
    * Switcher Trigger View Class
@@ -19,12 +24,16 @@ module SwitcherView {
       public idName: string,
       public items: TriggerItem[],
       public selectedNumber: number,
+      public target: any,
       public node: any
       ) {
       this.id = this.createTriggerId();
       this.items = this.getItemNode(this.node);
     }
 
+    /**
+     * Static Function
+    **/
     static fromData(data: any): Trigger {
       return new Trigger(
         0,
@@ -32,22 +41,37 @@ module SwitcherView {
         data.id ? data.id : null,
         data.items ? data.items : [],
         data.selectedNumber ? data.selectedNumber : 1,
+        data.dataset.apSwitcher ? data.dataset.apSwitcher : null,
         data ? data : null
       );
     }
 
-    static fetchElements(callback) {
+    static fetchElements(callback): void {
       var switcherElements = {
         trigger: [],
         contents: []
       };
 
       document.addEventListener("DOMContentLoaded", () => {
+        // trigger
         switcherElements.trigger.push(document.querySelectorAll('[data-ap-switcher]'));
+
+        // contents
+        switcherElements.trigger.forEach((nodeList: any) => {
+          nodeList.forEach((node: any) => {
+            if(node.dataset.apSwitcher) {
+              switcherElements.contents.push(document.querySelectorAll(node.dataset.apSwitcher));
+            }
+          });
+        });
+
         callback(switcherElements);
       });
     }
 
+    /**
+     * Private Function
+    **/
     private createTriggerId(): number {
       return ++_created_trigger_num;
     }
@@ -60,21 +84,16 @@ module SwitcherView {
           TriggerItem.fromData({
             parentId: this.id,
             itemNumber: i + 1,
-            node: this.getLastChild(node.children[i])
+            node: APView.getFirstChildLastNode(node.children[i])
           })
         );
       }
       return lastChildren;
     }
 
-    private getLastChild(child) {
-      if(child.children.length > 0) {
-        return this.getLastChild(child.children[0]);
-      } else {
-        return child;
-      }
-    }
-
+    /**
+     * Public Function
+    **/
     public getItemNode(node) {
       return this.getChildren(node);
     }
@@ -82,11 +101,11 @@ module SwitcherView {
     public resetSelectedClassName() {
 
     }
-
   }
 
+
   /**
-   * Switcher ToggleItem Class
+   * Switcher ToggleItem View Class
    * @public
    * @param option
    **/
@@ -155,14 +174,6 @@ module SwitcherView {
       }
     }
 
-    private resetItem() {
-      this.removeSelectClass();
-    }
-
-    private selectItem() {
-      this.addSelectClass();
-    }
-
     /**
      * Public Function
     **/
@@ -176,12 +187,143 @@ module SwitcherView {
 
     public reset(fn?, isFirst?): void {
       this.resetCallBackFunction = fn;
+    }
 
-//      if(!isFirst) {
-//        fn(this);
-//      }
+    public resetItem() {
+      this.removeSelectClass();
+    }
+
+    public selectItem() {
+      this.addSelectClass();
     }
 
   }
 
+
+  /**
+   * Switcher Contents View Class
+   * @public
+   * @param option
+   **/
+  export class Contents {
+    constructor(
+      public id: number,
+      public idName: string,
+      public className: string,
+      public items: ContentsItem[],
+      public selectedNumber: number,
+      public node: any
+      ) {
+      this.id = this.createContentsId();
+      this.items = this.getItemNode(this.node);
+    }
+
+    /**
+     * Static Function
+     **/
+    static fromData(data: any): Contents {
+      return new Contents(
+        0,
+        data.idName ? data.idName : data.id,
+        data.className ? data.className : '',
+        data.items ? data.items : [],
+        data.selectedNumber ? data.selectedNumber : 1,
+        data ? data : null
+      );
+    }
+
+    /**
+     * Private Function
+    **/
+    private createContentsId(): number {
+      return ++_created_contents_num;
+    }
+
+    private getChildren(node) {
+      var lastChildren = [];
+
+      for(var i: number = 0; i < node.children.length; i++) {
+        lastChildren.push(
+          ContentsItem.fromData({
+            parentId: this.id,
+            itemNumber: i + 1,
+            node: APView.getFirstChildLastNode(node.children[i])
+          })
+        );
+      }
+      return lastChildren;
+    }
+
+    /**
+     * Public Function
+    **/
+    public getItemNode(node) {
+      return this.getChildren(node);
+    }
+  }
+
+
+  /**
+   * Switcher ContentsItem View Class
+   * @public
+   * @param option
+   **/
+  export class ContentsItem {
+    private _SELECT_CLASS_NAME = 'show';
+
+    constructor(
+      public id: number,
+      public parentId: number,
+      public className: string,
+      public idName: string,
+      public itemNumber: number,
+      public isSelected: boolean,
+      public node: any
+      ) {
+      this.id = this.createContentsItemId();
+    }
+
+    /**
+     * Static Function
+     **/
+    static fromData(data: any): ContentsItem {
+      return new ContentsItem(
+        0,
+        data.parentId ? data.parentId : 1,
+        data.className ? data.className : '',
+        data.idName ? data.idName : '',
+        data.itemNumber ? data.itemNumber : 1,
+        data.isSelected ? data.isSelected : false,
+        data.node ? data.node : null
+      );
+    }
+
+    private createContentsItemId(): number {
+      return ++_created_contents_item_num;
+    }
+
+    private removeSelectClass() {
+      if(this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+        this.node.classList.remove(this._SELECT_CLASS_NAME);
+      }
+    }
+
+    private addSelectClass() {
+      if(!this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+        this.node.classList.add(this._SELECT_CLASS_NAME);
+      }
+    }
+
+    /**
+     * Public Function
+    **/
+    public resetItem() {
+      this.removeSelectClass();
+    }
+
+    public selectItem() {
+      this.addSelectClass();
+    }
+
+  }
 }

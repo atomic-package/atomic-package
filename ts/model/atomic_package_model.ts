@@ -28,6 +28,8 @@ module AtomicPackages {
     }
 
     private static getSearchItems(dataList: any[], type: any) {
+      if (!type) return;
+
       var key: string = Object.keys(type)[0];
 
       if(type === 'all') {

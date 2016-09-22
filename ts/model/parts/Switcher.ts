@@ -6,8 +6,6 @@
 module SwitcherModel {
   import APModel = AtomicPackages.Model;
 
-  import TriggerView  = SwitcherView.Trigger;
-
   /**
    * Switcher Trigger Model Class
    * @public
@@ -21,12 +19,17 @@ module SwitcherModel {
       public items: TriggerItem[],
       public itemLength: number,
       public selectedNumber: number,
-      public view: TriggerView
+      public target: any,
+      public targetId: number[],
+      public view: SwitcherView.Trigger
       ) {
       this.items = this.createItem(this.items);
       this.items[selectedNumber - 1].select();
     }
 
+    /**
+     * Static Function
+    **/
     static fromData(data: any): Trigger {
       return new Trigger(
         data.id ? data.id : 1,
@@ -35,10 +38,15 @@ module SwitcherModel {
         data.items ? data.items : null,
         data.items.length,
         data.selectedNumber ? data.selectedNumber : 1,
+        data.target ? data.target : null,
+        data.targetId ? data.targetId : [],
         data ? data : null
       );
     }
 
+    /**
+     * Private Function
+    **/
     private createItem(items) {
       var itemModels = [];
 
@@ -55,25 +63,36 @@ module SwitcherModel {
       })[0];
     }
 
-    private setSelectedNumber(item) {
+    private setSelectedNumber(item: TriggerItem): void {
       this.selectedNumber = item.itemNumber;
     }
 
-    public resetSelected() {
+    /**
+     * Public Function
+    **/
+    public setTargetId(contentsViewList: Contents[]) {
+      var searchContents: Contents[] = APModel.search(contentsViewList, this.target);
+
+      if(searchContents) {
+        for (var i: number = 0; i < searchContents.length; i++) {
+          this.targetId.push(searchContents[i].id);
+        }
+      }
+    }
+
+    public resetSelected(): void {
       this.items.forEach((item: TriggerItem) => {
         item.reset();
       });
     }
 
-    public select(id: number) {
-      var selectItem = this.searchItem(id);
+    public select(itemId: number) {
+      var selectItem = this.searchItem(itemId);
 
       this.resetSelected();
       this.setSelectedNumber(selectItem);
 
       selectItem.select();
-
-      console.log(this);
     }
 
   }
@@ -91,7 +110,7 @@ module SwitcherModel {
       public idName: string,
       public itemNumber: number,
       public isSelected: boolean,
-      public view: any
+      public view: SwitcherView.TriggerItem
       ) {
     }
 
@@ -119,7 +138,7 @@ module SwitcherModel {
   }
 
   /**
-   * Switcher Contents Class
+   * Switcher Contents Model Class
    * @public
    * @param option
    **/
@@ -132,6 +151,8 @@ module SwitcherModel {
       public selectedNumber: number,
       public view: any
       ) {
+      this.items = this.createItem(this.items);
+      this.items[selectedNumber - 1].select();
     }
 
     static fromData(data: any): Contents {
@@ -141,13 +162,45 @@ module SwitcherModel {
         data.idName ? data.idName : '',
         data.items ? data.items : null,
         data.selectedNumber ? data.selectedNumber : 1,
-        data.view ? data.view : null
+        data ? data : null
       );
+    }
+
+    /**
+     * Private Function
+    **/
+    private createItem(items) {
+      var itemModels = [];
+      for(var i: number = 0; i < items.length; i++) {
+        itemModels.push(ContentsItem.fromData(items[i]));
+      }
+      return itemModels;
+    }
+
+    private selectItem(itemNumber: number) {
+      this.selectedNumber = itemNumber;
+      this.items[this.selectedNumber - 1].select();
+    }
+
+    public resetSelected(): void {
+      this.items.forEach((item: ContentsItem) => {
+        item.reset();
+      });
+    }
+
+    public select(trigger: Trigger) {
+      this.resetSelected();
+
+      for(var i: number = 0; i < trigger.targetId.length; i++) {
+        if(trigger.targetId[i] == this.id) {
+          this.selectItem(trigger.selectedNumber);
+        }
+      }
     }
   }
 
   /**
-   * Switcher Contents Item Class
+   * Switcher Contents Item Model Class
    * @public
    * @param option
    **/
@@ -169,8 +222,20 @@ module SwitcherModel {
         data.className ? data.className : '',
         data.idName ? data.idName : '',
         data.isShow ? data.isShow : false,
-        data.view ? data.view : null
+        data ? data : null
       );
     }
+
+    public reset() {
+      this.isShow = false;
+      this.view.resetItem();
+    }
+
+
+    public select() {
+      this.isShow = true;
+      this.view.selectItem();
+    }
+
   }
 }
