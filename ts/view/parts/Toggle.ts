@@ -4,8 +4,8 @@
 /// <reference path='../../_all.ts' />
 
 module ToggleView {
-  import APView = AtomicPackages.View;
-  import APModel= AtomicPackages.Model;
+  import APModel = AtomicPackages.Model;
+  import APView  = AtomicPackages.View;
 
   var _created_toggle_trigger_num: number  = 0,
       _created_toggle_contents_num: number = 0;

@@ -4,7 +4,8 @@
 /// <reference path='../../_all.ts' />
 
 module SwitcherView {
-  import APView = AtomicPackages.View;
+  import APModel = AtomicPackages.Model;
+  import APView  = AtomicPackages.View;
 
   var _created_trigger_num: number = 0,
       _created_trigger_item_num: number = 0;
@@ -53,6 +54,8 @@ module SwitcherView {
       };
 
       document.addEventListener("DOMContentLoaded", () => {
+        var selectors: string[] = [];
+
         // trigger
         switcherElements.trigger.push(document.querySelectorAll('[data-ap-switcher]'));
 
@@ -60,10 +63,16 @@ module SwitcherView {
         switcherElements.trigger.forEach((nodeList: any) => {
           nodeList.forEach((node: any) => {
             if(node.dataset.apSwitcher) {
-              switcherElements.contents.push(document.querySelectorAll(node.dataset.apSwitcher));
+              selectors.push(node.dataset.apSwitcher);
             }
           });
         });
+
+        selectors = APModel.uniq(selectors);
+
+        for (var i: number = 0; i < selectors.length; i++) {
+          switcherElements.contents.push(document.querySelectorAll(selectors[i]));
+        }
 
         callback(switcherElements);
       });

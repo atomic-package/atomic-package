@@ -658,6 +658,7 @@ var SwitcherModel;
 })(SwitcherModel || (SwitcherModel = {}));
 var SwitcherView;
 (function (SwitcherView) {
+    var APModel = AtomicPackages.Model;
     var APView = AtomicPackages.View;
     var _created_trigger_num = 0, _created_trigger_item_num = 0;
     var _created_contents_num = 0, _created_contents_item_num = 0;
@@ -682,14 +683,19 @@ var SwitcherView;
                 contents: []
             };
             document.addEventListener("DOMContentLoaded", function () {
+                var selectors = [];
                 switcherElements.trigger.push(document.querySelectorAll('[data-ap-switcher]'));
                 switcherElements.trigger.forEach(function (nodeList) {
                     nodeList.forEach(function (node) {
                         if (node.dataset.apSwitcher) {
-                            switcherElements.contents.push(document.querySelectorAll(node.dataset.apSwitcher));
+                            selectors.push(node.dataset.apSwitcher);
                         }
                     });
                 });
+                selectors = APModel.uniq(selectors);
+                for (var i = 0; i < selectors.length; i++) {
+                    switcherElements.contents.push(document.querySelectorAll(selectors[i]));
+                }
                 callback(switcherElements);
             });
         };
