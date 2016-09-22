@@ -179,6 +179,7 @@ module ModalWindowView {
       ) {
       this.setTarget(this.node);
       this.setEventListener();
+      this.id = this.createTriggerId();
     }
 
     static fromData(data: any): ModalWindowTrigger {

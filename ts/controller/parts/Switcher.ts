@@ -14,7 +14,7 @@ module SwitcherController {
   import TriggerView  = SwitcherView.Trigger;
 
   /**
-   * Switcher Class
+   * Switcher Controller Class
    * @public
    * @param option
    **/
@@ -25,10 +25,32 @@ module SwitcherController {
     private contentsList: Contents[] = [];
 
     constructor() {
-      document.addEventListener("DOMContentLoaded", () => {
-//        this.createFromElement(document.querySelectorAll('.' + this._DEFAULT_CLASS_NAME));
-        this.createFromTriggerElement(document.querySelectorAll('[data-ap-switcher]'));
-//        this.createTriggerFromElement(document.querySelectorAll('[data-ap-modal-close]'));
+      TriggerView.fetchElements((data) => {
+        data.trigger.forEach((nodeList: NodeList) => {
+          this.createFromTriggerElement(nodeList);
+        });
+      });
+
+      //console.log(this);
+    }
+
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        var parent = trigger;
+
+        trigger.items.forEach((item) => {
+          item.view.select((node) => {
+            parent.select(node.id);
+          }, true);
+        });
+//
+//        trigger.node.select((target) => {
+//          target.select();
+//        }, true);
+//
+//        trigger.node.reset((target) => {
+//          target.reset(target);
+//        }, true);
       });
     }
 
@@ -43,52 +65,28 @@ module SwitcherController {
       for(var i: number = 0; i < nodeList.length; i++) {
         this.createTriggerModel(TriggerView.fromData(nodeList[i]));
       }
+      this.setTriggerCallBack();
     }
 
-    private createTriggerModel(triggerView) {
-      this.create({
-        id: triggerView.id,
-        className: triggerView.node.className,
-        idName: triggerView.node.id ? triggerView.node.id : null,
-        items: triggerView.getItemNode(),
-        itemLength: triggerView.node.children.length,
-        selectedNumber: null,
-        view: triggerView.node
-      });
+    private createTriggerModel(triggerView: TriggerView): void {
+      this.create(triggerView);
     }
 
     /**
      * Public Function
     **/
     public create(data: any): void {
-
-//      if(data !== void 0) {
-//        var idNumber: number = this.createId();
-//
-//        this.list.push(Modal.fromData({
-//          id: idNumber,
-//          className: data.className ? data.className : this._DEFAULT_CLASS_NAME,
-//          idName: data.idName ? data.idName : String(this._DEFAULT_ID_NAME + idNumber),
-//          view: data.view ? data.view : null
-//        }));
-//      } else {
-//        var idNumber: number = this.createId();
-//
-//        this.list.push(Modal.fromData({
-//          id: idNumber,
-//          className: this._DEFAULT_CLASS_NAME,
-//          idName: String(this._DEFAULT_ID_NAME + idNumber),
-//          view: null
-//        }));
-//      }
+      this.triggerList.push(Trigger.fromData(data));
     }
 
     public select(data: any): void {
       //number, id, class
       //
-
     }
 
+    public resetSelected(data: any) {
+
+    }
 
   }
 

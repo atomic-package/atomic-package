@@ -4,9 +4,12 @@
 /// <reference path='../../_all.ts' />
 
 module SwitcherModel {
+  import APModel = AtomicPackages.Model;
+
+  import TriggerView  = SwitcherView.Trigger;
 
   /**
-   * Switcher Trigger Class
+   * Switcher Trigger Model Class
    * @public
    * @param option
    **/
@@ -18,8 +21,10 @@ module SwitcherModel {
       public items: TriggerItem[],
       public itemLength: number,
       public selectedNumber: number,
-      public view: any
+      public view: TriggerView
       ) {
+      this.items = this.createItem(this.items);
+      this.items[selectedNumber - 1].select();
     }
 
     static fromData(data: any): Trigger {
@@ -28,10 +33,47 @@ module SwitcherModel {
         data.className ? data.className : '',
         data.idName ? data.idName : '',
         data.items ? data.items : null,
-        data.selectedNumber ? data.selectedNumber : 1,
         data.items.length,
-        data.view ? data.view : null
+        data.selectedNumber ? data.selectedNumber : 1,
+        data ? data : null
       );
+    }
+
+    private createItem(items) {
+      var itemModels = [];
+
+      for(var i: number = 0; i < items.length; i++) {
+        itemModels.push(TriggerItem.fromData(items[i]));
+      }
+
+      return itemModels;
+    }
+
+    private searchItem(id: number) {
+      return this.items.filter((item: any) => {
+        return (item.id == id);
+      })[0];
+    }
+
+    private setSelectedNumber(item) {
+      this.selectedNumber = item.itemNumber;
+    }
+
+    public resetSelected() {
+      this.items.forEach((item: TriggerItem) => {
+        item.reset();
+      });
+    }
+
+    public select(id: number) {
+      var selectItem = this.searchItem(id);
+
+      this.resetSelected();
+      this.setSelectedNumber(selectItem);
+
+      selectItem.select();
+
+      console.log(this);
     }
 
   }
@@ -47,6 +89,7 @@ module SwitcherModel {
       public parentId: number,
       public className: string,
       public idName: string,
+      public itemNumber: number,
       public isSelected: boolean,
       public view: any
       ) {
@@ -58,9 +101,20 @@ module SwitcherModel {
         data.parentId ? data.parentId : 1,
         data.className ? data.className : '',
         data.idName ? data.idName : '',
+        data.itemNumber ? data.itemNumber : 0,
         data.isSelected ? data.isSelected : false,
-        data.view ? data.view : null
+        data ? data : null
       );
+    }
+
+    public reset() {
+      this.isSelected = false;
+      this.view.resetItem();
+    }
+
+    public select() {
+      this.isSelected = true;
+      this.view.selectItem();
     }
   }
 
