@@ -42,7 +42,13 @@ module SmoothScrollModel {
      * Public Function
      **/
     public setTargetId(targetViewList: Target[]) {
-      var searchContents: Target[] = APModel.search(targetViewList, this.target);
+      var searchContents: Target[];
+
+      if(this.target) {
+        searchContents = APModel.search(targetViewList, this.target);
+      } else {
+        searchContents = APModel.search(targetViewList, { triggerId: this.id });
+      }
 
       if(searchContents) {
         this.targetId = searchContents[0].id;
@@ -58,6 +64,7 @@ module SmoothScrollModel {
   export class Target {
     constructor(
       public id: number,
+      public triggerId: number,
       public className: string,
       public idName: string,
       public coordinate: number,
@@ -68,6 +75,7 @@ module SmoothScrollModel {
     static fromData(data: any): Target {
       return new Target(
         data.id ? data.id : 1,
+        data.triggerId ? data.triggerId : null,
         data.className ? data.className : null,
         data.idName ? data.idName : null,
         data.coordinate ? data.coordinate : 0,

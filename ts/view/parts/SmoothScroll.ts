@@ -55,6 +55,8 @@ module SmoothScrollView {
 
       triggerList.forEach((trigger: any) => {
         if(parseInt(trigger.target, 10)) {
+          trigger.setMoveCoordinate();
+          targetViewList.push(trigger.createMoveCoordinate());
 
         } else if(trigger.target) {
           selectors.push(trigger.target);
@@ -67,7 +69,13 @@ module SmoothScrollView {
         targetList.push(document.querySelectorAll(selectors[i]));
       }
 
-      return this.createFromTargetsElement(targetList);
+      var createTargetList = this.createFromTargetsElement(targetList);
+
+      createTargetList.forEach((createTarget: any) => {
+        targetViewList.push(createTarget);
+      });
+
+      return targetViewList;
     }
 
     public static createFromTargetsElement(targetList) {
@@ -75,7 +83,7 @@ module SmoothScrollView {
 
       targetList.forEach((nodeList: NodeList) => {
         for (var i: number = 0; i < nodeList.length; i++) {
-          targetViewList.push(Target.fromData(nodeList[i]));
+          targetViewList.push(Target.fromData({ node: nodeList[i] }));
         }
       });
 
@@ -98,6 +106,7 @@ module SmoothScrollView {
       public idName: string,
       public target: any,
       public coordinate: number,
+      public moveCoordinate: number,
       public node: any
       ) {
       this.id = this.createTriggerId();
@@ -115,6 +124,7 @@ module SmoothScrollView {
         data.className ? data.className : null,
         data.id ? data.id : null,
         data.dataset.apScroll ? data.dataset.apScroll : null,
+        0,
         0,
         data ? data : null
       );
@@ -158,20 +168,17 @@ module SmoothScrollView {
     public resetSelectedClassName() {
 
     }
-  }
 
-  /**
-   * SmoothScroll Coordinate View Class
-   * @public
-   * @param option
-  **/
-  export class Coordinate {
-    constructor(
-      public id: number,
-      public triggerId: number,
-      public coordinate: number
-      ) {
-      //this.id = this.createContentsId();
+    public setMoveCoordinate() {
+      this.moveCoordinate = parseInt(this.target, 10);
+      this.target = null;
+    }
+
+    public createMoveCoordinate() {
+      return Target.fromData({
+        triggerId: this.id,
+        coordinate: this.coordinate + this.moveCoordinate
+      });
     }
   }
 
@@ -183,13 +190,14 @@ module SmoothScrollView {
   export class Target {
     constructor(
       public id: number,
+      public triggerId: number,
       public idName: string,
       public className: string,
       public coordinate: number,
       public node: any
       ) {
       this.id = this.createContentsId();
-      if(this.node) {
+      if(this.node && this.coordinate == 0) {
         this.coordinate = this.getCoordinate(this.node);
       }
     }
@@ -200,10 +208,11 @@ module SmoothScrollView {
     static fromData(data: any): Target {
       return new Target(
         0,
-        data.id ? data.id : null,
-        data.className ? data.className : '',
-        0,
-        data ? data : null
+        data.triggerId ? data.triggerId : null,
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
+        data.coordinate ? data.coordinate : 0,
+        data.node ? data.node : null
       );
     }
 

@@ -24,7 +24,7 @@ module AtomicPackages {
      * Private Static Function
     **/
     private static isArray(data): boolean {
-      return Array.isArray(data) || /^\[/.test(data);
+      return Array.isArray(data) || typeof data !== 'object' && /^\[/.test(data);
     }
 
     private static getSearchItems(dataList: any[], type: any) {

@@ -33,8 +33,8 @@ module SmoothScrollController {
         });
 
         this.setTriggerCallBack();
+        this.setTriggerTargetId();
       });
-      console.log(this);
     }
 
     /**
@@ -45,9 +45,6 @@ module SmoothScrollController {
     }
 
     private createTargetModel(targetView: TargetView): void {
-      console.log(targetView);
-
-
       this.createTargets(targetView);
     }
 
@@ -80,7 +77,6 @@ module SmoothScrollController {
 
     public createTargets(data: any): void {
       this.targetList.push(Target.fromData(data));
-      this.setTriggerTargetId();
     }
 
     public scroll(data: any): void {
