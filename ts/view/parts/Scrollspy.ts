@@ -7,8 +7,8 @@ module ScrollSpyView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 
-  var _created_scroll_trigger_num: number  = 0,
-      _created_scroll_target_num: number = 0;
+  var _created_scroll_spy_trigger_num: number  = 0,
+      _created_scroll_spy_target_num: number = 0;
 
   /**
    * ScrollSpy View Class
@@ -16,72 +16,31 @@ module ScrollSpyView {
    * @param option
    **/
   export class ScrollSpy {
-    private triggerList = [];
-
     static fetchElements(callback): void {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = this.createFromTriggerElement();
-
         callback({
-          triggerList: this.triggerList,
-          targetList: this.createTargetView(this.triggerList)
+          triggerList: this.createTrigger(),
+          targetList: this.createTargetView()
         });
       });
     }
 
-    public static createFromTriggerElement() {
-      var triggerList = [],
-        triggerViewList = [];
+    public static createTrigger() {
+      if(document.querySelectorAll('[data-ap-scrollspy]')) {
+        //
+      }
+    }
+
+    public static createTargetView() {
+      var targetList = [],
+          targetViewList = [];
 
       // とりあえず [data-ap-scrollspy]のみ取得
-      triggerList.push(document.querySelectorAll('[data-ap-scrollspy]'));
-
-      triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          triggerViewList.push(Trigger.fromData(nodeList[i]));
-        }
-      });
-
-      return triggerViewList;
-    }
-
-
-    public static createTargetView(triggerList) {
-      var selectors: string[] = [],
-        targetList = [],
-        targetViewList = [];
-
-      triggerList.forEach((trigger: any) => {
-        if(parseInt(trigger.target, 10)) {
-          trigger.setMoveCoordinate();
-          targetViewList.push(trigger.createMoveCoordinate());
-
-        } else if(trigger.target) {
-          selectors.push(trigger.target);
-        }
-      });
-
-      selectors = APModel.uniq(selectors);
-
-      for (var i: number = 0; i < selectors.length; i++) {
-        targetList.push(document.querySelectorAll(selectors[i]));
-      }
-
-      var createTargetList = this.createFromTargetsElement(targetList);
-
-      createTargetList.forEach((createTarget: any) => {
-        targetViewList.push(createTarget);
-      });
-
-      return targetViewList;
-    }
-
-    public static createFromTargetsElement(targetList) {
-      var targetViewList = [];
+      targetList.push(document.querySelectorAll('[data-ap-scrollspy]'));
 
       targetList.forEach((nodeList: NodeList) => {
         for (var i: number = 0; i < nodeList.length; i++) {
-          targetViewList.push(Target.fromData({ node: nodeList[i] }));
+          targetViewList.push(Target.fromData(nodeList[i]));
         }
       });
 
@@ -100,15 +59,12 @@ module ScrollSpyView {
 
     constructor(
       public id: number,
-      public className: string,
-      public idName: string,
-      public target: any,
+      public option: any,
       public coordinate: number,
-      public moveCoordinate: number,
-      public node: any
+      public moveCoordinate: number
       ) {
       this.id = this.createTriggerId();
-      this.coordinate = this.getCoordinate(this.node);
+      //this.coordinate = this.getCoordinate(this.node);
 
       this.setEventListener();
     }
@@ -119,12 +75,9 @@ module ScrollSpyView {
     static fromData(data: any): Trigger {
       return new Trigger(
         0,
-        data.className ? data.className : null,
-        data.id ? data.id : null,
         data.dataset.apScrollspy ? data.dataset.apScrollspy : null,
         0,
-        0,
-        data ? data : null
+        0
       );
     }
 
@@ -132,7 +85,7 @@ module ScrollSpyView {
      * Private Function
      **/
     private createTriggerId(): number {
-      return ++_created_scroll_trigger_num;
+      return ++_created_scroll_spy_trigger_num;
     }
 
     private getCoordinate(node) {
@@ -141,7 +94,7 @@ module ScrollSpyView {
     }
 
     private setEventListener(): void {
-      this.node.addEventListener('click', (e) => {
+      window.addEventListener('scroll', (e) => {
         e.preventDefault();
 
         this.toggle(this.toggleCallBackFunction);
@@ -157,26 +110,6 @@ module ScrollSpyView {
       if(!isFirst) {
         fn(this);
       }
-    }
-
-    public getItemNode(node) {
-      //return this.getChildren(node);
-    }
-
-    public resetSelectedClassName() {
-
-    }
-
-    public setMoveCoordinate() {
-      this.moveCoordinate = parseInt(this.target, 10);
-      this.target = null;
-    }
-
-    public createMoveCoordinate() {
-      return Target.fromData({
-        triggerId: this.id,
-        coordinate: this.coordinate + this.moveCoordinate
-      });
     }
   }
 
@@ -218,7 +151,7 @@ module ScrollSpyView {
      * Private Function
      **/
     private createContentsId(): number {
-      return ++_created_scroll_target_num;
+      return ++_created_scroll_spy_target_num;
     }
 
     private getCoordinate(node) {

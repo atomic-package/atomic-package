@@ -19,21 +19,19 @@ module ScrollSpyController {
    * @param option
    **/
   export class ScrollSpy {
-    private triggerList: Trigger[] = [];
+    private trigger: Trigger;
     private targetList: Target[] = [];
 
     constructor() {
       SSView.fetchElements((data) => {
-        data.triggerList.forEach((triggerView: TriggerView) => {
-          this.createTriggerModel(triggerView);
-        });
-
-        data.targetList.forEach((targetView: TargetView) => {
-          this.createTargetModel(targetView);
-        });
-
-        this.setTriggerCallBack();
-        this.setTriggerTargetId();
+//        this.createTriggerModel(data.trigger);
+//
+//        data.targetList.forEach((targetView: TargetView) => {
+//          this.createTargetModel(targetView);
+//        });
+//
+//        this.setTriggerCallBack();
+//        this.setTriggerTargetId();
       });
     }
 
@@ -49,17 +47,13 @@ module ScrollSpyController {
     }
 
     private setTriggerTargetId() {
-      for(var i: number = 0; i < this.triggerList.length; i++) {
-        this.triggerList[i].setTargetId(this.targetList);
-      }
+      this.trigger.setTargetId(this.targetList);
     }
 
     private setTriggerCallBack(): void {
-      this.triggerList.forEach((trigger: Trigger) => {
-        trigger.view.toggle((triggerView: TriggerView) => {
-          this.toggleContents(trigger);
-        }, true);
-      });
+      this.trigger.view.toggle((triggerView: TriggerView) => {
+        this.toggleContents(trigger);
+      }, true);
     }
 
     private toggleContents(trigger: Trigger): void {
@@ -72,7 +66,7 @@ module ScrollSpyController {
      * Public Function
      **/
     public create(data: any): void {
-      this.triggerList.push(Trigger.fromData(data));
+      this.trigger = Trigger.fromData(data);
     }
 
     public createTargets(data: any): void {

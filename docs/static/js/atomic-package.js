@@ -1246,31 +1246,18 @@ var DropdownController;
 })(DropdownController || (DropdownController = {}));
 var ScrollSpyModel;
 (function (ScrollSpyModel) {
-    var APModel = AtomicPackages.Model;
     var Trigger = (function () {
-        function Trigger(id, className, idName, target, targetId, coordinate, view) {
+        function Trigger(id, target, targetId, coordinate, view) {
             this.id = id;
-            this.className = className;
-            this.idName = idName;
             this.target = target;
             this.targetId = targetId;
             this.coordinate = coordinate;
             this.view = view;
         }
         Trigger.fromData = function (data) {
-            return new Trigger(data.id ? data.id : 1, data.className ? data.className : null, data.idName ? data.idName : null, data.target ? data.target : null, data.targetId ? data.targetId : 0, data.coordinate ? data.coordinate : 0, data ? data : null);
+            return new Trigger(data.id ? data.id : 1, data.target ? data.target : null, data.targetId ? data.targetId : 0, data.coordinate ? data.coordinate : 0, data ? data : null);
         };
         Trigger.prototype.setTargetId = function (targetViewList) {
-            var searchContents;
-            if (this.target) {
-                searchContents = APModel.search(targetViewList, this.target);
-            }
-            else {
-                searchContents = APModel.search(targetViewList, { triggerId: this.id });
-            }
-            if (searchContents) {
-                this.targetId = searchContents[0].id;
-            }
         };
         return Trigger;
     }());
@@ -1298,58 +1285,29 @@ var ScrollSpyModel;
 })(ScrollSpyModel || (ScrollSpyModel = {}));
 var ScrollSpyView;
 (function (ScrollSpyView) {
-    var APModel = AtomicPackages.Model;
-    var _created_scroll_trigger_num = 0, _created_scroll_target_num = 0;
+    var _created_scroll_spy_trigger_num = 0, _created_scroll_spy_target_num = 0;
     var ScrollSpy = (function () {
         function ScrollSpy() {
-            this.triggerList = [];
         }
         ScrollSpy.fetchElements = function (callback) {
             var _this = this;
             document.addEventListener("DOMContentLoaded", function () {
-                _this.triggerList = _this.createFromTriggerElement();
                 callback({
-                    triggerList: _this.triggerList,
-                    targetList: _this.createTargetView(_this.triggerList)
+                    triggerList: _this.createTrigger(),
+                    targetList: _this.createTargetView()
                 });
             });
         };
-        ScrollSpy.createFromTriggerElement = function () {
-            var triggerList = [], triggerViewList = [];
-            triggerList.push(document.querySelectorAll('[data-ap-scrollspy]'));
-            triggerList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    triggerViewList.push(Trigger.fromData(nodeList[i]));
-                }
-            });
-            return triggerViewList;
-        };
-        ScrollSpy.createTargetView = function (triggerList) {
-            var selectors = [], targetList = [], targetViewList = [];
-            triggerList.forEach(function (trigger) {
-                if (parseInt(trigger.target, 10)) {
-                    trigger.setMoveCoordinate();
-                    targetViewList.push(trigger.createMoveCoordinate());
-                }
-                else if (trigger.target) {
-                    selectors.push(trigger.target);
-                }
-            });
-            selectors = APModel.uniq(selectors);
-            for (var i = 0; i < selectors.length; i++) {
-                targetList.push(document.querySelectorAll(selectors[i]));
+        ScrollSpy.createTrigger = function () {
+            if (document.querySelectorAll('[data-ap-scrollspy]')) {
             }
-            var createTargetList = this.createFromTargetsElement(targetList);
-            createTargetList.forEach(function (createTarget) {
-                targetViewList.push(createTarget);
-            });
-            return targetViewList;
         };
-        ScrollSpy.createFromTargetsElement = function (targetList) {
-            var targetViewList = [];
+        ScrollSpy.createTargetView = function () {
+            var targetList = [], targetViewList = [];
+            targetList.push(document.querySelectorAll('[data-ap-scrollspy]'));
             targetList.forEach(function (nodeList) {
                 for (var i = 0; i < nodeList.length; i++) {
-                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
+                    targetViewList.push(Target.fromData(nodeList[i]));
                 }
             });
             return targetViewList;
@@ -1358,24 +1316,20 @@ var ScrollSpyView;
     }());
     ScrollSpyView.ScrollSpy = ScrollSpy;
     var Trigger = (function () {
-        function Trigger(id, className, idName, target, coordinate, moveCoordinate, node) {
+        function Trigger(id, option, coordinate, moveCoordinate) {
             this.id = id;
-            this.className = className;
-            this.idName = idName;
-            this.target = target;
+            this.option = option;
             this.coordinate = coordinate;
             this.moveCoordinate = moveCoordinate;
-            this.node = node;
             this.toggleCallBackFunction = function () { };
             this.id = this.createTriggerId();
-            this.coordinate = this.getCoordinate(this.node);
             this.setEventListener();
         }
         Trigger.fromData = function (data) {
-            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apScrollspy ? data.dataset.apScrollspy : null, 0, 0, data ? data : null);
+            return new Trigger(0, data.dataset.apScrollspy ? data.dataset.apScrollspy : null, 0, 0);
         };
         Trigger.prototype.createTriggerId = function () {
-            return ++_created_scroll_trigger_num;
+            return ++_created_scroll_spy_trigger_num;
         };
         Trigger.prototype.getCoordinate = function (node) {
             var rect = node.getBoundingClientRect();
@@ -1383,7 +1337,7 @@ var ScrollSpyView;
         };
         Trigger.prototype.setEventListener = function () {
             var _this = this;
-            this.node.addEventListener('click', function (e) {
+            window.addEventListener('scroll', function (e) {
                 e.preventDefault();
                 _this.toggle(_this.toggleCallBackFunction);
             }, false);
@@ -1393,20 +1347,6 @@ var ScrollSpyView;
             if (!isFirst) {
                 fn(this);
             }
-        };
-        Trigger.prototype.getItemNode = function (node) {
-        };
-        Trigger.prototype.resetSelectedClassName = function () {
-        };
-        Trigger.prototype.setMoveCoordinate = function () {
-            this.moveCoordinate = parseInt(this.target, 10);
-            this.target = null;
-        };
-        Trigger.prototype.createMoveCoordinate = function () {
-            return Target.fromData({
-                triggerId: this.id,
-                coordinate: this.coordinate + this.moveCoordinate
-            });
         };
         return Trigger;
     }());
@@ -1428,7 +1368,7 @@ var ScrollSpyView;
             return new Target(0, data.triggerId ? data.triggerId : null, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.coordinate ? data.coordinate : 0, data.node ? data.node : null);
         };
         Target.prototype.createContentsId = function () {
-            return ++_created_scroll_target_num;
+            return ++_created_scroll_spy_target_num;
         };
         Target.prototype.getCoordinate = function (node) {
             var rect = node.getBoundingClientRect();
@@ -1450,18 +1390,8 @@ var ScrollSpyController;
     var SSView = ScrollSpyView.ScrollSpy;
     var ScrollSpy = (function () {
         function ScrollSpy() {
-            var _this = this;
-            this.triggerList = [];
             this.targetList = [];
             SSView.fetchElements(function (data) {
-                data.triggerList.forEach(function (triggerView) {
-                    _this.createTriggerModel(triggerView);
-                });
-                data.targetList.forEach(function (targetView) {
-                    _this.createTargetModel(targetView);
-                });
-                _this.setTriggerCallBack();
-                _this.setTriggerTargetId();
             });
         }
         ScrollSpy.prototype.createTriggerModel = function (triggerView) {
@@ -1471,17 +1401,13 @@ var ScrollSpyController;
             this.createTargets(targetView);
         };
         ScrollSpy.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.targetList);
-            }
+            this.trigger.setTargetId(this.targetList);
         };
         ScrollSpy.prototype.setTriggerCallBack = function () {
             var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
-                }, true);
-            });
+            this.trigger.view.toggle(function (triggerView) {
+                _this.toggleContents(trigger);
+            }, true);
         };
         ScrollSpy.prototype.toggleContents = function (trigger) {
             for (var i = 0; i < this.targetList.length; i++) {
@@ -1489,7 +1415,7 @@ var ScrollSpyController;
             }
         };
         ScrollSpy.prototype.create = function (data) {
-            this.triggerList.push(Trigger.fromData(data));
+            this.trigger = Trigger.fromData(data);
         };
         ScrollSpy.prototype.createTargets = function (data) {
             this.targetList.push(Target.fromData(data));
