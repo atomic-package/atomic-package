@@ -45,7 +45,6 @@ module SmoothScrollView {
       return triggerViewList;
     }
 
-
     public static createTargetView(triggerList) {
       var selectors: string[] = [],
           targetList = [],

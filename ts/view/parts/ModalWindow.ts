@@ -4,6 +4,9 @@
 /// <reference path='../../_all.ts' />
 
 module ModalWindowView {
+  import APModel = AtomicPackages.Model;
+  import APView  = AtomicPackages.View;
+
   var _created_modal_window_num: number = 0;
   var _created_trigger_num: number = 0;
 
@@ -13,6 +16,87 @@ module ModalWindowView {
    * @param option
   **/
   export class ModalWindow {
+    private triggerList = [];
+
+    /**
+     * Static Function
+    **/
+    static fetchElements(callback) {
+      document.addEventListener("DOMContentLoaded", () => {
+        this.triggerList = this.createFromTriggerElement();
+
+        callback({
+          triggerList: this.triggerList,
+          targetList: this.createTargetView(this.triggerList)
+        });
+      });
+    }
+
+    public static createFromTriggerElement() {
+      var triggerList = [],
+          triggerViewList = [];
+
+      triggerList.push(document.querySelectorAll('[data-ap-modal]'));
+      triggerList.push(document.querySelectorAll('[data-ap-modal-close]'));
+
+      triggerList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          triggerViewList.push(Trigger.fromData(nodeList[i]));
+        }
+      });
+
+      return triggerViewList;
+    }
+
+    public static createTargetView(triggerList) {
+      var selectors: string[] = [],
+          targetList = [],
+          targetViewList = [];
+
+      triggerList.forEach((trigger: any) => {
+        if(trigger.target) {
+          selectors.push(trigger.target);
+        }
+      });
+
+      //selectors.push('.modalWindow');
+
+      selectors = APModel.uniq(selectors);
+
+      for (var i: number = 0; i < selectors.length; i++) {
+        if(selectors[i] !== "all") {
+          targetList.push(document.querySelectorAll(selectors[i]));
+        }
+      }
+
+      var createTargetList = this.createFromTargetsElement(targetList);
+
+      createTargetList.forEach((createTarget: any) => {
+        targetViewList.push(createTarget);
+      });
+
+      return targetViewList;
+    }
+
+    public static createFromTargetsElement(targetList) {
+      var targetViewList = [];
+
+      targetList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          targetViewList.push(Target.fromData({ node: nodeList[i] }));
+        }
+      });
+
+      return targetViewList;
+    }
+  }
+
+  /**
+   * ModalWindow Target Class
+   * @public
+   * @param option
+  **/
+  export class Target {
     private _OPEN_CLASS_NAME = 'open';
 
     private _DEFAULT_ID_NAME: string = 'modalWindow';
@@ -39,46 +123,27 @@ module ModalWindowView {
 
     /**
      * Static Function
-    **/
-    static fromData(data: any): ModalWindow {
-      return new ModalWindow(
+     **/
+    static fromData(data: any): Target {
+      return new Target(
         0,
-        data.id ? data.id : null,
-        data.className ? data.className : null,
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
         false,
-        data ? data : null
+        data.node ? data.node : null
       );
-    }
-
-    static fetchElements(callback) {
-      var modalElements = {
-        modal: [],
-        trigger: []
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        modalElements.modal.push(document.querySelectorAll('.modalWindow'));
-        modalElements.trigger.push(document.querySelectorAll('[data-ap-modal]'));
-        modalElements.trigger.push(document.querySelectorAll('[data-ap-modal-close]'));
-
-        callback(modalElements);
-      });
-    }
-
-    static create() {
-      return this.fromData({});
     }
 
     /**
      * Private Function
-    **/
+     **/
     private createModalWindowId(): number {
       return ++_created_modal_window_num;
     }
 
     /**
      * Public Function
-    **/
+     **/
     public open() {
       this.node.classList.add(this._OPEN_CLASS_NAME);
     }
@@ -105,7 +170,7 @@ module ModalWindowView {
 
 
   /**
-   * ModalWindowBackDrop Class
+   * ModalWindow BackDrop Class
    * @public
    * @param option
    **/
@@ -163,11 +228,11 @@ module ModalWindowView {
 
 
   /**
-   * ModalWindowTrigger Class
+   * ModalWindow Trigger Class
    * @public
    * @param option
-   **/
-  export class ModalWindowTrigger {
+  **/
+  export class Trigger {
     private openCallBackFunction: Function = () => {};
     private closeCallBackFunction: Function = () => {};
 
@@ -182,8 +247,8 @@ module ModalWindowView {
       this.id = this.createTriggerId();
     }
 
-    static fromData(data: any): ModalWindowTrigger {
-      return new ModalWindowTrigger(
+    static fromData(data: any): Trigger {
+      return new Trigger(
         0,
         data ? data : null,
         null,

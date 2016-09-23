@@ -8,12 +8,15 @@
 module ModalWindowController {
   import APModel = AtomicPackages.Model;
 
-  import Modal        = ModalWindowModel.ModalWindow;
-  import ModalView    = ModalWindowView.ModalWindow;
-  import BackDrop     = ModalWindowModel.ModalWindowBackDrop;
+  import ModalView   = ModalWindowView.ModalWindow;
+
+  import Target      = ModalWindowModel.Target;
+  import TargetView  = ModalWindowView.Target;
+  import Trigger     = ModalWindowModel.Trigger;
+  import TriggerView = ModalWindowView.Trigger;
+
+  //import BackDrop     = ModalWindowModel.ModalWindowBackDrop;
   import BackDropView = ModalWindowView.ModalWindowBackDrop;
-  import Trigger      = ModalWindowModel.ModalWindowTrigger;
-  import TriggerView  = ModalWindowView.ModalWindowTrigger;
 
   /**
    * ModalWindow Controller Class
@@ -21,82 +24,81 @@ module ModalWindowController {
    * @param option
    **/
   export class ModalWindow {
-    private list: Modal[] = [];
-    private backDrop: BackDrop = null;
+    private targetList: Target[] = [];
+    //private backDrop: BackDrop = null;
     private triggerList: Trigger[] = [];
 
     constructor(
       ) {
       ModalView.fetchElements((data) => {
-        data.modal.forEach((nodeList: NodeList) => {
-          this.createFromElement(nodeList);
+        data.triggerList.forEach((triggerView: TriggerView) => {
+          this.createTriggerModel(triggerView);
         });
 
-        data.trigger.forEach((nodeList: NodeList) => {
-          this.createTriggerFromElement(nodeList);
+        data.targetList.forEach((targetView: TargetView) => {
+          this.createTargetModel(targetView);
         });
+
+        this.setTriggerCallBack();
+        this.setTriggerTargetId();
       });
     }
 
     /**
      * Private Function
     **/
-    private createFromElement(nodeList: NodeList): void {
-      for(var i: number = 0; i < nodeList.length; i++) {
-        this.createModalModel(ModalView.fromData(nodeList[i]));
+    private createTriggerModel(triggerView: TriggerView): void {
+      this.triggerList.push(Trigger.fromData(triggerView));
+    }
+
+    private createTargetModel(targetView: TargetView): void {
+      this.targetList.push(Target.fromData(targetView));
+    }
+
+    private setTriggerTargetId() {
+      for(var i: number = 0; i < this.triggerList.length; i++) {
+        this.triggerList[i].setTargetId(this.targetList);
       }
-
-      // create BackDrop
-      if(nodeList.length > 0 && this.backDrop === null) {
-        this.backDrop = BackDrop.fromData({
-          view: new BackDropView
-        });
-        this.setBackDropCallBack();
-      }
     }
 
-    private createTriggerFromElement(nodeList: NodeList): void {
-      for(var i: number = 0; i < nodeList.length; i++) {
-        this.triggerList.push(Trigger.fromData({
-          view: TriggerView.fromData(nodeList[i])
-        }));
-      }
-      this.setTriggerCallBack();
-    }
+//    private createFromElement(nodeList: NodeList): void {
+//      for(var i: number = 0; i < nodeList.length; i++) {
+//        this.createModalModel(ModalView.fromData(nodeList[i]));
+//      }
+//
+//      // create BackDrop
+//      if(nodeList.length > 0 && this.backDrop === null) {
+//        this.backDrop = BackDrop.fromData({
+//          view: new BackDropView
+//        });
+//        this.setBackDropCallBack();
+//      }
+//    }
 
-    private createModalModel(modalView: ModalView): void {
-      this.create({
-        id: modalView.id,
-        idName: modalView.idName,
-        className: modalView.className,
-        isOpen: modalView.isOpen,
-        view: modalView
-      });
-    }
 
-    private setBackDropCallBack(): void {
-      this.backDrop.view.click(() => {
-        this.close('all');
-      }, true);
-    }
+//    private setBackDropCallBack(): void {
+//      this.backDrop.view.click(() => {
+//        this.close('all');
+//      }, true);
+//    }
 
     private setTriggerCallBack(): void {
       this.triggerList.forEach((trigger: Trigger) => {
         trigger.view.open((target) => {
-          this.open(target);
+          trigger.open(this.targetList);
         }, true);
 
         trigger.view.close((target) => {
-          this.close(target);
+          trigger.close(this.targetList);
         }, true);
       });
     }
 
-    private matchModal(searchModals: Modal[]): Modal[] {
-      var matchModals: Modal[] = [];
+    private matchModal(searchModals: Target[]): Target[] {
+      var matchModals: Target[] = [];
 
-      this.list.forEach((modal: Modal) => {
-        searchModals.forEach((searchModal: Modal) => {
+      this.targetList.forEach((modal: Target) => {
+        searchModals.forEach((searchModal: Target) => {
           if(modal == searchModal) {
             matchModals.push(modal);
           }
@@ -108,7 +110,7 @@ module ModalWindowController {
     private openCheck(): boolean {
       var isOpen = false;
 
-      this.list.forEach((modal: Modal) => {
+      this.targetList.forEach((modal: Target) => {
         if(modal.isOpen) {
           isOpen = true;
         }
@@ -120,66 +122,66 @@ module ModalWindowController {
      * Public Function
     **/
     public open(data: any): void {
-      var searchModals: Modal[] = APModel.search(this.list, data);
+      var searchModals: Target[] = APModel.search(this.targetList, data);
 
       if(searchModals.length > 0) {
-        var matchModals: Modal[] = this.matchModal(searchModals);
+        var matchModals: Target[] = this.matchModal(searchModals);
 
-        matchModals.forEach((modal: Modal) => {
-          modal.open();
-        });
-        this.backDrop.show();
+//        matchModals.forEach((modal: Target) => {
+//          modal.open();
+//        });
+//        this.backDrop.show();
       }
     }
 
     public close(data: any): void {
-      var searchModals: Modal[] = APModel.search(this.list, data);
+      var searchModals: Target[] = APModel.search(this.targetList, data);
 
       if(searchModals.length > 0) {
-        var matchModals: Modal[] = this.matchModal(searchModals);
+        var matchModals: Target[] = this.matchModal(searchModals);
 
-        matchModals.forEach((modal: Modal) => {
-          modal.close();
-        });
+//        matchModals.forEach((modal: Target) => {
+//          modal.close();
+//        });
       }
 
-      if(!this.openCheck()) {
-        this.backDrop.hide();
-      }
+//      if(!this.openCheck()) {
+//        this.backDrop.hide();
+//      }
     }
 
     public create(data: any): void {
-      if(data !== void 0) {
-        this.list.push(Modal.fromData(data));
-      } else {
-        this.list.push(Modal.fromData(ModalView.create()));
-      }
+//      if(data !== void 0) {
+//        this.targetList.push(Target.fromData(data));
+//      } else {
+//        //this.targetList.push(Modal.fromData(ModalView.create()));
+//      }
     }
 
     public destroy(data: any): void {
-      var searchModals = APModel.search(this.list, data),
-          newList: Modal[] = [];
+      var searchModals = APModel.search(this.targetList, data),
+          newList: Target[] = [];
 
-      if(searchModals.length > 0) {
-        this.list.forEach((modal: Modal) => {
-          searchModals.forEach((searchModal: Modal) => {
-            if(modal !== searchModal) {
-              newList.push(modal);
-            } else {
-              modal.destroy();
-            }
-          });
-        });
-        this.list = newList;
-      }
+//      if(searchModals.length > 0) {
+//        this.targetList.forEach((modal: Target) => {
+//          searchModals.forEach((searchModal: Target) => {
+//            if(modal !== searchModal) {
+//              newList.push(modal);
+//            } else {
+//              modal.destroy();
+//            }
+//          });
+//        });
+//        this.targetList = newList;
+//      }
     }
 
     public update() {
 
     }
 
-    public getElements(data: any): Modal[] {
-      return APModel.search(this.list, data);
+    public getElements(data: any): Target[] {
+      return APModel.search(this.targetList, data);
     }
   }
 }

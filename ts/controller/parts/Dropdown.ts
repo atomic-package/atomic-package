@@ -34,8 +34,6 @@ module DropdownController {
 
         this.setTriggerCallBack();
         this.setTriggerTargetId();
-
-        console.log(this);
       });
     }
 
