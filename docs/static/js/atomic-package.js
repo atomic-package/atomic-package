@@ -983,43 +983,41 @@ var SmoothScrollModel;
 (function (SmoothScrollModel) {
     var APModel = AtomicPackages.Model;
     var Trigger = (function () {
-        function Trigger(id, className, idName, target, targetId, view) {
+        function Trigger(id, className, idName, target, targetId, coordinate, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.target = target;
             this.targetId = targetId;
+            this.coordinate = coordinate;
             this.view = view;
         }
         Trigger.fromData = function (data) {
-            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.target ? data.target : null, data.targetId ? data.targetId : [], data ? data : null);
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : null, data.idName ? data.idName : null, data.target ? data.target : null, data.targetId ? data.targetId : 0, data.coordinate ? data.coordinate : 0, data ? data : null);
         };
         Trigger.prototype.setTargetId = function (targetViewList) {
             var searchContents = APModel.search(targetViewList, this.target);
             if (searchContents) {
-                for (var i = 0; i < searchContents.length; i++) {
-                    this.targetId.push(searchContents[i].id);
-                }
+                this.targetId = searchContents[0].id;
             }
         };
         return Trigger;
     }());
     SmoothScrollModel.Trigger = Trigger;
     var Target = (function () {
-        function Target(id, className, idName, view) {
+        function Target(id, className, idName, coordinate, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
+            this.coordinate = coordinate;
             this.view = view;
         }
         Target.fromData = function (data) {
-            return new Target(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data ? data : null);
+            return new Target(data.id ? data.id : 1, data.className ? data.className : null, data.idName ? data.idName : null, data.coordinate ? data.coordinate : 0, data ? data : null);
         };
         Target.prototype.toggle = function (trigger) {
-            for (var i = 0; i < trigger.targetId.length; i++) {
-                if (trigger.targetId[i] == this.id) {
-                    this.view.scroll();
-                }
+            if (trigger.targetId == this.id) {
+                this.view.scroll();
             }
         };
         return Target;
@@ -1030,44 +1028,112 @@ var SmoothScrollView;
 (function (SmoothScrollView) {
     var APModel = AtomicPackages.Model;
     var _created_scroll_trigger_num = 0, _created_scroll_target_num = 0;
-    var Trigger = (function () {
-        function Trigger(id, className, idName, target, node) {
-            this.id = id;
-            this.className = className;
-            this.idName = idName;
-            this.target = target;
-            this.node = node;
-            this.toggleCallBackFunction = function () { };
-            this.id = this.createTriggerId();
-            this.setEventListener();
+    var SmoothScroll = (function () {
+        function SmoothScroll() {
         }
-        Trigger.fromData = function (data) {
-            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apScroll ? data.dataset.apScroll : null, data ? data : null);
-        };
-        Trigger.fetchElements = function (callback) {
-            var toggleElements = {
+        SmoothScroll.fetchElements = function (callback) {
+            var _this = this;
+            var scrollElements = {
                 trigger: [],
                 targets: []
             };
             document.addEventListener("DOMContentLoaded", function () {
                 var selectors = [];
-                toggleElements.trigger.push(document.querySelectorAll('[data-ap-scroll]'));
-                toggleElements.trigger.forEach(function (nodeList) {
+                scrollElements.trigger.push(document.querySelectorAll('[data-ap-scroll]'));
+                scrollElements.trigger.forEach(function (nodeList) {
                     nodeList.forEach(function (node) {
-                        if (node.dataset.apScroll) {
+                        if (parseInt(node.dataset.apScroll, 10)) {
+                        }
+                        else if (node.dataset.apScroll) {
                             selectors.push(node.dataset.apScroll);
                         }
                     });
                 });
                 selectors = APModel.uniq(selectors);
                 for (var i = 0; i < selectors.length; i++) {
-                    toggleElements.targets.push(document.querySelectorAll(selectors[i]));
+                    scrollElements.targets.push(document.querySelectorAll(selectors[i]));
                 }
-                callback(toggleElements);
+                callback(_this.create(scrollElements));
+            });
+        };
+        SmoothScroll.create = function (scrollElements) {
+            var _this = this;
+            var scrollView = {
+                trigger: [],
+                targets: []
+            };
+            scrollElements.trigger.forEach(function (nodeList) {
+                scrollView.trigger.push(_this.createFromTriggerElement(nodeList));
+            });
+            scrollElements.targets.forEach(function (nodeList) {
+                scrollView.targets.push(_this.createFromTargetsElement(nodeList));
+            });
+            return scrollView;
+        };
+        SmoothScroll.createFromTriggerElement = function (nodeList) {
+            for (var i = 0; i < nodeList.length; i++) {
+                return Trigger.fromData(nodeList[i]);
+            }
+        };
+        SmoothScroll.createFromTargetsElement = function (nodeList) {
+            for (var i = 0; i < nodeList.length; i++) {
+                return Target.fromData(nodeList[i]);
+            }
+        };
+        return SmoothScroll;
+    }());
+    SmoothScrollView.SmoothScroll = SmoothScroll;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, target, coordinate, node) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.target = target;
+            this.coordinate = coordinate;
+            this.node = node;
+            this.toggleCallBackFunction = function () { };
+            this.id = this.createTriggerId();
+            this.coordinate = this.getCoordinate(this.node);
+            this.setEventListener();
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apScroll ? data.dataset.apScroll : null, 0, data ? data : null);
+        };
+        Trigger.fetchElements = function (callback) {
+            var scrollElements = {
+                trigger: [],
+                targets: [],
+                coordinate: []
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                var selectors = [];
+                scrollElements.trigger.push(document.querySelectorAll('[data-ap-scroll]'));
+                scrollElements.trigger.forEach(function (nodeList) {
+                    nodeList.forEach(function (node) {
+                        if (parseInt(node.dataset.apScroll, 10)) {
+                            scrollElements.coordinate.push({
+                                coordinate: parseInt(node.dataset.apScroll, 10),
+                                triggerNode: node
+                            });
+                        }
+                        else if (node.dataset.apScroll) {
+                            selectors.push(node.dataset.apScroll);
+                        }
+                    });
+                });
+                selectors = APModel.uniq(selectors);
+                for (var i = 0; i < selectors.length; i++) {
+                    scrollElements.targets.push(document.querySelectorAll(selectors[i]));
+                }
+                callback(scrollElements);
             });
         };
         Trigger.prototype.createTriggerId = function () {
             return ++_created_scroll_trigger_num;
+        };
+        Trigger.prototype.getCoordinate = function (node) {
+            var rect = node.getBoundingClientRect();
+            return rect.top + window.pageYOffset;
         };
         Trigger.prototype.setEventListener = function () {
             var _this = this;
@@ -1089,23 +1155,41 @@ var SmoothScrollView;
         return Trigger;
     }());
     SmoothScrollView.Trigger = Trigger;
+    var Coordinate = (function () {
+        function Coordinate(id, triggerId, coordinate) {
+            this.id = id;
+            this.triggerId = triggerId;
+            this.coordinate = coordinate;
+        }
+        return Coordinate;
+    }());
+    SmoothScrollView.Coordinate = Coordinate;
     var Target = (function () {
-        function Target(id, idName, className, node) {
+        function Target(id, idName, className, coordinate, node) {
             this.id = id;
             this.idName = idName;
             this.className = className;
+            this.coordinate = coordinate;
             this.node = node;
             this.id = this.createContentsId();
+            if (this.node) {
+                this.coordinate = this.getCoordinate(this.node);
+            }
         }
         Target.fromData = function (data) {
-            return new Target(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data ? data : null);
+            return new Target(0, data.idName ? data.idName : data.id, data.className ? data.className : '', 0, data ? data : null);
         };
         Target.prototype.createContentsId = function () {
             return ++_created_scroll_target_num;
         };
+        Target.prototype.getCoordinate = function (node) {
+            var rect = node.getBoundingClientRect();
+            return rect.top + window.pageYOffset;
+        };
         Target.prototype.getItemNode = function (node) {
         };
         Target.prototype.scroll = function () {
+            window.scrollTo(0, this.coordinate);
         };
         return Target;
     }());
@@ -1114,22 +1198,28 @@ var SmoothScrollView;
 var SmoothScrollController;
 (function (SmoothScrollController) {
     var Trigger = SmoothScrollModel.Trigger;
-    var Contents = SmoothScrollModel.Target;
+    var Target = SmoothScrollModel.Target;
+    var ScrollView = SmoothScrollView.SmoothScroll;
     var TriggerView = SmoothScrollView.Trigger;
-    var ContentsView = SmoothScrollView.Target;
+    var TargetView = SmoothScrollView.Target;
     var SmoothScroll = (function () {
         function SmoothScroll() {
             var _this = this;
             this.triggerList = [];
             this.targetList = [];
+            ScrollView.fetchElements(function (data) {
+                console.log(data);
+            });
             TriggerView.fetchElements(function (data) {
                 data.trigger.forEach(function (nodeList) {
                     _this.createFromTriggerElement(nodeList);
                 });
                 data.targets.forEach(function (nodeList) {
-                    _this.createFromContentsElement(nodeList);
+                    _this.createFromTargetsElement(nodeList);
                 });
+                console.log(data);
             });
+            console.log(this);
         }
         SmoothScroll.prototype.createFromTriggerElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
@@ -1137,16 +1227,18 @@ var SmoothScrollController;
             }
             this.setTriggerCallBack();
         };
-        SmoothScroll.prototype.createFromContentsElement = function (nodeList) {
+        SmoothScroll.prototype.createFromTargetsElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
-                this.createContentsModel(ContentsView.fromData(nodeList[i]));
+                this.createTargetModel(TargetView.fromData(nodeList[i]));
             }
+        };
+        SmoothScroll.prototype.createFromCoordinate = function (coordinate) {
         };
         SmoothScroll.prototype.createTriggerModel = function (triggerView) {
             this.create(triggerView);
         };
-        SmoothScroll.prototype.createContentsModel = function (contentsView) {
-            this.createContents(contentsView);
+        SmoothScroll.prototype.createTargetModel = function (targetView) {
+            this.createTargets(targetView);
         };
         SmoothScroll.prototype.setTriggerTargetId = function () {
             for (var i = 0; i < this.triggerList.length; i++) {
@@ -1169,8 +1261,8 @@ var SmoothScrollController;
         SmoothScroll.prototype.create = function (data) {
             this.triggerList.push(Trigger.fromData(data));
         };
-        SmoothScroll.prototype.createContents = function (data) {
-            this.targetList.push(Contents.fromData(data));
+        SmoothScroll.prototype.createTargets = function (data) {
+            this.targetList.push(Target.fromData(data));
             this.setTriggerTargetId();
         };
         SmoothScroll.prototype.scroll = function (data) {

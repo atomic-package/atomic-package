@@ -17,7 +17,8 @@ module SmoothScrollModel {
       public className: string,
       public idName: string,
       public target: any,
-      public targetId: number[],
+      public targetId: number,
+      public coordinate: number,
       public view: ToggleView.Trigger
       ) {
     }
@@ -28,10 +29,11 @@ module SmoothScrollModel {
     static fromData(data: any): Trigger {
       return new Trigger(
         data.id ? data.id : 1,
-        data.className ? data.className : '',
-        data.idName ? data.idName : '',
+        data.className ? data.className : null,
+        data.idName ? data.idName : null,
         data.target ? data.target : null,
-        data.targetId ? data.targetId : [],
+        data.targetId ? data.targetId : 0,
+        data.coordinate ? data.coordinate : 0,
         data ? data : null
       );
     }
@@ -43,9 +45,7 @@ module SmoothScrollModel {
       var searchContents: Target[] = APModel.search(targetViewList, this.target);
 
       if(searchContents) {
-        for (var i: number = 0; i < searchContents.length; i++) {
-          this.targetId.push(searchContents[i].id);
-        }
+        this.targetId = searchContents[0].id;
       }
     }
   }
@@ -60,6 +60,7 @@ module SmoothScrollModel {
       public id: number,
       public className: string,
       public idName: string,
+      public coordinate: number,
       public view: any
       ) {
     }
@@ -67,8 +68,9 @@ module SmoothScrollModel {
     static fromData(data: any): Target {
       return new Target(
         data.id ? data.id : 1,
-        data.className ? data.className : '',
-        data.idName ? data.idName : '',
+        data.className ? data.className : null,
+        data.idName ? data.idName : null,
+        data.coordinate ? data.coordinate : 0,
         data ? data : null
       );
     }
@@ -77,10 +79,8 @@ module SmoothScrollModel {
      * Private Function
      **/
     public toggle(trigger: Trigger) {
-      for(var i: number = 0; i < trigger.targetId.length; i++) {
-        if(trigger.targetId[i] == this.id) {
-          this.view.scroll();
-        }
+      if(trigger.targetId == this.id) {
+        this.view.scroll();
       }
     }
   }

@@ -11,6 +11,84 @@ module SmoothScrollView {
       _created_scroll_target_num: number = 0;
 
   /**
+   * SmoothScroll View Class
+   * @public
+   * @param option
+  **/
+  export class SmoothScroll {
+    constructor() {
+
+    }
+
+    static fetchElements(callback): void {
+      var scrollElements = {
+        trigger: [],
+        targets: []
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        var selectors: string[] = [];
+
+        // trigger
+        scrollElements.trigger.push(document.querySelectorAll('[data-ap-scroll]'));
+
+        // target
+        scrollElements.trigger.forEach((nodeList: any) => {
+          nodeList.forEach((node: any) => {
+            if(parseInt(node.dataset.apScroll, 10)) {
+
+//              scrollElements.coordinate.push({
+//                coordinate: parseInt(node.dataset.apScroll, 10),
+//                triggerNode: node
+//              });
+
+            } else if(node.dataset.apScroll) {
+              selectors.push(node.dataset.apScroll);
+            }
+          });
+        });
+
+        selectors = APModel.uniq(selectors);
+
+        for (var i: number = 0; i < selectors.length; i++) {
+          scrollElements.targets.push(document.querySelectorAll(selectors[i]));
+        }
+
+        callback(this.create(scrollElements));
+      });
+    }
+
+    public static create(scrollElements) {
+      var scrollView = {
+        triggerList: [],
+        targetList: []
+      };
+
+      scrollElements.trigger.forEach((nodeList: NodeList) => {
+        scrollView.triggerList.push(this.createFromTriggerElement(nodeList));
+      });
+
+      scrollElements.targets.forEach((nodeList: NodeList) => {
+        scrollView.targetList.push(this.createFromTargetsElement(nodeList));
+      });
+      return scrollView;
+    }
+
+    public static createFromTriggerElement(nodeList: NodeList) {
+      for(var i: number = 0; i < nodeList.length; i++) {
+        return Trigger.fromData(nodeList[i]);
+      }
+    }
+
+    public static createFromTargetsElement(nodeList: NodeList) {
+      for(var i: number = 0; i < nodeList.length; i++) {
+        return Target.fromData(nodeList[i]);
+      }
+    }
+  }
+
+
+  /**
    * SmoothScroll Trigger View Class
    * @public
    * @param option
@@ -23,9 +101,12 @@ module SmoothScrollView {
       public className: string,
       public idName: string,
       public target: any,
+      public coordinate: number,
       public node: any
       ) {
       this.id = this.createTriggerId();
+      this.coordinate = this.getCoordinate(this.node);
+
       this.setEventListener();
     }
 
@@ -38,39 +119,9 @@ module SmoothScrollView {
         data.className ? data.className : null,
         data.id ? data.id : null,
         data.dataset.apScroll ? data.dataset.apScroll : null,
+        0,
         data ? data : null
       );
-    }
-
-    static fetchElements(callback): void {
-      var toggleElements = {
-        trigger: [],
-        targets: []
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        var selectors: string[] = [];
-
-        // trigger
-        toggleElements.trigger.push(document.querySelectorAll('[data-ap-scroll]'));
-
-        // target
-        toggleElements.trigger.forEach((nodeList: any) => {
-          nodeList.forEach((node: any) => {
-            if(node.dataset.apScroll) {
-              selectors.push(node.dataset.apScroll);
-            }
-          });
-        });
-
-        selectors = APModel.uniq(selectors);
-
-        for (var i: number = 0; i < selectors.length; i++) {
-          toggleElements.targets.push(document.querySelectorAll(selectors[i]));
-        }
-
-        callback(toggleElements);
-      });
     }
 
     /**
@@ -78,6 +129,11 @@ module SmoothScrollView {
      **/
     private createTriggerId(): number {
       return ++_created_scroll_trigger_num;
+    }
+
+    private getCoordinate(node) {
+      var rect = node.getBoundingClientRect();
+      return rect.top + window.pageYOffset;
     }
 
     private setEventListener(): void {
@@ -109,20 +165,37 @@ module SmoothScrollView {
   }
 
   /**
-   * SmoothScroll Contents View Class
+   * SmoothScroll Coordinate View Class
    * @public
    * @param option
-   **/
-  export class Target {
+  **/
+  export class Coordinate {
+    constructor(
+      public id: number,
+      public triggerId: number,
+      public coordinate: number
+      ) {
+      //this.id = this.createContentsId();
+    }
+  }
 
+  /**
+   * SmoothScroll Target View Class
+   * @public
+   * @param option
+  **/
+  export class Target {
     constructor(
       public id: number,
       public idName: string,
       public className: string,
+      public coordinate: number,
       public node: any
       ) {
       this.id = this.createContentsId();
-
+      if(this.node) {
+        this.coordinate = this.getCoordinate(this.node);
+      }
     }
 
     /**
@@ -133,6 +206,7 @@ module SmoothScrollView {
         0,
         data.idName ? data.idName : data.id,
         data.className ? data.className : '',
+        0,
         data ? data : null
       );
     }
@@ -144,6 +218,11 @@ module SmoothScrollView {
       return ++_created_scroll_target_num;
     }
 
+    private getCoordinate(node) {
+      var rect = node.getBoundingClientRect();
+      return rect.top + window.pageYOffset;
+    }
+
     /**
      * Public Function
      **/
@@ -152,7 +231,7 @@ module SmoothScrollView {
     }
 
     public scroll() {
-
+      window.scrollTo(0, this.coordinate);
     }
   }
 }

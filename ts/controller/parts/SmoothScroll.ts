@@ -7,54 +7,45 @@
 
 module SmoothScrollController {
   import Trigger      = SmoothScrollModel.Trigger;
-  import Contents     = SmoothScrollModel.Target;
+  import Target     = SmoothScrollModel.Target;
 
+  import ScrollView = SmoothScrollView.SmoothScroll;
   import TriggerView  = SmoothScrollView.Trigger;
-  import ContentsView = SmoothScrollView.Target;
+  import TargetView = SmoothScrollView.Target;
 
   /**
-   * SmoothScroll Class
+   * SmoothScroll Controller Class
    * @public
    * @param option
    **/
   export class SmoothScroll {
     private triggerList: Trigger[] = [];
-    private targetList: Contents[] = [];
+    private targetList: Target[] = [];
 
     constructor() {
-      TriggerView.fetchElements((data) => {
-        data.trigger.forEach((nodeList: NodeList) => {
-          this.createFromTriggerElement(nodeList);
+      ScrollView.fetchElements((data) => {
+        data.triggerList.forEach((triggerView: TriggerView) => {
+          this.createTriggerModel(triggerView);
         });
 
-        data.targets.forEach((nodeList: NodeList) => {
-          this.createFromContentsElement(nodeList);
+        data.targetList.forEach((targetView: TargetView) => {
+          this.createTargetModel(targetView);
         });
+
+        this.setTriggerCallBack();
       });
+      console.log(this);
     }
 
     /**
      * Private Function
      **/
-    private createFromTriggerElement(nodeList: NodeList): void {
-      for(var i: number = 0; i < nodeList.length; i++) {
-        this.createTriggerModel(TriggerView.fromData(nodeList[i]));
-      }
-      this.setTriggerCallBack();
-    }
-
-    private createFromContentsElement(nodeList: NodeList): void {
-      for(var i: number = 0; i < nodeList.length; i++) {
-        this.createContentsModel(ContentsView.fromData(nodeList[i]));
-      }
-    }
-
     private createTriggerModel(triggerView: TriggerView): void {
       this.create(triggerView);
     }
 
-    private createContentsModel(contentsView: ContentsView): void {
-      this.createContents(contentsView);
+    private createTargetModel(targetView: TargetView): void {
+      this.createTargets(targetView);
     }
 
     private setTriggerTargetId() {
@@ -84,8 +75,8 @@ module SmoothScrollController {
       this.triggerList.push(Trigger.fromData(data));
     }
 
-    public createContents(data: any): void {
-      this.targetList.push(Contents.fromData(data));
+    public createTargets(data: any): void {
+      this.targetList.push(Target.fromData(data));
       this.setTriggerTargetId();
     }
 
