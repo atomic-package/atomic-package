@@ -14,6 +14,7 @@ module AtomicPackages {
   import SideMenu     = SideMenuController.SideMenu;
   import SmoothScroll = SmoothScrollController.SmoothScroll;
   import Dropdown     = DropdownController.Dropdown;
+  import ScrollSpy    = ScrollSpyController.ScrollSpy;
 
   /**
    * AtomicPackage Controller Class
@@ -30,6 +31,7 @@ module AtomicPackages {
     public sideMenu: SideMenu;
     public smoothScroll: SmoothScroll;
     public dropdown: Dropdown;
+    public scrollSpy: ScrollSpy;
 
     constructor(
       ) {
@@ -43,6 +45,7 @@ module AtomicPackages {
       this.sideMenu     = new SideMenu();
       this.smoothScroll = new SmoothScroll();
       this.dropdown     = new Dropdown();
+      this.scrollSpy    = new ScrollSpy();
 
     }
   }
