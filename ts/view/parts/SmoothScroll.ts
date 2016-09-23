@@ -16,17 +16,15 @@ module SmoothScrollView {
    * @param option
   **/
   export class SmoothScroll {
-    constructor() {
-    }
+    private triggerList = [];
 
     static fetchElements(callback): void {
       document.addEventListener("DOMContentLoaded", () => {
-        var triggerList = [];
-        triggerList = this.createFromTriggerElement();
+        this.triggerList = this.createFromTriggerElement();
 
         callback({
-          triggerList: triggerList,
-          targetList: this.createTargetView(triggerList)
+          triggerList: this.triggerList,
+          targetList: this.createTargetView(this.triggerList)
         });
       });
     }

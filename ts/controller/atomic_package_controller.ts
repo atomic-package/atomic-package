@@ -13,6 +13,7 @@ module AtomicPackages {
   import Toggle       = ToggleController.Toggle;
   import SideMenu     = SideMenuController.SideMenu;
   import SmoothScroll = SmoothScrollController.SmoothScroll;
+  import Dropdown     = DropdownController.Dropdown;
 
   /**
    * AtomicPackage Controller Class
@@ -28,6 +29,7 @@ module AtomicPackages {
     public toggle: Toggle;
     public sideMenu: SideMenu;
     public smoothScroll: SmoothScroll;
+    public dropdown: Dropdown;
 
     constructor(
       ) {
@@ -40,6 +42,7 @@ module AtomicPackages {
       this.toggle       = new Toggle();
       this.sideMenu     = new SideMenu();
       this.smoothScroll = new SmoothScroll();
+      this.dropdown     = new Dropdown();
 
     }
   }

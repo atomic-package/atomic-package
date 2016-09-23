@@ -6,12 +6,12 @@
 /// <reference path="../../view/parts/SmoothScroll.ts" />
 
 module SmoothScrollController {
-  import Trigger      = SmoothScrollModel.Trigger;
-  import Target     = SmoothScrollModel.Target;
+  import Trigger = SmoothScrollModel.Trigger;
+  import Target  = SmoothScrollModel.Target;
 
-  import ScrollView = SmoothScrollView.SmoothScroll;
-  import TriggerView  = SmoothScrollView.Trigger;
-  import TargetView = SmoothScrollView.Target;
+  import ScrollView  = SmoothScrollView.SmoothScroll;
+  import TriggerView = SmoothScrollView.Trigger;
+  import TargetView  = SmoothScrollView.Target;
 
   /**
    * SmoothScroll Controller Class

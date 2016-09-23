@@ -22,6 +22,7 @@ module AtomicPackages {
     public toggle: any;
     public sideMenu: any;
     public scroll: any;
+    public dropdown: any;
 
     constructor(
       option?: any
@@ -38,6 +39,7 @@ module AtomicPackages {
         this.toggle   = controller.toggle;
         this.sideMenu = controller.sideMenu;
         this.scroll   = controller.smoothScroll;
+        this.dropdown = controller.dropdown;
 
         AtomicPackage._instance = this;
       }

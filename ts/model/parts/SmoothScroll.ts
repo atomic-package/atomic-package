@@ -41,7 +41,7 @@ module SmoothScrollModel {
     /**
      * Public Function
      **/
-    public setTargetId(targetViewList: Target[]) {
+    public setTargetId(targetViewList: Target[]): void  {
       var searchContents: Target[];
 
       if(this.target) {
@@ -57,7 +57,7 @@ module SmoothScrollModel {
   }
 
   /**
-   * Toggle Target Model Class
+   * SmoothScroll Target Model Class
    * @public
    * @param option
    **/
@@ -85,8 +85,8 @@ module SmoothScrollModel {
 
     /**
      * Private Function
-     **/
-    public toggle(trigger: Trigger) {
+    **/
+    public toggle(trigger: Trigger): void {
       if(trigger.targetId == this.id) {
         this.view.scroll();
       }

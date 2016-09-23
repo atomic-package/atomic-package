@@ -927,27 +927,223 @@ var SwitcherController;
 })(SwitcherController || (SwitcherController = {}));
 var DropdownModel;
 (function (DropdownModel) {
-    var Dropdown = (function () {
-        function Dropdown() {
+    var Trigger = (function () {
+        function Trigger(id, className, idName, target, targetId, coordinate, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.target = target;
+            this.targetId = targetId;
+            this.coordinate = coordinate;
+            this.view = view;
         }
-        return Dropdown;
+        Trigger.fromData = function (data) {
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : null, data.idName ? data.idName : null, data.target ? data.target : null, data.targetId ? data.targetId : 0, data.coordinate ? data.coordinate : 0, data ? data : null);
+        };
+        Trigger.prototype.setTargetId = function (targetViewList) {
+            var searchContents;
+        };
+        return Trigger;
     }());
-    DropdownModel.Dropdown = Dropdown;
+    DropdownModel.Trigger = Trigger;
+    var Target = (function () {
+        function Target(id, className, idName, coordinate, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.coordinate = coordinate;
+            this.view = view;
+        }
+        Target.fromData = function (data) {
+            return new Target(data.id ? data.id : 1, data.className ? data.className : null, data.idName ? data.idName : null, data.coordinate ? data.coordinate : 0, data ? data : null);
+        };
+        Target.prototype.toggle = function (trigger) {
+            if (trigger.targetId == this.id) {
+                this.view.scroll();
+            }
+        };
+        return Target;
+    }());
+    DropdownModel.Target = Target;
 })(DropdownModel || (DropdownModel = {}));
 var DropdownView;
 (function (DropdownView) {
+    var APModel = AtomicPackages.Model;
+    var _created_dropdown_trigger_num = 0, _created_dropdown_target_num = 0;
     var Dropdown = (function () {
         function Dropdown() {
+            this.triggerList = [];
         }
+        Dropdown.fetchElements = function (callback) {
+            var _this = this;
+            document.addEventListener("DOMContentLoaded", function () {
+                _this.triggerList = _this.createFromTriggerElement();
+                callback({
+                    triggerList: _this.triggerList,
+                    targetList: _this.createTargetView(_this.triggerList)
+                });
+            });
+        };
+        Dropdown.createFromTriggerElement = function () {
+            var triggerList = [], triggerViewList = [];
+            triggerList.push(document.querySelectorAll('[data-ap-dropdown]'));
+            triggerList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    triggerViewList.push(Trigger.fromData(nodeList[i]));
+                }
+            });
+            return triggerViewList;
+        };
+        Dropdown.createTargetView = function (triggerList) {
+            var selectors = [], targetList = [], targetViewList = [];
+            triggerList.forEach(function (trigger) {
+                if (trigger.target) {
+                    selectors.push(trigger.target);
+                }
+            });
+            selectors = APModel.uniq(selectors);
+            for (var i = 0; i < selectors.length; i++) {
+                targetList.push(document.querySelectorAll(selectors[i]));
+            }
+            var createTargetList = this.createFromTargetsElement(targetList);
+            createTargetList.forEach(function (createTarget) {
+                targetViewList.push(createTarget);
+            });
+            return targetViewList;
+        };
+        Dropdown.createFromTargetsElement = function (targetList) {
+            var targetViewList = [];
+            targetList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
+                }
+            });
+            return targetViewList;
+        };
         return Dropdown;
     }());
     DropdownView.Dropdown = Dropdown;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, target, node) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.target = target;
+            this.node = node;
+            this.toggleCallBackFunction = function () { };
+            this.id = this.createTriggerId();
+            this.setEventListener();
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apDropdown ? data.dataset.apDropdown : null, data ? data : null);
+        };
+        Trigger.prototype.createTriggerId = function () {
+            return ++_created_dropdown_trigger_num;
+        };
+        Trigger.prototype.setEventListener = function () {
+            var _this = this;
+            this.node.addEventListener('click', function (e) {
+                e.preventDefault();
+                _this.toggle(_this.toggleCallBackFunction);
+            }, false);
+        };
+        Trigger.prototype.toggle = function (fn, isFirst) {
+            this.toggleCallBackFunction = fn;
+            if (!isFirst) {
+                fn(this);
+            }
+        };
+        Trigger.prototype.getItemNode = function (node) {
+        };
+        Trigger.prototype.resetSelectedClassName = function () {
+        };
+        Trigger.prototype.createMoveCoordinate = function () {
+            return Target.fromData({
+                triggerId: this.id
+            });
+        };
+        return Trigger;
+    }());
+    DropdownView.Trigger = Trigger;
+    var Target = (function () {
+        function Target(id, triggerId, idName, className, node) {
+            this.id = id;
+            this.triggerId = triggerId;
+            this.idName = idName;
+            this.className = className;
+            this.node = node;
+            this.id = this.createContentsId();
+        }
+        Target.fromData = function (data) {
+            return new Target(0, data.triggerId ? data.triggerId : null, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.node ? data.node : null);
+        };
+        Target.prototype.createContentsId = function () {
+            return ++_created_dropdown_target_num;
+        };
+        Target.prototype.getItemNode = function (node) {
+        };
+        Target.prototype.scroll = function () {
+        };
+        return Target;
+    }());
+    DropdownView.Target = Target;
 })(DropdownView || (DropdownView = {}));
 var DropdownController;
 (function (DropdownController) {
+    var Trigger = DropdownModel.Trigger;
+    var Target = DropdownModel.Target;
+    var DropdownViewClass = DropdownView.Dropdown;
     var Dropdown = (function () {
         function Dropdown() {
+            var _this = this;
+            this.triggerList = [];
+            this.targetList = [];
+            DropdownViewClass.fetchElements(function (data) {
+                data.triggerList.forEach(function (triggerView) {
+                    _this.createTriggerModel(triggerView);
+                });
+                data.targetList.forEach(function (targetView) {
+                    _this.createTargetModel(targetView);
+                });
+                _this.setTriggerCallBack();
+                _this.setTriggerTargetId();
+                console.log(_this);
+            });
         }
+        Dropdown.prototype.createTriggerModel = function (triggerView) {
+            this.create(triggerView);
+        };
+        Dropdown.prototype.createTargetModel = function (targetView) {
+            this.createTargets(targetView);
+        };
+        Dropdown.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        Dropdown.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function (triggerView) {
+                    _this.toggleContents(trigger);
+                }, true);
+            });
+        };
+        Dropdown.prototype.toggleContents = function (trigger) {
+            for (var i = 0; i < this.targetList.length; i++) {
+                this.targetList[i].toggle(trigger);
+            }
+        };
+        Dropdown.prototype.create = function (data) {
+            this.triggerList.push(Trigger.fromData(data));
+        };
+        Dropdown.prototype.createTargets = function (data) {
+            this.targetList.push(Target.fromData(data));
+        };
+        Dropdown.prototype.scroll = function (data) {
+        };
+        Dropdown.prototype.resetSelected = function (data) {
+        };
         return Dropdown;
     }());
     DropdownController.Dropdown = Dropdown;
@@ -1037,15 +1233,15 @@ var SmoothScrollView;
     var _created_scroll_trigger_num = 0, _created_scroll_target_num = 0;
     var SmoothScroll = (function () {
         function SmoothScroll() {
+            this.triggerList = [];
         }
         SmoothScroll.fetchElements = function (callback) {
             var _this = this;
             document.addEventListener("DOMContentLoaded", function () {
-                var triggerList = [];
-                triggerList = _this.createFromTriggerElement();
+                _this.triggerList = _this.createFromTriggerElement();
                 callback({
-                    triggerList: triggerList,
-                    targetList: _this.createTargetView(triggerList)
+                    triggerList: _this.triggerList,
+                    targetList: _this.createTargetView(_this.triggerList)
                 });
             });
         };
@@ -1677,6 +1873,7 @@ var AtomicPackages;
     var Toggle = ToggleController.Toggle;
     var SideMenu = SideMenuController.SideMenu;
     var SmoothScroll = SmoothScrollController.SmoothScroll;
+    var Dropdown = DropdownController.Dropdown;
     var Controller = (function () {
         function Controller() {
             this.model = new AtomicPackages.Model();
@@ -1687,6 +1884,7 @@ var AtomicPackages;
             this.toggle = new Toggle();
             this.sideMenu = new SideMenu();
             this.smoothScroll = new SmoothScroll();
+            this.dropdown = new Dropdown();
         }
         return Controller;
     }());
@@ -1709,6 +1907,7 @@ var AtomicPackages;
                 this.toggle = controller.toggle;
                 this.sideMenu = controller.sideMenu;
                 this.scroll = controller.smoothScroll;
+                this.dropdown = controller.dropdown;
                 AtomicPackage._instance = this;
             }
         }
