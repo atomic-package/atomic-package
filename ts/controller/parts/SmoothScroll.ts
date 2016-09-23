@@ -45,6 +45,9 @@ module SmoothScrollController {
     }
 
     private createTargetModel(targetView: TargetView): void {
+      console.log(targetView);
+
+
       this.createTargets(targetView);
     }
 

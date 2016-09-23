@@ -17,73 +17,69 @@ module SmoothScrollView {
   **/
   export class SmoothScroll {
     constructor() {
-
     }
 
     static fetchElements(callback): void {
-      var scrollElements = {
-        trigger: [],
-        targets: []
-      };
-
       document.addEventListener("DOMContentLoaded", () => {
-        var selectors: string[] = [];
+        var triggerList = [];
+        triggerList = this.createFromTriggerElement();
 
-        // trigger
-        scrollElements.trigger.push(document.querySelectorAll('[data-ap-scroll]'));
-
-        // target
-        scrollElements.trigger.forEach((nodeList: any) => {
-          nodeList.forEach((node: any) => {
-            if(parseInt(node.dataset.apScroll, 10)) {
-
-//              scrollElements.coordinate.push({
-//                coordinate: parseInt(node.dataset.apScroll, 10),
-//                triggerNode: node
-//              });
-
-            } else if(node.dataset.apScroll) {
-              selectors.push(node.dataset.apScroll);
-            }
-          });
+        callback({
+          triggerList: triggerList,
+          targetList: this.createTargetView(triggerList)
         });
+      });
+    }
 
-        selectors = APModel.uniq(selectors);
+    public static createFromTriggerElement() {
+      var triggerList = [],
+          triggerViewList = [];
 
-        for (var i: number = 0; i < selectors.length; i++) {
-          scrollElements.targets.push(document.querySelectorAll(selectors[i]));
+      // とりあえず [data-ap-scroll]のみ取得
+      triggerList.push(document.querySelectorAll('[data-ap-scroll]'));
+
+      triggerList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          triggerViewList.push(Trigger.fromData(nodeList[i]));
         }
-
-        callback(this.create(scrollElements));
       });
+
+      return triggerViewList;
     }
 
-    public static create(scrollElements) {
-      var scrollView = {
-        triggerList: [],
-        targetList: []
-      };
 
-      scrollElements.trigger.forEach((nodeList: NodeList) => {
-        scrollView.triggerList.push(this.createFromTriggerElement(nodeList));
+    public static createTargetView(triggerList) {
+      var selectors: string[] = [],
+          targetList = [],
+          targetViewList = [];
+
+      triggerList.forEach((trigger: any) => {
+        if(parseInt(trigger.target, 10)) {
+
+        } else if(trigger.target) {
+          selectors.push(trigger.target);
+        }
       });
 
-      scrollElements.targets.forEach((nodeList: NodeList) => {
-        scrollView.targetList.push(this.createFromTargetsElement(nodeList));
-      });
-      return scrollView;
-    }
+      selectors = APModel.uniq(selectors);
 
-    public static createFromTriggerElement(nodeList: NodeList) {
-      for(var i: number = 0; i < nodeList.length; i++) {
-        return Trigger.fromData(nodeList[i]);
+      for (var i: number = 0; i < selectors.length; i++) {
+        targetList.push(document.querySelectorAll(selectors[i]));
       }
+
+      return this.createFromTargetsElement(targetList);
     }
 
-    public static createFromTargetsElement(nodeList: NodeList) {
-      for(var i: number = 0; i < nodeList.length; i++) {
-        return Target.fromData(nodeList[i]);
-      }
+    public static createFromTargetsElement(targetList) {
+      var targetViewList = [];
+
+      targetList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          targetViewList.push(Target.fromData(nodeList[i]));
+        }
+      });
+
+      return targetViewList;
     }
   }
 
@@ -204,7 +200,7 @@ module SmoothScrollView {
     static fromData(data: any): Target {
       return new Target(
         0,
-        data.idName ? data.idName : data.id,
+        data.id ? data.id : null,
         data.className ? data.className : '',
         0,
         data ? data : null
