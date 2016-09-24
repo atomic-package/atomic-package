@@ -9,8 +9,8 @@ module ModalWindowController {
   import APModel = AtomicPackages.Model;
   import Model   = ModalWindowModel.ModalWindow;
 
-  import ModalView   = ModalWindowView.ModalWindow;
-  import Target      = ModalWindowModel.Target;
+  import ModalView = ModalWindowView.ModalWindow;
+  import Target    = ModalWindowModel.Target;
 
   /**
    * ModalWindow Controller Class
