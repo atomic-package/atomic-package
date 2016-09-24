@@ -23,7 +23,7 @@ module ModalWindowView {
     **/
     static fetchElements(callback) {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = this.createFromTriggerElement();
+        this.triggerList = APView.createFromTriggerElement(['[data-ap-modal]', '[data-ap-modal-close]'], Trigger);
 
         callback({
           triggerList: this.triggerList,
@@ -31,21 +31,6 @@ module ModalWindowView {
           backDrop: this.createBackDropView()
         });
       });
-    }
-
-    public static createFromTriggerElement() {
-      var triggerList = [],
-          triggerViewList = [];
-      triggerList.push(document.querySelectorAll('[data-ap-modal]'));
-      triggerList.push(document.querySelectorAll('[data-ap-modal-close]'));
-
-      triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          triggerViewList.push(Trigger.fromData(nodeList[i]));
-        }
-      });
-
-      return triggerViewList;
     }
 
     public static createTargetView(triggerList) {

@@ -23,28 +23,13 @@ module ToggleView {
     **/
     static fetchElements(callback) {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = this.createFromTriggerElement();
+        this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
 
         callback({
           triggerList: this.triggerList,
           targetList: this.createTargetView(this.triggerList)
         });
       });
-    }
-
-    public static createFromTriggerElement() {
-      var triggerList = [],
-          triggerViewList = [];
-
-      triggerList.push(document.querySelectorAll('[data-ap-toggle]'));
-
-      triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          triggerViewList.push(Trigger.fromData(nodeList[i]));
-        }
-      });
-
-      return triggerViewList;
     }
 
     public static createTargetView(triggerList) {

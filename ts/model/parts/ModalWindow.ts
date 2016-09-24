@@ -2,6 +2,7 @@
  * Author: Daisuke Takayama
  */
 /// <reference path='../../_all.ts' />
+/// <reference path='../../view/parts/ModalWindow.ts' />
 
 module ModalWindowModel {
   import APModel = AtomicPackages.Model;

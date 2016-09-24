@@ -11,6 +11,70 @@ module SideMenuView {
       _created_toggle_contents_num: number = 0;
 
   /**
+   * SideMenu View Class
+   * @public
+   * @param option
+   **/
+  export class SideMenu {
+    private triggerList = [];
+
+    /**
+     * Static Function
+     **/
+    static fetchElements(callback) {
+      document.addEventListener("DOMContentLoaded", () => {
+        this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
+
+        callback({
+          triggerList: this.triggerList,
+          targetList: this.createTargetView(this.triggerList)
+        });
+      });
+    }
+
+    public static createTargetView(triggerList) {
+      var selectors: string[] = [],
+        targetList = [],
+        targetViewList = [];
+
+      triggerList.forEach((trigger: any) => {
+        if(trigger.target) {
+          selectors.push(trigger.target);
+        }
+      });
+
+      selectors = APModel.uniq(selectors);
+
+      for (var i: number = 0; i < selectors.length; i++) {
+        if(selectors[i] !== "all") {
+          targetList.push(document.querySelectorAll(selectors[i]));
+        }
+      }
+
+      var createTargetList = this.createFromTargetsElement(targetList);
+
+      createTargetList.forEach((createTarget: any) => {
+        targetViewList.push(createTarget);
+      });
+
+      return targetViewList;
+    }
+
+    public static createFromTargetsElement(targetList) {
+      var targetViewList = [];
+
+      targetList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          targetViewList.push(Target.fromData({ node: nodeList[i] }));
+        }
+      });
+
+      return targetViewList;
+    }
+
+  }
+
+  /**
    * SideMenu Trigger View Class
    * @public
    * @param option
@@ -109,11 +173,11 @@ module SideMenuView {
   }
 
   /**
-   * SideMenu Contents View Class
+   * SideMenu Target View Class
    * @public
    * @param option
    **/
-  export class Contents {
+  export class Target {
     private _DEFAULT_TOGGLE_CLASS_NAME = 'active';
 
     constructor(
@@ -133,13 +197,13 @@ module SideMenuView {
     /**
      * Static Function
      **/
-    static fromData(data: any): Contents {
-      return new Contents(
+    static fromData(data: any): Target {
+      return new Target(
         0,
-        data.idName ? data.idName : data.id,
-        data.className ? data.className : '',
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
         data.toggleClassName ? data.toggleClassName : null,
-        data ? data : null
+        data.node ? data.node : null
       );
     }
 

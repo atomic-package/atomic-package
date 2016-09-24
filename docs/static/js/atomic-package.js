@@ -110,9 +110,39 @@ var AtomicPackages;
     }());
     AtomicPackages.Model = Model;
 })(AtomicPackages || (AtomicPackages = {}));
+var AtomicPackages;
+(function (AtomicPackages) {
+    var View = (function () {
+        function View() {
+        }
+        View.getFirstChildLastNode = function (child) {
+            if (child.children.length > 0) {
+                return this.getFirstChildLastNode(child.children[0]);
+            }
+            else {
+                return child;
+            }
+        };
+        View.createFromTriggerElement = function (selectors, trigger) {
+            var triggerList = [], triggerViewList = [];
+            for (var n = 0; n < selectors.length; n++) {
+                triggerList.push(document.querySelectorAll(selectors[n]));
+            }
+            triggerList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    triggerViewList.push(trigger.fromData(nodeList[i]));
+                }
+            });
+            return triggerViewList;
+        };
+        return View;
+    }());
+    AtomicPackages.View = View;
+})(AtomicPackages || (AtomicPackages = {}));
 var ModalWindowView;
 (function (ModalWindowView) {
     var APModel = AtomicPackages.Model;
+    var APView = AtomicPackages.View;
     var _created_modal_window_num = 0;
     var _created_trigger_num = 0;
     var ModalWindow = (function () {
@@ -122,24 +152,13 @@ var ModalWindowView;
         ModalWindow.fetchElements = function (callback) {
             var _this = this;
             document.addEventListener("DOMContentLoaded", function () {
-                _this.triggerList = _this.createFromTriggerElement();
+                _this.triggerList = APView.createFromTriggerElement(['[data-ap-modal]', '[data-ap-modal-close]'], Trigger);
                 callback({
                     triggerList: _this.triggerList,
                     targetList: _this.createTargetView(_this.triggerList),
                     backDrop: _this.createBackDropView()
                 });
             });
-        };
-        ModalWindow.createFromTriggerElement = function () {
-            var triggerList = [], triggerViewList = [];
-            triggerList.push(document.querySelectorAll('[data-ap-modal]'));
-            triggerList.push(document.querySelectorAll('[data-ap-modal-close]'));
-            triggerList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    triggerViewList.push(Trigger.fromData(nodeList[i]));
-                }
-            });
-            return triggerViewList;
         };
         ModalWindow.createTargetView = function (triggerList) {
             var selectors = [], targetList = [], targetViewList = [];
@@ -331,23 +350,6 @@ var ModalWindowView;
     }());
     ModalWindowView.Trigger = Trigger;
 })(ModalWindowView || (ModalWindowView = {}));
-var AtomicPackages;
-(function (AtomicPackages) {
-    var View = (function () {
-        function View() {
-        }
-        View.getFirstChildLastNode = function (child) {
-            if (child.children.length > 0) {
-                return this.getFirstChildLastNode(child.children[0]);
-            }
-            else {
-                return child;
-            }
-        };
-        return View;
-    }());
-    AtomicPackages.View = View;
-})(AtomicPackages || (AtomicPackages = {}));
 var ModalWindowModel;
 (function (ModalWindowModel) {
     var APModel = AtomicPackages.Model;
@@ -1879,6 +1881,7 @@ var ToggleModel;
 var ToggleView;
 (function (ToggleView) {
     var APModel = AtomicPackages.Model;
+    var APView = AtomicPackages.View;
     var _created_toggle_trigger_num = 0, _created_toggle_contents_num = 0;
     var Toggle = (function () {
         function Toggle() {
@@ -1887,22 +1890,12 @@ var ToggleView;
         Toggle.fetchElements = function (callback) {
             var _this = this;
             document.addEventListener("DOMContentLoaded", function () {
-                _this.triggerList = _this.createFromTriggerElement();
+                _this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
                 callback({
                     triggerList: _this.triggerList,
                     targetList: _this.createTargetView(_this.triggerList)
                 });
             });
-        };
-        Toggle.createFromTriggerElement = function () {
-            var triggerList = [], triggerViewList = [];
-            triggerList.push(document.querySelectorAll('[data-ap-toggle]'));
-            triggerList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    triggerViewList.push(Trigger.fromData(nodeList[i]));
-                }
-            });
-            return triggerViewList;
         };
         Toggle.createTargetView = function (triggerList) {
             var selectors = [], targetList = [], targetViewList = [];
@@ -2032,6 +2025,37 @@ var ToggleController;
 var SideMenuModel;
 (function (SideMenuModel) {
     var APModel = AtomicPackages.Model;
+    var SideMenu = (function () {
+        function SideMenu(targetList, triggerList) {
+            this.targetList = targetList;
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
+        }
+        SideMenu.fromData = function (data) {
+            return new SideMenu(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
+        SideMenu.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function () {
+                    trigger.toggle(_this.targetList);
+                }, true);
+            });
+        };
+        SideMenu.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        SideMenu.prototype.toggle = function (data) {
+        };
+        SideMenu.prototype.getElements = function (data) {
+            return APModel.search(this.targetList, data);
+        };
+        return SideMenu;
+    }());
+    SideMenuModel.SideMenu = SideMenu;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, targetId, view) {
             this.id = id;
@@ -2052,34 +2076,89 @@ var SideMenuModel;
                 }
             }
         };
+        Trigger.prototype.toggle = function (targetList) {
+            for (var i = 0; i < this.targetId.length; i++) {
+                for (var n = 0; n < targetList.length; n++) {
+                    if (targetList[i].id === this.targetId[i]) {
+                        targetList[i].toggle();
+                    }
+                }
+            }
+        };
         return Trigger;
     }());
     SideMenuModel.Trigger = Trigger;
-    var Contents = (function () {
-        function Contents(id, className, idName, view) {
+    var Target = (function () {
+        function Target(id, className, idName, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.view = view;
         }
-        Contents.fromData = function (data) {
-            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data ? data : null);
+        Target.fromData = function (data) {
+            return new Target(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data ? data : null);
         };
-        Contents.prototype.toggle = function (trigger) {
+        Target.prototype.toggle = function (trigger) {
             for (var i = 0; i < trigger.targetId.length; i++) {
                 if (trigger.targetId[i] == this.id) {
                     this.view.toggle();
                 }
             }
         };
-        return Contents;
+        return Target;
     }());
-    SideMenuModel.Contents = Contents;
+    SideMenuModel.Target = Target;
 })(SideMenuModel || (SideMenuModel = {}));
 var SideMenuView;
 (function (SideMenuView) {
     var APModel = AtomicPackages.Model;
+    var APView = AtomicPackages.View;
     var _created_toggle_trigger_num = 0, _created_toggle_contents_num = 0;
+    var SideMenu = (function () {
+        function SideMenu() {
+            this.triggerList = [];
+        }
+        SideMenu.fetchElements = function (callback) {
+            var _this = this;
+            document.addEventListener("DOMContentLoaded", function () {
+                _this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
+                callback({
+                    triggerList: _this.triggerList,
+                    targetList: _this.createTargetView(_this.triggerList)
+                });
+            });
+        };
+        SideMenu.createTargetView = function (triggerList) {
+            var selectors = [], targetList = [], targetViewList = [];
+            triggerList.forEach(function (trigger) {
+                if (trigger.target) {
+                    selectors.push(trigger.target);
+                }
+            });
+            selectors = APModel.uniq(selectors);
+            for (var i = 0; i < selectors.length; i++) {
+                if (selectors[i] !== "all") {
+                    targetList.push(document.querySelectorAll(selectors[i]));
+                }
+            }
+            var createTargetList = this.createFromTargetsElement(targetList);
+            createTargetList.forEach(function (createTarget) {
+                targetViewList.push(createTarget);
+            });
+            return targetViewList;
+        };
+        SideMenu.createFromTargetsElement = function (targetList) {
+            var targetViewList = [];
+            targetList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
+                }
+            });
+            return targetViewList;
+        };
+        return SideMenu;
+    }());
+    SideMenuView.SideMenu = SideMenu;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, node) {
             this.id = id;
@@ -2139,8 +2218,8 @@ var SideMenuView;
         return Trigger;
     }());
     SideMenuView.Trigger = Trigger;
-    var Contents = (function () {
-        function Contents(id, idName, className, toggleClassName, node) {
+    var Target = (function () {
+        function Target(id, idName, className, toggleClassName, node) {
             this.id = id;
             this.idName = idName;
             this.className = className;
@@ -2152,13 +2231,13 @@ var SideMenuView;
                 this.toggleClassName = this._DEFAULT_TOGGLE_CLASS_NAME;
             }
         }
-        Contents.fromData = function (data) {
-            return new Contents(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data.toggleClassName ? data.toggleClassName : null, data ? data : null);
+        Target.fromData = function (data) {
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.toggleClassName ? data.toggleClassName : null, data.node ? data.node : null);
         };
-        Contents.prototype.createContentsId = function () {
+        Target.prototype.createContentsId = function () {
             return ++_created_toggle_contents_num;
         };
-        Contents.prototype.toggleClass = function () {
+        Target.prototype.toggleClass = function () {
             if (this.node.classList.contains(this.toggleClassName)) {
                 this.node.classList.remove(this.toggleClassName);
             }
@@ -2166,76 +2245,27 @@ var SideMenuView;
                 this.node.classList.add(this.toggleClassName);
             }
         };
-        Contents.prototype.getItemNode = function (node) {
+        Target.prototype.getItemNode = function (node) {
         };
-        Contents.prototype.toggle = function () {
+        Target.prototype.toggle = function () {
             this.toggleClass();
         };
-        return Contents;
+        return Target;
     }());
-    SideMenuView.Contents = Contents;
+    SideMenuView.Target = Target;
 })(SideMenuView || (SideMenuView = {}));
 var SideMenuController;
 (function (SideMenuController) {
-    var Trigger = SideMenuModel.Trigger;
-    var Contents = SideMenuModel.Contents;
-    var TriggerView = SideMenuView.Trigger;
-    var ContentsView = SideMenuView.Contents;
+    var Model = SideMenuModel.SideMenu;
+    var SideMenuViewClass = SideMenuView.SideMenu;
     var SideMenu = (function () {
         function SideMenu() {
             var _this = this;
-            this.triggerList = [];
-            this.contentsList = [];
-            TriggerView.fetchElements(function (data) {
-                data.trigger.forEach(function (nodeList) {
-                    _this.createFromTriggerElement(nodeList);
-                });
-                data.contents.forEach(function (nodeList) {
-                    _this.createFromContentsElement(nodeList);
-                });
+            SideMenuViewClass.fetchElements(function (data) {
+                _this.model = Model.fromData(data);
             });
         }
-        SideMenu.prototype.createFromTriggerElement = function (nodeList) {
-            for (var i = 0; i < nodeList.length; i++) {
-                this.createTriggerModel(TriggerView.fromData(nodeList[i]));
-            }
-            this.setTriggerCallBack();
-        };
-        SideMenu.prototype.createFromContentsElement = function (nodeList) {
-            for (var i = 0; i < nodeList.length; i++) {
-                this.createContentsModel(ContentsView.fromData(nodeList[i]));
-            }
-        };
-        SideMenu.prototype.createTriggerModel = function (triggerView) {
-            this.create(triggerView);
-        };
-        SideMenu.prototype.createContentsModel = function (contentsView) {
-            this.createContents(contentsView);
-        };
-        SideMenu.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.contentsList);
-            }
-        };
-        SideMenu.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
-                }, true);
-            });
-        };
-        SideMenu.prototype.toggleContents = function (trigger) {
-            for (var i = 0; i < this.contentsList.length; i++) {
-                this.contentsList[i].toggle(trigger);
-            }
-        };
         SideMenu.prototype.create = function (data) {
-            this.triggerList.push(Trigger.fromData(data));
-        };
-        SideMenu.prototype.createContents = function (data) {
-            this.contentsList.push(Contents.fromData(data));
-            this.setTriggerTargetId();
         };
         SideMenu.prototype.select = function (data) {
         };

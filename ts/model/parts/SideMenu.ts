@@ -7,6 +7,58 @@ module SideMenuModel {
   import APModel = AtomicPackages.Model;
 
   /**
+   * SideMenu Model Class
+   * @public
+   * @param option
+  **/
+  export class SideMenu {
+    constructor(
+      public targetList: Target[],
+      public triggerList: Trigger[]
+      ) {
+      this.setTriggerCallBack();
+      this.setTriggerTargetId();
+    }
+
+    /**
+     * Static Function
+     **/
+    public static fromData(data: any): SideMenu {
+      return new SideMenu(
+        data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
+      );
+    }
+
+    /**
+     * Private Function
+     **/
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        trigger.view.toggle(() => {
+          trigger.toggle(this.targetList);
+        }, true);
+      });
+    }
+
+    private setTriggerTargetId() {
+      for(var i: number = 0; i < this.triggerList.length; i++) {
+        this.triggerList[i].setTargetId(this.targetList);
+      }
+    }
+
+    /**
+     * Public Function
+     **/
+    public toggle(data: any): void {
+    }
+
+    public getElements(data: any): Target[] {
+      return APModel.search(this.targetList, data);
+    }
+  }
+
+  /**
    * SideMenu Trigger Model Class
    * @public
    * @param option
@@ -39,8 +91,8 @@ module SideMenuModel {
     /**
      * Public Function
      **/
-    public setTargetId(contentsViewList: Contents[]) {
-      var searchContents: Contents[] = APModel.search(contentsViewList, this.target);
+    public setTargetId(contentsViewList: Target[]) {
+      var searchContents: Target[] = APModel.search(contentsViewList, this.target);
 
       if(searchContents) {
         for (var i: number = 0; i < searchContents.length; i++) {
@@ -48,14 +100,24 @@ module SideMenuModel {
         }
       }
     }
+
+    public toggle(targetList) {
+      for(var i: number = 0; i < this.targetId.length; i++) {
+        for(var n: number = 0; n < targetList.length; n++) {
+          if(targetList[i].id === this.targetId[i]) {
+            targetList[i].toggle();
+          }
+        }
+      }
+    }
   }
 
   /**
-   * SideMenu Contents Model Class
+   * SideMenu Target Model Class
    * @public
    * @param option
-   **/
-  export class Contents {
+  **/
+  export class Target {
     constructor(
       public id: number,
       public className: string,
@@ -64,8 +126,8 @@ module SideMenuModel {
       ) {
     }
 
-    static fromData(data: any): Contents {
-      return new Contents(
+    static fromData(data: any): Target {
+      return new Target(
         data.id ? data.id : 1,
         data.className ? data.className : '',
         data.idName ? data.idName : '',

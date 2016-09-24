@@ -6,7 +6,6 @@
 /// <reference path="../../view/parts/Toggle.ts" />
 
 module ToggleController {
-  import APModel = AtomicPackages.Model;
   import Model   = ToggleModel.Toggle;
   import ToggleViewClass = ToggleView.Toggle;
 

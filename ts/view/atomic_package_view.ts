@@ -2,7 +2,6 @@
  * Author: Daisuke Takayama
  */
 /// <reference path='../_all.ts' />
-/// <reference path='parts/ModalWindow.ts' />
 
 module AtomicPackages {
 
@@ -25,6 +24,24 @@ module AtomicPackages {
         return child;
       }
     }
+
+    public static createFromTriggerElement(selectors, trigger) {
+      var triggerList = [],
+          triggerViewList = [];
+
+      for (var n: number = 0; n < selectors.length; n++) {
+        triggerList.push(document.querySelectorAll(selectors[n]));
+      }
+
+      triggerList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          triggerViewList.push(trigger.fromData(nodeList[i]));
+        }
+      });
+
+      return triggerViewList;
+    }
+
   }
 
 }
