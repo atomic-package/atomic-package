@@ -20,8 +20,6 @@ module ModalWindowController {
   export class ModalWindow {
     private model: Model;
 
-    private targetList: Target[] = [];
-
     constructor(
       ) {
       ModalView.fetchElements((data) => {
@@ -40,39 +38,20 @@ module ModalWindowController {
       this.model.close(data);
     }
 
-
     public create(data: any): void {
-//      if(data !== void 0) {
-//        this.targetList.push(Target.fromData(data));
-//      } else {
-//        //this.targetList.push(Modal.fromData(ModalView.create()));
-//      }
+      this.model.create(data);
     }
 
     public destroy(data: any): void {
-      var searchModals = APModel.search(this.targetList, data),
-          newList: Target[] = [];
-
-//      if(searchModals.length > 0) {
-//        this.targetList.forEach((modal: Target) => {
-//          searchModals.forEach((searchModal: Target) => {
-//            if(modal !== searchModal) {
-//              newList.push(modal);
-//            } else {
-//              modal.destroy();
-//            }
-//          });
-//        });
-//        this.targetList = newList;
-//      }
+      this.model.destroy(data);
     }
 
-    public update() {
-
+    public update(data: any) {
+      this.model.update(data);
     }
 
-    public getElements(data: any): Target[] {
-      return APModel.search(this.targetList, data);
+    public getElements(data: any) {
+      return this.model.getElements(data);
     }
   }
 }

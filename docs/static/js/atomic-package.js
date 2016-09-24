@@ -183,6 +183,9 @@ var ModalWindowView;
         Target.fromData = function (data) {
             return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.node ? data.node : null);
         };
+        Target.create = function () {
+            return this.fromData({});
+        };
         Target.prototype.createModalWindowId = function () {
             return ++_created_modal_window_num;
         };
@@ -334,6 +337,7 @@ var AtomicPackages;
 var ModalWindowModel;
 (function (ModalWindowModel) {
     var APModel = AtomicPackages.Model;
+    var TargetView = ModalWindowView.Target;
     var ModalWindow = (function () {
         function ModalWindow(backDrop, targetList, triggerList) {
             this.backDrop = backDrop;
@@ -425,6 +429,35 @@ var ModalWindowModel;
             if (!this.openCheck()) {
                 this.backDrop.hide();
             }
+        };
+        ModalWindow.prototype.create = function (data) {
+            if (data !== void 0) {
+                this.targetList.push(Target.fromData(data));
+            }
+            else {
+                this.targetList.push(Target.fromData(TargetView.create()));
+            }
+        };
+        ModalWindow.prototype.destroy = function (data) {
+            var searchModals = APModel.search(this.targetList, data), newList = [];
+            if (searchModals.length > 0) {
+                this.targetList.forEach(function (modal) {
+                    searchModals.forEach(function (searchModal) {
+                        if (modal !== searchModal) {
+                            newList.push(modal);
+                        }
+                        else {
+                            modal.destroy();
+                        }
+                    });
+                });
+                this.targetList = newList;
+            }
+        };
+        ModalWindow.prototype.update = function (data) {
+        };
+        ModalWindow.prototype.getElements = function (data) {
+            return APModel.search(this.targetList, data);
         };
         return ModalWindow;
     }());
@@ -527,13 +560,11 @@ var ModalWindowModel;
 })(ModalWindowModel || (ModalWindowModel = {}));
 var ModalWindowController;
 (function (ModalWindowController) {
-    var APModel = AtomicPackages.Model;
     var Model = ModalWindowModel.ModalWindow;
     var ModalView = ModalWindowView.ModalWindow;
     var ModalWindow = (function () {
         function ModalWindow() {
             var _this = this;
-            this.targetList = [];
             ModalView.fetchElements(function (data) {
                 _this.model = Model.fromData(data);
             });
@@ -545,14 +576,16 @@ var ModalWindowController;
             this.model.close(data);
         };
         ModalWindow.prototype.create = function (data) {
+            this.model.create(data);
         };
         ModalWindow.prototype.destroy = function (data) {
-            var searchModals = APModel.search(this.targetList, data), newList = [];
+            this.model.destroy(data);
         };
-        ModalWindow.prototype.update = function () {
+        ModalWindow.prototype.update = function (data) {
+            this.model.update(data);
         };
         ModalWindow.prototype.getElements = function (data) {
-            return APModel.search(this.targetList, data);
+            return this.model.getElements(data);
         };
         return ModalWindow;
     }());

@@ -140,6 +140,40 @@ module ModalWindowModel {
         this.backDrop.hide();
       }
     }
+
+    public create(data: any): void {
+      if(data !== void 0) {
+        this.targetList.push(Target.fromData(data));
+      } else {
+        this.targetList.push(Target.fromData(TargetView.create()));
+      }
+    }
+
+    public destroy(data: any): void {
+      var searchModals = APModel.search(this.targetList, data),
+          newList: Target[] = [];
+
+      if(searchModals.length > 0) {
+        this.targetList.forEach((modal: Target) => {
+          searchModals.forEach((searchModal: Target) => {
+            if(modal !== searchModal) {
+              newList.push(modal);
+            } else {
+              modal.destroy();
+            }
+          });
+        });
+        this.targetList = newList;
+      }
+    }
+
+    public update(data) {
+
+    }
+
+    public getElements(data: any): Target[] {
+      return APModel.search(this.targetList, data);
+    }
   }
 
 

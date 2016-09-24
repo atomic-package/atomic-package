@@ -138,6 +138,10 @@ module ModalWindowView {
       );
     }
 
+    public static create() {
+      return this.fromData({});
+    }
+
     /**
      * Private Function
      **/
