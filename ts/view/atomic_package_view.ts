@@ -4,6 +4,7 @@
 /// <reference path='../_all.ts' />
 
 module AtomicPackages {
+  import APModel = AtomicPackages.Model;
 
   /**
    * AtomicPackage View Class
@@ -25,6 +26,7 @@ module AtomicPackages {
       }
     }
 
+    // trigger
     public static createFromTriggerElement(selectors, trigger) {
       var triggerList = [],
           triggerViewList = [];
@@ -40,6 +42,47 @@ module AtomicPackages {
       });
 
       return triggerViewList;
+    }
+
+    // target
+    public static createTargetView(triggerList, target) {
+      var selectors: string[] = [],
+          targetList = [],
+          targetViewList = [];
+
+      triggerList.forEach((trigger: any) => {
+        if(trigger.target) {
+          selectors.push(trigger.target);
+        }
+      });
+
+      selectors = APModel.uniq(selectors);
+
+      for (var i: number = 0; i < selectors.length; i++) {
+        if(selectors[i] !== "all") {
+          targetList.push(document.querySelectorAll(selectors[i]));
+        }
+      }
+
+      var createTargetList = this.createFromTargetsElement(targetList, target);
+
+      createTargetList.forEach((createTarget: any) => {
+        targetViewList.push(createTarget);
+      });
+
+      return targetViewList;
+    }
+
+    public static createFromTargetsElement(targetList, target) {
+      var targetViewList = [];
+
+      targetList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          targetViewList.push(target.fromData({ node: nodeList[i] }));
+        }
+      });
+
+      return targetViewList;
     }
 
   }

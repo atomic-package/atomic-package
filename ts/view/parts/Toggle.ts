@@ -27,51 +27,10 @@ module ToggleView {
 
         callback({
           triggerList: this.triggerList,
-          targetList: this.createTargetView(this.triggerList)
+          targetList: APView.createTargetView(this.triggerList, Target)
         });
       });
     }
-
-    public static createTargetView(triggerList) {
-      var selectors: string[] = [],
-          targetList = [],
-          targetViewList = [];
-
-      triggerList.forEach((trigger: any) => {
-        if(trigger.target) {
-          selectors.push(trigger.target);
-        }
-      });
-
-      selectors = APModel.uniq(selectors);
-
-      for (var i: number = 0; i < selectors.length; i++) {
-        if(selectors[i] !== "all") {
-          targetList.push(document.querySelectorAll(selectors[i]));
-        }
-      }
-
-      var createTargetList = this.createFromTargetsElement(targetList);
-
-      createTargetList.forEach((createTarget: any) => {
-        targetViewList.push(createTarget);
-      });
-
-      return targetViewList;
-    }
-
-    public static createFromTargetsElement(targetList) {
-      var targetViewList = [];
-
-      targetList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          targetViewList.push(Target.fromData({ node: nodeList[i] }));
-        }
-      });
-
-      return targetViewList;
-    }
-
   }
 
   /**

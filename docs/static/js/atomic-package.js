@@ -112,6 +112,7 @@ var AtomicPackages;
 })(AtomicPackages || (AtomicPackages = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
+    var APModel = AtomicPackages.Model;
     var View = (function () {
         function View() {
         }
@@ -135,13 +136,40 @@ var AtomicPackages;
             });
             return triggerViewList;
         };
+        View.createTargetView = function (triggerList, target) {
+            var selectors = [], targetList = [], targetViewList = [];
+            triggerList.forEach(function (trigger) {
+                if (trigger.target) {
+                    selectors.push(trigger.target);
+                }
+            });
+            selectors = APModel.uniq(selectors);
+            for (var i = 0; i < selectors.length; i++) {
+                if (selectors[i] !== "all") {
+                    targetList.push(document.querySelectorAll(selectors[i]));
+                }
+            }
+            var createTargetList = this.createFromTargetsElement(targetList, target);
+            createTargetList.forEach(function (createTarget) {
+                targetViewList.push(createTarget);
+            });
+            return targetViewList;
+        };
+        View.createFromTargetsElement = function (targetList, target) {
+            var targetViewList = [];
+            targetList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    targetViewList.push(target.fromData({ node: nodeList[i] }));
+                }
+            });
+            return targetViewList;
+        };
         return View;
     }());
     AtomicPackages.View = View;
 })(AtomicPackages || (AtomicPackages = {}));
 var ModalWindowView;
 (function (ModalWindowView) {
-    var APModel = AtomicPackages.Model;
     var APView = AtomicPackages.View;
     var _created_modal_window_num = 0;
     var _created_trigger_num = 0;
@@ -155,38 +183,10 @@ var ModalWindowView;
                 _this.triggerList = APView.createFromTriggerElement(['[data-ap-modal]', '[data-ap-modal-close]'], Trigger);
                 callback({
                     triggerList: _this.triggerList,
-                    targetList: _this.createTargetView(_this.triggerList),
+                    targetList: APView.createTargetView(_this.triggerList, Target),
                     backDrop: _this.createBackDropView()
                 });
             });
-        };
-        ModalWindow.createTargetView = function (triggerList) {
-            var selectors = [], targetList = [], targetViewList = [];
-            triggerList.forEach(function (trigger) {
-                if (trigger.target) {
-                    selectors.push(trigger.target);
-                }
-            });
-            selectors = APModel.uniq(selectors);
-            for (var i = 0; i < selectors.length; i++) {
-                if (selectors[i] !== "all") {
-                    targetList.push(document.querySelectorAll(selectors[i]));
-                }
-            }
-            var createTargetList = this.createFromTargetsElement(targetList);
-            createTargetList.forEach(function (createTarget) {
-                targetViewList.push(createTarget);
-            });
-            return targetViewList;
-        };
-        ModalWindow.createFromTargetsElement = function (targetList) {
-            var targetViewList = [];
-            targetList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
-                }
-            });
-            return targetViewList;
         };
         ModalWindow.createBackDropView = function () {
             return BackDrop.fromData({});
@@ -1880,7 +1880,6 @@ var ToggleModel;
 })(ToggleModel || (ToggleModel = {}));
 var ToggleView;
 (function (ToggleView) {
-    var APModel = AtomicPackages.Model;
     var APView = AtomicPackages.View;
     var _created_toggle_trigger_num = 0, _created_toggle_contents_num = 0;
     var Toggle = (function () {
@@ -1893,37 +1892,9 @@ var ToggleView;
                 _this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
                 callback({
                     triggerList: _this.triggerList,
-                    targetList: _this.createTargetView(_this.triggerList)
+                    targetList: APView.createTargetView(_this.triggerList, Target)
                 });
             });
-        };
-        Toggle.createTargetView = function (triggerList) {
-            var selectors = [], targetList = [], targetViewList = [];
-            triggerList.forEach(function (trigger) {
-                if (trigger.target) {
-                    selectors.push(trigger.target);
-                }
-            });
-            selectors = APModel.uniq(selectors);
-            for (var i = 0; i < selectors.length; i++) {
-                if (selectors[i] !== "all") {
-                    targetList.push(document.querySelectorAll(selectors[i]));
-                }
-            }
-            var createTargetList = this.createFromTargetsElement(targetList);
-            createTargetList.forEach(function (createTarget) {
-                targetViewList.push(createTarget);
-            });
-            return targetViewList;
-        };
-        Toggle.createFromTargetsElement = function (targetList) {
-            var targetViewList = [];
-            targetList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
-                }
-            });
-            return targetViewList;
         };
         return Toggle;
     }());
@@ -2124,37 +2095,9 @@ var SideMenuView;
                 _this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
                 callback({
                     triggerList: _this.triggerList,
-                    targetList: _this.createTargetView(_this.triggerList)
+                    targetList: APView.createTargetView(_this.triggerList, Target)
                 });
             });
-        };
-        SideMenu.createTargetView = function (triggerList) {
-            var selectors = [], targetList = [], targetViewList = [];
-            triggerList.forEach(function (trigger) {
-                if (trigger.target) {
-                    selectors.push(trigger.target);
-                }
-            });
-            selectors = APModel.uniq(selectors);
-            for (var i = 0; i < selectors.length; i++) {
-                if (selectors[i] !== "all") {
-                    targetList.push(document.querySelectorAll(selectors[i]));
-                }
-            }
-            var createTargetList = this.createFromTargetsElement(targetList);
-            createTargetList.forEach(function (createTarget) {
-                targetViewList.push(createTarget);
-            });
-            return targetViewList;
-        };
-        SideMenu.createFromTargetsElement = function (targetList) {
-            var targetViewList = [];
-            targetList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
-                }
-            });
-            return targetViewList;
         };
         return SideMenu;
     }());
