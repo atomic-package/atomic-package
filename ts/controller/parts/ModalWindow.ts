@@ -66,17 +66,6 @@ module ModalWindowController {
       }
     }
 
-//    private createFromElement(nodeList: NodeList): void {
-//      // create BackDrop
-//      if(nodeList.length > 0 && this.backDrop === null) {
-//        this.backDrop = BackDrop.fromData({
-//          view: new BackDropView
-//        });
-//        this.setBackDropCallBack();
-//      }
-//    }
-
-
     private setBackDropCallBack(): void {
       this.backDrop.view.click(() => {
         this.close('all');
@@ -88,7 +77,6 @@ module ModalWindowController {
         trigger.view.open((target) => {
           trigger.open(this.targetList);
           this.backDrop.show();
-
         }, true);
 
         trigger.view.close((target) => {
