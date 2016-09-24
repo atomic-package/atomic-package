@@ -15,8 +15,8 @@ module ModalWindowController {
   import Trigger     = ModalWindowModel.Trigger;
   import TriggerView = ModalWindowView.Trigger;
 
-  //import BackDrop     = ModalWindowModel.ModalWindowBackDrop;
-  import BackDropView = ModalWindowView.ModalWindowBackDrop;
+  import BackDrop     = ModalWindowModel.BackDrop;
+  import BackDropView = ModalWindowView.BackDrop;
 
   /**
    * ModalWindow Controller Class
@@ -25,7 +25,7 @@ module ModalWindowController {
    **/
   export class ModalWindow {
     private targetList: Target[] = [];
-    //private backDrop: BackDrop = null;
+    private backDrop: BackDrop = null;
     private triggerList: Trigger[] = [];
 
     constructor(
@@ -39,8 +39,13 @@ module ModalWindowController {
           this.createTargetModel(targetView);
         });
 
+        this.backDrop = BackDrop.fromData(data.backDrop);
+
         this.setTriggerCallBack();
         this.setTriggerTargetId();
+        this.setBackDropCallBack();
+
+        console.log(this);
       });
     }
 
@@ -62,10 +67,6 @@ module ModalWindowController {
     }
 
 //    private createFromElement(nodeList: NodeList): void {
-//      for(var i: number = 0; i < nodeList.length; i++) {
-//        this.createModalModel(ModalView.fromData(nodeList[i]));
-//      }
-//
 //      // create BackDrop
 //      if(nodeList.length > 0 && this.backDrop === null) {
 //        this.backDrop = BackDrop.fromData({
@@ -76,20 +77,23 @@ module ModalWindowController {
 //    }
 
 
-//    private setBackDropCallBack(): void {
-//      this.backDrop.view.click(() => {
-//        this.close('all');
-//      }, true);
-//    }
+    private setBackDropCallBack(): void {
+      this.backDrop.view.click(() => {
+        this.close('all');
+      }, true);
+    }
 
     private setTriggerCallBack(): void {
       this.triggerList.forEach((trigger: Trigger) => {
         trigger.view.open((target) => {
           trigger.open(this.targetList);
+          this.backDrop.show();
+
         }, true);
 
         trigger.view.close((target) => {
           trigger.close(this.targetList);
+          this.backDrop.hide();
         }, true);
       });
     }
@@ -140,14 +144,14 @@ module ModalWindowController {
       if(searchModals.length > 0) {
         var matchModals: Target[] = this.matchModal(searchModals);
 
-//        matchModals.forEach((modal: Target) => {
-//          modal.close();
-//        });
+        matchModals.forEach((modal: Target) => {
+          modal.close();
+        });
       }
 
-//      if(!this.openCheck()) {
-//        this.backDrop.hide();
-//      }
+      if(!this.openCheck()) {
+        this.backDrop.hide();
+      }
     }
 
     public create(data: any): void {

@@ -130,17 +130,17 @@ module ModalWindowModel {
    * @public
    * @param option
   **/
-  export class ModalWindowBackDrop {
+  export class BackDrop {
     constructor(
       public isShow: boolean,
       public view: any
       ){
     }
 
-    static fromData(data: any): ModalWindowBackDrop {
-      return new ModalWindowBackDrop(
+    static fromData(data: any): BackDrop {
+      return new BackDrop(
         data.isShow ? data.isShow: false,
-        data.view ? data.view: null
+        data ? data : null
       );
     }
 

@@ -111,7 +111,8 @@ var ModalWindowView;
                 _this.triggerList = _this.createFromTriggerElement();
                 callback({
                     triggerList: _this.triggerList,
-                    targetList: _this.createTargetView(_this.triggerList)
+                    targetList: _this.createTargetView(_this.triggerList),
+                    backDrop: _this.createBackDropView()
                 });
             });
         };
@@ -153,6 +154,9 @@ var ModalWindowView;
                 }
             });
             return targetViewList;
+        };
+        ModalWindow.createBackDropView = function () {
+            return BackDrop.fromData({});
         };
         return ModalWindow;
     }());
@@ -202,43 +206,46 @@ var ModalWindowView;
         return Target;
     }());
     ModalWindowView.Target = Target;
-    var ModalWindowBackDrop = (function () {
-        function ModalWindowBackDrop() {
+    var BackDrop = (function () {
+        function BackDrop() {
             this._BACKDROP_ELEMENT_CLASS_NAME = 'modalWindowBackDrop';
             this._SHOW_CLASS_NAME = 'show';
             this.callBackFunction = function () { };
             this.createElement();
             this.setEventListener();
         }
-        ModalWindowBackDrop.prototype.setEventListener = function () {
+        BackDrop.fromData = function (data) {
+            return new BackDrop();
+        };
+        BackDrop.prototype.setEventListener = function () {
             var _this = this;
             this.node.addEventListener('click', function (e) {
                 e.preventDefault();
                 _this.click(_this.callBackFunction);
             }, false);
         };
-        ModalWindowBackDrop.prototype.createElement = function () {
+        BackDrop.prototype.createElement = function () {
             this.node = document.createElement("div");
             this.node.classList.add(this._BACKDROP_ELEMENT_CLASS_NAME);
             document.body.appendChild(this.node);
         };
-        ModalWindowBackDrop.prototype.show = function () {
+        BackDrop.prototype.show = function () {
             this.node.classList.add(this._SHOW_CLASS_NAME);
         };
-        ModalWindowBackDrop.prototype.hide = function () {
+        BackDrop.prototype.hide = function () {
             if (this.node.classList.contains(this._SHOW_CLASS_NAME)) {
                 this.node.classList.remove(this._SHOW_CLASS_NAME);
             }
         };
-        ModalWindowBackDrop.prototype.click = function (fn, isFirst) {
+        BackDrop.prototype.click = function (fn, isFirst) {
             this.callBackFunction = fn;
             if (!isFirst) {
                 fn();
             }
         };
-        return ModalWindowBackDrop;
+        return BackDrop;
     }());
-    ModalWindowView.ModalWindowBackDrop = ModalWindowBackDrop;
+    ModalWindowView.BackDrop = BackDrop;
     var Trigger = (function () {
         function Trigger(id, node, target, isOpener) {
             this.id = id;
@@ -403,25 +410,25 @@ var ModalWindowModel;
         return Target;
     }());
     ModalWindowModel.Target = Target;
-    var ModalWindowBackDrop = (function () {
-        function ModalWindowBackDrop(isShow, view) {
+    var BackDrop = (function () {
+        function BackDrop(isShow, view) {
             this.isShow = isShow;
             this.view = view;
         }
-        ModalWindowBackDrop.fromData = function (data) {
-            return new ModalWindowBackDrop(data.isShow ? data.isShow : false, data.view ? data.view : null);
+        BackDrop.fromData = function (data) {
+            return new BackDrop(data.isShow ? data.isShow : false, data ? data : null);
         };
-        ModalWindowBackDrop.prototype.show = function () {
+        BackDrop.prototype.show = function () {
             this.isShow = true;
             this.view.show();
         };
-        ModalWindowBackDrop.prototype.hide = function () {
+        BackDrop.prototype.hide = function () {
             this.isShow = false;
             this.view.hide();
         };
-        return ModalWindowBackDrop;
+        return BackDrop;
     }());
-    ModalWindowModel.ModalWindowBackDrop = ModalWindowBackDrop;
+    ModalWindowModel.BackDrop = BackDrop;
 })(ModalWindowModel || (ModalWindowModel = {}));
 var ModalWindowController;
 (function (ModalWindowController) {
@@ -429,10 +436,12 @@ var ModalWindowController;
     var ModalView = ModalWindowView.ModalWindow;
     var Target = ModalWindowModel.Target;
     var Trigger = ModalWindowModel.Trigger;
+    var BackDrop = ModalWindowModel.BackDrop;
     var ModalWindow = (function () {
         function ModalWindow() {
             var _this = this;
             this.targetList = [];
+            this.backDrop = null;
             this.triggerList = [];
             ModalView.fetchElements(function (data) {
                 data.triggerList.forEach(function (triggerView) {
@@ -441,8 +450,11 @@ var ModalWindowController;
                 data.targetList.forEach(function (targetView) {
                     _this.createTargetModel(targetView);
                 });
+                _this.backDrop = BackDrop.fromData(data.backDrop);
                 _this.setTriggerCallBack();
                 _this.setTriggerTargetId();
+                _this.setBackDropCallBack();
+                console.log(_this);
             });
         }
         ModalWindow.prototype.createTriggerModel = function (triggerView) {
@@ -456,14 +468,22 @@ var ModalWindowController;
                 this.triggerList[i].setTargetId(this.targetList);
             }
         };
+        ModalWindow.prototype.setBackDropCallBack = function () {
+            var _this = this;
+            this.backDrop.view.click(function () {
+                _this.close('all');
+            }, true);
+        };
         ModalWindow.prototype.setTriggerCallBack = function () {
             var _this = this;
             this.triggerList.forEach(function (trigger) {
                 trigger.view.open(function (target) {
                     trigger.open(_this.targetList);
+                    _this.backDrop.show();
                 }, true);
                 trigger.view.close(function (target) {
                     trigger.close(_this.targetList);
+                    _this.backDrop.hide();
                 }, true);
             });
         };
@@ -497,6 +517,12 @@ var ModalWindowController;
             var searchModals = APModel.search(this.targetList, data);
             if (searchModals.length > 0) {
                 var matchModals = this.matchModal(searchModals);
+                matchModals.forEach(function (modal) {
+                    modal.close();
+                });
+            }
+            if (!this.openCheck()) {
+                this.backDrop.hide();
             }
         };
         ModalWindow.prototype.create = function (data) {

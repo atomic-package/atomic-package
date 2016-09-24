@@ -27,7 +27,8 @@ module ModalWindowView {
 
         callback({
           triggerList: this.triggerList,
-          targetList: this.createTargetView(this.triggerList)
+          targetList: this.createTargetView(this.triggerList),
+          backDrop: this.createBackDropView()
         });
       });
     }
@@ -35,7 +36,6 @@ module ModalWindowView {
     public static createFromTriggerElement() {
       var triggerList = [],
           triggerViewList = [];
-
       triggerList.push(document.querySelectorAll('[data-ap-modal]'));
       triggerList.push(document.querySelectorAll('[data-ap-modal-close]'));
 
@@ -89,6 +89,10 @@ module ModalWindowView {
 
       return targetViewList;
     }
+
+    public static createBackDropView() {
+      return BackDrop.fromData({});
+    }
   }
 
   /**
@@ -123,7 +127,7 @@ module ModalWindowView {
 
     /**
      * Static Function
-     **/
+    **/
     static fromData(data: any): Target {
       return new Target(
         0,
@@ -174,7 +178,7 @@ module ModalWindowView {
    * @public
    * @param option
    **/
-  export class ModalWindowBackDrop {
+  export class BackDrop {
     private _BACKDROP_ELEMENT_CLASS_NAME: string = 'modalWindowBackDrop';
     private _SHOW_CLASS_NAME: string = 'show';
 
@@ -185,6 +189,13 @@ module ModalWindowView {
       ) {
       this.createElement();
       this.setEventListener();
+    }
+
+    /**
+     * Static Function
+    **/
+    static fromData(data: any): BackDrop {
+      return new BackDrop();
     }
 
     /**
