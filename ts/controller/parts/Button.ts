@@ -6,7 +6,10 @@
 /// <reference path="../../view/parts/Button.ts" />
 
 module ButtonController {
+  import Model   = ButtonModel.Button;
+
   import Trigger = ButtonModel.Trigger;
+
 
   import BtnView  = ButtonView.Button;
   import TriggerView = ButtonView.Trigger;

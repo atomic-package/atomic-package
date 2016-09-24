@@ -1,11 +1,14 @@
 /*
  * Author: Daisuke Takayama
  */
+/// <reference path='../common/Classes.ts' />
 /// <reference path='../../_all.ts' />
 
 module ToggleView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
+
+  import CommonTrigger = ViewClasses.Trigger;
 
   var _created_toggle_trigger_num: number  = 0,
       _created_toggle_contents_num: number = 0;

@@ -7,6 +7,17 @@ module SmoothScrollModel {
   import APModel = AtomicPackages.Model;
 
   /**
+   * SmoothScroll Model Class
+   * @public
+   * @param option
+  **/
+  export class SmoothScroll {
+    constructor() {
+
+    }
+  }
+
+  /**
    * SmoothScroll Trigger Model Class
    * @public
    * @param option

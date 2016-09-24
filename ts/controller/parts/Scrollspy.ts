@@ -6,6 +6,8 @@
 /// <reference path="../../view/parts/ScrollSpy.ts" />
 
 module ScrollSpyController {
+  import Model = ScrollSpyModel.ScrollSpy;
+
   import Trigger = ScrollSpyModel.Trigger;
   import Target  = ScrollSpyModel.Target;
 

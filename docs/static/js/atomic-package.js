@@ -604,6 +604,12 @@ var ModalWindowController;
 })(ModalWindowController || (ModalWindowController = {}));
 var ButtonModel;
 (function (ButtonModel) {
+    var Button = (function () {
+        function Button() {
+        }
+        return Button;
+    }());
+    ButtonModel.Button = Button;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, targetId, coordinate, view) {
             this.id = id;
@@ -716,6 +722,12 @@ var ButtonController;
 var SwitcherModel;
 (function (SwitcherModel) {
     var APModel = AtomicPackages.Model;
+    var Switcher = (function () {
+        function Switcher() {
+        }
+        return Switcher;
+    }());
+    SwitcherModel.Switcher = Switcher;
     var Trigger = (function () {
         function Trigger(id, className, idName, items, itemLength, selectedNumber, target, targetId, view) {
             this.id = id;
@@ -1136,6 +1148,12 @@ var SwitcherController;
 })(SwitcherController || (SwitcherController = {}));
 var DropdownModel;
 (function (DropdownModel) {
+    var Dropdown = (function () {
+        function Dropdown() {
+        }
+        return Dropdown;
+    }());
+    DropdownModel.Dropdown = Dropdown;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, targetId, coordinate, view) {
             this.id = id;
@@ -1320,6 +1338,12 @@ var DropdownController;
 })(DropdownController || (DropdownController = {}));
 var ScrollSpyModel;
 (function (ScrollSpyModel) {
+    var ScrollSpy = (function () {
+        function ScrollSpy() {
+        }
+        return ScrollSpy;
+    }());
+    ScrollSpyModel.ScrollSpy = ScrollSpy;
     var Trigger = (function () {
         function Trigger(id, target, targetId, coordinate, view) {
             this.id = id;
@@ -1505,6 +1529,12 @@ var ScrollSpyController;
 var SmoothScrollModel;
 (function (SmoothScrollModel) {
     var APModel = AtomicPackages.Model;
+    var SmoothScroll = (function () {
+        function SmoothScroll() {
+        }
+        return SmoothScroll;
+    }());
+    SmoothScrollModel.SmoothScroll = SmoothScroll;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, targetId, coordinate, view) {
             this.id = id;
@@ -1843,6 +1873,51 @@ var ToggleModel;
     }());
     ToggleModel.Target = Target;
 })(ToggleModel || (ToggleModel = {}));
+var ViewClasses;
+(function (ViewClasses) {
+    var _created_trigger_num = 0;
+    var _created_target_num = 0;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, target, node) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.target = target;
+            this.node = node;
+            this.callBackFunction = function () { };
+            this.id = this.createTriggerId();
+            console.log('規定');
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apToggle ? data.dataset.apToggle : null, data ? data : null);
+        };
+        Trigger.prototype.createTriggerId = function () {
+            return ++_created_trigger_num;
+        };
+        Trigger.prototype.getItemNode = function () {
+            return this.node;
+        };
+        return Trigger;
+    }());
+    ViewClasses.Trigger = Trigger;
+    var Target = (function () {
+        function Target(id, idName, className, node) {
+            this.id = id;
+            this.idName = idName;
+            this.className = className;
+            this.node = node;
+            this.id = this.createContentsId();
+        }
+        Target.fromData = function (data) {
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.node ? data.node : null);
+        };
+        Target.prototype.createContentsId = function () {
+            return ++_created_target_num;
+        };
+        return Target;
+    }());
+    ViewClasses.Target = Target;
+})(ViewClasses || (ViewClasses = {}));
 var ToggleView;
 (function (ToggleView) {
     var APView = AtomicPackages.View;

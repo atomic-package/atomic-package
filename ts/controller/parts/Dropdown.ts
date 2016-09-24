@@ -6,6 +6,8 @@
 /// <reference path="../../view/parts/Dropdown.ts" />
 
 module DropdownController {
+  import Model = DropdownModel.Dropdown;
+
   import Trigger = DropdownModel.Trigger;
   import Target  = DropdownModel.Target;
 

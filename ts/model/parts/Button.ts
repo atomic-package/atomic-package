@@ -7,6 +7,17 @@ module ButtonModel {
   import APModel = AtomicPackages.Model;
 
   /**
+   * Button Model Class
+   * @public
+   * @param option
+  **/
+  export class Button {
+    constructor() {
+
+    }
+  }
+
+  /**
    * Button Trigger Model Class
    * @public
    * @param option

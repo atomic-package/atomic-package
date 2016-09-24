@@ -6,6 +6,8 @@
 /// <reference path="../../view/parts/Switcher.ts" />
 
 module SwitcherController {
+  import Model = SwitcherModel.Switcher;
+
   import Trigger      = SwitcherModel.Trigger;
   import TriggerItem  = SwitcherModel.TriggerItem;
   import Contents     = SwitcherModel.Contents;

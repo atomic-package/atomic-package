@@ -7,6 +7,17 @@ module ScrollSpyModel {
   import APModel = AtomicPackages.Model;
 
   /**
+   * ScrollSpy Model Class
+   * @public
+   * @param option
+  **/
+  export class ScrollSpy {
+    constructor() {
+
+    }
+  }
+
+  /**
    * ScrollSpy Trigger Model Class
    * @public
    * @param option

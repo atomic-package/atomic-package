@@ -7,6 +7,17 @@ module DropdownModel {
   import APModel = AtomicPackages.Model;
 
   /**
+   * Dropdown Model Class
+   * @public
+   * @param option
+  **/
+  export class Dropdown {
+    constructor() {
+
+    }
+  }
+
+  /**
    * Dropdown Trigger Model Class
    * @public
    * @param option

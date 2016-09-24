@@ -7,6 +7,17 @@ module SwitcherModel {
   import APModel = AtomicPackages.Model;
 
   /**
+   * Switcher Model Class
+   * @public
+   * @param option
+   **/
+  export class Switcher {
+    constructor() {
+
+    }
+  }
+
+  /**
    * Switcher Trigger Model Class
    * @public
    * @param option
