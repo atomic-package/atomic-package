@@ -26,7 +26,11 @@ module AtomicPackages {
       }
     }
 
-    // trigger
+    /**
+     * createFromTriggerElement Function
+     * @publicStatic
+     * @param string[], Trigger
+    **/
     public static createFromTriggerElement(selectors, trigger) {
       var triggerList = [],
           triggerViewList = [];
@@ -44,11 +48,26 @@ module AtomicPackages {
       return triggerViewList;
     }
 
-    // target
+    /**
+     * createTargetView Function
+     * @publicStatic
+     * @param TriggerView[], Target
+    **/
     public static createTargetView(triggerList, target) {
-      var selectors: string[] = [],
-          targetList = [],
-          targetViewList = [];
+      var selectors: string[] = this.getTargetSelectors(triggerList),
+          targetNodeList = this.getTargetNodeList(selectors),
+          createTargetList = this.createFromTargetsElement(targetNodeList, target);
+
+      return this.getTargetViewList(createTargetList);
+    }
+
+    /**
+     * getTargetSelectors Function
+     * @publicStatic
+     * @param TriggerView[]
+    **/
+    public static getTargetSelectors(triggerList) {
+      var selectors: string[] = [];
 
       triggerList.forEach((trigger: any) => {
         if(trigger.target) {
@@ -56,23 +75,31 @@ module AtomicPackages {
         }
       });
 
-      selectors = APModel.uniq(selectors);
+      return APModel.uniq(selectors);
+    }
+
+    /**
+     * getTargetNodeList Function
+     * @publicStatic
+     * @param string[]
+    **/
+    public static getTargetNodeList(selectors) {
+      var targetNodeList = [];
 
       for (var i: number = 0; i < selectors.length; i++) {
         if(selectors[i] !== "all") {
-          targetList.push(document.querySelectorAll(selectors[i]));
+          targetNodeList.push(document.querySelectorAll(selectors[i]));
         }
       }
 
-      var createTargetList = this.createFromTargetsElement(targetList, target);
-
-      createTargetList.forEach((createTarget: any) => {
-        targetViewList.push(createTarget);
-      });
-
-      return targetViewList;
+      return targetNodeList;
     }
 
+    /**
+     * createFromTargetsElement Function
+     * @publicStatic
+     * @param nodeList[], Target
+    **/
     public static createFromTargetsElement(targetList, target) {
       var targetViewList = [];
 
@@ -80,6 +107,21 @@ module AtomicPackages {
         for (var i: number = 0; i < nodeList.length; i++) {
           targetViewList.push(target.fromData({ node: nodeList[i] }));
         }
+      });
+
+      return targetViewList;
+    }
+
+    /**
+     * getTargetViewList Function
+     * @publicStatic
+     * @param targetView[]
+    **/
+    public static getTargetViewList(createTargetList) {
+      var targetViewList = [];
+
+      createTargetList.forEach((createTarget) => {
+        targetViewList.push(createTarget);
       });
 
       return targetViewList;

@@ -137,23 +137,26 @@ var AtomicPackages;
             return triggerViewList;
         };
         View.createTargetView = function (triggerList, target) {
-            var selectors = [], targetList = [], targetViewList = [];
+            var selectors = this.getTargetSelectors(triggerList), targetNodeList = this.getTargetNodeList(selectors), createTargetList = this.createFromTargetsElement(targetNodeList, target);
+            return this.getTargetViewList(createTargetList);
+        };
+        View.getTargetSelectors = function (triggerList) {
+            var selectors = [];
             triggerList.forEach(function (trigger) {
                 if (trigger.target) {
                     selectors.push(trigger.target);
                 }
             });
-            selectors = APModel.uniq(selectors);
+            return APModel.uniq(selectors);
+        };
+        View.getTargetNodeList = function (selectors) {
+            var targetNodeList = [];
             for (var i = 0; i < selectors.length; i++) {
                 if (selectors[i] !== "all") {
-                    targetList.push(document.querySelectorAll(selectors[i]));
+                    targetNodeList.push(document.querySelectorAll(selectors[i]));
                 }
             }
-            var createTargetList = this.createFromTargetsElement(targetList, target);
-            createTargetList.forEach(function (createTarget) {
-                targetViewList.push(createTarget);
-            });
-            return targetViewList;
+            return targetNodeList;
         };
         View.createFromTargetsElement = function (targetList, target) {
             var targetViewList = [];
@@ -161,6 +164,13 @@ var AtomicPackages;
                 for (var i = 0; i < nodeList.length; i++) {
                     targetViewList.push(target.fromData({ node: nodeList[i] }));
                 }
+            });
+            return targetViewList;
+        };
+        View.getTargetViewList = function (createTargetList) {
+            var targetViewList = [];
+            createTargetList.forEach(function (createTarget) {
+                targetViewList.push(createTarget);
             });
             return targetViewList;
         };
