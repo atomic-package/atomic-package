@@ -16,18 +16,16 @@ module SideMenuView {
    * @param option
    **/
   export class SideMenu {
-    private triggerList = [];
-
     /**
      * Static Function
      **/
     static fetchElements(callback) {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = APView.createFromTriggerElement(['[data-ap-side]'], Trigger);
+        var triggerList = APView.createFromTriggerElement(['[data-ap-side]'], Trigger);
 
         callback({
-          triggerList: this.triggerList,
-          targetList: APView.createTargetView(this.triggerList, Target)
+          triggerList: triggerList,
+          targetList: APView.createTargetView(triggerList, Target)
         });
       });
     }

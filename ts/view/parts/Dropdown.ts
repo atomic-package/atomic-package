@@ -16,72 +16,15 @@ module DropdownView {
    * @param option
   **/
   export class Dropdown {
-    private triggerList = [];
-
     static fetchElements(callback): void {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = this.createFromTriggerElement();
+        var triggerList = APView.createFromTriggerElement(['[data-ap-dropdown]'], Trigger);
 
         callback({
-          triggerList: this.triggerList,
-          targetList: this.createTargetView(this.triggerList)
+          triggerList: triggerList,
+          targetList: APView.createTargetView(triggerList, Target)
         });
       });
-    }
-
-    public static createFromTriggerElement() {
-      var triggerList = [],
-          triggerViewList = [];
-
-      // とりあえず [data-ap-dropdown]のみ取得
-      triggerList.push(document.querySelectorAll('[data-ap-dropdown]'));
-
-      triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          triggerViewList.push(Trigger.fromData(nodeList[i]));
-        }
-      });
-
-      return triggerViewList;
-    }
-
-
-    public static createTargetView(triggerList) {
-      var selectors: string[] = [],
-          targetList = [],
-          targetViewList = [];
-
-      triggerList.forEach((trigger: any) => {
-        if(trigger.target) {
-          selectors.push(trigger.target);
-        }
-      });
-
-      selectors = APModel.uniq(selectors);
-
-      for (var i: number = 0; i < selectors.length; i++) {
-        targetList.push(document.querySelectorAll(selectors[i]));
-      }
-
-      var createTargetList = this.createFromTargetsElement(targetList);
-
-      createTargetList.forEach((createTarget: any) => {
-        targetViewList.push(createTarget);
-      });
-
-      return targetViewList;
-    }
-
-    public static createFromTargetsElement(targetList) {
-      var targetViewList = [];
-
-      targetList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          targetViewList.push(Target.fromData({ node: nodeList[i] }));
-        }
-      });
-
-      return targetViewList;
     }
   }
 

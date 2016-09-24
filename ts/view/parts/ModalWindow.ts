@@ -16,18 +16,16 @@ module ModalWindowView {
    * @param option
   **/
   export class ModalWindow {
-    private triggerList = [];
-
     /**
      * Static Function
     **/
     static fetchElements(callback) {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = APView.createFromTriggerElement(['[data-ap-modal]', '[data-ap-modal-close]'], Trigger);
+        var triggerList = APView.createFromTriggerElement(['[data-ap-modal]', '[data-ap-modal-close]'], Trigger);
 
         callback({
-          triggerList: this.triggerList,
-          targetList: APView.createTargetView(this.triggerList, Target),
+          triggerList: triggerList,
+          targetList: APView.createTargetView(triggerList, Target),
           backDrop: this.createBackDropView()
         });
       });

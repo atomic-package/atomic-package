@@ -16,18 +16,16 @@ module ToggleView {
    * @param option
    **/
   export class Toggle {
-    private triggerList = [];
-
     /**
      * Static Function
     **/
     static fetchElements(callback) {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
+        var triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
 
         callback({
-          triggerList: this.triggerList,
-          targetList: APView.createTargetView(this.triggerList, Target)
+          triggerList: triggerList,
+          targetList: APView.createTargetView(triggerList, Target)
         });
       });
     }

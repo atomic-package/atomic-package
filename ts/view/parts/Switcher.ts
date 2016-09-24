@@ -14,6 +14,27 @@ module SwitcherView {
       _created_contents_item_num: number = 0;
 
   /**
+   * Switcher View Class
+   * @public
+   * @param option
+   **/
+  export class Switcher {
+    /**
+     * Static Function
+    **/
+//    static fetchElements(callback) {
+//      document.addEventListener("DOMContentLoaded", () => {
+//        var triggerList = APView.createFromTriggerElement(['[data-ap-switcher]'], Trigger);
+//
+//        callback({
+//          triggerList: triggerList,
+//          targetList: APView.createTargetView(triggerList, Target)
+//        });
+//      });
+//    }
+  }
+
+  /**
    * Switcher Trigger View Class
    * @public
    * @param option

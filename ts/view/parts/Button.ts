@@ -15,32 +15,12 @@ module ButtonView {
    * @param option
    **/
   export class Button {
-    private triggerList = [];
-
     static fetchElements(callback): void {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = this.createFromTriggerElement();
-
         callback({
-          triggerList: this.triggerList
+          triggerList: APView.createFromTriggerElement(['[data-ap-btn]'], Trigger)
         });
       });
-    }
-
-    public static createFromTriggerElement() {
-      var triggerList = [],
-          triggerViewList = [];
-
-      // とりあえず [data-ap-btn]のみ取得
-      triggerList.push(document.querySelectorAll('[data-ap-btn]'));
-
-      triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          triggerViewList.push(Trigger.fromData(nodeList[i]));
-        }
-      });
-
-      return triggerViewList;
     }
   }
 
