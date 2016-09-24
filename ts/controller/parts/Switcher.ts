@@ -22,6 +22,8 @@ module SwitcherController {
    * @param option
    **/
   export class Switcher {
+    private model: Model;
+
     private triggerList: Trigger[] = [];
     private contentsList: Contents[] = [];
 

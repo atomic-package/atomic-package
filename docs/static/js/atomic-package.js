@@ -604,9 +604,23 @@ var ModalWindowController;
 })(ModalWindowController || (ModalWindowController = {}));
 var ButtonModel;
 (function (ButtonModel) {
+    var APModel = AtomicPackages.Model;
     var Button = (function () {
-        function Button() {
+        function Button(triggerList) {
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
         }
+        Button.fromData = function (data) {
+            return new Button(data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
+        Button.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function (triggerView) {
+                    _this.toggleContents(trigger);
+                }, true);
+            });
+        };
         return Button;
     }());
     ButtonModel.Button = Button;
@@ -684,32 +698,16 @@ var ButtonView;
 })(ButtonView || (ButtonView = {}));
 var ButtonController;
 (function (ButtonController) {
-    var Trigger = ButtonModel.Trigger;
+    var Model = ButtonModel.Button;
     var BtnView = ButtonView.Button;
     var Button = (function () {
         function Button() {
             var _this = this;
-            this.triggerList = [];
             BtnView.fetchElements(function (data) {
-                data.triggerList.forEach(function (triggerView) {
-                    _this.createTriggerModel(triggerView);
-                });
-                _this.setTriggerCallBack();
+                _this.model = Model.fromData(data);
             });
         }
-        Button.prototype.createTriggerModel = function (triggerView) {
-            this.create(triggerView);
-        };
-        Button.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
-                }, true);
-            });
-        };
         Button.prototype.create = function (data) {
-            this.triggerList.push(Trigger.fromData(data));
         };
         Button.prototype.scroll = function (data) {
         };
@@ -723,8 +721,12 @@ var SwitcherModel;
 (function (SwitcherModel) {
     var APModel = AtomicPackages.Model;
     var Switcher = (function () {
-        function Switcher() {
+        function Switcher(triggerList) {
+            this.triggerList = triggerList;
         }
+        Switcher.fromData = function (data) {
+            return new Switcher(data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
         return Switcher;
     }());
     SwitcherModel.Switcher = Switcher;
@@ -1148,9 +1150,35 @@ var SwitcherController;
 })(SwitcherController || (SwitcherController = {}));
 var DropdownModel;
 (function (DropdownModel) {
+    var APModel = AtomicPackages.Model;
     var Dropdown = (function () {
-        function Dropdown() {
+        function Dropdown(targetList, triggerList) {
+            this.targetList = targetList;
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
         }
+        Dropdown.fromData = function (data) {
+            return new Dropdown(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
+        Dropdown.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        Dropdown.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function (triggerView) {
+                    _this.toggleContents(trigger);
+                }, true);
+            });
+        };
+        Dropdown.prototype.toggleContents = function (trigger) {
+            for (var i = 0; i < this.targetList.length; i++) {
+                this.targetList[i].toggle(trigger);
+            }
+        };
         return Dropdown;
     }());
     DropdownModel.Dropdown = Dropdown;
@@ -1279,54 +1307,18 @@ var DropdownView;
 })(DropdownView || (DropdownView = {}));
 var DropdownController;
 (function (DropdownController) {
-    var Trigger = DropdownModel.Trigger;
-    var Target = DropdownModel.Target;
+    var Model = DropdownModel.Dropdown;
     var DropdownViewClass = DropdownView.Dropdown;
     var Dropdown = (function () {
         function Dropdown() {
             var _this = this;
-            this.triggerList = [];
-            this.targetList = [];
             DropdownViewClass.fetchElements(function (data) {
-                data.triggerList.forEach(function (triggerView) {
-                    _this.createTriggerModel(triggerView);
-                });
-                data.targetList.forEach(function (targetView) {
-                    _this.createTargetModel(targetView);
-                });
-                _this.setTriggerCallBack();
-                _this.setTriggerTargetId();
+                _this.model = Model.fromData(data);
             });
         }
-        Dropdown.prototype.createTriggerModel = function (triggerView) {
-            this.create(triggerView);
-        };
-        Dropdown.prototype.createTargetModel = function (targetView) {
-            this.createTargets(targetView);
-        };
-        Dropdown.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.targetList);
-            }
-        };
-        Dropdown.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
-                }, true);
-            });
-        };
-        Dropdown.prototype.toggleContents = function (trigger) {
-            for (var i = 0; i < this.targetList.length; i++) {
-                this.targetList[i].toggle(trigger);
-            }
-        };
         Dropdown.prototype.create = function (data) {
-            this.triggerList.push(Trigger.fromData(data));
         };
         Dropdown.prototype.createTargets = function (data) {
-            this.targetList.push(Target.fromData(data));
         };
         Dropdown.prototype.scroll = function (data) {
         };
@@ -1338,9 +1330,26 @@ var DropdownController;
 })(DropdownController || (DropdownController = {}));
 var ScrollSpyModel;
 (function (ScrollSpyModel) {
+    var APModel = AtomicPackages.Model;
     var ScrollSpy = (function () {
-        function ScrollSpy() {
+        function ScrollSpy(targetList, trigger) {
+            this.targetList = targetList;
+            this.trigger = trigger;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
         }
+        ScrollSpy.fromData = function (data) {
+            return new ScrollSpy(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.trigger ? Trigger.fromData(data) : null);
+        };
+        ScrollSpy.prototype.setTriggerTargetId = function () {
+        };
+        ScrollSpy.prototype.setTriggerCallBack = function () {
+        };
+        ScrollSpy.prototype.toggleContents = function (trigger) {
+            for (var i = 0; i < this.targetList.length; i++) {
+                this.targetList[i].toggle(trigger);
+            }
+        };
         return ScrollSpy;
     }());
     ScrollSpyModel.ScrollSpy = ScrollSpy;
@@ -1373,9 +1382,6 @@ var ScrollSpyModel;
             return new Target(data.id ? data.id : 1, data.triggerId ? data.triggerId : null, data.className ? data.className : null, data.idName ? data.idName : null, data.coordinate ? data.coordinate : 0, data ? data : null);
         };
         Target.prototype.toggle = function (trigger) {
-            if (trigger.targetId == this.id) {
-                this.view.scroll();
-            }
         };
         return Target;
     }());
@@ -1483,40 +1489,18 @@ var ScrollSpyView;
 })(ScrollSpyView || (ScrollSpyView = {}));
 var ScrollSpyController;
 (function (ScrollSpyController) {
-    var Trigger = ScrollSpyModel.Trigger;
-    var Target = ScrollSpyModel.Target;
+    var Model = ScrollSpyModel.ScrollSpy;
     var SSView = ScrollSpyView.ScrollSpy;
     var ScrollSpy = (function () {
         function ScrollSpy() {
-            this.targetList = [];
+            var _this = this;
             SSView.fetchElements(function (data) {
+                _this.model = Model.fromData(data);
             });
         }
-        ScrollSpy.prototype.createTriggerModel = function (triggerView) {
-            this.create(triggerView);
-        };
-        ScrollSpy.prototype.createTargetModel = function (targetView) {
-            this.createTargets(targetView);
-        };
-        ScrollSpy.prototype.setTriggerTargetId = function () {
-            this.trigger.setTargetId(this.targetList);
-        };
-        ScrollSpy.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.trigger.view.toggle(function (triggerView) {
-                _this.toggleContents(trigger);
-            }, true);
-        };
-        ScrollSpy.prototype.toggleContents = function (trigger) {
-            for (var i = 0; i < this.targetList.length; i++) {
-                this.targetList[i].toggle(trigger);
-            }
-        };
         ScrollSpy.prototype.create = function (data) {
-            this.trigger = Trigger.fromData(data);
         };
         ScrollSpy.prototype.createTargets = function (data) {
-            this.targetList.push(Target.fromData(data));
         };
         ScrollSpy.prototype.scroll = function (data) {
         };
@@ -1530,8 +1514,33 @@ var SmoothScrollModel;
 (function (SmoothScrollModel) {
     var APModel = AtomicPackages.Model;
     var SmoothScroll = (function () {
-        function SmoothScroll() {
+        function SmoothScroll(targetList, triggerList) {
+            this.targetList = targetList;
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
         }
+        SmoothScroll.fromData = function (data) {
+            return new SmoothScroll(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
+        SmoothScroll.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        SmoothScroll.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function (triggerView) {
+                    _this.toggleContents(trigger);
+                }, true);
+            });
+        };
+        SmoothScroll.prototype.toggleContents = function (trigger) {
+            for (var i = 0; i < this.targetList.length; i++) {
+                this.targetList[i].toggle(trigger);
+            }
+        };
         return SmoothScroll;
     }());
     SmoothScrollModel.SmoothScroll = SmoothScroll;
@@ -1733,54 +1742,18 @@ var SmoothScrollView;
 })(SmoothScrollView || (SmoothScrollView = {}));
 var SmoothScrollController;
 (function (SmoothScrollController) {
-    var Trigger = SmoothScrollModel.Trigger;
-    var Target = SmoothScrollModel.Target;
+    var Model = SmoothScrollModel.SmoothScroll;
     var ScrollView = SmoothScrollView.SmoothScroll;
     var SmoothScroll = (function () {
         function SmoothScroll() {
             var _this = this;
-            this.triggerList = [];
-            this.targetList = [];
             ScrollView.fetchElements(function (data) {
-                data.triggerList.forEach(function (triggerView) {
-                    _this.createTriggerModel(triggerView);
-                });
-                data.targetList.forEach(function (targetView) {
-                    _this.createTargetModel(targetView);
-                });
-                _this.setTriggerCallBack();
-                _this.setTriggerTargetId();
+                _this.model = Model.fromData(data);
             });
         }
-        SmoothScroll.prototype.createTriggerModel = function (triggerView) {
-            this.create(triggerView);
-        };
-        SmoothScroll.prototype.createTargetModel = function (targetView) {
-            this.createTargets(targetView);
-        };
-        SmoothScroll.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.targetList);
-            }
-        };
-        SmoothScroll.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
-                }, true);
-            });
-        };
-        SmoothScroll.prototype.toggleContents = function (trigger) {
-            for (var i = 0; i < this.targetList.length; i++) {
-                this.targetList[i].toggle(trigger);
-            }
-        };
         SmoothScroll.prototype.create = function (data) {
-            this.triggerList.push(Trigger.fromData(data));
         };
         SmoothScroll.prototype.createTargets = function (data) {
-            this.targetList.push(Target.fromData(data));
         };
         SmoothScroll.prototype.scroll = function (data) {
         };

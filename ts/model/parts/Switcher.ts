@@ -12,8 +12,22 @@ module SwitcherModel {
    * @param option
    **/
   export class Switcher {
-    constructor() {
+    constructor(
+      //public targetList: Target[],
+      public triggerList: Trigger[]
+      ) {
+//      this.setTriggerCallBack();
+//      this.setTriggerTargetId();
+    }
 
+    /**
+     * Static Function
+     **/
+    public static fromData(data: any): Switcher {
+      return new Switcher(
+        //data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
+      );
     }
   }
 

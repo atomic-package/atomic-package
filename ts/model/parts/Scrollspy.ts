@@ -12,8 +12,38 @@ module ScrollSpyModel {
    * @param option
   **/
   export class ScrollSpy {
-    constructor() {
+    constructor(
+      public targetList: Target[],
+      public trigger: Trigger
+      ) {
+      this.setTriggerCallBack();
+      this.setTriggerTargetId();
+    }
 
+    /**
+     * Static Function
+     **/
+    public static fromData(data: any): ScrollSpy {
+      return new ScrollSpy(
+        data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.trigger ? Trigger.fromData(data) : null
+      );
+    }
+
+    private setTriggerTargetId() {
+      //this.trigger.setTargetId(this.targetList);
+    }
+
+    private setTriggerCallBack(): void {
+//      this.trigger.view.toggle((triggerView) => {
+//        this.toggleContents(trigger);
+//      }, true);
+    }
+
+    private toggleContents(trigger: Trigger): void {
+      for(var i: number = 0; i < this.targetList.length; i++) {
+        this.targetList[i].toggle(trigger);
+      }
     }
   }
 
@@ -94,9 +124,9 @@ module ScrollSpyModel {
      * Private Function
      **/
     public toggle(trigger: Trigger): void {
-      if(trigger.targetId == this.id) {
-        this.view.scroll();
-      }
+//      if(trigger.targetId == this.id) {
+//        this.view.scroll();
+//      }
     }
   }
 }

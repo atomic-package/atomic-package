@@ -7,13 +7,7 @@
 
 module ScrollSpyController {
   import Model = ScrollSpyModel.ScrollSpy;
-
-  import Trigger = ScrollSpyModel.Trigger;
-  import Target  = ScrollSpyModel.Target;
-
   import SSView      = ScrollSpyView.ScrollSpy;
-  import TriggerView = ScrollSpyView.Trigger;
-  import TargetView  = ScrollSpyView.Target;
 
   /**
    * ScrollSpy Controller Class
@@ -21,58 +15,23 @@ module ScrollSpyController {
    * @param option
    **/
   export class ScrollSpy {
-    private trigger: Trigger;
-    private targetList: Target[] = [];
+    private model: Model;
 
     constructor() {
       SSView.fetchElements((data) => {
-//        this.createTriggerModel(data.trigger);
-//
-//        data.targetList.forEach((targetView: TargetView) => {
-//          this.createTargetModel(targetView);
-//        });
-//
-//        this.setTriggerCallBack();
-//        this.setTriggerTargetId();
+        this.model = Model.fromData(data);
       });
-    }
-
-    /**
-     * Private Function
-     **/
-    private createTriggerModel(triggerView: TriggerView): void {
-      this.create(triggerView);
-    }
-
-    private createTargetModel(targetView: TargetView): void {
-      this.createTargets(targetView);
-    }
-
-    private setTriggerTargetId() {
-      this.trigger.setTargetId(this.targetList);
-    }
-
-    private setTriggerCallBack(): void {
-      this.trigger.view.toggle((triggerView: TriggerView) => {
-        this.toggleContents(trigger);
-      }, true);
-    }
-
-    private toggleContents(trigger: Trigger): void {
-      for(var i: number = 0; i < this.targetList.length; i++) {
-        this.targetList[i].toggle(trigger);
-      }
     }
 
     /**
      * Public Function
      **/
     public create(data: any): void {
-      this.trigger = Trigger.fromData(data);
+      //this.trigger = Trigger.fromData(data);
     }
 
     public createTargets(data: any): void {
-      this.targetList.push(Target.fromData(data));
+      //this.targetList.push(Target.fromData(data));
     }
 
     public scroll(data: any): void {

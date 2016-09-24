@@ -12,8 +12,45 @@ module DropdownModel {
    * @param option
   **/
   export class Dropdown {
-    constructor() {
+    constructor(
+    public targetList: Target[],
+    public triggerList: Trigger[]
+    ) {
+      this.setTriggerCallBack();
+      this.setTriggerTargetId();
+  }
 
+    /**
+     * Static Function
+     **/
+    public static fromData(data: any): Dropdown {
+      return new Dropdown(
+        data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
+      );
+    }
+
+    /**
+     * Private Function
+     **/
+    private setTriggerTargetId() {
+      for(var i: number = 0; i < this.triggerList.length; i++) {
+        this.triggerList[i].setTargetId(this.targetList);
+      }
+    }
+
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        trigger.view.toggle((triggerView) => {
+          this.toggleContents(trigger);
+        }, true);
+      });
+    }
+
+    private toggleContents(trigger: Trigger): void {
+      for(var i: number = 0; i < this.targetList.length; i++) {
+        this.targetList[i].toggle(trigger);
+      }
     }
   }
 

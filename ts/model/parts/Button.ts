@@ -12,8 +12,31 @@ module ButtonModel {
    * @param option
   **/
   export class Button {
-    constructor() {
+    constructor(
+      public triggerList: Trigger[]
+      ) {
+      this.setTriggerCallBack();
+      //this.setTriggerTargetId();
+    }
 
+    /**
+     * Static Function
+     **/
+    public static fromData(data: any): Button {
+      return new Button(
+        data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
+      );
+    }
+
+    /**
+     * Private Function
+     **/
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        trigger.view.toggle((triggerView) => {
+          this.toggleContents(trigger);
+        }, true);
+      });
     }
   }
 
