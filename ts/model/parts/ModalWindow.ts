@@ -6,8 +6,145 @@
 module ModalWindowModel {
   import APModel = AtomicPackages.Model;
 
+  import TargetView  = ModalWindowView.Target;
+  import TriggerView = ModalWindowView.Trigger;
+
   /**
-   * ModalWindow Class
+   * ModalWindow Model Class
+   * @public
+   * @param option
+  **/
+  export class ModalWindow {
+    constructor(
+      public backDrop: BackDrop,
+      public targetList: Target[],
+      public triggerList: Trigger[]
+      ) {
+      this.setTriggerCallBack();
+      this.setTriggerTargetId();
+      this.setBackDropCallBack();
+    }
+
+    /**
+     * Static Function
+    **/
+    public static fromData(data: any): ModalWindow {
+      return new ModalWindow(
+        data.backDrop ? BackDrop.fromData(data.backDrop) : null,
+        data.targetList ? this.createTargetModel(data.targetList) : [],
+        data.triggerList ? this.createTriggerModel(data.triggerList) : []
+      );
+    }
+
+    public static createTriggerModel(triggerView: TriggerView[]) {
+      var triggerList = [];
+
+      triggerView.forEach((trigger: TriggerView) => {
+        triggerList.push(Trigger.fromData(trigger));
+      });
+
+      return triggerList;
+    }
+
+    public static  createTargetModel(targetView: TargetView[]) {
+      var targetList = [];
+
+      targetView.forEach((target: TargetView) => {
+        targetList.push(Target.fromData(target));
+      });
+
+      return targetList;
+    }
+
+    /**
+     * Private Function
+    **/
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        trigger.view.open((target) => {
+          trigger.open(this.targetList);
+          this.backDrop.show();
+        }, true);
+
+        trigger.view.close((target) => {
+          trigger.close(this.targetList);
+          this.backDrop.hide();
+        }, true);
+      });
+    }
+
+    private setTriggerTargetId() {
+      for(var i: number = 0; i < this.triggerList.length; i++) {
+        this.triggerList[i].setTargetId(this.targetList);
+      }
+    }
+
+    private setBackDropCallBack(): void {
+      this.backDrop.view.click(() => {
+        this.close('all');
+      }, true);
+    }
+
+    private matchModal(searchModals: Target[]): Target[] {
+      var matchModals: Target[] = [];
+
+      this.targetList.forEach((modal: Target) => {
+        searchModals.forEach((searchModal: Target) => {
+          if(modal == searchModal) {
+            matchModals.push(modal);
+          }
+        });
+      });
+      return matchModals;
+    }
+
+    private openCheck(): boolean {
+      var isOpen = false;
+
+      this.targetList.forEach((modal: Target) => {
+        if(modal.isOpen) {
+          isOpen = true;
+        }
+      });
+      return isOpen;
+    }
+
+    /**
+     * Public Function
+    **/
+    public open(data: any): void {
+      var searchModals: Target[] = APModel.search(this.targetList, data);
+
+      if(searchModals.length > 0) {
+        var matchModals: Target[] = this.matchModal(searchModals);
+
+        matchModals.forEach((modal: Target) => {
+          modal.open();
+        });
+        this.backDrop.show();
+      }
+    }
+
+    public close(data: any): void {
+      var searchModals: Target[] = APModel.search(this.targetList, data);
+
+      if(searchModals.length > 0) {
+        var matchModals: Target[] = this.matchModal(searchModals);
+
+        matchModals.forEach((modal: Target) => {
+          modal.close();
+        });
+      }
+
+      if(!this.openCheck()) {
+        this.backDrop.hide();
+      }
+    }
+  }
+
+
+  /**
+   * ModalWindow Trigger Class
    * @public
    * @param option
   **/
@@ -126,7 +263,7 @@ module ModalWindowModel {
   }
 
   /**
-   * ModalWindowBackDrop Class
+   * ModalWindow BackDrop Class
    * @public
    * @param option
   **/

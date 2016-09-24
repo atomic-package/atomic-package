@@ -334,6 +334,101 @@ var AtomicPackages;
 var ModalWindowModel;
 (function (ModalWindowModel) {
     var APModel = AtomicPackages.Model;
+    var ModalWindow = (function () {
+        function ModalWindow(backDrop, targetList, triggerList) {
+            this.backDrop = backDrop;
+            this.targetList = targetList;
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
+            this.setBackDropCallBack();
+        }
+        ModalWindow.fromData = function (data) {
+            return new ModalWindow(data.backDrop ? BackDrop.fromData(data.backDrop) : null, data.targetList ? this.createTargetModel(data.targetList) : [], data.triggerList ? this.createTriggerModel(data.triggerList) : []);
+        };
+        ModalWindow.createTriggerModel = function (triggerView) {
+            var triggerList = [];
+            triggerView.forEach(function (trigger) {
+                triggerList.push(Trigger.fromData(trigger));
+            });
+            return triggerList;
+        };
+        ModalWindow.createTargetModel = function (targetView) {
+            var targetList = [];
+            targetView.forEach(function (target) {
+                targetList.push(Target.fromData(target));
+            });
+            return targetList;
+        };
+        ModalWindow.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.open(function (target) {
+                    trigger.open(_this.targetList);
+                    _this.backDrop.show();
+                }, true);
+                trigger.view.close(function (target) {
+                    trigger.close(_this.targetList);
+                    _this.backDrop.hide();
+                }, true);
+            });
+        };
+        ModalWindow.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        ModalWindow.prototype.setBackDropCallBack = function () {
+            var _this = this;
+            this.backDrop.view.click(function () {
+                _this.close('all');
+            }, true);
+        };
+        ModalWindow.prototype.matchModal = function (searchModals) {
+            var matchModals = [];
+            this.targetList.forEach(function (modal) {
+                searchModals.forEach(function (searchModal) {
+                    if (modal == searchModal) {
+                        matchModals.push(modal);
+                    }
+                });
+            });
+            return matchModals;
+        };
+        ModalWindow.prototype.openCheck = function () {
+            var isOpen = false;
+            this.targetList.forEach(function (modal) {
+                if (modal.isOpen) {
+                    isOpen = true;
+                }
+            });
+            return isOpen;
+        };
+        ModalWindow.prototype.open = function (data) {
+            var searchModals = APModel.search(this.targetList, data);
+            if (searchModals.length > 0) {
+                var matchModals = this.matchModal(searchModals);
+                matchModals.forEach(function (modal) {
+                    modal.open();
+                });
+                this.backDrop.show();
+            }
+        };
+        ModalWindow.prototype.close = function (data) {
+            var searchModals = APModel.search(this.targetList, data);
+            if (searchModals.length > 0) {
+                var matchModals = this.matchModal(searchModals);
+                matchModals.forEach(function (modal) {
+                    modal.close();
+                });
+            }
+            if (!this.openCheck()) {
+                this.backDrop.hide();
+            }
+        };
+        return ModalWindow;
+    }());
+    ModalWindowModel.ModalWindow = ModalWindow;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, targetId, isOpener, view) {
             this.id = id;
@@ -433,97 +528,21 @@ var ModalWindowModel;
 var ModalWindowController;
 (function (ModalWindowController) {
     var APModel = AtomicPackages.Model;
+    var Model = ModalWindowModel.ModalWindow;
     var ModalView = ModalWindowView.ModalWindow;
-    var Target = ModalWindowModel.Target;
-    var Trigger = ModalWindowModel.Trigger;
-    var BackDrop = ModalWindowModel.BackDrop;
     var ModalWindow = (function () {
         function ModalWindow() {
             var _this = this;
             this.targetList = [];
-            this.backDrop = null;
-            this.triggerList = [];
             ModalView.fetchElements(function (data) {
-                data.triggerList.forEach(function (triggerView) {
-                    _this.createTriggerModel(triggerView);
-                });
-                data.targetList.forEach(function (targetView) {
-                    _this.createTargetModel(targetView);
-                });
-                _this.backDrop = BackDrop.fromData(data.backDrop);
-                _this.setTriggerCallBack();
-                _this.setTriggerTargetId();
-                _this.setBackDropCallBack();
-                console.log(_this);
+                _this.model = Model.fromData(data);
             });
         }
-        ModalWindow.prototype.createTriggerModel = function (triggerView) {
-            this.triggerList.push(Trigger.fromData(triggerView));
-        };
-        ModalWindow.prototype.createTargetModel = function (targetView) {
-            this.targetList.push(Target.fromData(targetView));
-        };
-        ModalWindow.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.targetList);
-            }
-        };
-        ModalWindow.prototype.setBackDropCallBack = function () {
-            var _this = this;
-            this.backDrop.view.click(function () {
-                _this.close('all');
-            }, true);
-        };
-        ModalWindow.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.open(function (target) {
-                    trigger.open(_this.targetList);
-                    _this.backDrop.show();
-                }, true);
-                trigger.view.close(function (target) {
-                    trigger.close(_this.targetList);
-                    _this.backDrop.hide();
-                }, true);
-            });
-        };
-        ModalWindow.prototype.matchModal = function (searchModals) {
-            var matchModals = [];
-            this.targetList.forEach(function (modal) {
-                searchModals.forEach(function (searchModal) {
-                    if (modal == searchModal) {
-                        matchModals.push(modal);
-                    }
-                });
-            });
-            return matchModals;
-        };
-        ModalWindow.prototype.openCheck = function () {
-            var isOpen = false;
-            this.targetList.forEach(function (modal) {
-                if (modal.isOpen) {
-                    isOpen = true;
-                }
-            });
-            return isOpen;
-        };
         ModalWindow.prototype.open = function (data) {
-            var searchModals = APModel.search(this.targetList, data);
-            if (searchModals.length > 0) {
-                var matchModals = this.matchModal(searchModals);
-            }
+            this.model.open(data);
         };
         ModalWindow.prototype.close = function (data) {
-            var searchModals = APModel.search(this.targetList, data);
-            if (searchModals.length > 0) {
-                var matchModals = this.matchModal(searchModals);
-                matchModals.forEach(function (modal) {
-                    modal.close();
-                });
-            }
-            if (!this.openCheck()) {
-                this.backDrop.hide();
-            }
+            this.model.close(data);
         };
         ModalWindow.prototype.create = function (data) {
         };
