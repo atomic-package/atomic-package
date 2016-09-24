@@ -31,29 +31,9 @@ module ModalWindowModel {
     public static fromData(data: any): ModalWindow {
       return new ModalWindow(
         data.backDrop ? BackDrop.fromData(data.backDrop) : null,
-        data.targetList ? this.createTargetModel(data.targetList) : [],
-        data.triggerList ? this.createTriggerModel(data.triggerList) : []
+        data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
       );
-    }
-
-    public static createTriggerModel(triggerView: TriggerView[]) {
-      var triggerList = [];
-
-      triggerView.forEach((trigger: TriggerView) => {
-        triggerList.push(Trigger.fromData(trigger));
-      });
-
-      return triggerList;
-    }
-
-    public static  createTargetModel(targetView: TargetView[]) {
-      var targetList = [];
-
-      targetView.forEach((target: TargetView) => {
-        targetList.push(Target.fromData(target));
-      });
-
-      return targetList;
     }
 
     /**

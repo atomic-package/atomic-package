@@ -6,6 +6,62 @@
 module ToggleModel {
   import APModel = AtomicPackages.Model;
 
+  import TargetView  = ToggleView.Target;
+  import TriggerView = ToggleView.Trigger;
+
+  /**
+   * Toggle Model Class
+   * @public
+   * @param option
+  **/
+  export class Toggle {
+    constructor(
+      public targetList: Target[],
+      public triggerList: Trigger[]
+    ) {
+      this.setTriggerCallBack();
+      this.setTriggerTargetId();
+    }
+
+    /**
+     * Static Function
+    **/
+    public static fromData(data: any): Toggle {
+      return new Toggle(
+        data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
+      );
+    }
+
+    /**
+     * Private Function
+    **/
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        trigger.view.toggle(() => {
+          trigger.toggle(this.targetList);
+        }, true);
+      });
+    }
+
+    private setTriggerTargetId() {
+      for(var i: number = 0; i < this.triggerList.length; i++) {
+        this.triggerList[i].setTargetId(this.targetList);
+      }
+    }
+
+    /**
+     * Public Function
+     **/
+    public toggle(data: any): void {
+    }
+
+    public getElements(data: any): Target[] {
+      return APModel.search(this.targetList, data);
+    }
+  }
+
+
   /**
    * Toggle Trigger Model Class
    * @public
@@ -39,8 +95,8 @@ module ToggleModel {
     /**
      * Public Function
      **/
-    public setTargetId(contentsViewList: Contents[]) {
-      var searchContents: Contents[] = APModel.search(contentsViewList, this.target);
+    public setTargetId(contentsViewList: Target[]) {
+      var searchContents: Target[] = APModel.search(contentsViewList, this.target);
 
       if(searchContents) {
         for (var i: number = 0; i < searchContents.length; i++) {
@@ -48,14 +104,24 @@ module ToggleModel {
         }
       }
     }
+
+    public toggle(targetList) {
+      for(var i: number = 0; i < this.targetId.length; i++) {
+        for(var n: number = 0; n < targetList.length; n++) {
+          if(targetList[i].id === this.targetId[i]) {
+            targetList[i].toggle();
+          }
+        }
+      }
+    }
   }
 
   /**
-   * Toggle Contents Model Class
+   * Toggle Target Model Class
    * @public
    * @param option
    **/
-  export class Contents {
+  export class Target {
     constructor(
       public id: number,
       public className: string,
@@ -64,11 +130,11 @@ module ToggleModel {
       ) {
     }
 
-    static fromData(data: any): Contents {
-      return new Contents(
+    static fromData(data: any): Target {
+      return new Target(
         data.id ? data.id : 1,
-        data.className ? data.className : '',
-        data.idName ? data.idName : '',
+        data.className ? data.className : null,
+        data.idName ? data.idName : null,
         data ? data : null
       );
     }
@@ -76,12 +142,8 @@ module ToggleModel {
     /**
      * Private Function
      **/
-    public toggle(trigger: Trigger) {
-      for(var i: number = 0; i < trigger.targetId.length; i++) {
-        if(trigger.targetId[i] == this.id) {
-          this.view.toggle();
-        }
-      }
+    public toggle() {
+      this.view.toggle();
     }
   }
 

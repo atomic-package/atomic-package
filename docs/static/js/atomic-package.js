@@ -92,6 +92,20 @@ var AtomicPackages;
         Model.flattenArray = function (array) {
             return [].concat.apply(array);
         };
+        Model.createTriggerModel = function (triggerView, triggerClass) {
+            var triggerList = [];
+            triggerView.forEach(function (trigger) {
+                triggerList.push(triggerClass.fromData(trigger));
+            });
+            return triggerList;
+        };
+        Model.createTargetModel = function (targetView, targetClass) {
+            var targetList = [];
+            targetView.forEach(function (target) {
+                targetList.push(targetClass.fromData(target));
+            });
+            return targetList;
+        };
         return Model;
     }());
     AtomicPackages.Model = Model;
@@ -348,21 +362,7 @@ var ModalWindowModel;
             this.setBackDropCallBack();
         }
         ModalWindow.fromData = function (data) {
-            return new ModalWindow(data.backDrop ? BackDrop.fromData(data.backDrop) : null, data.targetList ? this.createTargetModel(data.targetList) : [], data.triggerList ? this.createTriggerModel(data.triggerList) : []);
-        };
-        ModalWindow.createTriggerModel = function (triggerView) {
-            var triggerList = [];
-            triggerView.forEach(function (trigger) {
-                triggerList.push(Trigger.fromData(trigger));
-            });
-            return triggerList;
-        };
-        ModalWindow.createTargetModel = function (targetView) {
-            var targetList = [];
-            targetView.forEach(function (target) {
-                targetList.push(Target.fromData(target));
-            });
-            return targetList;
+            return new ModalWindow(data.backDrop ? BackDrop.fromData(data.backDrop) : null, data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
         };
         ModalWindow.prototype.setTriggerCallBack = function () {
             var _this = this;
@@ -1796,6 +1796,37 @@ var SmoothScrollController;
 var ToggleModel;
 (function (ToggleModel) {
     var APModel = AtomicPackages.Model;
+    var Toggle = (function () {
+        function Toggle(targetList, triggerList) {
+            this.targetList = targetList;
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
+        }
+        Toggle.fromData = function (data) {
+            return new Toggle(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
+        Toggle.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                trigger.view.toggle(function () {
+                    trigger.toggle(_this.targetList);
+                }, true);
+            });
+        };
+        Toggle.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        Toggle.prototype.toggle = function (data) {
+        };
+        Toggle.prototype.getElements = function (data) {
+            return APModel.search(this.targetList, data);
+        };
+        return Toggle;
+    }());
+    ToggleModel.Toggle = Toggle;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, targetId, view) {
             this.id = id;
@@ -1816,34 +1847,94 @@ var ToggleModel;
                 }
             }
         };
+        Trigger.prototype.toggle = function (targetList) {
+            for (var i = 0; i < this.targetId.length; i++) {
+                for (var n = 0; n < targetList.length; n++) {
+                    if (targetList[i].id === this.targetId[i]) {
+                        targetList[i].toggle();
+                    }
+                }
+            }
+        };
         return Trigger;
     }());
     ToggleModel.Trigger = Trigger;
-    var Contents = (function () {
-        function Contents(id, className, idName, view) {
+    var Target = (function () {
+        function Target(id, className, idName, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
             this.view = view;
         }
-        Contents.fromData = function (data) {
-            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data ? data : null);
+        Target.fromData = function (data) {
+            return new Target(data.id ? data.id : 1, data.className ? data.className : null, data.idName ? data.idName : null, data ? data : null);
         };
-        Contents.prototype.toggle = function (trigger) {
-            for (var i = 0; i < trigger.targetId.length; i++) {
-                if (trigger.targetId[i] == this.id) {
-                    this.view.toggle();
-                }
-            }
+        Target.prototype.toggle = function () {
+            this.view.toggle();
         };
-        return Contents;
+        return Target;
     }());
-    ToggleModel.Contents = Contents;
+    ToggleModel.Target = Target;
 })(ToggleModel || (ToggleModel = {}));
 var ToggleView;
 (function (ToggleView) {
     var APModel = AtomicPackages.Model;
     var _created_toggle_trigger_num = 0, _created_toggle_contents_num = 0;
+    var Toggle = (function () {
+        function Toggle() {
+            this.triggerList = [];
+        }
+        Toggle.fetchElements = function (callback) {
+            var _this = this;
+            document.addEventListener("DOMContentLoaded", function () {
+                _this.triggerList = _this.createFromTriggerElement();
+                callback({
+                    triggerList: _this.triggerList,
+                    targetList: _this.createTargetView(_this.triggerList)
+                });
+            });
+        };
+        Toggle.createFromTriggerElement = function () {
+            var triggerList = [], triggerViewList = [];
+            triggerList.push(document.querySelectorAll('[data-ap-toggle]'));
+            triggerList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    triggerViewList.push(Trigger.fromData(nodeList[i]));
+                }
+            });
+            return triggerViewList;
+        };
+        Toggle.createTargetView = function (triggerList) {
+            var selectors = [], targetList = [], targetViewList = [];
+            triggerList.forEach(function (trigger) {
+                if (trigger.target) {
+                    selectors.push(trigger.target);
+                }
+            });
+            selectors = APModel.uniq(selectors);
+            for (var i = 0; i < selectors.length; i++) {
+                if (selectors[i] !== "all") {
+                    targetList.push(document.querySelectorAll(selectors[i]));
+                }
+            }
+            var createTargetList = this.createFromTargetsElement(targetList);
+            createTargetList.forEach(function (createTarget) {
+                targetViewList.push(createTarget);
+            });
+            return targetViewList;
+        };
+        Toggle.createFromTargetsElement = function (targetList) {
+            var targetViewList = [];
+            targetList.forEach(function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
+                }
+            });
+            return targetViewList;
+        };
+        return Toggle;
+    }());
+    ToggleView.Toggle = Toggle;
     var Trigger = (function () {
         function Trigger(id, className, idName, target, node) {
             this.id = id;
@@ -1857,28 +1948,6 @@ var ToggleView;
         }
         Trigger.fromData = function (data) {
             return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apToggle ? data.dataset.apToggle : null, data ? data : null);
-        };
-        Trigger.fetchElements = function (callback) {
-            var toggleElements = {
-                trigger: [],
-                contents: []
-            };
-            document.addEventListener("DOMContentLoaded", function () {
-                var selectors = [];
-                toggleElements.trigger.push(document.querySelectorAll('[data-ap-toggle]'));
-                toggleElements.trigger.forEach(function (nodeList) {
-                    nodeList.forEach(function (node) {
-                        if (node.dataset.apToggle) {
-                            selectors.push(node.dataset.apToggle);
-                        }
-                    });
-                });
-                selectors = APModel.uniq(selectors);
-                for (var i = 0; i < selectors.length; i++) {
-                    toggleElements.contents.push(document.querySelectorAll(selectors[i]));
-                }
-                callback(toggleElements);
-            });
         };
         Trigger.prototype.createTriggerId = function () {
             return ++_created_toggle_trigger_num;
@@ -1903,8 +1972,8 @@ var ToggleView;
         return Trigger;
     }());
     ToggleView.Trigger = Trigger;
-    var Contents = (function () {
-        function Contents(id, idName, className, toggleClassName, node) {
+    var Target = (function () {
+        function Target(id, idName, className, toggleClassName, node) {
             this.id = id;
             this.idName = idName;
             this.className = className;
@@ -1916,13 +1985,13 @@ var ToggleView;
                 this.toggleClassName = this._DEFAULT_TOGGLE_CLASS_NAME;
             }
         }
-        Contents.fromData = function (data) {
-            return new Contents(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data.toggleClassName ? data.toggleClassName : null, data ? data : null);
+        Target.fromData = function (data) {
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.toggleClassName ? data.toggleClassName : null, data.node ? data.node : null);
         };
-        Contents.prototype.createContentsId = function () {
+        Target.prototype.createContentsId = function () {
             return ++_created_toggle_contents_num;
         };
-        Contents.prototype.toggleClass = function () {
+        Target.prototype.toggleClass = function () {
             if (this.node.classList.contains(this.toggleClassName)) {
                 this.node.classList.remove(this.toggleClassName);
             }
@@ -1930,76 +1999,27 @@ var ToggleView;
                 this.node.classList.add(this.toggleClassName);
             }
         };
-        Contents.prototype.getItemNode = function (node) {
+        Target.prototype.getItemNode = function (node) {
         };
-        Contents.prototype.toggle = function () {
+        Target.prototype.toggle = function () {
             this.toggleClass();
         };
-        return Contents;
+        return Target;
     }());
-    ToggleView.Contents = Contents;
+    ToggleView.Target = Target;
 })(ToggleView || (ToggleView = {}));
 var ToggleController;
 (function (ToggleController) {
-    var Trigger = ToggleModel.Trigger;
-    var Contents = ToggleModel.Contents;
-    var TriggerView = ToggleView.Trigger;
-    var ContentsView = ToggleView.Contents;
+    var Model = ToggleModel.Toggle;
+    var ToggleViewClass = ToggleView.Toggle;
     var Toggle = (function () {
         function Toggle() {
             var _this = this;
-            this.triggerList = [];
-            this.contentsList = [];
-            TriggerView.fetchElements(function (data) {
-                data.trigger.forEach(function (nodeList) {
-                    _this.createFromTriggerElement(nodeList);
-                });
-                data.contents.forEach(function (nodeList) {
-                    _this.createFromContentsElement(nodeList);
-                });
+            ToggleViewClass.fetchElements(function (data) {
+                _this.model = Model.fromData(data);
             });
         }
-        Toggle.prototype.createFromTriggerElement = function (nodeList) {
-            for (var i = 0; i < nodeList.length; i++) {
-                this.createTriggerModel(TriggerView.fromData(nodeList[i]));
-            }
-            this.setTriggerCallBack();
-        };
-        Toggle.prototype.createFromContentsElement = function (nodeList) {
-            for (var i = 0; i < nodeList.length; i++) {
-                this.createContentsModel(ContentsView.fromData(nodeList[i]));
-            }
-        };
-        Toggle.prototype.createTriggerModel = function (triggerView) {
-            this.create(triggerView);
-        };
-        Toggle.prototype.createContentsModel = function (contentsView) {
-            this.createContents(contentsView);
-        };
-        Toggle.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.contentsList);
-            }
-        };
-        Toggle.prototype.setTriggerCallBack = function () {
-            var _this = this;
-            this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
-                }, true);
-            });
-        };
-        Toggle.prototype.toggleContents = function (trigger) {
-            for (var i = 0; i < this.contentsList.length; i++) {
-                this.contentsList[i].toggle(trigger);
-            }
-        };
         Toggle.prototype.create = function (data) {
-            this.triggerList.push(Trigger.fromData(data));
-        };
-        Toggle.prototype.createContents = function (data) {
-            this.contentsList.push(Contents.fromData(data));
-            this.setTriggerTargetId();
         };
         Toggle.prototype.select = function (data) {
         };

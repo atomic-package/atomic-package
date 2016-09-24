@@ -11,10 +11,89 @@ module ToggleView {
       _created_toggle_contents_num: number = 0;
 
   /**
-   * Toggle Trigger View Class
+   * Toggle View Class
    * @public
    * @param option
    **/
+  export class Toggle {
+    private triggerList = [];
+
+    /**
+     * Static Function
+    **/
+    static fetchElements(callback) {
+      document.addEventListener("DOMContentLoaded", () => {
+        this.triggerList = this.createFromTriggerElement();
+
+        callback({
+          triggerList: this.triggerList,
+          targetList: this.createTargetView(this.triggerList)
+        });
+      });
+    }
+
+    public static createFromTriggerElement() {
+      var triggerList = [],
+          triggerViewList = [];
+
+      triggerList.push(document.querySelectorAll('[data-ap-toggle]'));
+
+      triggerList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          triggerViewList.push(Trigger.fromData(nodeList[i]));
+        }
+      });
+
+      return triggerViewList;
+    }
+
+    public static createTargetView(triggerList) {
+      var selectors: string[] = [],
+          targetList = [],
+          targetViewList = [];
+
+      triggerList.forEach((trigger: any) => {
+        if(trigger.target) {
+          selectors.push(trigger.target);
+        }
+      });
+
+      selectors = APModel.uniq(selectors);
+
+      for (var i: number = 0; i < selectors.length; i++) {
+        if(selectors[i] !== "all") {
+          targetList.push(document.querySelectorAll(selectors[i]));
+        }
+      }
+
+      var createTargetList = this.createFromTargetsElement(targetList);
+
+      createTargetList.forEach((createTarget: any) => {
+        targetViewList.push(createTarget);
+      });
+
+      return targetViewList;
+    }
+
+    public static createFromTargetsElement(targetList) {
+      var targetViewList = [];
+
+      targetList.forEach((nodeList: NodeList) => {
+        for (var i: number = 0; i < nodeList.length; i++) {
+          targetViewList.push(Target.fromData({ node: nodeList[i] }));
+        }
+      });
+
+      return targetViewList;
+    }
+
+  }
+
+  /**
+   * Toggle Trigger View Class
+   * @public
+   * @param option
+  **/
   export class Trigger {
     private toggleCallBackFunction: Function = () => {};
 
@@ -40,37 +119,6 @@ module ToggleView {
         data.dataset.apToggle ? data.dataset.apToggle : null,
         data ? data : null
       );
-    }
-
-    static fetchElements(callback): void {
-      var toggleElements = {
-        trigger: [],
-        contents: []
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        var selectors: string[] = [];
-
-        // trigger
-        toggleElements.trigger.push(document.querySelectorAll('[data-ap-toggle]'));
-
-        // contents
-        toggleElements.trigger.forEach((nodeList: any) => {
-          nodeList.forEach((node: any) => {
-            if(node.dataset.apToggle) {
-              selectors.push(node.dataset.apToggle);
-            }
-          });
-        });
-
-        selectors = APModel.uniq(selectors);
-
-        for (var i: number = 0; i < selectors.length; i++) {
-          toggleElements.contents.push(document.querySelectorAll(selectors[i]));
-        }
-
-        callback(toggleElements);
-      });
     }
 
     /**
@@ -109,11 +157,11 @@ module ToggleView {
   }
 
   /**
-   * Toggle Contents View Class
+   * Toggle Target View Class
    * @public
    * @param option
    **/
-  export class Contents {
+  export class Target {
     private _DEFAULT_TOGGLE_CLASS_NAME = 'active';
 
     constructor(
@@ -133,13 +181,13 @@ module ToggleView {
     /**
      * Static Function
      **/
-    static fromData(data: any): Contents {
-      return new Contents(
+    static fromData(data: any): Target {
+      return new Target(
         0,
-        data.idName ? data.idName : data.id,
-        data.className ? data.className : '',
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
         data.toggleClassName ? data.toggleClassName : null,
-        data ? data : null
+        data.node ? data.node : null
       );
     }
 

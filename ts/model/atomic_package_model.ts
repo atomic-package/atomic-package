@@ -127,6 +127,27 @@ module AtomicPackages {
       return [].concat.apply(array);
     }
 
+    // createTriggerModel
+    public static createTriggerModel(triggerView: any[], triggerClass) {
+      var triggerList = [];
+
+      triggerView.forEach((trigger) => {
+        triggerList.push(triggerClass.fromData(trigger));
+      });
+
+      return triggerList;
+    }
+
+    // createTargetModel
+    public static createTargetModel(targetView: any[], targetClass) {
+      var targetList = [];
+
+      targetView.forEach((target) => {
+        targetList.push(targetClass.fromData(target));
+      });
+
+      return targetList;
+    }
 
   }
 }

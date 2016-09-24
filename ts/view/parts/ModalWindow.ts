@@ -11,7 +11,7 @@ module ModalWindowView {
   var _created_trigger_num: number = 0;
 
   /**
-   * ModalWindow Class
+   * ModalWindow View Class
    * @public
    * @param option
   **/
