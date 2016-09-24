@@ -23,7 +23,7 @@ module SideMenuView {
      **/
     static fetchElements(callback) {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
+        this.triggerList = APView.createFromTriggerElement(['[data-ap-side]'], Trigger);
 
         callback({
           triggerList: this.triggerList,
@@ -63,37 +63,6 @@ module SideMenuView {
         data.dataset.apSide ? data.dataset.apSide : null,
         data ? data : null
       );
-    }
-
-    static fetchElements(callback): void {
-      var sideMenuElements = {
-        trigger: [],
-        contents: []
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        var selectors: string[] = [];
-
-        // trigger
-        sideMenuElements.trigger.push(document.querySelectorAll('[data-ap-side]'));
-
-        // contents
-        sideMenuElements.trigger.forEach((nodeList: any) => {
-          nodeList.forEach((node: any) => {
-            if(node.dataset.apSide) {
-              selectors.push(node.dataset.apSide);
-            }
-          });
-        });
-
-        selectors = APModel.uniq(selectors);
-
-        for (var i: number = 0; i < selectors.length; i++) {
-          sideMenuElements.contents.push(document.querySelectorAll(selectors[i]));
-        }
-
-        callback(sideMenuElements);
-      });
     }
 
     /**

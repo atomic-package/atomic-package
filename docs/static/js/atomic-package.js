@@ -2070,11 +2070,7 @@ var SideMenuModel;
             return new Target(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data ? data : null);
         };
         Target.prototype.toggle = function (trigger) {
-            for (var i = 0; i < trigger.targetId.length; i++) {
-                if (trigger.targetId[i] == this.id) {
-                    this.view.toggle();
-                }
-            }
+            this.view.toggle();
         };
         return Target;
     }());
@@ -2082,7 +2078,6 @@ var SideMenuModel;
 })(SideMenuModel || (SideMenuModel = {}));
 var SideMenuView;
 (function (SideMenuView) {
-    var APModel = AtomicPackages.Model;
     var APView = AtomicPackages.View;
     var _created_toggle_trigger_num = 0, _created_toggle_contents_num = 0;
     var SideMenu = (function () {
@@ -2092,7 +2087,7 @@ var SideMenuView;
         SideMenu.fetchElements = function (callback) {
             var _this = this;
             document.addEventListener("DOMContentLoaded", function () {
-                _this.triggerList = APView.createFromTriggerElement(['[data-ap-toggle]'], Trigger);
+                _this.triggerList = APView.createFromTriggerElement(['[data-ap-side]'], Trigger);
                 callback({
                     triggerList: _this.triggerList,
                     targetList: APView.createTargetView(_this.triggerList, Target)
@@ -2115,28 +2110,6 @@ var SideMenuView;
         }
         Trigger.fromData = function (data) {
             return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apSide ? data.dataset.apSide : null, data ? data : null);
-        };
-        Trigger.fetchElements = function (callback) {
-            var sideMenuElements = {
-                trigger: [],
-                contents: []
-            };
-            document.addEventListener("DOMContentLoaded", function () {
-                var selectors = [];
-                sideMenuElements.trigger.push(document.querySelectorAll('[data-ap-side]'));
-                sideMenuElements.trigger.forEach(function (nodeList) {
-                    nodeList.forEach(function (node) {
-                        if (node.dataset.apSide) {
-                            selectors.push(node.dataset.apSide);
-                        }
-                    });
-                });
-                selectors = APModel.uniq(selectors);
-                for (var i = 0; i < selectors.length; i++) {
-                    sideMenuElements.contents.push(document.querySelectorAll(selectors[i]));
-                }
-                callback(sideMenuElements);
-            });
         };
         Trigger.prototype.createTriggerId = function () {
             return ++_created_toggle_trigger_num;

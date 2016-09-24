@@ -139,11 +139,7 @@ module SideMenuModel {
      * Private Function
      **/
     public toggle(trigger: Trigger) {
-      for(var i: number = 0; i < trigger.targetId.length; i++) {
-        if(trigger.targetId[i] == this.id) {
-          this.view.toggle();
-        }
-      }
+      this.view.toggle();
     }
   }
 }
