@@ -106,6 +106,11 @@ var AtomicPackages;
             });
             return targetList;
         };
+        Model.setTriggerTargetId = function (triggerList, targetList) {
+            for (var i = 0; i < triggerList.length; i++) {
+                triggerList[i].setTargetId(targetList);
+            }
+        };
         return Model;
     }());
     AtomicPackages.Model = Model;
@@ -1156,15 +1161,10 @@ var DropdownModel;
             this.targetList = targetList;
             this.triggerList = triggerList;
             this.setTriggerCallBack();
-            this.setTriggerTargetId();
+            APModel.setTriggerTargetId(this.triggerList, this.targetList);
         }
         Dropdown.fromData = function (data) {
             return new Dropdown(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
-        };
-        Dropdown.prototype.setTriggerTargetId = function () {
-            for (var i = 0; i < this.triggerList.length; i++) {
-                this.triggerList[i].setTargetId(this.targetList);
-            }
         };
         Dropdown.prototype.setTriggerCallBack = function () {
             var _this = this;

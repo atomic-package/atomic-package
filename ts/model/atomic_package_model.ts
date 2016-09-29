@@ -149,5 +149,12 @@ module AtomicPackages {
       return targetList;
     }
 
+
+    public static setTriggerTargetId(triggerList, targetList) {
+      for(var i: number = 0; i < triggerList.length; i++) {
+        triggerList[i].setTargetId(targetList);
+      }
+    }
+
   }
 }

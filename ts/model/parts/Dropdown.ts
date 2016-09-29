@@ -17,8 +17,9 @@ module DropdownModel {
     public triggerList: Trigger[]
     ) {
       this.setTriggerCallBack();
-      this.setTriggerTargetId();
-  }
+
+      APModel.setTriggerTargetId(this.triggerList, this.targetList);
+    }
 
     /**
      * Static Function
@@ -32,13 +33,7 @@ module DropdownModel {
 
     /**
      * Private Function
-     **/
-    private setTriggerTargetId() {
-      for(var i: number = 0; i < this.triggerList.length; i++) {
-        this.triggerList[i].setTargetId(this.targetList);
-      }
-    }
-
+    **/
     private setTriggerCallBack(): void {
       this.triggerList.forEach((trigger: Trigger) => {
         trigger.view.toggle((triggerView) => {
