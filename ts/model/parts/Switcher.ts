@@ -95,8 +95,8 @@ module SwitcherModel {
     /**
      * Public Function
     **/
-    public setTargetId(contentsViewList: Contents[]) {
-      var searchContents: Contents[] = APModel.search(contentsViewList, this.target);
+    public setTargetId(contentsViewList: Target[]) {
+      var searchContents: Target[] = APModel.search(contentsViewList, this.target);
 
       if(searchContents) {
         for (var i: number = 0; i < searchContents.length; i++) {
@@ -167,12 +167,12 @@ module SwitcherModel {
    * @public
    * @param option
    **/
-  export class Contents {
+  export class Target {
     constructor(
       public id: number,
       public className: string,
       public idName: string,
-      public items: ContentsItem[],
+      public items: TargetItem[],
       public selectedNumber: number,
       public view: any
       ) {
@@ -180,8 +180,8 @@ module SwitcherModel {
       this.items[selectedNumber - 1].select();
     }
 
-    static fromData(data: any): Contents {
-      return new Contents(
+    static fromData(data: any): Target {
+      return new Target(
         data.id ? data.id : 1,
         data.className ? data.className : '',
         data.idName ? data.idName : '',
@@ -197,7 +197,7 @@ module SwitcherModel {
     private createItem(items) {
       var itemModels = [];
       for(var i: number = 0; i < items.length; i++) {
-        itemModels.push(ContentsItem.fromData(items[i]));
+        itemModels.push(TargetItem.fromData(items[i]));
       }
       return itemModels;
     }
@@ -208,7 +208,7 @@ module SwitcherModel {
     }
 
     public resetSelected(): void {
-      this.items.forEach((item: ContentsItem) => {
+      this.items.forEach((item: TargetItem) => {
         item.reset();
       });
     }
@@ -225,11 +225,11 @@ module SwitcherModel {
   }
 
   /**
-   * Switcher Contents Item Model Class
+   * Switcher Target Item Model Class
    * @public
    * @param option
    **/
-  export class ContentsItem {
+  export class TargetItem {
     constructor(
       public id: number,
       public parentId: number,
@@ -240,8 +240,8 @@ module SwitcherModel {
       ) {
     }
 
-    static fromData(data: any): ContentsItem {
-      return new ContentsItem(
+    static fromData(data: any): TargetItem {
+      return new TargetItem(
         data.id ? data.id : 1,
         data.parentId ? data.parentId : 1,
         data.className ? data.className : '',

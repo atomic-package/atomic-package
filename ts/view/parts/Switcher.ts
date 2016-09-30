@@ -235,7 +235,7 @@ module SwitcherView {
    * @public
    * @param option
    **/
-  export class Contents {
+  export class Target {
     constructor(
       public id: number,
       public idName: string,
@@ -251,8 +251,8 @@ module SwitcherView {
     /**
      * Static Function
      **/
-    static fromData(data: any): Contents {
-      return new Contents(
+    static fromData(data: any): Target {
+      return new Target(
         0,
         data.idName ? data.idName : data.id,
         data.className ? data.className : '',

@@ -813,8 +813,8 @@ var SwitcherModel;
         return TriggerItem;
     }());
     SwitcherModel.TriggerItem = TriggerItem;
-    var Contents = (function () {
-        function Contents(id, className, idName, items, selectedNumber, view) {
+    var Target = (function () {
+        function Target(id, className, idName, items, selectedNumber, view) {
             this.id = id;
             this.className = className;
             this.idName = idName;
@@ -824,26 +824,26 @@ var SwitcherModel;
             this.items = this.createItem(this.items);
             this.items[selectedNumber - 1].select();
         }
-        Contents.fromData = function (data) {
-            return new Contents(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+        Target.fromData = function (data) {
+            return new Target(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
         };
-        Contents.prototype.createItem = function (items) {
+        Target.prototype.createItem = function (items) {
             var itemModels = [];
             for (var i = 0; i < items.length; i++) {
-                itemModels.push(ContentsItem.fromData(items[i]));
+                itemModels.push(TargetItem.fromData(items[i]));
             }
             return itemModels;
         };
-        Contents.prototype.selectItem = function (itemNumber) {
+        Target.prototype.selectItem = function (itemNumber) {
             this.selectedNumber = itemNumber;
             this.items[this.selectedNumber - 1].select();
         };
-        Contents.prototype.resetSelected = function () {
+        Target.prototype.resetSelected = function () {
             this.items.forEach(function (item) {
                 item.reset();
             });
         };
-        Contents.prototype.select = function (trigger) {
+        Target.prototype.select = function (trigger) {
             this.resetSelected();
             for (var i = 0; i < trigger.targetId.length; i++) {
                 if (trigger.targetId[i] == this.id) {
@@ -851,11 +851,11 @@ var SwitcherModel;
                 }
             }
         };
-        return Contents;
+        return Target;
     }());
-    SwitcherModel.Contents = Contents;
-    var ContentsItem = (function () {
-        function ContentsItem(id, parentId, className, idName, isShow, view) {
+    SwitcherModel.Target = Target;
+    var TargetItem = (function () {
+        function TargetItem(id, parentId, className, idName, isShow, view) {
             this.id = id;
             this.parentId = parentId;
             this.className = className;
@@ -863,20 +863,20 @@ var SwitcherModel;
             this.isShow = isShow;
             this.view = view;
         }
-        ContentsItem.fromData = function (data) {
-            return new ContentsItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isShow ? data.isShow : false, data ? data : null);
+        TargetItem.fromData = function (data) {
+            return new TargetItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isShow ? data.isShow : false, data ? data : null);
         };
-        ContentsItem.prototype.reset = function () {
+        TargetItem.prototype.reset = function () {
             this.isShow = false;
             this.view.resetItem();
         };
-        ContentsItem.prototype.select = function () {
+        TargetItem.prototype.select = function () {
             this.isShow = true;
             this.view.selectItem();
         };
-        return ContentsItem;
+        return TargetItem;
     }());
-    SwitcherModel.ContentsItem = ContentsItem;
+    SwitcherModel.TargetItem = TargetItem;
 })(SwitcherModel || (SwitcherModel = {}));
 var SwitcherView;
 (function (SwitcherView) {
@@ -1007,8 +1007,8 @@ var SwitcherView;
         return TriggerItem;
     }());
     SwitcherView.TriggerItem = TriggerItem;
-    var Contents = (function () {
-        function Contents(id, idName, className, items, selectedNumber, node) {
+    var Target = (function () {
+        function Target(id, idName, className, items, selectedNumber, node) {
             this.id = id;
             this.idName = idName;
             this.className = className;
@@ -1018,13 +1018,13 @@ var SwitcherView;
             this.id = this.createContentsId();
             this.items = this.getItemNode(this.node);
         }
-        Contents.fromData = function (data) {
-            return new Contents(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+        Target.fromData = function (data) {
+            return new Target(0, data.idName ? data.idName : data.id, data.className ? data.className : '', data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
         };
-        Contents.prototype.createContentsId = function () {
+        Target.prototype.createContentsId = function () {
             return ++_created_contents_num;
         };
-        Contents.prototype.getChildren = function (node) {
+        Target.prototype.getChildren = function (node) {
             var lastChildren = [];
             for (var i = 0; i < node.children.length; i++) {
                 lastChildren.push(ContentsItem.fromData({
@@ -1035,12 +1035,12 @@ var SwitcherView;
             }
             return lastChildren;
         };
-        Contents.prototype.getItemNode = function (node) {
+        Target.prototype.getItemNode = function (node) {
             return this.getChildren(node);
         };
-        return Contents;
+        return Target;
     }());
-    SwitcherView.Contents = Contents;
+    SwitcherView.Target = Target;
     var ContentsItem = (function () {
         function ContentsItem(id, parentId, className, idName, itemNumber, isSelected, node) {
             this.id = id;
@@ -1082,9 +1082,9 @@ var SwitcherView;
 var SwitcherController;
 (function (SwitcherController) {
     var Trigger = SwitcherModel.Trigger;
-    var Contents = SwitcherModel.Contents;
+    var Target = SwitcherModel.Target;
     var TriggerView = SwitcherView.Trigger;
-    var ContentsView = SwitcherView.Contents;
+    var TargetView = SwitcherView.Target;
     var Switcher = (function () {
         function Switcher() {
             var _this = this;
@@ -1124,14 +1124,14 @@ var SwitcherController;
         };
         Switcher.prototype.createFromContentsElement = function (nodeList) {
             for (var i = 0; i < nodeList.length; i++) {
-                this.createContentsModel(ContentsView.fromData(nodeList[i]));
+                this.createContentsModel(TargetView.fromData(nodeList[i]));
             }
         };
         Switcher.prototype.createTriggerModel = function (triggerView) {
             this.create(triggerView);
         };
-        Switcher.prototype.createContentsModel = function (contentsView) {
-            this.createContents(contentsView);
+        Switcher.prototype.createContentsModel = function (targetView) {
+            this.createTarget(targetView);
         };
         Switcher.prototype.setTriggerTargetId = function () {
             for (var i = 0; i < this.triggerList.length; i++) {
@@ -1141,8 +1141,8 @@ var SwitcherController;
         Switcher.prototype.create = function (data) {
             this.triggerList.push(Trigger.fromData(data));
         };
-        Switcher.prototype.createContents = function (data) {
-            this.contentsList.push(Contents.fromData(data));
+        Switcher.prototype.createTarget = function (data) {
+            this.contentsList.push(Target.fromData(data));
             this.setTriggerTargetId();
         };
         Switcher.prototype.select = function (data) {

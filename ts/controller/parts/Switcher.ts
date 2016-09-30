@@ -10,11 +10,11 @@ module SwitcherController {
 
   import Trigger      = SwitcherModel.Trigger;
   import TriggerItem  = SwitcherModel.TriggerItem;
-  import Contents     = SwitcherModel.Contents;
+  import Target     = SwitcherModel.Target;
 
   import TriggerView      = SwitcherView.Trigger;
   import TriggerItemView  = SwitcherView.TriggerItem;
-  import ContentsView     = SwitcherView.Contents;
+  import TargetView     = SwitcherView.Target;
 
   /**
    * Switcher Controller Class
@@ -25,7 +25,7 @@ module SwitcherController {
     private model: Model;
 
     private triggerList: Trigger[] = [];
-    private contentsList: Contents[] = [];
+    private contentsList: Target[] = [];
 
     constructor() {
       TriggerView.fetchElements((data) => {
@@ -70,7 +70,7 @@ module SwitcherController {
 
     private createFromContentsElement(nodeList: NodeList): void {
       for(var i: number = 0; i < nodeList.length; i++) {
-        this.createContentsModel(ContentsView.fromData(nodeList[i]));
+        this.createContentsModel(TargetView.fromData(nodeList[i]));
       }
     }
 
@@ -78,8 +78,8 @@ module SwitcherController {
       this.create(triggerView);
     }
 
-    private createContentsModel(contentsView: ContentsView): void {
-      this.createContents(contentsView);
+    private createContentsModel(targetView: TargetView): void {
+      this.createTarget(targetView);
     }
 
     private setTriggerTargetId() {
@@ -95,8 +95,8 @@ module SwitcherController {
       this.triggerList.push(Trigger.fromData(data));
     }
 
-    public createContents(data: any): void {
-      this.contentsList.push(Contents.fromData(data));
+    public createTarget(data: any): void {
+      this.contentsList.push(Target.fromData(data));
       this.setTriggerTargetId();
     }
 
