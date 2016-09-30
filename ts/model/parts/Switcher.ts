@@ -13,11 +13,11 @@ module SwitcherModel {
    **/
   export class Switcher {
     constructor(
-      //public targetList: Target[],
+      public targetList: Target[],
       public triggerList: Trigger[]
       ) {
-//      this.setTriggerCallBack();
-//      this.setTriggerTargetId();
+      this.setTriggerCallBack();
+      this.setTriggerTargetId();
     }
 
     /**
@@ -25,10 +25,38 @@ module SwitcherModel {
      **/
     public static fromData(data: any): Switcher {
       return new Switcher(
-        //data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
+        data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
         data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []
       );
     }
+
+    /**
+     * Private Function
+     **/
+    private setTriggerCallBack(): void {
+      this.triggerList.forEach((trigger: Trigger) => {
+        var parent = trigger;
+
+        trigger.items.forEach((item: TriggerItem) => {
+          item.view.select((view) => {
+            parent.select(view, this.targetList);
+          }, true);
+        });
+      });
+    }
+
+    private setTriggerTargetId() {
+      for(var i: number = 0; i < this.triggerList.length; i++) {
+        this.triggerList[i].setTargetId(this.targetList);
+      }
+    }
+
+    /**
+     * Public Function
+     **/
+    public select(data: any): void {
+    }
+
   }
 
   /**
@@ -82,11 +110,11 @@ module SwitcherModel {
       return itemModels;
     }
 
-    private searchItem(id: number) {
-      return this.items.filter((item: any) => {
-        return (item.id == id);
-      })[0];
-    }
+//    private searchItem(id: number) {
+//      return this.items.filter((item: any) => {
+//        return (item.id == id);
+//      })[0];
+//    }
 
     private setSelectedNumber(item: TriggerItem): void {
       this.selectedNumber = item.itemNumber;
@@ -105,21 +133,29 @@ module SwitcherModel {
       }
     }
 
+    public select(selectItem, targetList) {
+      this.selectItem(selectItem);
+
+      for(var i: number = 0; i < this.targetId.length; i++) {
+        for(var n: number = 0; n < targetList.length; n++) {
+          if(targetList[n].id === this.targetId[i]) {
+            targetList[n].select(selectItem.itemNumber);
+          }
+        }
+      }
+    }
+
+    public selectItem(selectItem) {
+      this.resetSelected();
+      this.setSelectedNumber(selectItem);
+      this.items[selectItem.itemNumber - 1].select();
+    }
+
     public resetSelected(): void {
       this.items.forEach((item: TriggerItem) => {
         item.reset();
       });
     }
-
-    public select(itemId: number) {
-      var selectItem = this.searchItem(itemId);
-
-      this.resetSelected();
-      this.setSelectedNumber(selectItem);
-
-      selectItem.select();
-    }
-
   }
 
   /**
@@ -177,7 +213,7 @@ module SwitcherModel {
       public view: any
       ) {
       this.items = this.createItem(this.items);
-      this.items[selectedNumber - 1].select();
+      this.items[this.selectedNumber - 1].select();
     }
 
     static fromData(data: any): Target {
@@ -213,14 +249,9 @@ module SwitcherModel {
       });
     }
 
-    public select(trigger: Trigger) {
+    public select(itemNumber) {
       this.resetSelected();
-
-      for(var i: number = 0; i < trigger.targetId.length; i++) {
-        if(trigger.targetId[i] == this.id) {
-          this.selectItem(trigger.selectedNumber);
-        }
-      }
+      this.selectItem(itemNumber);
     }
   }
 

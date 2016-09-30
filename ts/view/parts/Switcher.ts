@@ -22,16 +22,16 @@ module SwitcherView {
     /**
      * Static Function
     **/
-//    static fetchElements(callback) {
-//      document.addEventListener("DOMContentLoaded", () => {
-//        var triggerList = APView.createFromTriggerElement(['[data-ap-switcher]'], Trigger);
-//
-//        callback({
-//          triggerList: triggerList,
-//          targetList: APView.createTargetView(triggerList, Target)
-//        });
-//      });
-//    }
+    static fetchElements(callback) {
+      document.addEventListener("DOMContentLoaded", () => {
+        var triggerList = APView.createFromTriggerElement(['[data-ap-switcher]'], Trigger);
+
+        callback({
+          triggerList: triggerList,
+          targetList: APView.createTargetView(triggerList, Target)
+        });
+      });
+    }
   }
 
   /**
@@ -66,37 +66,6 @@ module SwitcherView {
         data.dataset.apSwitcher ? data.dataset.apSwitcher : null,
         data ? data : null
       );
-    }
-
-    static fetchElements(callback): void {
-      var switcherElements = {
-        trigger: [],
-        contents: []
-      };
-
-      document.addEventListener("DOMContentLoaded", () => {
-        var selectors: string[] = [];
-
-        // trigger
-        switcherElements.trigger.push(document.querySelectorAll('[data-ap-switcher]'));
-
-        // contents
-        switcherElements.trigger.forEach((nodeList: any) => {
-          nodeList.forEach((node: any) => {
-            if(node.dataset.apSwitcher) {
-              selectors.push(node.dataset.apSwitcher);
-            }
-          });
-        });
-
-        selectors = APModel.uniq(selectors);
-
-        for (var i: number = 0; i < selectors.length; i++) {
-          switcherElements.contents.push(document.querySelectorAll(selectors[i]));
-        }
-
-        callback(switcherElements);
-      });
     }
 
     /**
@@ -148,8 +117,8 @@ module SwitcherView {
     constructor(
       public id: number,
       public parentId: number,
-      public className: string,
       public idName: string,
+      public className: string,
       public itemNumber: number,
       public isSelected: boolean,
       public node: any
@@ -165,8 +134,8 @@ module SwitcherView {
       return new TriggerItem(
         data.id ? data.id : 1,
         data.parentId ? data.parentId : 1,
-        data.className ? data.className : '',
-        data.idName ? data.idName : '',
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
         data.itemNumber ? data.itemNumber : 1,
         data.isSelected ? data.isSelected : false,
         data.node ? data.node : null
@@ -231,7 +200,7 @@ module SwitcherView {
 
 
   /**
-   * Switcher Contents View Class
+   * Switcher Target View Class
    * @public
    * @param option
    **/
@@ -240,7 +209,7 @@ module SwitcherView {
       public id: number,
       public idName: string,
       public className: string,
-      public items: ContentsItem[],
+      public items: TargetItem[],
       public selectedNumber: number,
       public node: any
       ) {
@@ -254,11 +223,11 @@ module SwitcherView {
     static fromData(data: any): Target {
       return new Target(
         0,
-        data.idName ? data.idName : data.id,
-        data.className ? data.className : '',
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
         data.items ? data.items : [],
         data.selectedNumber ? data.selectedNumber : 1,
-        data ? data : null
+        data.node ? data.node : null
       );
     }
 
@@ -272,14 +241,16 @@ module SwitcherView {
     private getChildren(node) {
       var lastChildren = [];
 
-      for(var i: number = 0; i < node.children.length; i++) {
-        lastChildren.push(
-          ContentsItem.fromData({
-            parentId: this.id,
-            itemNumber: i + 1,
-            node: APView.getFirstChildLastNode(node.children[i])
-          })
-        );
+      if(node.children) {
+        for (var i: number = 0; i < node.children.length; i++) {
+          lastChildren.push(
+            TargetItem.fromData({
+              parentId: this.id,
+              itemNumber: i + 1,
+              node: APView.getFirstChildLastNode(node.children[i])
+            })
+          );
+        }
       }
       return lastChildren;
     }
@@ -294,18 +265,18 @@ module SwitcherView {
 
 
   /**
-   * Switcher ContentsItem View Class
+   * Switcher TargetItem View Class
    * @public
    * @param option
    **/
-  export class ContentsItem {
+  export class TargetItem {
     private _SELECT_CLASS_NAME = 'show';
 
     constructor(
       public id: number,
       public parentId: number,
-      public className: string,
       public idName: string,
+      public className: string,
       public itemNumber: number,
       public isSelected: boolean,
       public node: any
@@ -316,12 +287,12 @@ module SwitcherView {
     /**
      * Static Function
      **/
-    static fromData(data: any): ContentsItem {
-      return new ContentsItem(
+    static fromData(data: any): TargetItem {
+      return new TargetItem(
         0,
         data.parentId ? data.parentId : 1,
-        data.className ? data.className : '',
-        data.idName ? data.idName : '',
+        data.node && data.node.id ? data.node.id : null,
+        data.node && data.node.className ? data.node.className : null,
         data.itemNumber ? data.itemNumber : 1,
         data.isSelected ? data.isSelected : false,
         data.node ? data.node : null
