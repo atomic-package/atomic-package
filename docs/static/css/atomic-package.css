@@ -3309,8 +3309,7 @@ input.btn.red {
 
 /* Modal Style
 -------------------------------------------------- */
-.modalWindow {
-  position: fixed;
+.modalWindow .modalBody {
   width: 800px;
   min-height: 400px;
   background: #fff;
@@ -3319,17 +3318,17 @@ input.btn.red {
   transition: all 0.15s ease-out;
 }
 
-.modalWindow.open {
+.modalWindow .modalBody.open {
   display: block;
 }
 
-.modalWindow.openStyle {
+.modalWindow .modalBody.openStyle {
   -webkit-transform: scale(0.4);
   transform: scale(0.4);
   opacity: 0.2;
 }
 
-.modalWindow.anime {
+.modalWindow .modalBody.anime {
   -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 1;

@@ -1,27 +1,28 @@
 
 .modalWindow {
   //display: none;
-  position: fixed;
+  //position: fixed;
   //top: 100px;
   //left: 100px;
-  width: 800px;
-  min-height: 400px;
-  background: #fff;
-  z-index: 5000;
-  transition: all 0.15s ease-out;
+  .modalBody {
+    width: 800px;
+    min-height: 400px;
+    background: #fff;
+    z-index: 5000;
+    transition: all 0.15s ease-out;
 
-  &.open {
-    display: block;
+    &.open {
+      display: block;
+    }
+    &.openStyle {
+      transform: scale(0.4);
+      opacity: 0.2;
+    }
+    &.anime {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
-  &.openStyle {
-    transform: scale(0.4);
-    opacity: 0.2;
-  }
-  &.anime {
-    transform: scale(1);
-    opacity: 1;
-  }
-
 }
 
 .modalWindowBackDrop {

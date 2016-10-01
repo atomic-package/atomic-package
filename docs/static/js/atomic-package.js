@@ -316,7 +316,7 @@ var ModalWindowView;
     }());
     ModalWindowView.ModalWindow = ModalWindow;
     var Target = (function () {
-        function Target(id, idName, className, isOpen, outerWidth, outerHeight, node) {
+        function Target(id, idName, className, isOpen, outerWidth, outerHeight, node, body) {
             this.id = id;
             this.idName = idName;
             this.className = className;
@@ -324,6 +324,8 @@ var ModalWindowView;
             this.outerWidth = outerWidth;
             this.outerHeight = outerHeight;
             this.node = node;
+            this.body = body;
+            this.callBackFunction = function () { };
             this._OPEN_CLASS_NAME = 'open';
             this._DEFAULT_ID_NAME = 'modalWindow';
             this._DEFAULT_CLASS_NAME = 'modalWindow';
@@ -336,10 +338,12 @@ var ModalWindowView;
                 this.className = this._DEFAULT_CLASS_NAME;
             }
             this.outerCheck();
-            this.setCloseStyle();
+            this.defaultStyle();
+            this.setEventListener();
+            console.log(this);
         }
         Target.fromData = function (data) {
-            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.outerWidth ? data.outerWidth : 0, data.outerHeight ? data.outerHeight : 0, data.node ? data.node : null);
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.outerWidth ? data.outerWidth : 0, data.outerHeight ? data.outerHeight : 0, data.node ? data.node : null, data.node && data.node.children ? data.node.children[0] : null);
         };
         Target.create = function () {
             return this.fromData({});
@@ -347,10 +351,27 @@ var ModalWindowView;
         Target.prototype.createModalWindowId = function () {
             return ++_created_modal_window_num;
         };
+        Target.prototype.setEventListener = function () {
+            var _this = this;
+            this.node.addEventListener('click', function (e) {
+                e.preventDefault();
+                _this.click(_this.callBackFunction);
+            }, false);
+            this.body.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }, false);
+        };
+        Target.prototype.click = function (fn, isFirst) {
+            this.callBackFunction = fn;
+            if (!isFirst) {
+                fn();
+            }
+        };
         Target.prototype.outerCheck = function () {
             if (this.outerWidth === 0 || this.outerHeight === 0) {
-                this.outerWidth = this.getStyle(this.node).outerWidth;
-                this.outerHeight = this.getStyle(this.node).outerHeight;
+                this.outerWidth = this.getStyle(this.body).outerWidth;
+                this.outerHeight = this.getStyle(this.body).outerHeight;
             }
         };
         Target.prototype.getStyle = function (node) {
@@ -360,19 +381,32 @@ var ModalWindowView;
                 outerHeight: node.offsetHeight
             };
         };
+        Target.prototype.defaultStyle = function () {
+            this.node.style.opacity = '0';
+            this.node.style.display = 'none';
+            this.node.style.position = 'fixed';
+            this.node.style.top = '0';
+            this.node.style.right = '0';
+            this.node.style.bottom = '0';
+            this.node.style.left = '0';
+            this.node.style.zIndex = '1010';
+            this.node.style.overflowY = 'scroll';
+            this.body.style.position = 'relative';
+            this.body.style.marginLeft = 'auto';
+            this.body.style.marginRight = 'auto';
+            this.body.style.marginTop = '100px';
+        };
         Target.prototype.showStyle = function () {
             this.node.style.display = 'block';
             this.node.style.opacity = '0';
+            document.querySelector('html').style.overflow = 'hidden';
         };
         Target.prototype.hideStyle = function () {
             this.node.style.opacity = '0';
             this.node.style.display = 'none';
+            document.querySelector('html').style.overflow = 'auto';
         };
         Target.prototype.setNodeStyle = function () {
-            this.node.style.left = '50%';
-            this.node.style.top = '50%';
-            this.node.style.marginTop = (-this.outerHeight / 1.4) + 'px';
-            this.node.style.marginLeft = (-this.outerWidth / 2) + 'px';
         };
         Target.prototype.setOpenStyle = function () {
             var _this = this;
@@ -380,19 +414,19 @@ var ModalWindowView;
             this.outerCheck();
             this.setNodeStyle();
             setTimeout(function () {
-                _this.node.classList.add('openStyle');
+                _this.body.classList.add('openStyle');
                 setTimeout(function () {
-                    _this.node.classList.add('anime');
+                    _this.body.classList.add('anime');
                     _this.node.style.opacity = '1';
-                    _this.node.classList.remove('openStyle');
+                    _this.body.classList.remove('openStyle');
                 }, 50);
             }, 50);
         };
         Target.prototype.setCloseStyle = function () {
             var _this = this;
             setTimeout(function () {
-                _this.node.classList.remove('anime');
-                _this.node.classList.add('openStyle');
+                _this.body.classList.remove('anime');
+                _this.body.classList.add('openStyle');
                 setTimeout(function () {
                     _this.hideStyle();
                 }, 50);
@@ -535,6 +569,7 @@ var ModalWindowModel;
             this.triggerList = triggerList;
             this.setTriggerCallBack();
             this.setTriggerTargetId();
+            this.setTargetCallBack();
             this.setBackDropCallBack();
         }
         ModalWindow.fromData = function (data) {
@@ -550,6 +585,17 @@ var ModalWindowModel;
                 trigger.view.close(function (target) {
                     trigger.close(_this.targetList);
                     _this.backDrop.hide();
+                }, true);
+            });
+        };
+        ModalWindow.prototype.setTargetCallBack = function () {
+            var _this = this;
+            this.targetList.forEach(function (target) {
+                target.view.click(function () {
+                    target.close();
+                    if (!_this.openCheck()) {
+                        _this.backDrop.hide();
+                    }
                 }, true);
             });
         };

@@ -23,6 +23,7 @@ module ModalWindowModel {
       ) {
       this.setTriggerCallBack();
       this.setTriggerTargetId();
+      this.setTargetCallBack();
       this.setBackDropCallBack();
     }
 
@@ -50,6 +51,18 @@ module ModalWindowModel {
         trigger.view.close((target) => {
           trigger.close(this.targetList);
           this.backDrop.hide();
+        }, true);
+      });
+    }
+
+    private setTargetCallBack(): void {
+      this.targetList.forEach((target: Target) => {
+        target.view.click(() => {
+          target.close();
+
+          if(!this.openCheck()) {
+            this.backDrop.hide();
+          }
         }, true);
       });
     }
