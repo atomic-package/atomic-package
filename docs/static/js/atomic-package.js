@@ -360,17 +360,25 @@ var ModalWindowView;
                 outerHeight: node.offsetHeight
             };
         };
-        Target.prototype.setNodeStyle = function () {
-        };
-        Target.prototype.setOpenStyle = function () {
-            var _this = this;
+        Target.prototype.showStyle = function () {
             this.node.style.display = 'block';
             this.node.style.opacity = '0';
-            this.outerCheck();
+        };
+        Target.prototype.hideStyle = function () {
+            this.node.style.opacity = '0';
+            this.node.style.display = 'none';
+        };
+        Target.prototype.setNodeStyle = function () {
             this.node.style.left = '50%';
             this.node.style.top = '50%';
             this.node.style.marginTop = (-this.outerHeight / 1.4) + 'px';
             this.node.style.marginLeft = (-this.outerWidth / 2) + 'px';
+        };
+        Target.prototype.setOpenStyle = function () {
+            var _this = this;
+            this.showStyle();
+            this.outerCheck();
+            this.setNodeStyle();
             setTimeout(function () {
                 _this.node.classList.add('openStyle');
                 setTimeout(function () {
@@ -386,8 +394,7 @@ var ModalWindowView;
                 _this.node.classList.remove('anime');
                 _this.node.classList.add('openStyle');
                 setTimeout(function () {
-                    _this.node.style.opacity = '0';
-                    _this.node.style.display = 'none';
+                    _this.hideStyle();
                 }, 50);
             }, 50);
         };

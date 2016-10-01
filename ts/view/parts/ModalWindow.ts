@@ -69,7 +69,6 @@ module ModalWindowView {
       }
 
       this.outerCheck();
-
       this.setCloseStyle();
     }
 
@@ -115,20 +114,27 @@ module ModalWindowView {
       }
     }
 
-    private setNodeStyle() {
-
-    }
-
-    private setOpenStyle() {
+    private showStyle() {
       (<HTMLElement>this.node).style.display = 'block';
       (<HTMLElement>this.node).style.opacity = '0';
+    }
 
-      this.outerCheck();
+    private hideStyle() {
+      (<HTMLElement>this.node).style.opacity = '0';
+      (<HTMLElement>this.node).style.display = 'none';
+    }
 
+    private setNodeStyle() {
       (<HTMLElement>this.node).style.left = '50%';
       (<HTMLElement>this.node).style.top = '50%';
       (<HTMLElement>this.node).style.marginTop = (- this.outerHeight / 1.4 ) + 'px';
       (<HTMLElement>this.node).style.marginLeft = (- this.outerWidth / 2 ) + 'px';
+    }
+
+    private setOpenStyle() {
+      this.showStyle();
+      this.outerCheck();
+      this.setNodeStyle();
 
       //APView.loop();
 
@@ -147,8 +153,7 @@ module ModalWindowView {
         this.node.classList.remove('anime');
         this.node.classList.add('openStyle');
         setTimeout(() => {
-          (<HTMLElement>this.node).style.opacity = '0';
-          (<HTMLElement>this.node).style.display = 'none';
+          this.hideStyle();
         }, 50)
       }, 50);
     }
