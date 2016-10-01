@@ -23,6 +23,7 @@ var AtomicPackages;
                 this.vendor.defaultEvent = 'touchend';
             }
             this.setRequestAnimationFrame();
+            this.setCancelAnimationFrame();
         }
         Utility.getInstance = function () {
             if (this._instance == null) {
@@ -39,6 +40,12 @@ var AtomicPackages;
             window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
                 function (callback, element) {
                     window.setTimeout(callback, 1000 / 60);
+                };
+        };
+        Utility.prototype.setCancelAnimationFrame = function () {
+            window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame ||
+                function (id) {
+                    window.clearTimeout(id);
                 };
         };
         Utility.prototype.whichPrefix = function () {

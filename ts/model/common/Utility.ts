@@ -54,7 +54,9 @@ module AtomicPackages {
         this.vendor.defaultEvent = 'touchend';
       }
 
+      // Animation
       this.setRequestAnimationFrame();
+      this.setCancelAnimationFrame();
     }
 
     /**
@@ -80,6 +82,13 @@ module AtomicPackages {
       window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
         function(callback, element) {
           window.setTimeout(callback, 1000 / 60);
+        };
+    }
+
+    private setCancelAnimationFrame() {
+      window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame ||
+        function (id) {
+          window.clearTimeout(id);
         };
     }
 
