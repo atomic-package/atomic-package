@@ -34,13 +34,13 @@ module AtomicPackages {
       } else {
         var controller = new AtomicPackages.Controller();
 
-        this.modal    = controller.modal;
-        this.btn      = controller.btn;
-        this.switcher = controller.switcher;
-        this.toggle   = controller.toggle;
-        this.sideMenu = controller.sideMenu;
-        this.scroll   = controller.smoothScroll;
-        this.dropdown = controller.dropdown;
+        this.modal     = controller.modal;
+        this.btn       = controller.btn;
+        this.switcher  = controller.switcher;
+        this.toggle    = controller.toggle;
+        this.sideMenu  = controller.sideMenu;
+        this.scroll    = controller.smoothScroll;
+        this.dropdown  = controller.dropdown;
         this.scrollSpy = controller.scrollSpy;
 
         AtomicPackage._instance = this;

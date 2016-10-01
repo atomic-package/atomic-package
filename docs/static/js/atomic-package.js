@@ -1,5 +1,99 @@
 var AtomicPackages;
 (function (AtomicPackages) {
+    var Utility = (function () {
+        function Utility() {
+            this._FAKE_ELEMENT = 'fakeelement';
+            if (Utility._instance) {
+                return Utility._instance;
+            }
+            else {
+                Utility._instance = this;
+            }
+            this.support = {
+                touch: ('ontouchstart' in window)
+            };
+            this.vendor = {
+                defaultEvent: 'click',
+                transitionend: this.whichTransitionEvent(),
+                animationend: this.whichAnimationEvent(),
+                prefix: this.whichPrefix(),
+                transform: this.whichTransform()
+            };
+            if (this.support.touch) {
+                this.vendor.defaultEvent = 'touchend';
+            }
+            this.setRequestAnimationFrame();
+        }
+        Utility.getInstance = function () {
+            if (this._instance == null) {
+                return new Utility();
+            }
+            else {
+                return Utility._instance;
+            }
+        };
+        Utility.prototype.createFakeElement = function () {
+            return document.createElement(this._FAKE_ELEMENT);
+        };
+        Utility.prototype.setRequestAnimationFrame = function () {
+            window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+                function (callback, element) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        };
+        Utility.prototype.whichPrefix = function () {
+            return (/webkit/i).test(navigator.appVersion) ? '-webkit-' : (/firefox/i).test(navigator.userAgent) ? '-moz-' :
+                (/trident/i).test(navigator.userAgent) ? '-ms-' : 'opera' in window ? '-o-' : '';
+        };
+        Utility.prototype.whichTransform = function () {
+            var t, el = this.createFakeElement();
+            var transform = {
+                'transform': 'transform',
+                'OTransform': 'OTransform',
+                'MozTransform': 'MozTransform',
+                'webkitTransform': 'webkitTransform'
+            };
+            for (t in transform) {
+                if (el.style[t] !== undefined) {
+                    return transform[t];
+                }
+            }
+        };
+        Utility.prototype.whichAnimationEvent = function () {
+            var t, el = this.createFakeElement();
+            var animations = {
+                'animation': 'animationend',
+                'OAnimation': 'oAnimationEnd',
+                'MozAnimation': 'animationend',
+                'WebkitAnimation': 'webkitAnimationEnd'
+            };
+            for (t in animations) {
+                if (el.style[t] !== undefined) {
+                    return animations[t];
+                }
+            }
+        };
+        Utility.prototype.whichTransitionEvent = function () {
+            var t, el = this.createFakeElement();
+            var transitions = {
+                'transition': 'transitionend',
+                'OTransition': 'oTransitionEnd',
+                'MozTransition': 'transitionend',
+                'WebkitTransition': 'webkitTransitionEnd'
+            };
+            for (t in transitions) {
+                if (el.style[t] !== undefined) {
+                    return transitions[t];
+                }
+            }
+        };
+        Utility._instance = null;
+        return Utility;
+    }());
+    AtomicPackages.Utility = Utility;
+})(AtomicPackages || (AtomicPackages = {}));
+var AtomicPackages;
+(function (AtomicPackages) {
     var Model = (function () {
         function Model() {
         }
@@ -179,6 +273,19 @@ var AtomicPackages;
             });
             return targetViewList;
         };
+        View.loop = function () {
+            var startTime = new Date().getTime();
+            function step(timestamp) {
+                var progress = timestamp - startTime;
+                var currentTime = new Date().getTime();
+                var status = (startTime - currentTime);
+                console.log(status);
+                if (progress < 2000) {
+                    requestAnimationFrame(step);
+                }
+            }
+            requestAnimationFrame(step);
+        };
         return View;
     }());
     AtomicPackages.View = View;
@@ -209,11 +316,13 @@ var ModalWindowView;
     }());
     ModalWindowView.ModalWindow = ModalWindow;
     var Target = (function () {
-        function Target(id, idName, className, isOpen, node) {
+        function Target(id, idName, className, isOpen, outerWidth, outerHeight, node) {
             this.id = id;
             this.idName = idName;
             this.className = className;
             this.isOpen = isOpen;
+            this.outerWidth = outerWidth;
+            this.outerHeight = outerHeight;
             this.node = node;
             this._OPEN_CLASS_NAME = 'open';
             this._DEFAULT_ID_NAME = 'modalWindow';
@@ -226,9 +335,11 @@ var ModalWindowView;
             if (this.className == null) {
                 this.className = this._DEFAULT_CLASS_NAME;
             }
+            this.outerCheck();
+            this.setCloseStyle();
         }
         Target.fromData = function (data) {
-            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.node ? data.node : null);
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.outerWidth ? data.outerWidth : 0, data.outerHeight ? data.outerHeight : 0, data.node ? data.node : null);
         };
         Target.create = function () {
             return this.fromData({});
@@ -236,13 +347,55 @@ var ModalWindowView;
         Target.prototype.createModalWindowId = function () {
             return ++_created_modal_window_num;
         };
+        Target.prototype.outerCheck = function () {
+            if (this.outerWidth === 0 || this.outerHeight === 0) {
+                this.outerWidth = this.getStyle(this.node).outerWidth;
+                this.outerHeight = this.getStyle(this.node).outerHeight;
+            }
+        };
+        Target.prototype.getStyle = function (node) {
+            var styles = node.currentStyle || document.defaultView.getComputedStyle(node, '');
+            return {
+                outerWidth: node.offsetWidth,
+                outerHeight: node.offsetHeight
+            };
+        };
+        Target.prototype.setNodeStyle = function () {
+        };
+        Target.prototype.setOpenStyle = function () {
+            var _this = this;
+            this.node.style.display = 'block';
+            this.node.style.opacity = '0';
+            this.outerCheck();
+            this.node.style.left = '50%';
+            this.node.style.top = '50%';
+            this.node.style.marginTop = (-this.outerHeight / 1.4) + 'px';
+            this.node.style.marginLeft = (-this.outerWidth / 2) + 'px';
+            setTimeout(function () {
+                _this.node.classList.add('openStyle');
+                setTimeout(function () {
+                    _this.node.classList.add('anime');
+                    _this.node.style.opacity = '1';
+                    _this.node.classList.remove('openStyle');
+                }, 50);
+            }, 50);
+        };
+        Target.prototype.setCloseStyle = function () {
+            var _this = this;
+            setTimeout(function () {
+                _this.node.classList.remove('anime');
+                _this.node.classList.add('openStyle');
+                setTimeout(function () {
+                    _this.node.style.opacity = '0';
+                    _this.node.style.display = 'none';
+                }, 50);
+            }, 50);
+        };
         Target.prototype.open = function () {
-            this.node.classList.add(this._OPEN_CLASS_NAME);
+            this.setOpenStyle();
         };
         Target.prototype.close = function () {
-            if (this.node.classList.contains(this._OPEN_CLASS_NAME)) {
-                this.node.classList.remove(this._OPEN_CLASS_NAME);
-            }
+            this.setCloseStyle();
         };
         Target.prototype.addIdName = function (idName) {
             this.node.id = idName;
@@ -2222,75 +2375,3 @@ if (typeof (global) !== 'undefined') {
         global['AP'] = new AtomicPackages.AtomicPackage({});
     }
 }
-var AtomicPackages;
-(function (AtomicPackages) {
-    var Utility = (function () {
-        function Utility() {
-            this._FAKE_ELEMENT = 'fakeelement';
-            this.support = {
-                touch: ('ontouchstart' in window)
-            };
-            this.vendor = {
-                defaultEvent: 'click',
-                transitionend: this.whichTransitionEvent(),
-                animationend: this.whichAnimationEvent(),
-                prefix: this.whichPrefix(),
-                transform: this.whichTransform()
-            };
-            if (this.support.touch) {
-                this.vendor.defaultEvent = 'touchend';
-            }
-        }
-        Utility.prototype.createFakeElement = function () {
-            return document.createElement(this._FAKE_ELEMENT);
-        };
-        Utility.prototype.whichPrefix = function () {
-            return (/webkit/i).test(navigator.appVersion) ? '-webkit-' : (/firefox/i).test(navigator.userAgent) ? '-moz-' :
-                (/trident/i).test(navigator.userAgent) ? '-ms-' : 'opera' in window ? '-o-' : '';
-        };
-        Utility.prototype.whichTransform = function () {
-            var t, el = this.createFakeElement();
-            var transform = {
-                'transform': 'transform',
-                'OTransform': 'OTransform',
-                'MozTransform': 'MozTransform',
-                'webkitTransform': 'webkitTransform'
-            };
-            for (t in transform) {
-                if (el.style[t] !== undefined) {
-                    return transform[t];
-                }
-            }
-        };
-        Utility.prototype.whichAnimationEvent = function () {
-            var t, el = this.createFakeElement();
-            var animations = {
-                'animation': 'animationend',
-                'OAnimation': 'oAnimationEnd',
-                'MozAnimation': 'animationend',
-                'WebkitAnimation': 'webkitAnimationEnd'
-            };
-            for (t in animations) {
-                if (el.style[t] !== undefined) {
-                    return animations[t];
-                }
-            }
-        };
-        Utility.prototype.whichTransitionEvent = function () {
-            var t, el = this.createFakeElement();
-            var transitions = {
-                'transition': 'transitionend',
-                'OTransition': 'oTransitionEnd',
-                'MozTransition': 'transitionend',
-                'WebkitTransition': 'webkitTransitionEnd'
-            };
-            for (t in transitions) {
-                if (el.style[t] !== undefined) {
-                    return transitions[t];
-                }
-            }
-        };
-        return Utility;
-    }());
-    AtomicPackages.Utility = Utility;
-})(AtomicPackages || (AtomicPackages = {}));

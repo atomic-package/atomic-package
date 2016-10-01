@@ -23,6 +23,8 @@ module AtomicPackages {
    * @param option
    */
   export class Utility {
+    private static _instance: Utility = null;
+
     private _FAKE_ELEMENT: string = 'fakeelement';
 
     private support: support;
@@ -30,9 +32,16 @@ module AtomicPackages {
 
     constructor(
       ) {
+      if (Utility._instance) {
+        return Utility._instance;
+      } else {
+        Utility._instance = this;
+      }
+
       this.support = {
         touch: ('ontouchstart' in window)
       };
+
       this.vendor = {
         defaultEvent: 'click',
         transitionend: this.whichTransitionEvent(),
@@ -40,15 +49,43 @@ module AtomicPackages {
         prefix: this.whichPrefix(),
         transform: this.whichTransform()
       };
+
       if (this.support.touch) {
         this.vendor.defaultEvent = 'touchend';
       }
+
+      this.setRequestAnimationFrame();
     }
 
+    /**
+     * Public Static Function
+    **/
+    public static getInstance(): Utility {
+      if (this._instance == null) {
+        return new Utility();
+      } else {
+        return Utility._instance;
+      }
+    }
+
+    /**
+     * Private Function
+    **/
     private createFakeElement(): HTMLElement {
       return document.createElement(this._FAKE_ELEMENT);
     }
 
+    // RequestAnimationFrame
+    private setRequestAnimationFrame() {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback, element) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+    }
+
+    /**
+     * Public Function
+    **/
     public whichPrefix() {
       return (/webkit/i).test(navigator.appVersion) ? '-webkit-' : (/firefox/i).test(navigator.userAgent) ? '-moz-' :
         (/trident/i).test(navigator.userAgent) ? '-ms-' : 'opera' in window ? '-o-' : '';
@@ -105,5 +142,4 @@ module AtomicPackages {
       }
     }
   }
-
 }

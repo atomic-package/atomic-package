@@ -6,6 +6,7 @@
 module ModalWindowView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
+  import Utility = AtomicPackages.Utility;
 
   var _created_modal_window_num: number = 0;
   var _created_trigger_num: number = 0;
@@ -52,6 +53,8 @@ module ModalWindowView {
       public idName: string,
       public className: string,
       public isOpen: boolean,
+      public outerWidth: number,
+      public outerHeight: number,
       public node: any
       ) {
       this.id = this.createModalWindowId();
@@ -64,6 +67,10 @@ module ModalWindowView {
       if(this.className == null) {
         this.className = this._DEFAULT_CLASS_NAME;
       }
+
+      this.outerCheck();
+
+      this.setCloseStyle();
     }
 
     /**
@@ -75,6 +82,8 @@ module ModalWindowView {
         data.node && data.node.id ? data.node.id : null,
         data.node && data.node.className ? data.node.className : null,
         false,
+        data.outerWidth ? data.outerWidth : 0,
+        data.outerHeight ? data.outerHeight : 0,
         data.node ? data.node : null
       );
     }
@@ -85,22 +94,78 @@ module ModalWindowView {
 
     /**
      * Private Function
-     **/
+    **/
     private createModalWindowId(): number {
       return ++_created_modal_window_num;
+    }
+
+    private outerCheck() {
+      if(this.outerWidth === 0 || this.outerHeight === 0) {
+        this.outerWidth  = this.getStyle(this.node).outerWidth;
+        this.outerHeight = this.getStyle(this.node).outerHeight;
+      }
+    }
+
+    private getStyle(node) {
+      var styles = (<any>node).currentStyle || (<any>document.defaultView).getComputedStyle(node, '');
+
+      return {
+        outerWidth: node.offsetWidth,
+        outerHeight: node.offsetHeight
+      }
+    }
+
+    private setNodeStyle() {
+
+    }
+
+    private setOpenStyle() {
+      (<HTMLElement>this.node).style.display = 'block';
+      (<HTMLElement>this.node).style.opacity = '0';
+
+      this.outerCheck();
+
+      (<HTMLElement>this.node).style.left = '50%';
+      (<HTMLElement>this.node).style.top = '50%';
+      (<HTMLElement>this.node).style.marginTop = (- this.outerHeight / 1.4 ) + 'px';
+      (<HTMLElement>this.node).style.marginLeft = (- this.outerWidth / 2 ) + 'px';
+
+      //APView.loop();
+
+      setTimeout(() => {
+        this.node.classList.add('openStyle');
+        setTimeout(() => {
+          this.node.classList.add('anime');
+          (<HTMLElement>this.node).style.opacity = '1';
+          this.node.classList.remove('openStyle');
+        }, 50)
+      }, 50);
+    }
+
+    private setCloseStyle() {
+      setTimeout(() => {
+        this.node.classList.remove('anime');
+        this.node.classList.add('openStyle');
+        setTimeout(() => {
+          (<HTMLElement>this.node).style.opacity = '0';
+          (<HTMLElement>this.node).style.display = 'none';
+        }, 50)
+      }, 50);
     }
 
     /**
      * Public Function
      **/
     public open() {
-      this.node.classList.add(this._OPEN_CLASS_NAME);
+      this.setOpenStyle();
+      //this.node.classList.add(this._OPEN_CLASS_NAME);
     }
 
     public close() {
-      if(this.node.classList.contains(this._OPEN_CLASS_NAME)) {
-        this.node.classList.remove(this._OPEN_CLASS_NAME);
-      }
+      this.setCloseStyle();
+//      if(this.node.classList.contains(this._OPEN_CLASS_NAME)) {
+//        this.node.classList.remove(this._OPEN_CLASS_NAME);
+//      }
     }
 
     public addIdName(idName: string) {

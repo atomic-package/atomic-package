@@ -46,7 +46,6 @@ module AtomicPackages {
       this.smoothScroll = new SmoothScroll();
       this.dropdown     = new Dropdown();
       this.scrollSpy    = new ScrollSpy();
-
     }
   }
 }

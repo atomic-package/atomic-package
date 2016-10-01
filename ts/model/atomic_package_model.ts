@@ -2,6 +2,7 @@
  * Author: Daisuke Takayama
  */
 /// <reference path='../_all.ts' />
+/// <reference path='common/Utility.ts' />
 
 module AtomicPackages {
   interface Type {
