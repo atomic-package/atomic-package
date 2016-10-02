@@ -576,10 +576,10 @@ var ModalWindowView;
     var BackDrop = (function () {
         function BackDrop() {
             this._BACKDROP_ELEMENT_CLASS_NAME = 'modalWindowBackDrop';
-            this._SHOW_CLASS_NAME = 'show';
             this.callBackFunction = function () { };
             this.createElement();
             this.setEventListener();
+            this.defaultStyle();
         }
         BackDrop.fromData = function (data) {
             return new BackDrop();
@@ -591,18 +591,78 @@ var ModalWindowView;
                 _this.click(_this.callBackFunction);
             }, false);
         };
+        BackDrop.prototype.defaultStyle = function () {
+            this.node.style.position = 'fixed';
+            this.node.style.top = '0';
+            this.node.style.display = 'none';
+            this.node.style.width = '100%';
+            this.node.style.height = '100%';
+            this.node.style.opacity = '0';
+            this.node.style.background = 'rgba(0, 0, 0, 0.6)';
+        };
+        BackDrop.prototype.showStartStyle = function () {
+            this.node.style.display = 'block';
+        };
+        BackDrop.prototype.showFixedStyle = function () {
+            this.node.style.opacity = '1';
+        };
+        BackDrop.prototype.setOpenStyle = function () {
+            this.showStartStyle();
+            this.showAnimation();
+        };
+        BackDrop.prototype.hideFixedStyle = function () {
+            this.node.style.display = 'none';
+            this.node.style.opacity = '0';
+        };
+        BackDrop.prototype.showAnimation = function () {
+            var _this = this;
+            var tween = new Tween({
+                opacity: this.node.style.opacity
+            }, {
+                opacity: 1
+            }, {
+                duration: 200,
+                easing: 'easeInOutQuad',
+                step: function (val) {
+                    _this.node.style.opacity = val.opacity;
+                },
+                complete: function () {
+                    tween = null;
+                    _this.showFixedStyle();
+                }
+            });
+        };
+        BackDrop.prototype.closeAnimation = function () {
+            var _this = this;
+            var tween = new Tween({
+                opacity: 1
+            }, {
+                opacity: 0
+            }, {
+                duration: 300,
+                easing: 'easeInOutQuad',
+                step: function (val) {
+                    _this.node.style.opacity = val.opacity;
+                },
+                complete: function () {
+                    _this.hideFixedStyle();
+                    tween = null;
+                }
+            });
+        };
+        BackDrop.prototype.setCloseStyle = function () {
+            this.closeAnimation();
+        };
         BackDrop.prototype.createElement = function () {
             this.node = document.createElement("div");
             this.node.classList.add(this._BACKDROP_ELEMENT_CLASS_NAME);
             document.body.appendChild(this.node);
         };
         BackDrop.prototype.show = function () {
-            this.node.classList.add(this._SHOW_CLASS_NAME);
+            this.setOpenStyle();
         };
         BackDrop.prototype.hide = function () {
-            if (this.node.classList.contains(this._SHOW_CLASS_NAME)) {
-                this.node.classList.remove(this._SHOW_CLASS_NAME);
-            }
+            this.setCloseStyle();
         };
         BackDrop.prototype.click = function (fn, isFirst) {
             this.callBackFunction = fn;

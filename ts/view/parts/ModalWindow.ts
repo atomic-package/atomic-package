@@ -142,7 +142,7 @@ module ModalWindowView {
       }
     }
 
-    private defaultStyle() {
+    private defaultStyle(): void {
       // modal
       (<HTMLElement>this.node).style.display = 'none';
       (<HTMLElement>this.node).style.position = 'fixed';
@@ -161,7 +161,7 @@ module ModalWindowView {
       (<HTMLElement>this.body).style.opacity = '0';
     }
 
-    private showStartStyle() {
+    private showStartStyle(): void {
       // modal
       (<HTMLElement>this.node).style.display = 'block';
 
@@ -273,8 +273,6 @@ module ModalWindowView {
    **/
   export class BackDrop {
     private _BACKDROP_ELEMENT_CLASS_NAME: string = 'modalWindowBackDrop';
-    private _SHOW_CLASS_NAME: string = 'show';
-
     private callBackFunction: Function = () => {};
     private node: any;
 
@@ -282,8 +280,7 @@ module ModalWindowView {
       ) {
       this.createElement();
       this.setEventListener();
-
-
+      this.defaultStyle();
     }
 
     /**
@@ -303,6 +300,74 @@ module ModalWindowView {
       }, false);
     }
 
+    private defaultStyle(): void {
+      (<HTMLElement>this.node).style.position = 'fixed';
+      (<HTMLElement>this.node).style.top = '0';
+      (<HTMLElement>this.node).style.display = 'none';
+      (<HTMLElement>this.node).style.width = '100%';
+      (<HTMLElement>this.node).style.height = '100%';
+      (<HTMLElement>this.node).style.opacity = '0';
+      (<HTMLElement>this.node).style.background = 'rgba(0, 0, 0, 0.6)';
+    }
+
+    private showStartStyle(): void {
+      (<HTMLElement>this.node).style.display = 'block';
+    }
+
+    private showFixedStyle(): void {
+      (<HTMLElement>this.node).style.opacity = '1';
+    }
+
+    private setOpenStyle() {
+      this.showStartStyle();
+      this.showAnimation();
+    }
+
+    private hideFixedStyle() : void {
+      (<HTMLElement>this.node).style.display = 'none';
+      (<HTMLElement>this.node).style.opacity = '0';
+    }
+
+    private showAnimation() {
+      var tween = new Tween({
+        opacity: (<HTMLElement>this.node).style.opacity
+      }, {
+        opacity: 1
+      }, {
+        duration: 200,
+        easing: 'easeInOutQuad',
+        step: (val) => {
+          (<HTMLElement>this.node).style.opacity = val.opacity;
+        },
+        complete: () => {
+          tween = null;
+          this.showFixedStyle();
+        }
+      });
+    }
+
+    private closeAnimation() {
+      var tween = new Tween({
+        opacity: 1
+      }, {
+        opacity: 0
+      }, {
+        duration: 300,
+        easing: 'easeInOutQuad',
+        step: (val) => {
+          (<HTMLElement>this.node).style.opacity = val.opacity;
+        },
+        complete: () => {
+          this.hideFixedStyle();
+          tween = null;
+        }
+      });
+    }
+
+    private setCloseStyle() {
+      this.closeAnimation();
+    }
+
     /**
      * Public Function
      **/
@@ -314,13 +379,11 @@ module ModalWindowView {
     }
 
     public show(): void {
-      this.node.classList.add(this._SHOW_CLASS_NAME);
+      this.setOpenStyle();
     }
 
     public hide(): void {
-      if(this.node.classList.contains(this._SHOW_CLASS_NAME)) {
-        this.node.classList.remove(this._SHOW_CLASS_NAME);
-      }
+      this.setCloseStyle();
     }
 
     public click(fn, isFirst?): void {
