@@ -35,6 +35,7 @@ input[type="radio"] {
   background: #fff;
   &:focus {
   }
+
   &:checked {
     &::before {
       @include createStyle;
@@ -46,6 +47,7 @@ input[type="radio"] {
       background: #1397E1;
     }
   }
+
   &:disabled {
     opacity: 0.5;
   }
@@ -54,7 +56,7 @@ input[type="radio"] {
 input[type="text"],
 input[type="search"],
 input[type="password"] {
-  border: #3D3D3D 1px solid;
+  border: #979797 1px solid;
   height: 28px;
   box-sizing: border-box;
 }

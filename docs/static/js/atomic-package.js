@@ -478,7 +478,6 @@ var ModalWindowView;
             }
         };
         Target.prototype.getStyle = function (node) {
-            var styles = node.currentStyle || document.defaultView.getComputedStyle(node, '');
             return {
                 outerWidth: node.offsetWidth,
                 outerHeight: node.offsetHeight
@@ -523,22 +522,26 @@ var ModalWindowView;
         };
         Target.prototype.showAnimation = function () {
             var _this = this;
-            var tween = new Tween({
-                opacity: this.body.style.opacity,
-                scale: 0.4
-            }, {
-                opacity: 1,
-                scale: 1
-            }, {
-                duration: 200,
-                easing: 'easeInOutQuad',
-                step: function (val) {
-                    _this.body.style.opacity = val.opacity;
-                    _this.body.style[_this.transform] = 'scale(' + val.scale + ')';
+            var tween = Tween.fromData({
+                start: {
+                    opacity: this.body.style.opacity,
+                    scale: 0.4
                 },
-                complete: function () {
-                    tween = null;
-                    _this.showFixedStyle();
+                end: {
+                    opacity: 1,
+                    scale: 1
+                },
+                option: {
+                    duration: 200,
+                    easing: 'easeInOutCubic',
+                    step: function (val) {
+                        _this.body.style.opacity = val.opacity;
+                        _this.body.style[_this.transform] = 'scale(' + val.scale + ')';
+                    },
+                    complete: function () {
+                        tween = null;
+                        _this.showFixedStyle();
+                    }
                 }
             });
         };
@@ -547,22 +550,26 @@ var ModalWindowView;
         };
         Target.prototype.closeAnimation = function () {
             var _this = this;
-            var tween = new Tween({
-                opacity: 1,
-                scale: 1
-            }, {
-                opacity: 0,
-                scale: 0.7
-            }, {
-                duration: 150,
-                easing: 'easeInOutQuad',
-                step: function (val) {
-                    _this.body.style.opacity = val.opacity;
-                    _this.body.style[_this.transform] = 'scale(' + val.scale + ')';
+            var tween = Tween.fromData({
+                start: {
+                    opacity: 1,
+                    scale: 1
                 },
-                complete: function () {
-                    _this.hideFixedStyle();
-                    tween = null;
+                end: {
+                    opacity: 0,
+                    scale: 0.7
+                },
+                option: {
+                    duration: 150,
+                    easing: 'easeOutCubic',
+                    step: function (val) {
+                        _this.body.style.opacity = val.opacity;
+                        _this.body.style[_this.transform] = 'scale(' + val.scale + ')';
+                    },
+                    complete: function () {
+                        _this.hideFixedStyle();
+                        tween = null;
+                    }
                 }
             });
         };
@@ -597,8 +604,8 @@ var ModalWindowView;
         };
         BackDrop.prototype.setEventListener = function () {
             var _this = this;
-            this.node.addEventListener('click', function (e) {
-                e.preventDefault();
+            this.node.addEventListener('click', function (event) {
+                event.preventDefault();
                 _this.click(_this.callBackFunction);
             }, false);
         };
@@ -726,8 +733,8 @@ var ModalWindowView;
         };
         Trigger.prototype.setEventListener = function () {
             var _this = this;
-            this.node.addEventListener('click', function (e) {
-                e.preventDefault();
+            this.node.addEventListener('click', function (event) {
+                event.preventDefault();
                 if (_this.isOpener) {
                     _this.open(_this.openCallBackFunction);
                 }

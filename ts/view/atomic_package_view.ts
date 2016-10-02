@@ -56,8 +56,8 @@ module AtomicPackages {
     **/
     public static createTargetView(triggerList, target) {
       var selectors: string[] = this.getTargetSelectors(triggerList),
-          targetNodeList = this.getTargetNodeList(selectors),
-          createTargetList = this.createFromTargetsElement(targetNodeList, target);
+          targetNodeList      = this.getTargetNodeList(selectors),
+          createTargetList    = this.createFromTargetsElement(targetNodeList, target);
 
       return this.getTargetViewList(createTargetList);
     }
