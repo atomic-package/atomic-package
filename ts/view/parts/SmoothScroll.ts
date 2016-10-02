@@ -6,9 +6,10 @@
 module SmoothScrollView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
+  import Tween   = AtomicPackages.Tween;
 
-  var _created_scroll_trigger_num: number  = 0,
-      _created_scroll_target_num: number = 0;
+  var _created_scroll_trigger_num: number = 0,
+      _created_scroll_target_num: number  = 0;
 
   /**
    * SmoothScroll View Class
@@ -16,33 +17,16 @@ module SmoothScrollView {
    * @param option
   **/
   export class SmoothScroll {
-    private triggerList = [];
-
     static fetchElements(callback): void {
       document.addEventListener("DOMContentLoaded", () => {
-        this.triggerList = this.createFromTriggerElement();
+        var triggerList = APView.createFromTriggerElement(['[data-ap-scroll]'], Trigger);
 
         callback({
-          triggerList: this.triggerList,
-          targetList: this.createTargetView(this.triggerList)
+          triggerList: triggerList,
+          //targetList: APView.createTargetView(triggerList, Target)
+          targetList: this.createTargetView(triggerList)
         });
       });
-    }
-
-    public static createFromTriggerElement() {
-      var triggerList = [],
-          triggerViewList = [];
-
-      // とりあえず [data-ap-scroll]のみ取得
-      triggerList.push(document.querySelectorAll('[data-ap-scroll]'));
-
-      triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          triggerViewList.push(Trigger.fromData(nodeList[i]));
-        }
-      });
-
-      return triggerViewList;
     }
 
     public static createTargetView(triggerList) {
@@ -66,22 +50,10 @@ module SmoothScrollView {
         targetList.push(document.querySelectorAll(selectors[i]));
       }
 
-      var createTargetList = this.createFromTargetsElement(targetList);
+      var createTargetList = APView.createFromTargetsElement(targetList, Target);
 
       createTargetList.forEach((createTarget: any) => {
         targetViewList.push(createTarget);
-      });
-
-      return targetViewList;
-    }
-
-    public static createFromTargetsElement(targetList) {
-      var targetViewList = [];
-
-      targetList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
-          targetViewList.push(Target.fromData({ node: nodeList[i] }));
-        }
       });
 
       return targetViewList;
@@ -93,9 +65,9 @@ module SmoothScrollView {
    * SmoothScroll Trigger View Class
    * @public
    * @param option
-   **/
+  **/
   export class Trigger {
-    private toggleCallBackFunction: Function = () => {};
+    private clickCallBackFunction: Function = () => {};
 
     constructor(
       public id: number,
@@ -140,38 +112,30 @@ module SmoothScrollView {
     }
 
     private setEventListener(): void {
-      this.node.addEventListener('click', (e) => {
-        e.preventDefault();
+      this.node.addEventListener('click', (event) => {
+        event.preventDefault();
 
-        this.toggle(this.toggleCallBackFunction);
+        this.click(this.clickCallBackFunction);
       }, false);
     }
 
     /**
      * Public Function
      **/
-    public toggle(fn?, isFirst?): void {
-      this.toggleCallBackFunction = fn;
+    public click(fn?, isFirst?): void {
+      this.clickCallBackFunction = fn;
 
       if(!isFirst) {
         fn(this);
       }
     }
 
-    public getItemNode(node) {
-      //return this.getChildren(node);
-    }
-
-    public resetSelectedClassName() {
-
-    }
-
-    public setMoveCoordinate() {
+    public setMoveCoordinate(): void {
       this.moveCoordinate = parseInt(this.target, 10);
       this.target = null;
     }
 
-    public createMoveCoordinate() {
+    public createMoveCoordinate(): Target {
       return Target.fromData({
         triggerId: this.id,
         coordinate: this.coordinate + this.moveCoordinate
@@ -225,15 +189,35 @@ module SmoothScrollView {
       return rect.top + window.pageYOffset;
     }
 
-    /**
-     * Public Function
-     **/
-    public getItemNode(node) {
-      //return this.getChildren(node);
+    private fixedScroll(scrollTarget) {
+      scrollTarget.scrollTop = this.coordinate;
     }
 
+    /**
+     * Public Function
+    **/
     public scroll() {
-      window.scrollTo(0, this.coordinate);
+      var target = navigator.userAgent.indexOf('WebKit') < 0 ? document.documentElement : document.body;
+
+      var tween = Tween.fromData({
+        start: {
+          scrollTop: window.pageYOffset
+        },
+        end: {
+          scrollTop: this.coordinate
+        },
+        option: {
+          duration: 500,
+          easing: 'easeOutCubic',
+          step: (val) => {
+            target.scrollTop = val.scrollTop;
+          },
+          complete: () => {
+            tween = null;
+            this.fixedScroll(target);
+          }
+        }
+      });
     }
   }
 }

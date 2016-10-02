@@ -22,7 +22,7 @@ module SmoothScrollModel {
 
     /**
      * Static Function
-     **/
+    **/
     public static fromData(data: any): SmoothScroll {
       return new SmoothScroll(
         data.targetList ? APModel.createTargetModel(data.targetList, Target) : [],
@@ -32,7 +32,7 @@ module SmoothScrollModel {
 
     /**
      * Private Function
-     **/
+    **/
     private setTriggerTargetId() {
       for(var i: number = 0; i < this.triggerList.length; i++) {
         this.triggerList[i].setTargetId(this.targetList);
@@ -41,15 +41,15 @@ module SmoothScrollModel {
 
     private setTriggerCallBack(): void {
       this.triggerList.forEach((trigger: Trigger) => {
-        trigger.view.toggle((triggerView) => {
-          this.toggleContents(trigger);
+        trigger.view.click((triggerView) => {
+          this.triggerClick(trigger);
         }, true);
       });
     }
 
-    private toggleContents(trigger: Trigger): void {
+    private triggerClick(trigger: Trigger): void {
       for(var i: number = 0; i < this.targetList.length; i++) {
-        this.targetList[i].toggle(trigger);
+        this.targetList[i].scroll(trigger);
       }
     }
   }
@@ -67,7 +67,7 @@ module SmoothScrollModel {
       public target: any,
       public targetId: number,
       public coordinate: number,
-      public view: ToggleView.Trigger
+      public view: SmoothScrollView.Trigger
       ) {
     }
 
@@ -134,7 +134,7 @@ module SmoothScrollModel {
     /**
      * Private Function
     **/
-    public toggle(trigger: Trigger): void {
+    public scroll(trigger: Trigger): void {
       if(trigger.targetId == this.id) {
         this.view.scroll();
       }

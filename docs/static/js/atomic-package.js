@@ -316,6 +316,11 @@ var AtomicPackages;
                 if ((t /= d / 2) < 1)
                     return c / 2 * t * t * t + b;
                 return c / 2 * ((t -= 2) * t * t + 2) + b;
+            },
+            easeInBack: function (t, b, c, d, s) {
+                if (s == undefined)
+                    s = 1.70158;
+                return c * (t /= d) * t * ((s + 1) * t - s) + b;
             }
         };
         return Tween;
@@ -1896,14 +1901,14 @@ var SmoothScrollModel;
         SmoothScroll.prototype.setTriggerCallBack = function () {
             var _this = this;
             this.triggerList.forEach(function (trigger) {
-                trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
+                trigger.view.click(function (triggerView) {
+                    _this.triggerClick(trigger);
                 }, true);
             });
         };
-        SmoothScroll.prototype.toggleContents = function (trigger) {
+        SmoothScroll.prototype.triggerClick = function (trigger) {
             for (var i = 0; i < this.targetList.length; i++) {
-                this.targetList[i].toggle(trigger);
+                this.targetList[i].scroll(trigger);
             }
         };
         return SmoothScroll;
@@ -1949,7 +1954,7 @@ var SmoothScrollModel;
         Target.fromData = function (data) {
             return new Target(data.id ? data.id : 1, data.triggerId ? data.triggerId : null, data.className ? data.className : null, data.idName ? data.idName : null, data.coordinate ? data.coordinate : 0, data ? data : null);
         };
-        Target.prototype.toggle = function (trigger) {
+        Target.prototype.scroll = function (trigger) {
             if (trigger.targetId == this.id) {
                 this.view.scroll();
             }
@@ -1961,30 +1966,21 @@ var SmoothScrollModel;
 var SmoothScrollView;
 (function (SmoothScrollView) {
     var APModel = AtomicPackages.Model;
+    var APView = AtomicPackages.View;
+    var Tween = AtomicPackages.Tween;
     var _created_scroll_trigger_num = 0, _created_scroll_target_num = 0;
     var SmoothScroll = (function () {
         function SmoothScroll() {
-            this.triggerList = [];
         }
         SmoothScroll.fetchElements = function (callback) {
             var _this = this;
             document.addEventListener("DOMContentLoaded", function () {
-                _this.triggerList = _this.createFromTriggerElement();
+                var triggerList = APView.createFromTriggerElement(['[data-ap-scroll]'], Trigger);
                 callback({
-                    triggerList: _this.triggerList,
-                    targetList: _this.createTargetView(_this.triggerList)
+                    triggerList: triggerList,
+                    targetList: _this.createTargetView(triggerList)
                 });
             });
-        };
-        SmoothScroll.createFromTriggerElement = function () {
-            var triggerList = [], triggerViewList = [];
-            triggerList.push(document.querySelectorAll('[data-ap-scroll]'));
-            triggerList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    triggerViewList.push(Trigger.fromData(nodeList[i]));
-                }
-            });
-            return triggerViewList;
         };
         SmoothScroll.createTargetView = function (triggerList) {
             var selectors = [], targetList = [], targetViewList = [];
@@ -2001,18 +1997,9 @@ var SmoothScrollView;
             for (var i = 0; i < selectors.length; i++) {
                 targetList.push(document.querySelectorAll(selectors[i]));
             }
-            var createTargetList = this.createFromTargetsElement(targetList);
+            var createTargetList = APView.createFromTargetsElement(targetList, Target);
             createTargetList.forEach(function (createTarget) {
                 targetViewList.push(createTarget);
-            });
-            return targetViewList;
-        };
-        SmoothScroll.createFromTargetsElement = function (targetList) {
-            var targetViewList = [];
-            targetList.forEach(function (nodeList) {
-                for (var i = 0; i < nodeList.length; i++) {
-                    targetViewList.push(Target.fromData({ node: nodeList[i] }));
-                }
             });
             return targetViewList;
         };
@@ -2028,7 +2015,7 @@ var SmoothScrollView;
             this.coordinate = coordinate;
             this.moveCoordinate = moveCoordinate;
             this.node = node;
-            this.toggleCallBackFunction = function () { };
+            this.clickCallBackFunction = function () { };
             this.id = this.createTriggerId();
             this.coordinate = this.getCoordinate(this.node);
             this.setEventListener();
@@ -2045,20 +2032,16 @@ var SmoothScrollView;
         };
         Trigger.prototype.setEventListener = function () {
             var _this = this;
-            this.node.addEventListener('click', function (e) {
-                e.preventDefault();
-                _this.toggle(_this.toggleCallBackFunction);
+            this.node.addEventListener('click', function (event) {
+                event.preventDefault();
+                _this.click(_this.clickCallBackFunction);
             }, false);
         };
-        Trigger.prototype.toggle = function (fn, isFirst) {
-            this.toggleCallBackFunction = fn;
+        Trigger.prototype.click = function (fn, isFirst) {
+            this.clickCallBackFunction = fn;
             if (!isFirst) {
                 fn(this);
             }
-        };
-        Trigger.prototype.getItemNode = function (node) {
-        };
-        Trigger.prototype.resetSelectedClassName = function () {
         };
         Trigger.prototype.setMoveCoordinate = function () {
             this.moveCoordinate = parseInt(this.target, 10);
@@ -2096,10 +2079,31 @@ var SmoothScrollView;
             var rect = node.getBoundingClientRect();
             return rect.top + window.pageYOffset;
         };
-        Target.prototype.getItemNode = function (node) {
+        Target.prototype.fixedScroll = function (scrollTarget) {
+            scrollTarget.scrollTop = this.coordinate;
         };
         Target.prototype.scroll = function () {
-            window.scrollTo(0, this.coordinate);
+            var _this = this;
+            var target = navigator.userAgent.indexOf('WebKit') < 0 ? document.documentElement : document.body;
+            var tween = Tween.fromData({
+                start: {
+                    scrollTop: window.pageYOffset
+                },
+                end: {
+                    scrollTop: this.coordinate
+                },
+                option: {
+                    duration: 500,
+                    easing: 'easeOutCubic',
+                    step: function (val) {
+                        target.scrollTop = val.scrollTop;
+                    },
+                    complete: function () {
+                        tween = null;
+                        _this.fixedScroll(target);
+                    }
+                }
+            });
         };
         return Target;
     }());
