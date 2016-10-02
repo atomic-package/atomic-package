@@ -56,10 +56,10 @@ module AtomicPackages {
         arg = {};
       }
 
-      for (var i = 1; i < arguments.length; i++) {
+      for (var i: number = 1; i < arguments.length; i++) {
         for (var key in arguments[i]) {
           if (arguments[i][key] !== null && typeof(arguments[i][key]) === "object") {
-            arg[key] = this._extend(arg[key],arguments[i][key]);
+            arg[key] = this._extend(arg[key], arguments[i][key]);
           } else {
             arg[key] = arguments[i][key];
           }
@@ -90,7 +90,7 @@ module AtomicPackages {
       return this;
     }
 
-    public update() {
+    public update(): void {
       var now = Date.now(),
           elapsedTime = now - this._startTime,
           val = {};
@@ -117,18 +117,28 @@ module AtomicPackages {
      * Easing
     **/
     public static Easing = {
-      linear: function (t, b, c, d) {
+      linear: (t, b, c, d): number => {
         return c * t / d + b;
       },
-      easeInQuad: function (t, b, c, d) {
+      easeInQuad: (t, b, c, d): number => {
         return c * (t /= d) * t + b;
       },
-      easeOutQuad: function (t, b, c, d) {
+      easeOutQuad: (t, b, c, d): number => {
         return -c * (t /= d) * (t - 2) + b;
       },
-      easeInOutQuad: function (t, b, c, d) {
+      easeInOutQuad: (t, b, c, d): number => {
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return -c / 2 * ((--t) * (t - 2) - 1) + b;
+      },
+      easeInCubic: (t, b, c, d): number => {
+        return c * (t /= d) * t * t + b;
+      },
+      easeOutCubic: (t, b, c, d): number => {
+        return c * ((t = t / d - 1) * t * t + 1) + b;
+      },
+      easeInOutCubic: (t, b, c, d): number => {
+        if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+        return c / 2 * ((t -= 2) * t * t + 2) + b;
       }
     };
   }
