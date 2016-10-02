@@ -23,6 +23,7 @@ module AtomicPackages {
   export class Controller {
     private model: Model;
     private view: View;
+    private utility: Utility;
 
     public modal: ModalWindow;
     public btn: Button;
@@ -35,9 +36,11 @@ module AtomicPackages {
 
     constructor(
       ) {
-      this.model = new AtomicPackages.Model();
-      this.view  = new AtomicPackages.View();
+      this.model   = new AtomicPackages.Model();
+      this.view    = new AtomicPackages.View();
+      this.utility = new AtomicPackages.Utility();
 
+      // parts
       this.modal        = new ModalWindow();
       this.btn          = new Button();
       this.switcher     = new Switcher();

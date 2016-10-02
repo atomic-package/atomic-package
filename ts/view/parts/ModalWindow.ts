@@ -45,8 +45,6 @@ module ModalWindowView {
   **/
   export class Target {
     private callBackFunction: Function = () => {};
-    private _OPEN_CLASS_NAME = 'open';
-
     private _DEFAULT_ID_NAME: string = 'modalWindow';
     private _DEFAULT_CLASS_NAME: string = 'modalWindow';
 
@@ -57,6 +55,7 @@ module ModalWindowView {
       public isOpen: boolean,
       public outerWidth: number,
       public outerHeight: number,
+      public transform: string,
       public node: any,
       public body: any
       ) {
@@ -74,8 +73,6 @@ module ModalWindowView {
       this.outerCheck();
       this.defaultStyle();
       this.setEventListener();
-
-      console.log(this);
     }
 
     /**
@@ -89,6 +86,7 @@ module ModalWindowView {
         false,
         data.outerWidth ? data.outerWidth : 0,
         data.outerHeight ? data.outerHeight : 0,
+        data.transform ? data.transform : null,
         data.node ? data.node : null,
         data.node && data.node.children ? data.node.children[0] : null
       );
@@ -126,9 +124,12 @@ module ModalWindowView {
     }
 
     private outerCheck() {
+      var utility = Utility.getInstance();
+
       if(this.outerWidth === 0 || this.outerHeight === 0) {
         this.outerWidth  = this.getStyle(this.body).outerWidth;
         this.outerHeight = this.getStyle(this.body).outerHeight;
+        this.transform   = utility.whichTransform();
       }
     }
 
@@ -143,7 +144,6 @@ module ModalWindowView {
 
     private defaultStyle() {
       // modal
-      (<HTMLElement>this.node).style.opacity = '0';
       (<HTMLElement>this.node).style.display = 'none';
       (<HTMLElement>this.node).style.position = 'fixed';
       (<HTMLElement>this.node).style.top = '0';
@@ -154,77 +154,90 @@ module ModalWindowView {
       (<HTMLElement>this.node).style.overflowY = 'scroll';
 
       // body
-//      (<HTMLElement>this.body).style.left = '50%';
-//      (<HTMLElement>this.body).style.top = '50%';
-//      (<HTMLElement>this.body).style.marginTop = (- this.outerHeight / 1.4 ) + 'px';
-//      (<HTMLElement>this.body).style.marginLeft = (- this.outerWidth / 2 ) + 'px';
       (<HTMLElement>this.body).style.position = 'relative';
       (<HTMLElement>this.body).style.marginLeft = 'auto';
       (<HTMLElement>this.body).style.marginRight = 'auto';
       (<HTMLElement>this.body).style.marginTop = '100px';
+      (<HTMLElement>this.body).style.opacity = '0';
     }
 
-    private showStyle() {
+    private showStartStyle() {
+      // modal
       (<HTMLElement>this.node).style.display = 'block';
-      (<HTMLElement>this.node).style.opacity = '0';
-      (<HTMLElement>document.querySelector('html')).style.overflow = 'hidden';
+
+      // body
+      (<HTMLElement>this.body).style.opacity = '0';
+      (<HTMLElement>this.body).style.display = 'block';
+      (<HTMLElement>this.body).style[this.transform] = 'scale(0.4)';
+      (<HTMLElement>document.querySelector('html')).classList.add('apOverHidden');
     }
 
-    private hideStyle() {
-      (<HTMLElement>this.node).style.opacity = '0';
+    private showFixedStyle() {
+      // body
+      (<HTMLElement>this.body).style.opacity = '1';
+      (<HTMLElement>this.body).style[this.transform] = 'scale(1)';
+    }
+
+    private hideFixedStyle() {
+      // modal
       (<HTMLElement>this.node).style.display = 'none';
-      (<HTMLElement>document.querySelector('html')).style.overflow = 'auto';
-    }
 
-    private setNodeStyle() {
-//      (<HTMLElement>this.body).style.left = '50%';
-//      (<HTMLElement>this.body).style.top = '50%';
-//      (<HTMLElement>this.body).style.marginTop = (- this.outerHeight / 1.4 ) + 'px';
-//      (<HTMLElement>this.body).style.marginLeft = (- this.outerWidth / 2 ) + 'px';
+      // body
+      (<HTMLElement>this.body).style.opacity = '0';
+      (<HTMLElement>this.body).style.display = 'none';
+      (<HTMLElement>document.querySelector('html')).classList.remove('apOverHidden');
     }
 
     private setOpenStyle() {
-      this.showStyle();
+      this.showStartStyle();
       this.outerCheck();
-      this.setNodeStyle();
+      this.showAnimation();
+    }
 
-//      var target = navigator.userAgent.indexOf('WebKit') < 0 ? document.documentElement : document.body;
-//      var tween = new Tween({
-//        scrollTop: target.scrollTop,
-//        opacity: 1
-//      }, {
-//        scrollTop: 0,
-//        opacity: 0
-//      }, {
-//        duration: 200,
-//        easing: 'easeInOutQuad',
-//        step: (val) => {
-//          console.log(val);
-//          target.scrollTop = val.scrollTop;
-//        },
-//        complete: () => {
-//          tween = null;
-//        }
-//      });
-
-      setTimeout(() => {
-        this.body.classList.add('openStyle');
-        setTimeout(() => {
-          this.body.classList.add('anime');
-          (<HTMLElement>this.node).style.opacity = '1';
-          this.body.classList.remove('openStyle');
-        }, 50)
-      }, 50);
+    private showAnimation() {
+      var tween = new Tween({
+        opacity: (<HTMLElement>this.body).style.opacity,
+        scale: 0.4
+      }, {
+        opacity: 1,
+        scale: 1
+      }, {
+        duration: 200,
+        easing: 'easeInOutQuad',
+        step: (val) => {
+          (<HTMLElement>this.body).style.opacity = val.opacity;
+          (<HTMLElement>this.body).style[this.transform] = 'scale(' + val.scale + ')';
+        },
+        complete: () => {
+          tween = null;
+          this.showFixedStyle();
+        }
+      });
     }
 
     private setCloseStyle() {
-      setTimeout(() => {
-        this.body.classList.remove('anime');
-        this.body.classList.add('openStyle');
-        setTimeout(() => {
-          this.hideStyle();
-        }, 50)
-      }, 50);
+      this.closeAnimation();
+    }
+
+    private closeAnimation() {
+      var tween = new Tween({
+        opacity: 1,
+        scale: 1
+      }, {
+        opacity: 0,
+        scale: 0.7
+      }, {
+        duration: 150,
+        easing: 'easeInOutQuad',
+        step: (val) => {
+          (<HTMLElement>this.body).style.opacity = val.opacity;
+          (<HTMLElement>this.body).style[this.transform] = 'scale(' + val.scale + ')';
+        },
+        complete: () => {
+          this.hideFixedStyle();
+          tween = null;
+        }
+      });
     }
 
     /**
@@ -232,14 +245,10 @@ module ModalWindowView {
      **/
     public open() {
       this.setOpenStyle();
-      //this.node.classList.add(this._OPEN_CLASS_NAME);
     }
 
     public close() {
       this.setCloseStyle();
-//      if(this.node.classList.contains(this._OPEN_CLASS_NAME)) {
-//        this.node.classList.remove(this._OPEN_CLASS_NAME);
-//      }
     }
 
     public addIdName(idName: string) {

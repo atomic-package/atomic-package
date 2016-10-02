@@ -238,7 +238,6 @@ var AtomicPackages;
             };
             this.setting = this._extend(this.setting, option);
             this.init();
-            console.log(this);
         }
         Tween.fromData = function (data) {
             return new Tween(data.start ? data.start : null, data.end ? data.end : null, data.option ? data.option : null);
@@ -383,6 +382,8 @@ var AtomicPackages;
 var ModalWindowView;
 (function (ModalWindowView) {
     var APView = AtomicPackages.View;
+    var Utility = AtomicPackages.Utility;
+    var Tween = AtomicPackages.Tween;
     var _created_modal_window_num = 0;
     var _created_trigger_num = 0;
     var ModalWindow = (function () {
@@ -406,17 +407,17 @@ var ModalWindowView;
     }());
     ModalWindowView.ModalWindow = ModalWindow;
     var Target = (function () {
-        function Target(id, idName, className, isOpen, outerWidth, outerHeight, node, body) {
+        function Target(id, idName, className, isOpen, outerWidth, outerHeight, transform, node, body) {
             this.id = id;
             this.idName = idName;
             this.className = className;
             this.isOpen = isOpen;
             this.outerWidth = outerWidth;
             this.outerHeight = outerHeight;
+            this.transform = transform;
             this.node = node;
             this.body = body;
             this.callBackFunction = function () { };
-            this._OPEN_CLASS_NAME = 'open';
             this._DEFAULT_ID_NAME = 'modalWindow';
             this._DEFAULT_CLASS_NAME = 'modalWindow';
             this.id = this.createModalWindowId();
@@ -430,10 +431,9 @@ var ModalWindowView;
             this.outerCheck();
             this.defaultStyle();
             this.setEventListener();
-            console.log(this);
         }
         Target.fromData = function (data) {
-            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.outerWidth ? data.outerWidth : 0, data.outerHeight ? data.outerHeight : 0, data.node ? data.node : null, data.node && data.node.children ? data.node.children[0] : null);
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, false, data.outerWidth ? data.outerWidth : 0, data.outerHeight ? data.outerHeight : 0, data.transform ? data.transform : null, data.node ? data.node : null, data.node && data.node.children ? data.node.children[0] : null);
         };
         Target.create = function () {
             return this.fromData({});
@@ -459,9 +459,11 @@ var ModalWindowView;
             }
         };
         Target.prototype.outerCheck = function () {
+            var utility = Utility.getInstance();
             if (this.outerWidth === 0 || this.outerHeight === 0) {
                 this.outerWidth = this.getStyle(this.body).outerWidth;
                 this.outerHeight = this.getStyle(this.body).outerHeight;
+                this.transform = utility.whichTransform();
             }
         };
         Target.prototype.getStyle = function (node) {
@@ -472,7 +474,6 @@ var ModalWindowView;
             };
         };
         Target.prototype.defaultStyle = function () {
-            this.node.style.opacity = '0';
             this.node.style.display = 'none';
             this.node.style.position = 'fixed';
             this.node.style.top = '0';
@@ -485,42 +486,74 @@ var ModalWindowView;
             this.body.style.marginLeft = 'auto';
             this.body.style.marginRight = 'auto';
             this.body.style.marginTop = '100px';
+            this.body.style.opacity = '0';
         };
-        Target.prototype.showStyle = function () {
+        Target.prototype.showStartStyle = function () {
             this.node.style.display = 'block';
-            this.node.style.opacity = '0';
-            document.querySelector('html').style.overflow = 'hidden';
+            this.body.style.opacity = '0';
+            this.body.style.display = 'block';
+            this.body.style[this.transform] = 'scale(0.4)';
+            document.querySelector('html').classList.add('apOverHidden');
         };
-        Target.prototype.hideStyle = function () {
-            this.node.style.opacity = '0';
+        Target.prototype.showFixedStyle = function () {
+            this.body.style.opacity = '1';
+            this.body.style[this.transform] = 'scale(1)';
+        };
+        Target.prototype.hideFixedStyle = function () {
             this.node.style.display = 'none';
-            document.querySelector('html').style.overflow = 'auto';
-        };
-        Target.prototype.setNodeStyle = function () {
+            this.body.style.opacity = '0';
+            this.body.style.display = 'none';
+            document.querySelector('html').classList.remove('apOverHidden');
         };
         Target.prototype.setOpenStyle = function () {
-            var _this = this;
-            this.showStyle();
+            this.showStartStyle();
             this.outerCheck();
-            this.setNodeStyle();
-            setTimeout(function () {
-                _this.body.classList.add('openStyle');
-                setTimeout(function () {
-                    _this.body.classList.add('anime');
-                    _this.node.style.opacity = '1';
-                    _this.body.classList.remove('openStyle');
-                }, 50);
-            }, 50);
+            this.showAnimation();
+        };
+        Target.prototype.showAnimation = function () {
+            var _this = this;
+            var tween = new Tween({
+                opacity: this.body.style.opacity,
+                scale: 0.4
+            }, {
+                opacity: 1,
+                scale: 1
+            }, {
+                duration: 200,
+                easing: 'easeInOutQuad',
+                step: function (val) {
+                    _this.body.style.opacity = val.opacity;
+                    _this.body.style[_this.transform] = 'scale(' + val.scale + ')';
+                },
+                complete: function () {
+                    tween = null;
+                    _this.showFixedStyle();
+                }
+            });
         };
         Target.prototype.setCloseStyle = function () {
+            this.closeAnimation();
+        };
+        Target.prototype.closeAnimation = function () {
             var _this = this;
-            setTimeout(function () {
-                _this.body.classList.remove('anime');
-                _this.body.classList.add('openStyle');
-                setTimeout(function () {
-                    _this.hideStyle();
-                }, 50);
-            }, 50);
+            var tween = new Tween({
+                opacity: 1,
+                scale: 1
+            }, {
+                opacity: 0,
+                scale: 0.7
+            }, {
+                duration: 150,
+                easing: 'easeInOutQuad',
+                step: function (val) {
+                    _this.body.style.opacity = val.opacity;
+                    _this.body.style[_this.transform] = 'scale(' + val.scale + ')';
+                },
+                complete: function () {
+                    _this.hideFixedStyle();
+                    tween = null;
+                }
+            });
         };
         Target.prototype.open = function () {
             this.setOpenStyle();
@@ -2467,6 +2500,7 @@ var AtomicPackages;
         function Controller() {
             this.model = new AtomicPackages.Model();
             this.view = new AtomicPackages.View();
+            this.utility = new AtomicPackages.Utility();
             this.modal = new ModalWindow();
             this.btn = new Button();
             this.switcher = new Switcher();

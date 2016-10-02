@@ -676,6 +676,10 @@ input.btn.red {
 
 /* Box Style
 -------------------------------------------------- */
+.apOverHidden {
+  overflow: hidden;
+}
+
 /* List Style
 -------------------------------------------------- */
 /*
@@ -3314,24 +3318,6 @@ input.btn.red {
   min-height: 400px;
   background: #fff;
   z-index: 5000;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-.modalWindow .modalBody.open {
-  display: block;
-}
-
-.modalWindow .modalBody.openStyle {
-  -webkit-transform: scale(0.4);
-  transform: scale(0.4);
-  opacity: 0.2;
-}
-
-.modalWindow .modalBody.anime {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  opacity: 1;
 }
 
 .modalWindowBackDrop {

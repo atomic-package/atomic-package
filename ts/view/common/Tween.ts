@@ -34,8 +34,6 @@ module AtomicPackages {
       this.setting = this._extend(this.setting, option);
 
       this.init();
-
-      console.log(this);
     }
 
     /**
