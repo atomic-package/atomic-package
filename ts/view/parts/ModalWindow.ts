@@ -7,6 +7,7 @@ module ModalWindowView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
   import Utility = AtomicPackages.Utility;
+  import Tween   = AtomicPackages.Tween;
 
   var _created_modal_window_num: number = 0;
   var _created_trigger_num: number = 0;
@@ -187,7 +188,24 @@ module ModalWindowView {
       this.outerCheck();
       this.setNodeStyle();
 
-      //APView.loop();
+//      var target = navigator.userAgent.indexOf('WebKit') < 0 ? document.documentElement : document.body;
+//      var tween = new Tween({
+//        scrollTop: target.scrollTop,
+//        opacity: 1
+//      }, {
+//        scrollTop: 0,
+//        opacity: 0
+//      }, {
+//        duration: 200,
+//        easing: 'easeInOutQuad',
+//        step: (val) => {
+//          console.log(val);
+//          target.scrollTop = val.scrollTop;
+//        },
+//        complete: () => {
+//          tween = null;
+//        }
+//      });
 
       setTimeout(() => {
         this.body.classList.add('openStyle');
@@ -255,6 +273,8 @@ module ModalWindowView {
       ) {
       this.createElement();
       this.setEventListener();
+
+
     }
 
     /**

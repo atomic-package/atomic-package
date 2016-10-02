@@ -23,9 +23,6 @@ module ViewClasses {
       ) {
       this.id = this.createTriggerId();
       //this.setEventListener();
-
-      console.log('規定');
-
     }
 
     /**

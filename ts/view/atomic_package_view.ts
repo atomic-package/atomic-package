@@ -2,6 +2,7 @@
  * Author: Daisuke Takayama
  */
 /// <reference path='../_all.ts' />
+/// <reference path='common/Tween.ts' />
 
 module AtomicPackages {
   import APModel = AtomicPackages.Model;
@@ -126,25 +127,5 @@ module AtomicPackages {
 
       return targetViewList;
     }
-
-
-    public static loop() {
-      var startTime = new Date().getTime();
-
-      function step(timestamp) {
-        var progress = timestamp - startTime;
-        var currentTime = new Date().getTime();
-
-        var status = (startTime - currentTime);
-
-        console.log(status);
-
-        if (progress < 2000) {
-          requestAnimationFrame(step);
-        }
-      }
-      requestAnimationFrame(step);
-    }
   }
-
 }

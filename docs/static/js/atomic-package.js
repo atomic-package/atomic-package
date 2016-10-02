@@ -218,6 +218,102 @@ var AtomicPackages;
 })(AtomicPackages || (AtomicPackages = {}));
 var AtomicPackages;
 (function (AtomicPackages) {
+    var Tween = (function () {
+        function Tween(start, end, option) {
+            var _this = this;
+            this.start = start;
+            this.end = end;
+            this.option = option;
+            this.timer = null;
+            this.isPlaying = false;
+            this._startTime = Date.now();
+            this.setting = {
+                duration: 200,
+                easing: 'linear',
+                step: function () { },
+                complete: function () { }
+            };
+            this._loopHandler = function () {
+                _this.update();
+            };
+            this.setting = this._extend(this.setting, option);
+            this.init();
+            console.log(this);
+        }
+        Tween.fromData = function (data) {
+            return new Tween(data.start ? data.start : null, data.end ? data.end : null, data.option ? data.option : null);
+        };
+        Tween.prototype._extend = function (arg) {
+            if (arguments.length < 2) {
+                return arg;
+            }
+            if (!arg) {
+                arg = {};
+            }
+            for (var i = 1; i < arguments.length; i++) {
+                for (var key in arguments[i]) {
+                    if (arguments[i][key] !== null && typeof (arguments[i][key]) === "object") {
+                        arg[key] = this._extend(arg[key], arguments[i][key]);
+                    }
+                    else {
+                        arg[key] = arguments[i][key];
+                    }
+                }
+            }
+            return arg;
+        };
+        Tween.prototype.init = function () {
+            this.play();
+        };
+        Tween.prototype.play = function () {
+            this.isPlaying = true;
+            this.timer = window.requestAnimationFrame(this._loopHandler);
+        };
+        Tween.prototype.stop = function () {
+            this.isPlaying = false;
+            if (this.timer) {
+                this.timer = null;
+                window.cancelAnimationFrame(this._loopHandler);
+            }
+            return this;
+        };
+        Tween.prototype.update = function () {
+            var now = Date.now(), elapsedTime = now - this._startTime, val = {};
+            for (var key in this.end) {
+                var start = this.start[key], variation = this.end[key] - start, eased = Tween.Easing[this.setting.easing](elapsedTime, start, variation, this.setting.duration);
+                val[key] = eased;
+            }
+            this.setting.step.apply(this, [val]);
+            if (this.setting.duration <= elapsedTime) {
+                this.stop();
+                this.setting.complete.apply(this, []);
+            }
+            else {
+                this.timer = window.requestAnimationFrame(this._loopHandler);
+            }
+        };
+        Tween.Easing = {
+            linear: function (t, b, c, d) {
+                return c * t / d + b;
+            },
+            easeInQuad: function (t, b, c, d) {
+                return c * (t /= d) * t + b;
+            },
+            easeOutQuad: function (t, b, c, d) {
+                return -c * (t /= d) * (t - 2) + b;
+            },
+            easeInOutQuad: function (t, b, c, d) {
+                if ((t /= d / 2) < 1)
+                    return c / 2 * t * t + b;
+                return -c / 2 * ((--t) * (t - 2) - 1) + b;
+            }
+        };
+        return Tween;
+    }());
+    AtomicPackages.Tween = Tween;
+})(AtomicPackages || (AtomicPackages = {}));
+var AtomicPackages;
+(function (AtomicPackages) {
     var APModel = AtomicPackages.Model;
     var View = (function () {
         function View() {
@@ -279,19 +375,6 @@ var AtomicPackages;
                 targetViewList.push(createTarget);
             });
             return targetViewList;
-        };
-        View.loop = function () {
-            var startTime = new Date().getTime();
-            function step(timestamp) {
-                var progress = timestamp - startTime;
-                var currentTime = new Date().getTime();
-                var status = (startTime - currentTime);
-                console.log(status);
-                if (progress < 2000) {
-                    requestAnimationFrame(step);
-                }
-            }
-            requestAnimationFrame(step);
         };
         return View;
     }());
@@ -2030,7 +2113,6 @@ var ViewClasses;
             this.node = node;
             this.callBackFunction = function () { };
             this.id = this.createTriggerId();
-            console.log('規定');
         }
         Trigger.fromData = function (data) {
             return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.dataset.apToggle ? data.dataset.apToggle : null, data ? data : null);
