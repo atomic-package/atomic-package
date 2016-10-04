@@ -78,14 +78,14 @@ module AtomicPackages {
     }
 
     // RequestAnimationFrame
-    private setRequestAnimationFrame() {
+    private setRequestAnimationFrame(): void {
       window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
         function(callback, element) {
           window.setTimeout(callback, 1000 / 60);
         };
     }
 
-    private setCancelAnimationFrame() {
+    private setCancelAnimationFrame(): void {
       window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame ||
         function (id) {
           window.clearTimeout(id);
@@ -95,7 +95,7 @@ module AtomicPackages {
     /**
      * Public Function
     **/
-    public whichPrefix() {
+    public whichPrefix(): string {
       return (/webkit/i).test(navigator.appVersion) ? '-webkit-' : (/firefox/i).test(navigator.userAgent) ? '-moz-' :
         (/trident/i).test(navigator.userAgent) ? '-ms-' : 'opera' in window ? '-o-' : '';
     }
