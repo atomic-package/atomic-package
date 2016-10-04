@@ -2,20 +2,29 @@
  * Author: Daisuke Takayama
  */
 
-
 module AtomicPackages {
+  /**
+   * Tween Interface
+  **/
+  interface setting {
+    duration: number;
+    easing: string;
+    step: Function;
+    complete: Function;
+  }
+
   /**
    * Tween Class
    * @public
    * @param option
-   **/
+  **/
   export class Tween {
-    private timer: number = null;
+    private timer: number      = null;
     private isPlaying: boolean = false;
     private _startTime: number = Date.now();
     public _loopHandler: any;
 
-    private setting = {
+    private setting: setting = {
       duration: 200,
       easing: 'linear',
       step: function() {},
@@ -38,13 +47,20 @@ module AtomicPackages {
 
     /**
      * Static Function
-     **/
+    **/
     static fromData(data: any): Tween {
       return new Tween(
         data.start ? data.start : null,
         data.end ? data.end : null,
         data.option ? data.option : null
       );
+    }
+
+    /**
+     * private Function
+    **/
+    private init(): void {
+      this.play();
     }
 
     private _extend(arg) {
@@ -80,16 +96,12 @@ module AtomicPackages {
     /**
      * public Function
     **/
-    public init(): void {
-      this.play();
-    }
-
     public play(): void {
       this.isPlaying = true;
       this.timer = window.requestAnimationFrame(this._loopHandler);
     }
 
-    public stop() {
+    public stop(): Tween {
       this.isPlaying = false;
 
       if (this.timer) {
