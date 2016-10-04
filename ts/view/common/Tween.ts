@@ -7,10 +7,10 @@ module AtomicPackages {
    * Tween Interface
   **/
   interface setting {
-    duration: number;
-    easing: string;
-    step: Function;
-    complete: Function;
+    duration?: number;
+    easing?: string;
+    step?: Function;
+    complete?: Function;
   }
 
   /**
@@ -22,7 +22,7 @@ module AtomicPackages {
     private timer: number      = null;
     private isPlaying: boolean = false;
     private _startTime: number = Date.now();
-    public _loopHandler: any;
+    public _loopHandler: any; //Function
 
     private setting: setting = {
       duration: 200,
@@ -32,11 +32,11 @@ module AtomicPackages {
     };
 
     constructor(
-      public start: any,
-      public end: any,
-      public option: any
+      public start: object,
+      public end: object,
+      public option: object
       ) {
-      this._loopHandler = () => {
+      this._loopHandler = (): void => {
         this.update();
       };
 
@@ -63,7 +63,7 @@ module AtomicPackages {
       this.play();
     }
 
-    private _extend(arg) {
+    private _extend(arg): setting {
       if (arguments.length < 2) {
         return arg;
       }
@@ -81,6 +81,7 @@ module AtomicPackages {
           }
         }
       }
+
       return arg;
     }
 
