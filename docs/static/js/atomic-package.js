@@ -261,6 +261,15 @@ var AtomicPackages;
             }
             return arg;
         };
+        Tween.prototype.checkSteps = function (elapsedTime) {
+            if (this.setting.duration <= elapsedTime) {
+                this.stop();
+                this.setting.complete.apply(this, []);
+            }
+            else {
+                this.timer = window.requestAnimationFrame(this._loopHandler);
+            }
+        };
         Tween.prototype.init = function () {
             this.play();
         };
@@ -283,13 +292,7 @@ var AtomicPackages;
                 val[key] = eased;
             }
             this.setting.step.apply(this, [val]);
-            if (this.setting.duration <= elapsedTime) {
-                this.stop();
-                this.setting.complete.apply(this, []);
-            }
-            else {
-                this.timer = window.requestAnimationFrame(this._loopHandler);
-            }
+            this.checkSteps(elapsedTime);
         };
         Tween.Easing = {
             linear: function (t, b, c, d) {

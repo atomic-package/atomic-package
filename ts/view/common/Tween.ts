@@ -10,7 +10,7 @@ module AtomicPackages {
    * @param option
    **/
   export class Tween {
-    private timer = null;
+    private timer: number = null;
     private isPlaying: boolean = false;
     private _startTime: number = Date.now();
     public _loopHandler: any;
@@ -68,6 +68,15 @@ module AtomicPackages {
       return arg;
     }
 
+    private checkSteps(elapsedTime): void {
+      if(this.setting.duration <= elapsedTime) {
+        this.stop();
+        this.setting.complete.apply(this, []);
+      } else {
+        this.timer = window.requestAnimationFrame(this._loopHandler);
+      }
+    }
+
     /**
      * public Function
     **/
@@ -105,12 +114,7 @@ module AtomicPackages {
 
       this.setting.step.apply(this, [val]);
 
-      if(this.setting.duration <= elapsedTime) {
-        this.stop();
-        this.setting.complete.apply(this, []);
-      } else {
-        this.timer = window.requestAnimationFrame(this._loopHandler);
-      }
+      this.checkSteps(elapsedTime);
     }
 
     /**
