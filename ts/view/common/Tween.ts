@@ -113,9 +113,9 @@ module AtomicPackages {
     }
 
     public update(): void {
-      var now = Date.now(),
-          elapsedTime = now - this._startTime,
-          val = {};
+      var now: number         = Date.now(),
+          elapsedTime: number = now - this._startTime,
+          val: object         = {};
 
       for(var key in this.end) {
         var start = this.start[key],
