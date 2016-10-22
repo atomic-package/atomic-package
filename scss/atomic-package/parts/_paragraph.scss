@@ -83,3 +83,33 @@ img.thumbnail {
   /* Skin */
   &.frame {}
 }
+
+/* alert */
+.alert {
+  padding: 10px;
+  border: #B2CFDD 1px solid;
+  border-radius: 4px;
+  background: #EBF7FD;
+  color: #47829E;
+
+  /* Skin */
+  &.green {
+    border-color: #C8DFA5;
+    background: #F2FAE3;
+    color: #659F13;
+  }
+
+  /* Skin */
+  &.yellow {
+    border-color: #F6D8B0;
+    background: #FFFCEB;
+    color: #E28327;
+  }
+
+  /* Skin */
+  &.red {
+    border-color: #F3C1B7;
+    background: #FFF1F0;
+    color: #D85030;
+  }
+}

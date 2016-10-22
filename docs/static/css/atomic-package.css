@@ -246,6 +246,36 @@ img.thumbnail.circle {
   border-radius: 22.5px;
 }
 
+/* alert */
+.alert {
+  padding: 10px;
+  border: #B2CFDD 1px solid;
+  border-radius: 4px;
+  background: #EBF7FD;
+  color: #47829E;
+  /* Skin */
+  /* Skin */
+  /* Skin */
+}
+
+.alert.green {
+  border-color: #C8DFA5;
+  background: #F2FAE3;
+  color: #659F13;
+}
+
+.alert.yellow {
+  border-color: #F6D8B0;
+  background: #FFFCEB;
+  color: #E28327;
+}
+
+.alert.red {
+  border-color: #F3C1B7;
+  background: #FFF1F0;
+  color: #D85030;
+}
+
 /* Title Style
 -------------------------------------------------- */
 /*

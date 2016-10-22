@@ -242,6 +242,9 @@ var AtomicPackages;
         Tween.fromData = function (data) {
             return new Tween(data.start ? data.start : null, data.end ? data.end : null, data.option ? data.option : null);
         };
+        Tween.prototype.init = function () {
+            this.play();
+        };
         Tween.prototype._extend = function (arg) {
             if (arguments.length < 2) {
                 return arg;
@@ -269,9 +272,6 @@ var AtomicPackages;
             else {
                 this.timer = window.requestAnimationFrame(this._loopHandler);
             }
-        };
-        Tween.prototype.init = function () {
-            this.play();
         };
         Tween.prototype.play = function () {
             this.isPlaying = true;
