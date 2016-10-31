@@ -7,7 +7,7 @@
 
 module ButtonController {
   import Model   = ButtonModel.Button;
-  import BtnView  = ButtonView.Button;
+  import BtnView = ButtonView.Button;
 
   /**
    * Button Controller Class
@@ -15,6 +15,8 @@ module ButtonController {
    * @param option
    **/
   export class Button {
+    private model: Model;
+
     constructor() {
       BtnView.fetchElements((data) => {
         this.model = Model.fromData(data);

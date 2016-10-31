@@ -79,14 +79,14 @@ module AtomicPackages {
 
     // RequestAnimationFrame
     private setRequestAnimationFrame(): void {
-      window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+      window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
         function(callback, element) {
           window.setTimeout(callback, 1000 / 60);
         };
     }
 
     private setCancelAnimationFrame(): void {
-      window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame ||
+      window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame ||
         function (id) {
           window.clearTimeout(id);
         };

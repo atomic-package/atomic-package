@@ -70,11 +70,9 @@ module AtomicPackages {
       switch(typeof data) {
         case 'object':
           return data;
-          break;
 
         case 'number':
           return { id: data };
-          break;
 
         case 'string':
           if(/^#/.test(data)) {
