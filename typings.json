@@ -3,6 +3,10 @@
   "dependencies": {},
   "globalDependencies": {
     "mocha": "registry:dt/mocha#2.2.5+20160720003353",
-    "node": "registry:dt/node#6.0.0+20160720070758"
+    "node": "registry:dt/node#6.0.0+20160720070758",
+    "empower": "github:DefinitelyTyped/DefinitelyTyped/empower/empower.d.ts#aeb7701fbef3b7fc7261d67c025c823666ab98ea",
+    "power-assert": "github:DefinitelyTyped/DefinitelyTyped/power-assert/power-assert.d.ts#695da95a2405a9d6aae11944174227e1e7716e37",
+    "power-assert-formatter": "github:DefinitelyTyped/DefinitelyTyped/power-assert-formatter/power-assert-formatter.d.ts#aeb7701fbef3b7fc7261d67c025c823666ab98ea",
+    "selenium-webdriver": "github:DefinitelyTyped/DefinitelyTyped/selenium-webdriver/selenium-webdriver.d.ts#a83677ed13add14c2ab06c7325d182d0ba2784ea"
   }
 }
