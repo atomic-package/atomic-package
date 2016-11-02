@@ -3,7 +3,7 @@
 
 //console.log(AtomicPackages);
 
-export default function() {
+export class hoge {
   //import AtomicPackage = AtomicPackages.AtomicPackage
-  return "module1";
+  hoge: "module1";
 }

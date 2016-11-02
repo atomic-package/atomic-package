@@ -15,7 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './test/spec/**/*.ts'
+      //'./test/spec/**/*.ts'
+      'test/hoge_tyest.js',
+      'test/hoge.js'
     ],
 
 
@@ -27,20 +29,25 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './ts/**/*.ts': ['browserify'],
-      './test/ap.ts': ['browserify']
+//      './ts/**/*.ts': ['browserify'],
+//      './test/ap.ts': ['browserify']
+      'test/hoge_tyest.js': ['browserify']
     },
 
 
     browserify: {
-      plugin: ['tsify'],
-      extensions: ['.ts']
+//      plugin: ['tsify'],
+//      extensions: ['.ts'],
+      debug: true,
+      transform: [
+        ['babelify', {plugins: ['babel-plugin-espower']}]
+      ]
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port

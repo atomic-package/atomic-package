@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/webcyou/atomic-package#readme",
   "devDependencies": {
+    "babel-plugin-espower": "^2.3.1",
+    "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "del": "^2.0.1",
     "espower-typescript": "^6.0.1",
@@ -57,6 +59,7 @@
     "karma-browserify": "^5.1.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-mocha": "^1.2.0",
+    "karma-mocha-reporter": "^2.2.0",
     "karma-typescript-preprocessor": "^0.3.0",
     "mocha": "^3.1.2",
     "power-assert": "^1.4.1",
