@@ -7,8 +7,8 @@
     "boot": "concurrent \"npm run boot:hugo\" \"npm run boot:gulp\"",
     "boot:hugo": "docs/boot.sh",
     "boot:gulp": "gulp",
-    "test": "mocha --compilers ts:espower-typescript/guess test/**/*.ts",
-    "test:karma": "karma start"
+    "test": "karma start",
+    "test:mocha": "mocha --compilers ts:espower-typescript/guess test/**/*.ts"
   },
   "repository": {
     "type": "git",
