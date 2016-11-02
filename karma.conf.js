@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './test/**/*.ts'
+      './test/spec/**/*.ts'
     ],
 
 
@@ -27,7 +27,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './ts/**/*.ts': ['typescript']
+      './ts/**/*.ts': ['browserify'],
+      './test/ap.ts': ['browserify']
     },
 
 

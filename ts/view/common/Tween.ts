@@ -32,9 +32,9 @@ module AtomicPackages {
     };
 
     constructor(
-      public start: object,
-      public end: object,
-      public option: object
+      public start: any,
+      public end: any,
+      public option: any
       ) {
       this._loopHandler = (): void => {
         this.update();
@@ -63,7 +63,7 @@ module AtomicPackages {
       this.play();
     }
 
-    private _extend(arg): setting {
+    private _extend(arg, options?): setting {
       if (arguments.length < 2) {
         return arg;
       }
@@ -115,7 +115,7 @@ module AtomicPackages {
     public update(): void {
       var now: number         = Date.now(),
           elapsedTime: number = now - this._startTime,
-          val: object         = {};
+          val: any            = {};
 
       for(var key in this.end) {
         var start = this.start[key],

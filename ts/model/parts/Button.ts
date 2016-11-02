@@ -34,7 +34,7 @@ module ButtonModel {
     private setTriggerCallBack(): void {
       this.triggerList.forEach((trigger: Trigger) => {
         trigger.view.toggle((triggerView) => {
-          this.toggleContents(trigger);
+          //this.toggleContents(trigger);
         }, true);
       });
     }

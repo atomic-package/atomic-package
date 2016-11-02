@@ -78,9 +78,9 @@ module AtomicPackages {
     }
 
     // RequestAnimationFrame
-    private setRequestAnimationFrame(): void {
+    private setRequestAnimationFrame() {
       window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
-        function(callback, element) {
+        function(callback: FrameRequestCallback, element: any) {
           window.setTimeout(callback, 1000 / 60);
         };
     }

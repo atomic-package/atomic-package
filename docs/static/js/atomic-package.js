@@ -37,13 +37,13 @@ var AtomicPackages;
             return document.createElement(this._FAKE_ELEMENT);
         };
         Utility.prototype.setRequestAnimationFrame = function () {
-            window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+            window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
                 function (callback, element) {
                     window.setTimeout(callback, 1000 / 60);
                 };
         };
         Utility.prototype.setCancelAnimationFrame = function () {
-            window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame ||
+            window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame ||
                 function (id) {
                     window.clearTimeout(id);
                 };
@@ -145,10 +145,8 @@ var AtomicPackages;
             switch (typeof data) {
                 case 'object':
                     return data;
-                    break;
                 case 'number':
                     return { id: data };
-                    break;
                 case 'string':
                     if (/^#/.test(data)) {
                         return { idName: data.substr(1) };
@@ -245,7 +243,7 @@ var AtomicPackages;
         Tween.prototype.init = function () {
             this.play();
         };
-        Tween.prototype._extend = function (arg) {
+        Tween.prototype._extend = function (arg, options) {
             if (arguments.length < 2) {
                 return arg;
             }
@@ -1178,10 +1176,8 @@ var ButtonModel;
             return new Button(data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
         };
         Button.prototype.setTriggerCallBack = function () {
-            var _this = this;
             this.triggerList.forEach(function (trigger) {
                 trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
                 }, true);
             });
         };
