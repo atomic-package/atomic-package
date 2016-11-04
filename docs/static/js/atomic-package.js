@@ -105,7 +105,7 @@ var AtomicPackages;
         function Model() {
         }
         Model.isArray = function (data) {
-            return Array.isArray(data) || typeof data !== 'object' && /^\[/.test(data);
+            return Array.isArray(data) || typeof data !== 'object' && /^\[(\d|[^[|,])/.test(data);
         };
         Model.getSearchItems = function (dataList, type) {
             if (!type)
@@ -120,6 +120,14 @@ var AtomicPackages;
                 });
             }
         };
+        Model.stringToNumber = function (data) {
+            if (parseInt(data, 10)) {
+                return parseInt(data, 10);
+            }
+            else {
+                return data;
+            }
+        };
         Model.stringToArray = function (data) {
             var _this = this;
             if (typeof data === 'string') {
@@ -128,14 +136,6 @@ var AtomicPackages;
                     newSplitList.push(_this.stringToNumber(item));
                 });
                 return newSplitList;
-            }
-            else {
-                return data;
-            }
-        };
-        Model.stringToNumber = function (data) {
-            if (parseInt(data, 10)) {
-                return parseInt(data, 10);
             }
             else {
                 return data;
@@ -2761,6 +2761,15 @@ var AtomicPackages;
                 AtomicPackage._instance = this;
             }
         }
+        AtomicPackage.prototype.getModel = function () {
+            return AtomicPackages.Model;
+        };
+        AtomicPackage.prototype.getController = function () {
+            return AtomicPackages.Controller;
+        };
+        AtomicPackage.prototype.getView = function () {
+            return AtomicPackages.View;
+        };
         AtomicPackage._instance = null;
         return AtomicPackage;
     }());

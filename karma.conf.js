@@ -18,8 +18,8 @@ module.exports = function(config) {
       //'./ts/**/*.ts',
       //'./test/atomic_package_spec.ts',
       //'./test/spec/**/*.ts'
-      'test/*.js',
-      'dist/js/atomic-package.js'
+      'test/**/*.js',
+      'docs/static/js/atomic-package.js'
     ],
 
 

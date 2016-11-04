@@ -23,9 +23,10 @@ module AtomicPackages {
 
     /**
      * Private Static Function
+     * @privateStatic
     **/
     private static isArray(data): boolean {
-      return Array.isArray(data) || typeof data !== 'object' && /^\[/.test(data);
+      return Array.isArray(data) || typeof data !== 'object' && /^\[(\d|[^[|,])/.test(data);
     }
 
     private static getSearchItems(dataList: any[], type: any) {
@@ -43,6 +44,14 @@ module AtomicPackages {
       }
     }
 
+    private static stringToNumber(data: any): number {
+      if(parseInt(data, 10)) {
+        return parseInt(data, 10);
+      } else {
+        return data;
+      }
+    }
+
     private static stringToArray(data: any): any {
       if(typeof data === 'string') {
         var splitList = data.replace(/^\[/g , '').replace(/\]$/g , '').split(","),
@@ -53,14 +62,6 @@ module AtomicPackages {
         });
 
         return newSplitList;
-      } else {
-        return data;
-      }
-    }
-
-    private static stringToNumber(data: any): any {
-      if(parseInt(data, 10)) {
-        return parseInt(data, 10);
       } else {
         return data;
       }

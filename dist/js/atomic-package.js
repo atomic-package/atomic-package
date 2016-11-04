@@ -37,13 +37,13 @@ var AtomicPackages;
             return document.createElement(this._FAKE_ELEMENT);
         };
         Utility.prototype.setRequestAnimationFrame = function () {
-            window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+            window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
                 function (callback, element) {
                     window.setTimeout(callback, 1000 / 60);
                 };
         };
         Utility.prototype.setCancelAnimationFrame = function () {
-            window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame ||
+            window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame ||
                 function (id) {
                     window.clearTimeout(id);
                 };
@@ -105,7 +105,7 @@ var AtomicPackages;
         function Model() {
         }
         Model.isArray = function (data) {
-            return Array.isArray(data) || typeof data !== 'object' && /^\[/.test(data);
+            return Array.isArray(data) || typeof data !== 'object' && /^\[(\d|[^[|,])/.test(data);
         };
         Model.getSearchItems = function (dataList, type) {
             if (!type)
@@ -118,6 +118,14 @@ var AtomicPackages;
                 return dataList.filter(function (data) {
                     return (data[key] == type[key]);
                 });
+            }
+        };
+        Model.stringToNumber = function (data) {
+            if (parseInt(data, 10)) {
+                return parseInt(data, 10);
+            }
+            else {
+                return data;
             }
         };
         Model.stringToArray = function (data) {
@@ -133,22 +141,12 @@ var AtomicPackages;
                 return data;
             }
         };
-        Model.stringToNumber = function (data) {
-            if (parseInt(data, 10)) {
-                return parseInt(data, 10);
-            }
-            else {
-                return data;
-            }
-        };
         Model.checkType = function (data) {
             switch (typeof data) {
                 case 'object':
                     return data;
-                    break;
                 case 'number':
                     return { id: data };
-                    break;
                 case 'string':
                     if (/^#/.test(data)) {
                         return { idName: data.substr(1) };
@@ -245,7 +243,7 @@ var AtomicPackages;
         Tween.prototype.init = function () {
             this.play();
         };
-        Tween.prototype._extend = function (arg) {
+        Tween.prototype._extend = function (arg, options) {
             if (arguments.length < 2) {
                 return arg;
             }
@@ -1178,10 +1176,8 @@ var ButtonModel;
             return new Button(data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
         };
         Button.prototype.setTriggerCallBack = function () {
-            var _this = this;
             this.triggerList.forEach(function (trigger) {
                 trigger.view.toggle(function (triggerView) {
-                    _this.toggleContents(trigger);
                 }, true);
             });
         };
@@ -2765,6 +2761,15 @@ var AtomicPackages;
                 AtomicPackage._instance = this;
             }
         }
+        AtomicPackage.prototype.getModel = function () {
+            return AtomicPackages.Model;
+        };
+        AtomicPackage.prototype.getController = function () {
+            return AtomicPackages.Controller;
+        };
+        AtomicPackage.prototype.getView = function () {
+            return AtomicPackages.View;
+        };
         AtomicPackage._instance = null;
         return AtomicPackage;
     }());

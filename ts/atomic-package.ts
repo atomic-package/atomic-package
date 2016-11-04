@@ -46,6 +46,18 @@ module AtomicPackages {
         AtomicPackage._instance = this;
       }
     }
+
+    public getModel() {
+      return AtomicPackages.Model;
+    }
+
+    public getController() {
+      return AtomicPackages.Controller;
+    }
+
+    public getView() {
+      return AtomicPackages.View;
+    }
   }
 }
 
