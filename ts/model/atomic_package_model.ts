@@ -147,8 +147,8 @@ module AtomicPackages {
       }
     }
 
-    public static uniq(stringArr) {
-      var newArr = stringArr.filter((x, i, self) => {
+    public static uniq(stringArr: any[]): any[] {
+      var newArr: any[] = stringArr.filter((x, i, self) => {
         return self.indexOf(x) === i;
       });
       return newArr;

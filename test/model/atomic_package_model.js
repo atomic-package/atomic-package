@@ -276,13 +276,52 @@ describe('ts/model/atomic_package_model.ts', function () {
       { className: "modalWindow" },
       { id: 1 },
       { id: 3 },
-      "all"
+      "all",
+      1,
+      3,
+      "1",
+      "3"
     ];
 
     it("idName", function() {
       assert.deepEqual(model.search(dataList, searchTypeList[0]), [dataList[0]]);
+      assert.deepEqual(model.search(dataList, searchTypeList[1]), [dataList[1]]);
     });
 
+    it("className", function() {
+      assert.deepEqual(model.search(dataList, searchTypeList[2]), [dataList[0],dataList[1]]);
+    });
+
+    it("id", function() {
+      assert.deepEqual(model.search(dataList, searchTypeList[3]), [dataList[0]]);
+      assert.deepEqual(model.search(dataList, searchTypeList[4]), [dataList[2]]);
+    });
+
+    it("all", function() {
+      assert.deepEqual(model.search(dataList, searchTypeList[5]), dataList);
+    });
+
+    it("number", function() {
+      assert.deepEqual(model.search(dataList, searchTypeList[6]), [dataList[0]]);
+      assert.deepEqual(model.search(dataList, searchTypeList[7]), [dataList[2]]);
+    });
+
+    it("string", function() {
+      assert.deepEqual(model.search(dataList, searchTypeList[8]), [dataList[0]]);
+      assert.deepEqual(model.search(dataList, searchTypeList[9]), [dataList[2]]);
+    });
+  });
+
+  describe("uniq", function() {
+  });
+
+  describe("flattenArray", function() {
+  });
+
+  describe("createTriggerModel", function() {
+  });
+
+  describe("createTargetModel", function() {
   });
 
 });
