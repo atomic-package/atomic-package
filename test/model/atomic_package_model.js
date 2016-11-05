@@ -183,7 +183,7 @@ describe('ts/model/atomic_package_model.ts', function () {
     const stringObjectList = [
       "{ id: 1 }",
       "{ id: 2 }",
-      "{ id: 1 }, { id: 2 }, { id: 3, className: 'hoge', parts: { id: 1 }}"
+      "{ id: 3, className: 'class', parts: { id: 1 }}"
     ];
 
     const objectList = [
@@ -241,6 +241,48 @@ describe('ts/model/atomic_package_model.ts', function () {
     it("allType", function() {
       assert.deepEqual(model.checkType(allType), "all");
     });
+  });
+
+
+  describe("search", function() {
+    const dataList = [{
+      className: "modalWindow",
+      id: 1,
+      idName: "modalWindow1",
+      isOpen: false,
+      triggerId: null,
+      view: null
+    },
+    {
+      className: "modalWindow",
+      id: 2,
+      idName: "modalWindow2",
+      isOpen: false,
+      triggerId: null,
+      view: null
+    },
+    {
+      className: "modalWindow2",
+      id: 3,
+      idName: "modalWindow3",
+      isOpen: false,
+      triggerId: null,
+      view: null
+    }];
+
+    const searchTypeList = [
+      { idName: "modalWindow1" },
+      { idName: "modalWindow2" },
+      { className: "modalWindow" },
+      { id: 1 },
+      { id: 3 },
+      "all"
+    ];
+
+    it("idName", function() {
+      assert.deepEqual(model.search(dataList, searchTypeList[0]), [dataList[0]]);
+    });
 
   });
+
 });
