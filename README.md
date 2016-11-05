@@ -64,7 +64,7 @@ If necessary, install Hugo and other Go.
 npm run boot
 ```
 
-Open `http://localhost:1313' in your browser.
+Open `http://localhost:1313` in your browser.
 
 ## Creators
 
