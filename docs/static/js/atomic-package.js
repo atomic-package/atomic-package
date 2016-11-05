@@ -107,6 +107,10 @@ var AtomicPackages;
         Model.isArray = function (data) {
             return Array.isArray(data) || typeof data !== 'object' && /^\[(\d|[^[|,])/.test(data);
         };
+        Model.isObject = function (data) {
+            var type = typeof data;
+            return type === 'function' || type === 'object' && !!data;
+        };
         Model.getSearchItems = function (dataList, type) {
             if (!type)
                 return;
@@ -121,21 +125,42 @@ var AtomicPackages;
             }
         };
         Model.stringToNumber = function (data) {
-            if (parseInt(data, 10)) {
+            if (parseInt(data, 10) && /^\d|(^\-)/.test(data)) {
                 return parseInt(data, 10);
             }
             else {
                 return data;
             }
         };
+        Model.stringToObjectCheck = function (data) {
+            return /{.*:.*}/.test(data);
+        };
+        Model.stringToJson = function (data) {
+            return JSON.parse(data
+                .replace(/([\$\w]+)\s*:/g, function (_, $1) { return '"' + $1 + '":'; })
+                .replace(/'([^']+)'/g, function (_, $1) { return '"' + $1 + '"'; }));
+        };
         Model.stringToArray = function (data) {
             var _this = this;
             if (typeof data === 'string') {
-                var splitList = data.replace(/^\[/g, '').replace(/\]$/g, '').split(","), newSplitList = [];
-                splitList.forEach(function (item) {
-                    newSplitList.push(_this.stringToNumber(item));
-                });
-                return newSplitList;
+                var splitList = data.replace(/^\[/g, '').replace(/\s+/g, '').replace(/\]$/g, '').split(","), newSplitList = [];
+                if (this.stringToObjectCheck(splitList)) {
+                    splitList.forEach(function (item) {
+                        if (_this.stringToObjectCheck(item)) {
+                            newSplitList.push(_this.stringToJson(item.trim()));
+                        }
+                        else {
+                            newSplitList.push(_this.stringToNumber(item));
+                        }
+                    });
+                    return newSplitList;
+                }
+                else {
+                    splitList.forEach(function (item) {
+                        newSplitList.push(_this.stringToNumber(item));
+                    });
+                    return newSplitList;
+                }
             }
             else {
                 return data;

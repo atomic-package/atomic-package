@@ -29,6 +29,11 @@ module AtomicPackages {
       return Array.isArray(data) || typeof data !== 'object' && /^\[(\d|[^[|,])/.test(data);
     }
 
+    private static isObject(data): boolean {
+      var type = typeof data;
+      return type === 'function' || type === 'object' && !!data;
+    }
+
     private static getSearchItems(dataList: any[], type: any) {
       if (!type) return;
 
@@ -45,23 +50,49 @@ module AtomicPackages {
     }
 
     private static stringToNumber(data: any): number {
-      if(parseInt(data, 10)) {
+      if(parseInt(data, 10) && /^\d|(^\-)/.test(data)) {
         return parseInt(data, 10);
       } else {
         return data;
       }
     }
 
+    private static stringToObjectCheck(data: string): boolean {
+      return /{.*:.*}/.test(data);
+    }
+
+    private static stringToJson(data: string) {
+      return JSON.parse(
+        data
+        .replace(/([\$\w]+)\s*:/g, (_, $1) => { return '"' + $1 + '":'; })
+        .replace(/'([^']+)'/g, (_, $1) => { return '"' + $1 + '"'; })
+      );
+    }
+
     private static stringToArray(data: any): any {
       if(typeof data === 'string') {
-        var splitList = data.replace(/^\[/g , '').replace(/\]$/g , '').split(","),
+        var splitList = data.replace(/^\[/g, '').replace(/\s+/g, '').replace(/\]$/g, '').split(","),
             newSplitList = [];
 
-        splitList.forEach((item: any) => {
-          newSplitList.push(this.stringToNumber(item));
-        });
+        // Object Array
+        if(this.stringToObjectCheck(splitList)) {
+          splitList.forEach((item: any) => {
+            if(this.stringToObjectCheck(item)) {
+              newSplitList.push(this.stringToJson(item.trim()));
+            } else {
+              newSplitList.push(this.stringToNumber(item));
+            }
+          });
 
-        return newSplitList;
+          return newSplitList;
+        } else {
+          // Number Array
+          splitList.forEach((item: any) => {
+            newSplitList.push(this.stringToNumber(item));
+          });
+
+          return newSplitList;
+        }
       } else {
         return data;
       }

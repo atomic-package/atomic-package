@@ -44,6 +44,15 @@ describe('ts/model/atomic_package_model.ts', function () {
     });
   });
 
+  describe("isObject", function() {
+    const testObject = { id: 2 };
+
+    it("isObject { id: 2 }", function() {
+      assert(model.isObject(testObject) === true);
+    });
+
+  });
+
 
   describe("getSearchItems", function() {
     const modalWindowTargetList = [
@@ -158,8 +167,80 @@ describe('ts/model/atomic_package_model.ts', function () {
     })
   });
 
+  describe("stringToObjectCheck", function() {
+    const stringObjectList = [
+      "{ id: 1 }",
+      "{ id: 1 }, { id: 2 }",
+      "{ id: 1 }, { id: 2 }, 1, atmicPackage"
+    ];
+
+    assert(model.stringToObjectCheck(stringObjectList[0]) === true);
+    assert(model.stringToObjectCheck(stringObjectList[1]) === true);
+    assert(model.stringToObjectCheck(stringObjectList[2]) === true);
+  });
+
+  describe("stringToJson", function() {
+    const stringObjectList = [
+      "{ id: 1 }",
+      "{ id: 2 }",
+      "{ id: 1 }, { id: 2 }, { id: 3, className: 'hoge', parts: { id: 1 }}"
+    ];
+
+    const objectList = [
+      { id: 1 },
+      { id: 2 },
+      { id: 3, className: 'class', parts: { id: 1 }}
+    ];
+
+    assert.deepEqual(model.stringToJson(stringObjectList[0]), objectList[0]);
+    assert.deepEqual(model.stringToJson(stringObjectList[1]), objectList[1]);
+    assert.deepEqual(model.stringToJson(stringObjectList[2]), objectList[2]);
+  });
+
   describe("stringToArray", function() {
-    it("strings", function() {
+    const stringIdList = "[#modalWindow1, #modalWindow2, #modalWindow3]";
+    const stringObjectList = "[{ atmoic: 0 }, { atmoic: 1 }, { atmoic: 2 }]";
+
+    it("strings ids", function() {
+      assert.deepEqual(model.stringToArray(stringIdList), ['#modalWindow1', '#modalWindow2', '#modalWindow3']);
     });
+
+    it("strings objects", function() {
+      assert.deepEqual(model.stringToArray(stringObjectList), [{ atmoic: 0 }, { atmoic: 1 }, { atmoic: 2 }]);
+    });
+  });
+
+  describe("checkType", function() {
+    const numberType = 2;
+    const objectType = { id: 2 };
+    const stringType = "2";
+    const stringIdType = "#modalWindow";
+    const stringClassType = ".modalWindow";
+    const allType = "all";
+
+    it("numberType", function() {
+      assert.deepEqual(model.checkType(numberType), { id: 2 });
+    });
+
+    it("objectType", function() {
+      assert.deepEqual(model.checkType(objectType), { id: 2 });
+    });
+
+    it("stringType", function() {
+      assert.deepEqual(model.checkType(stringType), { id: 2 });
+    });
+
+    it("stringIdType", function() {
+      assert.deepEqual(model.checkType(stringIdType), { idName: 'modalWindow' });
+    });
+
+    it("stringClassType", function() {
+      assert.deepEqual(model.checkType(stringClassType), { className: 'modalWindow' });
+    });
+
+    it("allType", function() {
+      assert.deepEqual(model.checkType(allType), "all");
+    });
+
   });
 });
