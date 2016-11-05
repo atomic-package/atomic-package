@@ -313,9 +313,24 @@ describe('ts/model/atomic_package_model.ts', function () {
   });
 
   describe("uniq", function() {
+    const duplicationNumberArray = [1, 2, 1, 2, 3, 5, 5, 10];
+    const duplicationStringArray = ["a", "b", "a", "b", "c", "e", "e", "j"];
+
+    it("number", function() {
+      assert.deepEqual(model.uniq(duplicationNumberArray), [1, 2, 3, 5, 10]);
+    });
+
+    it("string", function() {
+      assert.deepEqual(model.uniq(duplicationStringArray), ["a", "b", "c", "e", "j"]);
+    });
+
+    it("number & string", function() {
+      assert.deepEqual(model.uniq(duplicationNumberArray.concat(duplicationStringArray)), [1, 2, 3, 5, 10, "a", "b", "c", "e", "j"]);
+    });
   });
 
   describe("flattenArray", function() {
+    const multipleArray = [1, 2, [3, 4, [5]]];
   });
 
   describe("createTriggerModel", function() {
