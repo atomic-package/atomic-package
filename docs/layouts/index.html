@@ -15,91 +15,16 @@
 
 
         <h2>タイトル</h2>
-
-        <h1 class="title">h1 Title</h1>
-        <h2 class="title">h2 Title</h2>
-        <h3 class="title">h3 Title</h3>
-        <h4 class="title">h4 Title</h4>
-        <h5 class="title">h5 Title</h5>
-        <h6 class="title">h6 Title</h6>
+        {{ partial "parts/title.html" . }}
 
         <h2>メニュー</h2>
-
-        <nav class="menu">
-            <ul class="menuList">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Pages</a>
-                </li>
-                <li>
-                    <a href="">Pages</a>
-                </li>
-                <li>
-                    <a href="">Pages</a>
-                </li>
-            </ul>
-        </nav>
-
+        {{ partial "parts/menu.html" . }}
 
         <h3>ページネーション</h3>
-
-        <nav class="pagination">
-            <ul class="paginationList">
-                <li class="prev">
-                    <a href=""></a>
-                </li>
-                <li>
-                    <a href="">1</a>
-                </li>
-                <li>
-                    <a href="">2</a>
-                </li>
-                <li>
-                    <a href="">3</a>
-                </li>
-                <li>
-                    <a href="">4</a>
-                </li>
-                <li class="next">
-                    <a href=""></a>
-                </li>
-            </ul>
-        </nav>
+        {{ partial "parts/pagination.html" . }}
 
         <h3>タブメニュー</h3>
-
-        <nav class="tab">
-            <ul class="tabList">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Pages</a>
-                </li>
-                <li>
-                    <a href="">Pages</a>
-                </li>
-                <li>
-                    <a href="">Pages</a>
-                </li>
-            </ul>
-        </nav>
-
-        <nav class="breadcrumb">
-            <ul class="breadcrumbList">
-                <li>
-                    <a href=""></a>
-                </li>
-                <li>
-                    <a href=""></a>
-                </li>
-                <li>
-                    <a href=""></a>
-                </li>
-            </ul>
-        </nav>
+        {{ partial "parts/tab_menu.html" . }}
 
         <h3>ドロップダウン</h3>
         <div data-ap-dropdown>
@@ -144,241 +69,19 @@
         <img class="thumbnail frame" src="img/thumbnail_01.jpg" width="45" alt="daisuke takayama"/>
 
         <h2>ボックス</h2>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-
-
-        <div class="thumbnailBox">
-            <p class="thumbnail"><img src="" alt=""/></p>
-            <div class="details"></div>
-        </div>
-
-        <div class="userBox">
-            <p class="thumbnail"><img src="" alt=""/></p>
-            <div class="details"></div>
-        </div>
-
-        <div class="searchBox">
-            <p class="input"><input type="search"/></p>
-            <p class="btn"><a href="">検索</a></p>
-        </div>
+        {{ partial "parts/box.html" . }}
 
         <h2>フォーム</h2>
-        <p class="input"><input type="text" value="テキスト"></p>
-        <p class="input"><input type="checkbox"></p>
-        <p class="input"><input type="search"></p>
-        <p class="input"><input type="radio"></p>
-        <p class="input"><input type="radio" checked></p>
-        <p class="input"><input type="radio" disabled checked></p>
-
-        <input type="text" value="テキスト"/>
-        <input type="checkbox"/>
-        <input type="search"/>
-        <input type="radio"/>
-
-        <p class="input">
-            <select name="" id="">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-            </select>
-        </p>
-
+        {{ partial "parts/form.html" . }}
+        
         <h2>リスト</h2>
-        <ul>
-            <li>ああああ</li>
-            <li></li>
-            <li></li>
-        </ul>
-
-        <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
-
-
-        <ul class="list disc">
-            <li>List disc</li>
-            <li>List disc</li>
-            <li>List disc</li>
-        </ul>
-
-        <ul class="list circle">
-            <li>List circle</li>
-            <li>List circle</li>
-            <li>List circle</li>
-        </ul>
-
-        <ul class="list square">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list lowerRoman">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list upperRoman">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list lowerGreek">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list decimal">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list decimalLeadingZero">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list lowerLatin">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list lowerAlpha">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list upperLatin">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list upperAlpha">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list cjkIdeographic">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list hiragana">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list katakana">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list hiraganaIroha">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list katakanaIroha">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list hebrew">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list armenian">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="list georgian">
-            <li>ああああ</li>
-            <li>ああああ</li>
-            <li>ああああ</li>
-        </ul>
-
-        <ul class="thumbnailList">
-            <li>
-                <p class="thumbnail round"><img src="img/thumbnail_01.jpg" width="45" alt="daisuke takayama" /></p>
-                <div class="details"></div>
-            </li>
-            <li>
-                <div class="thumbnailBox">
-                    <p class="thumbnail round"><img src="img/thumbnail_01.jpg" width="45" alt="daisuke takayama" /></p>
-                    <div class="details"></div>
-                </div>
-                <div class="details"></div>
-            </li>
-            <li></li>
-        </ul>
-
-        <ul class="thumbnailList user">
-            <li>
-                <p class="thumbnail"><img src="img/thumbnail_01.jpg" width="45" alt="daisuke takayama" /></p>
-                <div class="details"></div>
-            </li>
-            <li></li>
-            <li></li>
-        </ul>
-
-        <ul class="thumbnailList item">
-            <li>
-                <p class="thumbnail"><img src="" alt=""/></p>
-                <div class="details"></div>
-            </li>
-            <li></li>
-            <li></li>
-        </ul>
-
-        <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
+        {{ partial "parts/list.html" . }}
 
         <h2>テーブル</h2>
-        <table class="table">
-
-        </table>
-
-
-        <table class="table striped">
-
-        </table>
-
-        <table class="table bordered">
-
-        </table>
+        {{ partial "parts/table.html" . }}
 
         <h2>アラート</h2>
-        <p class="alert">アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言</p>
-        <p class="alert green">アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言</p>
-        <p class="alert yellow">アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言</p>
-        <p class="alert red">アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言</p>
+        {{ partial "parts/alert.html" . }}
 
         <h2>toggle</h2>
         <a href="" data-ap-toggle="#toggleContents">トグル</a>
