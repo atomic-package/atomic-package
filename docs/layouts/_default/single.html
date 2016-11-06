@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<div class="site-content">
+    <h1>{{ .Title }}</h1>
+    <time>{{ .Date }}</time>
+    <div class="author">{{ .Params.author }}</div>
+    <article>
+        {{ .Content }} <!-- ここに本文すべてがはいる -->
+    </article>
+</div>
+
+
+{{ partial "footer.html" . }}
