@@ -1,5 +1,34 @@
 {
   "atomic_class": {
-    "button": {}
+    "button": {},
+    "btnGroup": {},
+    "title": {},
+    "menu": {},
+    "menuList": {},
+    "pagination": {},
+    "paginationList": {},
+    "tab": {},
+    "tabList": {},
+    "breadcrumb": {},
+    "breadcrumbList": {},
+    "icon": {},
+    "batch": {},
+    "text": {},
+    "thumbnail": {},
+    "box": {},
+    "thumbnailBox": {},
+    "userBox": {},
+    "searchBox": {},
+    "input": {},
+    "checkbox": {},
+    "search": {},
+    "radio": {},
+    "list": {},
+    "thumbnailList": {},
+    "table": {},
+    "alert": {},
+    "sideMenu": {},
+    "footer": {},
+    "header": {}
   }
 }
