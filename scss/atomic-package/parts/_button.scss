@@ -3,6 +3,19 @@
 */
 $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
 
+// size (width)
+$btnNarrow: 65px;
+$btnShort: 90px;
+$btnLong: 140px;
+$btnWide: 170px;
+$btnFree: 100%;
+
+// size (height)
+$btnLower: 20px;
+$btnLow: 25px;
+$btnHigh: 40px;
+$btnLofty: 50px;
+
 @mixin baseBtnStyle {
   display: inline-block;
   width: 100%;
@@ -60,49 +73,108 @@ $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
     @include baseBtnStyle;
   }
 
-  &.ss {
-    min-width: 65px;
+  /* State */
+  // size
+  &.mini {
+    min-width: $btnNarrow;
     > a,
     > button,
     > input {
-      min-height: 20px;
+      min-height: $btnLower;
       padding: 0 6px;
-      line-height: 20px;
+      line-height: $btnLower;
       font-size: 11px;
     }
   }
   &.small {
-    min-width: 90px;
+    min-width: $btnShort;
     > a,
     > button,
     > input {
-      min-height: 25px;
+      min-height: $btnLow;
       padding: 0 10px;
-      line-height: 25px;
+      line-height: $btnLow;
       font-size: 12px;
     }
   }
   &.large {
-    min-width: 140px;
+    min-width: $btnLong;
     > a,
     > button,
     > input {
-      min-height: 40px;
+      min-height: $btnHigh;
       padding: 0 15px;
       border-radius: 6px;
-      line-height: 40px;
+      line-height: $btnHigh;
       font-size: 15px;
     }
   }
-  &.ll {
-    min-width: 170px;
+  &.big {
+    min-width: $btnWide;
     > a,
     > button,
     > input {
-      min-height: 50px;
+      min-height: $btnLofty;
       padding: 0 15px;
       border-radius: 6px;
-      line-height: 50px;
+      line-height: $btnLofty;
+      font-size: 15px;
+    }
+  }
+
+  // width
+  &.narrow {
+    min-width: $btnNarrow;
+  }
+  &.short {
+    min-width: $btnShort;
+  }
+  &.long {
+    min-width: $btnLong;
+  }
+  &.wide {
+    min-width: $btnWide;
+  }
+  &.free {
+    min-width: $btnFree;
+  }
+
+  // height
+  &.lower {
+    > a,
+    > button,
+    > input {
+      min-height: $btnLower;
+      line-height: $btnLower;
+      font-size: 11px;
+    }
+  }
+  &.low {
+    > a,
+    > button,
+    > input {
+      min-height: $btnLow;
+      line-height: $btnLow;
+      font-size: 12px;
+    }
+  }
+  &.high {
+    > a,
+    > button,
+    > input {
+      min-height: $btnHigh;
+      border-radius: 6px;
+      line-height: $btnHigh;
+      font-size: 15px;
+    }
+  }
+  &.lofty {
+    > a,
+    > button,
+    > input {
+      min-height: $btnLofty;
+      border-radius: 6px;
+      line-height: $btnLofty;
       font-size: 15px;
     }
   }
@@ -144,8 +216,6 @@ $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
     @include redBtnStyle;
     //&:hover { background: #FCAE05; }
   }
-
-  &.l { width: 260px; }
 
   /* State */
   &.center { margin: 0 auto; }

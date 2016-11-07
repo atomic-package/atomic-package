@@ -382,6 +382,7 @@ h6.title {
   box-sizing: border-box;
   vertical-align: middle;
   /* Atomic */
+  /* State */
   /* Skin */
   /* State */
   /* Atomic */
@@ -413,17 +414,17 @@ h6.title {
   vertical-align: top;
 }
 
-.btn.ss,
-.btn:not(a).ss {
+.btn.mini,
+.btn:not(a).mini {
   min-width: 65px;
 }
 
-.btn.ss > a,
-.btn.ss > button,
-.btn.ss > input,
-.btn:not(a).ss > a,
-.btn:not(a).ss > button,
-.btn:not(a).ss > input {
+.btn.mini > a,
+.btn.mini > button,
+.btn.mini > input,
+.btn:not(a).mini > a,
+.btn:not(a).mini > button,
+.btn:not(a).mini > input {
   min-height: 20px;
   padding: 0 6px;
   line-height: 20px;
@@ -465,19 +466,90 @@ h6.title {
   font-size: 15px;
 }
 
-.btn.ll,
-.btn:not(a).ll {
+.btn.big,
+.btn:not(a).big {
   min-width: 170px;
 }
 
-.btn.ll > a,
-.btn.ll > button,
-.btn.ll > input,
-.btn:not(a).ll > a,
-.btn:not(a).ll > button,
-.btn:not(a).ll > input {
+.btn.big > a,
+.btn.big > button,
+.btn.big > input,
+.btn:not(a).big > a,
+.btn:not(a).big > button,
+.btn:not(a).big > input {
   min-height: 50px;
   padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.btn.narrow,
+.btn:not(a).narrow {
+  min-width: 65px;
+}
+
+.btn.short,
+.btn:not(a).short {
+  min-width: 90px;
+}
+
+.btn.long,
+.btn:not(a).long {
+  min-width: 140px;
+}
+
+.btn.wide,
+.btn:not(a).wide {
+  min-width: 170px;
+}
+
+.btn.free,
+.btn:not(a).free {
+  min-width: 100%;
+}
+
+.btn.lower > a,
+.btn.lower > button,
+.btn.lower > input,
+.btn:not(a).lower > a,
+.btn:not(a).lower > button,
+.btn:not(a).lower > input {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+.btn.low > a,
+.btn.low > button,
+.btn.low > input,
+.btn:not(a).low > a,
+.btn:not(a).low > button,
+.btn:not(a).low > input {
+  min-height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.btn.high > a,
+.btn.high > button,
+.btn.high > input,
+.btn:not(a).high > a,
+.btn:not(a).high > button,
+.btn:not(a).high > input {
+  min-height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+.btn.lofty > a,
+.btn.lofty > button,
+.btn.lofty > input,
+.btn:not(a).lofty > a,
+.btn:not(a).lofty > button,
+.btn:not(a).lofty > input {
+  min-height: 50px;
   border-radius: 6px;
   line-height: 50px;
   font-size: 15px;
@@ -541,11 +613,6 @@ h6.title {
 .btn:not(a).red > button,
 .btn:not(a).red > input {
   background: #E74C3C;
-}
-
-.btn.l,
-.btn:not(a).l {
-  width: 260px;
 }
 
 .btn.center,
