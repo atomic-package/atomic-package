@@ -397,14 +397,16 @@ h6.title {
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: #95A5A6;
   border-radius: 4px;
   border: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #fff;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
@@ -487,37 +489,30 @@ h6.title {
 .btn:not(a).primary > a,
 .btn:not(a).primary > button,
 .btn:not(a).primary > input {
-  background: #0BACD3;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #2C3D50;
 }
 
-.btn.secondly > a,
-.btn.secondly > button,
-.btn.secondly > input,
-.btn:not(a).secondly > a,
-.btn:not(a).secondly > button,
-.btn:not(a).secondly > input {
-  background: #EEEEEE;
-  background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#282828));
-  background: -webkit-linear-gradient(top, #404040, #282828);
-  background: linear-gradient(top, #404040, #282828);
-  color: #fff;
+.btn.blue > a,
+.btn.blue > button,
+.btn.blue > input,
+.btn:not(a).blue > a,
+.btn:not(a).blue > button,
+.btn:not(a).blue > input {
+  background: #3598DB;
 }
 
-.btn.secondly > a > a,
-.btn.secondly > a > input,
-.btn.secondly > button > a,
-.btn.secondly > button > input,
-.btn.secondly > input > a,
-.btn.secondly > input > input,
-.btn:not(a).secondly > a > a,
-.btn:not(a).secondly > a > input,
-.btn:not(a).secondly > button > a,
-.btn:not(a).secondly > button > input,
-.btn:not(a).secondly > input > a,
-.btn:not(a).secondly > input > input {
+.btn.blue > a > a,
+.btn.blue > a > input,
+.btn.blue > button > a,
+.btn.blue > button > input,
+.btn.blue > input > a,
+.btn.blue > input > input,
+.btn:not(a).blue > a > a,
+.btn:not(a).blue > a > input,
+.btn:not(a).blue > button > a,
+.btn:not(a).blue > button > input,
+.btn:not(a).blue > input > a,
+.btn:not(a).blue > input > input {
   color: #000000;
 }
 
@@ -527,10 +522,7 @@ h6.title {
 .btn:not(a).green > a,
 .btn:not(a).green > button,
 .btn:not(a).green > input {
-  background: #81BA41;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #17BC9C;
 }
 
 .btn.orange > a,
@@ -539,10 +531,7 @@ h6.title {
 .btn:not(a).orange > a,
 .btn:not(a).orange > button,
 .btn:not(a).orange > input {
-  background: #F0AD4E;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #F39C12;
 }
 
 .btn.red > a,
@@ -551,10 +540,7 @@ h6.title {
 .btn:not(a).red > a,
 .btn:not(a).red > button,
 .btn:not(a).red > input {
-  background: #D52D47;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #E74C3C;
 }
 
 .btn.l,
@@ -589,14 +575,16 @@ input.btn {
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: #95A5A6;
   border-radius: 4px;
   border: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #fff;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
@@ -608,57 +596,31 @@ input.btn {
 a.btn.primary,
 button.btn.primary,
 input.btn.primary {
-  background: #0BACD3;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #2C3D50;
 }
 
-a.btn.secondly,
-button.btn.secondly,
-input.btn.secondly {
-  background: #EEEEEE;
-  border: #000 1px solid;
-  background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#282828));
-  background: -webkit-linear-gradient(top, #404040, #282828);
-  background: linear-gradient(top, #404040, #282828);
-  color: #fff;
-}
-
-a.btn.secondly > a,
-a.btn.secondly > input,
-button.btn.secondly > a,
-button.btn.secondly > input,
-input.btn.secondly > a,
-input.btn.secondly > input {
-  color: #000000;
+a.btn.blue,
+button.btn.blue,
+input.btn.blue {
+  background: #3598DB;
 }
 
 a.btn.green,
 button.btn.green,
 input.btn.green {
-  background: #81BA41;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #17BC9C;
 }
 
 a.btn.orange,
 button.btn.orange,
 input.btn.orange {
-  background: #F0AD4E;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #F39C12;
 }
 
 a.btn.red,
 button.btn.red,
 input.btn.red {
-  background: #D52D47;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  color: #fff;
+  background: #E74C3C;
 }
 
 .btnGroup > * {
@@ -687,11 +649,11 @@ input.btn.red {
 }
 
 .btnGroup .btn.btn + .primary {
-  border-left: #0889a8 1px solid;
+  border-left: #233040 1px solid;
 }
 
-.btnGroup .btn.btn + .secondly {
-  border-left: #0889a8 1px solid;
+.btnGroup .btn.btn + .blue {
+  border-left: #0889A8 1px solid;
 }
 
 .btnGroup .btn.btn + .green {
