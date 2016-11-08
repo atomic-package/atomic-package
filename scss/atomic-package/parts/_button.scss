@@ -21,14 +21,14 @@ $btnLofty: 50px;
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #95A5A6;
+  background: #F9F9F9;
   border-radius: 4px;
   border: none;
   box-sizing: border-box;
   box-shadow: $btnShadow;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: #6A6A6A;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
@@ -38,22 +38,27 @@ $btnLofty: 50px;
 /* Primary */
 @mixin primaryBtnStyle {
   background: #2C3D50;
+  color: #fff;
 }
 
 @mixin greenBtnStyle {
   background: #17BC9C;
+  color: #fff;
 }
 
 @mixin blueBtnStyle {
   background: #3598DB;
+  color: #fff;
 }
 
 @mixin orangeBtnStyle {
   background: #F39C12;
+  color: #fff;
 }
 
 @mixin redBtnStyle {
   background: #E74C3C;
+  color: #fff;
 }
 
 
