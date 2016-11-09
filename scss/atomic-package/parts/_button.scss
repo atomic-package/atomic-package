@@ -21,7 +21,7 @@ $btnLofty: 50px;
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F9F9F9;
+  background: $colorDefault;
   border-radius: 4px;
   border: none;
   box-sizing: border-box;
@@ -37,28 +37,43 @@ $btnLofty: 50px;
 
 /* Primary */
 @mixin primaryBtnStyle {
-  background: #2C3D50;
+  background: $colorPrimary;
   color: #fff;
+  &:hover {
+    background: #76828D;
+  }
 }
 
 @mixin greenBtnStyle {
-  background: #17BC9C;
+  background: $colorGreen;
   color: #fff;
+  &:hover {
+    background: #69D3BF;
+  }
 }
 
 @mixin blueBtnStyle {
-  background: #3598DB;
+  background: $colorBlue;
   color: #fff;
+  &:hover {
+    background: #7BBCE8;
+  }
 }
 
 @mixin orangeBtnStyle {
-  background: #F39C12;
+  background: $colorOrange;
   color: #fff;
+  &:hover {
+    background: #F7BF65;
+  }
 }
 
 @mixin redBtnStyle {
-  background: #E74C3C;
+  background: $colorRed;
   color: #fff;
+  &:hover {
+    background: #EF8B80;
+  }
 }
 
 
@@ -189,42 +204,35 @@ $btnLofty: 50px;
   &.primary > button,
   &.primary > input {
     @include primaryBtnStyle;
-    //&:hover { background: #303030; }
   }
 
   &.blue > a,
   &.blue > button,
   &.blue > input {
     @include blueBtnStyle;
-    > a,
-    > input { color: #000000; }
-    //&:hover { background: #EAEAEA; }
   }
 
   &.green > a,
   &.green > button,
   &.green > input {
     @include greenBtnStyle;
-    //&:hover { background: #267400; }
   }
 
   &.orange > a,
   &.orange > button,
   &.orange > input {
     @include orangeBtnStyle;
-    //&:hover { background: #FCAE05; }
   }
 
   &.red > a,
   &.red > button,
   &.red > input {
     @include redBtnStyle;
-    //&:hover { background: #FCAE05; }
   }
 
   /* State */
   &.center { margin: 0 auto; }
-  &.disable { opacity: 0.4; }
+  &.disable { opacity: 0.5; }
 
   /* Atomic */
   .icon {
@@ -245,27 +253,92 @@ input {
     /* Skin */
     &.primary {
       @include primaryBtnStyle;
-      //&:hover { background: #303030; }
     }
-
     &.blue {
       @include blueBtnStyle;
-      //&:hover { background: #EAEAEA; }
     }
-
     &.green {
       @include greenBtnStyle;
-      //&:hover { background: #267400; }
     }
-
     &.orange {
       @include orangeBtnStyle;
-      //&:hover { background: #FCAE05; }
     }
-
     &.red {
       @include redBtnStyle;
-      //&:hover { background: #FCAE05; }
+    }
+
+    /* State */
+    // size
+    &.mini {
+      min-width: $btnNarrow;
+      min-height: $btnLower;
+      padding: 0 6px;
+      line-height: $btnLower;
+      font-size: 11px;
+    }
+    &.small {
+      min-width: $btnShort;
+      min-height: $btnLow;
+      padding: 0 10px;
+      line-height: $btnLow;
+      font-size: 12px;
+    }
+    &.large {
+      min-width: $btnLong;
+      min-height: $btnHigh;
+      padding: 0 15px;
+      border-radius: 6px;
+      line-height: $btnHigh;
+      font-size: 15px;
+    }
+    &.big {
+      min-width: $btnWide;
+      min-height: $btnLofty;
+      padding: 0 15px;
+      border-radius: 6px;
+      line-height: $btnLofty;
+      font-size: 15px;
+    }
+
+    // width
+    &.narrow {
+      min-width: $btnNarrow;
+    }
+    &.short {
+      min-width: $btnShort;
+    }
+    &.long {
+      min-width: $btnLong;
+    }
+    &.wide {
+      min-width: $btnWide;
+    }
+    &.free {
+      min-width: $btnFree;
+    }
+
+    // height
+    &.lower {
+      min-height: $btnLower;
+      line-height: $btnLower;
+      font-size: 11px;
+    }
+    &.low {
+      min-height: $btnLow;
+      line-height: $btnLow;
+      font-size: 12px;
+    }
+    &.high {
+      min-height: $btnHigh;
+      border-radius: 6px;
+      line-height: $btnHigh;
+      font-size: 15px;
+    }
+    &.lofty {
+      min-height: $btnLofty;
+      border-radius: 6px;
+      line-height: $btnLofty;
+      font-size: 15px;
     }
   }
 }
@@ -307,6 +380,39 @@ input {
     &.btn + .red {
       border-left: #af4450 1px solid;
     }
+
+  }
+}
+
+/*
+ * DropDown Style
+*/
+.dropdown {
+  .btn {
+    position: relative;
+    padding-right: 20px;
+    &::before {
+      @include createStyle;
+      top: 50%;
+      right: 8px;
+      width: 6px;
+      height: 6px;
+      margin-top: -6px;
+      border-bottom: 2px solid #6A6A6A;
+      border-right: 2px solid #6A6A6A;
+      border-radius: 2px;
+      transform: rotate(45deg);
+    }
+    &.primary,
+    &.blue,
+    &.green,
+    &.orange,
+    &.red {
+      &::before {
+        border-color: #fff;
+      }
+    }
+
 
   }
 }

@@ -565,6 +565,15 @@ h6.title {
   color: #fff;
 }
 
+.btn.primary > a:hover,
+.btn.primary > button:hover,
+.btn.primary > input:hover,
+.btn:not(a).primary > a:hover,
+.btn:not(a).primary > button:hover,
+.btn:not(a).primary > input:hover {
+  background: #76828D;
+}
+
 .btn.blue > a,
 .btn.blue > button,
 .btn.blue > input,
@@ -575,19 +584,13 @@ h6.title {
   color: #fff;
 }
 
-.btn.blue > a > a,
-.btn.blue > a > input,
-.btn.blue > button > a,
-.btn.blue > button > input,
-.btn.blue > input > a,
-.btn.blue > input > input,
-.btn:not(a).blue > a > a,
-.btn:not(a).blue > a > input,
-.btn:not(a).blue > button > a,
-.btn:not(a).blue > button > input,
-.btn:not(a).blue > input > a,
-.btn:not(a).blue > input > input {
-  color: #000000;
+.btn.blue > a:hover,
+.btn.blue > button:hover,
+.btn.blue > input:hover,
+.btn:not(a).blue > a:hover,
+.btn:not(a).blue > button:hover,
+.btn:not(a).blue > input:hover {
+  background: #7BBCE8;
 }
 
 .btn.green > a,
@@ -600,6 +603,15 @@ h6.title {
   color: #fff;
 }
 
+.btn.green > a:hover,
+.btn.green > button:hover,
+.btn.green > input:hover,
+.btn:not(a).green > a:hover,
+.btn:not(a).green > button:hover,
+.btn:not(a).green > input:hover {
+  background: #69D3BF;
+}
+
 .btn.orange > a,
 .btn.orange > button,
 .btn.orange > input,
@@ -608,6 +620,15 @@ h6.title {
 .btn:not(a).orange > input {
   background: #F39C12;
   color: #fff;
+}
+
+.btn.orange > a:hover,
+.btn.orange > button:hover,
+.btn.orange > input:hover,
+.btn:not(a).orange > a:hover,
+.btn:not(a).orange > button:hover,
+.btn:not(a).orange > input:hover {
+  background: #F7BF65;
 }
 
 .btn.red > a,
@@ -620,6 +641,15 @@ h6.title {
   color: #fff;
 }
 
+.btn.red > a:hover,
+.btn.red > button:hover,
+.btn.red > input:hover,
+.btn:not(a).red > a:hover,
+.btn:not(a).red > button:hover,
+.btn:not(a).red > input:hover {
+  background: #EF8B80;
+}
+
 .btn.center,
 .btn:not(a).center {
   margin: 0 auto;
@@ -627,7 +657,7 @@ h6.title {
 
 .btn.disable,
 .btn:not(a).disable {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .btn .icon,
@@ -663,6 +693,7 @@ input.btn {
   vertical-align: top;
   width: auto;
   /* Skin */
+  /* State */
 }
 
 a.btn.primary,
@@ -672,11 +703,23 @@ input.btn.primary {
   color: #fff;
 }
 
+a.btn.primary:hover,
+button.btn.primary:hover,
+input.btn.primary:hover {
+  background: #76828D;
+}
+
 a.btn.blue,
 button.btn.blue,
 input.btn.blue {
   background: #3598DB;
   color: #fff;
+}
+
+a.btn.blue:hover,
+button.btn.blue:hover,
+input.btn.blue:hover {
+  background: #7BBCE8;
 }
 
 a.btn.green,
@@ -686,6 +729,12 @@ input.btn.green {
   color: #fff;
 }
 
+a.btn.green:hover,
+button.btn.green:hover,
+input.btn.green:hover {
+  background: #69D3BF;
+}
+
 a.btn.orange,
 button.btn.orange,
 input.btn.orange {
@@ -693,11 +742,129 @@ input.btn.orange {
   color: #fff;
 }
 
+a.btn.orange:hover,
+button.btn.orange:hover,
+input.btn.orange:hover {
+  background: #F7BF65;
+}
+
 a.btn.red,
 button.btn.red,
 input.btn.red {
   background: #E74C3C;
   color: #fff;
+}
+
+a.btn.red:hover,
+button.btn.red:hover,
+input.btn.red:hover {
+  background: #EF8B80;
+}
+
+a.btn.mini,
+button.btn.mini,
+input.btn.mini {
+  min-width: 65px;
+  min-height: 20px;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+a.btn.small,
+button.btn.small,
+input.btn.small {
+  min-width: 90px;
+  min-height: 25px;
+  padding: 0 10px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+a.btn.large,
+button.btn.large,
+input.btn.large {
+  min-width: 140px;
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+a.btn.big,
+button.btn.big,
+input.btn.big {
+  min-width: 170px;
+  min-height: 50px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+a.btn.narrow,
+button.btn.narrow,
+input.btn.narrow {
+  min-width: 65px;
+}
+
+a.btn.short,
+button.btn.short,
+input.btn.short {
+  min-width: 90px;
+}
+
+a.btn.long,
+button.btn.long,
+input.btn.long {
+  min-width: 140px;
+}
+
+a.btn.wide,
+button.btn.wide,
+input.btn.wide {
+  min-width: 170px;
+}
+
+a.btn.free,
+button.btn.free,
+input.btn.free {
+  min-width: 100%;
+}
+
+a.btn.lower,
+button.btn.lower,
+input.btn.lower {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+a.btn.low,
+button.btn.low,
+input.btn.low {
+  min-height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+a.btn.high,
+button.btn.high,
+input.btn.high {
+  min-height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+a.btn.lofty,
+button.btn.lofty,
+input.btn.lofty {
+  min-height: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
 }
 
 .btnGroup > * {
@@ -743,6 +910,34 @@ input.btn.red {
 
 .btnGroup .btn.btn + .red {
   border-left: #af4450 1px solid;
+}
+
+/*
+ * DropDown Style
+*/
+.dropdown .btn {
+  position: relative;
+  padding-right: 20px;
+}
+
+.dropdown .btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  margin-top: -6px;
+  border-bottom: 2px solid #6A6A6A;
+  border-right: 2px solid #6A6A6A;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.dropdown .btn.primary::before, .dropdown .btn.blue::before, .dropdown .btn.green::before, .dropdown .btn.orange::before, .dropdown .btn.red::before {
+  border-color: #fff;
 }
 
 /* Box Style
