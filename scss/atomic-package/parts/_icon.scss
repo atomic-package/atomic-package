@@ -7,10 +7,12 @@
   background: $colorDefault;
   box-sizing: border-box;
   font-size: 20px;
-  line-height: 42px;
   text-align: center;
   vertical-align: top;
   color: #000;
+  .icon {
+    line-height: 40px;
+  }
 }
 
 
@@ -33,17 +35,18 @@
   &.mini::before {
     font-size: 10px;
   }
-  &.small::before {
-    font-size: 12px;
+  &.small {
+    //font-size: 12px;
+    font-size: 1.5em;
   }
-  &.large::before {
-    font-size: 16px;
+  &.large {
+    font-size: 2em;
   }
-  &.xLarge::before {
-    font-size: 18px;
+  &.xLarge {
+    font-size: 3em;
   }
-  &.big::before {
-    font-size: 20px;
+  &.big {
+    font-size: 4em;
   }
 
   &.x2 {
@@ -834,6 +837,44 @@
     color: #000;
   }
 
+  // state
+  &.mini {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    .icon {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+  &.small {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    .icon {
+      line-height: 30px;
+    }
+  }
+  &.large {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    .icon {
+      font-size: 24px;
+      line-height: 60px;
+    }
+  }
+  &.big {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    .icon {
+      font-size: 32px;
+      line-height: 80px;
+    }
+  }
+
+  // skin
   &.primary {
     background: $colorPrimary;
     color: #fff;

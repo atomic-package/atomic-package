@@ -1051,30 +1051,33 @@ input.btn.lofty {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 20px;
-  line-height: 42px;
   text-align: center;
   vertical-align: top;
   color: #000;
+}
+
+.icon.round .icon {
+  line-height: 40px;
 }
 
 .icon.mini::before {
   font-size: 10px;
 }
 
-.icon.small::before {
-  font-size: 12px;
+.icon.small {
+  font-size: 1.5em;
 }
 
-.icon.large::before {
-  font-size: 16px;
+.icon.large {
+  font-size: 2em;
 }
 
-.icon.xLarge::before {
-  font-size: 18px;
+.icon.xLarge {
+  font-size: 3em;
 }
 
-.icon.big::before {
-  font-size: 20px;
+.icon.big {
+  font-size: 4em;
 }
 
 .icon.x2 {
@@ -3674,10 +3677,13 @@ input.btn.lofty {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 20px;
-  line-height: 42px;
   text-align: center;
   vertical-align: top;
   color: #000;
+}
+
+.iconBtn .icon {
+  line-height: 40px;
 }
 
 .iconBtn > a {
@@ -3685,6 +3691,49 @@ input.btn.lofty {
   width: 100%;
   height: 100%;
   color: #000;
+}
+
+.iconBtn.mini {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.iconBtn.mini .icon {
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.iconBtn.small {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.iconBtn.small .icon {
+  line-height: 30px;
+}
+
+.iconBtn.large {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.iconBtn.large .icon {
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.iconBtn.big {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+.iconBtn.big .icon {
+  font-size: 32px;
+  line-height: 80px;
 }
 
 .iconBtn.primary {
