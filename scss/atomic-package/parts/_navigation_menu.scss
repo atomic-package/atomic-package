@@ -2,6 +2,9 @@
  * Navigation & Menu Style
 */
 
+/*
+ * Menu
+*/
 .menuList {
 
 }
@@ -25,4 +28,49 @@
       }
     }
   }
+}
+
+/*
+ * Pagination
+*/
+.paginationList {
+  > li {
+    display: inline-block;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 4px;
+    background: $colorDefault;
+    box-sizing: border-box;
+    vertical-align: top;
+    a {
+      display: block;
+      min-width: 40px;
+      min-height: 40px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      text-decoration: none;
+      text-align: center;
+      line-height: 40px;
+      color: #666;
+    }
+
+    &.active,
+    &:hover {
+      background: $colorBlue;
+      a {
+        color: #fff;
+      }
+    }
+
+    &:not(:first-child),
+    &:not(:last-child) {
+      margin: 0 4px;
+    }
+  }
+
+  // state
+  &.mini {}
+  &.small {}
+  &.large {}
+  &.big {}
 }

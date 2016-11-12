@@ -137,6 +137,7 @@ a {
   - Button Style
   - Box Style
   - List Style
+  - Table Style
   - Modal Style
   - Form Style
   - Separate Style
@@ -339,6 +340,9 @@ h6.title {
 /*
  * Navigation & Menu Style
 */
+/*
+ * Menu
+*/
 .menu .menuList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,6 +368,45 @@ h6.title {
   line-height: 40px;
   text-align: center;
   text-decoration: none;
+}
+
+/*
+ * Pagination
+*/
+.paginationList > li {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  background: #F9F9F9;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.paginationList > li a {
+  display: block;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  color: #666;
+}
+
+.paginationList > li.active, .paginationList > li:hover {
+  background: #3598DB;
+}
+
+.paginationList > li.active a, .paginationList > li:hover a {
+  color: #fff;
+}
+
+.paginationList > li:not(:first-child), .paginationList > li:not(:last-child) {
+  margin: 0 4px;
 }
 
 /* Button Style
@@ -1033,6 +1076,41 @@ input.btn.lofty {
 
 .list.georgian {
   list-style-type: georgian;
+}
+
+/* Table Style
+-------------------------------------------------- */
+/*
+ * Table Style
+*/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table caption {
+  text-align: left;
+  color: #999;
+  font-size: 12px;
+}
+
+.table th,
+.table td {
+  padding: 8px 8px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.table th + th,
+.table th + td,
+.table td + th,
+.table td + td {
+  border-left: 1px solid #E5E5E5;
+}
+
+.table tfoot {
+  font-size: 12px;
+  font-style: italic;
 }
 
 /* Icon Style

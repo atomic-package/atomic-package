@@ -9,6 +9,7 @@
   - Button Style
   - Box Style
   - List Style
+  - Table Style
   - Modal Style
   - Form Style
   - Separate Style
@@ -52,6 +53,10 @@
 /* List Style
 -------------------------------------------------- */
 @import "parts/list";
+
+/* Table Style
+-------------------------------------------------- */
+@import "parts/table";
 
 /* Icon Style
 -------------------------------------------------- */
