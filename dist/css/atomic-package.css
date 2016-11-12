@@ -133,6 +133,7 @@ a {
   - Button Style
   - Box Style
   - List Style
+  - Table Style
   - Modal Style
   - Form Style
   - Separate Style
@@ -335,6 +336,9 @@ h6.title {
 /*
  * Navigation & Menu Style
 */
+/*
+ * Menu
+*/
 .menu .menuList {
   display: flex;
   justify-content: space-between;
@@ -356,6 +360,206 @@ h6.title {
   text-decoration: none;
 }
 
+/*
+ * Pagination
+*/
+.paginationList > li {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.paginationList > li a {
+  display: block;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 6px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  color: #666;
+}
+
+.paginationList > li.active, .paginationList > li:hover {
+  background: #3598DB;
+}
+
+.paginationList > li.active a, .paginationList > li:hover a {
+  color: #fff;
+}
+
+.paginationList > li:not(:first-child), .paginationList > li:not(:last-child) {
+  margin: 0 4px;
+}
+
+.paginationList.primary > li {
+  background: #2C3D50;
+}
+
+.paginationList.primary > li a {
+  color: #fff;
+}
+
+.paginationList.primary > li.active, .paginationList.primary > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.primary > li.active a, .paginationList.primary > li:hover a {
+  color: #666;
+}
+
+.paginationList.green > li {
+  background: #17BC9C;
+}
+
+.paginationList.green > li a {
+  color: #fff;
+}
+
+.paginationList.green > li.active, .paginationList.green > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.green > li.active a, .paginationList.green > li:hover a {
+  color: #666;
+}
+
+.paginationList.blue > li {
+  background: #3598DB;
+}
+
+.paginationList.blue > li a {
+  color: #fff;
+}
+
+.paginationList.blue > li.active, .paginationList.blue > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.blue > li.active a, .paginationList.blue > li:hover a {
+  color: #666;
+}
+
+.paginationList.orange > li {
+  background: #F39C12;
+}
+
+.paginationList.orange > li a {
+  color: #fff;
+}
+
+.paginationList.orange > li.active, .paginationList.orange > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.orange > li.active a, .paginationList.orange > li:hover a {
+  color: #666;
+}
+
+.paginationList.red > li {
+  background: #E74C3C;
+}
+
+.paginationList.red > li a {
+  color: #fff;
+}
+
+.paginationList.red > li.active, .paginationList.red > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.red > li.active a, .paginationList.red > li:hover a {
+  color: #666;
+}
+
+.paginationList.mini > li {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.paginationList.mini > li a {
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.paginationList.small > li {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.paginationList.small > li a {
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.paginationList.large > li {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.paginationList.large > li a {
+  min-width: 40px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
+.paginationList.big > li {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.paginationList.big > li a {
+  min-width: 50px;
+  min-height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+/*
+ * TabMenu
+*/
+.tabList > li {
+  display: inline-block;
+  box-sizing: border-box;
+  border-bottom: #E5E5E5 1px solid;
+}
+
+.tabList > li a {
+  display: block;
+  min-width: 80px;
+  min-height: 30px;
+  box-sizing: border-box;
+  padding: 0 6px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tabList > li.active {
+  border: #E5E5E5 1px solid;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.tabList > li.active a {
+  color: #666666;
+}
+
+.tabList > li.disable a {
+  cursor: text;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*
@@ -371,6 +575,7 @@ h6.title {
   box-sizing: border-box;
   vertical-align: middle;
   /* Atomic */
+  /* State */
   /* Skin */
   /* State */
   /* Atomic */
@@ -386,30 +591,31 @@ h6.title {
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: #F9F9F9;
   border-radius: 4px;
   border: none;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #6A6A6A;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
   vertical-align: top;
 }
 
-.btn.ss,
-.btn:not(a).ss {
+.btn.mini,
+.btn:not(a).mini {
   min-width: 65px;
 }
 
-.btn.ss > a,
-.btn.ss > button,
-.btn.ss > input,
-.btn:not(a).ss > a,
-.btn:not(a).ss > button,
-.btn:not(a).ss > input {
+.btn.mini > a,
+.btn.mini > button,
+.btn.mini > input,
+.btn:not(a).mini > a,
+.btn:not(a).mini > button,
+.btn:not(a).mini > input {
   min-height: 20px;
   padding: 0 6px;
   line-height: 20px;
@@ -451,19 +657,90 @@ h6.title {
   font-size: 15px;
 }
 
-.btn.ll,
-.btn:not(a).ll {
+.btn.big,
+.btn:not(a).big {
   min-width: 170px;
 }
 
-.btn.ll > a,
-.btn.ll > button,
-.btn.ll > input,
-.btn:not(a).ll > a,
-.btn:not(a).ll > button,
-.btn:not(a).ll > input {
+.btn.big > a,
+.btn.big > button,
+.btn.big > input,
+.btn:not(a).big > a,
+.btn:not(a).big > button,
+.btn:not(a).big > input {
   min-height: 50px;
   padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.btn.narrow,
+.btn:not(a).narrow {
+  min-width: 65px;
+}
+
+.btn.short,
+.btn:not(a).short {
+  min-width: 90px;
+}
+
+.btn.long,
+.btn:not(a).long {
+  min-width: 140px;
+}
+
+.btn.wide,
+.btn:not(a).wide {
+  min-width: 170px;
+}
+
+.btn.free,
+.btn:not(a).free {
+  min-width: 100%;
+}
+
+.btn.lower > a,
+.btn.lower > button,
+.btn.lower > input,
+.btn:not(a).lower > a,
+.btn:not(a).lower > button,
+.btn:not(a).lower > input {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+.btn.low > a,
+.btn.low > button,
+.btn.low > input,
+.btn:not(a).low > a,
+.btn:not(a).low > button,
+.btn:not(a).low > input {
+  min-height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.btn.high > a,
+.btn.high > button,
+.btn.high > input,
+.btn:not(a).high > a,
+.btn:not(a).high > button,
+.btn:not(a).high > input {
+  min-height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+.btn.lofty > a,
+.btn.lofty > button,
+.btn.lofty > input,
+.btn:not(a).lofty > a,
+.btn:not(a).lofty > button,
+.btn:not(a).lofty > input {
+  min-height: 50px;
   border-radius: 6px;
   line-height: 50px;
   font-size: 15px;
@@ -475,35 +752,36 @@ h6.title {
 .btn:not(a).primary > a,
 .btn:not(a).primary > button,
 .btn:not(a).primary > input {
-  background: #0BACD3;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #2C3D50;
   color: #fff;
 }
 
-.btn.secondly > a,
-.btn.secondly > button,
-.btn.secondly > input,
-.btn:not(a).secondly > a,
-.btn:not(a).secondly > button,
-.btn:not(a).secondly > input {
-  background: #EEEEEE;
-  background: linear-gradient(top, #404040, #282828);
+.btn.primary > a:hover,
+.btn.primary > button:hover,
+.btn.primary > input:hover,
+.btn:not(a).primary > a:hover,
+.btn:not(a).primary > button:hover,
+.btn:not(a).primary > input:hover {
+  background: #76828D;
+}
+
+.btn.blue > a,
+.btn.blue > button,
+.btn.blue > input,
+.btn:not(a).blue > a,
+.btn:not(a).blue > button,
+.btn:not(a).blue > input {
+  background: #3598DB;
   color: #fff;
 }
 
-.btn.secondly > a > a,
-.btn.secondly > a > input,
-.btn.secondly > button > a,
-.btn.secondly > button > input,
-.btn.secondly > input > a,
-.btn.secondly > input > input,
-.btn:not(a).secondly > a > a,
-.btn:not(a).secondly > a > input,
-.btn:not(a).secondly > button > a,
-.btn:not(a).secondly > button > input,
-.btn:not(a).secondly > input > a,
-.btn:not(a).secondly > input > input {
-  color: #000000;
+.btn.blue > a:hover,
+.btn.blue > button:hover,
+.btn.blue > input:hover,
+.btn:not(a).blue > a:hover,
+.btn:not(a).blue > button:hover,
+.btn:not(a).blue > input:hover {
+  background: #7BBCE8;
 }
 
 .btn.green > a,
@@ -512,9 +790,17 @@ h6.title {
 .btn:not(a).green > a,
 .btn:not(a).green > button,
 .btn:not(a).green > input {
-  background: #81BA41;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #17BC9C;
   color: #fff;
+}
+
+.btn.green > a:hover,
+.btn.green > button:hover,
+.btn.green > input:hover,
+.btn:not(a).green > a:hover,
+.btn:not(a).green > button:hover,
+.btn:not(a).green > input:hover {
+  background: #69D3BF;
 }
 
 .btn.orange > a,
@@ -523,9 +809,17 @@ h6.title {
 .btn:not(a).orange > a,
 .btn:not(a).orange > button,
 .btn:not(a).orange > input {
-  background: #F0AD4E;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #F39C12;
   color: #fff;
+}
+
+.btn.orange > a:hover,
+.btn.orange > button:hover,
+.btn.orange > input:hover,
+.btn:not(a).orange > a:hover,
+.btn:not(a).orange > button:hover,
+.btn:not(a).orange > input:hover {
+  background: #F7BF65;
 }
 
 .btn.red > a,
@@ -534,14 +828,17 @@ h6.title {
 .btn:not(a).red > a,
 .btn:not(a).red > button,
 .btn:not(a).red > input {
-  background: #D52D47;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #E74C3C;
   color: #fff;
 }
 
-.btn.l,
-.btn:not(a).l {
-  width: 260px;
+.btn.red > a:hover,
+.btn.red > button:hover,
+.btn.red > input:hover,
+.btn:not(a).red > a:hover,
+.btn:not(a).red > button:hover,
+.btn:not(a).red > input:hover {
+  background: #EF8B80;
 }
 
 .btn.center,
@@ -551,7 +848,7 @@ h6.title {
 
 .btn.disable,
 .btn:not(a).disable {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .btn .icon,
@@ -571,69 +868,192 @@ input.btn {
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: #F9F9F9;
   border-radius: 4px;
   border: none;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #6A6A6A;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
   vertical-align: top;
   width: auto;
   /* Skin */
+  /* State */
 }
 
 a.btn.primary,
 button.btn.primary,
 input.btn.primary {
-  background: #0BACD3;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #2C3D50;
   color: #fff;
 }
 
-a.btn.secondly,
-button.btn.secondly,
-input.btn.secondly {
-  background: #EEEEEE;
-  border: #000 1px solid;
-  background: linear-gradient(top, #404040, #282828);
+a.btn.primary:hover,
+button.btn.primary:hover,
+input.btn.primary:hover {
+  background: #76828D;
+}
+
+a.btn.blue,
+button.btn.blue,
+input.btn.blue {
+  background: #3598DB;
   color: #fff;
 }
 
-a.btn.secondly > a,
-a.btn.secondly > input,
-button.btn.secondly > a,
-button.btn.secondly > input,
-input.btn.secondly > a,
-input.btn.secondly > input {
-  color: #000000;
+a.btn.blue:hover,
+button.btn.blue:hover,
+input.btn.blue:hover {
+  background: #7BBCE8;
 }
 
 a.btn.green,
 button.btn.green,
 input.btn.green {
-  background: #81BA41;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #17BC9C;
   color: #fff;
+}
+
+a.btn.green:hover,
+button.btn.green:hover,
+input.btn.green:hover {
+  background: #69D3BF;
 }
 
 a.btn.orange,
 button.btn.orange,
 input.btn.orange {
-  background: #F0AD4E;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #F39C12;
   color: #fff;
+}
+
+a.btn.orange:hover,
+button.btn.orange:hover,
+input.btn.orange:hover {
+  background: #F7BF65;
 }
 
 a.btn.red,
 button.btn.red,
 input.btn.red {
-  background: #D52D47;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  background: #E74C3C;
   color: #fff;
+}
+
+a.btn.red:hover,
+button.btn.red:hover,
+input.btn.red:hover {
+  background: #EF8B80;
+}
+
+a.btn.mini,
+button.btn.mini,
+input.btn.mini {
+  min-width: 65px;
+  min-height: 20px;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+a.btn.small,
+button.btn.small,
+input.btn.small {
+  min-width: 90px;
+  min-height: 25px;
+  padding: 0 10px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+a.btn.large,
+button.btn.large,
+input.btn.large {
+  min-width: 140px;
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+a.btn.big,
+button.btn.big,
+input.btn.big {
+  min-width: 170px;
+  min-height: 50px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+a.btn.narrow,
+button.btn.narrow,
+input.btn.narrow {
+  min-width: 65px;
+}
+
+a.btn.short,
+button.btn.short,
+input.btn.short {
+  min-width: 90px;
+}
+
+a.btn.long,
+button.btn.long,
+input.btn.long {
+  min-width: 140px;
+}
+
+a.btn.wide,
+button.btn.wide,
+input.btn.wide {
+  min-width: 170px;
+}
+
+a.btn.free,
+button.btn.free,
+input.btn.free {
+  min-width: 100%;
+}
+
+a.btn.lower,
+button.btn.lower,
+input.btn.lower {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+a.btn.low,
+button.btn.low,
+input.btn.low {
+  min-height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+a.btn.high,
+button.btn.high,
+input.btn.high {
+  min-height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+a.btn.lofty,
+button.btn.lofty,
+input.btn.lofty {
+  min-height: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
 }
 
 .btnGroup > * {
@@ -662,11 +1082,11 @@ input.btn.red {
 }
 
 .btnGroup .btn.btn + .primary {
-  border-left: #0889a8 1px solid;
+  border-left: #233040 1px solid;
 }
 
-.btnGroup .btn.btn + .secondly {
-  border-left: #0889a8 1px solid;
+.btnGroup .btn.btn + .blue {
+  border-left: #0889A8 1px solid;
 }
 
 .btnGroup .btn.btn + .green {
@@ -679,6 +1099,33 @@ input.btn.red {
 
 .btnGroup .btn.btn + .red {
   border-left: #af4450 1px solid;
+}
+
+/*
+ * DropDown Style
+*/
+.dropdown .btn {
+  position: relative;
+  padding-right: 20px;
+}
+
+.dropdown .btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  margin-top: -6px;
+  border-bottom: 2px solid #6A6A6A;
+  border-right: 2px solid #6A6A6A;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.dropdown .btn.primary::before, .dropdown .btn.blue::before, .dropdown .btn.green::before, .dropdown .btn.orange::before, .dropdown .btn.red::before {
+  border-color: #fff;
 }
 
 /* Box Style
@@ -776,14 +1223,139 @@ input.btn.red {
   list-style-type: georgian;
 }
 
+/* Table Style
+-------------------------------------------------- */
+/*
+ * Table Style
+*/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table caption {
+  text-align: left;
+  color: #999;
+  font-size: 12px;
+}
+
+.table th,
+.table td {
+  padding: 8px 8px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.table th + th,
+.table th + td,
+.table td + th,
+.table td + td {
+  border-left: 1px solid #E5E5E5;
+}
+
+.table tfoot {
+  font-size: 12px;
+  font-style: italic;
+}
+
 /* Icon Style
 -------------------------------------------------- */
 .icon {
   display: inline-block;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  font-family: FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.icon.round {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+}
+
+.icon.round .icon {
+  line-height: 40px;
+}
+
+.icon.mini::before {
+  font-size: 10px;
+}
+
+.icon.small {
+  font-size: 1.5em;
+}
+
+.icon.large {
+  font-size: 2em;
+}
+
+.icon.xLarge {
+  font-size: 3em;
+}
+
+.icon.big {
+  font-size: 4em;
+}
+
+.icon.x2 {
+  font-size: 2em;
+}
+
+.icon.x3 {
+  font-size: 3em;
+}
+
+.icon.x4 {
+  font-size: 4em;
+}
+
+.icon.x5 {
+  font-size: 5em;
+}
+
+.icon.primary {
+  color: #2C3D50;
+}
+
+.icon.primary:hover {
+  color: #76828D;
+}
+
+.icon.green {
+  color: #17BC9C;
+}
+
+.icon.green:hover {
+  color: #69D3BF;
+}
+
+.icon.blue {
+  color: #3598DB;
+}
+
+.icon.blue:hover {
+  color: #7BBCE8;
+}
+
+.icon.orange {
+  color: #F39C12;
+}
+
+.icon.orange:hover {
+  color: #F7BF65;
+}
+
+.icon.red {
+  color: #E74C3C;
+}
+
+.icon.red:hover {
+  color: #EF8B80;
 }
 
 .icon.ap-glass::before {
@@ -3316,6 +3888,138 @@ input.btn.red {
 
 .icon.ap-yoast::before {
   content: "\f2b1";
+}
+
+.iconBtn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+}
+
+.iconBtn .icon {
+  line-height: 40px;
+}
+
+.iconBtn > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+.iconBtn.mini {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.iconBtn.mini .icon {
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.iconBtn.small {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.iconBtn.small .icon {
+  line-height: 30px;
+}
+
+.iconBtn.large {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.iconBtn.large .icon {
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.iconBtn.big {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+.iconBtn.big .icon {
+  font-size: 32px;
+  line-height: 80px;
+}
+
+.iconBtn.primary {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.iconBtn.primary:hover {
+  background: #76828D;
+}
+
+.iconBtn.primary > a {
+  color: #fff;
+}
+
+.iconBtn.green {
+  background: #17BC9C;
+  color: #fff;
+}
+
+.iconBtn.green:hover {
+  background: #69D3BF;
+}
+
+.iconBtn.green > a {
+  color: #fff;
+}
+
+.iconBtn.blue {
+  background: #3598DB;
+  color: #fff;
+}
+
+.iconBtn.blue:hover {
+  background: #7BBCE8;
+}
+
+.iconBtn.blue > a {
+  color: #fff;
+}
+
+.iconBtn.orange {
+  background: #F39C12;
+  color: #fff;
+}
+
+.iconBtn.orange:hover {
+  background: #F7BF65;
+}
+
+.iconBtn.orange > a {
+  color: #fff;
+}
+
+.iconBtn.red {
+  background: #E74C3C;
+  color: #fff;
+}
+
+.iconBtn.red:hover {
+  background: #EF8B80;
+}
+
+.iconBtn.red > a {
+  color: #fff;
 }
 
 /* Modal Style
