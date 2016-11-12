@@ -388,6 +388,7 @@ h6.title {
   display: block;
   min-width: 40px;
   min-height: 40px;
+  padding: 0 6px;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -407,6 +408,86 @@ h6.title {
 
 .paginationList > li:not(:first-child), .paginationList > li:not(:last-child) {
   margin: 0 4px;
+}
+
+.paginationList.primary > li {
+  background: #2C3D50;
+}
+
+.paginationList.primary > li a {
+  color: #fff;
+}
+
+.paginationList.primary > li.active, .paginationList.primary > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.primary > li.active a, .paginationList.primary > li:hover a {
+  color: #666;
+}
+
+.paginationList.green > li {
+  background: #17BC9C;
+}
+
+.paginationList.green > li a {
+  color: #fff;
+}
+
+.paginationList.green > li.active, .paginationList.green > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.green > li.active a, .paginationList.green > li:hover a {
+  color: #666;
+}
+
+.paginationList.blue > li {
+  background: #3598DB;
+}
+
+.paginationList.blue > li a {
+  color: #fff;
+}
+
+.paginationList.blue > li.active, .paginationList.blue > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.blue > li.active a, .paginationList.blue > li:hover a {
+  color: #666;
+}
+
+.paginationList.orange > li {
+  background: #F39C12;
+}
+
+.paginationList.orange > li a {
+  color: #fff;
+}
+
+.paginationList.orange > li.active, .paginationList.orange > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.orange > li.active a, .paginationList.orange > li:hover a {
+  color: #666;
+}
+
+.paginationList.red > li {
+  background: #E74C3C;
+}
+
+.paginationList.red > li a {
+  color: #fff;
+}
+
+.paginationList.red > li.active, .paginationList.red > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.red > li.active a, .paginationList.red > li:hover a {
+  color: #666;
 }
 
 /* Button Style

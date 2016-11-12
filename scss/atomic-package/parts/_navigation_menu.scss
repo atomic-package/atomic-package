@@ -46,6 +46,7 @@
       display: block;
       min-width: 40px;
       min-height: 40px;
+      padding: 0 6px;
       border-radius: 4px;
       box-sizing: border-box;
       text-decoration: none;
@@ -65,6 +66,73 @@
     &:not(:first-child),
     &:not(:last-child) {
       margin: 0 4px;
+    }
+  }
+
+  // skin
+  &.primary > li {
+    background: $colorPrimary;
+    a {
+      color: #fff;
+    }
+    &.active,
+    &:hover {
+      background: $colorDefault;
+      a {
+        color: #666;
+      }
+    }
+  }
+  &.green > li {
+    background: $colorGreen;
+    a {
+      color: #fff;
+    }
+    &.active,
+    &:hover {
+      background: $colorDefault;
+      a {
+        color: #666;
+      }
+    }
+  }
+  &.blue > li {
+    background: $colorBlue;
+    a {
+      color: #fff;
+    }
+    &.active,
+    &:hover {
+      background: $colorDefault;
+      a {
+        color: #666;
+      }
+    }
+  }
+  &.orange > li {
+    background: $colorOrange;
+    a {
+      color: #fff;
+    }
+    &.active,
+    &:hover {
+      background: $colorDefault;
+      a {
+        color: #666;
+      }
+    }
+  }
+  &.red > li {
+    background: $colorRed;
+    a {
+      color: #fff;
+    }
+    &.active,
+    &:hover {
+      background: $colorDefault;
+      a {
+        color: #666;
+      }
     }
   }
 
