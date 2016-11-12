@@ -1039,10 +1039,7 @@ input.btn.lofty {
 -------------------------------------------------- */
 .icon {
   display: inline-block;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  font-family: FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
 }
 
 .icon.round {
@@ -1058,6 +1055,82 @@ input.btn.lofty {
   text-align: center;
   vertical-align: top;
   color: #000;
+}
+
+.icon.mini::before {
+  font-size: 10px;
+}
+
+.icon.small::before {
+  font-size: 12px;
+}
+
+.icon.large::before {
+  font-size: 16px;
+}
+
+.icon.xLarge::before {
+  font-size: 18px;
+}
+
+.icon.big::before {
+  font-size: 20px;
+}
+
+.icon.x2 {
+  font-size: 2em;
+}
+
+.icon.x3 {
+  font-size: 3em;
+}
+
+.icon.x4 {
+  font-size: 4em;
+}
+
+.icon.x5 {
+  font-size: 5em;
+}
+
+.icon.primary {
+  color: #2C3D50;
+}
+
+.icon.primary:hover {
+  color: #76828D;
+}
+
+.icon.green {
+  color: #17BC9C;
+}
+
+.icon.green:hover {
+  color: #69D3BF;
+}
+
+.icon.blue {
+  color: #3598DB;
+}
+
+.icon.blue:hover {
+  color: #7BBCE8;
+}
+
+.icon.orange {
+  color: #F39C12;
+}
+
+.icon.orange:hover {
+  color: #F7BF65;
+}
+
+.icon.red {
+  color: #E74C3C;
+}
+
+.icon.red:hover {
+  color: #EF8B80;
 }
 
 .icon.ap-glass::before {
