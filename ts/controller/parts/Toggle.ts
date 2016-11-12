@@ -6,7 +6,7 @@
 /// <reference path="../../view/parts/Toggle.ts" />
 
 module ToggleController {
-  import Model   = ToggleModel.Toggle;
+  import Model           = ToggleModel.Toggle;
   import ToggleViewClass = ToggleView.Toggle;
 
   /**

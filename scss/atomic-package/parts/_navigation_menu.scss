@@ -193,6 +193,11 @@
   > li {
     display: inline-block;
     box-sizing: border-box;
+    border-left: #fff 1px solid;
+    border-right: #fff 1px solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
     border-bottom: #E5E5E5 1px solid;
 
     a {

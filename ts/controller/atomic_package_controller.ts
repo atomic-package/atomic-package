@@ -8,6 +8,7 @@
 
 module AtomicPackages {
   import ModalWindow  = ModalWindowController.ModalWindow;
+  import Tab          = TabController.Tab;
   import Button       = ButtonController.Button;
   import Switcher     = SwitcherController.Switcher;
   import Toggle       = ToggleController.Toggle;
@@ -27,6 +28,7 @@ module AtomicPackages {
 
     public modal: ModalWindow;
     public btn: Button;
+    public tab: Tab;
     public switcher: Switcher;
     public toggle: Toggle;
     public sideMenu: SideMenu;
@@ -43,6 +45,7 @@ module AtomicPackages {
       // parts
       this.modal        = new ModalWindow();
       this.btn          = new Button();
+      this.tab          = new Tab();
       this.switcher     = new Switcher();
       this.toggle       = new Toggle();
       this.sideMenu     = new SideMenu();
