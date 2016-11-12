@@ -1,9 +1,32 @@
+
+@mixin iconBtnBaseStyle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: $colorDefault;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+}
+
+
+
+
 .icon {
   display: inline-block;
   font-weight: 400;
   font-style: normal;
   line-height: 1;
   font-family: FontAwesome;
+
+  // state
+  &.round {
+    @include iconBtnBaseStyle;
+  }
 
   // Adapted from http://fortawesome.github.com/Font-Awesome (Version 4.6.0)
   &.ap-glass::before { content: "\f000"; }
@@ -732,4 +755,75 @@
   &.ap-wpbeginner::before { content: "\f297"; }
   &.ap-wpforms::before { content: "\f298"; }
   &.ap-yoast::before { content: "\f2b1"; }
+}
+
+.iconBtn {
+  @include iconBtnBaseStyle;
+
+  > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+  }
+
+  &.primary {
+    background: $colorPrimary;
+    color: #fff;
+    &:hover {
+      background: #76828D;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.green {
+    background: $colorGreen;
+    color: #fff;
+    &:hover {
+      background: #69D3BF;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.blue {
+    background: $colorBlue;
+    color: #fff;
+    &:hover {
+      background: #7BBCE8;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.orange {
+    background: $colorOrange;
+    color: #fff;
+    &:hover {
+      background: #F7BF65;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.red {
+    background: $colorRed;
+    color: #fff;
+    &:hover {
+      background: #EF8B80;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
 }
