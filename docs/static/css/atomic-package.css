@@ -490,6 +490,90 @@ h6.title {
   color: #666;
 }
 
+.paginationList.mini > li {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.paginationList.mini > li a {
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.paginationList.small > li {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.paginationList.small > li a {
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.paginationList.large > li {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.paginationList.large > li a {
+  min-width: 40px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
+.paginationList.big > li {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.paginationList.big > li a {
+  min-width: 50px;
+  min-height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+/*
+ * TabMenu
+*/
+.tabList > li {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: #E5E5E5 1px solid;
+}
+
+.tabList > li a {
+  display: block;
+  min-width: 80px;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 6px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tabList > li.active {
+  border: #E5E5E5 1px solid;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.tabList > li.active a {
+  color: #666666;
+}
+
+.tabList > li.disable a {
+  cursor: text;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*
