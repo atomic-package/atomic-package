@@ -1419,6 +1419,9 @@ input.btn.lofty {
 
 /* Icon Style
 -------------------------------------------------- */
+/*
+ * Icon Style
+*/
 .icon {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -4181,6 +4184,109 @@ input.btn.lofty {
 
 .iconBtn.red > a {
   color: #fff;
+}
+
+/*
+ * Badge Style
+*/
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 2px;
+  background: #F9F9F9;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.badge.round {
+  border-radius: 10px;
+  line-height: 20px;
+}
+
+.badge.primary {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.badge.green {
+  background: #17BC9C;
+  color: #fff;
+}
+
+.badge.blue {
+  background: #3598DB;
+  color: #fff;
+}
+
+.badge.orange {
+  background: #F39C12;
+  color: #fff;
+}
+
+.badge.red {
+  background: #E74C3C;
+  color: #fff;
+}
+
+.badge.mini {
+  line-height: 12px;
+  font-size: 10px;
+}
+
+.badge.mini.round {
+  min-width: 12px;
+  padding: 0 2px;
+}
+
+.badge.small {
+  line-height: 14px;
+  font-size: 11px;
+}
+
+.badge.small.round {
+  min-width: 16px;
+  padding: 0 2px;
+  line-height: 16px;
+}
+
+.badge.large {
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.badge.large.round {
+  min-width: 24px;
+  border-radius: 12px;
+}
+
+.badge.big {
+  padding: 0 8px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.badge.big.round {
+  min-width: 30px;
+  border-radius: 15px;
+}
+
+.notification {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background: #E74C3C;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
 }
 
 /* Modal Style

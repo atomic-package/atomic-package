@@ -1,3 +1,6 @@
+/*
+ * Icon Style
+*/
 
 @mixin iconBtnBaseStyle {
   display: inline-block;
@@ -16,15 +19,8 @@
 }
 
 
-
-
 .icon {
   display: inline-block;
-//  font-weight: 400;
-//  font-style: normal;
-//  //line-height: 1;
-//  font-family: FontAwesome;
-
   font: normal normal normal 14px/1 FontAwesome;
 
   // state
@@ -934,4 +930,102 @@
       color: #fff;
     }
   }
+}
+
+/*
+ * Badge Style
+*/
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 2px;
+  background: $colorDefault;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  &.round {
+    border-radius: 10px;
+    line-height: 20px;
+  }
+
+  // skin
+  &.primary {
+    background: $colorPrimary;
+    color: #fff;
+  }
+
+  &.green {
+    background: $colorGreen;
+    color: #fff;
+  }
+
+  &.blue {
+    background: $colorBlue;
+    color: #fff;
+  }
+
+  &.orange {
+    background: $colorOrange;
+    color: #fff;
+  }
+
+  &.red {
+    background: $colorRed;
+    color: #fff;
+  }
+
+  // state size
+  &.mini {
+    line-height: 12px;
+    font-size: 10px;
+    &.round {
+      min-width: 12px;
+      padding: 0 2px;
+    }
+  }
+  &.small {
+    line-height: 14px;
+    font-size: 11px;
+    &.round {
+      min-width: 16px;
+      padding: 0 2px;
+      line-height: 16px;
+    }
+  }
+  &.large {
+    padding: 0 8px;
+    line-height: 24px;
+    font-size: 16px;
+    &.round {
+      min-width: 24px;
+      border-radius: 12px;
+    }
+  }
+  &.big {
+    padding: 0 8px;
+    line-height: 30px;
+    font-size: 18px;
+    &.round {
+      min-width: 30px;
+      border-radius: 15px;
+    }
+  }
+
+
+}
+
+.notification {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background: $colorRed;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
 }
