@@ -6,32 +6,52 @@
 .font {}
 
 /* Atomic */
-.text {
+.text,
+.string {
+  line-height: 1.4;
+  color: #3D3D3D;
 
   /* Skin */
+  &.primary {
+    color: $colorPrimary;
+  }
+  &.blue {
+    color: $colorBlue;
+  }
+  &.green {
+    color: $colorGreen;
+  }
   &.orange {
-    color: #E5A45B;
+    color: $colorOrange;
+  }
+  &.red {
+    color: $colorRed;
   }
 
   /* State */
   &.center {
     text-align: center;
   }
-  &.note {
-    color: #BC0000;
-  }
-  &.success {
-    color: #6A9E00;
+  &.strong {
+    font-weight: bold;
   }
 
-  /* Module */
-  .icon.ban {
-    margin: 0 4px -10px 0;
+  &.mini {
+    font-size: 10px;
+  }
+  &.small {
+    font-size: 12px;
+  }
+  &.large {
+    font-size: 18px;
+  }
+  &.big {
+    font-size: 24px;
   }
 
   /* Atomic */
   strong {
-    color: #DC7F28;
+    //color: #DC7F28;
   }
 }
 

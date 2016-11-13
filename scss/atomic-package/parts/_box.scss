@@ -1,3 +1,21 @@
 .apOverHidden {
   overflow: hidden;
 }
+
+/*
+ * Box Style
+*/
+
+.box {
+
+  &.border {}
+
+  &.bg {}
+
+  // state size
+
+
+  > .box {}
+
+
+}

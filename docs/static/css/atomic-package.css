@@ -171,35 +171,68 @@ footer.footer .text.copy {
 */
 /* Atomic */
 /* Atomic */
-.text {
+.text,
+.string {
+  line-height: 1.4;
+  color: #3D3D3D;
   /* Skin */
   /* State */
-  /* Module */
   /* Atomic */
 }
 
-.text.orange {
-  color: #E5A45B;
+.text.primary,
+.string.primary {
+  color: #2C3D50;
 }
 
-.text.center {
+.text.blue,
+.string.blue {
+  color: #3598DB;
+}
+
+.text.green,
+.string.green {
+  color: #17BC9C;
+}
+
+.text.orange,
+.string.orange {
+  color: #F39C12;
+}
+
+.text.red,
+.string.red {
+  color: #E74C3C;
+}
+
+.text.center,
+.string.center {
   text-align: center;
 }
 
-.text.note {
-  color: #BC0000;
+.text.strong,
+.string.strong {
+  font-weight: bold;
 }
 
-.text.success {
-  color: #6A9E00;
+.text.mini,
+.string.mini {
+  font-size: 10px;
 }
 
-.text .icon.ban {
-  margin: 0 4px -10px 0;
+.text.small,
+.string.small {
+  font-size: 12px;
 }
 
-.text strong {
-  color: #DC7F28;
+.text.large,
+.string.large {
+  font-size: 18px;
+}
+
+.text.big,
+.string.big {
+  font-size: 24px;
 }
 
 /* Atomic */
@@ -1293,6 +1326,9 @@ input.btn.lofty {
   overflow: hidden;
 }
 
+/*
+ * Box Style
+*/
 /* List Style
 -------------------------------------------------- */
 /*
