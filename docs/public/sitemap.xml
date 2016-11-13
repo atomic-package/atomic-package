@@ -12,4 +12,28 @@
     <lastmod>2015-07-24T11:12:45+09:00</lastmod>
   </url>
   
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/core/button/</loc>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/core/</loc>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/get_started/</loc>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/javascript/</loc>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/theme/</loc>
+  </url>
+  
+  <url>
+    <loc>http://replace-this-with-your-hugo-site.com/tutorials/</loc>
+  </url>
+  
 </urlset>

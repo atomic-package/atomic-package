@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Atomic-Package</title>
     <link>http://replace-this-with-your-hugo-site.com/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>ja</language>
     <lastBuildDate>Fri, 24 Jul 2015 11:12:45 +0900</lastBuildDate>
     <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,89 @@
       <description>
 
 &lt;h2 id=&#34;profile:3e19b1a3ed52dcfc9895143fe9bdc719&#34;&gt;Profile&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://replace-this-with-your-hugo-site.com/core/button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/core/button/</guid>
+      <description>&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green&#34;&gt;&lt;a href=&#34;&#34;&gt;Success&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue&#34;&gt;&lt;a href=&#34;&#34;&gt;Info&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange&#34;&gt;&lt;a href=&#34;&#34;&gt;Warning&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red&#34;&gt;&lt;a href=&#34;&#34;&gt;Danger&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あああああ&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://replace-this-with-your-hugo-site.com/core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/core/</guid>
+      <description>
+
+&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
+
+&lt;p&gt;fうぇwfwfdwqdq&lt;/p&gt;
+
+&lt;p class=&#34;aaa&#34;&gt;あああああ&lt;/p&gt;
+
+&lt;p&gt;&lt;a&gt;おおお&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://replace-this-with-your-hugo-site.com/get_started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/get_started/</guid>
+      <description>
+
+&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://replace-this-with-your-hugo-site.com/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/javascript/</guid>
+      <description>
+
+&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://replace-this-with-your-hugo-site.com/theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/theme/</guid>
+      <description>
+
+&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://replace-this-with-your-hugo-site.com/tutorials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/tutorials/</guid>
+      <description>
+
+&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
 </description>
     </item>
     

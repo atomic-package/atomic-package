@@ -1,3 +1,8 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-languageCode = "en-us"
-title = "Atomic-Package"
+BaseURL = "http://replace-this-with-your-hugo-site.com/"
+Title = "Atomic-Package"
+languageCode = "ja"
+
+[Params]
+description = "APB CSS (Atomic Parts Base CSS) + JavaScript framework."
+author = "Daisuke Takayama"
+

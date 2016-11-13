@@ -1,0 +1,63 @@
+/***
+ ** Atomic Parts Contents
+  - Bg Style
+  - Header Style
+  - Footer Style
+  - Paragraph style
+  - Title Style
+  - Navigation & Menu Style
+  - Button Style
+  - Box Style
+  - List Style
+  - Table Style
+  - Modal Style
+  - Form Style
+  - Separate Style
+  - Animation Style
+  - Media Queries Style
+ **
+***/
+/* Header Style
+-------------------------------------------------- */
+.apDocsHeader {
+  height: 60px;
+  background: #333;
+}
+
+/* List Style
+-------------------------------------------------- */
+.docsHeaderMenuList {
+  float: right;
+  padding: 20px;
+}
+
+.docsHeaderMenuList::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.docsHeaderMenuList li {
+  float: left;
+  padding: 0 10px;
+}
+
+.docsHeaderMenuList li a {
+  color: #fff;
+}
+
+.site-content {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.site-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sideMenu.docs {
+  float: left;
+  width: 250px;
+}

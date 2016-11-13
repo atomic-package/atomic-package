@@ -17,10 +17,10 @@
     {{ end }}
   </nav>
 
-  <div class="sideMenu">
+  <div class="sideMenu docs">
     <ul class="sideMenuList">
-      <li><a href="">リスト</a></li>
-      <li><a href="">リスト</a></li>
+      <li><a href="/core/button/">Button</a></li>
+      <li><a href="/core/tab">Tab</a></li>
       <li><a href="">リスト</a></li>
       <li><a href="">リスト</a></li>
       <li><a href="">リスト</a></li>
@@ -31,10 +31,12 @@
       <li><a href="">リスト</a></li>
     </ul>
   </div>
-  <article>
-    {{ .Content }} <!-- ここに本文すべてがはいる -->
+
+  <article class="contents docs">
+    {{ .Content }}
   </article>
 </div>
 
 
 {{ partial "footer.html" . }}
+
