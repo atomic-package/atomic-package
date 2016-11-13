@@ -3,10 +3,33 @@
 */
 /* Atomic */
 .title {
+
+  /* Skin */
   &.border {
 
   }
 
+  /* Skin */
+  &.primary {
+    color: $colorPrimary;
+  }
+  &.blue {
+    color: $colorBlue;
+  }
+  &.green {
+    color: $colorGreen;
+  }
+  &.orange {
+    color: $colorOrange;
+  }
+  &.red {
+    color: $colorRed;
+  }
+
+  /* State*/
+  &.hover {
+
+  }
 }
 
 /* Atomic */
@@ -22,43 +45,46 @@ h1.title {
     float: left;
   }
 
-  /* Atomic */
-  .text {
-    margin-left: 38px;
-  }
+  /* State  Size */
+  @include scaleSize(28px);
 }
 
 /* Atomic */
 h2.title {
   font-size: 24px;
 
-  /* State */
-  &.center {
-    text-align: center;
-  }
-
-  /* Skin */
-  &.yellow {
-    color: #F6D667;
-  }
+  /* State  Size */
+  @include scaleSize(24px);
 }
 
 /* Atomic */
 h3.title {
   font-size: 22px;
+
+  /* State  Size */
+  @include scaleSize(22px);
 }
 
 /* Atomic */
 h4.title {
   font-size: 20px;
+
+  /* State  Size */
+  @include scaleSize(20px);
 }
 
 /* Atomic */
 h5.title {
   font-size: 18px;
+
+  /* State  Size */
+  @include scaleSize(18px);
 }
 
 /* Atomic */
 h6.title {
   font-size: 16px;
+
+  /* State  Size */
+  @include scaleSize(16px);
 }

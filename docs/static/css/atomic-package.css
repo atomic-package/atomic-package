@@ -317,55 +317,168 @@ img.thumbnail.circle {
  * Title Style
 */
 /* Atomic */
+.title {
+  /* Skin */
+  /* Skin */
+  /* State*/
+}
+
+.title.primary {
+  color: #2C3D50;
+}
+
+.title.blue {
+  color: #3598DB;
+}
+
+.title.green {
+  color: #17BC9C;
+}
+
+.title.orange {
+  color: #F39C12;
+}
+
+.title.red {
+  color: #E74C3C;
+}
+
 /* Atomic */
 h1.title {
   font-size: 28px;
   /* Atomic */
   /* Atomic */
-  /* Atomic */
+  /* State  Size */
 }
 
 h1.title .mainLogo {
   float: left;
 }
 
-h1.title .text {
-  margin-left: 38px;
+h1.title.mini {
+  font-size: 22.4px;
+}
+
+h1.title.small {
+  font-size: 25.2px;
+}
+
+h1.title.large {
+  font-size: 39.2px;
+}
+
+h1.title.big {
+  font-size: 56px;
 }
 
 /* Atomic */
 h2.title {
   font-size: 24px;
-  /* State */
-  /* Skin */
+  /* State  Size */
 }
 
-h2.title.center {
-  text-align: center;
+h2.title.mini {
+  font-size: 19.2px;
 }
 
-h2.title.yellow {
-  color: #F6D667;
+h2.title.small {
+  font-size: 21.6px;
+}
+
+h2.title.large {
+  font-size: 33.6px;
+}
+
+h2.title.big {
+  font-size: 48px;
 }
 
 /* Atomic */
 h3.title {
   font-size: 22px;
+  /* State  Size */
+}
+
+h3.title.mini {
+  font-size: 17.6px;
+}
+
+h3.title.small {
+  font-size: 19.8px;
+}
+
+h3.title.large {
+  font-size: 30.8px;
+}
+
+h3.title.big {
+  font-size: 44px;
 }
 
 /* Atomic */
 h4.title {
   font-size: 20px;
+  /* State  Size */
+}
+
+h4.title.mini {
+  font-size: 16px;
+}
+
+h4.title.small {
+  font-size: 18px;
+}
+
+h4.title.large {
+  font-size: 28px;
+}
+
+h4.title.big {
+  font-size: 40px;
 }
 
 /* Atomic */
 h5.title {
   font-size: 18px;
+  /* State  Size */
+}
+
+h5.title.mini {
+  font-size: 14.4px;
+}
+
+h5.title.small {
+  font-size: 16.2px;
+}
+
+h5.title.large {
+  font-size: 25.2px;
+}
+
+h5.title.big {
+  font-size: 36px;
 }
 
 /* Atomic */
 h6.title {
   font-size: 16px;
+  /* State  Size */
+}
+
+h6.title.mini {
+  font-size: 12.8px;
+}
+
+h6.title.small {
+  font-size: 14.4px;
+}
+
+h6.title.large {
+  font-size: 22.4px;
+}
+
+h6.title.big {
+  font-size: 32px;
 }
 
 /* Navigation & Menu Style
