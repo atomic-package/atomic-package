@@ -24,6 +24,11 @@
   background: #333;
 }
 
+.apDocsHeader .wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+
 /* List Style
 -------------------------------------------------- */
 .docsHeaderMenuList {
@@ -48,7 +53,9 @@
 
 .site-content {
   width: 1100px;
+  min-height: 600px;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 .site-content::after {
@@ -57,7 +64,15 @@
   clear: both;
 }
 
+.site-content .contents.docs {
+  margin-left: 250px;
+}
+
 .sideMenu.docs {
   float: left;
   width: 250px;
+}
+
+.times.docs {
+  text-align: right;
 }
