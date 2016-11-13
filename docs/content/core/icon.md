@@ -4,6 +4,7 @@ date = "2016-11-14"
 +++
 
 ## Icon
+Place vector icons anywhere using an icon font.
 
 
 ## Icon mapping

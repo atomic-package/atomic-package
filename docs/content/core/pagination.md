@@ -1,0 +1,353 @@
++++
+title = "Pagination Component"
+date = "2016-11-14"
++++
+
+## Pagination
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><< Previous</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">Next >></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><span class="icon ap-hand-o-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-hand-o-right"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><span class="icon ap-hand-o-left large"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-hand-o-right large"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<h4>ページネーション color</h4>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList primary">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList green">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+<nav class="pagination">
+  <ul class="paginationList blue">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+<nav class="pagination">
+  <ul class="paginationList orange">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+<nav class="pagination">
+  <ul class="paginationList red">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+
+<h4>ページネーション size</h4>
+
+<nav class="pagination">
+  <ul class="paginationList mini">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList small">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList large">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList big">
+    <li class="prev">
+      <a href=""><<</a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href="">>></a>
+    </li>
+  </ul>
+</nav>

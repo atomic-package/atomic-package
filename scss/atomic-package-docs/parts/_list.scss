@@ -38,3 +38,10 @@
 .times.docs {
   text-align: right;
 }
+
+.contents.docs {
+  > h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
