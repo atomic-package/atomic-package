@@ -228,3 +228,193 @@
     }
   }
 }
+
+/*
+ * Nav
+*/
+
+// size (width)
+$navNarrow: 70px;
+$navShort: 100px;
+$navLong: 240px;
+$navWide: 480px;
+$navFree: auto;
+
+// size (height)
+$navLower: 20px;
+$navLow: 25px;
+$navHigh: 40px;
+$navLofty: 50px;
+
+.navList {
+  width: 170px;
+
+  li {
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    a {
+      display: block;
+      padding: 0 12px;
+      box-sizing: border-box;
+      line-height: 26px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    &:hover {
+      a {
+        background: $colorDefault;
+      }
+    }
+    &.active {
+      a {
+        background: $colorPrimary;
+        color: #fff;
+      }
+    }
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  // skin
+  &.primary {
+    li {
+      &.active {
+        a {
+          background: $colorPrimary;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.blue {
+    li {
+      &.active {
+        a {
+          background: $colorBlue;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.green {
+    li {
+      &.active {
+        a {
+          background: $colorGreen;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.orange {
+    li {
+      &.active {
+        a {
+          background: $colorOrange;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.red {
+    li {
+      &.active {
+        a {
+          background: $colorRed;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+
+  // state size
+  &.mini {
+    width: $navNarrow;
+    li {
+      a {
+        line-height: 16px;
+        font-size: 10px;
+      }
+    }
+  }
+  &.small {
+    width: $navShort;
+    li {
+      a {
+        line-height: 20px;
+        font-size: 12px;
+      }
+    }
+  }
+  &.large {
+    width: $navLong;
+    li {
+      a {
+        line-height: 32px;
+      }
+    }
+  }
+  &.big {
+    width: $navWide;
+    li {
+      a {
+        line-height: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  // width
+  &.narrow {
+    width: $navNarrow;
+  }
+  &.short {
+    width: $navShort;
+  }
+  &.long {
+    width: $navLong;
+  }
+  &.wide {
+    width: $navWide;
+  }
+  &.free {
+    width: $navFree;
+  }
+
+  // height
+  &.lower {
+    li {
+      a {
+        line-height: 16px;
+        font-size: 10px;
+      }
+    }
+  }
+  &.low {
+    li {
+      a {
+        line-height: 20px;
+        font-size: 12px;
+      }
+    }
+  }
+  &.high {
+    li {
+      a {
+        line-height: 32px;
+      }
+    }
+  }
+  &.lofty {
+    li {
+      a {
+        line-height: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+}

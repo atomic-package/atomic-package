@@ -578,6 +578,141 @@ h6.title {
   cursor: text;
 }
 
+/*
+ * Nav
+*/
+.navList {
+  width: 170px;
+}
+
+.navList li {
+  margin-bottom: 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navList li a {
+  display: block;
+  padding: 0 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 26px;
+  color: #666;
+  text-decoration: none;
+}
+
+.navList li:hover a {
+  background: #F9F9F9;
+}
+
+.navList li.active a {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.navList .title {
+  font-weight: bold;
+}
+
+.navList.primary li.active a {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.navList.blue li.active a {
+  background: #3598DB;
+  color: #fff;
+}
+
+.navList.green li.active a {
+  background: #17BC9C;
+  color: #fff;
+}
+
+.navList.orange li.active a {
+  background: #F39C12;
+  color: #fff;
+}
+
+.navList.red li.active a {
+  background: #E74C3C;
+  color: #fff;
+}
+
+.navList.mini {
+  width: 70px;
+}
+
+.navList.mini li a {
+  line-height: 16px;
+  font-size: 10px;
+}
+
+.navList.small {
+  width: 100px;
+}
+
+.navList.small li a {
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.navList.large {
+  width: 240px;
+}
+
+.navList.large li a {
+  line-height: 32px;
+}
+
+.navList.big {
+  width: 480px;
+}
+
+.navList.big li a {
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.navList.narrow {
+  width: 70px;
+}
+
+.navList.short {
+  width: 100px;
+}
+
+.navList.long {
+  width: 240px;
+}
+
+.navList.wide {
+  width: 480px;
+}
+
+.navList.free {
+  width: auto;
+}
+
+.navList.lower li a {
+  line-height: 16px;
+  font-size: 10px;
+}
+
+.navList.low li a {
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.navList.high li a {
+  line-height: 32px;
+}
+
+.navList.lofty li a {
+  line-height: 40px;
+  font-size: 16px;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*
