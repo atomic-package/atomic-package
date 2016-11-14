@@ -191,22 +191,23 @@
 */
 .tabList {
   @include clearfix;
+  display: inline-block;
+  min-width: 500px;
+  border-bottom: #E5E5E5 1px solid;
 
   > li {
-    display: inline-block;
+    display: block;
     float: left;
+    margin-bottom: -1px;
     box-sizing: border-box;
-    border-left: #fff 1px solid;
-    border-right: #fff 1px solid;
-    border-left-color: transparent;
-    border-right-color: transparent;
-
-    border-bottom: #E5E5E5 1px solid;
 
     a {
       display: block;
       min-width: 80px;
       min-height: 30px;
+      border: 1px solid transparent;
+      border-bottom-width: 0;
+      background: #fff;
       box-sizing: border-box;
       padding: 0 6px;
       line-height: 30px;
@@ -215,11 +216,11 @@
     }
 
     &.active {
-      border: #E5E5E5 1px solid;
-      border-bottom: none;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
       a {
+        border: #E5E5E5 1px solid;
+        border-bottom-color: transparent;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
         color: #666666;
       }
     }
@@ -227,6 +228,131 @@
     &.disable {
       a {
         cursor: text;
+      }
+    }
+  }
+
+  /* Skin */
+  &.primary {
+    li a {
+      color: $colorPrimary;
+    }
+  }
+  &.blue {
+    li a {
+      color: $colorBlue;
+    }
+  }
+  &.green {
+    li a {
+      color: $colorGreen;
+    }
+  }
+  &.orange {
+    li a {
+      color: $colorOrange;
+    }
+  }
+  &.red {
+    li a {
+      color: $colorRed;
+    }
+  }
+
+  /* Size */
+  &.mini {
+    font-size: 10px;
+    > li {
+      a {
+        min-width: 40px;
+        min-height: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+  &.small {
+    font-size: 12px;
+    > li {
+      a {
+        min-width: 60px;
+        min-height: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+  &.large {
+    font-size: 18px;
+    > li {
+      a {
+        min-width: 120px;
+        min-height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+  &.big {
+    font-size: 24px;
+    > li {
+      a {
+        min-width: 150px;
+        min-height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+
+
+  // width
+  &.narrow {
+    min-width: 150px;
+  }
+  &.short {
+    min-width: 300px;
+  }
+  &.long {
+    min-width: 800px;
+  }
+  &.wide {
+    min-width: 1000px;
+  }
+  &.free {
+    min-width: 100%;
+  }
+
+  // height
+  &.lower {
+    > li {
+      a {
+        min-height: 20px;
+        line-height: 20px;
+        font-size: 10px;
+      }
+    }
+  }
+  &.low {
+    > li {
+      a {
+        min-height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+      }
+    }
+  }
+  &.high {
+    > li {
+      a {
+        min-height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+      }
+    }
+  }
+  &.lofty {
+    > li {
+      a {
+        min-height: 50px;
+        line-height: 50px;
+        font-size: 24px;
       }
     }
   }

@@ -686,6 +686,14 @@ h6.title.big {
 /*
  * TabMenu
 */
+.tabList {
+  display: inline-block;
+  min-width: 500px;
+  border-bottom: #E5E5E5 1px solid;
+  /* Skin */
+  /* Size */
+}
+
 .tabList::after {
   content: "";
   display: block;
@@ -693,21 +701,20 @@ h6.title.big {
 }
 
 .tabList > li {
-  display: inline-block;
+  display: block;
   float: left;
+  margin-bottom: -1px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-left: #fff 1px solid;
-  border-right: #fff 1px solid;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom: #E5E5E5 1px solid;
 }
 
 .tabList > li a {
   display: block;
   min-width: 80px;
   min-height: 30px;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  background: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 6px;
@@ -716,19 +723,120 @@ h6.title.big {
   text-align: center;
 }
 
-.tabList > li.active {
+.tabList > li.active a {
   border: #E5E5E5 1px solid;
-  border-bottom: none;
+  border-bottom-color: transparent;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-}
-
-.tabList > li.active a {
   color: #666666;
 }
 
 .tabList > li.disable a {
   cursor: text;
+}
+
+.tabList.primary li a {
+  color: #2C3D50;
+}
+
+.tabList.blue li a {
+  color: #3598DB;
+}
+
+.tabList.green li a {
+  color: #17BC9C;
+}
+
+.tabList.orange li a {
+  color: #F39C12;
+}
+
+.tabList.red li a {
+  color: #E74C3C;
+}
+
+.tabList.mini {
+  font-size: 10px;
+}
+
+.tabList.mini > li a {
+  min-width: 40px;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.tabList.small {
+  font-size: 12px;
+}
+
+.tabList.small > li a {
+  min-width: 60px;
+  min-height: 24px;
+  line-height: 24px;
+}
+
+.tabList.large {
+  font-size: 18px;
+}
+
+.tabList.large > li a {
+  min-width: 120px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
+.tabList.big {
+  font-size: 24px;
+}
+
+.tabList.big > li a {
+  min-width: 150px;
+  min-height: 50px;
+  line-height: 50px;
+}
+
+.tabList.narrow {
+  min-width: 150px;
+}
+
+.tabList.short {
+  min-width: 300px;
+}
+
+.tabList.long {
+  min-width: 800px;
+}
+
+.tabList.wide {
+  min-width: 1000px;
+}
+
+.tabList.free {
+  min-width: 100%;
+}
+
+.tabList.lower > li a {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.tabList.low > li a {
+  min-height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.tabList.high > li a {
+  min-height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.tabList.lofty > li a {
+  min-height: 50px;
+  line-height: 50px;
+  font-size: 24px;
 }
 
 /*
