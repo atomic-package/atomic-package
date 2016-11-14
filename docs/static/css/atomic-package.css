@@ -686,8 +686,15 @@ h6.title.big {
 /*
  * TabMenu
 */
+.tabList::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .tabList > li {
   display: inline-block;
+  float: left;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-left: #fff 1px solid;

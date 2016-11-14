@@ -190,8 +190,11 @@
  * TabMenu
 */
 .tabList {
+  @include clearfix;
+
   > li {
     display: inline-block;
+    float: left;
     box-sizing: border-box;
     border-left: #fff 1px solid;
     border-right: #fff 1px solid;
