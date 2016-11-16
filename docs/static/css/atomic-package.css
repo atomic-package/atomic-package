@@ -1008,11 +1008,9 @@ h6.title.big {
   padding: 0 12px;
   background: #F9F9F9;
   border-radius: 4px;
-  border: none;
+  border: #D9D9D9 1px solid;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   text-align: center;
   text-decoration: none;
   color: #6A6A6A;
@@ -1169,6 +1167,7 @@ h6.title.big {
 .btn:not(a).primary > a,
 .btn:not(a).primary > button,
 .btn:not(a).primary > input {
+  border-color: #243243;
   background: #2C3D50;
   color: #fff;
 }
@@ -1188,6 +1187,7 @@ h6.title.big {
 .btn:not(a).blue > a,
 .btn:not(a).blue > button,
 .btn:not(a).blue > input {
+  border-color: #3682B6;
   background: #3598DB;
   color: #fff;
 }
@@ -1207,6 +1207,7 @@ h6.title.big {
 .btn:not(a).green > a,
 .btn:not(a).green > button,
 .btn:not(a).green > input {
+  border-color: #18A68A;
   background: #17BC9C;
   color: #fff;
 }
@@ -1226,6 +1227,7 @@ h6.title.big {
 .btn:not(a).orange > a,
 .btn:not(a).orange > button,
 .btn:not(a).orange > input {
+  border-color: #CB8618;
   background: #F39C12;
   color: #fff;
 }
@@ -1245,6 +1247,7 @@ h6.title.big {
 .btn:not(a).red > a,
 .btn:not(a).red > button,
 .btn:not(a).red > input {
+  border-color: #DD8177;
   background: #E74C3C;
   color: #fff;
 }
@@ -1287,11 +1290,9 @@ input.btn {
   padding: 0 12px;
   background: #F9F9F9;
   border-radius: 4px;
-  border: none;
+  border: #D9D9D9 1px solid;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   text-align: center;
   text-decoration: none;
   color: #6A6A6A;
@@ -1307,6 +1308,7 @@ input.btn {
 a.btn.primary,
 button.btn.primary,
 input.btn.primary {
+  border-color: #243243;
   background: #2C3D50;
   color: #fff;
 }
@@ -1320,6 +1322,7 @@ input.btn.primary:hover {
 a.btn.blue,
 button.btn.blue,
 input.btn.blue {
+  border-color: #3682B6;
   background: #3598DB;
   color: #fff;
 }
@@ -1333,6 +1336,7 @@ input.btn.blue:hover {
 a.btn.green,
 button.btn.green,
 input.btn.green {
+  border-color: #18A68A;
   background: #17BC9C;
   color: #fff;
 }
@@ -1346,6 +1350,7 @@ input.btn.green:hover {
 a.btn.orange,
 button.btn.orange,
 input.btn.orange {
+  border-color: #CB8618;
   background: #F39C12;
   color: #fff;
 }
@@ -1359,6 +1364,7 @@ input.btn.orange:hover {
 a.btn.red,
 button.btn.red,
 input.btn.red {
+  border-color: #DD8177;
   background: #E74C3C;
   color: #fff;
 }

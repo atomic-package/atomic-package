@@ -23,9 +23,8 @@ $btnLofty: 50px;
   padding: 0 12px;
   background: $colorDefault;
   border-radius: 4px;
-  border: none;
+  border: $colorBorderDefault 1px solid;
   box-sizing: border-box;
-  box-shadow: $btnShadow;
   text-align: center;
   text-decoration: none;
   color: #6A6A6A;
@@ -37,6 +36,7 @@ $btnLofty: 50px;
 
 /* Primary */
 @mixin primaryBtnStyle {
+  border-color: $colorBorderPrimary;
   background: $colorPrimary;
   color: #fff;
   &:hover {
@@ -45,6 +45,7 @@ $btnLofty: 50px;
 }
 
 @mixin greenBtnStyle {
+  border-color: $colorBorderGreen;
   background: $colorGreen;
   color: #fff;
   &:hover {
@@ -53,6 +54,7 @@ $btnLofty: 50px;
 }
 
 @mixin blueBtnStyle {
+  border-color: $colorBorderBlue;
   background: $colorBlue;
   color: #fff;
   &:hover {
@@ -61,6 +63,7 @@ $btnLofty: 50px;
 }
 
 @mixin orangeBtnStyle {
+  border-color: $colorBorderOrange;
   background: $colorOrange;
   color: #fff;
   &:hover {
@@ -69,6 +72,7 @@ $btnLofty: 50px;
 }
 
 @mixin redBtnStyle {
+  border-color: $colorBorderRed;
   background: $colorRed;
   color: #fff;
   &:hover {
