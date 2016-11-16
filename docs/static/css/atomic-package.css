@@ -173,7 +173,7 @@ footer.footer .text.copy {
 /* Atomic */
 .text,
 .string {
-  line-height: 1.4;
+  line-height: 1.5;
   color: #3D3D3D;
   /* Skin */
   /* State */
@@ -1673,6 +1673,22 @@ input.btn.lofty {
 
 .list.georgian {
   list-style-type: georgian;
+}
+
+.btnList > li + li {
+  margin-left: 8px;
+}
+
+.btnList.center {
+  text-align: center;
+}
+
+.btnList.left {
+  text-align: left;
+}
+
+.btnList.right {
+  text-align: right;
 }
 
 /* Table Style
@@ -4585,12 +4601,43 @@ input.btn.lofty {
 /* Modal Style
 -------------------------------------------------- */
 .modalWindow .modalDialog {
-  width: 800px;
-  min-height: 400px;
+  position: relative;
+  width: 600px;
+  min-height: 250px;
+  padding: 20px;
   border: #B8B8B8 1px solid;
   border-radius: 4px;
   background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   z-index: 5000;
+}
+
+.modalWindow .modalDialog .modalHeader {
+  position: relative;
+  min-height: 55px;
+  margin: -20px -20px 20px -20px;
+  padding: 0 18px;
+  border-bottom: #E5E5E5 1px solid;
+  line-height: 55px;
+}
+
+.modalWindow .modalDialog .modalHeader .close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.modalWindow .modalDialog .modalHeader .close .icon {
+  font-size: 2em;
+  color: #B8B8B8;
+}
+
+.modalWindow .modalDialog .modalFooter {
+  padding: 10px 18px;
+  margin: 20px -20px -20px -20px;
+  border-top: #E5E5E5 1px solid;
 }
 
 /* Separate Style

@@ -1,11 +1,40 @@
 
 .modalWindow {
   .modalDialog {
-    width: 800px;
-    min-height: 400px;
+    position: relative;
+    width: 600px;
+    min-height: 250px;
+    padding: 20px;
     border: #B8B8B8 1px solid;
     border-radius: 4px;
     background: #fff;
-    z-index: 5000;
+    box-sizing: border-box;
+    z-index: 5000; // move js
+
+    .modalHeader {
+      position: relative;
+      min-height: 55px;
+      margin: -20px -20px 20px -20px;
+      padding: 0 18px;
+      border-bottom: #E5E5E5 1px solid;
+      line-height: 55px;
+
+      .close {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        cursor: pointer;
+
+        .icon {
+          font-size: 2em;
+          color: #B8B8B8;
+        }
+      }
+    }
+    .modalFooter {
+      padding: 10px 18px;
+      margin: 20px -20px -20px -20px;
+      border-top: #E5E5E5 1px solid;
+    }
   }
 }
