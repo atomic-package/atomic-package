@@ -4,24 +4,31 @@ date = "2016-11-14"
 +++
 
 ## Title
+### Headings
 
+<div>
 <h1 class="title">h1 Title</h1>
 <h2 class="title">h2 Title</h2>
 <h3 class="title">h3 Title</h3>
 <h4 class="title">h4 Title</h4>
 <h5 class="title">h5 Title</h5>
 <h6 class="title">h6 Title</h6>
+</div>
 
+### Headings Color Style
 
-<h4 class="title">タイトル カラー</h4>
+<div>
 <h1 class="title">h1 Title</h1>
 <h1 class="title primary">h1 Title</h1>
 <h1 class="title green">h1 Title</h1>
 <h1 class="title blue">h1 Title</h1>
 <h1 class="title orange">h1 Title</h1>
 <h1 class="title red">h1 Title</h1>
+</div>
 
-<h4 class="title">タイトル サイズ</h4>
+### Headings Size Style
+
+<div>
 <h1 class="title mini">h1 Title</h1>
 <h1 class="title small">h1 Title</h1>
 <h1 class="title">h1 Title</h1>
@@ -57,5 +64,6 @@ date = "2016-11-14"
 <h6 class="title">h6 Title</h6>
 <h6 class="title large">h6 Title</h6>
 <h6 class="title big">h6 Title</h6>
+</div>
 
-<h4 class="title">タイトル 下線ボーダー</h4>
+### Headings Border Style

@@ -598,6 +598,19 @@ img.thumbnail.free.round {
   color: #D85030;
 }
 
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp {
+  font-size: 12px;
+  font-family: Consolas,monospace,serif;
+  color: #D05;
+  white-space: nowrap;
+  padding: 0 4px;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  background: #fafafa;
+}
+
 /* Title Style
 -------------------------------------------------- */
 /*
@@ -1358,7 +1371,7 @@ h6.title.big {
 
 .btn.large,
 .btn:not(a).large {
-  min-width: 140px;
+  min-width: 240px;
 }
 
 .btn.large > a,
@@ -1376,7 +1389,7 @@ h6.title.big {
 
 .btn.big,
 .btn:not(a).big {
-  min-width: 170px;
+  min-width: 380px;
 }
 
 .btn.big > a,
@@ -1404,12 +1417,12 @@ h6.title.big {
 
 .btn.long,
 .btn:not(a).long {
-  min-width: 140px;
+  min-width: 240px;
 }
 
 .btn.wide,
 .btn:not(a).wide {
-  min-width: 170px;
+  min-width: 380px;
 }
 
 .btn.free,
@@ -1706,7 +1719,7 @@ input.btn.small {
 a.btn.large,
 button.btn.large,
 input.btn.large {
-  min-width: 140px;
+  min-width: 240px;
   min-height: 40px;
   padding: 0 15px;
   border-radius: 6px;
@@ -1717,7 +1730,7 @@ input.btn.large {
 a.btn.big,
 button.btn.big,
 input.btn.big {
-  min-width: 170px;
+  min-width: 380px;
   min-height: 50px;
   padding: 0 15px;
   border-radius: 6px;
@@ -1740,13 +1753,13 @@ input.btn.short {
 a.btn.long,
 button.btn.long,
 input.btn.long {
-  min-width: 140px;
+  min-width: 240px;
 }
 
 a.btn.wide,
 button.btn.wide,
 input.btn.wide {
-  min-width: 170px;
+  min-width: 380px;
 }
 
 a.btn.free,

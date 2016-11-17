@@ -4,15 +4,17 @@ date = "2016-11-14"
 +++
 
 ## Core
-### こちらでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。
+
+#### こちらのページでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。
 
 Atomic-packageには、30以上のAtomic型UIPartsと拡張可能コンポーネントがあり、それらを組み合わせることができます。
 
 
-## Size
+### Size
 
-Atomic-packageのAtomic型UIPartsは、それぞれのサイズに変更することが容易に行うことができます。
+Atomic-packageのAtomic型UIPartsは、それぞれのパーツに対してサイズを自由に変更することが容易に行うことができます。
 
+<div>
 <table class="table">
   <caption>Atomic Parts Size</caption>
   <thead>
@@ -55,9 +57,9 @@ Atomic-packageのAtomic型UIPartsは、それぞれのサイズに変更する�
     </tr>
   </tbody>
 </table>
+</div>
 
-
-## Color
+### Color
 
 Atomic-packageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。
 APBCSSの特性により、skin classとSemantic Classは同等の見た目となります。
@@ -107,13 +109,13 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
 
 
 
-## Breakpoints
+### Breakpoints
 
 
 
-## CSS architecture
+### CSS architecture
 
-Atomic-packageのCSSアーキテクチャには、「APBCSS」を採用しております。
+Atomic-packageのCSSアーキテクチャには、Atomic Designをベースとした「APBCSS (Atomic Parts Base CSS)」を採用しております。
 よって、それぞれのAtomic型UIPartsには、デフォルトでは margin などによるレイアウトスタイルが適応されていない状態となります。
 
 
