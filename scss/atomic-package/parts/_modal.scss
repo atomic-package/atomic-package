@@ -71,4 +71,75 @@
       border-top: #E5E5E5 1px solid;
     }
   }
+
+  // skin
+  &.primary .modalDialog {
+    border-color: $colorBorderPrimary;
+  }
+  &.green .modalDialog {
+    border-color: $colorBorderGreen;
+  }
+  &.blue .modalDialog {
+    border-color: $colorBorderBlue;
+  }
+  &.orange .modalDialog {
+    border-color: $colorBorderOrange;
+  }
+  &.red .modalDialog {
+    border-color: $colorBorderRed;
+  }
+
+  // state size
+  &.mini {
+    .modalDialog {
+      width: 300px;
+    }
+  }
+
+  &.small {
+    .modalDialog {
+      width: 450px;
+    }
+  }
+
+  &.large {
+    .modalDialog {
+      width: 800px;
+    }
+  }
+
+  &.big {
+    .modalDialog {
+      width: 1000px;
+    }
+  }
+
+  // width
+  &.narrow {
+  }
+  &.short {
+  }
+  &.long {
+  }
+  &.wide {
+  }
+  &.free {
+    .modalDialog {
+      width: auto;
+    }
+  }
+
+  // height
+  &.lower {
+
+  }
+  &.low {
+
+  }
+  &.high {
+
+  }
+  &.lofty {
+    
+  }
 }

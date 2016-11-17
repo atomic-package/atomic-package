@@ -608,6 +608,7 @@ img.thumbnail.free.round {
   /* Skin */
   /* Skin */
   /* State*/
+  /* Module */
 }
 
 .title.primary {
@@ -628,6 +629,11 @@ img.thumbnail.free.round {
 
 .title.red {
   color: #E74C3C;
+}
+
+.title.modal {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* Atomic */
@@ -4969,6 +4975,46 @@ input.btn.lofty {
   padding: 10px 18px;
   margin: 20px -20px -20px -20px;
   border-top: #E5E5E5 1px solid;
+}
+
+.modalWindow.primary .modalDialog {
+  border-color: #243243;
+}
+
+.modalWindow.green .modalDialog {
+  border-color: #18A68A;
+}
+
+.modalWindow.blue .modalDialog {
+  border-color: #3682B6;
+}
+
+.modalWindow.orange .modalDialog {
+  border-color: #CB8618;
+}
+
+.modalWindow.red .modalDialog {
+  border-color: #DD8177;
+}
+
+.modalWindow.mini .modalDialog {
+  width: 300px;
+}
+
+.modalWindow.small .modalDialog {
+  width: 450px;
+}
+
+.modalWindow.large .modalDialog {
+  width: 800px;
+}
+
+.modalWindow.big .modalDialog {
+  width: 1000px;
+}
+
+.modalWindow.free .modalDialog {
+  width: auto;
 }
 
 /* Separate Style
