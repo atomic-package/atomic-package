@@ -60,8 +60,50 @@ Atomic-packageのAtomic型UIPartsは、それぞれのサイズに変更する�
 ## Color
 
 Atomic-packageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。
+APBCSSの特性により、skin classとSemantic Classは同等の見た目となります。
 
-
+<table class="table">
+  <caption>Atomic Parts Color</caption>
+  <thead>
+      <tr>
+        <th>Skin Class</th>
+        <th>Semantic Class</th>
+        <th>Details</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>default</td>
+      <td>default</td>
+      <td>デフォルトカラー</td>
+    </tr>
+    <tr>
+      <td>primary</td>
+      <td>primary</td>
+      <td>プライマリーカラー</td>
+    </tr>
+    <tr>
+      <td>green</td>
+      <td>success</td>
+      <td>グリーンカラー</td>
+    </tr>
+    <tr>
+      <td>blue</td>
+      <td>info</td>
+      <td>ブルーカラー</td>
+    </tr>
+    <tr>
+      <td>orange</td>
+      <td>warning</td>
+      <td>オレンジカラー</td>
+    </tr>
+    <tr>
+      <td>red</td>
+      <td>danger</td>
+      <td>レッドカラー</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
