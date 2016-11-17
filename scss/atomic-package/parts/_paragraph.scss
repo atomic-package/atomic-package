@@ -114,12 +114,51 @@
     }
   }
 
+  &.caption {
+    display: inline-block;
+    padding: 2px 2px 2px 2px;
+    background: #fff;
+    border: #E5E5E5 2px solid;
+    border-radius: 4px;
+    .title {
+      display: block;
+      padding-top: 8px;
+      text-align: center;
+      line-height: 1.5;
+      &.left {
+        text-align: left;
+      }
+      &.right {
+        text-align: right;
+      }
+    }
+
+    &.mini {
+      padding: 1px 2px 1px 1px;
+      border-width: 1px;
+      border-radius: 2px;
+      .title {
+        font-size: 10px;
+      }
+    }
+    &.small {
+      .title {
+        font-size: 12px;
+      }
+    }
+    &.large,
+    &.big {
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+
   /* Skin */
   &.border {
     img {
       border: #BEBEBE 2px solid;
     }
-
     &.primary img {
       border-color: $colorBorderPrimary;
     }
