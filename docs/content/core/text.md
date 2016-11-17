@@ -5,7 +5,7 @@ date = "2016-11-14"
 
 ## Text
 
-<h4 class="title">テキスト</h4>
+### Defines different styles for the text.
 
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 
@@ -13,13 +13,14 @@ date = "2016-11-14"
 
 <p class="text strong">Strong is used to <strong>indicate strong importance</strong></p>
 
-  <p class="text">The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
+<p class="text">The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
 
 <p class="text link"></p>
 
 <p class="text">The <i>i element</i> is text that is set off from the normal text</p>
 
-<h4 class="title">テキスト サイズ</h4>
+
+### Size style
 
 <p class="text mini">テキストテキストテキストテキストテキストテキストテキスト</p>
 
@@ -31,7 +32,11 @@ date = "2016-11-14"
 
 <p class="text big">テキストテキストテキストテキストテキストテキストテキスト</p>
 
-<h4 class="title">テキスト カラー</h4>
+
+また、Atomic-Packageでは、テキスト単位だけではなく、テキスト最小サイズの1文字単位でも扱うことができます。
+
+
+### Color style
 
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text primary">テキストテキストテキストテキストテキストテキストテキスト</p>
