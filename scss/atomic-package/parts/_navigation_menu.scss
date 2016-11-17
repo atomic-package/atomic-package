@@ -45,7 +45,9 @@
     vertical-align: top;
 
     a {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-width: 40px;
       min-height: 40px;
       padding: 0 6px;
