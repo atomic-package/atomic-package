@@ -4891,7 +4891,7 @@ input.btn.lofty {
   position: relative;
   width: 600px;
   min-height: 250px;
-  padding: 20px;
+  padding: 40px 20px 20px;
   border: #B8B8B8 1px solid;
   border-radius: 4px;
   background: #fff;
@@ -4903,7 +4903,7 @@ input.btn.lofty {
 .modalWindow .modalDialog .modalHeader {
   position: relative;
   min-height: 55px;
-  margin: -20px -20px 20px -20px;
+  margin: -40px -20px 20px -20px;
   padding: 0 18px;
   border-bottom: #E5E5E5 1px solid;
   line-height: 55px;
@@ -4911,14 +4911,58 @@ input.btn.lofty {
 
 .modalWindow .modalDialog .modalHeader .close {
   position: absolute;
-  top: 5px;
-  right: 20px;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 45px;
+  height: 100%;
+}
+
+.modalWindow .modalDialog .modalHeader .close > * {
   cursor: pointer;
 }
 
 .modalWindow .modalDialog .modalHeader .close .icon {
   font-size: 2em;
   color: #B8B8B8;
+}
+
+.modalWindow .modalDialog .modalHeader .modalClose {
+  top: 22px;
+}
+
+.modalWindow .modalDialog .modalClose {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.modalWindow .modalDialog .modalClose::before, .modalWindow .modalDialog .modalClose::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  width: 14px;
+  height: 2px;
+  background: #B8B8B8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modalWindow .modalDialog .modalClose::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .modalWindow .modalDialog .modalFooter {
