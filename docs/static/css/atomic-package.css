@@ -810,6 +810,7 @@ h6.title.big {
   display: inline-block;
   min-width: 40px;
   min-height: 40px;
+  border: #EAEAEA 1px solid;
   border-radius: 4px;
   background: #F9F9F9;
   -webkit-box-sizing: border-box;
@@ -832,6 +833,7 @@ h6.title.big {
 }
 
 .paginationList > li.active, .paginationList > li:hover {
+  border-color: #30699B;
   background: #3598DB;
 }
 
@@ -844,6 +846,7 @@ h6.title.big {
 }
 
 .paginationList.primary > li {
+  border-color: #243243;
   background: #2C3D50;
 }
 
@@ -852,14 +855,12 @@ h6.title.big {
 }
 
 .paginationList.primary > li.active, .paginationList.primary > li:hover {
-  background: #F9F9F9;
-}
-
-.paginationList.primary > li.active a, .paginationList.primary > li:hover a {
-  color: #666;
+  border-color: #243243;
+  background: #76828D;
 }
 
 .paginationList.green > li {
+  border-color: #18A68A;
   background: #17BC9C;
 }
 
@@ -868,14 +869,12 @@ h6.title.big {
 }
 
 .paginationList.green > li.active, .paginationList.green > li:hover {
-  background: #F9F9F9;
-}
-
-.paginationList.green > li.active a, .paginationList.green > li:hover a {
-  color: #666;
+  border-color: #18A68A;
+  background: #69D3BF;
 }
 
 .paginationList.blue > li {
+  border-color: #3682B6;
   background: #3598DB;
 }
 
@@ -884,14 +883,12 @@ h6.title.big {
 }
 
 .paginationList.blue > li.active, .paginationList.blue > li:hover {
-  background: #F9F9F9;
-}
-
-.paginationList.blue > li.active a, .paginationList.blue > li:hover a {
-  color: #666;
+  border-color: #3682B6;
+  background: #7BBCE8;
 }
 
 .paginationList.orange > li {
+  border-color: #CB8618;
   background: #F39C12;
 }
 
@@ -900,14 +897,12 @@ h6.title.big {
 }
 
 .paginationList.orange > li.active, .paginationList.orange > li:hover {
-  background: #F9F9F9;
-}
-
-.paginationList.orange > li.active a, .paginationList.orange > li:hover a {
-  color: #666;
+  border-color: #CB8618;
+  background: #F7BF65;
 }
 
 .paginationList.red > li {
+  border-color: #DD8177;
   background: #E74C3C;
 }
 
@@ -916,11 +911,8 @@ h6.title.big {
 }
 
 .paginationList.red > li.active, .paginationList.red > li:hover {
-  background: #F9F9F9;
-}
-
-.paginationList.red > li.active a, .paginationList.red > li:hover a {
-  color: #666;
+  border-color: #DD8177;
+  background: #EF8B80;
 }
 
 .paginationList.mini > li {

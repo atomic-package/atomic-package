@@ -33,7 +33,7 @@ $btnLofty: 50px;
   line-height: 28px;
   vertical-align: top;
   &:hover {
-    background: #F5F5F5;
+    background: $colorHoverDefault;
   }
 }
 
@@ -43,7 +43,7 @@ $btnLofty: 50px;
   background: $colorPrimary;
   color: #fff;
   &:hover {
-    background: #76828D;
+    background: $colorHoverPrimary;
   }
 }
 
@@ -52,7 +52,7 @@ $btnLofty: 50px;
   background: $colorGreen;
   color: #fff;
   &:hover {
-    background: #69D3BF;
+    background: $colorHoverGreen;
   }
 }
 
@@ -61,7 +61,7 @@ $btnLofty: 50px;
   background: $colorBlue;
   color: #fff;
   &:hover {
-    background: #7BBCE8;
+    background: $colorHoverBlue;
   }
 }
 
@@ -70,7 +70,7 @@ $btnLofty: 50px;
   background: $colorOrange;
   color: #fff;
   &:hover {
-    background: #F7BF65;
+    background: $colorHoverOrange;
   }
 }
 
@@ -79,7 +79,7 @@ $btnLofty: 50px;
   background: $colorRed;
   color: #fff;
   &:hover {
-    background: #EF8B80;
+    background: $colorHoverRed;
   }
 }
 
