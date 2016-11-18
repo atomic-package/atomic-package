@@ -1280,6 +1280,122 @@ h6.title.big {
   font-size: 16px;
 }
 
+.navBar {
+  background: #f7f7f7;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  -webkit-background-origin: border-box;
+  background-origin: border-box;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #fff, #eee);
+  background-image: linear-gradient(to bottom, #fff, #eee);
+  /* State */
+}
+
+.navBar::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navBar > .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.navBar > * {
+  float: left;
+}
+
+.navBar > .right {
+  float: right;
+}
+
+.navBar > .center {
+  position: absolute;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.navBarList::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navBarList > li {
+  position: relative;
+  float: left;
+}
+
+.navBarList > li > a {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  height: 41px;
+  padding: 0 15px;
+  line-height: 40px;
+  color: #666;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  margin-top: -1px;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.navBarList > li.active > a {
+  background-color: #fafafa;
+  color: #666;
+  border-left-color: rgba(0, 0, 0, 0.1);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-top-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subNavList::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.subNavList > li {
+  float: left;
+}
+
+.subNavList > li a {
+  display: inline-block;
+  min-width: 60px;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.subNavList > li + li {
+  margin-left: 8px;
+}
+
+.subNavList > li.active a {
+  background: #337AB7;
+  color: #fff;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*
@@ -1892,6 +2008,16 @@ input.btn.lofty {
 /*
  * Box Style
 */
+/*
+ * Box Style
+*/
+.navBox {
+  width: 170px;
+  background: #fff;
+  border: #E5E5E5 1px solid;
+  border-radius: 4px;
+}
+
 /* List Style
 -------------------------------------------------- */
 /*
