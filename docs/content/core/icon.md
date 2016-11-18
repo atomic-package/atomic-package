@@ -3,7 +3,7 @@ title = "Icon Component"
 date = "2016-11-14"
 +++
 
-## Icon
+## Icon Components
 Place vector icons anywhere using an icon font.
 
 

@@ -3,7 +3,10 @@ title = "Button Component"
 date = "2016-11-14"
 +++
 
-## Button
+## Button Components
+
+
+### Color Variation
 
 <p class="btn"><a href="">Default</a></p>
 <p class="btn primary"><a href="">Primary</a></p>
@@ -28,14 +31,16 @@ date = "2016-11-14"
 <p class="btn orange"><input type="submit" value="Warning"/></p>
 <p class="btn red"><input type="submit" value="Danger"/></p>
 
-<h2>ボタン (サイズ)</h2>
+### Size Variation
+
 <p class="btn primary mini"><a href="">Mini button</a></p>
 <p class="btn primary small"><a href="">Small button</a></p>
 <p class="btn primary"><a href="">Default button</a></p>
 <p class="btn primary large"><a href="">Large button</a></p>
 <p class="btn primary big"><a href="">Big button</a></p>
 
-<h2>ボタン (幅サイズ)</h2>
+### Size Variation - width
+
 <p class="btn primary narrow"><a href="">narrow</a></p>
 <p class="btn primary short"><a href="">short</a></p>
 <p class="btn primary"><a href="">Default button</a></p>
@@ -43,7 +48,8 @@ date = "2016-11-14"
 <p class="btn primary wide"><a href="">wide</a></p>
 <p class="btn primary free"><a href="">free</a></p>
 
-<h2>ボタン (高さサイズ)</h2>
+### Size Variation - height
+
 <p class="btn primary lower"><a href="">lower</a></p>
 <p class="btn primary low"><a href="">low</a></p>
 <p class="btn primary"><a href="">Default button</a></p>

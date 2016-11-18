@@ -3,7 +3,7 @@ title = "Text Component"
 date = "2016-11-14"
 +++
 
-## Text
+## Text Components
 
 ### Defines different styles for the text.
 
@@ -20,7 +20,7 @@ date = "2016-11-14"
 <p class="text">The <i>i element</i> is text that is set off from the normal text</p>
 
 
-### Size style
+### Size Variation
 
 <p class="text mini">テキストテキストテキストテキストテキストテキストテキスト</p>
 
@@ -36,7 +36,7 @@ date = "2016-11-14"
 また、Atomic-Packageでは、テキスト単位だけではなく、テキスト最小サイズの1文字単位でも扱うことができます。
 
 
-### Color style
+### Color Variation
 
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text primary">テキストテキストテキストテキストテキストテキストテキスト</p>

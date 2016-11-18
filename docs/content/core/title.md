@@ -3,7 +3,7 @@ title = "Title Component"
 date = "2016-11-14"
 +++
 
-## Title
+## Title Components
 ### Headings
 
 <div>
@@ -15,7 +15,7 @@ date = "2016-11-14"
 <h6 class="title">h6 Title</h6>
 </div>
 
-### Headings Color Style
+### Color Variation
 
 <div>
 <h1 class="title">h1 Title</h1>
@@ -26,7 +26,7 @@ date = "2016-11-14"
 <h1 class="title red">h1 Title</h1>
 </div>
 
-### Headings Size Style
+### Size Variation
 
 <div>
 <h1 class="title mini">h1 Title</h1>
@@ -66,4 +66,4 @@ date = "2016-11-14"
 <h6 class="title big">h6 Title</h6>
 </div>
 
-### Headings Border Style
+### Border Style

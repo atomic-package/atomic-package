@@ -95,29 +95,33 @@
   line-height: 1.6;
 }
 
-#top .mainView .picture {
+#top .topView {
+  margin-bottom: 120px;
+}
+
+#top .topView .mainView .picture {
   padding: 60px 0 40px;
 }
 
-#top .featuresView > .wrap {
+#top .topView .featuresView > .wrap {
   width: 1200px;
   margin: 0 auto;
   padding: 80px 0 70px;
 }
 
-#top .featuresView > .wrap .title {
+#top .topView .featuresView > .wrap .title {
   margin-bottom: 45px;
 }
 
-#top .featuresView > .wrap .text.description {
+#top .topView .featuresView > .wrap .text.description {
   margin-bottom: 60px;
 }
 
-#top .featuresView.blue {
+#top .topView .featuresView.blue {
   background: #3DC0F1;
   color: #fff;
 }
 
-#top .featuresView.blue .text {
+#top .topView .featuresView.blue .text {
   color: #fff;
 }

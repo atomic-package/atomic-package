@@ -1,27 +1,31 @@
 #top {
-  .mainView {
-    .picture {
-      padding: 60px 0 40px;
-    }
-  }
-  .featuresView {
-    > .wrap {
-      width: 1200px;
-      margin: 0 auto;
-      padding: 80px 0 70px;
-      .title {
-        margin-bottom: 45px;
-      }
-      .text.description {
-        margin-bottom: 60px;
-      }
-    }
+  .topView {
+    margin-bottom: 120px;
 
-    &.blue {
-      background: #3DC0F1;
-      color: #fff;
-      .text {
+    .mainView {
+      .picture {
+        padding: 60px 0 40px;
+      }
+    }
+    .featuresView {
+      > .wrap {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 80px 0 70px;
+        .title {
+          margin-bottom: 45px;
+        }
+        .text.description {
+          margin-bottom: 60px;
+        }
+      }
+
+      &.blue {
+        background: #3DC0F1;
         color: #fff;
+        .text {
+          color: #fff;
+        }
       }
     }
   }

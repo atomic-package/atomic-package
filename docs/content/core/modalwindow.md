@@ -3,7 +3,7 @@ title = "ModalWindow Component"
 date = "2016-11-14"
 +++
 
-## ModalWindow
+## ModalWindow Components
 
 <div class="modalWindow">
   <div class="modalDialog">
