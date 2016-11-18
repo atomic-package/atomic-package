@@ -109,7 +109,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: Helvetica, Arial, sans-serif, "Hiragino Kaku Gothic Pro", "メイリオ";
+  font-family: Helvetica Neue, Arial, sans-serif, "Hiragino Kaku Gothic Pro", "メイリオ";
 }
 
 body {
@@ -149,6 +149,20 @@ a {
 -------------------------------------------------- */
 /* Header Style
 -------------------------------------------------- */
+.header .headerLogo {
+  height: 100%;
+}
+
+.header .headerLogo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 /* Footer Style
 -------------------------------------------------- */
 footer {
@@ -233,6 +247,11 @@ footer.footer .text.copy {
 .text.big,
 .string.big {
   font-size: 24px;
+}
+
+.text.picture,
+.string.picture {
+  line-height: 1.4;
 }
 
 /* Atomic */
@@ -611,6 +630,10 @@ img.thumbnail.free.round {
   background: #fafafa;
 }
 
+.picture {
+  text-align: center;
+}
+
 /* Title Style
 -------------------------------------------------- */
 /*
@@ -644,9 +667,23 @@ img.thumbnail.free.round {
   color: #E74C3C;
 }
 
+.title.center {
+  text-align: center;
+}
+
+.title.right {
+  text-align: right;
+}
+
 .title.modal {
   font-size: 18px;
   font-weight: bold;
+}
+
+.title.picture {
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* Atomic */
@@ -1366,6 +1403,13 @@ h6.title.big {
   border-top-color: rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navBarList > li .title.sub {
+  display: block;
+  margin-top: -10px;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .subNavList::after {
@@ -2112,6 +2156,7 @@ input.btn.lofty {
 }
 
 .btnList.center {
+  display: block;
   text-align: center;
 }
 
@@ -2121,6 +2166,31 @@ input.btn.lofty {
 
 .btnList.right {
   text-align: right;
+}
+
+.pictureList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.pictureList > li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 25px;
+}
+
+.pictureList > li .title.picture {
+  margin-top: 40px;
+}
+
+.pictureList > li .text.picture {
+  margin-top: 20px;
 }
 
 /* Table Style
@@ -5028,6 +5098,10 @@ input.btn.lofty {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
+}
+
+.headerLogo {
+  display: inline-block;
 }
 
 /* Modal Style

@@ -31,12 +31,25 @@
 
   }
 
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
   /* Module */
   &.modal {
     font-size: 18px;
     font-weight: bold;
   }
 
+  &.picture {
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.2;
+  }
 }
 
 /* Atomic */

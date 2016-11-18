@@ -19,13 +19,14 @@
 ***/
 /* Header Style
 -------------------------------------------------- */
-.apDocsHeader {
+.header.docs {
   height: 60px;
   background: #333;
 }
 
-.apDocsHeader .wrap {
+.header.docs .wrap {
   width: 1100px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -92,4 +93,31 @@
 .contents.docs > p {
   margin-bottom: 10px;
   line-height: 1.6;
+}
+
+#top .mainView .picture {
+  padding: 60px 0 40px;
+}
+
+#top .featuresView > .wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0 70px;
+}
+
+#top .featuresView > .wrap .title {
+  margin-bottom: 45px;
+}
+
+#top .featuresView > .wrap .text.description {
+  margin-bottom: 60px;
+}
+
+#top .featuresView.blue {
+  background: #3DC0F1;
+  color: #fff;
+}
+
+#top .featuresView.blue .text {
+  color: #fff;
 }

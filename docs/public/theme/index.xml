@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Themes on Atomic-Package</title>
-    <link>http://replace-this-with-your-hugo-site.com/theme/</link>
-    <description>Recent content in Themes on Atomic-Package</description>
+    <title>Themes on </title>
+    <link>/theme/</link>
+    <description>Recent content in Themes on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/theme/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/theme/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://replace-this-with-your-hugo-site.com/theme/</link>
+      <link>/theme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/theme/</guid>
+      <guid>/theme/</guid>
       <description>
 
 &lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;

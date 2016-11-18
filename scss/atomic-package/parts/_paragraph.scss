@@ -53,6 +53,11 @@
   strong {
     //color: #DC7F28;
   }
+
+  &.picture {
+    //font-size: 24px;
+    line-height: 1.4;
+  }
 }
 
 /* Atomic */
@@ -367,4 +372,8 @@ img.thumbnail {
   border: 1px solid #E5E5E5;
   border-radius: 3px;
   background: #fafafa;
+}
+
+.picture {
+  text-align: center;
 }

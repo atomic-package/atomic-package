@@ -124,6 +124,7 @@
   }
 
   &.center {
+    display: block;
     text-align: center;
   }
 
@@ -133,5 +134,23 @@
 
   &.right {
     text-align: right;
+  }
+}
+
+.pictureList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  > li {
+    flex: 1;
+    margin: 0 25px;
+
+    .title.picture {
+      margin-top: 40px;
+    }
+    .text.picture {
+      margin-top: 20px;
+    }
   }
 }
