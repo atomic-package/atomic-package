@@ -35,6 +35,9 @@ date = "2016-11-14"
 
 また、Atomic-Packageでは、テキスト単位だけではなく、テキスト最小サイズの1文字単位でも扱うことができます。
 
+<span class="string">S</span><span class="string">t</span><span class="string">r</span><span class="string">i</span><span class="string">n</span><span class="string">g</span>
+
+<span class="string">S</span><span class="string">t</span><span class="string">r</span><span class="string">i</span><span class="string">n</span><span class="string">g</span>
 
 ### Color Variation
 
@@ -44,3 +47,6 @@ date = "2016-11-14"
 <p class="text blue">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text orange">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text red">テキストテキストテキストテキストテキストテキストテキスト</p>
+
+<span class="string">S</span><span class="string">t</span><span class="string">r</span><span class="string">i</span><span class="string">n</span><span class="string">g</span>
+

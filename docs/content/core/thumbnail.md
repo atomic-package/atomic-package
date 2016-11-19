@@ -3,7 +3,8 @@ title = "Thumbnail Component"
 date = "2016-11-14"
 +++
 
-## Thumbnail
+## Thumbnail Components
+### Image Elements
 
 <h3 class="title">wrap要素</h3>
 <p class="thumbnail"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
