@@ -6,25 +6,24 @@ date = "2016-11-14"
 ## Thumbnail Components
 ### Image Elements
 
-<h3 class="title">wrap要素</h3>
-<p class="thumbnail"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
-
-<p class="thumbnail round"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
-
-<p class="thumbnail circle"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
-
-<p class="thumbnail border"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
-
-<p class="thumbnail frame"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
-
-<h3 class="title">img要素</h3>
+<div>
 <img class="thumbnail" src="img/thumbnail_01.jpg" width="45" alt="person"/>
 <img class="thumbnail round" src="img/thumbnail_01.jpg" width="45" alt="person"/>
 <img class="thumbnail circle" src="img/thumbnail_01.jpg" width="45" alt="person"/>
 <img class="thumbnail border" src="img/thumbnail_01.jpg" width="45" alt="person"/>
 <img class="thumbnail frame" src="img/thumbnail_01.jpg" width="45" alt="person"/>
+</div>
 
-<h3 class="title">カラー</h3>
+### Wrap Elements
+<div>
+<p class="thumbnail"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
+<p class="thumbnail round"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
+<p class="thumbnail circle"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
+<p class="thumbnail border"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
+<p class="thumbnail frame"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
+</div>
+
+### Color Variation
 
 <p class="thumbnail small border"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
 <p class="thumbnail small border primary"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
@@ -58,25 +57,28 @@ date = "2016-11-14"
 <img class="thumbnail small frame red" src="img/thumbnail_01.jpg" width="45" alt="person"/>
 <!--<img class="thumbnail free" src="img/thumbnail_01.jpg" width="45" alt="person"/>-->
 
-<h3 class="title">サイズ</h3>
+### Size Variation
+<div>
 <p class="thumbnail mini"><img src="img/thumbnail_01.jpg" width="30" alt="person"/></p>
 <p class="thumbnail small"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
 <p class="thumbnail"><img src="img/thumbnail_01.jpg" width="60" alt="person"/></p>
 <p class="thumbnail large"><img src="img/thumbnail_01.jpg" width="90" alt="person"/></p>
 <p class="thumbnail big"><img src="img/thumbnail_01.jpg" width="120" alt="person"/></p>
 <!--<p class="thumbnail free"><img src="img/thumbnail_01.jpg" width="160" alt="person"/></p>-->
+</div>
 
+<div>
 <img class="thumbnail mini" src="img/thumbnail_01.jpg" width="30" alt="person"/>
 <img class="thumbnail small" src="img/thumbnail_01.jpg" width="45" alt="person"/>
 <img class="thumbnail" src="img/thumbnail_01.jpg" width="60" alt="person"/>
 <img class="thumbnail large" src="img/thumbnail_01.jpg" width="90" alt="person"/>
 <img class="thumbnail big" src="img/thumbnail_01.jpg" width="120" alt="person"/>
 <!--<img class="thumbnail free" src="img/thumbnail_01.jpg" width="160" alt="person"/>-->
+</div>
 
 <br/><br/>
 
-<h4 class="title">サイズ round</h4>
-
+### Size Variation - round
 <p class="thumbnail mini round"><img src="img/thumbnail_01.jpg" width="30" alt="person"/></p>
 <p class="thumbnail small round"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
 <p class="thumbnail round"><img src="img/thumbnail_01.jpg" width="60" alt="person"/></p>
@@ -91,8 +93,7 @@ date = "2016-11-14"
 <img class="thumbnail big round" src="img/thumbnail_01.jpg" width="120" alt="person"/>
 <!--<img class="thumbnail free" src="img/thumbnail_01.jpg" width="160" alt="person"/>-->
 
-<h4 class="title">サイズ circle</h4>
-
+### Size Variation - circle
 <p class="thumbnail mini circle"><img src="img/thumbnail_01.jpg" width="30" alt="person"/></p>
 <p class="thumbnail small circle"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
 <p class="thumbnail circle"><img src="img/thumbnail_01.jpg" width="60" alt="person"/></p>
@@ -109,8 +110,7 @@ date = "2016-11-14"
 
 <br/><br/>
 
-<h4 class="title">サイズ border</h4>
-
+### Size Variation - border
 <p class="thumbnail mini border"><img src="img/thumbnail_01.jpg" width="30" alt="person"/></p>
 <p class="thumbnail small border"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
 <p class="thumbnail border"><img src="img/thumbnail_01.jpg" width="60" alt="person"/></p>
@@ -127,8 +127,7 @@ date = "2016-11-14"
 
 <br/><br/>
 
-<h4 class="title">サイズ frame</h4>
-
+### Size Variation - frame
 <p class="thumbnail mini frame"><img src="img/thumbnail_01.jpg" width="30" alt="person"/></p>
 <p class="thumbnail small frame"><img src="img/thumbnail_01.jpg" width="45" alt="person"/></p>
 <p class="thumbnail frame"><img src="img/thumbnail_01.jpg" width="60" alt="person"/></p>
@@ -143,8 +142,8 @@ date = "2016-11-14"
 <img class="thumbnail big frame" src="img/thumbnail_01.jpg" width="120" alt="person"/>
 <!--<img class="thumbnail free circle" src="img/thumbnail_01.jpg" width="160" alt="person"/>-->
 
-<h4 class="title">サイズ Caption</h4>
-
+## Caption Components
+### Size Variation - Caption
 <p class="thumbnail mini caption">
   <img src="img/thumbnail_01.jpg" width="30" alt="person"/>
   <span class="title">title</span>
