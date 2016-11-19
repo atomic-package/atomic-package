@@ -5,7 +5,7 @@ date = "2016-11-14"
 
 ## Core Components
 
-#### こちらのページでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。
+こちらのページでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。
 
 Atomic-packageには、30以上のAtomic型UIPartsと拡張可能コンポーネントがあり、それらを組み合わせることができます。
 
@@ -62,7 +62,8 @@ Atomic-packageのAtomic型UIPartsは、それぞれのパーツに対してサ�
 ### Color Variation Class
 
 Atomic-packageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。
-APBCSSの特性により、skin classとSemantic Classは同等の見た目となります。
+
+APB CSSの特性により、skin classとSemantic Classは同等の見た目となります。
 
 <table class="table">
   <caption>Atomic Parts Color</caption>
