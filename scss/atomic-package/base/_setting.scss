@@ -1,8 +1,15 @@
+/*
+ * Base Variables
+*/
 $baseWidth: 1000px;
 $baseBgColor: #fff;
 $imgPath: "../img/ui/";
 $fontPath: "../font/";
 
+/*
+ * Color Variables
+*/
+/* base */
 $colorDefault: #F9F9F9;
 $colorPrimary: #2C3D50;
 $colorGreen: #17BC9C;
@@ -24,20 +31,14 @@ $colorHoverBlue: #7BBCE8;
 $colorHoverOrange: #F7BF65;
 $colorHoverRed: #EF8B80;
 
-
-$colorAqua: #0ff;
-
+/* font */
+$fontMainColor: #3D3D3D;
 $linkMainColor: #1397E1;
 
+/*
+ * Font Variables
+*/
 $fontFamily: Helvetica Neue, Arial, sans-serif, 'Hiragino Kaku Gothic Pro', 'メイリオ';
-
-$fontMainColor: #3D3D3D;
-
-$fontColorAqua: #0ff;
-
-$thumbnailWidth: 45px;
-
-$mediaQueriesPoint1: 414px;
 
 @font-face {
   font-family: 'FontAwesome';
@@ -47,3 +48,14 @@ $mediaQueriesPoint1: 414px;
   font-weight: normal;
   font-style: normal;
 }
+
+/*
+ * Width Variables
+*/
+$thumbnailWidth: 45px;
+
+
+/*
+ * Layout Variables
+*/
+$mediaQueriesPoint1: 414px;

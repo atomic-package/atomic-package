@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*
+ * Base Variables
+*/
+/*
+ * Color Variables
+*/
+/* base */
+/* font */
+/*
+ * Font Variables
+*/
 @font-face {
   font-family: 'FontAwesome';
   src: url("../font/fontawesome-webfont.woff2") format("woff2"), url("../font/fontawesome-webfont.woff") format("woff"), url("../font/fontawesome-webfont.ttf") format("truetype");
@@ -6,6 +17,12 @@
   font-style: normal;
 }
 
+/*
+ * Width Variables
+*/
+/*
+ * Layout Variables
+*/
 /*
  * Mixin Style
 */
