@@ -53,20 +53,53 @@ date = "2016-11-14"
 </div>
 
 ### Ruled Line
+罫線を表す `hr` 要素には、デフォルトのスタイルが定義されています。
 
+<h3 class="title article sub">Example</h3>
+<div class="box article example">
+  <hr>
+</div>
+
+
+<h3 class="title article sub">Markup</h3>
+```
 <hr>
+```
 
-**Double**
+#### Double
 
+<h3 class="title article sub">Example</h3>
+<div class="box article example">
+  <hr class="double">
+</div>
+
+<h3 class="title article sub">Markup</h3>
+```
 <hr class="double">
+```
 
-**Dotted**
+#### Dotted
 
+<h3 class="title article sub">Example</h3>
+<div class="box article example">
+  <hr class="dotted">
+</div>
+
+<h3 class="title article sub">Markup</h3>
+```
 <hr class="dotted">
+```
 
-**dashed**
+#### dashed
+<h3 class="title article sub">Example</h3>
+<div class="box article example">
+  <hr class="dashed">
+</div>
 
+<h3 class="title article sub">Markup</h3>
+```
 <hr class="dashed">
+```
 
 #### Size Variation
 
@@ -152,9 +185,15 @@ date = "2016-11-14"
 
 #### Other Elements
 
+Atomic-Packageでは、 hr以外の要素でも罫線を表現することが可能です。
+
+その際は、要素に `hr` classを付与する事によって、罫線の振る舞いをさせることができます。
+
 <p class="hr"></p>
 
-
+```
+<p class="hr"></p>
+```
 
 ### Inline Elements
 
