@@ -3,6 +3,8 @@
 */
 $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
 
+$btnDefaultWidth: 140px;
+
 // size (width)
 $btnNarrow: 65px;
 $btnShort: 90px;
@@ -89,7 +91,7 @@ $btnLofty: 50px;
 .btn:not(a) {
   position: relative;
   display: inline-block;
-  min-width: 120px;
+  min-width: $btnDefaultWidth;
   box-sizing: border-box;
   vertical-align: middle;
 

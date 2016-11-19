@@ -3,10 +3,12 @@
 */
 /* Atomic */
 .title {
+  line-height: 1.4;
 
   /* Skin */
   &.border {
-
+    padding-bottom: 4px;
+    border-bottom: $colorBorderDefault 1px solid;
   }
 
   /* Skin */

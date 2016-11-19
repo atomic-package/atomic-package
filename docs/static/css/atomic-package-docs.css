@@ -1,3 +1,6 @@
+/*
+ * Mixin Style
+*/
 /***
  ** Atomic Parts Contents
   - Bg Style
@@ -30,6 +33,58 @@
   margin: 0 auto;
 }
 
+/* Paragraph style
+-------------------------------------------------- */
+.times.docs {
+  text-align: right;
+}
+
+/* Navigation & Menu Style
+-------------------------------------------------- */
+.sideMenu.docs.docs {
+  float: left;
+  width: 230px;
+}
+
+/* Box Style
+-------------------------------------------------- */
+/*
+ * Contents
+*/
+.contents.site {
+  width: 1100px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.contents.site::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.contents.docs {
+  margin-left: 230px;
+}
+
+.contents.docs > h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.contents.docs > h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.contents.docs > p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
 /* List Style
 -------------------------------------------------- */
 .docsHeaderMenuList {
@@ -50,49 +105,6 @@
 
 .docsHeaderMenuList li a {
   color: #fff;
-}
-
-.site-content {
-  width: 1100px;
-  min-height: 600px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-.site-content::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.site-content .contents.docs {
-  margin-left: 250px;
-}
-
-.sideMenu.docs {
-  float: left;
-  width: 250px;
-}
-
-.times.docs {
-  text-align: right;
-}
-
-.contents.docs > h2 {
-  margin-bottom: 10px;
-  font-size: 36px;
-  line-height: 42px;
-}
-
-.contents.docs > h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-.contents.docs > p {
-  margin-bottom: 10px;
-  line-height: 1.6;
 }
 
 #top .topView {

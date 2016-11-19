@@ -1,0 +1,31 @@
+/*
+ * Contents
+*/
+.contents {
+  &.site {
+    width: $docsSiteContentWidth;
+    min-height: 600px;
+    margin: 0 auto;
+    padding-top: 40px;
+    @include clearfix;
+  }
+
+  &.docs {
+    margin-left: $docsSideBarWidth;
+
+    > h2 {
+      margin-bottom: 10px;
+      font-size: 36px;
+      line-height: 42px;
+    }
+    > h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    > p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  }
+}

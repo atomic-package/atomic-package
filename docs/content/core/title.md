@@ -66,4 +66,18 @@ date = "2016-11-14"
 <h6 class="title big">h6 Title</h6>
 </div>
 
-### Border Style
+### Border Skin Style
+
+<div>
+<h1 class="title border">h1 Title</h1>
+<h2 class="title border">h2 Title</h2>
+<h3 class="title border">h3 Title</h3>
+<h4 class="title border">h4 Title</h4>
+<h5 class="title border">h5 Title</h5>
+<h6 class="title border">h6 Title</h6>
+</div>
+
+### Layout Helper
+
+
+

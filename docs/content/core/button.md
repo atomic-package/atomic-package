@@ -95,7 +95,7 @@ date = "2016-11-14"
 <br/>
 <br/>
 
-<h2>ドロップダウン</h2>
+## DropDown
 
 <div class="dropdown">
     <a class="btn" href="">DropDown</a>

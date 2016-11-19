@@ -641,10 +641,16 @@ img.thumbnail.free.round {
 */
 /* Atomic */
 .title {
+  line-height: 1.4;
   /* Skin */
   /* Skin */
   /* State*/
   /* Module */
+}
+
+.title.border {
+  padding-bottom: 4px;
+  border-bottom: #D9D9D9 1px solid;
 }
 
 .title.primary {
@@ -1451,7 +1457,7 @@ h6.title.big {
 .btn:not(a) {
   position: relative;
   display: inline-block;
-  min-width: 120px;
+  min-width: 140px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
