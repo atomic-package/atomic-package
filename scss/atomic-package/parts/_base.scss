@@ -1,0 +1,12 @@
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp {
+  font-size: 12px;
+  font-family: Consolas,monospace,serif;
+  color: #D05;
+  white-space: nowrap;
+  padding: 0 4px;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  background: #fafafa;
+}

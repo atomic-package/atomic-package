@@ -3,8 +3,6 @@
 */
 /* Atomic */
 .title {
-  line-height: 1.4;
-
   /* Skin */
   &.border {
     padding-bottom: 4px;
@@ -58,15 +56,6 @@
 h1.title {
   font-size: 28px;
 
-  /* Atomic */
-  a {
-  }
-
-  /* Atomic */
-  .mainLogo {
-    float: left;
-  }
-
   /* State  Size */
   @include scaleSize(28px);
 }
@@ -109,4 +98,10 @@ h6.title {
 
   /* State  Size */
   @include scaleSize(16px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.title {
+    line-height: 1.5;
+  }
 }

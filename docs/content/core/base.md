@@ -54,7 +54,106 @@ date = "2016-11-14"
 
 ### Ruled Line
 
-hr
+<hr>
+
+**Double**
+
+<hr class="double">
+
+**Dotted**
+
+<hr class="dotted">
+
+**dashed**
+
+<hr class="dashed">
+
+#### Size Variation
+
+**large**
+<hr class="large">
+<br>
+<hr class="large dotted">
+<br>
+<hr class="large double">
+<br>
+<hr class="large dashed">
+
+
+**big**
+<hr class="big">
+<br>
+<hr class="big dotted">
+<br>
+<hr class="big double">
+<br>
+<hr class="big dashed">
+
+<br><br>
+
+#### Color Variation
+
+<hr>
+<br>
+<hr class="double">
+<br>
+<hr class="dotted">
+<br>
+<hr class="dashed">
+
+<br><br>
+
+<hr class="primary">
+<br>
+<hr class="primary double">
+<br>
+<hr class="primary dotted">
+<br>
+<hr class="primary dashed">
+
+<br>
+
+<hr class="green">
+<br>
+<hr class="green double">
+<br>
+<hr class="green dotted">
+<br>
+<hr class="green dashed">
+
+<hr class="blue">
+<br>
+<hr class="blue double">
+<br>
+<hr class="blue dotted">
+<br>
+<hr class="blue dashed">
+
+<br><br>
+
+<hr class="orange">
+<br>
+<hr class="orange double">
+<br>
+<hr class="orange dotted">
+<br>
+<hr class="orange dashed">
+
+<br><br>
+
+<hr class="red">
+<br>
+<hr class="red double">
+<br>
+<hr class="red dotted">
+<br>
+<hr class="red dashed">
+
+
+#### Other Elements
+
+<p class="hr"></p>
+
 
 
 ### Inline Elements
