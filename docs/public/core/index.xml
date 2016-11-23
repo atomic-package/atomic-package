@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cores on </title>
-    <link>/core/</link>
-    <description>Recent content in Cores on </description>
+    <title>Cores on Atomic-Package</title>
+    <link>http://atomic-package.com/core/</link>
+    <description>Recent content in Cores on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
     <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/core/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://atomic-package.com/core/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Alert Component</title>
-      <link>/core/alert/</link>
+      <link>http://atomic-package.com/core/alert/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/alert/</guid>
+      <guid>http://atomic-package.com/core/alert/</guid>
       <description>
 
 &lt;h2 id=&#34;alert:734124af65ffeefa2d69100579af4838&#34;&gt;Alert&lt;/h2&gt;
@@ -27,10 +28,10 @@
     
     <item>
       <title>Badge Component</title>
-      <link>/core/badge/</link>
+      <link>http://atomic-package.com/core/badge/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/badge/</guid>
+      <guid>http://atomic-package.com/core/badge/</guid>
       <description>
 
 &lt;h2 id=&#34;badge:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge&lt;/h2&gt;
@@ -85,10 +86,10 @@
     
     <item>
       <title>Base Component</title>
-      <link>/core/base/</link>
+      <link>http://atomic-package.com/core/base/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/base/</guid>
+      <guid>http://atomic-package.com/core/base/</guid>
       <description>
 
 &lt;h2 id=&#34;base:64cc054abc204c1c6b285a865764db92&#34;&gt;Base&lt;/h2&gt;
@@ -345,10 +346,10 @@
     
     <item>
       <title>Box Component</title>
-      <link>/core/box/</link>
+      <link>http://atomic-package.com/core/box/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/box/</guid>
+      <guid>http://atomic-package.com/core/box/</guid>
       <description>
 
 &lt;h2 id=&#34;box-components:908ee0dbc1db9ddebb579aa0d9127f51&#34;&gt;Box Components&lt;/h2&gt;
@@ -357,10 +358,10 @@
     
     <item>
       <title>Breadcrumb Component</title>
-      <link>/core/breadcrumb/</link>
+      <link>http://atomic-package.com/core/breadcrumb/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/breadcrumb/</guid>
+      <guid>http://atomic-package.com/core/breadcrumb/</guid>
       <description>
 
 &lt;h2 id=&#34;breadcrumb:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb&lt;/h2&gt;
@@ -369,10 +370,10 @@
     
     <item>
       <title>Button Component</title>
-      <link>/core/button/</link>
+      <link>http://atomic-package.com/core/button/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/button/</guid>
+      <guid>http://atomic-package.com/core/button/</guid>
       <description>
 
 &lt;h2 id=&#34;button-components:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Components&lt;/h2&gt;
@@ -510,10 +511,10 @@
     
     <item>
       <title>Core Component</title>
-      <link>/core/</link>
+      <link>http://atomic-package.com/core/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/</guid>
+      <guid>http://atomic-package.com/core/</guid>
       <description>
 
 &lt;h2 id=&#34;core-components:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Core Components&lt;/h2&gt;
@@ -631,10 +632,10 @@
     
     <item>
       <title>Form Component</title>
-      <link>/core/form/</link>
+      <link>http://atomic-package.com/core/form/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/form/</guid>
+      <guid>http://atomic-package.com/core/form/</guid>
       <description>
 
 &lt;h2 id=&#34;form-components:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Form Components&lt;/h2&gt;
@@ -643,10 +644,10 @@
     
     <item>
       <title>Icon Component</title>
-      <link>/core/icon/</link>
+      <link>http://atomic-package.com/core/icon/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/icon/</guid>
+      <guid>http://atomic-package.com/core/icon/</guid>
       <description>
 
 &lt;h2 id=&#34;icon-components:7983a58e607f45087e0647251389c051&#34;&gt;Icon Components&lt;/h2&gt;
@@ -1489,10 +1490,10 @@
     
     <item>
       <title>List Component</title>
-      <link>/core/list/</link>
+      <link>http://atomic-package.com/core/list/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/list/</guid>
+      <guid>http://atomic-package.com/core/list/</guid>
       <description>
 
 &lt;h2 id=&#34;list-components:8c265e2adc353bedf8022b542a0b78ab&#34;&gt;List Components&lt;/h2&gt;
@@ -1501,10 +1502,10 @@
     
     <item>
       <title>ModalWindow Component</title>
-      <link>/core/modalwindow/</link>
+      <link>http://atomic-package.com/core/modalwindow/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/modalwindow/</guid>
+      <guid>http://atomic-package.com/core/modalwindow/</guid>
       <description>
 
 &lt;h2 id=&#34;modalwindow-components:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;ModalWindow Components&lt;/h2&gt;
@@ -1685,10 +1686,10 @@
     
     <item>
       <title>Nav Component</title>
-      <link>/core/nav/</link>
+      <link>http://atomic-package.com/core/nav/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/nav/</guid>
+      <guid>http://atomic-package.com/core/nav/</guid>
       <description>
 
 &lt;h2 id=&#34;nav:91942f9972dcd6a0d0b039662c01ffa2&#34;&gt;Nav&lt;/h2&gt;
@@ -1861,10 +1862,10 @@
     
     <item>
       <title>Navbar Component</title>
-      <link>/core/navbar/</link>
+      <link>http://atomic-package.com/core/navbar/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/navbar/</guid>
+      <guid>http://atomic-package.com/core/navbar/</guid>
       <description>
 
 &lt;h2 id=&#34;navbar:9a6dd979afdd992c5dfaa6462730fded&#34;&gt;Navbar&lt;/h2&gt;
@@ -1873,10 +1874,10 @@
     
     <item>
       <title>Pagination Component</title>
-      <link>/core/pagination/</link>
+      <link>http://atomic-package.com/core/pagination/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/pagination/</guid>
+      <guid>http://atomic-package.com/core/pagination/</guid>
       <description>
 
 &lt;h2 id=&#34;pagination:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination&lt;/h2&gt;
@@ -2231,10 +2232,10 @@
     
     <item>
       <title>SubNav Component</title>
-      <link>/core/subnav/</link>
+      <link>http://atomic-package.com/core/subnav/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/subnav/</guid>
+      <guid>http://atomic-package.com/core/subnav/</guid>
       <description>
 
 &lt;h2 id=&#34;subnav:d5ecbb5b8afb6c090915ec74c3a05a99&#34;&gt;SubNav&lt;/h2&gt;

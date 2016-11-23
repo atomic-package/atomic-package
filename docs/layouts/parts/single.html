@@ -1,20 +1,6 @@
 {{ partial "header_docs.html" . }}
 
 <div id="corePage" class="site-content">
-  <nav>
-    {{ with .Params.categories }}
-    <div>Categories:{{ range . }} <a href="/categories/{{ . }}/">{{ . }}</a>{{ end }}</div>
-    {{ end }}
-    {{ with .Params.tags }}
-    <div>Tags:{{ range . }} <a href="/tags/{{ . }}/">#{{ . }}</a>{{ end }}</div>
-    {{ end }}
-
-    {{ range .Data.Pages }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </nav>
 
   <!--<div class="sideMenu docs">-->
     <!--<h3>JavaScript</h3>-->
@@ -241,8 +227,6 @@
 
     {{ partial "footer.html" . }}
 
-    <div class="author">{{ .Params.author }}</div>
-    <p class="times docs"><time pubdate="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
 </div>
 
 
