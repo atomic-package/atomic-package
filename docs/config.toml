@@ -1,5 +1,5 @@
 +++
-BaseURL = "http://replace-this-with-your-hugo-site.com/"
+BaseURL = "/"
 Title = "Atomic-Package"
 languageCode = "ja"
 date = "2012-04-06"
