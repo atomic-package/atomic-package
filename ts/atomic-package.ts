@@ -18,6 +18,7 @@ module AtomicPackages {
 
     public modal: any;
     public btn: any;
+    public tab: any;
     public switcher: any;
     public toggle: any;
     public sideMenu: any;
@@ -36,6 +37,7 @@ module AtomicPackages {
 
         this.modal     = controller.modal;
         this.btn       = controller.btn;
+        this.tab       = controller.tab;
         this.switcher  = controller.switcher;
         this.toggle    = controller.toggle;
         this.sideMenu  = controller.sideMenu;

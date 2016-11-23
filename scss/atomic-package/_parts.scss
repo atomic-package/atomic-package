@@ -9,6 +9,7 @@
   - Button Style
   - Box Style
   - List Style
+  - Table Style
   - Modal Style
   - Form Style
   - Separate Style
@@ -17,17 +18,9 @@
  **
 ***/
 
-/* Bg Style
+/* Base Style
 -------------------------------------------------- */
-@import "parts/bg";
-
-/* Header Style
--------------------------------------------------- */
-@import "parts/header";
-
-/* Footer Style
--------------------------------------------------- */
-@import "parts/footer";
+@import "parts/base";
 
 /* Paragraph style
 -------------------------------------------------- */
@@ -53,6 +46,10 @@
 -------------------------------------------------- */
 @import "parts/list";
 
+/* Table Style
+-------------------------------------------------- */
+@import "parts/table";
+
 /* Icon Style
 -------------------------------------------------- */
 @import "parts/icon";
@@ -68,6 +65,18 @@
 /* Form Style
 -------------------------------------------------- */
 @import "parts/form";
+
+/* Bg Style
+-------------------------------------------------- */
+@import "parts/bg";
+
+/* Header Style
+-------------------------------------------------- */
+@import "parts/header";
+
+/* Footer Style
+-------------------------------------------------- */
+@import "parts/footer";
 
 /* Animation Style
 -------------------------------------------------- */

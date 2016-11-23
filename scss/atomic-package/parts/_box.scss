@@ -1,3 +1,31 @@
 .apOverHidden {
   overflow: hidden;
 }
+
+/*
+ * Box Style
+*/
+
+.box {
+
+  &.border {}
+
+  &.bg {}
+
+  // state size
+
+
+  > .box {}
+
+
+}
+
+/*
+ * Box Style
+*/
+.navBox {
+  width: 170px;
+  background: #fff;
+  border: #E5E5E5 1px solid;
+  border-radius: 4px;
+}

@@ -1,9 +1,145 @@
 
 .modalWindow {
-  .modalBody {
-    width: 800px;
-    min-height: 400px;
+  .modalDialog {
+    position: relative;
+    width: 600px;
+    min-height: 250px;
+    padding: 40px 20px 20px;
+    border: #B8B8B8 1px solid;
+    border-radius: 4px;
     background: #fff;
-    z-index: 5000;
+    box-sizing: border-box;
+    z-index: 5000; // move js
+
+    .modalHeader {
+      position: relative;
+      min-height: 55px;
+      margin: -40px -20px 20px -20px;
+      padding: 0 18px;
+      border-bottom: #E5E5E5 1px solid;
+      line-height: 55px;
+
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 100%;
+
+        > * {
+          cursor: pointer;
+        }
+        .icon {
+          font-size: 2em;
+          color: #B8B8B8;
+        }
+      }
+
+      .modalClose {
+        top: 22px;
+      }
+    }
+
+    .modalClose {
+      position: absolute;
+      right: 15px;
+      top: 18px;
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        @include createStyle;
+        top: 4px;
+        width: 14px;
+        height: 2px;
+        background: #B8B8B8;
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .modalFooter {
+      padding: 10px 18px;
+      margin: 20px -20px -20px -20px;
+      border-top: #E5E5E5 1px solid;
+    }
+  }
+
+  // skin
+  &.primary .modalDialog {
+    border-color: $colorBorderPrimary;
+  }
+  &.green .modalDialog {
+    border-color: $colorBorderGreen;
+  }
+  &.blue .modalDialog {
+    border-color: $colorBorderBlue;
+  }
+  &.orange .modalDialog {
+    border-color: $colorBorderOrange;
+  }
+  &.red .modalDialog {
+    border-color: $colorBorderRed;
+  }
+
+  // state size
+  &.mini {
+    .modalDialog {
+      width: 300px;
+    }
+  }
+
+  &.small {
+    .modalDialog {
+      width: 450px;
+    }
+  }
+
+  &.large {
+    .modalDialog {
+      width: 800px;
+    }
+  }
+
+  &.big {
+    .modalDialog {
+      width: 1000px;
+    }
+  }
+
+  // width
+  &.narrow {
+  }
+  &.short {
+  }
+  &.long {
+  }
+  &.wide {
+  }
+  &.free {
+    .modalDialog {
+      width: auto;
+    }
+  }
+
+  // height
+  &.lower {
+
+  }
+  &.low {
+
+  }
+  &.high {
+
+  }
+  &.lofty {
+
   }
 }

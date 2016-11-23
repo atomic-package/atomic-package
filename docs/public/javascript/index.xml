@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascripts on </title>
+    <link>/javascript/</link>
+    <description>Recent content in Javascripts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Badge Component</title>
+      <link>/javascript/button/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/button/</guid>
+      <description>
+
+&lt;h2 id=&#34;badge:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Badge&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dropdown Class</title>
+      <link>/javascript/dropdown/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/dropdown/</guid>
+      <description>
+
+&lt;h2 id=&#34;dropdown:9d0491bd00f57d113dec54ca2bf939bc&#34;&gt;Dropdown&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ModalWindow Class</title>
+      <link>/javascript/modalwindow/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/modalwindow/</guid>
+      <description>
+
+&lt;h2 id=&#34;modal:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;Modal&lt;/h2&gt;
+
+&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;#modalWindow&#34; data-ap-modal&gt;モーダルウィンドウ&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;modalWindow&#34; id=&#34;modalWindow&#34;&gt;
+  &lt;div class=&#34;modalBody&#34;&gt;
+    &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;#&#34; data-ap-modal-close&gt;クローズ&lt;/a&gt;&lt;/p&gt;
+
+    &lt;div&gt;コンテンツ&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    
+</description>
+    </item>
+    
+    <item>
+      <title>ScrollSpy Component</title>
+      <link>/javascript/scrollspy/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/scrollspy/</guid>
+      <description>
+
+&lt;h2 id=&#34;scrollspy:c6d666894d6b19e5d7f313217372cd6a&#34;&gt;ScrollSpy&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SideMenu Class</title>
+      <link>/javascript/sidemenu/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/sidemenu/</guid>
+      <description>
+
+&lt;h2 id=&#34;sidemenu:fe978637f881faf28760de815362a546&#34;&gt;SideMenu&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SmoothScroll Component</title>
+      <link>/javascript/smoothscroll/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/smoothscroll/</guid>
+      <description>
+
+&lt;h2 id=&#34;smoothscroll:82805258e9d85e07417e887cb0cf06e9&#34;&gt;SmoothScroll&lt;/h2&gt;
+
+&lt;p class=&#34;btn&#34; data-ap-scroll=&#34;#scroll&#34;&gt;
+  &lt;a href=&#34;&#34;&gt;スクロールトリガー&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p class=&#34;btn green&#34; data-ap-scroll=&#34;400&#34;&gt;
+  &lt;a href=&#34;&#34;&gt;スクロールトリガー2&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;div id=&#34;scroll&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Switcher Component</title>
+      <link>/javascript/switcher/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/switcher/</guid>
+      <description>
+
+&lt;h2 id=&#34;switcher:637082e84aac664439a210d81008ad04&#34;&gt;Switcher&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tab Component</title>
+      <link>/javascript/tab/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/tab/</guid>
+      <description>
+
+&lt;h2 id=&#34;tab:29ec36439a1f92e5faa0b0964bdd65bd&#34;&gt;Tab&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Toggle Component</title>
+      <link>/javascript/toggle/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/toggle/</guid>
+      <description>
+
+&lt;h2 id=&#34;toggle:135133a5c217dcbb61560d6f66e4dc0a&#34;&gt;Toggle&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/javascript/</guid>
+      <description>
+
+&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

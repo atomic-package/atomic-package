@@ -3,53 +3,86 @@
 */
 $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
 
+$btnDefaultWidth: 140px;
+
+// size (width)
+$btnNarrow: 65px;
+$btnShort: 90px;
+$btnLong: 240px;
+$btnWide: 380px;
+$btnFree: 100%;
+
+// size (height)
+$btnLower: 20px;
+$btnLow: 25px;
+$btnHigh: 40px;
+$btnLofty: 50px;
+
 @mixin baseBtnStyle {
   display: inline-block;
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: $colorDefault;
   border-radius: 4px;
-  border: none;
+  border: $colorBorderDefault 1px solid;
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #6A6A6A;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
   vertical-align: top;
+  &:hover {
+    background: $colorHoverDefault;
+  }
 }
 
 /* Primary */
 @mixin primaryBtnStyle {
-  background: #0BACD3;
-  box-shadow: $btnShadow;
+  border-color: $colorBorderPrimary;
+  background: $colorPrimary;
   color: #fff;
-}
-
-@mixin secondlyBtnStyle {
-  background: #0BACD3;
-  box-shadow: $btnShadow;
-  color: #fff;
+  &:hover {
+    background: $colorHoverPrimary;
+  }
 }
 
 @mixin greenBtnStyle {
-  background: #81BA41;
-  box-shadow: $btnShadow;
+  border-color: $colorBorderGreen;
+  background: $colorGreen;
   color: #fff;
+  &:hover {
+    background: $colorHoverGreen;
+  }
+}
+
+@mixin blueBtnStyle {
+  border-color: $colorBorderBlue;
+  background: $colorBlue;
+  color: #fff;
+  &:hover {
+    background: $colorHoverBlue;
+  }
 }
 
 @mixin orangeBtnStyle {
-  background: #F0AD4E;
-  box-shadow: $btnShadow;
+  border-color: $colorBorderOrange;
+  background: $colorOrange;
   color: #fff;
+  &:hover {
+    background: $colorHoverOrange;
+  }
 }
 
 @mixin redBtnStyle {
-  background: #D52D47;
-  box-shadow: $btnShadow;
+  border-color: $colorBorderRed;
+  background: $colorRed;
   color: #fff;
+  &:hover {
+    background: $colorHoverRed;
+  }
 }
 
 
@@ -58,7 +91,7 @@ $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
 .btn:not(a) {
   position: relative;
   display: inline-block;
-  min-width: 120px;
+  min-width: $btnDefaultWidth;
   box-sizing: border-box;
   vertical-align: middle;
 
@@ -69,49 +102,108 @@ $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
     @include baseBtnStyle;
   }
 
-  &.ss {
-    min-width: 65px;
+  /* State */
+  // size
+  &.mini {
+    min-width: $btnNarrow;
     > a,
     > button,
     > input {
-      min-height: 20px;
+      min-height: $btnLower;
       padding: 0 6px;
-      line-height: 20px;
+      line-height: $btnLower;
       font-size: 11px;
     }
   }
   &.small {
-    min-width: 90px;
+    min-width: $btnShort;
     > a,
     > button,
     > input {
-      min-height: 25px;
+      min-height: $btnLow;
       padding: 0 10px;
-      line-height: 25px;
+      line-height: $btnLow;
       font-size: 12px;
     }
   }
   &.large {
-    min-width: 140px;
+    min-width: $btnLong;
     > a,
     > button,
     > input {
-      min-height: 40px;
+      min-height: $btnHigh;
       padding: 0 15px;
       border-radius: 6px;
-      line-height: 40px;
+      line-height: $btnHigh;
       font-size: 15px;
     }
   }
-  &.ll {
-    min-width: 170px;
+  &.big {
+    min-width: $btnWide;
     > a,
     > button,
     > input {
-      min-height: 50px;
+      min-height: $btnLofty;
       padding: 0 15px;
       border-radius: 6px;
-      line-height: 50px;
+      line-height: $btnLofty;
+      font-size: 15px;
+    }
+  }
+
+  // width
+  &.narrow {
+    min-width: $btnNarrow;
+  }
+  &.short {
+    min-width: $btnShort;
+  }
+  &.long {
+    min-width: $btnLong;
+  }
+  &.wide {
+    min-width: $btnWide;
+  }
+  &.free {
+    min-width: $btnFree;
+  }
+
+  // height
+  &.lower {
+    > a,
+    > button,
+    > input {
+      min-height: $btnLower;
+      line-height: $btnLower;
+      font-size: 11px;
+    }
+  }
+  &.low {
+    > a,
+    > button,
+    > input {
+      min-height: $btnLow;
+      line-height: $btnLow;
+      font-size: 12px;
+    }
+  }
+  &.high {
+    > a,
+    > button,
+    > input {
+      min-height: $btnHigh;
+      border-radius: 6px;
+      line-height: $btnHigh;
+      font-size: 15px;
+    }
+  }
+  &.lofty {
+    > a,
+    > button,
+    > input {
+      min-height: $btnLofty;
+      border-radius: 6px;
+      line-height: $btnLofty;
       font-size: 15px;
     }
   }
@@ -121,46 +213,35 @@ $btnShadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
   &.primary > button,
   &.primary > input {
     @include primaryBtnStyle;
-    //&:hover { background: #303030; }
   }
 
-  &.secondly > a,
-  &.secondly > button,
-  &.secondly > input {
-    background: #EEEEEE;
-    background: linear-gradient(top, #404040, #282828);
-    color: #fff;
-    > a,
-    > input { color: #000000; }
-    //&:hover { background: #EAEAEA; }
+  &.blue > a,
+  &.blue > button,
+  &.blue > input {
+    @include blueBtnStyle;
   }
 
   &.green > a,
   &.green > button,
   &.green > input {
     @include greenBtnStyle;
-    //&:hover { background: #267400; }
   }
 
   &.orange > a,
   &.orange > button,
   &.orange > input {
     @include orangeBtnStyle;
-    //&:hover { background: #FCAE05; }
   }
 
   &.red > a,
   &.red > button,
   &.red > input {
     @include redBtnStyle;
-    //&:hover { background: #FCAE05; }
   }
-
-  &.l { width: 260px; }
 
   /* State */
   &.center { margin: 0 auto; }
-  &.disable { opacity: 0.4; }
+  &.disable { opacity: 0.5; }
 
   /* Atomic */
   .icon {
@@ -181,33 +262,92 @@ input {
     /* Skin */
     &.primary {
       @include primaryBtnStyle;
-      //&:hover { background: #303030; }
     }
-
-    &.secondly {
-      background: #EEEEEE;
-      border: #000 1px solid;
-      //box-shadow: inset #E5E5E5 0 0 1px 1px;
-      background: linear-gradient(top, #404040, #282828);
-      color: #fff;
-      > a,
-      > input { color: #000000; }
-      //&:hover { background: #EAEAEA; }
+    &.blue {
+      @include blueBtnStyle;
     }
-
     &.green {
       @include greenBtnStyle;
-      //&:hover { background: #267400; }
     }
-
     &.orange {
       @include orangeBtnStyle;
-      //&:hover { background: #FCAE05; }
     }
-
     &.red {
       @include redBtnStyle;
-      //&:hover { background: #FCAE05; }
+    }
+
+    /* State */
+    // size
+    &.mini {
+      min-width: $btnNarrow;
+      min-height: $btnLower;
+      padding: 0 6px;
+      line-height: $btnLower;
+      font-size: 11px;
+    }
+    &.small {
+      min-width: $btnShort;
+      min-height: $btnLow;
+      padding: 0 10px;
+      line-height: $btnLow;
+      font-size: 12px;
+    }
+    &.large {
+      min-width: $btnLong;
+      min-height: $btnHigh;
+      padding: 0 15px;
+      border-radius: 6px;
+      line-height: $btnHigh;
+      font-size: 15px;
+    }
+    &.big {
+      min-width: $btnWide;
+      min-height: $btnLofty;
+      padding: 0 15px;
+      border-radius: 6px;
+      line-height: $btnLofty;
+      font-size: 15px;
+    }
+
+    // width
+    &.narrow {
+      min-width: $btnNarrow;
+    }
+    &.short {
+      min-width: $btnShort;
+    }
+    &.long {
+      min-width: $btnLong;
+    }
+    &.wide {
+      min-width: $btnWide;
+    }
+    &.free {
+      min-width: $btnFree;
+    }
+
+    // height
+    &.lower {
+      min-height: $btnLower;
+      line-height: $btnLower;
+      font-size: 11px;
+    }
+    &.low {
+      min-height: $btnLow;
+      line-height: $btnLow;
+      font-size: 12px;
+    }
+    &.high {
+      min-height: $btnHigh;
+      border-radius: 6px;
+      line-height: $btnHigh;
+      font-size: 15px;
+    }
+    &.lofty {
+      min-height: $btnLofty;
+      border-radius: 6px;
+      line-height: $btnLofty;
+      font-size: 15px;
     }
   }
 }
@@ -219,8 +359,10 @@ input {
   }
   .btn {
     border-radius: 0;
+    border-right: none;
     & > a {
       border-radius: 0;
+      border-right-color: transparent;
     }
 
     &:first-child,
@@ -232,23 +374,59 @@ input {
     &:last-child a {
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
+      border-right-color: $colorBorderDefault;
     }
 
-    &.btn + .primary {
-      border-left: #0889a8 1px solid;
+    &:last-child,
+    &:last-child a {
+      &.primary {
+        border-right-color: $colorBorderPrimary;
+      }
+      &.blue {
+        border-right-color: $colorBorderBlue;
+      }
+      &.green {
+        border-right-color: $colorBorderGreen;
+      }
+      &.orange {
+        border-right-color: $colorBorderOrange;
+      }
+      &.red {
+        border-right-color: $colorBorderRed;
+      }
     }
-    &.btn + .secondly {
-      border-left: #0889a8 1px solid;
+  }
+}
+
+/*
+ * DropDown Style
+*/
+.dropdown {
+  .btn {
+    position: relative;
+    padding-right: 20px;
+    &::before {
+      @include createStyle;
+      top: 50%;
+      right: 8px;
+      width: 6px;
+      height: 6px;
+      margin-top: -6px;
+      border-bottom: 2px solid #6A6A6A;
+      border-right: 2px solid #6A6A6A;
+      border-radius: 2px;
+      transform: rotate(45deg);
     }
-    &.btn + .green {
-      border-left: #40986c 1px solid;
+    &.primary,
+    &.blue,
+    &.green,
+    &.orange,
+    &.red {
+      &::before {
+        border-color: #fff;
+      }
     }
-    &.btn + .orange {
-      border-left: #c38a3a 1px solid;
-    }
-    &.btn + .red {
-      border-left: #af4450 1px solid;
-    }
+
 
   }
 }

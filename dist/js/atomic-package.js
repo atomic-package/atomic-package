@@ -1302,6 +1302,411 @@ var ButtonController;
     }());
     ButtonController.Button = Button;
 })(ButtonController || (ButtonController = {}));
+var TabModel;
+(function (TabModel) {
+    var APModel = AtomicPackages.Model;
+    var Tab = (function () {
+        function Tab(targetList, triggerList) {
+            this.targetList = targetList;
+            this.triggerList = triggerList;
+            this.setTriggerCallBack();
+            this.setTriggerTargetId();
+        }
+        Tab.fromData = function (data) {
+            return new Tab(data.targetList ? APModel.createTargetModel(data.targetList, Target) : [], data.triggerList ? APModel.createTriggerModel(data.triggerList, Trigger) : []);
+        };
+        Tab.prototype.setTriggerCallBack = function () {
+            var _this = this;
+            this.triggerList.forEach(function (trigger) {
+                var parent = trigger;
+                trigger.items.forEach(function (item) {
+                    item.view.select(function (view) {
+                        parent.select(view, _this.targetList);
+                    }, true);
+                });
+            });
+        };
+        Tab.prototype.setTriggerTargetId = function () {
+            for (var i = 0; i < this.triggerList.length; i++) {
+                this.triggerList[i].setTargetId(this.targetList);
+            }
+        };
+        Tab.prototype.select = function (data) {
+        };
+        return Tab;
+    }());
+    TabModel.Tab = Tab;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, items, itemLength, selectedNumber, target, targetId, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.itemLength = itemLength;
+            this.selectedNumber = selectedNumber;
+            this.target = target;
+            this.targetId = targetId;
+            this.view = view;
+            this.items = this.createItem(this.items);
+            this.items[selectedNumber - 1].select();
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.items.length, data.selectedNumber ? data.selectedNumber : 1, data.target ? data.target : null, data.targetId ? data.targetId : [], data ? data : null);
+        };
+        Trigger.prototype.createItem = function (items) {
+            var itemModels = [];
+            for (var i = 0; i < items.length; i++) {
+                itemModels.push(TriggerItem.fromData(items[i]));
+            }
+            return itemModels;
+        };
+        Trigger.prototype.setSelectedNumber = function (item) {
+            this.selectedNumber = item.itemNumber;
+        };
+        Trigger.prototype.setTargetId = function (contentsViewList) {
+            var searchContents = APModel.search(contentsViewList, this.target);
+            if (searchContents) {
+                for (var i = 0; i < searchContents.length; i++) {
+                    this.targetId.push(searchContents[i].id);
+                }
+            }
+        };
+        Trigger.prototype.select = function (selectItem, targetList) {
+            if (selectItem.isDisable)
+                return;
+            this.selectItem(selectItem);
+            for (var i = 0; i < this.targetId.length; i++) {
+                for (var n = 0; n < targetList.length; n++) {
+                    if (targetList[n].id === this.targetId[i]) {
+                        targetList[n].select(selectItem.itemNumber);
+                    }
+                }
+            }
+        };
+        Trigger.prototype.selectItem = function (selectItem) {
+            this.resetSelected();
+            this.setSelectedNumber(selectItem);
+            this.items[selectItem.itemNumber - 1].select();
+        };
+        Trigger.prototype.resetSelected = function () {
+            this.items.forEach(function (item) {
+                item.reset();
+            });
+        };
+        return Trigger;
+    }());
+    TabModel.Trigger = Trigger;
+    var TriggerItem = (function () {
+        function TriggerItem(id, parentId, className, idName, itemNumber, isSelected, isDisable, view) {
+            this.id = id;
+            this.parentId = parentId;
+            this.className = className;
+            this.idName = idName;
+            this.itemNumber = itemNumber;
+            this.isSelected = isSelected;
+            this.isDisable = isDisable;
+            this.view = view;
+        }
+        TriggerItem.fromData = function (data) {
+            return new TriggerItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.itemNumber ? data.itemNumber : 0, data.isSelected ? data.isSelected : false, data.isDisable ? data.isDisable : false, data ? data : null);
+        };
+        TriggerItem.prototype.reset = function () {
+            this.isSelected = false;
+            this.view.resetItem();
+        };
+        TriggerItem.prototype.select = function () {
+            this.isSelected = true;
+            this.view.selectItem();
+        };
+        return TriggerItem;
+    }());
+    TabModel.TriggerItem = TriggerItem;
+    var Target = (function () {
+        function Target(id, className, idName, items, selectedNumber, view) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.selectedNumber = selectedNumber;
+            this.view = view;
+            this.items = this.createItem(this.items);
+            this.items[this.selectedNumber - 1].select();
+        }
+        Target.fromData = function (data) {
+            return new Target(data.id ? data.id : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.items ? data.items : null, data.selectedNumber ? data.selectedNumber : 1, data ? data : null);
+        };
+        Target.prototype.createItem = function (items) {
+            var itemModels = [];
+            for (var i = 0; i < items.length; i++) {
+                itemModels.push(TargetItem.fromData(items[i]));
+            }
+            return itemModels;
+        };
+        Target.prototype.selectItem = function (itemNumber) {
+            this.selectedNumber = itemNumber;
+            this.items[this.selectedNumber - 1].select();
+        };
+        Target.prototype.resetSelected = function () {
+            this.items.forEach(function (item) {
+                item.reset();
+            });
+        };
+        Target.prototype.select = function (itemNumber) {
+            this.resetSelected();
+            this.selectItem(itemNumber);
+        };
+        return Target;
+    }());
+    TabModel.Target = Target;
+    var TargetItem = (function () {
+        function TargetItem(id, parentId, className, idName, isShow, view) {
+            this.id = id;
+            this.parentId = parentId;
+            this.className = className;
+            this.idName = idName;
+            this.isShow = isShow;
+            this.view = view;
+        }
+        TargetItem.fromData = function (data) {
+            return new TargetItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.className ? data.className : '', data.idName ? data.idName : '', data.isShow ? data.isShow : false, data ? data : null);
+        };
+        TargetItem.prototype.reset = function () {
+            this.isShow = false;
+            this.view.resetItem();
+        };
+        TargetItem.prototype.select = function () {
+            this.isShow = true;
+            this.view.selectItem();
+        };
+        return TargetItem;
+    }());
+    TabModel.TargetItem = TargetItem;
+})(TabModel || (TabModel = {}));
+var TabView;
+(function (TabView) {
+    var APView = AtomicPackages.View;
+    var _created_trigger_num = 0, _created_trigger_item_num = 0;
+    var _created_contents_num = 0, _created_contents_item_num = 0;
+    var Tab = (function () {
+        function Tab() {
+        }
+        Tab.fetchElements = function (callback) {
+            document.addEventListener("DOMContentLoaded", function () {
+                var triggerList = APView.createFromTriggerElement(['[data-ap-tab]'], Trigger);
+                callback({
+                    triggerList: triggerList,
+                    targetList: APView.createTargetView(triggerList, Target)
+                });
+            });
+        };
+        return Tab;
+    }());
+    TabView.Tab = Tab;
+    var Trigger = (function () {
+        function Trigger(id, className, idName, items, selectedNumber, target, node) {
+            this.id = id;
+            this.className = className;
+            this.idName = idName;
+            this.items = items;
+            this.selectedNumber = selectedNumber;
+            this.target = target;
+            this.node = node;
+            this._SELECT_CLASS_NAME = 'active';
+            this.id = this.createTriggerId();
+            this.items = this.getItemNode(this.node);
+        }
+        Trigger.fromData = function (data) {
+            return new Trigger(0, data.className ? data.className : null, data.id ? data.id : null, data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 0, data.dataset.apSwitcher ? data.dataset.apSwitcher : null, data ? data : null);
+        };
+        Trigger.prototype.createTriggerId = function () {
+            return ++_created_trigger_num;
+        };
+        Trigger.prototype.getChildren = function (node) {
+            var childrenList = [];
+            for (var i = 0; i < node.children.length; i++) {
+                childrenList.push(TriggerItem.fromData({
+                    parentId: this.id,
+                    itemNumber: i + 1,
+                    isSelected: this.getIsSelected(i, node.children[i]),
+                    node: node.children[i]
+                }));
+            }
+            return childrenList;
+        };
+        Trigger.prototype.getIsSelected = function (index, node) {
+            if (node.classList.contains(this._SELECT_CLASS_NAME)) {
+                if (this.selectedNumber === 0) {
+                    this.selectedNumber = index + 1;
+                    return true;
+                }
+            }
+            return false;
+        };
+        Trigger.prototype.getItemNode = function (node) {
+            return this.getChildren(node);
+        };
+        Trigger.prototype.resetSelectedClassName = function () {
+        };
+        return Trigger;
+    }());
+    TabView.Trigger = Trigger;
+    var TriggerItem = (function () {
+        function TriggerItem(id, parentId, idName, className, itemNumber, isSelected, isDisable, node) {
+            this.id = id;
+            this.parentId = parentId;
+            this.idName = idName;
+            this.className = className;
+            this.itemNumber = itemNumber;
+            this.isSelected = isSelected;
+            this.isDisable = isDisable;
+            this.node = node;
+            this.selectCallBackFunction = function () { };
+            this.resetCallBackFunction = function () { };
+            this._SELECT_CLASS_NAME = 'active';
+            this._DISABLE_CLASS_NAME = 'disable';
+            this.id = this.createTriggerItemId();
+            this.setEventListener();
+            this.checkIsDisable();
+        }
+        TriggerItem.fromData = function (data) {
+            return new TriggerItem(data.id ? data.id : 1, data.parentId ? data.parentId : 1, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.itemNumber ? data.itemNumber : 1, data.isSelected ? data.isSelected : false, data.isDisable ? data.isDisable : false, data.node ? data.node : null);
+        };
+        TriggerItem.prototype.createTriggerItemId = function () {
+            return ++_created_trigger_item_num;
+        };
+        TriggerItem.prototype.checkIsDisable = function () {
+            if (this.node.classList.contains(this._DISABLE_CLASS_NAME)) {
+                this.isDisable = true;
+            }
+        };
+        TriggerItem.prototype.setEventListener = function () {
+            var _this = this;
+            this.node.addEventListener('click', function (e) {
+                e.preventDefault();
+                _this.select(_this.selectCallBackFunction);
+            }, false);
+        };
+        TriggerItem.prototype.resetSelected = function () {
+        };
+        TriggerItem.prototype.removeSelectClass = function () {
+            if (this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+                this.node.classList.remove(this._SELECT_CLASS_NAME);
+            }
+        };
+        TriggerItem.prototype.addSelectClass = function () {
+            if (!this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+                this.node.classList.add(this._SELECT_CLASS_NAME);
+            }
+        };
+        TriggerItem.prototype.select = function (fn, isFirst) {
+            this.selectCallBackFunction = fn;
+            if (!isFirst) {
+                fn(this);
+            }
+        };
+        TriggerItem.prototype.reset = function (fn, isFirst) {
+            this.resetCallBackFunction = fn;
+        };
+        TriggerItem.prototype.resetItem = function () {
+            this.removeSelectClass();
+        };
+        TriggerItem.prototype.selectItem = function () {
+            this.addSelectClass();
+        };
+        return TriggerItem;
+    }());
+    TabView.TriggerItem = TriggerItem;
+    var Target = (function () {
+        function Target(id, idName, className, items, selectedNumber, node) {
+            this.id = id;
+            this.idName = idName;
+            this.className = className;
+            this.items = items;
+            this.selectedNumber = selectedNumber;
+            this.node = node;
+            this.id = this.createContentsId();
+            this.items = this.getItemNode(this.node);
+        }
+        Target.fromData = function (data) {
+            return new Target(0, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.items ? data.items : [], data.selectedNumber ? data.selectedNumber : 1, data.node ? data.node : null);
+        };
+        Target.prototype.createContentsId = function () {
+            return ++_created_contents_num;
+        };
+        Target.prototype.getChildren = function (node) {
+            var lastChildren = [];
+            if (node.children) {
+                for (var i = 0; i < node.children.length; i++) {
+                    lastChildren.push(TargetItem.fromData({
+                        parentId: this.id,
+                        itemNumber: i + 1,
+                        node: APView.getFirstChildLastNode(node.children[i])
+                    }));
+                }
+            }
+            return lastChildren;
+        };
+        Target.prototype.getItemNode = function (node) {
+            return this.getChildren(node);
+        };
+        return Target;
+    }());
+    TabView.Target = Target;
+    var TargetItem = (function () {
+        function TargetItem(id, parentId, idName, className, itemNumber, isSelected, node) {
+            this.id = id;
+            this.parentId = parentId;
+            this.idName = idName;
+            this.className = className;
+            this.itemNumber = itemNumber;
+            this.isSelected = isSelected;
+            this.node = node;
+            this._SELECT_CLASS_NAME = 'show';
+            this.id = this.createContentsItemId();
+        }
+        TargetItem.fromData = function (data) {
+            return new TargetItem(0, data.parentId ? data.parentId : 1, data.node && data.node.id ? data.node.id : null, data.node && data.node.className ? data.node.className : null, data.itemNumber ? data.itemNumber : 1, data.isSelected ? data.isSelected : false, data.node ? data.node : null);
+        };
+        TargetItem.prototype.createContentsItemId = function () {
+            return ++_created_contents_item_num;
+        };
+        TargetItem.prototype.removeSelectClass = function () {
+            if (this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+                this.node.classList.remove(this._SELECT_CLASS_NAME);
+            }
+        };
+        TargetItem.prototype.addSelectClass = function () {
+            if (!this.node.classList.contains(this._SELECT_CLASS_NAME)) {
+                this.node.classList.add(this._SELECT_CLASS_NAME);
+            }
+        };
+        TargetItem.prototype.resetItem = function () {
+            this.removeSelectClass();
+        };
+        TargetItem.prototype.selectItem = function () {
+            this.addSelectClass();
+        };
+        return TargetItem;
+    }());
+    TabView.TargetItem = TargetItem;
+})(TabView || (TabView = {}));
+var TabController;
+(function (TabController) {
+    var Model = TabModel.Tab;
+    var View = TabView.Tab;
+    var Tab = (function () {
+        function Tab() {
+            var _this = this;
+            View.fetchElements(function (data) {
+                _this.model = Model.fromData(data);
+            });
+        }
+        Tab.prototype.create = function (data) {
+        };
+        return Tab;
+    }());
+    TabController.Tab = Tab;
+})(TabController || (TabController = {}));
 var SwitcherModel;
 (function (SwitcherModel) {
     var APModel = AtomicPackages.Model;
@@ -2739,6 +3144,7 @@ var SideMenuController;
 var AtomicPackages;
 (function (AtomicPackages) {
     var ModalWindow = ModalWindowController.ModalWindow;
+    var Tab = TabController.Tab;
     var Button = ButtonController.Button;
     var Switcher = SwitcherController.Switcher;
     var Toggle = ToggleController.Toggle;
@@ -2753,6 +3159,7 @@ var AtomicPackages;
             this.utility = new AtomicPackages.Utility();
             this.modal = new ModalWindow();
             this.btn = new Button();
+            this.tab = new Tab();
             this.switcher = new Switcher();
             this.toggle = new Toggle();
             this.sideMenu = new SideMenu();
@@ -2777,6 +3184,7 @@ var AtomicPackages;
                 var controller = new AtomicPackages.Controller();
                 this.modal = controller.modal;
                 this.btn = controller.btn;
+                this.tab = controller.tab;
                 this.switcher = controller.switcher;
                 this.toggle = controller.toggle;
                 this.sideMenu = controller.sideMenu;

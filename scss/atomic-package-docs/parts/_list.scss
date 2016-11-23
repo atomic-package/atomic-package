@@ -1,0 +1,13 @@
+.docsHeaderMenuList {
+  @include clearfix;
+  float: right;
+  padding: 20px;
+
+  li {
+    float: left;
+    padding: 0 10px;
+    a {
+      color: #fff;
+    }
+  }
+}

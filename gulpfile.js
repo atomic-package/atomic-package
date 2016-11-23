@@ -28,7 +28,8 @@ var scssFiles = [ SOURCE_DIR + '/scss/**/*.scss' ];
 
 var cssFiles = [
       RELEASE_DIR + '/css/atomic-package/*.css',
-      RELEASE_DIR + '/css/atomic-package-theme/*.css'
+      RELEASE_DIR + '/css/atomic-package-theme/*.css',
+      RELEASE_DIR + '/css/atomic-package-docs/*.css'
     ];
 
 var jsFiles = [
@@ -80,7 +81,10 @@ gulp.task('css.copy', function() {
 });
 
 gulp.task('css.copy.dist', function() {
-  return gulp.src(cssFiles)
+  return gulp.src([
+      RELEASE_DIR + '/css/atomic-package/*.css',
+      RELEASE_DIR + '/css/atomic-package-theme/*.css'
+    ])
     .pipe(gulp.dest( DIST_DIR + '/css/' ));
 });
 

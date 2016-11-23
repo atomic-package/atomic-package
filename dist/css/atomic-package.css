@@ -133,6 +133,7 @@ a {
   - Button Style
   - Box Style
   - List Style
+  - Table Style
   - Modal Style
   - Form Style
   - Separate Style
@@ -166,35 +167,68 @@ footer.footer .text.copy {
 */
 /* Atomic */
 /* Atomic */
-.text {
+.text,
+.string {
+  line-height: 1.4;
+  color: #3D3D3D;
   /* Skin */
   /* State */
-  /* Module */
   /* Atomic */
 }
 
-.text.orange {
-  color: #E5A45B;
+.text.primary,
+.string.primary {
+  color: #2C3D50;
 }
 
-.text.center {
+.text.blue,
+.string.blue {
+  color: #3598DB;
+}
+
+.text.green,
+.string.green {
+  color: #17BC9C;
+}
+
+.text.orange,
+.string.orange {
+  color: #F39C12;
+}
+
+.text.red,
+.string.red {
+  color: #E74C3C;
+}
+
+.text.center,
+.string.center {
   text-align: center;
 }
 
-.text.note {
-  color: #BC0000;
+.text.strong,
+.string.strong {
+  font-weight: bold;
 }
 
-.text.success {
-  color: #6A9E00;
+.text.mini,
+.string.mini {
+  font-size: 10px;
 }
 
-.text .icon.ban {
-  margin: 0 4px -10px 0;
+.text.small,
+.string.small {
+  font-size: 12px;
 }
 
-.text strong {
-  color: #DC7F28;
+.text.large,
+.string.large {
+  font-size: 18px;
+}
+
+.text.big,
+.string.big {
+  font-size: 24px;
 }
 
 /* Atomic */
@@ -279,61 +313,177 @@ img.thumbnail.circle {
  * Title Style
 */
 /* Atomic */
+.title {
+  /* Skin */
+  /* Skin */
+  /* State*/
+}
+
+.title.primary {
+  color: #2C3D50;
+}
+
+.title.blue {
+  color: #3598DB;
+}
+
+.title.green {
+  color: #17BC9C;
+}
+
+.title.orange {
+  color: #F39C12;
+}
+
+.title.red {
+  color: #E74C3C;
+}
+
 /* Atomic */
 h1.title {
   font-size: 28px;
   /* Atomic */
   /* Atomic */
-  /* Atomic */
+  /* State  Size */
 }
 
 h1.title .mainLogo {
   float: left;
 }
 
-h1.title .text {
-  margin-left: 38px;
+h1.title.mini {
+  font-size: 22.4px;
+}
+
+h1.title.small {
+  font-size: 25.2px;
+}
+
+h1.title.large {
+  font-size: 39.2px;
+}
+
+h1.title.big {
+  font-size: 56px;
 }
 
 /* Atomic */
 h2.title {
   font-size: 24px;
-  /* State */
-  /* Skin */
+  /* State  Size */
 }
 
-h2.title.center {
-  text-align: center;
+h2.title.mini {
+  font-size: 19.2px;
 }
 
-h2.title.yellow {
-  color: #F6D667;
+h2.title.small {
+  font-size: 21.6px;
+}
+
+h2.title.large {
+  font-size: 33.6px;
+}
+
+h2.title.big {
+  font-size: 48px;
 }
 
 /* Atomic */
 h3.title {
   font-size: 22px;
+  /* State  Size */
+}
+
+h3.title.mini {
+  font-size: 17.6px;
+}
+
+h3.title.small {
+  font-size: 19.8px;
+}
+
+h3.title.large {
+  font-size: 30.8px;
+}
+
+h3.title.big {
+  font-size: 44px;
 }
 
 /* Atomic */
 h4.title {
   font-size: 20px;
+  /* State  Size */
+}
+
+h4.title.mini {
+  font-size: 16px;
+}
+
+h4.title.small {
+  font-size: 18px;
+}
+
+h4.title.large {
+  font-size: 28px;
+}
+
+h4.title.big {
+  font-size: 40px;
 }
 
 /* Atomic */
 h5.title {
   font-size: 18px;
+  /* State  Size */
+}
+
+h5.title.mini {
+  font-size: 14.4px;
+}
+
+h5.title.small {
+  font-size: 16.2px;
+}
+
+h5.title.large {
+  font-size: 25.2px;
+}
+
+h5.title.big {
+  font-size: 36px;
 }
 
 /* Atomic */
 h6.title {
   font-size: 16px;
+  /* State  Size */
+}
+
+h6.title.mini {
+  font-size: 12.8px;
+}
+
+h6.title.small {
+  font-size: 14.4px;
+}
+
+h6.title.large {
+  font-size: 22.4px;
+}
+
+h6.title.big {
+  font-size: 32px;
 }
 
 /* Navigation & Menu Style
 -------------------------------------------------- */
 /*
  * Navigation & Menu Style
+*/
+/*
+ * Menu
 */
 .menu .menuList {
   display: flex;
@@ -356,6 +506,458 @@ h6.title {
   text-decoration: none;
 }
 
+/*
+ * Pagination
+*/
+.paginationList > li {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.paginationList > li a {
+  display: block;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 6px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  color: #666;
+}
+
+.paginationList > li.active, .paginationList > li:hover {
+  background: #3598DB;
+}
+
+.paginationList > li.active a, .paginationList > li:hover a {
+  color: #fff;
+}
+
+.paginationList > li:not(:first-child), .paginationList > li:not(:last-child) {
+  margin: 0 4px;
+}
+
+.paginationList.primary > li {
+  background: #2C3D50;
+}
+
+.paginationList.primary > li a {
+  color: #fff;
+}
+
+.paginationList.primary > li.active, .paginationList.primary > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.primary > li.active a, .paginationList.primary > li:hover a {
+  color: #666;
+}
+
+.paginationList.green > li {
+  background: #17BC9C;
+}
+
+.paginationList.green > li a {
+  color: #fff;
+}
+
+.paginationList.green > li.active, .paginationList.green > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.green > li.active a, .paginationList.green > li:hover a {
+  color: #666;
+}
+
+.paginationList.blue > li {
+  background: #3598DB;
+}
+
+.paginationList.blue > li a {
+  color: #fff;
+}
+
+.paginationList.blue > li.active, .paginationList.blue > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.blue > li.active a, .paginationList.blue > li:hover a {
+  color: #666;
+}
+
+.paginationList.orange > li {
+  background: #F39C12;
+}
+
+.paginationList.orange > li a {
+  color: #fff;
+}
+
+.paginationList.orange > li.active, .paginationList.orange > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.orange > li.active a, .paginationList.orange > li:hover a {
+  color: #666;
+}
+
+.paginationList.red > li {
+  background: #E74C3C;
+}
+
+.paginationList.red > li a {
+  color: #fff;
+}
+
+.paginationList.red > li.active, .paginationList.red > li:hover {
+  background: #F9F9F9;
+}
+
+.paginationList.red > li.active a, .paginationList.red > li:hover a {
+  color: #666;
+}
+
+.paginationList.mini > li {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.paginationList.mini > li a {
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.paginationList.small > li {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.paginationList.small > li a {
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.paginationList.large > li {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.paginationList.large > li a {
+  min-width: 40px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
+.paginationList.big > li {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.paginationList.big > li a {
+  min-width: 50px;
+  min-height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+/*
+ * TabMenu
+*/
+.tabList {
+  display: inline-block;
+  min-width: 500px;
+  border-bottom: #E5E5E5 1px solid;
+  /* Skin */
+  /* Size */
+}
+
+.tabList::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tabList > li {
+  display: block;
+  float: left;
+  margin-bottom: -1px;
+  box-sizing: border-box;
+}
+
+.tabList > li a {
+  display: block;
+  min-width: 80px;
+  min-height: 30px;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 6px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.tabList > li.active a {
+  border: #E5E5E5 1px solid;
+  border-bottom-color: transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #666666;
+}
+
+.tabList > li.disable a {
+  cursor: text;
+}
+
+.tabList.primary li a {
+  color: #2C3D50;
+}
+
+.tabList.blue li a {
+  color: #3598DB;
+}
+
+.tabList.green li a {
+  color: #17BC9C;
+}
+
+.tabList.orange li a {
+  color: #F39C12;
+}
+
+.tabList.red li a {
+  color: #E74C3C;
+}
+
+.tabList.mini {
+  font-size: 10px;
+}
+
+.tabList.mini > li a {
+  min-width: 40px;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.tabList.small {
+  font-size: 12px;
+}
+
+.tabList.small > li a {
+  min-width: 60px;
+  min-height: 24px;
+  line-height: 24px;
+}
+
+.tabList.large {
+  font-size: 18px;
+}
+
+.tabList.large > li a {
+  min-width: 120px;
+  min-height: 40px;
+  line-height: 40px;
+}
+
+.tabList.big {
+  font-size: 24px;
+}
+
+.tabList.big > li a {
+  min-width: 150px;
+  min-height: 50px;
+  line-height: 50px;
+}
+
+.tabList.narrow {
+  min-width: 150px;
+}
+
+.tabList.short {
+  min-width: 300px;
+}
+
+.tabList.long {
+  min-width: 800px;
+}
+
+.tabList.wide {
+  min-width: 1000px;
+}
+
+.tabList.free {
+  min-width: 100%;
+}
+
+.tabList.lower > li a {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.tabList.low > li a {
+  min-height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.tabList.high > li a {
+  min-height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.tabList.lofty > li a {
+  min-height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+/*
+ * Nav
+*/
+.navList {
+  width: 170px;
+}
+
+.navList li {
+  margin-bottom: 6px;
+  box-sizing: border-box;
+}
+
+.navList li a {
+  display: block;
+  padding: 0 12px;
+  box-sizing: border-box;
+  line-height: 26px;
+  color: #666;
+  text-decoration: none;
+}
+
+.navList li:hover a {
+  background: #F9F9F9;
+}
+
+.navList li.active a {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.navList .title {
+  font-weight: bold;
+}
+
+.navList.primary li.active a {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.navList.blue li.active a {
+  background: #3598DB;
+  color: #fff;
+}
+
+.navList.green li.active a {
+  background: #17BC9C;
+  color: #fff;
+}
+
+.navList.orange li.active a {
+  background: #F39C12;
+  color: #fff;
+}
+
+.navList.red li.active a {
+  background: #E74C3C;
+  color: #fff;
+}
+
+.navList.mini {
+  width: 70px;
+}
+
+.navList.mini li a {
+  line-height: 16px;
+  font-size: 10px;
+}
+
+.navList.small {
+  width: 100px;
+}
+
+.navList.small li a {
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.navList.large {
+  width: 240px;
+}
+
+.navList.large li a {
+  line-height: 32px;
+}
+
+.navList.big {
+  width: 480px;
+}
+
+.navList.big li a {
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.navList.narrow {
+  width: 70px;
+}
+
+.navList.short {
+  width: 100px;
+}
+
+.navList.long {
+  width: 240px;
+}
+
+.navList.wide {
+  width: 480px;
+}
+
+.navList.free {
+  width: auto;
+}
+
+.navList.lower li a {
+  line-height: 16px;
+  font-size: 10px;
+}
+
+.navList.low li a {
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.navList.high li a {
+  line-height: 32px;
+}
+
+.navList.lofty li a {
+  line-height: 40px;
+  font-size: 16px;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*
@@ -371,6 +973,7 @@ h6.title {
   box-sizing: border-box;
   vertical-align: middle;
   /* Atomic */
+  /* State */
   /* Skin */
   /* State */
   /* Atomic */
@@ -386,30 +989,39 @@ h6.title {
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: #F9F9F9;
   border-radius: 4px;
-  border: none;
+  border: #D9D9D9 1px solid;
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #6A6A6A;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
   vertical-align: top;
 }
 
-.btn.ss,
-.btn:not(a).ss {
+.btn > a:hover,
+.btn > button:hover,
+.btn > input:hover,
+.btn:not(a) > a:hover,
+.btn:not(a) > button:hover,
+.btn:not(a) > input:hover {
+  background: #F5F5F5;
+}
+
+.btn.mini,
+.btn:not(a).mini {
   min-width: 65px;
 }
 
-.btn.ss > a,
-.btn.ss > button,
-.btn.ss > input,
-.btn:not(a).ss > a,
-.btn:not(a).ss > button,
-.btn:not(a).ss > input {
+.btn.mini > a,
+.btn.mini > button,
+.btn.mini > input,
+.btn:not(a).mini > a,
+.btn:not(a).mini > button,
+.btn:not(a).mini > input {
   min-height: 20px;
   padding: 0 6px;
   line-height: 20px;
@@ -451,19 +1063,90 @@ h6.title {
   font-size: 15px;
 }
 
-.btn.ll,
-.btn:not(a).ll {
+.btn.big,
+.btn:not(a).big {
   min-width: 170px;
 }
 
-.btn.ll > a,
-.btn.ll > button,
-.btn.ll > input,
-.btn:not(a).ll > a,
-.btn:not(a).ll > button,
-.btn:not(a).ll > input {
+.btn.big > a,
+.btn.big > button,
+.btn.big > input,
+.btn:not(a).big > a,
+.btn:not(a).big > button,
+.btn:not(a).big > input {
   min-height: 50px;
   padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.btn.narrow,
+.btn:not(a).narrow {
+  min-width: 65px;
+}
+
+.btn.short,
+.btn:not(a).short {
+  min-width: 90px;
+}
+
+.btn.long,
+.btn:not(a).long {
+  min-width: 140px;
+}
+
+.btn.wide,
+.btn:not(a).wide {
+  min-width: 170px;
+}
+
+.btn.free,
+.btn:not(a).free {
+  min-width: 100%;
+}
+
+.btn.lower > a,
+.btn.lower > button,
+.btn.lower > input,
+.btn:not(a).lower > a,
+.btn:not(a).lower > button,
+.btn:not(a).lower > input {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+.btn.low > a,
+.btn.low > button,
+.btn.low > input,
+.btn:not(a).low > a,
+.btn:not(a).low > button,
+.btn:not(a).low > input {
+  min-height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.btn.high > a,
+.btn.high > button,
+.btn.high > input,
+.btn:not(a).high > a,
+.btn:not(a).high > button,
+.btn:not(a).high > input {
+  min-height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+.btn.lofty > a,
+.btn.lofty > button,
+.btn.lofty > input,
+.btn:not(a).lofty > a,
+.btn:not(a).lofty > button,
+.btn:not(a).lofty > input {
+  min-height: 50px;
   border-radius: 6px;
   line-height: 50px;
   font-size: 15px;
@@ -475,35 +1158,38 @@ h6.title {
 .btn:not(a).primary > a,
 .btn:not(a).primary > button,
 .btn:not(a).primary > input {
-  background: #0BACD3;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #243243;
+  background: #2C3D50;
   color: #fff;
 }
 
-.btn.secondly > a,
-.btn.secondly > button,
-.btn.secondly > input,
-.btn:not(a).secondly > a,
-.btn:not(a).secondly > button,
-.btn:not(a).secondly > input {
-  background: #EEEEEE;
-  background: linear-gradient(top, #404040, #282828);
+.btn.primary > a:hover,
+.btn.primary > button:hover,
+.btn.primary > input:hover,
+.btn:not(a).primary > a:hover,
+.btn:not(a).primary > button:hover,
+.btn:not(a).primary > input:hover {
+  background: #76828D;
+}
+
+.btn.blue > a,
+.btn.blue > button,
+.btn.blue > input,
+.btn:not(a).blue > a,
+.btn:not(a).blue > button,
+.btn:not(a).blue > input {
+  border-color: #3682B6;
+  background: #3598DB;
   color: #fff;
 }
 
-.btn.secondly > a > a,
-.btn.secondly > a > input,
-.btn.secondly > button > a,
-.btn.secondly > button > input,
-.btn.secondly > input > a,
-.btn.secondly > input > input,
-.btn:not(a).secondly > a > a,
-.btn:not(a).secondly > a > input,
-.btn:not(a).secondly > button > a,
-.btn:not(a).secondly > button > input,
-.btn:not(a).secondly > input > a,
-.btn:not(a).secondly > input > input {
-  color: #000000;
+.btn.blue > a:hover,
+.btn.blue > button:hover,
+.btn.blue > input:hover,
+.btn:not(a).blue > a:hover,
+.btn:not(a).blue > button:hover,
+.btn:not(a).blue > input:hover {
+  background: #7BBCE8;
 }
 
 .btn.green > a,
@@ -512,9 +1198,18 @@ h6.title {
 .btn:not(a).green > a,
 .btn:not(a).green > button,
 .btn:not(a).green > input {
-  background: #81BA41;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #18A68A;
+  background: #17BC9C;
   color: #fff;
+}
+
+.btn.green > a:hover,
+.btn.green > button:hover,
+.btn.green > input:hover,
+.btn:not(a).green > a:hover,
+.btn:not(a).green > button:hover,
+.btn:not(a).green > input:hover {
+  background: #69D3BF;
 }
 
 .btn.orange > a,
@@ -523,9 +1218,18 @@ h6.title {
 .btn:not(a).orange > a,
 .btn:not(a).orange > button,
 .btn:not(a).orange > input {
-  background: #F0AD4E;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #CB8618;
+  background: #F39C12;
   color: #fff;
+}
+
+.btn.orange > a:hover,
+.btn.orange > button:hover,
+.btn.orange > input:hover,
+.btn:not(a).orange > a:hover,
+.btn:not(a).orange > button:hover,
+.btn:not(a).orange > input:hover {
+  background: #F7BF65;
 }
 
 .btn.red > a,
@@ -534,14 +1238,18 @@ h6.title {
 .btn:not(a).red > a,
 .btn:not(a).red > button,
 .btn:not(a).red > input {
-  background: #D52D47;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #DD8177;
+  background: #E74C3C;
   color: #fff;
 }
 
-.btn.l,
-.btn:not(a).l {
-  width: 260px;
+.btn.red > a:hover,
+.btn.red > button:hover,
+.btn.red > input:hover,
+.btn:not(a).red > a:hover,
+.btn:not(a).red > button:hover,
+.btn:not(a).red > input:hover {
+  background: #EF8B80;
 }
 
 .btn.center,
@@ -551,7 +1259,7 @@ h6.title {
 
 .btn.disable,
 .btn:not(a).disable {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .btn .icon,
@@ -571,69 +1279,202 @@ input.btn {
   width: 100%;
   min-height: 30px;
   padding: 0 12px;
-  background: #F6F6F6;
+  background: #F9F9F9;
   border-radius: 4px;
-  border: none;
+  border: #D9D9D9 1px solid;
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  color: #666;
+  color: #6A6A6A;
   cursor: pointer;
   font-size: 14px;
   line-height: 28px;
   vertical-align: top;
   width: auto;
   /* Skin */
+  /* State */
+}
+
+a.btn:hover,
+button.btn:hover,
+input.btn:hover {
+  background: #F5F5F5;
 }
 
 a.btn.primary,
 button.btn.primary,
 input.btn.primary {
-  background: #0BACD3;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #243243;
+  background: #2C3D50;
   color: #fff;
 }
 
-a.btn.secondly,
-button.btn.secondly,
-input.btn.secondly {
-  background: #EEEEEE;
-  border: #000 1px solid;
-  background: linear-gradient(top, #404040, #282828);
+a.btn.primary:hover,
+button.btn.primary:hover,
+input.btn.primary:hover {
+  background: #76828D;
+}
+
+a.btn.blue,
+button.btn.blue,
+input.btn.blue {
+  border-color: #3682B6;
+  background: #3598DB;
   color: #fff;
 }
 
-a.btn.secondly > a,
-a.btn.secondly > input,
-button.btn.secondly > a,
-button.btn.secondly > input,
-input.btn.secondly > a,
-input.btn.secondly > input {
-  color: #000000;
+a.btn.blue:hover,
+button.btn.blue:hover,
+input.btn.blue:hover {
+  background: #7BBCE8;
 }
 
 a.btn.green,
 button.btn.green,
 input.btn.green {
-  background: #81BA41;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #18A68A;
+  background: #17BC9C;
   color: #fff;
+}
+
+a.btn.green:hover,
+button.btn.green:hover,
+input.btn.green:hover {
+  background: #69D3BF;
 }
 
 a.btn.orange,
 button.btn.orange,
 input.btn.orange {
-  background: #F0AD4E;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #CB8618;
+  background: #F39C12;
   color: #fff;
+}
+
+a.btn.orange:hover,
+button.btn.orange:hover,
+input.btn.orange:hover {
+  background: #F7BF65;
 }
 
 a.btn.red,
 button.btn.red,
 input.btn.red {
-  background: #D52D47;
-  box-shadow: rgba(0, 0, 0, 0.13) 0 -2px 0 0 inset;
+  border-color: #DD8177;
+  background: #E74C3C;
   color: #fff;
+}
+
+a.btn.red:hover,
+button.btn.red:hover,
+input.btn.red:hover {
+  background: #EF8B80;
+}
+
+a.btn.mini,
+button.btn.mini,
+input.btn.mini {
+  min-width: 65px;
+  min-height: 20px;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+a.btn.small,
+button.btn.small,
+input.btn.small {
+  min-width: 90px;
+  min-height: 25px;
+  padding: 0 10px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+a.btn.large,
+button.btn.large,
+input.btn.large {
+  min-width: 140px;
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+a.btn.big,
+button.btn.big,
+input.btn.big {
+  min-width: 170px;
+  min-height: 50px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+a.btn.narrow,
+button.btn.narrow,
+input.btn.narrow {
+  min-width: 65px;
+}
+
+a.btn.short,
+button.btn.short,
+input.btn.short {
+  min-width: 90px;
+}
+
+a.btn.long,
+button.btn.long,
+input.btn.long {
+  min-width: 140px;
+}
+
+a.btn.wide,
+button.btn.wide,
+input.btn.wide {
+  min-width: 170px;
+}
+
+a.btn.free,
+button.btn.free,
+input.btn.free {
+  min-width: 100%;
+}
+
+a.btn.lower,
+button.btn.lower,
+input.btn.lower {
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 11px;
+}
+
+a.btn.low,
+button.btn.low,
+input.btn.low {
+  min-height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+a.btn.high,
+button.btn.high,
+input.btn.high {
+  min-height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+a.btn.lofty,
+button.btn.lofty,
+input.btn.lofty {
+  min-height: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 15px;
 }
 
 .btnGroup > * {
@@ -643,10 +1484,12 @@ input.btn.red {
 
 .btnGroup .btn {
   border-radius: 0;
+  border-right: none;
 }
 
 .btnGroup .btn > a {
   border-radius: 0;
+  border-right-color: transparent;
 }
 
 .btnGroup .btn:first-child,
@@ -659,26 +1502,59 @@ input.btn.red {
 .btnGroup .btn:last-child a {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  border-right-color: #D9D9D9;
 }
 
-.btnGroup .btn.btn + .primary {
-  border-left: #0889a8 1px solid;
+.btnGroup .btn:last-child.primary,
+.btnGroup .btn:last-child a.primary {
+  border-right-color: #243243;
 }
 
-.btnGroup .btn.btn + .secondly {
-  border-left: #0889a8 1px solid;
+.btnGroup .btn:last-child.blue,
+.btnGroup .btn:last-child a.blue {
+  border-right-color: #3682B6;
 }
 
-.btnGroup .btn.btn + .green {
-  border-left: #40986c 1px solid;
+.btnGroup .btn:last-child.green,
+.btnGroup .btn:last-child a.green {
+  border-right-color: #18A68A;
 }
 
-.btnGroup .btn.btn + .orange {
-  border-left: #c38a3a 1px solid;
+.btnGroup .btn:last-child.orange,
+.btnGroup .btn:last-child a.orange {
+  border-right-color: #CB8618;
 }
 
-.btnGroup .btn.btn + .red {
-  border-left: #af4450 1px solid;
+.btnGroup .btn:last-child.red,
+.btnGroup .btn:last-child a.red {
+  border-right-color: #DD8177;
+}
+
+/*
+ * DropDown Style
+*/
+.dropdown .btn {
+  position: relative;
+  padding-right: 20px;
+}
+
+.dropdown .btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  margin-top: -6px;
+  border-bottom: 2px solid #6A6A6A;
+  border-right: 2px solid #6A6A6A;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.dropdown .btn.primary::before, .dropdown .btn.blue::before, .dropdown .btn.green::before, .dropdown .btn.orange::before, .dropdown .btn.red::before {
+  border-color: #fff;
 }
 
 /* Box Style
@@ -687,6 +1563,9 @@ input.btn.red {
   overflow: hidden;
 }
 
+/*
+ * Box Style
+*/
 /* List Style
 -------------------------------------------------- */
 /*
@@ -776,14 +1655,142 @@ input.btn.red {
   list-style-type: georgian;
 }
 
+/* Table Style
+-------------------------------------------------- */
+/*
+ * Table Style
+*/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table caption {
+  text-align: left;
+  color: #999;
+  font-size: 12px;
+}
+
+.table th,
+.table td {
+  padding: 8px 8px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.table th + th,
+.table th + td,
+.table td + th,
+.table td + td {
+  border-left: 1px solid #E5E5E5;
+}
+
+.table tfoot {
+  font-size: 12px;
+  font-style: italic;
+}
+
 /* Icon Style
 -------------------------------------------------- */
+/*
+ * Icon Style
+*/
 .icon {
   display: inline-block;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  font-family: FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.icon.round {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+}
+
+.icon.round .icon {
+  line-height: 40px;
+}
+
+.icon.mini::before {
+  font-size: 10px;
+}
+
+.icon.small {
+  font-size: 1.5em;
+}
+
+.icon.large {
+  font-size: 2em;
+}
+
+.icon.xLarge {
+  font-size: 3em;
+}
+
+.icon.big {
+  font-size: 4em;
+}
+
+.icon.x2 {
+  font-size: 2em;
+}
+
+.icon.x3 {
+  font-size: 3em;
+}
+
+.icon.x4 {
+  font-size: 4em;
+}
+
+.icon.x5 {
+  font-size: 5em;
+}
+
+.icon.primary {
+  color: #2C3D50;
+}
+
+.icon.primary:hover {
+  color: #76828D;
+}
+
+.icon.green {
+  color: #17BC9C;
+}
+
+.icon.green:hover {
+  color: #69D3BF;
+}
+
+.icon.blue {
+  color: #3598DB;
+}
+
+.icon.blue:hover {
+  color: #7BBCE8;
+}
+
+.icon.orange {
+  color: #F39C12;
+}
+
+.icon.orange:hover {
+  color: #F7BF65;
+}
+
+.icon.red {
+  color: #E74C3C;
+}
+
+.icon.red:hover {
+  color: #EF8B80;
 }
 
 .icon.ap-glass::before {
@@ -3318,11 +4325,246 @@ input.btn.red {
   content: "\f2b1";
 }
 
+.iconBtn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+}
+
+.iconBtn .icon {
+  line-height: 40px;
+}
+
+.iconBtn > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+.iconBtn.mini {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.iconBtn.mini .icon {
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.iconBtn.small {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.iconBtn.small .icon {
+  line-height: 30px;
+}
+
+.iconBtn.large {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.iconBtn.large .icon {
+  font-size: 24px;
+  line-height: 60px;
+}
+
+.iconBtn.big {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+.iconBtn.big .icon {
+  font-size: 32px;
+  line-height: 80px;
+}
+
+.iconBtn.primary {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.iconBtn.primary:hover {
+  background: #76828D;
+}
+
+.iconBtn.primary > a {
+  color: #fff;
+}
+
+.iconBtn.green {
+  background: #17BC9C;
+  color: #fff;
+}
+
+.iconBtn.green:hover {
+  background: #69D3BF;
+}
+
+.iconBtn.green > a {
+  color: #fff;
+}
+
+.iconBtn.blue {
+  background: #3598DB;
+  color: #fff;
+}
+
+.iconBtn.blue:hover {
+  background: #7BBCE8;
+}
+
+.iconBtn.blue > a {
+  color: #fff;
+}
+
+.iconBtn.orange {
+  background: #F39C12;
+  color: #fff;
+}
+
+.iconBtn.orange:hover {
+  background: #F7BF65;
+}
+
+.iconBtn.orange > a {
+  color: #fff;
+}
+
+.iconBtn.red {
+  background: #E74C3C;
+  color: #fff;
+}
+
+.iconBtn.red:hover {
+  background: #EF8B80;
+}
+
+.iconBtn.red > a {
+  color: #fff;
+}
+
+/*
+ * Badge Style
+*/
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 2px;
+  background: #F9F9F9;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.badge.round {
+  border-radius: 10px;
+  line-height: 20px;
+}
+
+.badge.primary {
+  background: #2C3D50;
+  color: #fff;
+}
+
+.badge.green {
+  background: #17BC9C;
+  color: #fff;
+}
+
+.badge.blue {
+  background: #3598DB;
+  color: #fff;
+}
+
+.badge.orange {
+  background: #F39C12;
+  color: #fff;
+}
+
+.badge.red {
+  background: #E74C3C;
+  color: #fff;
+}
+
+.badge.mini {
+  line-height: 12px;
+  font-size: 10px;
+}
+
+.badge.mini.round {
+  min-width: 12px;
+  padding: 0 2px;
+}
+
+.badge.small {
+  line-height: 14px;
+  font-size: 11px;
+}
+
+.badge.small.round {
+  min-width: 16px;
+  padding: 0 2px;
+  line-height: 16px;
+}
+
+.badge.large {
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.badge.large.round {
+  min-width: 24px;
+  border-radius: 12px;
+}
+
+.badge.big {
+  padding: 0 8px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.badge.big.round {
+  min-width: 30px;
+  border-radius: 15px;
+}
+
+.notification {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background: #E74C3C;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
 /* Modal Style
 -------------------------------------------------- */
 .modalWindow .modalBody {
   width: 800px;
   min-height: 400px;
+  border: #B8B8B8 1px solid;
+  border-radius: 4px;
   background: #fff;
   z-index: 5000;
 }

@@ -1,21 +1,44 @@
+/*
+ * Base Variables
+*/
 $baseWidth: 1000px;
 $baseBgColor: #fff;
 $imgPath: "../img/ui/";
 $fontPath: "../font/";
 
-$colorAqua: #0ff;
+/*
+ * Color Variables
+*/
+/* base */
+$colorDefault: #F9F9F9;
+$colorPrimary: #2C3D50;
+$colorGreen: #17BC9C;
+$colorBlue: #3598DB;
+$colorOrange: #F39C12;
+$colorRed: #E74C3C;
 
+$colorBorderDefault: #D9D9D9;
+$colorBorderPrimary: #243243;
+$colorBorderGreen: #18A68A;
+$colorBorderBlue: #3682B6;
+$colorBorderOrange: #CB8618;
+$colorBorderRed: #DD8177;
+
+$colorHoverDefault: #F5F5F5;
+$colorHoverPrimary: #76828D;
+$colorHoverGreen: #69D3BF;
+$colorHoverBlue: #7BBCE8;
+$colorHoverOrange: #F7BF65;
+$colorHoverRed: #EF8B80;
+
+/* font */
+$fontMainColor: #3D3D3D;
 $linkMainColor: #1397E1;
 
-$fontFamily: Helvetica, Arial, sans-serif, 'Hiragino Kaku Gothic Pro', 'メイリオ';
-
-$fontMainColor: #3D3D3D;
-
-$fontColorAqua: #0ff;
-
-$thumbnailWidth: 45px;
-
-$mediaQueriesPoint1: 414px;
+/*
+ * Font Variables
+*/
+$fontFamily: Helvetica Neue, Arial, sans-serif, 'Hiragino Kaku Gothic Pro', 'メイリオ';
 
 @font-face {
   font-family: 'FontAwesome';
@@ -25,3 +48,14 @@ $mediaQueriesPoint1: 414px;
   font-weight: normal;
   font-style: normal;
 }
+
+/*
+ * Width Variables
+*/
+$thumbnailWidth: 45px;
+
+
+/*
+ * Layout Variables
+*/
+$mediaQueriesPoint1: 414px;

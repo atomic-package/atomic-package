@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parts on </title>
+    <link>/parts/</link>
+    <description>Recent content in Parts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/parts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>All Parts</title>
+      <link>/parts/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/parts/</guid>
+      <description>
+
+&lt;h2 id=&#34;all-parts:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;All Parts&lt;/h2&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -9,10 +9,10 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 2px;
-  border: #1397E1 2px solid;
+  border: #DCE4EC 2px solid;
   background: #fff;
   &:checked {
-    background: #1397E1;
+    background: #DCE4EC;
     &::before {
       @include createStyle;
       width: 10px;
@@ -22,6 +22,38 @@ input[type="checkbox"] {
       border-left: 2px solid #fff;
       border-bottom: 2px solid #fff;
       transform: rotate(-45deg);
+    }
+  }
+
+  /* skin */
+  &.primary {
+    border: #2C3D50 2px solid;
+    &:checked {
+      background: #2C3D50;
+    }
+  }
+  &.green {
+    border: #17BC9C 2px solid;
+    &:checked {
+      background: #17BC9C;
+    }
+  }
+  &.blue {
+    border: #1397E1 2px solid;
+    &:checked {
+      background: #1397E1;
+    }
+  }
+  &.orange {
+    border: #F39C12 2px solid;
+    &:checked {
+      background: #F39C12;
+    }
+  }
+  &.red {
+    border: #E74C3C 2px solid;
+    &:checked {
+      background: #E74C3C;
     }
   }
 }
@@ -56,9 +88,14 @@ input[type="radio"] {
 input[type="text"],
 input[type="search"],
 input[type="password"] {
-  border: #979797 1px solid;
-  height: 28px;
+  display: inline-block;
+  border: #DCE4EC 2px solid;
+  height: 30px;
+  padding: 0 16px;
+  border-radius: 4px;
   box-sizing: border-box;
+  color: #2C3E50;
+  font-size: 13px;
 }
 
 /* input class style */

@@ -1,0 +1,95 @@
+/***
+ ** Atomic Parts Contents
+  - Bg Style
+  - Header Style
+  - Footer Style
+  - Paragraph style
+  - Title Style
+  - Navigation & Menu Style
+  - Button Style
+  - Box Style
+  - List Style
+  - Table Style
+  - Modal Style
+  - Form Style
+  - Separate Style
+  - Animation Style
+  - Media Queries Style
+ **
+***/
+/* Header Style
+-------------------------------------------------- */
+.apDocsHeader {
+  height: 60px;
+  background: #333;
+}
+
+.apDocsHeader .wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* List Style
+-------------------------------------------------- */
+.docsHeaderMenuList {
+  float: right;
+  padding: 20px;
+}
+
+.docsHeaderMenuList::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.docsHeaderMenuList li {
+  float: left;
+  padding: 0 10px;
+}
+
+.docsHeaderMenuList li a {
+  color: #fff;
+}
+
+.site-content {
+  width: 1100px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.site-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.site-content .contents.docs {
+  margin-left: 250px;
+}
+
+.sideMenu.docs {
+  float: left;
+  width: 250px;
+}
+
+.times.docs {
+  text-align: right;
+}
+
+.contents.docs > h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.contents.docs > h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.contents.docs > p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}

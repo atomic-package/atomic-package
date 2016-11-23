@@ -1,9 +1,98 @@
+/*
+ * Icon Style
+*/
+
+@mixin iconBtnBaseStyle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: $colorDefault;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  color: #000;
+  .icon {
+    line-height: 40px;
+  }
+}
+
+
 .icon {
   display: inline-block;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1;
-  font-family: FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
+
+  // state
+  &.round {
+    @include iconBtnBaseStyle;
+  }
+
+  &.mini::before {
+    font-size: 10px;
+  }
+  &.small {
+    //font-size: 12px;
+    font-size: 1.5em;
+  }
+  &.large {
+    font-size: 2em;
+  }
+  &.xLarge {
+    font-size: 3em;
+  }
+  &.big {
+    font-size: 4em;
+  }
+
+  &.x2 {
+    font-size: 2em;
+  }
+  &.x3 {
+    font-size: 3em;
+  }
+  &.x4 {
+    font-size: 4em;
+  }
+  &.x5 {
+    font-size: 5em;
+  }
+
+    // skin
+  &.primary {
+    color: $colorPrimary;
+    &:hover {
+      color: #76828D;
+    }
+  }
+
+  &.green {
+    color: $colorGreen;
+    &:hover {
+      color: #69D3BF;
+    }
+  }
+
+  &.blue {
+    color: $colorBlue;
+    &:hover {
+      color: #7BBCE8;
+    }
+  }
+
+  &.orange {
+    color: $colorOrange;
+    &:hover {
+      color: #F7BF65;
+    }
+  }
+
+  &.red {
+    color: $colorRed;
+    &:hover {
+      color: #EF8B80;
+    }
+  }
 
   // Adapted from http://fortawesome.github.com/Font-Awesome (Version 4.6.0)
   &.ap-glass::before { content: "\f000"; }
@@ -732,4 +821,215 @@
   &.ap-wpbeginner::before { content: "\f297"; }
   &.ap-wpforms::before { content: "\f298"; }
   &.ap-yoast::before { content: "\f2b1"; }
+}
+
+.iconBtn {
+  @include iconBtnBaseStyle;
+
+  > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+  }
+
+  // state
+  &.mini {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    .icon {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+  &.small {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    .icon {
+      line-height: 30px;
+    }
+  }
+  &.large {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    .icon {
+      font-size: 24px;
+      line-height: 60px;
+    }
+  }
+  &.big {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    .icon {
+      font-size: 32px;
+      line-height: 80px;
+    }
+  }
+
+  // skin
+  &.primary {
+    background: $colorPrimary;
+    color: #fff;
+    &:hover {
+      background: #76828D;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.green {
+    background: $colorGreen;
+    color: #fff;
+    &:hover {
+      background: #69D3BF;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.blue {
+    background: $colorBlue;
+    color: #fff;
+    &:hover {
+      background: #7BBCE8;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.orange {
+    background: $colorOrange;
+    color: #fff;
+    &:hover {
+      background: #F7BF65;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+
+  &.red {
+    background: $colorRed;
+    color: #fff;
+    &:hover {
+      background: #EF8B80;
+    }
+
+    > a {
+      color: #fff;
+    }
+  }
+}
+
+/*
+ * Badge Style
+*/
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 2px;
+  background: $colorDefault;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  &.round {
+    border-radius: 10px;
+    line-height: 20px;
+  }
+
+  // skin
+  &.primary {
+    background: $colorPrimary;
+    color: #fff;
+  }
+
+  &.green {
+    background: $colorGreen;
+    color: #fff;
+  }
+
+  &.blue {
+    background: $colorBlue;
+    color: #fff;
+  }
+
+  &.orange {
+    background: $colorOrange;
+    color: #fff;
+  }
+
+  &.red {
+    background: $colorRed;
+    color: #fff;
+  }
+
+  // state size
+  &.mini {
+    line-height: 12px;
+    font-size: 10px;
+    &.round {
+      min-width: 12px;
+      padding: 0 2px;
+    }
+  }
+  &.small {
+    line-height: 14px;
+    font-size: 11px;
+    &.round {
+      min-width: 16px;
+      padding: 0 2px;
+      line-height: 16px;
+    }
+  }
+  &.large {
+    padding: 0 8px;
+    line-height: 24px;
+    font-size: 16px;
+    &.round {
+      min-width: 24px;
+      border-radius: 12px;
+    }
+  }
+  &.big {
+    padding: 0 8px;
+    line-height: 30px;
+    font-size: 18px;
+    &.round {
+      min-width: 30px;
+      border-radius: 15px;
+    }
+  }
+}
+
+.notification {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background: $colorRed;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.logo {}
+
+.headerLogo {
+  display: inline-block;
 }
