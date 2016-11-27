@@ -9,15 +9,16 @@
   <title>{{ .Title }} - Atomic Package</title>
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if .RSSlink }}
-  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}"/>
+  <!--<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}"/>-->
   {{ end }}
 
   {{ partial "head_includes.html" . }}
+
 </head>
 <body lang="ja">
   <header class="header docs">
     <div class="wrap">
-      <h1 class="headerLogo"><a href="/"><img src="img/top/logo_main.png" width="80" alt=""/></a></h1>
+      <h1 class="headerLogo"><a href="/"><img src="/img/top/logo_main.png" width="80" alt=""/></a></h1>
       {{ partial "header_menu.html" . }}
     </div>
   </header>

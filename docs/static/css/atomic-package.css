@@ -921,7 +921,7 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 
 .paginationList.primary > li.active, .paginationList.primary > li:hover {
   border-color: #243243;
-  background: #76828D;
+  background: #5F6C78;
 }
 
 .paginationList.green > li {
@@ -1654,7 +1654,7 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 .btn:not(a).primary > a:hover,
 .btn:not(a).primary > button:hover,
 .btn:not(a).primary > input:hover {
-  background: #76828D;
+  background: #5F6C78;
 }
 
 .btn.blue > a,
@@ -1798,7 +1798,7 @@ input.btn.primary {
 a.btn.primary:hover,
 button.btn.primary:hover,
 input.btn.primary:hover {
-  background: #76828D;
+  background: #5F6C78;
 }
 
 a.btn.blue,

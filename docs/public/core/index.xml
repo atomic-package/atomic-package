@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cores on </title>
-    <link>/core/</link>
-    <description>Recent content in Cores on </description>
+    <title>Cores on Atomic-Package</title>
+    <link>http://atomic-package.com/core/</link>
+    <description>Recent content in Cores on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
     <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/core/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://atomic-package.com/core/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Alert Component</title>
-      <link>/core/alert/</link>
+      <link>http://atomic-package.com/core/alert/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/alert/</guid>
+      <guid>http://atomic-package.com/core/alert/</guid>
       <description>
 
 &lt;h2 id=&#34;alert:734124af65ffeefa2d69100579af4838&#34;&gt;Alert&lt;/h2&gt;
@@ -27,10 +28,10 @@
     
     <item>
       <title>Badge Component</title>
-      <link>/core/badge/</link>
+      <link>http://atomic-package.com/core/badge/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/badge/</guid>
+      <guid>http://atomic-package.com/core/badge/</guid>
       <description>
 
 &lt;h2 id=&#34;badge:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge&lt;/h2&gt;
@@ -85,81 +86,282 @@
     
     <item>
       <title>Base Component</title>
-      <link>/core/base/</link>
+      <link>http://atomic-package.com/core/base/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/base/</guid>
+      <guid>http://atomic-package.com/core/base/</guid>
       <description>
 
 &lt;h2 id=&#34;base:64cc054abc204c1c6b285a865764db92&#34;&gt;Base&lt;/h2&gt;
 
 &lt;h3 id=&#34;parts-size-css-class:64cc054abc204c1c6b285a865764db92&#34;&gt;Parts Size CSS Class&lt;/h3&gt;
 
+&lt;div&gt;
 &lt;table class=&#34;table&#34;&gt;
-  &lt;caption&gt;Parts Size CSS Class&lt;/caption&gt;
+  &lt;caption&gt;Atomic Parts Size&lt;/caption&gt;
   &lt;thead&gt;
-  &lt;tr&gt;
-    &lt;th&gt;CSS Class&lt;/th&gt;
-    &lt;th&gt;Table Heading&lt;/th&gt;
-    &lt;th&gt;Table Heading&lt;/th&gt;
-  &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Width x Height&lt;/th&gt;
+        &lt;th&gt;Width&lt;/th&gt;
+        &lt;th&gt;Height&lt;/th&gt;
+      &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
-  &lt;tr&gt;
-    &lt;td&gt;mini&lt;/td&gt;
-    &lt;td&gt;Table Data&lt;/td&gt;
-    &lt;td&gt;Table Data&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;small&lt;/td&gt;
-    &lt;td&gt;Table Data&lt;/td&gt;
-    &lt;td&gt;Table Data&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;medium or default&lt;/td&gt;
-    &lt;td&gt;Table Data&lt;/td&gt;
-    &lt;td&gt;Table Data&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-      &lt;td&gt;large&lt;/td&gt;
-      &lt;td&gt;Table Data&lt;/td&gt;
-      &lt;td&gt;Table Data&lt;/td&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mini&lt;/td&gt;
+      &lt;td&gt;narrow&lt;/td&gt;
+      &lt;td&gt;lower&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-        &lt;td&gt;big&lt;/td&gt;
-        &lt;td&gt;Table Data&lt;/td&gt;
-        &lt;td&gt;Table Data&lt;/td&gt;
-      &lt;/tr&gt;
+      &lt;td&gt;small&lt;/td&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;large&lt;/td&gt;
+      &lt;td&gt;long&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;big&lt;/td&gt;
+      &lt;td&gt;wide&lt;/td&gt;
+      &lt;td&gt;lofty&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;free&lt;/td&gt;
+      &lt;td&gt;free&lt;/td&gt;
+      &lt;td&gt;free&lt;/td&gt;
+    &lt;/tr&gt;
   &lt;/tbody&gt;
-  &lt;tfoot&gt;
-  &lt;tr&gt;
-    &lt;td&gt;large&lt;/td&gt;
-    &lt;td&gt;Table Footer&lt;/td&gt;
-    &lt;td&gt;Table Footer&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;/tfoot&gt;  
 &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;ruled-line:64cc054abc204c1c6b285a865764db92&#34;&gt;Ruled Line&lt;/h3&gt;
+
+&lt;p&gt;罫線を表す &lt;code&gt;hr&lt;/code&gt; 要素には、デフォルトのスタイルが定義されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;double:64cc054abc204c1c6b285a865764db92&#34;&gt;Double&lt;/h4&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr class=&#34;double&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;double&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;dotted:64cc054abc204c1c6b285a865764db92&#34;&gt;Dotted&lt;/h4&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr class=&#34;dotted&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;dotted&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;dashed:64cc054abc204c1c6b285a865764db92&#34;&gt;dashed&lt;/h4&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr class=&#34;dashed&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;dashed&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;size-variation:64cc054abc204c1c6b285a865764db92&#34;&gt;Size Variation&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;large&lt;/strong&gt;
+&lt;hr class=&#34;large&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;large dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;large double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;large dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;big&lt;/strong&gt;
+&lt;hr class=&#34;big&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;big dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;big double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;big dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;color-variation:64cc054abc204c1c6b285a865764db92&#34;&gt;Color Variation&lt;/h4&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;primary&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;primary double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;primary dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;primary dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;green&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;green double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;green dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;green dashed&#34;&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;blue&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;blue double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;blue dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;blue dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;orange&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;orange double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;orange dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;orange dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;red&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;red double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;red dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;red dashed&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;other-elements:64cc054abc204c1c6b285a865764db92&#34;&gt;Other Elements&lt;/h4&gt;
+
+&lt;p&gt;Atomic-Packageでは、 hr以外の要素でも罫線を表現することが可能です。&lt;/p&gt;
+
+&lt;p&gt;その際は、要素に &lt;code&gt;hr&lt;/code&gt; classを付与する事によって、罫線の振る舞いをさせることができます。&lt;/p&gt;
+
+&lt;p class=&#34;hr&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p class=&amp;quot;hr&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;inline-elements:64cc054abc204c1c6b285a865764db92&#34;&gt;Inline Elements&lt;/h3&gt;
+
+&lt;p class=&#34;text&#34;&gt;テキストテキストテキストテキストテキストテキストテキスト&lt;/p&gt;
+
+&lt;p class=&#34;text strong&#34;&gt;Strong is used to indicate strong importance&lt;/p&gt;
+
+&lt;p class=&#34;text strong&#34;&gt;Strong is used to &lt;strong&gt;indicate strong importance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p class=&#34;text&#34;&gt;The &lt;u&gt;u element&lt;/u&gt; is text with an unarticulated, though explicitly rendered, non-textual annotation&lt;/p&gt;
+
+&lt;p class=&#34;text link&#34;&gt;&lt;/p&gt;
+
+&lt;p class=&#34;text&#34;&gt;The &lt;i&gt;i element&lt;/i&gt; is text that is set off from the normal text&lt;/p&gt;
+
+&lt;p&gt;The u element is text with an unarticulated, though explicitly rendered, non-textual annotation&lt;/p&gt;
+
+&lt;p&gt;This text is deleted and&lt;/p&gt;
+
+&lt;p&gt;This text has a strikethrough&lt;/p&gt;
+
+&lt;p&gt;Superscript®&lt;/p&gt;
+
+&lt;p&gt;Subscript for things like H2O&lt;/p&gt;
+
+&lt;p&gt;This small text is small for for fine print, etc.&lt;/p&gt;
+
+&lt;p&gt;Abbreviation: HTML&lt;/p&gt;
+
+&lt;p&gt;Keybord input: Cmd&lt;/p&gt;
+
+&lt;p&gt;“This text is a short inline quotation”&lt;/p&gt;
+
+&lt;p&gt;This is a citation&lt;/p&gt;
+
+&lt;p&gt;The dfn element indicates a definition.&lt;/p&gt;
+
+&lt;p&gt;This is what inline code looks like.&lt;/p&gt;
+
+&lt;p&gt;This is sample output from a computer program&lt;/p&gt;
+
+&lt;p&gt;The variarble element, such as x = y&lt;/p&gt;
+
+&lt;h3 id=&#34;paragraph:64cc054abc204c1c6b285a865764db92&#34;&gt;Paragraph&lt;/h3&gt;
+
+&lt;p&gt;Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam.&lt;/p&gt;
+
+&lt;h3 id=&#34;time-element:64cc054abc204c1c6b285a865764db92&#34;&gt;Time Element&lt;/h3&gt;
+
+&lt;p&gt;time&lt;/p&gt;
+
+&lt;h3 id=&#34;list-element:64cc054abc204c1c6b285a865764db92&#34;&gt;List Element&lt;/h3&gt;
+
+&lt;p&gt;list&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Box Component</title>
-      <link>/core/box/</link>
+      <link>http://atomic-package.com/core/box/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/box/</guid>
+      <guid>http://atomic-package.com/core/box/</guid>
       <description>
 
-&lt;h2 id=&#34;box:908ee0dbc1db9ddebb579aa0d9127f51&#34;&gt;Box&lt;/h2&gt;
+&lt;h2 id=&#34;box-components:908ee0dbc1db9ddebb579aa0d9127f51&#34;&gt;Box Components&lt;/h2&gt;
 </description>
     </item>
     
     <item>
       <title>Breadcrumb Component</title>
-      <link>/core/breadcrumb/</link>
+      <link>http://atomic-package.com/core/breadcrumb/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/breadcrumb/</guid>
+      <guid>http://atomic-package.com/core/breadcrumb/</guid>
       <description>
 
 &lt;h2 id=&#34;breadcrumb:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb&lt;/h2&gt;
@@ -168,13 +370,15 @@
     
     <item>
       <title>Button Component</title>
-      <link>/core/button/</link>
+      <link>http://atomic-package.com/core/button/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/button/</guid>
+      <guid>http://atomic-package.com/core/button/</guid>
       <description>
 
-&lt;h2 id=&#34;button:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button&lt;/h2&gt;
+&lt;h2 id=&#34;button-components:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Components&lt;/h2&gt;
+
+&lt;h3 id=&#34;color-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Color Variation&lt;/h3&gt;
 
 &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
@@ -199,14 +403,16 @@
 &lt;p class=&#34;btn orange&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;h2&gt;ボタン (サイズ)&lt;/h2&gt;
+&lt;h3 id=&#34;size-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation&lt;/h3&gt;
+
 &lt;p class=&#34;btn primary mini&#34;&gt;&lt;a href=&#34;&#34;&gt;Mini button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary small&#34;&gt;&lt;a href=&#34;&#34;&gt;Small button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Default button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary large&#34;&gt;&lt;a href=&#34;&#34;&gt;Large button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary big&#34;&gt;&lt;a href=&#34;&#34;&gt;Big button&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;ボタン (幅サイズ)&lt;/h2&gt;
+&lt;h3 id=&#34;size-variation-width:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation - width&lt;/h3&gt;
+
 &lt;p class=&#34;btn primary narrow&#34;&gt;&lt;a href=&#34;&#34;&gt;narrow&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary short&#34;&gt;&lt;a href=&#34;&#34;&gt;short&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Default button&lt;/a&gt;&lt;/p&gt;
@@ -214,53 +420,54 @@
 &lt;p class=&#34;btn primary wide&#34;&gt;&lt;a href=&#34;&#34;&gt;wide&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary free&#34;&gt;&lt;a href=&#34;&#34;&gt;free&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;ボタン (高さサイズ)&lt;/h2&gt;
+&lt;h3 id=&#34;size-variation-height:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation - height&lt;/h3&gt;
+
 &lt;p class=&#34;btn primary lower&#34;&gt;&lt;a href=&#34;&#34;&gt;lower&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary low&#34;&gt;&lt;a href=&#34;&#34;&gt;low&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Default button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary high&#34;&gt;&lt;a href=&#34;&#34;&gt;high&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary lofty&#34;&gt;&lt;a href=&#34;&#34;&gt;lofty&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;ボタン (Style)&lt;/h2&gt;
+&lt;p&gt;&lt;h2&gt;ボタン (Style)&lt;/h2&gt;
 &lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;Default&lt;/a&gt;
 &lt;button class=&#34;btn&#34; value=&#34;&#34;&gt;Default&lt;/button&gt;
-&lt;input class=&#34;btn&#34; type=&#34;submit&#34; value=&#34;Default&#34;/&gt;
+&lt;input class=&#34;btn&#34; type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
 
-&lt;br/&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
-&lt;a class=&#34;btn primary&#34; href=&#34;&#34;&gt;Button&lt;/a&gt;
+&lt;p&gt;&lt;a class=&#34;btn primary&#34; href=&#34;&#34;&gt;Button&lt;/a&gt;
 &lt;button class=&#34;btn primary&#34; value=&#34;&#34;&gt;Button&lt;/button&gt;
-&lt;input class=&#34;btn primary&#34; type=&#34;submit&#34; value=&#34;Button&#34;/&gt;
+&lt;input class=&#34;btn primary&#34; type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
 
-&lt;br/&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
-&lt;a class=&#34;btn green&#34; href=&#34;&#34;&gt;Success&lt;/a&gt;
+&lt;p&gt;&lt;a class=&#34;btn green&#34; href=&#34;&#34;&gt;Success&lt;/a&gt;
 &lt;button class=&#34;btn green&#34; value=&#34;&#34;&gt;Success&lt;/button&gt;
-&lt;input class=&#34;btn green&#34; type=&#34;submit&#34; value=&#34;Success&#34;/&gt;
+&lt;input class=&#34;btn green&#34; type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
 
-&lt;br/&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
-&lt;a class=&#34;btn blue&#34; href=&#34;&#34;&gt;Info&lt;/a&gt;
+&lt;p&gt;&lt;a class=&#34;btn blue&#34; href=&#34;&#34;&gt;Info&lt;/a&gt;
 &lt;button class=&#34;btn blue&#34; value=&#34;&#34;&gt;Info&lt;/button&gt;
-&lt;input class=&#34;btn blue&#34; type=&#34;submit&#34; value=&#34;Info&#34;/&gt;
+&lt;input class=&#34;btn blue&#34; type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
 
-&lt;br/&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
-&lt;a class=&#34;btn orange&#34; href=&#34;&#34;&gt;Warning&lt;/a&gt;
+&lt;p&gt;&lt;a class=&#34;btn orange&#34; href=&#34;&#34;&gt;Warning&lt;/a&gt;
 &lt;button class=&#34;btn orange&#34; value=&#34;&#34;&gt;Warning&lt;/button&gt;
-&lt;input class=&#34;btn orange&#34; type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;
+&lt;input class=&#34;btn orange&#34; type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
 
-&lt;br/&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 
-&lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;Danger&lt;/a&gt;
+&lt;p&gt;&lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;Danger&lt;/a&gt;
 &lt;button class=&#34;btn red&#34; value=&#34;&#34;&gt;Danger&lt;/button&gt;
-&lt;input class=&#34;btn red&#34; type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;
+&lt;input class=&#34;btn red&#34; type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;
-&lt;br/&gt;
-&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
 
-&lt;h2&gt;ドロップダウン&lt;/h2&gt;
+&lt;h2 id=&#34;dropdown:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;DropDown&lt;/h2&gt;
 
 &lt;div class=&#34;dropdown&#34;&gt;
     &lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
@@ -303,20 +510,20 @@
     </item>
     
     <item>
-      <title>Core</title>
-      <link>/core/</link>
+      <title>Core Component</title>
+      <link>http://atomic-package.com/core/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/</guid>
+      <guid>http://atomic-package.com/core/</guid>
       <description>
 
-&lt;h2 id=&#34;core:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Core&lt;/h2&gt;
+&lt;h2 id=&#34;core-components:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Core Components&lt;/h2&gt;
 
-&lt;h4 id=&#34;こちらのページでは-atomic-packageのすべてのコアコンポーネントを一目で確認することができます:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;こちらのページでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。&lt;/h4&gt;
+&lt;p&gt;こちらのページでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。&lt;/p&gt;
 
 &lt;p&gt;Atomic-packageには、30以上のAtomic型UIPartsと拡張可能コンポーネントがあり、それらを組み合わせることができます。&lt;/p&gt;
 
-&lt;h3 id=&#34;size:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Size&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-class:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Size Variation Class&lt;/h3&gt;
 
 &lt;p&gt;Atomic-packageのAtomic型UIPartsは、それぞれのパーツに対してサイズを自由に変更することが容易に行うことができます。&lt;/p&gt;
 
@@ -365,10 +572,11 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;color:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Color&lt;/h3&gt;
+&lt;h3 id=&#34;color-variation-class:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Color Variation Class&lt;/h3&gt;
 
-&lt;p&gt;Atomic-packageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。
-APBCSSの特性により、skin classとSemantic Classは同等の見た目となります。&lt;/p&gt;
+&lt;p&gt;Atomic-packageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。&lt;/p&gt;
+
+&lt;p&gt;APB CSSの特性により、skin classとSemantic Classは同等の見た目となります。&lt;/p&gt;
 
 &lt;table class=&#34;table&#34;&gt;
   &lt;caption&gt;Atomic Parts Color&lt;/caption&gt;
@@ -423,14 +631,26 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
     </item>
     
     <item>
-      <title>Icon Component</title>
-      <link>/core/icon/</link>
+      <title>Form Component</title>
+      <link>http://atomic-package.com/core/form/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/icon/</guid>
+      <guid>http://atomic-package.com/core/form/</guid>
       <description>
 
-&lt;h2 id=&#34;icon:7983a58e607f45087e0647251389c051&#34;&gt;Icon&lt;/h2&gt;
+&lt;h2 id=&#34;form-components:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Form Components&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Icon Component</title>
+      <link>http://atomic-package.com/core/icon/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://atomic-package.com/core/icon/</guid>
+      <description>
+
+&lt;h2 id=&#34;icon-components:7983a58e607f45087e0647251389c051&#34;&gt;Icon Components&lt;/h2&gt;
 
 &lt;p&gt;Place vector icons anywhere using an icon font.&lt;/p&gt;
 
@@ -1270,25 +1490,25 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
     
     <item>
       <title>List Component</title>
-      <link>/core/list/</link>
+      <link>http://atomic-package.com/core/list/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/list/</guid>
+      <guid>http://atomic-package.com/core/list/</guid>
       <description>
 
-&lt;h2 id=&#34;list:8c265e2adc353bedf8022b542a0b78ab&#34;&gt;List&lt;/h2&gt;
+&lt;h2 id=&#34;list-components:8c265e2adc353bedf8022b542a0b78ab&#34;&gt;List Components&lt;/h2&gt;
 </description>
     </item>
     
     <item>
       <title>ModalWindow Component</title>
-      <link>/core/modalwindow/</link>
+      <link>http://atomic-package.com/core/modalwindow/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/modalwindow/</guid>
+      <guid>http://atomic-package.com/core/modalwindow/</guid>
       <description>
 
-&lt;h2 id=&#34;modalwindow:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;ModalWindow&lt;/h2&gt;
+&lt;h2 id=&#34;modalwindow-components:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;ModalWindow Components&lt;/h2&gt;
 
 &lt;div class=&#34;modalWindow&#34;&gt;
   &lt;div class=&#34;modalDialog&#34;&gt;
@@ -1466,10 +1686,10 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
     
     <item>
       <title>Nav Component</title>
-      <link>/core/nav/</link>
+      <link>http://atomic-package.com/core/nav/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/nav/</guid>
+      <guid>http://atomic-package.com/core/nav/</guid>
       <description>
 
 &lt;h2 id=&#34;nav:91942f9972dcd6a0d0b039662c01ffa2&#34;&gt;Nav&lt;/h2&gt;
@@ -1642,10 +1862,10 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
     
     <item>
       <title>Navbar Component</title>
-      <link>/core/navbar/</link>
+      <link>http://atomic-package.com/core/navbar/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/navbar/</guid>
+      <guid>http://atomic-package.com/core/navbar/</guid>
       <description>
 
 &lt;h2 id=&#34;navbar:9a6dd979afdd992c5dfaa6462730fded&#34;&gt;Navbar&lt;/h2&gt;
@@ -1654,10 +1874,10 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
     
     <item>
       <title>Pagination Component</title>
-      <link>/core/pagination/</link>
+      <link>http://atomic-package.com/core/pagination/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/pagination/</guid>
+      <guid>http://atomic-package.com/core/pagination/</guid>
       <description>
 
 &lt;h2 id=&#34;pagination:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination&lt;/h2&gt;
@@ -2012,438 +2232,13 @@ APBCSSの特性により、skin classとSemantic Classは同等の見た目と�
     
     <item>
       <title>SubNav Component</title>
-      <link>/core/subnav/</link>
+      <link>http://atomic-package.com/core/subnav/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/core/subnav/</guid>
+      <guid>http://atomic-package.com/core/subnav/</guid>
       <description>
 
 &lt;h2 id=&#34;subnav:d5ecbb5b8afb6c090915ec74c3a05a99&#34;&gt;SubNav&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tab Component</title>
-      <link>/core/tab/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/core/tab/</guid>
-      <description>
-
-&lt;h2 id=&#34;tab:29ec36439a1f92e5faa0b0964bdd65bd&#34;&gt;Tab&lt;/h2&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34; data-ap-tab&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;disable&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;タブメニュー color&lt;/h4&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-    &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-  &lt;/li&gt;
-    &lt;li&gt;
-    &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-  &lt;/li&gt;
-    &lt;li&gt;
-    &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList primary&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList green&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList blue&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList orange&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList red&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;h4&gt;タブメニュー size&lt;/h4&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList mini&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList small&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList large&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList big&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;サイズ width&lt;/h4&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList narrow&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList short&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList long&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList wide&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList free&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h4&gt;サイズ height&lt;/h4&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList lower&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList low&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList high&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList lofty&#34;&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
 </description>
     </item>
     

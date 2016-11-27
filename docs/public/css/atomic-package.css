@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*
+ * Base Variables
+*/
+/*
+ * Color Variables
+*/
+/* base */
+/* font */
+/*
+ * Font Variables
+*/
 @font-face {
   font-family: 'FontAwesome';
   src: url("../font/fontawesome-webfont.woff2") format("woff2"), url("../font/fontawesome-webfont.woff") format("woff"), url("../font/fontawesome-webfont.ttf") format("truetype");
@@ -6,6 +17,12 @@
   font-style: normal;
 }
 
+/*
+ * Width Variables
+*/
+/*
+ * Layout Variables
+*/
 /*
  * Mixin Style
 */
@@ -145,23 +162,31 @@ a {
   - Media Queries Style
  **
 ***/
-/* Bg Style
+/* Base Style
 -------------------------------------------------- */
-/* Header Style
--------------------------------------------------- */
-/* Footer Style
--------------------------------------------------- */
-footer {
-  /* Atomic */
+:not(pre) > code,
+:not(pre) > kbd,
+:not(pre) > samp {
+  font-size: 12px;
+  font-family: Consolas,monospace,serif;
+  color: #D05;
+  white-space: nowrap;
+  padding: 0 4px;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  background: #fafafa;
 }
 
-footer.footer {
-  padding: 20px 0;
-  border-top: #333 1px solid;
-}
-
-footer.footer .text.copy {
-  text-align: center;
+pre {
+  padding: 10px;
+  background: #fafafa;
+  font: 12px/18px Consolas,monospace,serif;
+  color: #666;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  overflow: auto;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
 }
 
 /* Paragraph style
@@ -233,6 +258,11 @@ footer.footer .text.copy {
 .text.big,
 .string.big {
   font-size: 24px;
+}
+
+.text.picture,
+.string.picture {
+  line-height: 1.4;
 }
 
 /* Atomic */
@@ -598,17 +628,8 @@ img.thumbnail.free.round {
   color: #D85030;
 }
 
-:not(pre) > code,
-:not(pre) > kbd,
-:not(pre) > samp {
-  font-size: 12px;
-  font-family: Consolas,monospace,serif;
-  color: #D05;
-  white-space: nowrap;
-  padding: 0 4px;
-  border: 1px solid #E5E5E5;
-  border-radius: 3px;
-  background: #fafafa;
+.picture {
+  text-align: center;
 }
 
 /* Title Style
@@ -622,6 +643,11 @@ img.thumbnail.free.round {
   /* Skin */
   /* State*/
   /* Module */
+}
+
+.title.border {
+  padding-bottom: 4px;
+  border-bottom: #D9D9D9 1px solid;
 }
 
 .title.primary {
@@ -644,21 +670,29 @@ img.thumbnail.free.round {
   color: #E74C3C;
 }
 
+.title.center {
+  text-align: center;
+}
+
+.title.right {
+  text-align: right;
+}
+
 .title.modal {
   font-size: 18px;
   font-weight: bold;
 }
 
+.title.picture {
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.2;
+}
+
 /* Atomic */
 h1.title {
   font-size: 28px;
-  /* Atomic */
-  /* Atomic */
   /* State  Size */
-}
-
-h1.title .mainLogo {
-  float: left;
 }
 
 h1.title.mini {
@@ -787,6 +821,10 @@ h6.title.big {
   font-size: 32px;
 }
 
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+  line-height: 1.5;
+}
+
 /* Navigation & Menu Style
 -------------------------------------------------- */
 /*
@@ -883,7 +921,7 @@ h6.title.big {
 
 .paginationList.primary > li.active, .paginationList.primary > li:hover {
   border-color: #243243;
-  background: #76828D;
+  background: #5F6C78;
 }
 
 .paginationList.green > li {
@@ -1414,7 +1452,7 @@ h6.title.big {
 .btn:not(a) {
   position: relative;
   display: inline-block;
-  min-width: 120px;
+  min-width: 140px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
@@ -1616,7 +1654,7 @@ h6.title.big {
 .btn:not(a).primary > a:hover,
 .btn:not(a).primary > button:hover,
 .btn:not(a).primary > input:hover {
-  background: #76828D;
+  background: #5F6C78;
 }
 
 .btn.blue > a,
@@ -1760,7 +1798,7 @@ input.btn.primary {
 a.btn.primary:hover,
 button.btn.primary:hover,
 input.btn.primary:hover {
-  background: #76828D;
+  background: #5F6C78;
 }
 
 a.btn.blue,
@@ -2119,6 +2157,7 @@ input.btn.lofty {
 }
 
 .btnList.center {
+  display: block;
   text-align: center;
 }
 
@@ -2128,6 +2167,31 @@ input.btn.lofty {
 
 .btnList.right {
   text-align: right;
+}
+
+.pictureList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.pictureList > li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 25px;
+}
+
+.pictureList > li .title.picture {
+  margin-top: 40px;
+}
+
+.pictureList > li .text.picture {
+  margin-top: 20px;
 }
 
 /* Table Style
@@ -5037,6 +5101,10 @@ input.btn.lofty {
   text-align: center;
 }
 
+.headerLogo {
+  display: inline-block;
+}
+
 /* Modal Style
 -------------------------------------------------- */
 .modalWindow .modalDialog {
@@ -5168,6 +5236,53 @@ input.btn.lofty {
 /*
  * Separate Style
 */
+hr, .hr {
+  border-bottom: #E5E5E5 1px solid;
+  /* State */
+  /* Size */
+  /* Skin */
+}
+
+hr.double, .hr.double {
+  border: #E5E5E5 1px double;
+}
+
+hr.dotted, .hr.dotted {
+  border-bottom: #E5E5E5 1px dotted;
+}
+
+hr.dashed, .hr.dashed {
+  border-bottom: #E5E5E5 1px dashed;
+}
+
+hr.large, .hr.large {
+  border-width: 2px;
+}
+
+hr.big, .hr.big {
+  border-width: 4px;
+}
+
+hr.primary, .hr.primary {
+  border-color: #2C3D50;
+}
+
+hr.blue, .hr.blue {
+  border-color: #3598DB;
+}
+
+hr.green, .hr.green {
+  border-color: #17BC9C;
+}
+
+hr.orange, .hr.orange {
+  border-color: #F39C12;
+}
+
+hr.red, .hr.red {
+  border-color: #E74C3C;
+}
+
 /* Form Style
 -------------------------------------------------- */
 /*
@@ -5285,6 +5400,39 @@ input[type="password"] {
 /* input class style */
 .input {
   display: inline-block;
+}
+
+/* Bg Style
+-------------------------------------------------- */
+/* Header Style
+-------------------------------------------------- */
+.header .headerLogo {
+  height: 100%;
+}
+
+.header .headerLogo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Footer Style
+-------------------------------------------------- */
+footer {
+  /* Atomic */
+}
+
+footer.footer {
+  padding: 20px 0;
+  border-top: #333 1px solid;
+}
+
+footer.footer .text.copy {
+  text-align: center;
 }
 
 /* Animation Style
