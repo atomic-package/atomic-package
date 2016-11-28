@@ -1487,12 +1487,12 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   vertical-align: top;
 }
 
-.btn > a:hover,
-.btn > button:hover,
-.btn > input:hover,
-.btn:not(a) > a:hover,
-.btn:not(a) > button:hover,
-.btn:not(a) > input:hover {
+.btn > a:not(.disable):hover,
+.btn > button:not(.disable):hover,
+.btn > input:not(.disable):hover,
+.btn:not(a) > a:not(.disable):hover,
+.btn:not(a) > button:not(.disable):hover,
+.btn:not(a) > input:not(.disable):hover {
   background: #F5F5F5;
 }
 
@@ -1637,6 +1637,15 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   font-size: 15px;
 }
 
+.btn.disable:hover > a,
+.btn.disable:hover > button,
+.btn.disable:hover > input,
+.btn:not(a).disable:hover > a,
+.btn:not(a).disable:hover > button,
+.btn:not(a).disable:hover > input {
+  background: #F9F9F9;
+}
+
 .btn.primary > a,
 .btn.primary > button,
 .btn.primary > input,
@@ -1648,13 +1657,22 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #fff;
 }
 
-.btn.primary > a:hover,
-.btn.primary > button:hover,
-.btn.primary > input:hover,
-.btn:not(a).primary > a:hover,
-.btn:not(a).primary > button:hover,
-.btn:not(a).primary > input:hover {
+.btn.primary > a:not(.disable):hover,
+.btn.primary > button:not(.disable):hover,
+.btn.primary > input:not(.disable):hover,
+.btn:not(a).primary > a:not(.disable):hover,
+.btn:not(a).primary > button:not(.disable):hover,
+.btn:not(a).primary > input:not(.disable):hover {
   background: #5F6C78;
+}
+
+.btn.primary.disable:hover > a,
+.btn.primary.disable:hover > button,
+.btn.primary.disable:hover > input,
+.btn:not(a).primary.disable:hover > a,
+.btn:not(a).primary.disable:hover > button,
+.btn:not(a).primary.disable:hover > input {
+  background: #2C3D50;
 }
 
 .btn.blue > a,
@@ -1668,13 +1686,22 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #fff;
 }
 
-.btn.blue > a:hover,
-.btn.blue > button:hover,
-.btn.blue > input:hover,
-.btn:not(a).blue > a:hover,
-.btn:not(a).blue > button:hover,
-.btn:not(a).blue > input:hover {
+.btn.blue > a:not(.disable):hover,
+.btn.blue > button:not(.disable):hover,
+.btn.blue > input:not(.disable):hover,
+.btn:not(a).blue > a:not(.disable):hover,
+.btn:not(a).blue > button:not(.disable):hover,
+.btn:not(a).blue > input:not(.disable):hover {
   background: #7BBCE8;
+}
+
+.btn.blue.disable:hover > a,
+.btn.blue.disable:hover > button,
+.btn.blue.disable:hover > input,
+.btn:not(a).blue.disable:hover > a,
+.btn:not(a).blue.disable:hover > button,
+.btn:not(a).blue.disable:hover > input {
+  background: #3598DB;
 }
 
 .btn.green > a,
@@ -1688,13 +1715,22 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #fff;
 }
 
-.btn.green > a:hover,
-.btn.green > button:hover,
-.btn.green > input:hover,
-.btn:not(a).green > a:hover,
-.btn:not(a).green > button:hover,
-.btn:not(a).green > input:hover {
+.btn.green > a:not(.disable):hover,
+.btn.green > button:not(.disable):hover,
+.btn.green > input:not(.disable):hover,
+.btn:not(a).green > a:not(.disable):hover,
+.btn:not(a).green > button:not(.disable):hover,
+.btn:not(a).green > input:not(.disable):hover {
   background: #69D3BF;
+}
+
+.btn.green.disable:hover > a,
+.btn.green.disable:hover > button,
+.btn.green.disable:hover > input,
+.btn:not(a).green.disable:hover > a,
+.btn:not(a).green.disable:hover > button,
+.btn:not(a).green.disable:hover > input {
+  background: #17BC9C;
 }
 
 .btn.orange > a,
@@ -1708,13 +1744,22 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #fff;
 }
 
-.btn.orange > a:hover,
-.btn.orange > button:hover,
-.btn.orange > input:hover,
-.btn:not(a).orange > a:hover,
-.btn:not(a).orange > button:hover,
-.btn:not(a).orange > input:hover {
+.btn.orange > a:not(.disable):hover,
+.btn.orange > button:not(.disable):hover,
+.btn.orange > input:not(.disable):hover,
+.btn:not(a).orange > a:not(.disable):hover,
+.btn:not(a).orange > button:not(.disable):hover,
+.btn:not(a).orange > input:not(.disable):hover {
   background: #F7BF65;
+}
+
+.btn.orange.disable:hover > a,
+.btn.orange.disable:hover > button,
+.btn.orange.disable:hover > input,
+.btn:not(a).orange.disable:hover > a,
+.btn:not(a).orange.disable:hover > button,
+.btn:not(a).orange.disable:hover > input {
+  background: #F39C12;
 }
 
 .btn.red > a,
@@ -1728,13 +1773,22 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #fff;
 }
 
-.btn.red > a:hover,
-.btn.red > button:hover,
-.btn.red > input:hover,
-.btn:not(a).red > a:hover,
-.btn:not(a).red > button:hover,
-.btn:not(a).red > input:hover {
+.btn.red > a:not(.disable):hover,
+.btn.red > button:not(.disable):hover,
+.btn.red > input:not(.disable):hover,
+.btn:not(a).red > a:not(.disable):hover,
+.btn:not(a).red > button:not(.disable):hover,
+.btn:not(a).red > input:not(.disable):hover {
   background: #EF8B80;
+}
+
+.btn.red.disable:hover > a,
+.btn.red.disable:hover > button,
+.btn.red.disable:hover > input,
+.btn:not(a).red.disable:hover > a,
+.btn:not(a).red.disable:hover > button,
+.btn:not(a).red.disable:hover > input {
+  background: #E74C3C;
 }
 
 .btn.center,
@@ -1781,9 +1835,9 @@ input.btn {
   /* State */
 }
 
-a.btn:hover,
-button.btn:hover,
-input.btn:hover {
+a.btn:not(.disable):hover,
+button.btn:not(.disable):hover,
+input.btn:not(.disable):hover {
   background: #F5F5F5;
 }
 
@@ -1795,9 +1849,9 @@ input.btn.primary {
   color: #fff;
 }
 
-a.btn.primary:hover,
-button.btn.primary:hover,
-input.btn.primary:hover {
+a.btn.primary:not(.disable):hover,
+button.btn.primary:not(.disable):hover,
+input.btn.primary:not(.disable):hover {
   background: #5F6C78;
 }
 
@@ -1809,9 +1863,9 @@ input.btn.blue {
   color: #fff;
 }
 
-a.btn.blue:hover,
-button.btn.blue:hover,
-input.btn.blue:hover {
+a.btn.blue:not(.disable):hover,
+button.btn.blue:not(.disable):hover,
+input.btn.blue:not(.disable):hover {
   background: #7BBCE8;
 }
 
@@ -1823,9 +1877,9 @@ input.btn.green {
   color: #fff;
 }
 
-a.btn.green:hover,
-button.btn.green:hover,
-input.btn.green:hover {
+a.btn.green:not(.disable):hover,
+button.btn.green:not(.disable):hover,
+input.btn.green:not(.disable):hover {
   background: #69D3BF;
 }
 
@@ -1837,9 +1891,9 @@ input.btn.orange {
   color: #fff;
 }
 
-a.btn.orange:hover,
-button.btn.orange:hover,
-input.btn.orange:hover {
+a.btn.orange:not(.disable):hover,
+button.btn.orange:not(.disable):hover,
+input.btn.orange:not(.disable):hover {
   background: #F7BF65;
 }
 
@@ -1851,9 +1905,9 @@ input.btn.red {
   color: #fff;
 }
 
-a.btn.red:hover,
-button.btn.red:hover,
-input.btn.red:hover {
+a.btn.red:not(.disable):hover,
+button.btn.red:not(.disable):hover,
+input.btn.red:not(.disable):hover {
   background: #EF8B80;
 }
 

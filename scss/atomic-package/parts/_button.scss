@@ -34,7 +34,7 @@ $btnLofty: 50px;
   font-size: 14px;
   line-height: 28px;
   vertical-align: top;
-  &:hover {
+  &:not(.disable):hover {
     background: $colorHoverDefault;
   }
 }
@@ -44,7 +44,7 @@ $btnLofty: 50px;
   border-color: $colorBorderPrimary;
   background: $colorPrimary;
   color: #fff;
-  &:hover {
+  &:not(.disable):hover {
     background: $colorHoverPrimary;
   }
 }
@@ -53,7 +53,7 @@ $btnLofty: 50px;
   border-color: $colorBorderGreen;
   background: $colorGreen;
   color: #fff;
-  &:hover {
+  &:not(.disable):hover {
     background: $colorHoverGreen;
   }
 }
@@ -62,7 +62,7 @@ $btnLofty: 50px;
   border-color: $colorBorderBlue;
   background: $colorBlue;
   color: #fff;
-  &:hover {
+  &:not(.disable):hover {
     background: $colorHoverBlue;
   }
 }
@@ -71,7 +71,7 @@ $btnLofty: 50px;
   border-color: $colorBorderOrange;
   background: $colorOrange;
   color: #fff;
-  &:hover {
+  &:not(.disable):hover {
     background: $colorHoverOrange;
   }
 }
@@ -80,7 +80,7 @@ $btnLofty: 50px;
   border-color: $colorBorderRed;
   background: $colorRed;
   color: #fff;
-  &:hover {
+  &:not(.disable):hover {
     background: $colorHoverRed;
   }
 }
@@ -209,10 +209,21 @@ $btnLofty: 50px;
   }
 
   /* Skin */
+  &.disable:hover > a,
+  &.disable:hover > button,
+  &.disable:hover > input {
+    background: $colorDefault;
+  }
+
   &.primary > a,
   &.primary > button,
   &.primary > input {
     @include primaryBtnStyle;
+  }
+  &.primary.disable:hover > a,
+  &.primary.disable:hover > button,
+  &.primary.disable:hover > input {
+    background: $colorPrimary;
   }
 
   &.blue > a,
@@ -220,23 +231,44 @@ $btnLofty: 50px;
   &.blue > input {
     @include blueBtnStyle;
   }
+  &.blue.disable:hover > a,
+  &.blue.disable:hover > button,
+  &.blue.disable:hover > input {
+    background: $colorBlue;
+  }
 
   &.green > a,
   &.green > button,
   &.green > input {
     @include greenBtnStyle;
   }
+  &.green.disable:hover > a,
+  &.green.disable:hover > button,
+  &.green.disable:hover > input {
+    background: $colorGreen;
+  }
+
 
   &.orange > a,
   &.orange > button,
   &.orange > input {
     @include orangeBtnStyle;
   }
+  &.orange.disable:hover > a,
+  &.orange.disable:hover > button,
+  &.orange.disable:hover > input {
+    background: $colorOrange;
+  }
 
   &.red > a,
   &.red > button,
   &.red > input {
     @include redBtnStyle;
+  }
+  &.red.disable:hover > a,
+  &.red.disable:hover > button,
+  &.red.disable:hover > input {
+    background: $colorRed;
   }
 
   /* State */

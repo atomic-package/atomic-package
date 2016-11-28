@@ -15,7 +15,7 @@ date = "2016-11-14"
 <p class="btn orange"><a href="">Warning</a></p>
 <p class="btn red"><a href="">Danger</a></p>
 
-<h3>button Element</h3>
+### button Element
 <p class="btn"><button>Default</button></p>
 <p class="btn primary"><button>Button</button></p>
 <p class="btn green"><button>Success</button></p>
@@ -23,13 +23,31 @@ date = "2016-11-14"
 <p class="btn orange"><button>Warning</button></p>
 <p class="btn red"><button>Danger</button></p>
 
-<h3>input Element</h3>
+### input Element
 <p class="btn"><input type="submit" value="Default"/></p>
 <p class="btn primary"><input type="submit" value="Button"/></p>
 <p class="btn green"><input type="submit" value="Success"/></p>
 <p class="btn blue"><input type="submit" value="Info"/></p>
 <p class="btn orange"><input type="submit" value="Warning"/></p>
 <p class="btn red"><input type="submit" value="Danger"/></p>
+
+### Button Variation
+#### active
+<p class="btn active"><input type="submit" value="Default"/></p>
+<p class="btn primary active"><input type="submit" value="Button"/></p>
+<p class="btn green active"><input type="submit" value="Success"/></p>
+<p class="btn blue active"><input type="submit" value="Info"/></p>
+<p class="btn orange active"><input type="submit" value="Warning"/></p>
+<p class="btn red active"><input type="submit" value="Danger"/></p>
+
+#### disable
+<p class="btn disable"><input type="submit" value="Default"/></p>
+<p class="btn primary disable"><input type="submit" value="Button"/></p>
+<p class="btn green disable"><input type="submit" value="Success"/></p>
+<p class="btn blue disable"><input type="submit" value="Info"/></p>
+<p class="btn orange disable"><input type="submit" value="Warning"/></p>
+<p class="btn red disable"><input type="submit" value="Danger"/></p>
+
 
 ### Size Variation
 
