@@ -195,6 +195,10 @@ gulp.task('docs.boot', function() {
   return exec(DOCS_DIR + '/boot.sh');
 });
 
+gulp.task('docs.build', function() {
+  return exec('cd docs && hugo');
+});
+
 /**
  * Gulp Server
  **/
@@ -259,7 +263,7 @@ gulp.task('dist', function(callback) {
   return runSequence(
     'clean.release',
     'clean.dist',
-    ['css.dist', 'js.dist', 'font.dist'],
+    ['css.dist', 'js.dist', 'font.dist', 'docs.build'],
     callback
   );
 });
