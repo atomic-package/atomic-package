@@ -387,21 +387,43 @@
 &lt;p class=&#34;btn orange&#34;&gt;&lt;a href=&#34;&#34;&gt;Warning&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red&#34;&gt;&lt;a href=&#34;&#34;&gt;Danger&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h3&gt;button Element&lt;/h3&gt;
+&lt;h3 id=&#34;button-element:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;button Element&lt;/h3&gt;
+
 &lt;p class=&#34;btn&#34;&gt;&lt;button&gt;Default&lt;/button&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/p&gt;
 &lt;p class=&#34;btn green&#34;&gt;&lt;button&gt;Success&lt;/button&gt;&lt;/p&gt;
 &lt;p class=&#34;btn blue&#34;&gt;&lt;button&gt;Info&lt;/button&gt;&lt;/p&gt;
 &lt;p class=&#34;btn orange&#34;&gt;&lt;button&gt;Warning&lt;/button&gt;&lt;/p&gt;
-&lt;p class=&#34;btn red&#34;&gt;&lt;button&gt;Danger&lt;/button&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red&#34;&gt;&lt;button&gt;Danger&lt;/button&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h3&gt;input Element&lt;/h3&gt;
+&lt;h3 id=&#34;input-element:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;input Element&lt;/h3&gt;
+
 &lt;p class=&#34;btn&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn green&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn blue&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn orange&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
-&lt;p class=&#34;btn red&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;button-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Variation&lt;/h3&gt;
+
+&lt;h4 id=&#34;active:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;active&lt;/h4&gt;
+
+&lt;p class=&#34;btn active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;disable:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;disable&lt;/h4&gt;
+
+&lt;p class=&#34;btn disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;size-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation&lt;/h3&gt;
 
@@ -1695,7 +1717,6 @@
 &lt;h2 id=&#34;nav:91942f9972dcd6a0d0b039662c01ffa2&#34;&gt;Nav&lt;/h2&gt;
 
 &lt;nav class=&#34;navBar&#34;&gt;
-
 &lt;/nav&gt;
 
 &lt;nav class=&#34;menu&#34;&gt;
