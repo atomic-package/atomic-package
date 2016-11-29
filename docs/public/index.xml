@@ -704,13 +704,37 @@
 
 &lt;h3 id=&#34;input-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Element&lt;/h3&gt;
 
-&lt;p&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;
-&lt;input type=&#34;text&#34; value=&#34;テキスト&#34; disabled&gt;&lt;/p&gt;
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;text&#34; value=&#34;default input&#34;&gt;
+&lt;input type=&#34;text&#34; value=&#34;default input&#34; disabled&gt;&lt;/p&gt;
+
+&lt;p&gt;password&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;password&#34; value=&#34;input type password&#34;&gt;
+&lt;input type=&#34;password&#34; value=&#34;input type password&#34; disabled&gt;&lt;/p&gt;
+
+&lt;p&gt;search&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;search&#34; value=&#34;input type search&#34;&gt;
+&lt;input type=&#34;search&#34; value=&#34;input type search&#34; disabled&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;input-wrapelement:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input WrapElement&lt;/h3&gt;
 
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
-&lt;p class=&#34;input disabled&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input disabled&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;password&lt;/p&gt;
+
+&lt;p class=&#34;input password&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;input type password&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input password disabled&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;input type password&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;search&lt;/p&gt;
+
+&lt;p class=&#34;input search&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;input type search&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input search disabled&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;input type search&#34;&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;input-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Size Variation&lt;/h3&gt;
 

@@ -7,12 +7,39 @@ date = "2016-11-14"
 
 ### Input Element
 
-<input type="text" value="テキスト">
-<input type="text" value="テキスト" disabled>
+default
+
+<input type="text" value="default input">
+<input type="text" value="default input" disabled>
+
+password
+
+<input type="password" value="input type password">
+<input type="password" value="input type password" disabled>
+
+
+search
+
+<input type="search" value="input type search">
+<input type="search" value="input type search" disabled>
+
+
 ### Input WrapElement
 
-<p class="input"><input type="text" value="テキスト"></p>
-<p class="input disabled"><input type="text" value="テキスト"></p>
+default
+
+<p class="input"><input type="text" value="default input"></p>
+<p class="input disabled"><input type="text" value="default input"></p>
+
+password
+
+<p class="input password"><input type="text" value="input type password"></p>
+<p class="input password disabled"><input type="text" value="input type password"></p>
+
+search
+
+<p class="input search"><input type="text" value="input type search"></p>
+<p class="input search disabled"><input type="text" value="input type search"></p>
 
 ### Input Size Variation
 
