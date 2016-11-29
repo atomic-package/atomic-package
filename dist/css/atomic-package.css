@@ -5378,22 +5378,258 @@ input[type="radio"]:disabled {
   opacity: 0.5;
 }
 
+/*
+ * Input Style
+*/
+/* Atomic */
 input[type="text"],
 input[type="search"],
 input[type="password"] {
   display: inline-block;
-  border: #DCE4EC 2px solid;
+  min-width: 180px;
+  border: #CCCCCC 1px solid;
   height: 30px;
-  padding: 0 16px;
+  padding: 0 12px;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #2C3E50;
-  font-size: 13px;
+  color: #555555;
+  font-size: 14px;
+  /* State */
+}
+
+input[type="text"].narrow,
+input[type="search"].narrow,
+input[type="password"].narrow {
+  min-width: 65px;
+}
+
+input[type="text"].short,
+input[type="search"].short,
+input[type="password"].short {
+  min-width: 124px;
+}
+
+input[type="text"].long,
+input[type="search"].long,
+input[type="password"].long {
+  min-width: 270px;
+}
+
+input[type="text"].wide,
+input[type="search"].wide,
+input[type="password"].wide {
+  min-width: 450px;
+}
+
+input[type="text"].free,
+input[type="search"].free,
+input[type="password"].free {
+  min-width: 100%;
+}
+
+input[type="text"].lower,
+input[type="search"].lower,
+input[type="password"].lower {
+  height: 18px;
+  line-height: 18px;
+  font-size: 10px;
+}
+
+input[type="text"].low,
+input[type="search"].low,
+input[type="password"].low {
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+}
+
+input[type="text"].high,
+input[type="search"].high,
+input[type="password"].high {
+  height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+input[type="text"].lofty,
+input[type="search"].lofty,
+input[type="password"].lofty {
+  height: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+input[type="text"].mini,
+input[type="search"].mini,
+input[type="password"].mini {
+  width: 65px;
+  min-width: 65px;
+  height: 18px;
+  padding: 0 6px;
+  line-height: 18px;
+  font-size: 10px;
+}
+
+input[type="text"].small,
+input[type="search"].small,
+input[type="password"].small {
+  width: 124px;
+  min-width: 124px;
+  height: 22px;
+  padding: 0 10px;
+  line-height: 22px;
+  font-size: 12px;
+}
+
+input[type="text"].large,
+input[type="search"].large,
+input[type="password"].large {
+  width: 270px;
+  min-width: 270px;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+input[type="text"].big,
+input[type="search"].big,
+input[type="password"].big {
+  width: 450px;
+  min-width: 450px;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 18px;
 }
 
 /* input class style */
 .input {
   display: inline-block;
+  /* State */
+}
+
+.input.narrow input[type="text"],
+.input.narrow input[type="search"],
+.input.narrow input[type="password"] {
+  min-width: 65px;
+  width: 65px;
+}
+
+.input.short input[type="text"],
+.input.short input[type="search"],
+.input.short input[type="password"] {
+  min-width: 124px;
+  width: 124px;
+}
+
+.input.long input[type="text"],
+.input.long input[type="search"],
+.input.long input[type="password"] {
+  min-width: 270px;
+  width: 270px;
+}
+
+.input.wide input[type="text"],
+.input.wide input[type="search"],
+.input.wide input[type="password"] {
+  min-width: 450px;
+  width: 450px;
+}
+
+.input.free {
+  width: 100%;
+}
+
+.input.free input[type="text"],
+.input.free input[type="search"],
+.input.free input[type="password"] {
+  min-width: 100%;
+  width: 100%;
+}
+
+.input.lower input[type="text"],
+.input.lower input[type="search"],
+.input.lower input[type="password"] {
+  height: 18px;
+  line-height: 18px;
+  font-size: 10px;
+}
+
+.input.low input[type="text"],
+.input.low input[type="search"],
+.input.low input[type="password"] {
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+}
+
+.input.high input[type="text"],
+.input.high input[type="search"],
+.input.high input[type="password"] {
+  height: 40px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.input.lofty input[type="text"],
+.input.lofty input[type="search"],
+.input.lofty input[type="password"] {
+  height: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+.input.mini input[type="text"],
+.input.mini input[type="search"],
+.input.mini input[type="password"] {
+  width: 65px;
+  min-width: 65px;
+  height: 18px;
+  padding: 0 6px;
+  line-height: 18px;
+  font-size: 10px;
+}
+
+.input.small input[type="text"],
+.input.small input[type="search"],
+.input.small input[type="password"] {
+  width: 124px;
+  min-width: 124px;
+  height: 22px;
+  padding: 0 10px;
+  line-height: 22px;
+  font-size: 12px;
+}
+
+.input.large input[type="text"],
+.input.large input[type="search"],
+.input.large input[type="password"] {
+  width: 270px;
+  min-width: 270px;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.input.big input[type="text"],
+.input.big input[type="search"],
+.input.big input[type="password"] {
+  width: 450px;
+  min-width: 450px;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 6px;
+  line-height: 50px;
+  font-size: 18px;
 }
 
 /* Bg Style

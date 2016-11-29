@@ -85,20 +85,257 @@ input[type="radio"] {
   }
 }
 
+
+/*
+ * Input Style
+*/
+// size (width)
+$inputNarrow: 65px;
+$inputShort: 124px;
+$inputLong: 270px;
+$inputWide: 450px;
+$inputFree: 100%;
+
+// size (height)
+$inputLower: 18px;
+$inputLow: 22px;
+$inputHigh: 40px;
+$inputLofty: 50px;
+
+$inputLowerFont: 10px;
+$inputLowFont: 12px;
+$inputHighFont: 16px;
+$inputLoftyFont: 18px;
+
+/* Atomic */
 input[type="text"],
 input[type="search"],
 input[type="password"] {
   display: inline-block;
-  border: #DCE4EC 2px solid;
+  min-width: 180px;
+  border: #CCCCCC 1px solid;
   height: 30px;
-  padding: 0 16px;
+  padding: 0 12px;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #2C3E50;
-  font-size: 13px;
+  color: #555555;
+  font-size: 14px;
+
+  /* State */
+  // size
+  &.narrow {
+    min-width: $inputNarrow;
+  }
+  &.short {
+    min-width: $inputShort;
+  }
+  &.long {
+    min-width: $inputLong;
+  }
+  &.wide {
+    min-width: $inputWide;
+  }
+  &.free {
+    min-width: $inputFree;
+  }
+
+  // height
+  &.lower {
+    height: $inputLower;
+    line-height: $inputLower;
+    font-size: $inputLowerFont;
+  }
+  &.low {
+    height: $inputLow;
+    line-height: $inputLow;
+    font-size: $inputLowFont;
+  }
+  &.high {
+    height: $inputHigh;
+    border-radius: 6px;
+    line-height: $inputHigh;
+    font-size: $inputHighFont;
+  }
+  &.lofty {
+    height: $inputLofty;
+    border-radius: 6px;
+    line-height: $inputLofty;
+    font-size: $inputLoftyFont;
+  }
+
+  &.mini {
+    width: $inputNarrow;
+    min-width: $inputNarrow;
+    height: $inputLower;
+    padding: 0 6px;
+    line-height: $inputLower;
+    font-size: $inputLowerFont;
+  }
+  &.small {
+    width: $inputShort;
+    min-width: $inputShort;
+    height: $inputLow;
+    padding: 0 10px;
+    line-height: $inputLow;
+    font-size: $inputLowFont;
+  }
+  &.large {
+    width: $inputLong;
+    min-width: $inputLong;
+    height: $inputHigh;
+    padding: 0 15px;
+    border-radius: 6px;
+    line-height: $inputHigh;
+    font-size: $inputHighFont;
+  }
+  &.big {
+    width: $inputWide;
+    min-width: $inputWide;
+    height: $inputLofty;
+    padding: 0 15px;
+    border-radius: 6px;
+    line-height: $inputLofty;
+    font-size: $inputLoftyFont;
+  }
 }
 
 /* input class style */
 .input {
   display: inline-block;
+
+  /* State */
+  // size
+  &.narrow {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      min-width: $inputNarrow;
+      width: $inputNarrow;
+    }
+  }
+  &.short {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      min-width: $inputShort;
+      width: $inputShort;
+    }
+  }
+  &.long {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      min-width: $inputLong;
+      width: $inputLong;
+    }
+  }
+  &.wide {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      min-width: $inputWide;
+      width: $inputWide;
+    }
+  }
+  &.free {
+    width: $inputFree;
+
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      min-width: $inputFree;
+      width: $inputFree;
+    }
+  }
+
+  // height
+  &.lower {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      height: $inputLower;
+      line-height: $inputLower;
+      font-size: $inputLowerFont;
+    }
+  }
+  &.low {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      height: $inputLow;
+      line-height: $inputLow;
+      font-size: $inputLowFont;
+    }
+  }
+  &.high {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      height: $inputHigh;
+      border-radius: 6px;
+      line-height: $inputHigh;
+      font-size: $inputHighFont;
+    }
+  }
+  &.lofty {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      height: $inputLofty;
+      border-radius: 6px;
+      line-height: $inputLofty;
+      font-size: $inputLoftyFont;
+    }
+  }
+
+  &.mini {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      width: $inputNarrow;
+      min-width: $inputNarrow;
+      height: $inputLower;
+      padding: 0 6px;
+      line-height: $inputLower;
+      font-size: $inputLowerFont;
+    }
+  }
+  &.small {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      width: $inputShort;
+      min-width: $inputShort;
+      height: $inputLow;
+      padding: 0 10px;
+      line-height: $inputLow;
+      font-size: $inputLowFont;
+    }
+  }
+  &.large {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      width: $inputLong;
+      min-width: $inputLong;
+      height: $inputHigh;
+      padding: 0 15px;
+      border-radius: 6px;
+      line-height: $inputHigh;
+      font-size: $inputHighFont;
+    }
+  }
+  &.big {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      width: $inputWide;
+      min-width: $inputWide;
+      height: $inputLofty;
+      padding: 0 15px;
+      border-radius: 6px;
+      line-height: $inputLofty;
+      font-size: $inputLoftyFont;
+    }
+  }
 }

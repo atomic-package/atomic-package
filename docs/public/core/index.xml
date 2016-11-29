@@ -661,6 +661,173 @@
       <description>
 
 &lt;h2 id=&#34;form-components:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Form Components&lt;/h2&gt;
+
+&lt;h3 id=&#34;input-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Element&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;input-wrapelement:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input WrapElement&lt;/h3&gt;
+
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;input-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Size Variation&lt;/h3&gt;
+
+&lt;h4 id=&#34;width:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width&lt;/h4&gt;
+
+&lt;p&gt;narrow
+&lt;p class=&#34;input narrow&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;12:00&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;short
+&lt;p class=&#34;input short&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;short text&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;default
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;long
+&lt;p class=&#34;input long&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;long size input&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;wide
+&lt;p class=&#34;input wide&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;wide size input&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;free
+&lt;p class=&#34;input free&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;free size input&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;height:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Height&lt;/h4&gt;
+
+&lt;p&gt;lower
+&lt;p class=&#34;input lower&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;low
+&lt;p class=&#34;input low&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;default
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;high
+&lt;p class=&#34;input high&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;lofty
+&lt;p class=&#34;input lofty&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;width-x-height:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width x Height&lt;/h4&gt;
+
+&lt;p&gt;mini
+&lt;p class=&#34;input mini&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;small
+&lt;p class=&#34;input small&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;default
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;large
+&lt;p class=&#34;input large&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;big
+&lt;p class=&#34;input big&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;free
+&lt;p class=&#34;input free&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;layout-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Layout Variation&lt;/h3&gt;
+
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;search&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34; checked&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;input-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Color Variation&lt;/h3&gt;
+
+&lt;h3 class=&#34;title&#34;&gt;ラジオボタン&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
+&lt;input type=&#34;radio&#34; checked&gt;
+&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
+&lt;input type=&#34;radio&#34; checked&gt;
+&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
+&lt;input type=&#34;radio&#34; checked&gt;
+&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
+&lt;input type=&#34;radio&#34; checked&gt;
+&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
+&lt;input type=&#34;radio&#34; checked&gt;
+&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;h3 class=&#34;title&#34;&gt;チェックボックス&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&#34;checkbox&#34;&gt;
+&lt;input type=&#34;checkbox&#34; checked&gt;
+&lt;input type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;h4 class=&#34;title&#34;&gt;チェックボックス カラー&lt;/h4&gt;
+&lt;input type=&#34;checkbox&#34;&gt;
+&lt;input type=&#34;checkbox&#34; checked&gt;
+&lt;input type=&#34;checkbox&#34; disabled checked&gt;
+
+&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34; checked&gt;
+&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34; disabled checked&gt;
+
+&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34; checked&gt;
+&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34; disabled checked&gt;
+
+&lt;input class=&#34;green&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;green&#34; type=&#34;checkbox&#34; checked&gt;
+&lt;input class=&#34;green&#34; type=&#34;checkbox&#34; disabled checked&gt;
+
+&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34; checked&gt;
+&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34; disabled checked&gt;
+
+&lt;input class=&#34;red&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;red&#34; type=&#34;checkbox&#34; checked&gt;
+&lt;input class=&#34;red&#34; type=&#34;checkbox&#34; disabled checked&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;h4 class=&#34;title&#34;&gt;チェックボックス サイズ&lt;/h4&gt;
+
+&lt;p&gt;&lt;input class=&#34;mini&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;small&#34; type=&#34;checkbox&#34;&gt;
+&lt;input type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;large&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;big&#34; type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;p class=&#34;input mini&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input small&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input large&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input big&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;/&gt;
+&lt;input type=&#34;checkbox&#34;/&gt;
+&lt;input type=&#34;search&#34;/&gt;
+&lt;input type=&#34;radio&#34;/&gt;&lt;/p&gt;
+
+&lt;h3 class=&#34;title&#34;&gt;セレクト&lt;/h3&gt;
+
+&lt;p class=&#34;input&#34;&gt;
+    &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+        &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
 </description>
     </item>
     
