@@ -5450,11 +5450,21 @@ input[type="password"] {
   height: 30px;
   padding: 0 12px;
   border-radius: 4px;
+  background: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #555555;
   font-size: 14px;
   /* State */
+}
+
+input[type="text"]:disabled, input[type="text"].disabled,
+input[type="search"]:disabled,
+input[type="search"].disabled,
+input[type="password"]:disabled,
+input[type="password"].disabled {
+  background: #EEEEEE;
+  color: #999999;
 }
 
 input[type="text"].narrow,
@@ -5571,6 +5581,13 @@ input[type="password"].big {
 .input {
   display: inline-block;
   /* State */
+}
+
+.input.disabled input[type="text"],
+.input.disabled input[type="search"],
+.input.disabled input[type="password"] {
+  background: #EEEEEE;
+  color: #999999;
 }
 
 .input.narrow input[type="text"],

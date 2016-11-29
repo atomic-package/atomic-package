@@ -117,11 +117,18 @@ input[type="password"] {
   height: 30px;
   padding: 0 12px;
   border-radius: 4px;
+  background: #fff;
   box-sizing: border-box;
   color: #555555;
   font-size: 14px;
 
   /* State */
+  &:disabled,
+  &.disabled {
+    background: #EEEEEE;
+    color: #999999;
+  }
+
   // size
   &.narrow {
     min-width: $inputNarrow;
@@ -184,6 +191,7 @@ input[type="password"] {
     min-width: $inputLong;
     height: $inputHigh;
     padding: 0 15px;
+
     border-radius: 6px;
     line-height: $inputHigh;
     font-size: $inputHighFont;
@@ -204,6 +212,15 @@ input[type="password"] {
   display: inline-block;
 
   /* State */
+  &.disabled {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      background: #EEEEEE;
+      color: #999999;
+    }
+  }
+
   // size
   &.narrow {
     input[type="text"],

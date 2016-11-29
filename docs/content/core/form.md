@@ -8,10 +8,11 @@ date = "2016-11-14"
 ### Input Element
 
 <input type="text" value="テキスト">
-
+<input type="text" value="テキスト" disabled>
 ### Input WrapElement
 
 <p class="input"><input type="text" value="テキスト"></p>
+<p class="input disabled"><input type="text" value="テキスト"></p>
 
 ### Input Size Variation
 
