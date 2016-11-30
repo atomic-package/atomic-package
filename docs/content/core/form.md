@@ -111,7 +111,7 @@ free
 
 
 
-<h3 class="title">ラジオボタン</h3>
+### Radio Button Element
 
 <input type="radio">
 <input type="radio" checked>
@@ -133,13 +133,14 @@ free
 <input type="radio" checked>
 <input type="radio" disabled checked>
 
-<h3 class="title">チェックボックス</h3>
+### CheckBox Element
 
 <input type="checkbox">
 <input type="checkbox" checked>
 <input type="checkbox" disabled checked>
 
-<h4 class="title">チェックボックス カラー</h4>
+### CheckBox Color Variation
+
 <input type="checkbox">
 <input type="checkbox" checked>
 <input type="checkbox" disabled checked>
@@ -166,13 +167,13 @@ free
 <br/>
 <br/>
 
-<h4 class="title">チェックボックス サイズ</h4>
+### CheckBox Size Variation
 
-<input class="mini" type="checkbox">
-<input class="small" type="checkbox">
-<input type="checkbox">
-<input class="large" type="checkbox">
-<input class="big" type="checkbox">
+<input class="primary mini" type="checkbox">
+<input class="primary small" type="checkbox">
+<input class="primary" type="checkbox">
+<input class="primary large" type="checkbox">
+<input class="primary big" type="checkbox">
 
 <br/>
 <br/>
