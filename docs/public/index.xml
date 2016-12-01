@@ -806,7 +806,7 @@
 
 &lt;h3 id=&#34;input-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Color Variation&lt;/h3&gt;
 
-&lt;h3 class=&#34;title&#34;&gt;ラジオボタン&lt;/h3&gt;
+&lt;h3 id=&#34;radio-button-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Button Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
 &lt;input type=&#34;radio&#34; checked&gt;
@@ -828,46 +828,47 @@
 &lt;input type=&#34;radio&#34; checked&gt;
 &lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;h3 class=&#34;title&#34;&gt;チェックボックス&lt;/h3&gt;
+&lt;h3 id=&#34;checkbox-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;checkbox&#34;&gt;
 &lt;input type=&#34;checkbox&#34; checked&gt;
 &lt;input type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;h4 class=&#34;title&#34;&gt;チェックボックス カラー&lt;/h4&gt;
-&lt;input type=&#34;checkbox&#34;&gt;
+&lt;h3 id=&#34;checkbox-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Color Variation&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&#34;checkbox&#34;&gt;
 &lt;input type=&#34;checkbox&#34; checked&gt;
-&lt;input type=&#34;checkbox&#34; disabled checked&gt;
+&lt;input type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34;&gt;
+&lt;p&gt;&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34;&gt;
 &lt;input class=&#34;primary&#34; type=&#34;checkbox&#34; checked&gt;
-&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34; disabled checked&gt;
+&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34;&gt;
+&lt;p&gt;&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34;&gt;
 &lt;input class=&#34;blue&#34; type=&#34;checkbox&#34; checked&gt;
-&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34; disabled checked&gt;
+&lt;input class=&#34;blue&#34; type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;input class=&#34;green&#34; type=&#34;checkbox&#34;&gt;
+&lt;p&gt;&lt;input class=&#34;green&#34; type=&#34;checkbox&#34;&gt;
 &lt;input class=&#34;green&#34; type=&#34;checkbox&#34; checked&gt;
-&lt;input class=&#34;green&#34; type=&#34;checkbox&#34; disabled checked&gt;
+&lt;input class=&#34;green&#34; type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34;&gt;
+&lt;p&gt;&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34;&gt;
 &lt;input class=&#34;orange&#34; type=&#34;checkbox&#34; checked&gt;
-&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34; disabled checked&gt;
+&lt;input class=&#34;orange&#34; type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;input class=&#34;red&#34; type=&#34;checkbox&#34;&gt;
+&lt;p&gt;&lt;input class=&#34;red&#34; type=&#34;checkbox&#34;&gt;
 &lt;input class=&#34;red&#34; type=&#34;checkbox&#34; checked&gt;
 &lt;input class=&#34;red&#34; type=&#34;checkbox&#34; disabled checked&gt;
 &lt;br/&gt;
-&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
 
-&lt;h4 class=&#34;title&#34;&gt;チェックボックス サイズ&lt;/h4&gt;
+&lt;h3 id=&#34;checkbox-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Size Variation&lt;/h3&gt;
 
-&lt;p&gt;&lt;input class=&#34;mini&#34; type=&#34;checkbox&#34;&gt;
-&lt;input class=&#34;small&#34; type=&#34;checkbox&#34;&gt;
-&lt;input type=&#34;checkbox&#34;&gt;
-&lt;input class=&#34;large&#34; type=&#34;checkbox&#34;&gt;
-&lt;input class=&#34;big&#34; type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input class=&#34;primary mini&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;primary small&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;primary&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;primary large&#34; type=&#34;checkbox&#34;&gt;
+&lt;input class=&#34;primary big&#34; type=&#34;checkbox&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;

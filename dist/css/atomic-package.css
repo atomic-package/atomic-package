@@ -5293,7 +5293,9 @@ input[type="checkbox"] {
   border-radius: 2px;
   border: #DCE4EC 2px solid;
   background: #fff;
+  /* state */
   /* skin */
+  /* size */
 }
 
 input[type="checkbox"]:checked {
@@ -5311,6 +5313,10 @@ input[type="checkbox"]:checked::before {
   border-left: 2px solid #fff;
   border-bottom: 2px solid #fff;
   transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:disabled {
+  opacity: 0.5;
 }
 
 input[type="checkbox"].primary {
@@ -5351,6 +5357,67 @@ input[type="checkbox"].red {
 
 input[type="checkbox"].red:checked {
   background: #E74C3C;
+}
+
+input[type="checkbox"].mini {
+  width: 10px;
+  height: 10px;
+}
+
+input[type="checkbox"].mini:checked::before {
+  width: 5px;
+  height: 2px;
+  top: 1px;
+  left: 1px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+input[type="checkbox"].small {
+  width: 15px;
+  height: 15px;
+}
+
+input[type="checkbox"].small:checked::before {
+  width: 8px;
+  height: 3px;
+  top: 2px;
+  left: 1px;
+}
+
+input[type="checkbox"].large {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+input[type="checkbox"].large:checked::before {
+  width: 18px;
+  height: 8px;
+  top: 9px;
+  left: 7px;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+}
+
+input[type="checkbox"].big {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+input[type="checkbox"].big:checked::before {
+  width: 40px;
+  height: 16px;
+  top: 18px;
+  left: 14px;
+  border-left: 8px solid #fff;
+  border-bottom: 8px solid #fff;
+}
+
+input[type="checkbox"].free {
+  width: 100%;
+  height: 100%;
 }
 
 input[type="radio"] {

@@ -4,6 +4,13 @@
 
 /* Atomic */
 /* checkbox */
+// size (width)
+$checkboxMini: 10px;
+$checkboxSmall: 15px;
+$checkboxLarge: 40px;
+$checkboxBig: 80px;
+$checkboxFree: 100%;
+
 input[type="checkbox"] {
   position: relative;
   width: 20px;
@@ -23,6 +30,11 @@ input[type="checkbox"] {
       border-bottom: 2px solid #fff;
       transform: rotate(-45deg);
     }
+  }
+
+  /* state */
+  &:disabled {
+    opacity: 0.5;
   }
 
   /* skin */
@@ -55,6 +67,68 @@ input[type="checkbox"] {
     &:checked {
       background: #E74C3C;
     }
+  }
+
+  /* size */
+  &.mini {
+    width: $checkboxMini;
+    height: $checkboxMini;
+    &:checked {
+      &::before {
+        width: 5px;
+        height: 2px;
+        top: 1px;
+        left: 1px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  &.small {
+    width: $checkboxSmall;
+    height: $checkboxSmall;
+    &:checked {
+      &::before {
+        width: 8px;
+        height: 3px;
+        top: 2px;
+        left: 1px;
+      }
+    }
+  }
+  &.large {
+    width: $checkboxLarge;
+    height: $checkboxLarge;
+    border-radius: 4px;
+    &:checked {
+      &::before {
+        width: 18px;
+        height: 8px;
+        top: 9px;
+        left: 7px;
+        border-left: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+      }
+    }
+  }
+  &.big {
+    width: $checkboxBig;
+    height: $checkboxBig;
+    border-radius: 8px;
+    &:checked {
+      &::before {
+        width: 40px;
+        height: 16px;
+        top: 18px;
+        left: 14px;
+        border-left: 8px solid #fff;
+        border-bottom: 8px solid #fff;
+      }
+    }
+  }
+  &.free {
+    width: $checkboxFree;
+    height: $checkboxFree;
   }
 }
 
@@ -102,6 +176,7 @@ $inputLow: 22px;
 $inputHigh: 40px;
 $inputLofty: 50px;
 
+// size (font)
 $inputLowerFont: 10px;
 $inputLowFont: 12px;
 $inputHighFont: 16px;
