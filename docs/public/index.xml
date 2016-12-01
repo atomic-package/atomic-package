@@ -795,15 +795,6 @@
 &lt;p&gt;free
 &lt;p class=&#34;input free&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;layout-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Layout Variation&lt;/h3&gt;
-
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;search&#34;&gt;&lt;/p&gt;
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34;&gt;&lt;/p&gt;
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34; checked&gt;&lt;/p&gt;
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
-
 &lt;h3 id=&#34;input-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Color Variation&lt;/h3&gt;
 
 &lt;h3 id=&#34;radio-button-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Button Element&lt;/h3&gt;
@@ -933,6 +924,15 @@
         &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
     &lt;/select&gt;
 &lt;/p&gt;
+
+&lt;h3 id=&#34;layout-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Layout Variation&lt;/h3&gt;
+
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;search&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34; checked&gt;&lt;/p&gt;
+&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
 </description>
     </item>
     

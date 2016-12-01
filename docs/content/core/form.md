@@ -99,14 +99,6 @@ free
 <p class="input free"><input type="text" value="テキスト"></p>
 
 
-### Layout Variation
-<p class="input"><input type="text" value="テキスト"></p>
-<p class="input"><input type="checkbox"></p>
-<p class="input"><input type="search"></p>
-<p class="input"><input type="radio"></p>
-<p class="input"><input type="radio" checked></p>
-<p class="input"><input type="radio" disabled checked></p>
-
 ### Input Color Variation
 
 
@@ -238,4 +230,13 @@ free
         <option value="">5</option>
     </select>
 </p>
+
+
+### Layout Variation
+<p class="input"><input type="text" value="テキスト"></p>
+<p class="input"><input type="checkbox"></p>
+<p class="input"><input type="search"></p>
+<p class="input"><input type="radio"></p>
+<p class="input"><input type="radio" checked></p>
+<p class="input"><input type="radio" disabled checked></p>
 
