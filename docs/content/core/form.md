@@ -98,6 +98,20 @@ big
 free
 <p class="input free"><input type="text" value="テキスト"></p>
 
+### Input Validation Status
+
+Input warning
+<p class="input"><input type="text" value="default text value"></p>
+<input type="text" value="default input">
+
+Input error
+<p class="input"><input type="text" value="default text value"></p>
+<input type="text" value="default input">
+
+Input success
+<p class="input"><input type="text" value="default text value"></p>
+<input type="text" value="default input">
+
 
 ### Input Color Variation
 
