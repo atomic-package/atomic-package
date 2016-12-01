@@ -758,16 +758,16 @@
 &lt;h3 id=&#34;input-validation-status:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Validation Status&lt;/h3&gt;
 
 &lt;p&gt;Input warning
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
-&lt;input type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input orange&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
+&lt;input class=&#34;orange&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Input error
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
-&lt;input type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input red&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
+&lt;input class=&#34;red&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;Input success
-&lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
-&lt;input type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+&lt;p class=&#34;input green&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
+&lt;input class=&#34;green&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;input-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Color Variation&lt;/h3&gt;
 

@@ -101,16 +101,16 @@ free
 ### Input Validation Status
 
 Input warning
-<p class="input"><input type="text" value="default text value"></p>
-<input type="text" value="default input">
+<p class="input orange"><input type="text" value="default text value"></p>
+<input class="orange" type="text" value="default input">
 
 Input error
-<p class="input"><input type="text" value="default text value"></p>
-<input type="text" value="default input">
+<p class="input red"><input type="text" value="default text value"></p>
+<input class="red" type="text" value="default input">
 
 Input success
-<p class="input"><input type="text" value="default text value"></p>
-<input type="text" value="default input">
+<p class="input green"><input type="text" value="default text value"></p>
+<input class="green" type="text" value="default input">
 
 
 ### Input Color Variation

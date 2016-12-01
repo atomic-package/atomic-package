@@ -204,6 +204,24 @@ input[type="password"] {
     color: #999999;
   }
 
+  /* State */
+  // color
+  &.primary {
+    border-color: #2C3D50;
+  }
+  &.green {
+    border-color: #17BC9C;
+  }
+  &.blue {
+    border-color: #1397E1;
+  }
+  &.orange {
+    border-color: #F39C12;
+  }
+  &.red {
+    border-color: #E74C3C;
+  }
+
   // size
   &.narrow {
     min-width: $inputNarrow;
@@ -293,6 +311,44 @@ input[type="password"] {
     input[type="password"] {
       background: #EEEEEE;
       color: #999999;
+    }
+  }
+
+  /* State */
+  // color
+  &.primary {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      border-color: #2C3D50;
+    }
+  }
+  &.green {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      border-color: #17BC9C;
+    }
+  }
+  &.blue {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      border-color: #1397E1;
+    }
+  }
+  &.orange {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      border-color: #F39C12;
+    }
+  }
+  &.red {
+    input[type="text"],
+    input[type="search"],
+    input[type="password"] {
+      border-color: #E74C3C;
     }
   }
 

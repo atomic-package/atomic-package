@@ -5463,6 +5463,7 @@ input[type="password"] {
   color: #555555;
   font-size: 14px;
   /* State */
+  /* State */
 }
 
 input[type="text"]:disabled, input[type="text"].disabled,
@@ -5472,6 +5473,36 @@ input[type="password"]:disabled,
 input[type="password"].disabled {
   background: #EEEEEE;
   color: #999999;
+}
+
+input[type="text"].primary,
+input[type="search"].primary,
+input[type="password"].primary {
+  border-color: #2C3D50;
+}
+
+input[type="text"].green,
+input[type="search"].green,
+input[type="password"].green {
+  border-color: #17BC9C;
+}
+
+input[type="text"].blue,
+input[type="search"].blue,
+input[type="password"].blue {
+  border-color: #1397E1;
+}
+
+input[type="text"].orange,
+input[type="search"].orange,
+input[type="password"].orange {
+  border-color: #F39C12;
+}
+
+input[type="text"].red,
+input[type="search"].red,
+input[type="password"].red {
+  border-color: #E74C3C;
 }
 
 input[type="text"].narrow,
@@ -5588,6 +5619,7 @@ input[type="password"].big {
 .input {
   display: inline-block;
   /* State */
+  /* State */
 }
 
 .input.disabled input[type="text"],
@@ -5595,6 +5627,36 @@ input[type="password"].big {
 .input.disabled input[type="password"] {
   background: #EEEEEE;
   color: #999999;
+}
+
+.input.primary input[type="text"],
+.input.primary input[type="search"],
+.input.primary input[type="password"] {
+  border-color: #2C3D50;
+}
+
+.input.green input[type="text"],
+.input.green input[type="search"],
+.input.green input[type="password"] {
+  border-color: #17BC9C;
+}
+
+.input.blue input[type="text"],
+.input.blue input[type="search"],
+.input.blue input[type="password"] {
+  border-color: #1397E1;
+}
+
+.input.orange input[type="text"],
+.input.orange input[type="search"],
+.input.orange input[type="password"] {
+  border-color: #F39C12;
+}
+
+.input.red input[type="text"],
+.input.red input[type="search"],
+.input.red input[type="password"] {
+  border-color: #E74C3C;
 }
 
 .input.narrow input[type="text"],
