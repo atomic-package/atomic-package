@@ -812,21 +812,39 @@
 &lt;input type=&#34;radio&#34; checked&gt;
 &lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
-&lt;input type=&#34;radio&#34; checked&gt;
+&lt;h3 id=&#34;radio-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Color Variation&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34; name=&#34;radio1&#34;&gt;
+&lt;input type=&#34;radio&#34; name=&#34;radio1&#34; checked&gt;
 &lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
-&lt;input type=&#34;radio&#34; checked&gt;
-&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type=&#34;radio&#34; class=&#34;primary&#34; name=&#34;radio2&#34;&gt;
+&lt;input type=&#34;radio&#34; class=&#34;primary&#34; name=&#34;radio2&#34; checked&gt;
+&lt;input type=&#34;radio&#34; class=&#34;primary&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
-&lt;input type=&#34;radio&#34; checked&gt;
-&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type=&#34;radio&#34; class=&#34;blue&#34; name=&#34;radio3&#34;&gt;
+&lt;input type=&#34;radio&#34; class=&#34;blue&#34; name=&#34;radio3&#34; checked&gt;
+&lt;input type=&#34;radio&#34; class=&#34;blue&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
-&lt;input type=&#34;radio&#34; checked&gt;
-&lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type=&#34;radio&#34; class=&#34;green&#34; name=&#34;radio4&#34;&gt;
+&lt;input type=&#34;radio&#34; class=&#34;green&#34; name=&#34;radio4&#34; checked&gt;
+&lt;input type=&#34;radio&#34; class=&#34;green&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34; class=&#34;orange&#34; name=&#34;radio5&#34;&gt;
+&lt;input type=&#34;radio&#34; class=&#34;orange&#34; name=&#34;radio5&#34; checked&gt;
+&lt;input type=&#34;radio&#34; class=&#34;orange&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34; class=&#34;red&#34; name=&#34;radio6&#34;&gt;
+&lt;input type=&#34;radio&#34; class=&#34;red&#34; name=&#34;radio6&#34; checked&gt;
+&lt;input type=&#34;radio&#34; class=&#34;red&#34; disabled checked&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;radio-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Size Variation&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary mini&#34;&gt;
+&lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary small&#34;&gt;
+&lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary&#34; checked&gt;
+&lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary large&#34;&gt;
+&lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary big&#34;&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;checkbox-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Element&lt;/h3&gt;
 
@@ -884,7 +902,27 @@
 &lt;input type=&#34;search&#34;/&gt;
 &lt;input type=&#34;radio&#34;/&gt;&lt;/p&gt;
 
-&lt;h3 class=&#34;title&#34;&gt;セレクト&lt;/h3&gt;
+&lt;h3 id=&#34;select-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Element&lt;/h3&gt;
+
+&lt;p class=&#34;input&#34;&gt;
+    &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+        &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
+
+&lt;p class=&#34;input&#34;&gt;
+    &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+        &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+        &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
 
 &lt;p class=&#34;input&#34;&gt;
     &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
