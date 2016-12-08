@@ -5424,9 +5424,10 @@ input[type="radio"] {
   position: relative;
   width: 20px;
   height: 20px;
-  border: #1397E1 2px solid;
+  border: #DCE4EC 2px solid;
   border-radius: 10px;
   background: #fff;
+  /* skin */
 }
 
 input[type="radio"]:checked::before {
@@ -5438,11 +5439,51 @@ input[type="radio"]:checked::before {
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background: #1397E1;
+  background: #DCE4EC;
 }
 
 input[type="radio"]:disabled {
   opacity: 0.5;
+}
+
+input[type="radio"].primary {
+  border-color: #2C3D50;
+}
+
+input[type="radio"].primary:checked::before {
+  background: #2C3D50;
+}
+
+input[type="radio"].green {
+  border-color: #17BC9C;
+}
+
+input[type="radio"].green:checked::before {
+  background: #17BC9C;
+}
+
+input[type="radio"].blue {
+  border-color: #1397E1;
+}
+
+input[type="radio"].blue:checked::before {
+  background: #1397E1;
+}
+
+input[type="radio"].orange {
+  border-color: #F39C12;
+}
+
+input[type="radio"].orange:checked::before {
+  background: #F39C12;
+}
+
+input[type="radio"].red {
+  border-color: #E74C3C;
+}
+
+input[type="radio"].red:checked::before {
+  background: #E74C3C;
 }
 
 /*
