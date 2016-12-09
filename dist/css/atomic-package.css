@@ -5420,6 +5420,8 @@ input[type="checkbox"].free {
   height: 100%;
 }
 
+/* Atomic */
+/* radioBtn */
 input[type="radio"] {
   position: relative;
   width: 20px;
@@ -5428,6 +5430,7 @@ input[type="radio"] {
   border-radius: 10px;
   background: #fff;
   /* skin */
+  /* size */
 }
 
 input[type="radio"]:checked::before {
@@ -5484,6 +5487,62 @@ input[type="radio"].red {
 
 input[type="radio"].red:checked::before {
   background: #E74C3C;
+}
+
+input[type="radio"].mini {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+
+input[type="radio"].mini:checked::before {
+  top: 2px;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="radio"].small {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+input[type="radio"].small:checked::before {
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type="radio"].large {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+input[type="radio"].large:checked::before {
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+}
+
+input[type="radio"].big {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+input[type="radio"].big:checked::before {
+  top: 8px;
+  left: 8px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
 }
 
 /*
