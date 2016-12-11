@@ -2349,7 +2349,7 @@
       <guid>http://atomic-package.com/core/pagination/</guid>
       <description>
 
-&lt;h2 id=&#34;pagination:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination&lt;/h2&gt;
+&lt;h2 id=&#34;pagination-components:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination Components&lt;/h2&gt;
 
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList&#34;&gt;
@@ -2374,6 +2374,33 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
+&lt;p&gt;skin square&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;previous &amp;amp; next&lt;/p&gt;
+
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList&#34;&gt;
     &lt;li class=&#34;prev&#34;&gt;
@@ -2396,6 +2423,8 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+
+&lt;p&gt;Icon&lt;/p&gt;
 
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList&#34;&gt;
@@ -2443,144 +2472,9 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
-&lt;h4&gt;ページネーション color&lt;/h4&gt;
+&lt;h3 id=&#34;pagination-size-variation:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination Size Variation&lt;/h3&gt;
 
-&lt;nav class=&#34;pagination&#34;&gt;
-  &lt;ul class=&#34;paginationList&#34;&gt;
-    &lt;li class=&#34;prev&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;next&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;nav class=&#34;pagination&#34;&gt;
-  &lt;ul class=&#34;paginationList primary&#34;&gt;
-    &lt;li class=&#34;prev&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;next&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;nav class=&#34;pagination&#34;&gt;
-  &lt;ul class=&#34;paginationList green&#34;&gt;
-    &lt;li class=&#34;prev&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;next&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;nav class=&#34;pagination&#34;&gt;
-  &lt;ul class=&#34;paginationList blue&#34;&gt;
-    &lt;li class=&#34;prev&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;next&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;nav class=&#34;pagination&#34;&gt;
-  &lt;ul class=&#34;paginationList orange&#34;&gt;
-    &lt;li class=&#34;prev&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;next&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;nav class=&#34;pagination&#34;&gt;
-  &lt;ul class=&#34;paginationList red&#34;&gt;
-    &lt;li class=&#34;prev&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;next&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;h4&gt;ページネーション size&lt;/h4&gt;
+&lt;p&gt;mini&lt;/p&gt;
 
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList mini&#34;&gt;
@@ -2605,6 +2499,8 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
+&lt;p&gt;small&lt;/p&gt;
+
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList small&#34;&gt;
     &lt;li class=&#34;prev&#34;&gt;
@@ -2627,6 +2523,8 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+
+&lt;p&gt;default&lt;/p&gt;
 
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList&#34;&gt;
@@ -2651,6 +2549,8 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
+&lt;p&gt;large&lt;/p&gt;
+
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList large&#34;&gt;
     &lt;li class=&#34;prev&#34;&gt;
@@ -2674,6 +2574,8 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
+&lt;p&gt;big&lt;/p&gt;
+
 &lt;nav class=&#34;pagination&#34;&gt;
   &lt;ul class=&#34;paginationList big&#34;&gt;
     &lt;li class=&#34;prev&#34;&gt;
@@ -2696,6 +2598,568 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+
+&lt;p&gt;個別&lt;/p&gt;
+
+&lt;h3 id=&#34;pagination-size-variation-width:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination  Size Variation Width&lt;/h3&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList&#34;&gt;
+    &lt;li class=&#34;narrow&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;short&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;long&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;wide&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-size-variation-height:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination  Size Variation Height&lt;/h3&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList&#34;&gt;
+    &lt;li class=&#34;lower&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;low&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;high&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;lofty&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-width-x-height:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination Width x Height&lt;/h3&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList&#34;&gt;
+    &lt;li class=&#34;mini&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;small&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;large&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;big&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;pagination-skin-square-components:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination Skin square Components&lt;/h2&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;skin square&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;previous &amp;amp; next&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt; Previous&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;Next &gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;Icon&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;span class=&#34;icon ap-hand-o-left&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;span class=&#34;icon ap-hand-o-right&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;span class=&#34;icon ap-hand-o-left large&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;span class=&#34;icon ap-hand-o-right large&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-square-color-variation:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination square Color Variation&lt;/h3&gt;
+
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;primary&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square primary&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;green&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square green&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;blue&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square blue&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;orange&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square orange&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;red&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square red&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-square-size-variation:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination square Size Variation&lt;/h3&gt;
+
+&lt;p&gt;mini&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square mini&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;small&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square small&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;large&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square large&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;big&lt;/p&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square big&#34;&gt;
+    &lt;li class=&#34;prev&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;個別&lt;/p&gt;
+
+&lt;h3 id=&#34;pagination-square-width:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination square Width&lt;/h3&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;narrow&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;short&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;long&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;wide&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-square-height:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination square Height&lt;/h3&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;lower&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;low&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;high&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;lofty&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-square-width-x-height:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination square Width x Height&lt;/h3&gt;
+
+&lt;nav class=&#34;pagination&#34;&gt;
+  &lt;ul class=&#34;paginationList square&#34;&gt;
+    &lt;li class=&#34;mini&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&lt;&lt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;small&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;large&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;3&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;big&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;4&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;&#34;&gt;&gt;&gt;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 id=&#34;pagination-previous-next:8933c44b45493d40d2007cdf0ce43109&#34;&gt;Pagination Previous &amp;amp; Next&lt;/h3&gt;
+
+&lt;p&gt;rectangle&lt;/p&gt;
+
+&lt;p&gt;round&lt;/p&gt;
 </description>
     </item>
     

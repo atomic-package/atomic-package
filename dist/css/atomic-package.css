@@ -875,9 +875,7 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   display: inline-block;
   min-width: 40px;
   min-height: 40px;
-  border: #EAEAEA 1px solid;
   border-radius: 4px;
-  background: #F9F9F9;
   box-sizing: border-box;
   vertical-align: top;
 }
@@ -897,87 +895,127 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #666;
 }
 
-.paginationList > li.active, .paginationList > li:hover {
-  border-color: #30699B;
-  background: #3598DB;
-}
-
 .paginationList > li.active a, .paginationList > li:hover a {
-  color: #fff;
+  color: #337AB7;
 }
 
 .paginationList > li:not(:first-child), .paginationList > li:not(:last-child) {
   margin: 0 4px;
 }
 
-.paginationList.primary > li {
-  border-color: #243243;
-  background: #2C3D50;
+.paginationList > li.narrow {
+  min-width: 20px;
 }
 
-.paginationList.primary > li a {
-  color: #fff;
+.paginationList > li.narrow a {
+  min-width: 20px;
 }
 
-.paginationList.primary > li.active, .paginationList.primary > li:hover {
-  border-color: #243243;
-  background: #5F6C78;
+.paginationList > li.short {
+  min-width: 30px;
 }
 
-.paginationList.green > li {
-  border-color: #18A68A;
-  background: #17BC9C;
+.paginationList > li.short a {
+  min-width: 30px;
 }
 
-.paginationList.green > li a {
-  color: #fff;
+.paginationList > li.long {
+  min-width: 80px;
 }
 
-.paginationList.green > li.active, .paginationList.green > li:hover {
-  border-color: #18A68A;
-  background: #69D3BF;
+.paginationList > li.long a {
+  min-width: 80px;
 }
 
-.paginationList.blue > li {
-  border-color: #3682B6;
-  background: #3598DB;
+.paginationList > li.wide {
+  min-width: 160px;
 }
 
-.paginationList.blue > li a {
-  color: #fff;
+.paginationList > li.wide a {
+  min-width: 160px;
 }
 
-.paginationList.blue > li.active, .paginationList.blue > li:hover {
-  border-color: #3682B6;
-  background: #7BBCE8;
+.paginationList > li.lower {
+  min-height: 20px;
 }
 
-.paginationList.orange > li {
-  border-color: #CB8618;
-  background: #F39C12;
+.paginationList > li.lower a {
+  min-height: 20px;
+  line-height: 20px;
 }
 
-.paginationList.orange > li a {
-  color: #fff;
+.paginationList > li.low {
+  min-height: 30px;
 }
 
-.paginationList.orange > li.active, .paginationList.orange > li:hover {
-  border-color: #CB8618;
-  background: #F7BF65;
+.paginationList > li.low a {
+  min-height: 30px;
+  line-height: 30px;
 }
 
-.paginationList.red > li {
-  border-color: #DD8177;
-  background: #E74C3C;
+.paginationList > li.high {
+  min-height: 80px;
 }
 
-.paginationList.red > li a {
-  color: #fff;
+.paginationList > li.high a {
+  min-height: 80px;
+  line-height: 80px;
 }
 
-.paginationList.red > li.active, .paginationList.red > li:hover {
-  border-color: #DD8177;
-  background: #EF8B80;
+.paginationList > li.lofty {
+  min-height: 160px;
+}
+
+.paginationList > li.lofty a {
+  min-height: 160px;
+  line-height: 160px;
+}
+
+.paginationList > li.mini {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.paginationList > li.mini a {
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.paginationList > li.small {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.paginationList > li.small a {
+  min-width: 30px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.paginationList > li.large {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.paginationList > li.large a {
+  min-width: 50px;
+  min-height: 50px;
+  line-height: 50px;
+}
+
+.paginationList > li.big {
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.paginationList > li.big a {
+  min-width: 60px;
+  min-height: 60px;
+  line-height: 60px;
+  font-size: 16px;
 }
 
 .paginationList.mini > li {
@@ -1005,26 +1043,110 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 }
 
 .paginationList.large > li {
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 50px;
+  min-height: 50px;
 }
 
 .paginationList.large > li a {
-  min-width: 40px;
-  min-height: 40px;
-  line-height: 40px;
-}
-
-.paginationList.big > li {
-  min-width: 50px;
-  min-height: 50px;
-}
-
-.paginationList.big > li a {
   min-width: 50px;
   min-height: 50px;
   line-height: 50px;
+}
+
+.paginationList.big > li {
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.paginationList.big > li a {
+  min-width: 60px;
+  min-height: 60px;
+  line-height: 60px;
   font-size: 16px;
+}
+
+.paginationList.square > li {
+  border: #EAEAEA 1px solid;
+  background: #F9F9F9;
+}
+
+.paginationList.square > li.active, .paginationList.square > li:hover {
+  border-color: #30699B;
+  background: #3598DB;
+}
+
+.paginationList.square > li.active a, .paginationList.square > li:hover a {
+  color: #fff;
+}
+
+.paginationList.square.primary > li {
+  border-color: #243243;
+  background: #2C3D50;
+}
+
+.paginationList.square.primary > li a {
+  color: #fff;
+}
+
+.paginationList.square.primary > li.active, .paginationList.square.primary > li:hover {
+  border-color: #243243;
+  background: #5F6C78;
+}
+
+.paginationList.square.green > li {
+  border-color: #18A68A;
+  background: #17BC9C;
+}
+
+.paginationList.square.green > li a {
+  color: #fff;
+}
+
+.paginationList.square.green > li.active, .paginationList.square.green > li:hover {
+  border-color: #18A68A;
+  background: #69D3BF;
+}
+
+.paginationList.square.blue > li {
+  border-color: #3682B6;
+  background: #3598DB;
+}
+
+.paginationList.square.blue > li a {
+  color: #fff;
+}
+
+.paginationList.square.blue > li.active, .paginationList.square.blue > li:hover {
+  border-color: #3682B6;
+  background: #7BBCE8;
+}
+
+.paginationList.square.orange > li {
+  border-color: #CB8618;
+  background: #F39C12;
+}
+
+.paginationList.square.orange > li a {
+  color: #fff;
+}
+
+.paginationList.square.orange > li.active, .paginationList.square.orange > li:hover {
+  border-color: #CB8618;
+  background: #F7BF65;
+}
+
+.paginationList.square.red > li {
+  border-color: #DD8177;
+  background: #E74C3C;
+}
+
+.paginationList.square.red > li a {
+  color: #fff;
+}
+
+.paginationList.square.red > li.active, .paginationList.square.red > li:hover {
+  border-color: #DD8177;
+  background: #EF8B80;
 }
 
 /*
