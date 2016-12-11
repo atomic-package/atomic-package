@@ -83,6 +83,75 @@ Icon
 <nav class="pagination">
   <ul class="paginationList">
     <li class="prev">
+      <a href=""><span class="icon ap-arrow-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-arrow-right"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><span class="icon ap-angle-double-left"></span><span class="icon ap-angle-double-left"></span></a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-angle-double-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li class="active">
+      <a href="">2</a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-angle-double-right"></span></a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-angle-double-right"></span><span class="icon ap-angle-double-right"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
+      <a href=""><span class="icon ap-chevron-left"></span><span class="icon ap-chevron-left"></span></a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-chevron-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li class="active">
+      <a href="">2</a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-chevron-right"></span></a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-chevron-right"></span><span class="icon ap-chevron-right"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList">
+    <li class="prev">
       <a href=""><span class="icon ap-hand-o-left"></span></a>
     </li>
     <li>
@@ -406,6 +475,75 @@ previous & next
 </nav>
 
 Icon
+
+<nav class="pagination">
+  <ul class="paginationList square">
+    <li class="prev">
+      <a href=""><span class="icon ap-arrow-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li>
+      <a href="">2</a>
+    </li>
+    <li class="active">
+      <a href="">3</a>
+    </li>
+    <li>
+      <a href="">4</a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-arrow-right"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList square">
+    <li class="prev">
+      <a href=""><span class="icon ap-angle-double-left"></span><span class="icon ap-angle-double-left"></span></a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-angle-double-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li class="active">
+      <a href="">2</a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-angle-double-right"></span></a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-angle-double-right"></span><span class="icon ap-angle-double-right"></span></a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="pagination">
+  <ul class="paginationList square">
+    <li class="prev">
+      <a href=""><span class="icon ap-chevron-left"></span><span class="icon ap-chevron-left"></span></a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-chevron-left"></span></a>
+    </li>
+    <li>
+      <a href="">1</a>
+    </li>
+    <li class="active">
+      <a href="">2</a>
+    </li>
+    <li>
+      <a href=""><span class="icon ap-chevron-right"></span></a>
+    </li>
+    <li class="next">
+      <a href=""><span class="icon ap-chevron-right"></span><span class="icon ap-chevron-right"></span></a>
+    </li>
+  </ul>
+</nav>
 
 <nav class="pagination">
   <ul class="paginationList square">
