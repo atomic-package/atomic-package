@@ -77,14 +77,14 @@
 
 &lt;p&gt;Primary
 &lt;div class=&#34;progress&#34;&gt;
-  &lt;span class=&#34;value primary&#34; style=&#34;width: 10%;&#34;&gt;&lt;/span&gt;
+  &lt;span class=&#34;value primary&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;Green
 &lt;div class=&#34;progress&#34;&gt;
-  &lt;span class=&#34;value green&#34; style=&#34;width: 30%;&#34;&gt;&lt;/span&gt;
+  &lt;span class=&#34;value green&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
@@ -110,16 +110,96 @@
 
 &lt;h3 id=&#34;stacked:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Stacked&lt;/h3&gt;
 
-&lt;div class=&#34;progress&#34;&gt;
+&lt;div class=&#34;progress free&#34;&gt;
   &lt;span class=&#34;value green&#34; style=&#34;width: 30%;&#34;&gt;&lt;/span&gt;
   &lt;span class=&#34;value blue&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&#34;size-variation-width:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width&lt;/h3&gt;
 
+&lt;p&gt;narrow
+&lt;div class=&#34;progress narrow&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;short
+&lt;div class=&#34;progress short&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Default
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;long
+&lt;div class=&#34;progress long&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;wide
+&lt;div class=&#34;progress wide&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;free
+&lt;div class=&#34;progress free&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;size-variation-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - height&lt;/h3&gt;
 
-&lt;h3 id=&#34;size-variation-width-x-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width x height&lt;/h3&gt;
+&lt;p&gt;lower
+&lt;div class=&#34;progress lower&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;low
+&lt;div class=&#34;progress low&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Default
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;high
+&lt;div class=&#34;progress high&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;lofty
+&lt;div class=&#34;progress lofty&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation-width-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width &amp;amp; height&lt;/h3&gt;
+
+&lt;p&gt;mini
+&lt;div class=&#34;progress mini&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;small
+&lt;div class=&#34;progress small&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Default
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;large
+&lt;div class=&#34;progress large&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;big
+&lt;div class=&#34;progress big&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     

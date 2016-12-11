@@ -658,10 +658,12 @@ img.thumbnail.free.round {
  * Progress Bar Style
 */
 .progress {
+  max-width: 500px;
   height: 10px;
   border-radius: 5px;
   background: #ECF0F1;
   overflow: hidden;
+  /* State */
 }
 
 .progress::after {
@@ -698,6 +700,62 @@ img.thumbnail.free.round {
 
 .progress .value.red {
   background: #E74C3C;
+}
+
+.progress.mini {
+  max-width: 100px;
+  height: 3px;
+}
+
+.progress.small {
+  max-width: 250px;
+  height: 5px;
+}
+
+.progress.large {
+  max-width: 750px;
+  height: 20px;
+}
+
+.progress.big {
+  max-width: 900px;
+  height: 40px;
+}
+
+.progress.narrow {
+  max-width: 100px;
+}
+
+.progress.short {
+  max-width: 250px;
+}
+
+.progress.long {
+  max-width: 750px;
+}
+
+.progress.wide {
+  max-width: 900px;
+}
+
+.progress.free {
+  min-width: 100%;
+}
+
+.progress.lower {
+  height: 3px;
+}
+
+.progress.low {
+  height: 5px;
+}
+
+.progress.high {
+  height: 20px;
+}
+
+.progress.lofty {
+  height: 40px;
 }
 
 /* Title Style

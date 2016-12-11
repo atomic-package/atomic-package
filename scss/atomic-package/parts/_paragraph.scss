@@ -370,6 +370,7 @@ img.thumbnail {
 */
 .progress {
   @include clearfix;
+  max-width: 500px;
   height: 10px;
   border-radius: 5px;
   background: #ECF0F1;
@@ -402,5 +403,55 @@ img.thumbnail {
     &.red {
       background: #E74C3C;
     }
+  }
+
+  /* State */
+  // size
+  &.mini {
+    max-width: 100px;
+    height: 3px;
+  }
+  &.small {
+    max-width: 250px;
+    height: 5px;
+  }
+  &.large {
+    max-width: 750px;
+    height: 20px;
+  }
+  &.big {
+    max-width: 900px;
+    height: 40px;
+  }
+
+  // width
+  &.narrow {
+    max-width: 100px;
+  }
+  &.short {
+    max-width: 250px;
+  }
+  &.long {
+    max-width: 750px;
+  }
+  &.wide {
+    max-width: 900px;
+  }
+  &.free {
+    min-width: 100%;
+  }
+
+  // height
+  &.lower {
+    height: 3px;
+  }
+  &.low {
+    height: 5px;
+  }
+  &.high {
+    height: 20px;
+  }
+  &.lofty {
+    height: 40px;
   }
 }
