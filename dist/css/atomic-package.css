@@ -656,6 +656,12 @@ img.thumbnail.free.round {
   overflow: hidden;
 }
 
+.progress::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .progress .value {
   float: left;
   height: 100%;

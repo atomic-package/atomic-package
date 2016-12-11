@@ -369,10 +369,12 @@ img.thumbnail {
  * Progress Bar Style
 */
 .progress {
+  @include clearfix;
   height: 10px;
   border-radius: 5px;
   background: #ECF0F1;
   overflow: hidden;
+
   .value {
     float: left;
     height: 100%;
