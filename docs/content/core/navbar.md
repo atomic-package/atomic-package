@@ -67,3 +67,118 @@ date = "2016-11-14"
     </ul>
   </div>
 </nav>
+
+<nav class="menu">
+  <ul class="menuList">
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+  </ul>
+</nav>
+
+<br/>
+<br/>
+<h4>ナビバー サイズ</h4>
+<nav class="navBar mini">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar small">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar large">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar big">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<h4>ナビバー カラー</h4>
+<nav class="navBar">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar primary">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar green">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar blue">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar orange">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+<nav class="navBar red">
+  <ul class="navBarList">
+    <li class="active"><a href="">Active</a></li>
+    <li><a href="">Item</a></li>
+    <li><a href="">Item</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
