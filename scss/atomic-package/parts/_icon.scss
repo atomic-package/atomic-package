@@ -6,6 +6,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
+  border: #D9D9D9 1px solid;
   border-radius: 20px;
   background: $colorDefault;
   box-sizing: border-box;
@@ -837,10 +838,11 @@
   &.mini {
     width: 20px;
     height: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     .icon {
       font-size: 10px;
-      line-height: 20px;
+      line-height: 18px;
+      vertical-align: top;
     }
   }
   &.small {
@@ -848,7 +850,8 @@
     height: 30px;
     border-radius: 15px;
     .icon {
-      line-height: 30px;
+      line-height: 28px;
+      vertical-align: top;
     }
   }
   &.large {
@@ -857,7 +860,7 @@
     border-radius: 30px;
     .icon {
       font-size: 24px;
-      line-height: 60px;
+      line-height: 58px;
     }
   }
   &.big {
@@ -866,12 +869,13 @@
     border-radius: 40px;
     .icon {
       font-size: 32px;
-      line-height: 80px;
+      line-height: 78px;
     }
   }
 
   // skin
   &.primary {
+    border-color: $colorBorderPrimary;
     background: $colorPrimary;
     color: #fff;
     &:hover {
@@ -884,6 +888,7 @@
   }
 
   &.green {
+    border-color: $colorBorderGreen;
     background: $colorGreen;
     color: #fff;
     &:hover {
@@ -896,6 +901,7 @@
   }
 
   &.blue {
+    border-color: $colorBorderBlue;
     background: $colorBlue;
     color: #fff;
     &:hover {
@@ -908,6 +914,7 @@
   }
 
   &.orange {
+    border-color: $colorBorderOrange;
     background: $colorOrange;
     color: #fff;
     &:hover {
@@ -920,6 +927,7 @@
   }
 
   &.red {
+    border-color: $colorBorderRed;
     background: $colorRed;
     color: #fff;
     &:hover {

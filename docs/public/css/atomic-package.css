@@ -2441,6 +2441,7 @@ input.btn.lofty {
   display: inline-block;
   width: 40px;
   height: 40px;
+  border: #D9D9D9 1px solid;
   border-radius: 20px;
   background: #F9F9F9;
   -webkit-box-sizing: border-box;
@@ -5067,6 +5068,7 @@ input.btn.lofty {
   display: inline-block;
   width: 40px;
   height: 40px;
+  border: #D9D9D9 1px solid;
   border-radius: 20px;
   background: #F9F9F9;
   -webkit-box-sizing: border-box;
@@ -5091,12 +5093,13 @@ input.btn.lofty {
 .iconBtn.mini {
   width: 20px;
   height: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .iconBtn.mini .icon {
   font-size: 10px;
-  line-height: 20px;
+  line-height: 18px;
+  vertical-align: top;
 }
 
 .iconBtn.small {
@@ -5106,7 +5109,8 @@ input.btn.lofty {
 }
 
 .iconBtn.small .icon {
-  line-height: 30px;
+  line-height: 28px;
+  vertical-align: top;
 }
 
 .iconBtn.large {
@@ -5117,7 +5121,7 @@ input.btn.lofty {
 
 .iconBtn.large .icon {
   font-size: 24px;
-  line-height: 60px;
+  line-height: 58px;
 }
 
 .iconBtn.big {
@@ -5128,10 +5132,11 @@ input.btn.lofty {
 
 .iconBtn.big .icon {
   font-size: 32px;
-  line-height: 80px;
+  line-height: 78px;
 }
 
 .iconBtn.primary {
+  border-color: #243243;
   background: #2C3D50;
   color: #fff;
 }
@@ -5145,6 +5150,7 @@ input.btn.lofty {
 }
 
 .iconBtn.green {
+  border-color: #18A68A;
   background: #17BC9C;
   color: #fff;
 }
@@ -5158,6 +5164,7 @@ input.btn.lofty {
 }
 
 .iconBtn.blue {
+  border-color: #3682B6;
   background: #3598DB;
   color: #fff;
 }
@@ -5171,6 +5178,7 @@ input.btn.lofty {
 }
 
 .iconBtn.orange {
+  border-color: #CB8618;
   background: #F39C12;
   color: #fff;
 }
@@ -5184,6 +5192,7 @@ input.btn.lofty {
 }
 
 .iconBtn.red {
+  border-color: #DD8177;
   background: #E74C3C;
   color: #fff;
 }
