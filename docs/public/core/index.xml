@@ -66,6 +66,60 @@
       <description>
 
 &lt;h2 id=&#34;progressbar-components:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Progressbar Components&lt;/h2&gt;
+
+&lt;p&gt;Default&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;color-variation:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Color Variation&lt;/h3&gt;
+
+&lt;p&gt;Primary
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value primary&#34; style=&#34;width: 10%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Green
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value green&#34; style=&#34;width: 30%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Blue
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value blue&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Orange
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Red
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value red&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;stacked:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Stacked&lt;/h3&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value green&#34; style=&#34;width: 30%;&#34;&gt;&lt;/span&gt;
+  &lt;span class=&#34;value blue&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;size-variation-width:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width&lt;/h3&gt;
+
+&lt;h3 id=&#34;size-variation-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - height&lt;/h3&gt;
+
+&lt;h3 id=&#34;size-variation-width-x-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width x height&lt;/h3&gt;
 </description>
     </item>
     

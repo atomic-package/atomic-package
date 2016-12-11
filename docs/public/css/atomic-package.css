@@ -654,6 +654,46 @@ img.thumbnail.free.round {
   text-align: center;
 }
 
+/*
+ * Progress Bar Style
+*/
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background: #ECF0F1;
+  overflow: hidden;
+}
+
+.progress .value {
+  float: left;
+  height: 100%;
+  background: #3498DB;
+  line-height: 10px;
+  -webkit-transition: width .6s ease;
+  transition: width .6s ease;
+  /* Skin */
+}
+
+.progress .value.primary {
+  background: #2C3E50;
+}
+
+.progress .value.green {
+  background: #18BC9C;
+}
+
+.progress .value.blue {
+  background: #3498DB;
+}
+
+.progress .value.orange {
+  background: #F39C12;
+}
+
+.progress .value.red {
+  background: #E74C3C;
+}
+
 /* Title Style
 -------------------------------------------------- */
 /*

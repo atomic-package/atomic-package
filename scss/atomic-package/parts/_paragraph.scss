@@ -364,3 +364,41 @@ img.thumbnail {
 .picture {
   text-align: center;
 }
+
+/*
+ * Progress Bar Style
+*/
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background: #ECF0F1;
+  overflow: hidden;
+  .value {
+    float: left;
+    height: 100%;
+    background: #3498DB;
+    line-height: 10px;
+    transition: width .6s ease;
+
+    /* Skin */
+    &.primary {
+      background: #2C3E50;
+    }
+
+    &.green {
+      background: #18BC9C;
+    }
+
+    &.blue {
+      background: #3498DB;
+    }
+
+    &.orange {
+      background: #F39C12;
+    }
+
+    &.red {
+      background: #E74C3C;
+    }
+  }
+}
