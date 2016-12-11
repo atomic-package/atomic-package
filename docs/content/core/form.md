@@ -98,14 +98,20 @@ big
 free
 <p class="input free"><input type="text" value="テキスト"></p>
 
+### Input Validation Status
 
-### Layout Variation
-<p class="input"><input type="text" value="テキスト"></p>
-<p class="input"><input type="checkbox"></p>
-<p class="input"><input type="search"></p>
-<p class="input"><input type="radio"></p>
-<p class="input"><input type="radio" checked></p>
-<p class="input"><input type="radio" disabled checked></p>
+Input warning
+<p class="input orange"><input type="text" value="default text value"></p>
+<input class="orange" type="text" value="default input">
+
+Input error
+<p class="input red"><input type="text" value="default text value"></p>
+<input class="red" type="text" value="default input">
+
+Input success
+<p class="input green"><input type="text" value="default text value"></p>
+<input class="green" type="text" value="default input">
+
 
 ### Input Color Variation
 
@@ -117,21 +123,39 @@ free
 <input type="radio" checked>
 <input type="radio" disabled checked>
 
-<input type="radio">
-<input type="radio" checked>
+### Radio Color Variation
+
+<input type="radio" name="radio1">
+<input type="radio" name="radio1" checked>
 <input type="radio" disabled checked>
 
-<input type="radio">
-<input type="radio" checked>
-<input type="radio" disabled checked>
+<input type="radio" class="primary" name="radio2">
+<input type="radio" class="primary" name="radio2" checked>
+<input type="radio" class="primary" disabled checked>
 
-<input type="radio">
-<input type="radio" checked>
-<input type="radio" disabled checked>
+<input type="radio" class="blue" name="radio3">
+<input type="radio" class="blue" name="radio3" checked>
+<input type="radio" class="blue" disabled checked>
 
-<input type="radio">
-<input type="radio" checked>
-<input type="radio" disabled checked>
+<input type="radio" class="green" name="radio4">
+<input type="radio" class="green" name="radio4" checked>
+<input type="radio" class="green" disabled checked>
+
+<input type="radio" class="orange" name="radio5">
+<input type="radio" class="orange" name="radio5" checked>
+<input type="radio" class="orange" disabled checked>
+
+<input type="radio" class="red" name="radio6">
+<input type="radio" class="red" name="radio6" checked>
+<input type="radio" class="red" disabled checked>
+
+### Radio Size Variation
+
+<input type="radio" name="radio-size" class="primary mini">
+<input type="radio" name="radio-size" class="primary small">
+<input type="radio" name="radio-size" class="primary" checked>
+<input type="radio" name="radio-size" class="primary large">
+<input type="radio" name="radio-size" class="primary big">
 
 ### CheckBox Element
 
@@ -189,7 +213,7 @@ free
 <input type="search"/>
 <input type="radio"/>
 
-<h3 class="title">セレクト</h3>
+### Select Element
 
 <p class="input">
     <select name="" id="">
@@ -200,3 +224,33 @@ free
         <option value="">5</option>
     </select>
 </p>
+
+<p class="input">
+    <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+    </select>
+</p>
+
+<p class="input">
+    <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+    </select>
+</p>
+
+
+### Layout Variation
+<p class="input"><input type="text" value="テキスト"></p>
+<p class="input"><input type="checkbox"></p>
+<p class="input"><input type="search"></p>
+<p class="input"><input type="radio"></p>
+<p class="input"><input type="radio" checked></p>
+<p class="input"><input type="radio" disabled checked></p>
+
