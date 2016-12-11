@@ -3,8 +3,38 @@
   
   <url>
     <loc>http://atomic-package.com/</loc>
-    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://atomic-package.com/core/animation/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://atomic-package.com/core/footer/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://atomic-package.com/core/header/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://atomic-package.com/core/overlay/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://atomic-package.com/core/progressbars/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://atomic-package.com/core/thumbnav/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -168,31 +198,7 @@
   </url>
   
   <url>
-    <loc>http://atomic-package.com/core/animation/</loc>
-  </url>
-  
-  <url>
     <loc>http://atomic-package.com/core/column/</loc>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/core/footer/</loc>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/core/header/</loc>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/core/overlay/</loc>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/core/progressbars/</loc>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/core/thumbnav/</loc>
   </url>
   
   <url>
