@@ -11,7 +11,9 @@
   }
 
   &.docs {
-    margin-left: $docsSideBarWidth;
+    float: left;
+    width: $docsSiteContentWidth - $docsSideBarWidth;
+    //margin-left: $docsSideBarWidth;
 
     > h2 {
       margin-bottom: 20px;

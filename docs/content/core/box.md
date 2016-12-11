@@ -6,3 +6,22 @@ date = "2016-11-14"
 ## Box Components
 
 
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+
+<div class="thumbnailBox">
+    <p class="thumbnail"><img src="" alt=""/></p>
+    <div class="details"></div>
+</div>
+
+<div class="userBox">
+    <p class="thumbnail"><img src="" alt=""/></p>
+    <div class="details"></div>
+</div>
+
+<div class="searchBox">
+    <p class="input"><input type="search"/></p>
+    <p class="btn"><a href="">検索</a></p>
+</div>

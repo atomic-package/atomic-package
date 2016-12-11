@@ -5,9 +5,6 @@ date = "2016-11-14"
 
 ## Nav
 
-<nav class="navBar">
-</nav>
-
 <nav class="menu">
   <ul class="menuList">
     <li>

@@ -75,7 +75,8 @@
 }
 
 .contents.docs {
-  margin-left: 230px;
+  float: left;
+  width: 870px;
 }
 
 .contents.docs > h2 {

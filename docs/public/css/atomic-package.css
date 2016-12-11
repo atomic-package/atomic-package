@@ -1463,6 +1463,7 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 }
 
 .navBar {
+  position: relative;
   background: #f7f7f7;
   color: #666;
   border: 1px solid rgba(0, 0, 0, 0.1);
