@@ -594,3 +594,90 @@ input[type="password"] {
     }
   }
 }
+
+/*
+ * Select Style
+*/
+select {
+  /* State */
+  // size width
+  &.narrow {
+    min-width: 45px;
+    background-position: 85% center;
+  }
+  &.short {
+    min-width: 75px;
+    background-position: 85% center;
+  }
+  &.long {
+    min-width: 300px;
+  }
+  &.wide {
+    min-width: 450px;
+  }
+
+  &.free {
+    width: 100%;
+    background-position: 98% center;
+  }
+
+  // size height
+  &.lower {
+    height: 15px;
+    border-radius: 4px;
+    font-size: 10px;
+    line-height: 15px;
+    background-size: 5px auto;
+  }
+  &.low {
+    height: 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &.high {
+    height: 45px;
+    background-size: 10px auto;
+    line-height: 45px;
+    font-size: 16px;
+  }
+  &.lofty {
+    height: 60px;
+    background-size: 12px auto;
+    line-height: 60px;
+    font-size: 18px;
+  }
+
+  // size width x height
+  &.mini {
+    min-width: 45px;
+    height: 15px;
+    border-radius: 4px;
+    background-position: 85% center;
+    font-size: 10px;
+    line-height: 15px;
+    background-size: 5px auto;
+  }
+  &.small {
+    min-width: 75px;
+    height: 20px;
+    border-radius: 4px;
+    background-position: 85% center;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &.large {
+    min-width: 300px;
+    height: 45px;
+    background-size: 10px auto;
+    line-height: 45px;
+    font-size: 16px;
+  }
+  &.big {
+    min-width: 450px;
+    height: 60px;
+    background-size: 12px auto;
+    line-height: 60px;
+    font-size: 18px;
+  }
+}

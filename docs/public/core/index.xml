@@ -771,6 +771,18 @@
 
 &lt;h3 id=&#34;input-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Color Variation&lt;/h3&gt;
 
+&lt;p&gt;Input warning
+&lt;p class=&#34;input orange&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
+&lt;input class=&#34;orange&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Input error
+&lt;p class=&#34;input red&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
+&lt;input class=&#34;red&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Input success
+&lt;p class=&#34;input green&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
+&lt;input class=&#34;green&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;radio-button-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Button Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
@@ -869,6 +881,16 @@
 
 &lt;h3 id=&#34;select-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Element&lt;/h3&gt;
 
+&lt;p&gt;&lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;select-wrapelement:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select WrapElement&lt;/h3&gt;
+
 &lt;p class=&#34;input&#34;&gt;
     &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
         &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
@@ -878,6 +900,70 @@
         &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
     &lt;/select&gt;
 &lt;/p&gt;
+
+&lt;h3 id=&#34;select-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Size Variation&lt;/h3&gt;
+
+&lt;h4 id=&#34;width-1:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width&lt;/h4&gt;
+
+&lt;p&gt;narrow&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;narrow&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;10&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;20&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;30&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;40&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;50&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;short&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;short&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;p&gt;&lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;long&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;long&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;wide&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;wide&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;free&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;free&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
 
 &lt;p class=&#34;input&#34;&gt;
     &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
@@ -898,6 +984,122 @@
         &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
     &lt;/select&gt;
 &lt;/p&gt;
+
+&lt;h4 id=&#34;height-1:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Height&lt;/h4&gt;
+
+&lt;p&gt;lower&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;lower&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;low&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;low&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;p&gt;&lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;high&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;high&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;lofty&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;lofty&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;width-x-height-1:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width x Height&lt;/h4&gt;
+
+&lt;p&gt;mini&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;mini&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;small&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;small&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;p&gt;&lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;large&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;large&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;big&lt;/p&gt;
+
+&lt;p&gt;&lt;select class=&#34;big&#34; name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;free&lt;/p&gt;
+
+&lt;p&gt;&lt;select name=&#34;&#34; id=&#34;&#34;&gt;
+    &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;2&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;3&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;4&lt;/option&gt;
+    &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;select-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Color Variation&lt;/h3&gt;
 
 &lt;h3 id=&#34;layout-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Layout Variation&lt;/h3&gt;
 
