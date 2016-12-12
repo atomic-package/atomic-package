@@ -742,7 +742,8 @@ Place vector icons anywhere using an icon font.
 <br/>
 <br/>
 
-<h5 class="title">アイコン カラー</h5>
+### Icon Color Variation
+
 <p class="icon ap-lastfm"></p>
 <p class="icon ap-lastfm-square primary"></p>
 <p class="icon ap-toggle-off green"></p>
@@ -753,7 +754,7 @@ Place vector icons anywhere using an icon font.
 <br/>
 <br/>
 
-<h5 class="title">アイコン サイズ</h5>
+### Icon Size Variation
 
 <p class="icon ap-lastfm mini"></p>
 <p class="icon ap-lastfm-square primary"></p>
@@ -773,12 +774,12 @@ Place vector icons anywhere using an icon font.
 <p class="icon ap-bicycle orange x4"></p>
 <p class="icon ap-bus red x5"></p>
 
-<h2 class="title">アイコンボタン</h2>
+## Icon Button Components
 
 <br/>
 <br/>
 
-<h5 class="title">アイコンボタン (p要素)</h5>
+### Icon Button P Element
 <p class="iconBtn"><span class="icon ap-low-vision"></span></p>
 <p class="iconBtn primary"><span class="icon ap-snapchat"></span></p>
 <p class="iconBtn green"><span class="icon ap-hourglass"></span></p>
@@ -789,7 +790,7 @@ Place vector icons anywhere using an icon font.
 <br/>
 <br/>
 
-<h5 class="title">アイコンボタン (a要素)</h5>
+### Icon Button A Element
 <a href="#" class="iconBtn"><span class="icon ap-low-vision"></span></a>
 <a href="#" class="iconBtn primary"><span class="icon ap-snapchat"></span></a>
 <a href="#" class="iconBtn green"><span class="icon ap-hourglass"></span></a>
@@ -800,7 +801,8 @@ Place vector icons anywhere using an icon font.
 <br/>
 <br/>
 
-<h5 class="title">アイコンボタン (a wrap要素)</h5>
+### Icon Button Wrap Element
+
 <p class="iconBtn"><a href="#"><span class="icon ap-low-vision"></span></a></p>
 <p class="iconBtn primary"><a href="#"><span class="icon ap-snapchat"></span></a></p>
 <p class="iconBtn green"><a href="#"><span class="icon ap-hourglass"></span></a></p>
@@ -814,7 +816,8 @@ Place vector icons anywhere using an icon font.
 <br/>
 <br/>
 
-<h5 class="title">アイコンボタン サイズ</h5>
+### Icon Button Size Variation
+
 <p class="iconBtn mini"><span class="icon ap-low-vision"></span></p>
 <p class="iconBtn primary small"><span class="icon ap-snapchat"></span></p>
 <p class="iconBtn green"><span class="icon ap-hourglass"></span></p>

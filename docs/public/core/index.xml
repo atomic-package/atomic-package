@@ -2097,7 +2097,8 @@
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h5 class=&#34;title&#34;&gt;アイコン カラー&lt;/h5&gt;
+&lt;h3 id=&#34;icon-color-variation:7983a58e607f45087e0647251389c051&#34;&gt;Icon Color Variation&lt;/h3&gt;
+
 &lt;p class=&#34;icon ap-lastfm&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-lastfm-square primary&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-toggle-off green&#34;&gt;&lt;/p&gt;
@@ -2105,10 +2106,10 @@
 &lt;p class=&#34;icon ap-bicycle orange&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-bus red&#34;&gt;&lt;/p&gt;
 
-&lt;br/&gt;
-&lt;br/&gt;
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
 
-&lt;h5 class=&#34;title&#34;&gt;アイコン サイズ&lt;/h5&gt;
+&lt;h3 id=&#34;icon-size-variation:7983a58e607f45087e0647251389c051&#34;&gt;Icon Size Variation&lt;/h3&gt;
 
 &lt;p class=&#34;icon ap-lastfm mini&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-lastfm-square primary&#34;&gt;&lt;/p&gt;
@@ -2127,24 +2128,26 @@
 &lt;p class=&#34;icon ap-bicycle orange x4&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-bus red x5&#34;&gt;&lt;/p&gt;
 
-&lt;h2 class=&#34;title&#34;&gt;アイコンボタン&lt;/h2&gt;
+&lt;h2 id=&#34;icon-button-components:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button Components&lt;/h2&gt;
 
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h5 class=&#34;title&#34;&gt;アイコンボタン (p要素)&lt;/h5&gt;
+&lt;h3 id=&#34;icon-button-p-element:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button P Element&lt;/h3&gt;
+
 &lt;p class=&#34;iconBtn&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn primary&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn green&#34;&gt;&lt;span class=&#34;icon ap-hourglass&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn blue&#34;&gt;&lt;span class=&#34;icon ap-twitter&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn orange&#34;&gt;&lt;span class=&#34;icon ap-viadeo&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;iconBtn red&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;iconBtn red&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h5 class=&#34;title&#34;&gt;アイコンボタン (a要素)&lt;/h5&gt;
-&lt;a href=&#34;#&#34; class=&#34;iconBtn&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;h3 id=&#34;icon-button-a-element:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button A Element&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;#&#34; class=&#34;iconBtn&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;a href=&#34;#&#34; class=&#34;iconBtn primary&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;a href=&#34;#&#34; class=&#34;iconBtn green&#34;&gt;&lt;span class=&#34;icon ap-hourglass&#34;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;a href=&#34;#&#34; class=&#34;iconBtn blue&#34;&gt;&lt;span class=&#34;icon ap-twitter&#34;&gt;&lt;/span&gt;&lt;/a&gt;
@@ -2154,26 +2157,28 @@
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h5 class=&#34;title&#34;&gt;アイコンボタン (a wrap要素)&lt;/h5&gt;
+&lt;h3 id=&#34;icon-button-wrap-element:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button Wrap Element&lt;/h3&gt;
+
 &lt;p class=&#34;iconBtn&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn primary&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn green&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-hourglass&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn blue&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-twitter&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn orange&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-viadeo&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class=&#34;iconBtn red&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;iconBtn red&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h5 class=&#34;title&#34;&gt;アイコンボタン サイズ&lt;/h5&gt;
+&lt;h3 id=&#34;icon-button-size-variation:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button Size Variation&lt;/h3&gt;
+
 &lt;p class=&#34;iconBtn mini&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn primary small&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn green&#34;&gt;&lt;span class=&#34;icon ap-hourglass&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn blue large&#34;&gt;&lt;span class=&#34;icon ap-twitter&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn orange big&#34;&gt;&lt;span class=&#34;icon ap-viadeo&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;iconBtn red big&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;iconBtn red big&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
