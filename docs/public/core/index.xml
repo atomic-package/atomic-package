@@ -1365,7 +1365,7 @@
 
 &lt;h2 id=&#34;icon-mapping:7983a58e607f45087e0647251389c051&#34;&gt;Icon mapping&lt;/h2&gt;
 
-&lt;ul&gt;
+&lt;ul class=&#34;docsIconList&#34;&gt;
   &lt;li&gt;&lt;p class=&#34;icon ap-glass&#34;&gt;&lt;/p&gt; glass&lt;/li&gt;
   &lt;li&gt;&lt;p class=&#34;icon ap-music&#34;&gt;&lt;/p&gt; music&lt;/li&gt;
   &lt;li&gt;&lt;p class=&#34;icon ap-search&#34;&gt;&lt;/p&gt; search&lt;/li&gt;

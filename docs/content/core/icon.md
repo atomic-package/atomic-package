@@ -8,7 +8,7 @@ Place vector icons anywhere using an icon font.
 
 
 ## Icon mapping
-<ul>
+<ul class="docsIconList">
   <li><p class="icon ap-glass"></p> glass</li>
   <li><p class="icon ap-music"></p> music</li>
   <li><p class="icon ap-search"></p> search</li>
