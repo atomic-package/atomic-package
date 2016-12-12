@@ -165,6 +165,18 @@ select {
   line-height: 30px;
 }
 
+::-moz-selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}
+
 /***
  ** Atomic Parts Contents
   - Bg Style

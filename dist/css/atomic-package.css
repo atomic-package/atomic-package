@@ -159,6 +159,12 @@ select {
   line-height: 30px;
 }
 
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}
+
 /***
  ** Atomic Parts Contents
   - Bg Style

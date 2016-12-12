@@ -38,3 +38,9 @@ select {
   font-size: 14px;
   line-height: 30px;
 }
+
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}
