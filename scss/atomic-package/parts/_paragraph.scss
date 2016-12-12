@@ -368,40 +368,111 @@ img.thumbnail {
 /*
  * Progress Bar Style
 */
+// color
+$progressPrimaryColor: #2C3E50;
+$progressGreenColor: #5CB85C;
+$progressBlueColor: #5BC0DE;
+$progressOrangeColor: #F0AD4E;
+$progressRedColor: #E74C3C;
+
+// Striped Color
+$progressStripedColor: #247ad0;
+$progressStripedPrimaryColor: #121921;
+$progressStripedGreenColor: #0b9f78;
+$progressStripedBlueColor: #247ad0;
+$progressStripedOrangeColor: #ef7f0c;
+$progressStripedRedColor: #e0352a;
+
+// size
+$progressDefaultWidth: 500px;
+$progressDefaultHeight: 10px;
+
+$progressStripedBGSize: 15px;
+
+@mixin progress-striped($color, $size) {
+  background-image: linear-gradient(45deg,
+    $color 10%,
+    transparent 10%,
+    transparent 50%,
+    $color 50%,
+    $color 60%,
+    transparent 60%,
+    transparent);
+  background-size: $size 150%;
+}
+
+@mixin progress-striped-size($size) {
+  &.primary {
+    @include progress-striped($progressStripedPrimaryColor, $size);
+  }
+  &.green {
+    @include progress-striped($progressStripedGreenColor, $size);
+  }
+  &.blue {
+    @include progress-striped($progressStripedBlueColor, $size);
+  }
+  &.orange {
+    @include progress-striped($progressStripedOrangeColor, $size);
+  }
+  &.red {
+    @include progress-striped($progressStripedRedColor, $size);
+  }
+}
+
 .progress {
   @include clearfix;
-  max-width: 500px;
-  height: 10px;
-  border-radius: 5px;
+  max-width: $progressDefaultWidth;
+  height: $progressDefaultHeight;
+  border-radius: $progressDefaultHeight / 2;
   background: #ECF0F1;
   overflow: hidden;
 
   .value {
     float: left;
     height: 100%;
-    background: #3498DB;
-    line-height: 10px;
+    background-color: #327AB7;
+    line-height: $progressDefaultHeight;
     transition: width .6s ease;
+
+    &.striped {
+      @include progress-striped($progressStripedColor, $progressDefaultHeight * 1.5);
+      background-repeat: repeat-x;
+    }
 
     /* Skin */
     &.primary {
-      background: #2C3E50;
+      background-color: $progressPrimaryColor;
+      &.striped {
+        @include progress-striped($progressStripedPrimaryColor, $progressDefaultHeight * 1.5);
+      }
     }
 
     &.green {
-      background: #18BC9C;
+      background-color: $progressGreenColor;
+      &.striped {
+        @include progress-striped($progressStripedGreenColor, $progressDefaultHeight * 1.5);
+      }
     }
 
     &.blue {
-      background: #3498DB;
+      background-color: $progressBlueColor;
+      &.striped {
+        @include progress-striped($progressStripedBlueColor, $progressDefaultHeight * 1.5);
+      }
     }
 
     &.orange {
-      background: #F39C12;
+      background-color: $progressOrangeColor;
+      &.striped {
+        @include progress-striped($progressStripedOrangeColor, $progressDefaultHeight * 1.5);
+      }
     }
 
     &.red {
-      background: #E74C3C;
+      background-color: $progressRedColor;
+      &.striped {
+        @include progress-striped($progressStripedRedColor, $progressDefaultHeight * 1.5);
+      }
     }
   }
 
@@ -410,18 +481,30 @@ img.thumbnail {
   &.mini {
     max-width: 100px;
     height: 3px;
+    .value.striped {
+      @include progress-striped-size(6px);
+    }
   }
   &.small {
     max-width: 250px;
     height: 5px;
+    .value.striped {
+      @include progress-striped-size(10px);
+    }
   }
   &.large {
     max-width: 750px;
     height: 20px;
+    .value.striped {
+      @include progress-striped-size(40px);
+    }
   }
   &.big {
     max-width: 900px;
     height: 40px;
+    .value.striped {
+      @include progress-striped-size(80px);
+    }
   }
 
   // width
@@ -444,14 +527,26 @@ img.thumbnail {
   // height
   &.lower {
     height: 3px;
+    .value.striped {
+      @include progress-striped-size(6px);
+    }
   }
   &.low {
     height: 5px;
+    .value.striped {
+      @include progress-striped-size(10px);
+    }
   }
   &.high {
     height: 20px;
+    .value.striped {
+      @include progress-striped-size(40px);
+    }
   }
   &.lofty {
     height: 40px;
+    .value.striped {
+      @include progress-striped-size(80px);
+    }
   }
 }

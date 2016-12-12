@@ -200,6 +200,102 @@
 &lt;div class=&#34;progress big&#34;&gt;
   &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;striped:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Striped&lt;/h3&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value striped&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value primary striped&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value green striped&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value blue striped&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value red striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;striped-size-variation:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Striped Size Variation&lt;/h3&gt;
+
+&lt;div class=&#34;progress mini&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress small&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress large&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress big&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;striped-size-variation-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Striped Size Variation Height&lt;/h3&gt;
+
+&lt;div class=&#34;progress lower&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress low&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress high&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress lofty&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
 </description>
     </item>
     

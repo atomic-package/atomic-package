@@ -673,30 +673,61 @@ img.thumbnail.free.round {
 .progress .value {
   float: left;
   height: 100%;
-  background: #3498DB;
+  background-color: #327AB7;
   line-height: 10px;
   transition: width .6s ease;
   /* Skin */
 }
 
+.progress .value.striped {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 15px 150%;
+  background-repeat: repeat-x;
+}
+
 .progress .value.primary {
-  background: #2C3E50;
+  background-color: #2C3E50;
+}
+
+.progress .value.primary.striped {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 15px 150%;
 }
 
 .progress .value.green {
-  background: #18BC9C;
+  background-color: #5CB85C;
+}
+
+.progress .value.green.striped {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 15px 150%;
 }
 
 .progress .value.blue {
-  background: #3498DB;
+  background-color: #5BC0DE;
+}
+
+.progress .value.blue.striped {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 15px 150%;
 }
 
 .progress .value.orange {
-  background: #F39C12;
+  background-color: #F0AD4E;
+}
+
+.progress .value.orange.striped {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 15px 150%;
 }
 
 .progress .value.red {
-  background: #E74C3C;
+  background-color: #E74C3C;
+}
+
+.progress .value.red.striped {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 15px 150%;
 }
 
 .progress.mini {
@@ -704,9 +735,59 @@ img.thumbnail.free.round {
   height: 3px;
 }
 
+.progress.mini .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.mini .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.mini .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.mini .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.mini .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
 .progress.small {
   max-width: 250px;
   height: 5px;
+}
+
+.progress.small .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.small .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.small .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.small .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.small .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
 }
 
 .progress.large {
@@ -714,9 +795,59 @@ img.thumbnail.free.round {
   height: 20px;
 }
 
+.progress.large .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.large .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.large .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.large .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.large .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
 .progress.big {
   max-width: 900px;
   height: 40px;
+}
+
+.progress.big .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.big .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.big .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.big .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.big .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
 }
 
 .progress.narrow {
@@ -743,16 +874,116 @@ img.thumbnail.free.round {
   height: 3px;
 }
 
+.progress.lower .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.lower .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.lower .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.lower .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
+.progress.lower .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 6px 150%;
+}
+
 .progress.low {
   height: 5px;
+}
+
+.progress.low .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.low .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.low .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.low .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
+}
+
+.progress.low .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 10px 150%;
 }
 
 .progress.high {
   height: 20px;
 }
 
+.progress.high .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.high .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.high .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.high .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
+.progress.high .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 40px 150%;
+}
+
 .progress.lofty {
   height: 40px;
+}
+
+.progress.lofty .value.striped.primary {
+  background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.lofty .value.striped.green {
+  background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.lofty .value.striped.blue {
+  background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.lofty .value.striped.orange {
+  background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
+}
+
+.progress.lofty .value.striped.red {
+  background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
+  background-size: 80px 150%;
 }
 
 /* Title Style

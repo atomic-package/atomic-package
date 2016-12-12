@@ -138,3 +138,98 @@ big
   <span class="value" style="width: 50%;"></span>
 </div>
 
+### Striped
+
+<div class="progress">
+  <span class="value striped" style="width: 50%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value primary striped" style="width: 70%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value green striped" style="width: 70%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value blue striped" style="width: 50%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value red striped" style="width: 60%;"></span>
+</div>
+
+### Striped Size Variation
+
+<div class="progress mini">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress small">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress large">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress big">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+### Striped Size Variation Height
+
+<div class="progress lower">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress low">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress high">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
+
+<br>
+
+<div class="progress lofty">
+  <span class="value orange striped" style="width: 60%;"></span>
+</div>
