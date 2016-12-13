@@ -753,6 +753,7 @@
 
 &lt;h3 id=&#34;breadcrumb-color-variation:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Color Variation&lt;/h3&gt;
 
+&lt;p&gt;default
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -768,8 +769,9 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;
+&lt;/nav&gt;&lt;/p&gt;
 
+&lt;p&gt;primary
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -785,8 +787,9 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;
+&lt;/nav&gt;&lt;/p&gt;
 
+&lt;p&gt;green
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -802,8 +805,9 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;
+&lt;/nav&gt;&lt;/p&gt;
 
+&lt;p&gt;blue
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -819,8 +823,9 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;
+&lt;/nav&gt;&lt;/p&gt;
 
+&lt;p&gt;orange
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -836,7 +841,25 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;
+&lt;/nav&gt;&lt;/p&gt;
+
+&lt;p&gt;red
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;breadcrumb-size-variation:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Size Variation&lt;/h3&gt;
 
