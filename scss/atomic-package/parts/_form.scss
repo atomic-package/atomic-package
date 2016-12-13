@@ -16,10 +16,10 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 2px;
-  border: #DCE4EC 2px solid;
-  background: #fff;
+  border: #D9D9D9 2px solid;
+  background: #F9F9F9;
   &:checked {
-    background: #DCE4EC;
+    background: #D8D8D8;
     &::before {
       @include createStyle;
       width: 10px;
@@ -40,30 +40,35 @@ input[type="checkbox"] {
   /* skin */
   &.primary {
     border: #2C3D50 2px solid;
+    background: #fff;
     &:checked {
       background: #2C3D50;
     }
   }
   &.green {
     border: #17BC9C 2px solid;
+    background: #fff;
     &:checked {
       background: #17BC9C;
     }
   }
   &.blue {
     border: #1397E1 2px solid;
+    background: #fff;
     &:checked {
       background: #1397E1;
     }
   }
   &.orange {
     border: #F39C12 2px solid;
+    background: #fff;
     &:checked {
       background: #F39C12;
     }
   }
   &.red {
     border: #E74C3C 2px solid;
+    background: #fff;
     &:checked {
       background: #E74C3C;
     }
