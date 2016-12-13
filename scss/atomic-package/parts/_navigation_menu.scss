@@ -786,3 +786,57 @@ $navLofty: 50px;
     }
   }
 }
+
+/*
+ * breadcrumb
+*/
+.breadcrumb {
+
+}
+
+.breadcrumbList {
+  > li {
+    display: inline-block;
+
+    & + li {
+      &::before {
+        display: inline-block;
+        content: "/";
+        margin: 0 5px;
+        color: #CCCCCD;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+
+    &.active {
+      color: #77777E;
+      a {
+        color: #77777E;
+      }
+    }
+
+    &.disable {
+      pointer-events: none;
+      a {
+        color: #999999;
+      }
+    }
+  }
+
+  // state size
+  &.mini {
+    font-size: 10px;
+  }
+  &.small {
+    font-size: 12px;
+  }
+  &.large {
+    font-size: 16px;
+  }
+  &.big {
+    font-size: 20px;
+  }
+
+}

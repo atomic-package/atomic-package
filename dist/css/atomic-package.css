@@ -1894,6 +1894,56 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   color: #fff;
 }
 
+/*
+ * breadcrumb
+*/
+.breadcrumbList > li {
+  display: inline-block;
+}
+
+.breadcrumbList > li + li::before {
+  display: inline-block;
+  content: "/";
+  margin: 0 5px;
+  color: #CCCCCD;
+}
+
+.breadcrumbList > li a {
+  text-decoration: none;
+}
+
+.breadcrumbList > li.active {
+  color: #77777E;
+}
+
+.breadcrumbList > li.active a {
+  color: #77777E;
+}
+
+.breadcrumbList > li.disable {
+  pointer-events: none;
+}
+
+.breadcrumbList > li.disable a {
+  color: #999999;
+}
+
+.breadcrumbList.mini {
+  font-size: 10px;
+}
+
+.breadcrumbList.small {
+  font-size: 12px;
+}
+
+.breadcrumbList.large {
+  font-size: 16px;
+}
+
+.breadcrumbList.big {
+  font-size: 20px;
+}
+
 /* Button Style
 -------------------------------------------------- */
 /*

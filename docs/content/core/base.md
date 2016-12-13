@@ -52,6 +52,54 @@ date = "2016-11-14"
 </table>
 </div>
 
+### Parts Color CSS Class
+<div>
+<table class="table">
+  <caption>Atomic Parts Color</caption>
+  <thead>
+      <tr>
+        <th>Skin Name</th>
+        <th>Semantic Name</th>
+        <th>Details</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>default</td>
+      <td>default</td>
+      <td>通常のカラー。付与クラスなし</td>
+    </tr>
+    <tr>
+      <td>primary</td>
+      <td>primary</td>
+      <td>メインカラークラス</td>
+    </tr>
+    <tr>
+      <td>green</td>
+      <td>success</td>
+      <td>グリーンカラークラス。成功の表現</td>
+    </tr>
+    <tr>
+      <td>blue</td>
+      <td>info</td>
+      <td>ブルーカラークラス。</td>
+    </tr>
+    <tr>
+      <td>orange</td>
+      <td>warnig</td>
+      <td>オレンジカラークラス。</td>
+    </tr>
+    <tr>
+      <td>red</td>
+      <td>error</td>
+      <td>レッドカラークラス。</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 ### Ruled Line
 罫線を表す `hr` 要素には、デフォルトのスタイルが定義されています。
 
