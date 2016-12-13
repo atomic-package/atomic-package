@@ -350,14 +350,14 @@
       <guid>http://atomic-package.com/core/badge/</guid>
       <description>
 
-&lt;h2 id=&#34;badge:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge&lt;/h2&gt;
+&lt;h2 id=&#34;badge-components:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Components&lt;/h2&gt;
 
-&lt;p&gt;&lt;h2 class=&#34;title&#34;&gt;バッジ&lt;/h2&gt;
 &lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
 &lt;p class=&#34;badge&#34;&gt;New&lt;/p&gt;
-&lt;p class=&#34;badge&#34;&gt;Free&lt;/p&gt;&lt;/p&gt;
+&lt;p class=&#34;badge&#34;&gt;Free&lt;/p&gt;
 
-&lt;h5 class=&#34;title&#34;&gt;バッジ notification&lt;/h5&gt;
+&lt;h3 id=&#34;badge-notification:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Notification&lt;/h3&gt;
+
 &lt;p class=&#34;notification&#34;&gt;1&lt;/p&gt;
 &lt;p class=&#34;notification&#34;&gt;10&lt;/p&gt;
 &lt;p class=&#34;notification&#34;&gt;100&lt;/p&gt;
@@ -366,7 +366,7 @@
 &lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
 &lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
 
-&lt;h5 class=&#34;title&#34;&gt;バッジ color&lt;/h5&gt;
+&lt;h3 id=&#34;badge-color-variation:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Color Variation&lt;/h3&gt;
 
 &lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
 &lt;p class=&#34;badge primary&#34;&gt;New&lt;/p&gt;
@@ -382,7 +382,7 @@
 &lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
 &lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
 
-&lt;h5 class=&#34;title&#34;&gt;バッジ size&lt;/h5&gt;
+&lt;h3 id=&#34;badge-size-variation:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Size Variation&lt;/h3&gt;
 
 &lt;p class=&#34;badge primary mini&#34;&gt;Info&lt;/p&gt;
 &lt;p class=&#34;badge primary small&#34;&gt;New&lt;/p&gt;

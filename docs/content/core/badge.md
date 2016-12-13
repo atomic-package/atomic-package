@@ -3,14 +3,14 @@ title = "Badge Component"
 date = "2016-11-14"
 +++
 
-## Badge
+## Badge Components
 
-<h2 class="title">バッジ</h2>
 <p class="badge">Info</p>
 <p class="badge">New</p>
 <p class="badge">Free</p>
 
-<h5 class="title">バッジ notification</h5>
+### Badge Notification
+
 <p class="notification">1</p>
 <p class="notification">10</p>
 <p class="notification">100</p>
@@ -19,7 +19,7 @@ date = "2016-11-14"
 <p class="badge round red">10</p>
 <p class="badge round red">100</p>
 
-<h5 class="title">バッジ color</h5>
+### Badge Color Variation
 
 <p class="badge">Info</p>
 <p class="badge primary">New</p>
@@ -35,7 +35,7 @@ date = "2016-11-14"
 <p class="badge round red">10</p>
 <p class="badge round red">100</p>
 
-<h5 class="title">バッジ size</h5>
+### Badge Size Variation
 
 <p class="badge primary mini">Info</p>
 <p class="badge primary small">New</p>
