@@ -863,6 +863,29 @@
 &lt;div class=&#34;dropdown&#34;&gt;
     &lt;a class=&#34;btn red wide&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&#34;button-group:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Group&lt;/h2&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;Button&lt;/a&gt;&lt;!--
+    --&gt;&lt;button class=&#34;btn orange&#34; value=&#34;&#34;&gt;Button&lt;/button&gt;&lt;!--
+    --&gt;&lt;input class=&#34;btn red&#34; type=&#34;submit&#34; value=&#34;Button&#34;/&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -2295,6 +2318,54 @@
 &lt;p class=&#34;iconBtn blue large&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-twitter&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn orange big&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-viadeo&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn red big&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-television&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-components:7983a58e607f45087e0647251389c051&#34;&gt;Badge Components&lt;/h3&gt;
+
+&lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
+&lt;p class=&#34;badge&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge&#34;&gt;Free&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-notification:7983a58e607f45087e0647251389c051&#34;&gt;Badge Notification&lt;/h3&gt;
+
+&lt;p class=&#34;notification&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;notification&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;notification&#34;&gt;100&lt;/p&gt;
+
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-color-variation:7983a58e607f45087e0647251389c051&#34;&gt;Badge Color Variation&lt;/h3&gt;
+
+&lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
+&lt;p class=&#34;badge primary&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge blue&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge green&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge orange&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge red&#34;&gt;Free&lt;/p&gt;
+
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-size-variation:7983a58e607f45087e0647251389c051&#34;&gt;Badge Size Variation&lt;/h3&gt;
+
+&lt;p class=&#34;badge primary mini&#34;&gt;Info&lt;/p&gt;
+&lt;p class=&#34;badge primary small&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge blue&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge green large&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge orange big&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge red&#34;&gt;Free&lt;/p&gt;
+
+&lt;p class=&#34;badge round red mini&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red small&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red large&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red big&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
 </description>
     </item>
     

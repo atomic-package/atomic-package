@@ -891,6 +891,29 @@
 &lt;div class=&#34;dropdown&#34;&gt;
     &lt;a class=&#34;btn red wide&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&#34;button-group:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Group&lt;/h2&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;Button&lt;/a&gt;&lt;!--
+    --&gt;&lt;button class=&#34;btn orange&#34; value=&#34;&#34;&gt;Button&lt;/button&gt;&lt;!--
+    --&gt;&lt;input class=&#34;btn red&#34; type=&#34;submit&#34; value=&#34;Button&#34;/&gt;
+&lt;/div&gt;
 </description>
     </item>
     

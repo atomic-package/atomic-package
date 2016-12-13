@@ -153,3 +153,24 @@ date = "2016-11-14"
     <a class="btn red wide" href="">DropDown</a>
 </div>
 
+## Button Group
+<div class="btnGroup">
+    <p class="btn"><a href="">Default</a></p><!--
+    --><p class="btn"><a href="">Default</a></p><!--
+    --><p class="btn"><a href="">Default</a></p><!--
+    --><p class="btn"><a href="">Default</a></p><!--
+    --><p class="btn"><a href="">Default</a></p><!--
+    --><p class="btn"><a href="">Default</a></p>
+</div>
+
+<div class="btnGroup">
+    <p class="btn primary"><a href="">Primary</a></p><!--
+    --><p class="btn primary"><a href="">Primary</a></p><!--
+    --><p class="btn primary"><a href="">Primary</a></p>
+</div>
+
+<div class="btnGroup">
+    <a class="btn red" href="">Button</a><!--
+    --><button class="btn orange" value="">Button</button><!--
+    --><input class="btn red" type="submit" value="Button"/>
+</div>
