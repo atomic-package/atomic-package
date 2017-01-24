@@ -114,7 +114,7 @@ gulp.task('ts', function () {
       .pipe(plumber())
       .pipe(typescript({
         removeComments: true,
-        module: 'commonjs',
+        module: 'system',
         out: 'atomic-package.js'
       }))
       .pipe(gulp.dest(RELEASE_DIR + '/js/'));
