@@ -397,7 +397,8 @@ $progressStripedBGSize: 15px;
     $color 50%,
     $color 60%,
     transparent 60%,
-    transparent);
+    transparent
+  );
   background-size: $size 150%;
 }
 
@@ -496,14 +497,14 @@ $progressStripedBGSize: 15px;
     max-width: 750px;
     height: 20px;
     .value.striped {
-      @include progress-striped-size(40px);
+      @include progress-striped-size(28px);
     }
   }
   &.big {
     max-width: 900px;
     height: 40px;
     .value.striped {
-      @include progress-striped-size(80px);
+      @include progress-striped-size(58px);
     }
   }
 

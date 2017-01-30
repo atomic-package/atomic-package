@@ -845,36 +845,36 @@ img.thumbnail.free.round {
 .progress.large .value.striped.primary {
   background-image: -webkit-linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
-  -webkit-background-size: 40px 150%;
-  background-size: 40px 150%;
+  -webkit-background-size: 28px 150%;
+  background-size: 28px 150%;
 }
 
 .progress.large .value.striped.green {
   background-image: -webkit-linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
-  -webkit-background-size: 40px 150%;
-  background-size: 40px 150%;
+  -webkit-background-size: 28px 150%;
+  background-size: 28px 150%;
 }
 
 .progress.large .value.striped.blue {
   background-image: -webkit-linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
-  -webkit-background-size: 40px 150%;
-  background-size: 40px 150%;
+  -webkit-background-size: 28px 150%;
+  background-size: 28px 150%;
 }
 
 .progress.large .value.striped.orange {
   background-image: -webkit-linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
-  -webkit-background-size: 40px 150%;
-  background-size: 40px 150%;
+  -webkit-background-size: 28px 150%;
+  background-size: 28px 150%;
 }
 
 .progress.large .value.striped.red {
   background-image: -webkit-linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
-  -webkit-background-size: 40px 150%;
-  background-size: 40px 150%;
+  -webkit-background-size: 28px 150%;
+  background-size: 28px 150%;
 }
 
 .progress.big {
@@ -885,36 +885,36 @@ img.thumbnail.free.round {
 .progress.big .value.striped.primary {
   background-image: -webkit-linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #121921 10%, transparent 10%, transparent 50%, #121921 50%, #121921 60%, transparent 60%, transparent);
-  -webkit-background-size: 80px 150%;
-  background-size: 80px 150%;
+  -webkit-background-size: 58px 150%;
+  background-size: 58px 150%;
 }
 
 .progress.big .value.striped.green {
   background-image: -webkit-linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #0b9f78 10%, transparent 10%, transparent 50%, #0b9f78 50%, #0b9f78 60%, transparent 60%, transparent);
-  -webkit-background-size: 80px 150%;
-  background-size: 80px 150%;
+  -webkit-background-size: 58px 150%;
+  background-size: 58px 150%;
 }
 
 .progress.big .value.striped.blue {
   background-image: -webkit-linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #247ad0 10%, transparent 10%, transparent 50%, #247ad0 50%, #247ad0 60%, transparent 60%, transparent);
-  -webkit-background-size: 80px 150%;
-  background-size: 80px 150%;
+  -webkit-background-size: 58px 150%;
+  background-size: 58px 150%;
 }
 
 .progress.big .value.striped.orange {
   background-image: -webkit-linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #ef7f0c 10%, transparent 10%, transparent 50%, #ef7f0c 50%, #ef7f0c 60%, transparent 60%, transparent);
-  -webkit-background-size: 80px 150%;
-  background-size: 80px 150%;
+  -webkit-background-size: 58px 150%;
+  background-size: 58px 150%;
 }
 
 .progress.big .value.striped.red {
   background-image: -webkit-linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
   background-image: linear-gradient(45deg, #e0352a 10%, transparent 10%, transparent 50%, #e0352a 50%, #e0352a 60%, transparent 60%, transparent);
-  -webkit-background-size: 80px 150%;
-  background-size: 80px 150%;
+  -webkit-background-size: 58px 150%;
+  background-size: 58px 150%;
 }
 
 .progress.narrow {

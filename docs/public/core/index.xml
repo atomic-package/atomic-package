@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cores on Atomic-Package</title>
-    <link>http://atomic-package.com/core/</link>
-    <description>Recent content in Cores on Atomic-Package</description>
+    <title>Core-rsses on Atomic-Package</title>
+    <link>http://atomic-package.com/core/index.xml</link>
+    <description>Recent content in Core-rsses on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 12 Dec 2016 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <guid>http://atomic-package.com/core/animation/</guid>
       <description>
 
-&lt;h2 id=&#34;animation-components:638faa6eceb0ca22e2601cc873c6c5dc&#34;&gt;Animation Components&lt;/h2&gt;
+&lt;h2 id=&#34;animation-components&#34;&gt;Animation Components&lt;/h2&gt;
 </description>
     </item>
     
@@ -29,7 +29,7 @@
       <guid>http://atomic-package.com/core/footer/</guid>
       <description>
 
-&lt;h2 id=&#34;footer-components:b88206c9a05a97b8527e1f5cd9a8bba4&#34;&gt;Footer Components&lt;/h2&gt;
+&lt;h2 id=&#34;footer-components&#34;&gt;Footer Components&lt;/h2&gt;
 </description>
     </item>
     
@@ -41,7 +41,7 @@
       <guid>http://atomic-package.com/core/header/</guid>
       <description>
 
-&lt;h2 id=&#34;header-components:af893786e80fb00641ba3d6c2156f19e&#34;&gt;Header Components&lt;/h2&gt;
+&lt;h2 id=&#34;header-components&#34;&gt;Header Components&lt;/h2&gt;
 </description>
     </item>
     
@@ -53,7 +53,7 @@
       <guid>http://atomic-package.com/core/overlay/</guid>
       <description>
 
-&lt;h2 id=&#34;overlay-components:5d70ddc174079974ae63194a02a7883f&#34;&gt;Overlay Components&lt;/h2&gt;
+&lt;h2 id=&#34;overlay-components&#34;&gt;Overlay Components&lt;/h2&gt;
 </description>
     </item>
     
@@ -65,7 +65,7 @@
       <guid>http://atomic-package.com/core/progressbars/</guid>
       <description>
 
-&lt;h2 id=&#34;progressbar-components:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Progressbar Components&lt;/h2&gt;
+&lt;h2 id=&#34;progressbar-components&#34;&gt;Progressbar Components&lt;/h2&gt;
 
 &lt;p&gt;Default&lt;/p&gt;
 
@@ -73,7 +73,7 @@
   &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;color-variation:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h3&gt;
 
 &lt;p&gt;Primary
 &lt;div class=&#34;progress&#34;&gt;
@@ -108,14 +108,14 @@
   &lt;span class=&#34;value red&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;stacked:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Stacked&lt;/h3&gt;
+&lt;h3 id=&#34;stacked&#34;&gt;Stacked&lt;/h3&gt;
 
 &lt;div class=&#34;progress free&#34;&gt;
   &lt;span class=&#34;value green&#34; style=&#34;width: 30%;&#34;&gt;&lt;/span&gt;
   &lt;span class=&#34;value blue&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;size-variation-width:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-width&#34;&gt;Size Variation - width&lt;/h3&gt;
 
 &lt;p&gt;narrow
 &lt;div class=&#34;progress narrow&#34;&gt;
@@ -147,7 +147,7 @@
   &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;size-variation-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - height&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-height&#34;&gt;Size Variation - height&lt;/h3&gt;
 
 &lt;p&gt;lower
 &lt;div class=&#34;progress lower&#34;&gt;
@@ -174,7 +174,7 @@
   &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;size-variation-width-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Size Variation - width &amp;amp; height&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-width-height&#34;&gt;Size Variation - width &amp;amp; height&lt;/h3&gt;
 
 &lt;p&gt;mini
 &lt;div class=&#34;progress mini&#34;&gt;
@@ -201,7 +201,7 @@
   &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;striped:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Striped&lt;/h3&gt;
+&lt;h3 id=&#34;striped&#34;&gt;Striped&lt;/h3&gt;
 
 &lt;div class=&#34;progress&#34;&gt;
   &lt;span class=&#34;value striped&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
@@ -237,7 +237,7 @@
   &lt;span class=&#34;value red striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;striped-size-variation:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Striped Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;striped-size-variation&#34;&gt;Striped Size Variation&lt;/h3&gt;
 
 &lt;div class=&#34;progress mini&#34;&gt;
   &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
@@ -267,7 +267,7 @@
   &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;striped-size-variation-height:bf8aca9f3094e42c73b2996a0b76cd12&#34;&gt;Striped Size Variation Height&lt;/h3&gt;
+&lt;h3 id=&#34;striped-size-variation-height&#34;&gt;Striped Size Variation Height&lt;/h3&gt;
 
 &lt;div class=&#34;progress lower&#34;&gt;
   &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
@@ -307,7 +307,7 @@
       <guid>http://atomic-package.com/core/thumbnav/</guid>
       <description>
 
-&lt;h2 id=&#34;thumbnail-navigation-components:9808c5a6dabfa6f6985143678c1ea281&#34;&gt;Thumbnail Navigation Components&lt;/h2&gt;
+&lt;h2 id=&#34;thumbnail-navigation-components&#34;&gt;Thumbnail Navigation Components&lt;/h2&gt;
 </description>
     </item>
     
@@ -319,7 +319,7 @@
       <guid>http://atomic-package.com/core/alert/</guid>
       <description>
 
-&lt;h2 id=&#34;alert:734124af65ffeefa2d69100579af4838&#34;&gt;Alert&lt;/h2&gt;
+&lt;h2 id=&#34;alert&#34;&gt;Alert&lt;/h2&gt;
 
 &lt;p class=&#34;alert&#34;&gt;アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言&lt;/p&gt;
 &lt;p class=&#34;alert green&#34;&gt;アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言&lt;/p&gt;
@@ -336,13 +336,13 @@
       <guid>http://atomic-package.com/core/badge/</guid>
       <description>
 
-&lt;h2 id=&#34;badge-components:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Components&lt;/h2&gt;
+&lt;h2 id=&#34;badge-components&#34;&gt;Badge Components&lt;/h2&gt;
 
 &lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
 &lt;p class=&#34;badge&#34;&gt;New&lt;/p&gt;
 &lt;p class=&#34;badge&#34;&gt;Free&lt;/p&gt;
 
-&lt;h3 id=&#34;badge-notification:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Notification&lt;/h3&gt;
+&lt;h3 id=&#34;badge-notification&#34;&gt;Badge Notification&lt;/h3&gt;
 
 &lt;p class=&#34;notification&#34;&gt;1&lt;/p&gt;
 &lt;p class=&#34;notification&#34;&gt;10&lt;/p&gt;
@@ -352,7 +352,7 @@
 &lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
 &lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
 
-&lt;h3 id=&#34;badge-color-variation:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;badge-color-variation&#34;&gt;Badge Color Variation&lt;/h3&gt;
 
 &lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
 &lt;p class=&#34;badge primary&#34;&gt;New&lt;/p&gt;
@@ -368,7 +368,7 @@
 &lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
 &lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
 
-&lt;h3 id=&#34;badge-size-variation:fb0e08df98a209ccc2cd347937aeb649&#34;&gt;Badge Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;badge-size-variation&#34;&gt;Badge Size Variation&lt;/h3&gt;
 
 &lt;p class=&#34;badge primary mini&#34;&gt;Info&lt;/p&gt;
 &lt;p class=&#34;badge primary small&#34;&gt;New&lt;/p&gt;
@@ -394,9 +394,9 @@
       <guid>http://atomic-package.com/core/base/</guid>
       <description>
 
-&lt;h2 id=&#34;base:64cc054abc204c1c6b285a865764db92&#34;&gt;Base&lt;/h2&gt;
+&lt;h2 id=&#34;base&#34;&gt;Base&lt;/h2&gt;
 
-&lt;h3 id=&#34;parts-size-css-class:64cc054abc204c1c6b285a865764db92&#34;&gt;Parts Size CSS Class&lt;/h3&gt;
+&lt;h3 id=&#34;parts-size-css-class&#34;&gt;Parts Size CSS Class&lt;/h3&gt;
 
 &lt;div&gt;
 &lt;table class=&#34;table&#34;&gt;
@@ -443,7 +443,7 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;parts-color-css-class:64cc054abc204c1c6b285a865764db92&#34;&gt;Parts Color CSS Class&lt;/h3&gt;
+&lt;h3 id=&#34;parts-color-css-class&#34;&gt;Parts Color CSS Class&lt;/h3&gt;
 
 &lt;div&gt;
 &lt;table class=&#34;table&#34;&gt;
@@ -490,7 +490,7 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;ruled-line:64cc054abc204c1c6b285a865764db92&#34;&gt;Ruled Line&lt;/h3&gt;
+&lt;h3 id=&#34;ruled-line&#34;&gt;Ruled Line&lt;/h3&gt;
 
 &lt;p&gt;罫線を表す &lt;code&gt;hr&lt;/code&gt; 要素には、デフォルトのスタイルが定義されています。&lt;/p&gt;
 
@@ -504,7 +504,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;lt;hr&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;double:64cc054abc204c1c6b285a865764db92&#34;&gt;Double&lt;/h4&gt;
+&lt;h4 id=&#34;double&#34;&gt;Double&lt;/h4&gt;
 
 &lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;box article example&#34;&gt;
@@ -516,7 +516,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;double&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;dotted:64cc054abc204c1c6b285a865764db92&#34;&gt;Dotted&lt;/h4&gt;
+&lt;h4 id=&#34;dotted&#34;&gt;Dotted&lt;/h4&gt;
 
 &lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;box article example&#34;&gt;
@@ -528,7 +528,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;dotted&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;dashed:64cc054abc204c1c6b285a865764db92&#34;&gt;dashed&lt;/h4&gt;
+&lt;h4 id=&#34;dashed&#34;&gt;dashed&lt;/h4&gt;
 
 &lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
 &lt;div class=&#34;box article example&#34;&gt;
@@ -540,7 +540,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;dashed&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;size-variation:64cc054abc204c1c6b285a865764db92&#34;&gt;Size Variation&lt;/h4&gt;
+&lt;h4 id=&#34;size-variation&#34;&gt;Size Variation&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;large&lt;/strong&gt;
 &lt;hr class=&#34;large&#34;&gt;
@@ -562,7 +562,7 @@
 
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;color-variation:64cc054abc204c1c6b285a865764db92&#34;&gt;Color Variation&lt;/h4&gt;
+&lt;h4 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h4&gt;
 
 &lt;hr&gt;
 
@@ -626,7 +626,7 @@
 &lt;br&gt;
 &lt;hr class=&#34;red dashed&#34;&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;other-elements:64cc054abc204c1c6b285a865764db92&#34;&gt;Other Elements&lt;/h4&gt;
+&lt;h4 id=&#34;other-elements&#34;&gt;Other Elements&lt;/h4&gt;
 
 &lt;p&gt;Atomic-Packageでは、 hr以外の要素でも罫線を表現することが可能です。&lt;/p&gt;
 
@@ -637,7 +637,7 @@
 &lt;pre&gt;&lt;code&gt;&amp;lt;p class=&amp;quot;hr&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;inline-elements:64cc054abc204c1c6b285a865764db92&#34;&gt;Inline Elements&lt;/h3&gt;
+&lt;h3 id=&#34;inline-elements&#34;&gt;Inline Elements&lt;/h3&gt;
 
 &lt;p class=&#34;text&#34;&gt;テキストテキストテキストテキストテキストテキストテキスト&lt;/p&gt;
 
@@ -679,15 +679,15 @@
 
 &lt;p&gt;The variarble element, such as x = y&lt;/p&gt;
 
-&lt;h3 id=&#34;paragraph:64cc054abc204c1c6b285a865764db92&#34;&gt;Paragraph&lt;/h3&gt;
+&lt;h3 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h3&gt;
 
 &lt;p&gt;Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam.&lt;/p&gt;
 
-&lt;h3 id=&#34;time-element:64cc054abc204c1c6b285a865764db92&#34;&gt;Time Element&lt;/h3&gt;
+&lt;h3 id=&#34;time-element&#34;&gt;Time Element&lt;/h3&gt;
 
 &lt;p&gt;time&lt;/p&gt;
 
-&lt;h3 id=&#34;list-element:64cc054abc204c1c6b285a865764db92&#34;&gt;List Element&lt;/h3&gt;
+&lt;h3 id=&#34;list-element&#34;&gt;List Element&lt;/h3&gt;
 
 &lt;p&gt;list&lt;/p&gt;
 </description>
@@ -701,7 +701,7 @@
       <guid>http://atomic-package.com/core/box/</guid>
       <description>
 
-&lt;h2 id=&#34;box-components:908ee0dbc1db9ddebb579aa0d9127f51&#34;&gt;Box Components&lt;/h2&gt;
+&lt;h2 id=&#34;box-components&#34;&gt;Box Components&lt;/h2&gt;
 
 &lt;div class=&#34;box&#34;&gt;&lt;/div&gt;
 &lt;div class=&#34;box&#34;&gt;&lt;/div&gt;
@@ -732,7 +732,7 @@
       <guid>http://atomic-package.com/core/breadcrumb/</guid>
       <description>
 
-&lt;h2 id=&#34;breadcrumb-components:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Components&lt;/h2&gt;
+&lt;h2 id=&#34;breadcrumb-components&#34;&gt;Breadcrumb Components&lt;/h2&gt;
 
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
@@ -751,7 +751,7 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
-&lt;h3 id=&#34;breadcrumb-color-variation:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;breadcrumb-color-variation&#34;&gt;Breadcrumb Color Variation&lt;/h3&gt;
 
 &lt;p&gt;default
 &lt;nav class=&#34;breadcrumb&#34;&gt;
@@ -861,7 +861,7 @@
   &lt;/ul&gt;
 &lt;/nav&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;breadcrumb-size-variation:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;breadcrumb-size-variation&#34;&gt;Breadcrumb Size Variation&lt;/h3&gt;
 
 &lt;p&gt;Mini
 &lt;nav class=&#34;breadcrumb&#34;&gt;
@@ -963,9 +963,9 @@
       <guid>http://atomic-package.com/core/button/</guid>
       <description>
 
-&lt;h2 id=&#34;button-components:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Components&lt;/h2&gt;
+&lt;h2 id=&#34;button-components&#34;&gt;Button Components&lt;/h2&gt;
 
-&lt;h3 id=&#34;color-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h3&gt;
 
 &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
@@ -974,7 +974,7 @@
 &lt;p class=&#34;btn orange&#34;&gt;&lt;a href=&#34;&#34;&gt;Warning&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red&#34;&gt;&lt;a href=&#34;&#34;&gt;Danger&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;button-element:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;button Element&lt;/h3&gt;
+&lt;h3 id=&#34;button-element&#34;&gt;button Element&lt;/h3&gt;
 
 &lt;p class=&#34;btn&#34;&gt;&lt;button&gt;Default&lt;/button&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/p&gt;
@@ -983,7 +983,7 @@
 &lt;p class=&#34;btn orange&#34;&gt;&lt;button&gt;Warning&lt;/button&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red&#34;&gt;&lt;button&gt;Danger&lt;/button&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;input-element:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;input Element&lt;/h3&gt;
+&lt;h3 id=&#34;input-element&#34;&gt;input Element&lt;/h3&gt;
 
 &lt;p class=&#34;btn&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
@@ -992,9 +992,9 @@
 &lt;p class=&#34;btn orange&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;button-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Variation&lt;/h3&gt;
+&lt;h3 id=&#34;button-variation&#34;&gt;Button Variation&lt;/h3&gt;
 
-&lt;h4 id=&#34;active:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;active&lt;/h4&gt;
+&lt;h4 id=&#34;active&#34;&gt;active&lt;/h4&gt;
 
 &lt;p class=&#34;btn active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
@@ -1003,7 +1003,7 @@
 &lt;p class=&#34;btn orange active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;disable:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;disable&lt;/h4&gt;
+&lt;h4 id=&#34;disable&#34;&gt;disable&lt;/h4&gt;
 
 &lt;p class=&#34;btn disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
@@ -1012,7 +1012,7 @@
 &lt;p class=&#34;btn orange disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
 &lt;p class=&#34;btn red disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;size-variation:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation&#34;&gt;Size Variation&lt;/h3&gt;
 
 &lt;p class=&#34;btn primary mini&#34;&gt;&lt;a href=&#34;&#34;&gt;Mini button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary small&#34;&gt;&lt;a href=&#34;&#34;&gt;Small button&lt;/a&gt;&lt;/p&gt;
@@ -1020,7 +1020,7 @@
 &lt;p class=&#34;btn primary large&#34;&gt;&lt;a href=&#34;&#34;&gt;Large button&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary big&#34;&gt;&lt;a href=&#34;&#34;&gt;Big button&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;size-variation-width:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation - width&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-width&#34;&gt;Size Variation - width&lt;/h3&gt;
 
 &lt;p class=&#34;btn primary narrow&#34;&gt;&lt;a href=&#34;&#34;&gt;narrow&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary short&#34;&gt;&lt;a href=&#34;&#34;&gt;short&lt;/a&gt;&lt;/p&gt;
@@ -1029,7 +1029,7 @@
 &lt;p class=&#34;btn primary wide&#34;&gt;&lt;a href=&#34;&#34;&gt;wide&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary free&#34;&gt;&lt;a href=&#34;&#34;&gt;free&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;size-variation-height:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Size Variation - height&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-height&#34;&gt;Size Variation - height&lt;/h3&gt;
 
 &lt;p class=&#34;btn primary lower&#34;&gt;&lt;a href=&#34;&#34;&gt;lower&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;btn primary low&#34;&gt;&lt;a href=&#34;&#34;&gt;low&lt;/a&gt;&lt;/p&gt;
@@ -1076,7 +1076,7 @@
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;dropdown:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;DropDown&lt;/h2&gt;
+&lt;h2 id=&#34;dropdown&#34;&gt;DropDown&lt;/h2&gt;
 
 &lt;div class=&#34;dropdown&#34;&gt;
     &lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
@@ -1116,7 +1116,7 @@
     &lt;a class=&#34;btn red wide&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;button-group:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Button Group&lt;/h2&gt;
+&lt;h2 id=&#34;button-group&#34;&gt;Button Group&lt;/h2&gt;
 
 &lt;div class=&#34;btnGroup&#34;&gt;
     &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
@@ -1149,13 +1149,13 @@
       <guid>http://atomic-package.com/core/</guid>
       <description>
 
-&lt;h2 id=&#34;core-components:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Core Components&lt;/h2&gt;
+&lt;h2 id=&#34;core-components&#34;&gt;Core Components&lt;/h2&gt;
 
 &lt;p&gt;こちらのページでは、Atomic-packageのすべてのコアコンポーネントを一目で確認することができます。&lt;/p&gt;
 
 &lt;p&gt;Atomic-packageには、30以上のAtomic型UIPartsと拡張可能コンポーネントがあり、それらを組み合わせることができます。&lt;/p&gt;
 
-&lt;h3 id=&#34;size-variation-class:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Size Variation Class&lt;/h3&gt;
+&lt;h3 id=&#34;size-variation-class&#34;&gt;Size Variation Class&lt;/h3&gt;
 
 &lt;p&gt;Atomic-packageのAtomic型UIPartsは、それぞれのパーツに対してサイズを自由に変更することが容易に行うことができます。&lt;/p&gt;
 
@@ -1204,7 +1204,7 @@
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;color-variation-class:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Color Variation Class&lt;/h3&gt;
+&lt;h3 id=&#34;color-variation-class&#34;&gt;Color Variation Class&lt;/h3&gt;
 
 &lt;p&gt;Atomic-packageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。&lt;/p&gt;
 
@@ -1253,9 +1253,9 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&#34;breakpoints:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Breakpoints&lt;/h3&gt;
+&lt;h3 id=&#34;breakpoints&#34;&gt;Breakpoints&lt;/h3&gt;
 
-&lt;h3 id=&#34;css-architecture:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;CSS architecture&lt;/h3&gt;
+&lt;h3 id=&#34;css-architecture&#34;&gt;CSS architecture&lt;/h3&gt;
 
 &lt;p&gt;Atomic-packageのCSSアーキテクチャには、Atomic Designをベースとした「APBCSS (Atomic Parts Base CSS)」を採用しております。
 よって、それぞれのAtomic型UIPartsには、デフォルトでは margin などによるレイアウトスタイルが適応されていない状態となります。&lt;/p&gt;
@@ -1270,9 +1270,9 @@
       <guid>http://atomic-package.com/core/form/</guid>
       <description>
 
-&lt;h2 id=&#34;form-components:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Form Components&lt;/h2&gt;
+&lt;h2 id=&#34;form-components&#34;&gt;Form Components&lt;/h2&gt;
 
-&lt;h3 id=&#34;input-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Element&lt;/h3&gt;
+&lt;h3 id=&#34;input-element&#34;&gt;Input Element&lt;/h3&gt;
 
 &lt;p&gt;default&lt;/p&gt;
 
@@ -1289,7 +1289,7 @@
 &lt;p&gt;&lt;input type=&#34;search&#34; value=&#34;input type search&#34;&gt;
 &lt;input type=&#34;search&#34; value=&#34;input type search&#34; disabled&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;input-wrapelement:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input WrapElement&lt;/h3&gt;
+&lt;h3 id=&#34;input-wrapelement&#34;&gt;Input WrapElement&lt;/h3&gt;
 
 &lt;p&gt;default&lt;/p&gt;
 
@@ -1306,9 +1306,9 @@
 &lt;p class=&#34;input search&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;input type search&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;input search disabled&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;input type search&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;input-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;input-size-variation&#34;&gt;Input Size Variation&lt;/h3&gt;
 
-&lt;h4 id=&#34;width:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width&lt;/h4&gt;
+&lt;h4 id=&#34;width&#34;&gt;Width&lt;/h4&gt;
 
 &lt;p&gt;narrow
 &lt;p class=&#34;input narrow&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;12:00&#34;&gt;&lt;/p&gt;&lt;/p&gt;
@@ -1328,7 +1328,7 @@
 &lt;p&gt;free
 &lt;p class=&#34;input free&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;free size input&#34;&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;height:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Height&lt;/h4&gt;
+&lt;h4 id=&#34;height&#34;&gt;Height&lt;/h4&gt;
 
 &lt;p&gt;lower
 &lt;p class=&#34;input lower&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
@@ -1345,7 +1345,7 @@
 &lt;p&gt;lofty
 &lt;p class=&#34;input lofty&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;width-x-height:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width x Height&lt;/h4&gt;
+&lt;h4 id=&#34;width-x-height&#34;&gt;Width x Height&lt;/h4&gt;
 
 &lt;p&gt;mini
 &lt;p class=&#34;input mini&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
@@ -1365,7 +1365,7 @@
 &lt;p&gt;free
 &lt;p class=&#34;input free&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;input-validation-status:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Validation Status&lt;/h3&gt;
+&lt;h3 id=&#34;input-validation-status&#34;&gt;Input Validation Status&lt;/h3&gt;
 
 &lt;p&gt;Input warning
 &lt;p class=&#34;input orange&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
@@ -1379,7 +1379,7 @@
 &lt;p class=&#34;input green&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
 &lt;input class=&#34;green&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;input-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Input Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;input-color-variation&#34;&gt;Input Color Variation&lt;/h3&gt;
 
 &lt;p&gt;Input warning
 &lt;p class=&#34;input orange&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
@@ -1393,13 +1393,13 @@
 &lt;p class=&#34;input green&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;default text value&#34;&gt;&lt;/p&gt;
 &lt;input class=&#34;green&#34; type=&#34;text&#34; value=&#34;default input&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;radio-button-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Button Element&lt;/h3&gt;
+&lt;h3 id=&#34;radio-button-element&#34;&gt;Radio Button Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;radio&#34;&gt;
 &lt;input type=&#34;radio&#34; checked&gt;
 &lt;input type=&#34;radio&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;radio-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;radio-color-variation&#34;&gt;Radio Color Variation&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;radio&#34; name=&#34;radio1&#34;&gt;
 &lt;input type=&#34;radio&#34; name=&#34;radio1&#34; checked&gt;
@@ -1425,7 +1425,7 @@
 &lt;input type=&#34;radio&#34; class=&#34;red&#34; name=&#34;radio6&#34; checked&gt;
 &lt;input type=&#34;radio&#34; class=&#34;red&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;radio-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Radio Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;radio-size-variation&#34;&gt;Radio Size Variation&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary mini&#34;&gt;
 &lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary small&#34;&gt;
@@ -1433,13 +1433,13 @@
 &lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary large&#34;&gt;
 &lt;input type=&#34;radio&#34; name=&#34;radio-size&#34; class=&#34;primary big&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;checkbox-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Element&lt;/h3&gt;
+&lt;h3 id=&#34;checkbox-element&#34;&gt;CheckBox Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;checkbox&#34;&gt;
 &lt;input type=&#34;checkbox&#34; checked&gt;
 &lt;input type=&#34;checkbox&#34; disabled checked&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;checkbox-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;checkbox-color-variation&#34;&gt;CheckBox Color Variation&lt;/h3&gt;
 
 &lt;p&gt;&lt;input type=&#34;checkbox&#34;&gt;
 &lt;input type=&#34;checkbox&#34; checked&gt;
@@ -1467,7 +1467,7 @@
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;checkbox-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;CheckBox Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;checkbox-size-variation&#34;&gt;CheckBox Size Variation&lt;/h3&gt;
 
 &lt;p&gt;&lt;input class=&#34;primary mini&#34; type=&#34;checkbox&#34;&gt;
 &lt;input class=&#34;primary small&#34; type=&#34;checkbox&#34;&gt;
@@ -1489,7 +1489,7 @@
 &lt;input type=&#34;search&#34;/&gt;
 &lt;input type=&#34;radio&#34;/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;select-element:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Element&lt;/h3&gt;
+&lt;h3 id=&#34;select-element&#34;&gt;Select Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;select name=&#34;&#34; id=&#34;&#34;&gt;
     &lt;option value=&#34;&#34;&gt;1&lt;/option&gt;
@@ -1499,7 +1499,7 @@
     &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
 &lt;/select&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;select-wrapelement:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select WrapElement&lt;/h3&gt;
+&lt;h3 id=&#34;select-wrapelement&#34;&gt;Select WrapElement&lt;/h3&gt;
 
 &lt;p class=&#34;input&#34;&gt;
     &lt;select name=&#34;&#34; id=&#34;&#34;&gt;
@@ -1511,9 +1511,9 @@
     &lt;/select&gt;
 &lt;/p&gt;
 
-&lt;h3 id=&#34;select-size-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;select-size-variation&#34;&gt;Select Size Variation&lt;/h3&gt;
 
-&lt;h4 id=&#34;width-1:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width&lt;/h4&gt;
+&lt;h4 id=&#34;width-1&#34;&gt;Width&lt;/h4&gt;
 
 &lt;p&gt;narrow&lt;/p&gt;
 
@@ -1595,7 +1595,7 @@
     &lt;/select&gt;
 &lt;/p&gt;
 
-&lt;h4 id=&#34;height-1:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Height&lt;/h4&gt;
+&lt;h4 id=&#34;height-1&#34;&gt;Height&lt;/h4&gt;
 
 &lt;p&gt;lower&lt;/p&gt;
 
@@ -1647,7 +1647,7 @@
     &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
 &lt;/select&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;width-x-height-1:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Width x Height&lt;/h4&gt;
+&lt;h4 id=&#34;width-x-height-1&#34;&gt;Width x Height&lt;/h4&gt;
 
 &lt;p&gt;mini&lt;/p&gt;
 
@@ -1709,9 +1709,9 @@
     &lt;option value=&#34;&#34;&gt;5&lt;/option&gt;
 &lt;/select&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;select-color-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Select Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;select-color-variation&#34;&gt;Select Color Variation&lt;/h3&gt;
 
-&lt;h3 id=&#34;layout-variation:69d0cdd5a4d170d01d13dfad3dfdf29a&#34;&gt;Layout Variation&lt;/h3&gt;
+&lt;h3 id=&#34;layout-variation&#34;&gt;Layout Variation&lt;/h3&gt;
 
 &lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;text&#34; value=&#34;テキスト&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;/p&gt;
@@ -1730,11 +1730,11 @@
       <guid>http://atomic-package.com/core/icon/</guid>
       <description>
 
-&lt;h2 id=&#34;icon-components:7983a58e607f45087e0647251389c051&#34;&gt;Icon Components&lt;/h2&gt;
+&lt;h2 id=&#34;icon-components&#34;&gt;Icon Components&lt;/h2&gt;
 
 &lt;p&gt;Place vector icons anywhere using an icon font.&lt;/p&gt;
 
-&lt;h2 id=&#34;icon-mapping:7983a58e607f45087e0647251389c051&#34;&gt;Icon mapping&lt;/h2&gt;
+&lt;h2 id=&#34;icon-mapping&#34;&gt;Icon mapping&lt;/h2&gt;
 
 &lt;ul class=&#34;docsIconList&#34;&gt;
   &lt;li&gt;&lt;p class=&#34;icon ap-glass&#34;&gt;&lt;/p&gt; glass&lt;/li&gt;
@@ -2468,7 +2468,7 @@
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;icon-color-variation:7983a58e607f45087e0647251389c051&#34;&gt;Icon Color Variation&lt;/h3&gt;
+&lt;h3 id=&#34;icon-color-variation&#34;&gt;Icon Color Variation&lt;/h3&gt;
 
 &lt;p class=&#34;icon ap-lastfm&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-lastfm-square primary&#34;&gt;&lt;/p&gt;
@@ -2480,7 +2480,7 @@
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;icon-size-variation:7983a58e607f45087e0647251389c051&#34;&gt;Icon Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;icon-size-variation&#34;&gt;Icon Size Variation&lt;/h3&gt;
 
 &lt;p class=&#34;icon ap-lastfm mini&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-lastfm-square primary&#34;&gt;&lt;/p&gt;
@@ -2499,12 +2499,12 @@
 &lt;p class=&#34;icon ap-bicycle orange x4&#34;&gt;&lt;/p&gt;
 &lt;p class=&#34;icon ap-bus red x5&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;icon-button-components:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button Components&lt;/h2&gt;
+&lt;h2 id=&#34;icon-button-components&#34;&gt;Icon Button Components&lt;/h2&gt;
 
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;icon-button-p-element:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button P Element&lt;/h3&gt;
+&lt;h3 id=&#34;icon-button-p-element&#34;&gt;Icon Button P Element&lt;/h3&gt;
 
 &lt;p class=&#34;iconBtn&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn primary&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -2516,7 +2516,7 @@
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;icon-button-a-element:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button A Element&lt;/h3&gt;
+&lt;h3 id=&#34;icon-button-a-element&#34;&gt;Icon Button A Element&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;#&#34; class=&#34;iconBtn&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;a href=&#34;#&#34; class=&#34;iconBtn primary&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/a&gt;
@@ -2528,7 +2528,7 @@
 &lt;p&gt;&lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;icon-button-wrap-element:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button Wrap Element&lt;/h3&gt;
+&lt;h3 id=&#34;icon-button-wrap-element&#34;&gt;Icon Button Wrap Element&lt;/h3&gt;
 
 &lt;p class=&#34;iconBtn&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn primary&#34;&gt;&lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -2542,7 +2542,7 @@
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;icon-button-size-variation:7983a58e607f45087e0647251389c051&#34;&gt;Icon Button Size Variation&lt;/h3&gt;
+&lt;h3 id=&#34;icon-button-size-variation&#34;&gt;Icon Button Size Variation&lt;/h3&gt;
 
 &lt;p class=&#34;iconBtn mini&#34;&gt;&lt;span class=&#34;icon ap-low-vision&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p class=&#34;iconBtn primary small&#34;&gt;&lt;span class=&#34;icon ap-snapchat&#34;&gt;&lt;/span&gt;&lt;/p&gt;
