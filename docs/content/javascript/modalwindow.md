@@ -6,6 +6,14 @@ date = "2016-11-14"
 ## Modal
 
 
+### Usage
+
+ModalComponents CSS Class
+
+
+
+data-ap-modal
+
 <p class="btn primary"><a href="#modalWindow" data-ap-modal>モーダルウィンドウ</a></p>
 
 <div class="modalWindow" id="modalWindow">

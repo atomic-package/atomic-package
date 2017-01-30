@@ -32,6 +32,11 @@
       <description>
 
 &lt;h2 id=&#34;dropdown:9d0491bd00f57d113dec54ca2bf939bc&#34;&gt;Dropdown&lt;/h2&gt;
+
+&lt;div data-ap-dropdown&gt;
+  &lt;div&gt;トリガーボタン&lt;/div&gt;
+  &lt;div class=&#34;dropdown&#34;&gt;ドロップダウンコンテンツ&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -45,14 +50,20 @@
 
 &lt;h2 id=&#34;modal:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;Modal&lt;/h2&gt;
 
+&lt;h3 id=&#34;usage:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;Usage&lt;/h3&gt;
+
+&lt;p&gt;ModalComponents CSS Class&lt;/p&gt;
+
+&lt;p&gt;data-ap-modal&lt;/p&gt;
+
 &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;#modalWindow&#34; data-ap-modal&gt;モーダルウィンドウ&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&#34;modalWindow&#34; id=&#34;modalWindow&#34;&gt;
-  &lt;div class=&#34;modalBody&#34;&gt;
-    &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;#&#34; data-ap-modal-close&gt;クローズ&lt;/a&gt;&lt;/p&gt;
-
-    &lt;div&gt;コンテンツ&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;modalDialog&#34;&gt;
+      &lt;p class=&#34;modalClose&#34; data-ap-modal-close&gt;&lt;/p&gt;
+      &lt;p class=&#34;text&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      &lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
     
 </description>
@@ -113,6 +124,39 @@
       <description>
 
 &lt;h2 id=&#34;switcher:637082e84aac664439a210d81008ad04&#34;&gt;Switcher&lt;/h2&gt;
+
+&lt;ul class=&#34;switcher&#34; data-ap-switcher=&#34;#switcherContents&#34;&gt;
+  &lt;li&gt;&lt;a href=&#34;&#34;&gt;switcher001&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;switcher002&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;&#34;&gt;switcher003&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;div&gt;switcher004&lt;/div&gt;
+    &lt;a href=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+ 
+
+&lt;ul class=&#34;switcher&#34; data-ap-switcher&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ 
+
+&lt;div class=&#34;switcherContents&#34; id=&#34;switcherContents&#34;&gt;
+    &lt;div&gt;ああああああ&lt;/div&gt;
+    &lt;div&gt;いいいいいい&lt;/div&gt;
+    &lt;div&gt;ううううう&lt;/div&gt;
+    &lt;div&gt;えええええ&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.switcherContents &gt; div {
+    display: none;
+}
+.switcherContents &gt; .show {
+    display: block;
+}
+&lt;/style&gt;
 </description>
     </item>
     
@@ -137,6 +181,18 @@
       <description>
 
 &lt;h2 id=&#34;toggle:135133a5c217dcbb61560d6f66e4dc0a&#34;&gt;Toggle&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;&#34; data-ap-toggle=&#34;#toggleContents&#34;&gt;トグル&lt;/a&gt;&lt;/p&gt;
+
+&lt;p data-ap-toggle=&#34;#toggleContents&#34;&gt;トグル2&lt;/p&gt;
+
+&lt;div id=&#34;toggleContents&#34;&gt;トグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツ&lt;/div&gt;
+
+&lt;style&gt;
+#toggleContents.active {
+    font-size: 20px;
+}
+&lt;/style&gt;
 </description>
     </item>
     
