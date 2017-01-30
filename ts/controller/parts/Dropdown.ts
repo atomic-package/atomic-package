@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/Dropdown.ts" />
 /// <reference path="../../view/parts/Dropdown.ts" />
 
-module DropdownController {
+namespace DropdownController {
   import Model = DropdownModel.Dropdown;
   import DropdownViewClass = DropdownView.Dropdown;
 

@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/ScrollSpy.ts" />
 /// <reference path="../../view/parts/ScrollSpy.ts" />
 
-module ScrollSpyController {
+namespace ScrollSpyController {
   import Model = ScrollSpyModel.ScrollSpy;
   import SSView      = ScrollSpyView.ScrollSpy;
 

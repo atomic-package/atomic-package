@@ -16,10 +16,10 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 2px;
-  border: #DCE4EC 2px solid;
-  background: #fff;
+  border: #D9D9D9 2px solid;
+  background: #F9F9F9;
   &:checked {
-    background: #DCE4EC;
+    background: #D8D8D8;
     &::before {
       @include createStyle;
       width: 10px;
@@ -40,30 +40,35 @@ input[type="checkbox"] {
   /* skin */
   &.primary {
     border: #2C3D50 2px solid;
+    background: #fff;
     &:checked {
       background: #2C3D50;
     }
   }
   &.green {
     border: #17BC9C 2px solid;
+    background: #fff;
     &:checked {
       background: #17BC9C;
     }
   }
   &.blue {
     border: #1397E1 2px solid;
+    background: #fff;
     &:checked {
       background: #1397E1;
     }
   }
   &.orange {
     border: #F39C12 2px solid;
+    background: #fff;
     &:checked {
       background: #F39C12;
     }
   }
   &.red {
     border: #E74C3C 2px solid;
+    background: #fff;
     &:checked {
       background: #E74C3C;
     }
@@ -592,5 +597,92 @@ input[type="password"] {
       line-height: $inputLofty;
       font-size: $inputLoftyFont;
     }
+  }
+}
+
+/*
+ * Select Style
+*/
+select {
+  /* State */
+  // size width
+  &.narrow {
+    min-width: 45px;
+    background-position: 85% center;
+  }
+  &.short {
+    min-width: 75px;
+    background-position: 85% center;
+  }
+  &.long {
+    min-width: 300px;
+  }
+  &.wide {
+    min-width: 450px;
+  }
+
+  &.free {
+    width: 100%;
+    background-position: 98% center;
+  }
+
+  // size height
+  &.lower {
+    height: 15px;
+    border-radius: 4px;
+    font-size: 10px;
+    line-height: 15px;
+    background-size: 5px auto;
+  }
+  &.low {
+    height: 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &.high {
+    height: 45px;
+    background-size: 10px auto;
+    line-height: 45px;
+    font-size: 16px;
+  }
+  &.lofty {
+    height: 60px;
+    background-size: 12px auto;
+    line-height: 60px;
+    font-size: 18px;
+  }
+
+  // size width x height
+  &.mini {
+    min-width: 45px;
+    height: 15px;
+    border-radius: 4px;
+    background-position: 85% center;
+    font-size: 10px;
+    line-height: 15px;
+    background-size: 5px auto;
+  }
+  &.small {
+    min-width: 75px;
+    height: 20px;
+    border-radius: 4px;
+    background-position: 85% center;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &.large {
+    min-width: 300px;
+    height: 45px;
+    background-size: 10px auto;
+    line-height: 45px;
+    font-size: 16px;
+  }
+  &.big {
+    min-width: 450px;
+    height: 60px;
+    background-size: 12px auto;
+    line-height: 60px;
+    font-size: 18px;
   }
 }

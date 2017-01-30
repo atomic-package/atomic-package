@@ -22,3 +22,25 @@ section {
 a {
   color: $linkMainColor;
 }
+
+select {
+  display: inline-block;
+  min-width: 150px;
+  height: 30px;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0 20px 0 12px;
+  background: url($dataSelectIcon) no-repeat;
+  background-position: 95% center;
+  background-size: 7px auto;
+  background-color: #fff;
+  color: #555;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+::selection {
+  background: #39f;
+  color: #fff;
+  text-shadow: none;
+}

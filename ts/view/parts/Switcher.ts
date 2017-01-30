@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module SwitcherView {
+namespace SwitcherView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 

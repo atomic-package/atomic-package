@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/Switcher.ts" />
 /// <reference path="../../view/parts/Switcher.ts" />
 
-module SwitcherController {
+namespace SwitcherController {
   import Model = SwitcherModel.Switcher;
   import SwitcherViewClass = SwitcherView.Switcher;
 

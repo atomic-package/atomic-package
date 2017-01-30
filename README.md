@@ -76,7 +76,7 @@ Open `http://localhost:1313` in your browser.
 * <http://www.webcyou.com/>
 
 **Tatsuki Takamatsu**
-* [@flatgraphics](https://twitter.com/flatgraphics)
+* [@180gr_disco](https://twitter.com/180gr_disco)
 
 
 ## Copyright and license

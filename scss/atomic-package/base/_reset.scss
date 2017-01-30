@@ -70,7 +70,8 @@ button {
 }
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+select {
   appearance: none;
   outline: none;
 }

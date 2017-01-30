@@ -4,7 +4,7 @@
 /// <reference path='../_all.ts' />
 /// <reference path='common/Utility.ts' />
 
-module AtomicPackages {
+namespace AtomicPackages {
   interface Type {
     id?: number;
     className?: string;

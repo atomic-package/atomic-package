@@ -3,7 +3,7 @@ title = "Tab Component"
 date = "2016-11-14"
 +++
 
-## Tab
+## Tab Components
 
 <nav class="tab">
   <ul class="tabList" data-ap-tab>
@@ -24,7 +24,7 @@ date = "2016-11-14"
 
 <br/>
 
-<h4>タブメニュー color</h4>
+### Tab Color Variation
 
 <nav class="tab">
   <ul class="tabList">
@@ -138,7 +138,7 @@ date = "2016-11-14"
   </ul>
 </nav>
 
-<h4>タブメニュー size</h4>
+### Tab Size Variation - Width & Height
 
 <br/>
 
@@ -237,7 +237,7 @@ date = "2016-11-14"
 
 <br/>
 
-<h4>サイズ width</h4>
+### Tab Size Variation - Width
 
 <nav class="tab">
   <ul class="tabList narrow">
@@ -338,7 +338,7 @@ date = "2016-11-14"
 
 <br/>
 
-<h4>サイズ height</h4>
+### Tab Size Variation - Height
 
 <nav class="tab">
   <ul class="tabList lower">

@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/SmoothScroll.ts" />
 /// <reference path="../../view/parts/SmoothScroll.ts" />
 
-module SmoothScrollController {
+namespace SmoothScrollController {
   import Model = SmoothScrollModel.SmoothScroll;
   import ScrollView  = SmoothScrollView.SmoothScroll;
 

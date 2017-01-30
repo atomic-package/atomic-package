@@ -89,43 +89,43 @@ gulp.task('css.copy.dist', function() {
 });
 
 gulp.task('css.min', function () {
-    return gulp.src([
-        RELEASE_DIR + '/css/**/*.css',
-        '!' + RELEASE_DIR + '/css/**/*min.css'
-      ])
-      .pipe(cssmin())
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest(RELEASE_DIR + '/css/'));
+  return gulp.src([
+      RELEASE_DIR + '/css/**/*.css',
+      '!' + RELEASE_DIR + '/css/**/*min.css'
+    ])
+    .pipe(cssmin())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(RELEASE_DIR + '/css/'));
 });
 
 // JavaScript uglify
 gulp.task('uglify-contrib', function () {
-    gulp.src([])
-        .pipe(uglify())
-        .pipe(concat('contrib.js'))
-        .pipe(gulp.dest(RELEASE_DIR + '/js/'));
+  gulp.src([])
+    .pipe(uglify())
+    .pipe(concat('contrib.js'))
+    .pipe(gulp.dest(RELEASE_DIR + '/js/'));
 });
 
 // typescript
 gulp.task('ts', function () {
   return gulp.src(tsFiles)
-      .pipe(plumber())
-      .pipe(typescript({
-        removeComments: true,
-        module: 'commonjs',
-        out: 'atomic-package.js'
-      }))
-      .pipe(gulp.dest(RELEASE_DIR + '/js/'));
+    .pipe(plumber())
+    .pipe(typescript({
+      removeComments: true,
+      module: 'system',
+      out: 'atomic-package.js'
+    }))
+    .pipe(gulp.dest(RELEASE_DIR + '/js/'));
 });
 
 
 gulp.task('tsd', function () {
-    tsd({
-        command: 'reinstall',
-        config: './tsd.json'
-    }, callback);
+  tsd({
+    command: 'reinstall',
+    config: './tsd.json'
+  }, callback);
 });
 
 //gulp.task('js.concat', function() {
@@ -168,10 +168,8 @@ gulp.task('font.copy.dist', function() {
     .pipe(gulp.dest( DIST_DIR + '/font/' ));
 });
 
-
 // ファイル更新監視
 gulp.task('watch', function() {
-
   // SCSS
   gulp.watch([scssFiles],['build.css']);
 
@@ -180,9 +178,7 @@ gulp.task('watch', function() {
 
   // docs files
   gulp.watch([docsFiles],['docs.copy']);
-
 });
-
 
 gulp.task('docs.copy', function() {
   return gulp.src(docsFiles)
@@ -203,21 +199,21 @@ gulp.task('docs.build', function() {
  * Gulp Server
  **/
 gulp.task('server', ['connect'], function() {
-    gulp.watch([
-            SOURCE_DIR + '/scss/**/*.*',
-            SOURCE_DIR + '/ts/**/*.*'
-    ]).on('change', function(changedFile) {
-        gulp.src(changedFile.path).pipe(connect.reload());
-    });
+  gulp.watch([
+    SOURCE_DIR + '/scss/**/*.*',
+    SOURCE_DIR + '/ts/**/*.*'
+  ]).on('change', function(changedFile) {
+    gulp.src(changedFile.path).pipe(connect.reload());
+  });
 });
 
 gulp.task('connect', function() {
-    connect.server({
-        root: [__dirname + '/docs/public/'],
-        port: 8088,
-        livereload: true
-    });
-    console.log('Server started: http://localhost:8088');
+  connect.server({
+    root: [__dirname + '/docs/public/'],
+    port: 8088,
+    livereload: true
+  });
+  console.log('Server started: http://localhost:8088');
 });
 
 
@@ -296,10 +292,10 @@ gulp.task('font.dist', function(callback) {
  * All Task
  **/
 gulp.task('default', function(callback) {
-    runSequence(
-        'clean.release',
-        'build.ui',
-        'watch',
-        callback
-    );
+  runSequence(
+    'clean.release',
+    'build.ui',
+    'watch',
+    callback
+  );
 });

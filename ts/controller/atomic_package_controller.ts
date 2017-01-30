@@ -6,7 +6,7 @@
 /// <reference path='../view/atomic_package_view.ts' />
 /// <reference path='parts/_all.ts' />
 
-module AtomicPackages {
+namespace AtomicPackages {
   import ModalWindow  = ModalWindowController.ModalWindow;
   import Tab          = TabController.Tab;
   import Button       = ButtonController.Button;

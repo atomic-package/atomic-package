@@ -4,7 +4,7 @@
 /// <reference path='../_all.ts' />
 /// <reference path='common/Tween.ts' />
 
-module AtomicPackages {
+namespace AtomicPackages {
   import APModel = AtomicPackages.Model;
 
   /**

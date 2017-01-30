@@ -115,6 +115,17 @@ Input success
 
 ### Input Color Variation
 
+Input warning
+<p class="input orange"><input type="text" value="default text value"></p>
+<input class="orange" type="text" value="default input">
+
+Input error
+<p class="input red"><input type="text" value="default text value"></p>
+<input class="red" type="text" value="default input">
+
+Input success
+<p class="input green"><input type="text" value="default text value"></p>
+<input class="green" type="text" value="default input">
 
 
 ### Radio Button Element
@@ -215,6 +226,16 @@ Input success
 
 ### Select Element
 
+<select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+### Select WrapElement
+    
 <p class="input">
     <select name="" id="">
         <option value="">1</option>
@@ -224,6 +245,69 @@ Input success
         <option value="">5</option>
     </select>
 </p>
+
+### Select Size Variation
+
+#### Width
+narrow
+
+<select class="narrow" name="" id="">
+    <option value="">10</option>
+    <option value="">20</option>
+    <option value="">30</option>
+    <option value="">40</option>
+    <option value="">50</option>
+</select>
+
+short
+
+<select class="short" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+default
+
+<select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+long
+
+<select class="long" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+wide
+
+<select class="wide" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+free
+
+<select class="free" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
 
 <p class="input">
     <select name="" id="">
@@ -244,6 +328,126 @@ Input success
         <option value="">5</option>
     </select>
 </p>
+
+#### Height
+lower
+
+<select class="lower" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+low
+
+<select class="low" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+default
+
+<select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+high
+
+<select class="high" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+lofty
+
+<select class="lofty" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+
+
+
+#### Width x Height
+
+mini
+
+<select class="mini" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+small
+
+<select class="small" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+default
+
+<select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+large
+
+<select class="large" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+big
+
+<select class="big" name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+free
+
+<select name="" id="">
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+</select>
+
+### Select Color Variation
+
+
 
 
 ### Layout Variation

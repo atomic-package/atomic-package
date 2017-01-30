@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/SideMenu.ts" />
 /// <reference path="../../view/parts/SideMenu.ts" />
 
-module SideMenuController {
+namespace SideMenuController {
   import Model = SideMenuModel.SideMenu;
   import SideMenuViewClass = SideMenuView.SideMenu;
 

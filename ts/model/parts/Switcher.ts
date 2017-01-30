@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module SwitcherModel {
+namespace SwitcherModel {
   import APModel = AtomicPackages.Model;
 
   /**

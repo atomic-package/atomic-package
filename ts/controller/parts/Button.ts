@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/Button.ts" />
 /// <reference path="../../view/parts/Button.ts" />
 
-module ButtonController {
+namespace ButtonController {
   import Model   = ButtonModel.Button;
   import BtnView = ButtonView.Button;
 

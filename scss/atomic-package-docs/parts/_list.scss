@@ -11,3 +11,13 @@
     }
   }
 }
+
+.docsIconList {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 200px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}

@@ -75,7 +75,8 @@
 }
 
 .contents.docs {
-  margin-left: 230px;
+  float: left;
+  width: 870px;
 }
 
 .contents.docs > h2 {
@@ -132,6 +133,20 @@
 
 .docsHeaderMenuList li a {
   color: #fff;
+}
+
+.docsIconList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.docsIconList li {
+  width: 200px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 #top .topView {

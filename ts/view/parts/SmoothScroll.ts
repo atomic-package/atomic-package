@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module SmoothScrollView {
+namespace SmoothScrollView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
   import Tween   = AtomicPackages.Tween;
