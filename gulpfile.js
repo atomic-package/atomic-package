@@ -12,6 +12,7 @@ var gulp = require("gulp"),
     concat = require('gulp-concat'),
     typescript = require('gulp-tsc'),
     tsd = require('gulp-tsd'),
+    sketch = require('gulp-sketch'),
     server = require('gulp-express'),
     plumber = require('gulp-plumber'),
     del = require('del'),
@@ -168,6 +169,16 @@ gulp.task('font.copy.dist', function() {
     .pipe(gulp.dest( DIST_DIR + '/font/' ));
 });
 
+// sketch
+gulp.task('sketch.build', function(){
+  return gulp.src('./design/*.sketch')
+    .pipe(sketch({
+      export: 'artboards',
+      formats: 'png'
+    }))
+    .pipe(gulp.dest('./design/.export'));
+});
+
 // ファイル更新監視
 gulp.task('watch', function() {
   // SCSS
@@ -252,6 +263,13 @@ gulp.task('build.font', function(callback) {
   );
 });
 
+gulp.task('build.sketch', function(callback) {
+  return runSequence(
+    'sketch.build',
+    callback
+  );
+});
+
 /**
  * Output Task
  **/
@@ -259,7 +277,7 @@ gulp.task('dist', function(callback) {
   return runSequence(
     'clean.release',
     'clean.dist',
-    ['css.dist', 'js.dist', 'font.dist', 'docs.build'],
+    ['css.dist', 'js.dist', 'font.dist', 'docs.build', 'build.sketch'],
     callback
   );
 });
