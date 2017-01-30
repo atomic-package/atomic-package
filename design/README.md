@@ -7,10 +7,14 @@ Use Sketch APP
 
 ## Directory
 
-`.exportedArtboards/` Sketch export png files.
-`atomic_package.sketch`	parts design file.
-`atomic_package_docs.sketch` Document Pages file.
-`atomic_package_theme.sketch` parts theme design file.
+```
+.export/            - Sketch export png files.
+.exportedArtboards/ - Sketch export png files.
+sketch/             - Sketch Files Directory
+│   ├── atomic_package.sketch	    - parts design file.
+│   ├── atomic_package_docs.sketch  - Document Pages file.
+│   └── atomic_package_theme.sketch - parts theme design file.
+```
 
 ## branch
 design master branch

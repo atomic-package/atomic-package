@@ -160,9 +160,9 @@ gulp.task('font.copy.dist', function() {
     .pipe(gulp.dest( DIST_DIR + '/font/' ));
 });
 
-// sketch
+// Sketch
 gulp.task('sketch.build', function(){
-  return gulp.src('./design/*.sketch')
+  return gulp.src('./design/sketch/*.sketch')
     .pipe(sketch({
       export: 'artboards',
       formats: 'png'
