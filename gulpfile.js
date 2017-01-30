@@ -11,7 +11,6 @@ var gulp = require("gulp"),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     typescript = require('gulp-tsc'),
-    tsd = require('gulp-tsd'),
     sketch = require('gulp-sketch'),
     server = require('gulp-express'),
     plumber = require('gulp-plumber'),
@@ -119,14 +118,6 @@ gulp.task('ts', function () {
       out: 'atomic-package.js'
     }))
     .pipe(gulp.dest(RELEASE_DIR + '/js/'));
-});
-
-
-gulp.task('tsd', function () {
-  tsd({
-    command: 'reinstall',
-    config: './tsd.json'
-  }, callback);
 });
 
 //gulp.task('js.concat', function() {
