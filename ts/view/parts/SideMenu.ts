@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module SideMenuView {
+namespace SideMenuView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 

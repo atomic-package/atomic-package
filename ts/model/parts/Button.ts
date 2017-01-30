@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module ButtonModel {
+namespace ButtonModel {
   import APModel = AtomicPackages.Model;
 
   /**

@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module TabView {
+namespace TabView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 

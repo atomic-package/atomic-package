@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module ButtonView {
+namespace ButtonView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 

@@ -2,7 +2,7 @@
  * Author: Daisuke Takayama
  */
 
-module ViewClasses {
+namespace ViewClasses {
   var _created_trigger_num: number = 0;
   var _created_target_num: number = 0;
 

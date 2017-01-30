@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/Tab.ts" />
 /// <reference path="../../view/parts/Tab.ts" />
 
-module TabController {
+namespace TabController {
   import Model = TabModel.Tab;
   import View  = TabView.Tab;
 

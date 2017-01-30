@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module DropdownView {
+namespace DropdownView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 

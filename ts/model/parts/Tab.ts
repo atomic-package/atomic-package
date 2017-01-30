@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module TabModel {
+namespace TabModel {
   import APModel = AtomicPackages.Model;
 
   /**

@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module ScrollSpyModel {
+namespace ScrollSpyModel {
   import APModel = AtomicPackages.Model;
 
   /**

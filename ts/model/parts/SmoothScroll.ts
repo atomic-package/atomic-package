@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module SmoothScrollModel {
+namespace SmoothScrollModel {
   import APModel = AtomicPackages.Model;
 
   /**

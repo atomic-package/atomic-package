@@ -5,7 +5,7 @@
 /// <reference path="../../model/parts/ModalWindow.ts" />
 /// <reference path="../../view/parts/ModalWindow.ts" />
 
-module ModalWindowController {
+namespace ModalWindowController {
   import Model = ModalWindowModel.ModalWindow;
 
   import ModalView = ModalWindowView.ModalWindow;

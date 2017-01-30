@@ -4,7 +4,7 @@
 /// <reference path='../common/Classes.ts' />
 /// <reference path='../../_all.ts' />
 
-module ToggleView {
+namespace ToggleView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
 

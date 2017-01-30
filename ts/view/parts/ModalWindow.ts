@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module ModalWindowView {
+namespace ModalWindowView {
   import APModel = AtomicPackages.Model;
   import APView  = AtomicPackages.View;
   import Utility = AtomicPackages.Utility;

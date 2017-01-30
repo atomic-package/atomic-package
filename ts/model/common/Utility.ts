@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module AtomicPackages {
+namespace AtomicPackages {
 
   interface support {
     touch: boolean;

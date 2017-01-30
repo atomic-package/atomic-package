@@ -2,7 +2,7 @@
  * Author: Daisuke Takayama
  */
 
-module AtomicPackages {
+namespace AtomicPackages {
   /**
    * Tween Interface
   **/

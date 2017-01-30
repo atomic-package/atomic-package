@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module ToggleModel {
+namespace ToggleModel {
   import APModel = AtomicPackages.Model;
 
   import TargetView  = ToggleView.Target;

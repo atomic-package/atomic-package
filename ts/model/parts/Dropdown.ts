@@ -3,7 +3,7 @@
  */
 /// <reference path='../../_all.ts' />
 
-module DropdownModel {
+namespace DropdownModel {
   import APModel = AtomicPackages.Model;
 
   /**

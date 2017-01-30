@@ -7,7 +7,7 @@
 'use strict';
 var e = eval, global: NodeJS.Global = e('this');
 
-module AtomicPackages {
+namespace AtomicPackages {
 
   /**
    * AtomicPackage Main Class
