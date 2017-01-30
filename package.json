@@ -47,6 +47,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-run-sequence": "^0.3.2",
     "gulp-sass": "^2.3.1",
+    "gulp-sketch": "^1.0.3",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-debug": "^1.0.2",
     "gulp-tsc": "^1.1.4",
