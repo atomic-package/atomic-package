@@ -7,8 +7,17 @@
 'use strict';
 var e = eval, global: NodeJS.Global = e('this');
 
-namespace AtomicPackages {
+declare namespace NodeJS {
+  interface Global {
+    document: Document;
+    window: Window;
+    navigator: Navigator;
+    AP: AtomicPackages.AtomicPackage;
+  }
+}
 
+
+namespace AtomicPackages {
   /**
    * AtomicPackage Main Class
    * @public
@@ -70,7 +79,7 @@ if (typeof (module) !== 'undefined') {
 }
 
 if (typeof (global) !== 'undefined') {
-  if (typeof global['AP'] === 'undefined') {
-    global['AP'] = new AtomicPackages.AtomicPackage({});
+  if (typeof global.AP === 'undefined') {
+    global.AP = new AtomicPackages.AtomicPackage({});
   }
 }
