@@ -120,13 +120,6 @@ gulp.task('ts', function () {
     .pipe(gulp.dest(RELEASE_DIR + '/js/'));
 });
 
-//gulp.task('js.concat', function() {
-//  gulp.src(jsFiles)
-//    .pipe(plumber())
-//    .pipe(concat('atomic-package.js'))
-//    .pipe(gulp.dest( RELEASE_DIR + '/js/'));
-//});
-
 gulp.task('js.min', function() {
   return gulp.src([
       RELEASE_DIR + '/js/**/*.js',
