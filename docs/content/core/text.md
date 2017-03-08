@@ -29,6 +29,8 @@ Atomic-Packageで用意されている、ベースとなるテキストStyleの�
 
 ### Size Variation
 
+Text Componentsにおける、サイズバリエーションの一覧となります。
+
 <p class="text mini">テキストテキストテキストテキストテキストテキストテキスト</p>
 
 <p class="text small">テキストテキスト<span class="string">テキスト</span>テキストテキストテキストテキスト</p>
@@ -48,6 +50,8 @@ Atomic-Packageで用意されている、ベースとなるテキストStyleの�
 
 ### Color Variation
 
+Text Componentsにおける、カラーバリエーションの一覧となります。
+
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text primary">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text green">テキストテキストテキストテキストテキストテキストテキスト</p>
@@ -55,6 +59,7 @@ Atomic-Packageで用意されている、ベースとなるテキストStyleの�
 <p class="text orange">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text red">テキストテキストテキストテキストテキストテキストテキスト</p>
 
+勿論、1文字単位でのカラー変更が可能となっております。
 
 <p class="text big"><span class="string">S</span><span class="string primary">t</span><span class="string green">r</span><span class="string blue">i</span><span class="string orange">n</span><span class="string red">g</span></p>
 
