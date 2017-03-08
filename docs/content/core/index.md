@@ -112,6 +112,10 @@ APB CSSの特性により、skin classとSemantic Classは同等の見た目と�
 
 ### Breakpoints
 
+Atomic-packageでは、レスポンシブ対応としてStyle切り替えのBreakpointを設けております。
+
+各Breakpointは以下の通りとなります。
+
 
 
 ### CSS architecture
