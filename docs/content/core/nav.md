@@ -5,6 +5,10 @@ date = "2016-11-14"
 
 ## Nav Components
 
+Atomic-Packageで用意されている、ベースとなるナビゲーションStyleの一覧です。
+
+## Menu List Components
+
 <nav class="menu">
   <ul class="menuList">
     <li>
@@ -25,7 +29,7 @@ date = "2016-11-14"
 <br/>
 <br/>
 
-<h4>ナビメニュー</h4>
+## Nav List Components
 
 <ul class="navList">
   <li class="active"><a href="">Active</a></li>
@@ -33,9 +37,7 @@ date = "2016-11-14"
   <li><a href="">Item</a></li>
 </ul>
 
-<h4>ナビメニュー color</h4>
-
-
+### Color Variation Class
 
 <ul class="navList primary">
   <li class="active"><a href="">Active</a></li>
@@ -67,7 +69,7 @@ date = "2016-11-14"
   <li><a href="">Item</a></li>
 </ul>
 
-<h4>ナビメニュー size</h4>
+### Size Variation Class
 
 <ul class="navList mini">
   <li class="active"><a href="">Active</a></li>
@@ -99,7 +101,8 @@ date = "2016-11-14"
   <li><a href="">Item</a></li>
 </ul>
 
-<h4>ナビメニュー size width</h4>
+### Size Variation - width
+
 <ul class="navList narrow">
   <li class="active"><a href="">Active</a></li>
   <li><a href="">Item</a></li>
@@ -136,7 +139,8 @@ date = "2016-11-14"
   <li><a href="">Item</a></li>
 </ul>
 
-<h4>ナビメニュー size height</h4>
+### Size Variation - height
+
 <ul class="navList lower">
   <li class="active"><a href="">Active</a></li>
   <li><a href="">Item</a></li>
