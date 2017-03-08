@@ -5,6 +5,8 @@ date = "2016-12-12"
 
 ## Progressbar Components
 
+Atomic-Packageで用意されている、ベースとなるプログレスバーStyle一覧です。
+
 Default
 
 <div class="progress">
@@ -12,6 +14,8 @@ Default
 </div>
 
 ### Color Variation
+
+Progressbar Componentsにおける、カラーバリエーション一覧となります。
 
 Primary
 <div class="progress">
@@ -54,6 +58,8 @@ Red
 </div>
 
 ### Size Variation - width
+
+Progressbar Componentsにおける、サイズバリエーション一覧となります。
 
 narrow
 <div class="progress narrow">
