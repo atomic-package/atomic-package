@@ -7,6 +7,9 @@ date = "2016-11-14"
 
 ### Defines different styles for the text.
 
+Atomic-Packageで用意されている、ベースとなるテキストStyleの一覧です。
+
+
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 
 <p class="text strong">Strong is used to indicate strong importance</p>
