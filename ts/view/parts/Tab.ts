@@ -327,13 +327,13 @@ namespace TabView {
       return ++_created_contents_item_num;
     }
 
-    private removeSelectClass() {
+    private removeSelectClass(): void {
       if(this.node.classList.contains(this._SELECT_CLASS_NAME)) {
         this.node.classList.remove(this._SELECT_CLASS_NAME);
       }
     }
 
-    private addSelectClass() {
+    private addSelectClass(): void {
       if(!this.node.classList.contains(this._SELECT_CLASS_NAME)) {
         this.node.classList.add(this._SELECT_CLASS_NAME);
       }
