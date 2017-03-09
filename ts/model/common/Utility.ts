@@ -79,7 +79,7 @@ namespace AtomicPackages {
 
     // RequestAnimationFrame
     private setRequestAnimationFrame() {
-      window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
+      window.requestAnimationFrame = <any>window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
         function(callback: FrameRequestCallback, element: any) {
           window.setTimeout(callback, 1000 / 60);
         };
