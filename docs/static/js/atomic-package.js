@@ -1360,6 +1360,11 @@ var TabModel;
             }
             return itemModels;
         };
+        Trigger.prototype.searchItem = function (id) {
+            return this.items.filter(function (item) {
+                return (item.id == id);
+            })[0];
+        };
         Trigger.prototype.setSelectedNumber = function (item) {
             this.selectedNumber = item.itemNumber;
         };
