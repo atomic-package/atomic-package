@@ -110,11 +110,12 @@ namespace TabModel {
       return itemModels;
     }
 
-//    private searchItem(id: number) {
-//      return this.items.filter((item: any) => {
-//        return (item.id == id);
-//      })[0];
-//    }
+
+   private searchItem(id: number) {
+     return this.items.filter((item: any) => {
+       return (item.id == id);
+     })[0];
+   }
 
     private setSelectedNumber(item: TriggerItem): void {
       this.selectedNumber = item.itemNumber;

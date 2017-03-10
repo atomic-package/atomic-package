@@ -5,6 +5,8 @@ date = "2016-12-12"
 
 ## Progressbar Components
 
+Atomic-Packageで用意されている、ベースとなるプログレスバーStyle一覧です。
+
 Default
 
 <div class="progress">
@@ -12,6 +14,8 @@ Default
 </div>
 
 ### Color Variation
+
+Progressbar Componentsにおける、カラーバリエーション一覧となります。
 
 Primary
 <div class="progress">
@@ -46,14 +50,21 @@ Red
   <span class="value red" style="width: 60%;"></span>
 </div>
 
+
 ### Stacked
+
+Progressbar Componentsにおける、StackedStyleの適応例です。
 
 <div class="progress free">
   <span class="value green" style="width: 30%;"></span>
   <span class="value blue" style="width: 50%;"></span>
 </div>
 
+
 ### Size Variation - width
+
+Progressbar Componentsにおける、サイズバリエーション一覧となります。
+サイズバリエーションのwidthを適応した例となります。
 
 narrow
 <div class="progress narrow">
@@ -85,7 +96,11 @@ free
   <span class="value" style="width: 50%;"></span>
 </div>
 
+
 ### Size Variation - height
+
+サイズバリエーションのheightを適応した例となります。
+
 lower
 <div class="progress lower">
   <span class="value" style="width: 50%;"></span>
@@ -113,6 +128,8 @@ lofty
 
 ### Size Variation - width & height
 
+サイズバリエーションのwidthとheightを組み合わせ適応した例となります。
+
 mini
 <div class="progress mini">
   <span class="value" style="width: 50%;"></span>
@@ -139,6 +156,8 @@ big
 </div>
 
 ### Striped
+
+Progressbar Componentsにおける、StripedStyleの適応例です。
 
 <div class="progress">
   <span class="value striped" style="width: 50%;"></span>
@@ -176,6 +195,8 @@ big
 
 ### Striped Size Variation
 
+StripedStyleのサイズバリエーション一覧となります。
+
 <div class="progress mini">
   <span class="value orange striped" style="width: 60%;"></span>
 </div>
@@ -205,6 +226,8 @@ big
 </div>
 
 ### Striped Size Variation Height
+
+StripedStyleのサイズバリエーションのheightを適応した例となります。
 
 <div class="progress lower">
   <span class="value orange striped" style="width: 60%;"></span>

@@ -7,6 +7,9 @@ date = "2016-11-14"
 
 ### Defines different styles for the text.
 
+Atomic-Packageで用意されている、ベースとなるテキストStyleの一覧です。
+
+
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 
 <p class="text strong">Strong is used to indicate strong importance</p>
@@ -15,7 +18,7 @@ date = "2016-11-14"
 
 <p class="text">The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation</p>
 
-<p class="text link"></p>
+<p class="text link"><a href="#">This is a text link</a></p>
 
 <p class="text">The <i>i element</i> is text that is set off from the normal text</p>
 
@@ -25,6 +28,8 @@ date = "2016-11-14"
 
 
 ### Size Variation
+
+Text Componentsにおける、サイズバリエーションの一覧となります。
 
 <p class="text mini">テキストテキストテキストテキストテキストテキストテキスト</p>
 
@@ -45,6 +50,8 @@ date = "2016-11-14"
 
 ### Color Variation
 
+Text Componentsにおける、カラーバリエーションの一覧となります。
+
 <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text primary">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text green">テキストテキストテキストテキストテキストテキストテキスト</p>
@@ -52,6 +59,7 @@ date = "2016-11-14"
 <p class="text orange">テキストテキストテキストテキストテキストテキストテキスト</p>
 <p class="text red">テキストテキストテキストテキストテキストテキストテキスト</p>
 
+勿論、1文字単位でのカラー変更が可能となっております。
 
 <p class="text big"><span class="string">S</span><span class="string primary">t</span><span class="string green">r</span><span class="string blue">i</span><span class="string orange">n</span><span class="string red">g</span></p>
 

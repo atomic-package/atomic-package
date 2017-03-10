@@ -9,3 +9,12 @@ date = "2016-11-14"
   <div>トリガーボタン</div>
   <div class="dropdown">ドロップダウンコンテンツ</div>
 </div>
+
+
+
+```html
+<div data-ap-dropdown>
+  <div>トリガーボタン</div>
+  <div class="dropdown">ドロップダウンコンテンツ</div>
+</div>
+```

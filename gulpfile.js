@@ -11,7 +11,6 @@ var gulp = require("gulp"),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     typescript = require('gulp-tsc'),
-    tsd = require('gulp-tsd'),
     sketch = require('gulp-sketch'),
     server = require('gulp-express'),
     plumber = require('gulp-plumber'),
@@ -121,21 +120,6 @@ gulp.task('ts', function () {
     .pipe(gulp.dest(RELEASE_DIR + '/js/'));
 });
 
-
-gulp.task('tsd', function () {
-  tsd({
-    command: 'reinstall',
-    config: './tsd.json'
-  }, callback);
-});
-
-//gulp.task('js.concat', function() {
-//  gulp.src(jsFiles)
-//    .pipe(plumber())
-//    .pipe(concat('atomic-package.js'))
-//    .pipe(gulp.dest( RELEASE_DIR + '/js/'));
-//});
-
 gulp.task('js.min', function() {
   return gulp.src([
       RELEASE_DIR + '/js/**/*.js',
@@ -169,9 +153,9 @@ gulp.task('font.copy.dist', function() {
     .pipe(gulp.dest( DIST_DIR + '/font/' ));
 });
 
-// sketch
+// Sketch
 gulp.task('sketch.build', function(){
-  return gulp.src('./design/*.sketch')
+  return gulp.src('./design/sketch/*.sketch')
     .pipe(sketch({
       export: 'artboards',
       formats: 'png'

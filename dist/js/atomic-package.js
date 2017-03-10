@@ -1360,6 +1360,11 @@ var TabModel;
             }
             return itemModels;
         };
+        Trigger.prototype.searchItem = function (id) {
+            return this.items.filter(function (item) {
+                return (item.id == id);
+            })[0];
+        };
         Trigger.prototype.setSelectedNumber = function (item) {
             this.selectedNumber = item.itemNumber;
         };
@@ -3214,7 +3219,7 @@ if (typeof (module) !== 'undefined') {
     }
 }
 if (typeof (global) !== 'undefined') {
-    if (typeof global['AP'] === 'undefined') {
-        global['AP'] = new AtomicPackages.AtomicPackage({});
+    if (typeof global.AP === 'undefined') {
+        global.AP = new AtomicPackages.AtomicPackage({});
     }
 }

@@ -71,7 +71,7 @@ namespace AtomicPackages {
 
     private static stringToArray(data: any): any {
       if(typeof data === 'string') {
-        var splitList = data.replace(/^\[/g, '').replace(/\s+/g, '').replace(/\]$/g, '').split(","),
+        var splitList: any = data.replace(/^\[/g, '').replace(/\s+/g, '').replace(/\]$/g, '').split(","),
             newSplitList = [];
 
         // Object Array

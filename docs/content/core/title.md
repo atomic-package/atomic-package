@@ -4,6 +4,10 @@ date = "2016-11-14"
 +++
 
 ## Title Components
+
+Atomic-Packageで用意されている、ベースとなるタイトルStyleの一覧です。
+
+
 ### Headings
 
 <div>
@@ -17,6 +21,8 @@ date = "2016-11-14"
 
 ### Color Variation
 
+Title Componentsにおける、カラーバリエーション一覧となります。
+
 <div>
 <h1 class="title">h1 Title</h1>
 <h1 class="title primary">h1 Title</h1>
@@ -27,6 +33,8 @@ date = "2016-11-14"
 </div>
 
 ### Size Variation
+
+Title Componentsにおける、サイズバリエーション一覧となります。
 
 <div>
 <h1 class="title mini">h1 Title</h1>
@@ -67,6 +75,8 @@ date = "2016-11-14"
 </div>
 
 ### Border Skin Style
+
+Title Componentsにおける、ボーダースキンのバリエーション一覧となります。
 
 <div>
 <h1 class="title border">h1 Title</h1>
