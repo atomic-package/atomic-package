@@ -40,6 +40,10 @@
   }
 
   /* Module */
+  &.header {
+    min-height: 100%;
+  }
+
   &.modal {
     font-size: 18px;
     font-weight: bold;

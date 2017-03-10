@@ -1,6 +1,8 @@
 .header {
   @include clearfix;
+  box-sizing: border-box;
   min-height: 70px;
+  padding: 0 30px;
   background: #F8F8F8;
 
   .headerLogo {
@@ -9,6 +11,22 @@
       display: flex;
       align-items: center;
       height: 100%;
+    }
+  }
+
+  > .box {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    > * {
+      //flex: 1;
+    }
+
+    &.center {
+      justify-content: center;
+      > * {
+        flex: none;
+      }
     }
   }
 }

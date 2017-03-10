@@ -154,3 +154,10 @@
     }
   }
 }
+
+.iconList {
+  display: flex;
+  > li {
+    margin: 0 6px;
+  }
+}

@@ -1139,6 +1139,10 @@ img.thumbnail.free.round {
   text-align: right;
 }
 
+.title.header {
+  min-height: 100%;
+}
+
 .title.modal {
   font-size: 18px;
   font-weight: bold;
@@ -1299,6 +1303,12 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
 /*
  * Menu
 */
+.menu {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .menu .menuList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2887,6 +2897,16 @@ input.btn.lofty {
   margin-top: 20px;
 }
 
+.iconList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.iconList > li {
+  margin: 0 6px;
+}
+
 /* Table Style
 -------------------------------------------------- */
 /*
@@ -2948,6 +2968,7 @@ input.btn.lofty {
 }
 
 .icon.round .icon {
+  font-size: 22px;
   line-height: 40px;
 }
 
@@ -5575,6 +5596,7 @@ input.btn.lofty {
 }
 
 .iconBtn .icon {
+  font-size: 22px;
   line-height: 40px;
 }
 
@@ -5604,6 +5626,7 @@ input.btn.lofty {
 }
 
 .iconBtn.small .icon {
+  font-size: 18px;
   line-height: 28px;
   vertical-align: top;
 }
@@ -5615,7 +5638,7 @@ input.btn.lofty {
 }
 
 .iconBtn.large .icon {
-  font-size: 24px;
+  font-size: 33px;
   line-height: 58px;
 }
 
@@ -5626,7 +5649,7 @@ input.btn.lofty {
 }
 
 .iconBtn.big .icon {
-  font-size: 32px;
+  font-size: 43px;
   line-height: 78px;
 }
 
@@ -6696,7 +6719,10 @@ select.big {
 /* Header Style
 -------------------------------------------------- */
 .header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 70px;
+  padding: 0 30px;
   background: #F8F8F8;
 }
 
@@ -6718,6 +6744,28 @@ select.big {
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
+}
+
+.header > .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 70px;
+}
+
+.header > .box.center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.header > .box.center > * {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
 }
 
 /* Footer Style
