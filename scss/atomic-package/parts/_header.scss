@@ -1,4 +1,4 @@
-.header {
+header.header {
   @include clearfix;
   box-sizing: border-box;
   min-height: 70px;
@@ -28,5 +28,45 @@
         flex: none;
       }
     }
+  }
+
+  /* Skin */
+  &.primary {
+    background: $colorPrimary;
+  }
+
+  &.green {
+    background: $colorGreen;
+  }
+
+  &.blue {
+    background: $colorBlue;
+  }
+
+  &.orange {
+    background: $colorOrange;
+  }
+
+  &.red {
+    background: $colorRed;
+  }
+
+  /* State */
+  // height
+  &.lower,
+  &.lower > .box {
+    min-height: 40px;
+  }
+  &.low,
+  &.low > .box {
+    min-height: 50px;
+  }
+  &.high,
+  &.high > .box {
+    min-height: 120px;
+  }
+  &.lofty,
+  &.lofty > .box {
+    min-height: 150px;
   }
 }
