@@ -1,4 +1,8 @@
 .header {
+  @include clearfix;
+  min-height: 70px;
+  background: #F8F8F8;
+
   .headerLogo {
     height: 100%;
     a {

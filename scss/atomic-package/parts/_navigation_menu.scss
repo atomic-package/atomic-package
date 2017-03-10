@@ -12,20 +12,23 @@
 .menu {
   .menuList {
     display: flex;
-    justify-content: space-between;
-    border-right: #999 1px solid;
-    li {
-      flex: 1;
-      border-top: #999 1px solid;
-      border-bottom: #999 1px solid;
-      border-left: #999 1px solid;
+    > li {
       a {
-        display: block;
-        min-height: 40px;
-        line-height: 40px;
+        display: inline-block;
+        padding: 0 10px;
+        min-height: 30px;
+        line-height: 30px;
         text-align: center;
         text-decoration: none;
       }
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    &.center {
+      justify-content: center;
     }
   }
 }

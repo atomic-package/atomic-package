@@ -1303,27 +1303,27 @@ h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  border-right: #999 1px solid;
 }
 
-.menu .menuList li {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border-top: #999 1px solid;
-  border-bottom: #999 1px solid;
-  border-left: #999 1px solid;
-}
-
-.menu .menuList li a {
-  display: block;
-  min-height: 40px;
-  line-height: 40px;
+.menu .menuList > li a {
+  display: inline-block;
+  padding: 0 10px;
+  min-height: 30px;
+  line-height: 30px;
   text-align: center;
   text-decoration: none;
+}
+
+.menu .menuList.right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.menu .menuList.center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /*
@@ -6695,6 +6695,17 @@ select.big {
 -------------------------------------------------- */
 /* Header Style
 -------------------------------------------------- */
+.header {
+  min-height: 70px;
+  background: #F8F8F8;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .header .headerLogo {
   height: 100%;
 }

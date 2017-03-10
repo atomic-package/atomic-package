@@ -29,6 +29,51 @@ Atomic-Packageで用意されている、ベースとなるナビゲーション
 <br/>
 <br/>
 
+### Right Position
+
+<nav class="menu">
+  <ul class="menuList right">
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+  </ul>
+</nav>
+
+<br/>
+<br/>
+
+### Center Position
+
+
+<nav class="menu">
+  <ul class="menuList center">
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+    <li>
+      <a href="">Pages</a>
+    </li>
+  </ul>
+</nav>
+
+<br/>
+<br/>
+
 ## Nav List Components
 
 <ul class="navList">
