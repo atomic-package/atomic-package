@@ -513,9 +513,9 @@ var AtomicPackages;
         };
         View.createFromTriggerElement = function (selectors, trigger) {
             var triggerList = [], triggerViewList = [];
-            for (var n = 0; n < selectors.length; n++) {
-                triggerList.push(document.querySelectorAll(selectors[n]));
-            }
+            selectors.forEach(function (selector) {
+                triggerList.push(document.querySelectorAll(selector));
+            });
             triggerList.forEach(function (nodeList) {
                 for (var i = 0; i < nodeList.length; i++) {
                     triggerViewList.push(trigger.fromData(nodeList[i]));

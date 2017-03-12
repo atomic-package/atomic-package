@@ -32,16 +32,16 @@ namespace AtomicPackages {
      * @publicStatic
      * @param string[], Trigger
     **/
-    public static createFromTriggerElement(selectors, trigger) {
-      var triggerList = [],
+    public static createFromTriggerElement(selectors: string[], trigger) {
+      let triggerList = [],
           triggerViewList = [];
 
-      for (var n: number = 0; n < selectors.length; n++) {
-        triggerList.push(document.querySelectorAll(selectors[n]));
-      }
+      selectors.forEach((selector: string) => {
+        triggerList.push(document.querySelectorAll(selector));
+      });
 
       triggerList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
+        for (let i: number = 0; i < nodeList.length; i++) {
           triggerViewList.push(trigger.fromData(nodeList[i]));
         }
       });
@@ -55,7 +55,7 @@ namespace AtomicPackages {
      * @param TriggerView[], Target
     **/
     public static createTargetView(triggerList, target) {
-      var selectors: string[] = this.getTargetSelectors(triggerList),
+      let selectors: string[] = this.getTargetSelectors(triggerList),
           targetNodeList      = this.getTargetNodeList(selectors),
           createTargetList    = this.createFromTargetsElement(targetNodeList, target);
 
@@ -68,7 +68,7 @@ namespace AtomicPackages {
      * @param TriggerView[]
     **/
     public static getTargetSelectors(triggerList) {
-      var selectors: string[] = [];
+      let selectors: string[] = [];
 
       triggerList.forEach((trigger: any) => {
         if(trigger.target) {
@@ -85,9 +85,9 @@ namespace AtomicPackages {
      * @param string[]
     **/
     public static getTargetNodeList(selectors) {
-      var targetNodeList = [];
+      let targetNodeList = [];
 
-      for (var i: number = 0; i < selectors.length; i++) {
+      for (let i: number = 0; i < selectors.length; i++) {
         if(selectors[i] !== "all") {
           targetNodeList.push(document.querySelectorAll(selectors[i]));
         }
@@ -102,10 +102,10 @@ namespace AtomicPackages {
      * @param nodeList[], Target
     **/
     public static createFromTargetsElement(targetList, target) {
-      var targetViewList = [];
+      let targetViewList = [];
 
       targetList.forEach((nodeList: NodeList) => {
-        for (var i: number = 0; i < nodeList.length; i++) {
+        for (let i: number = 0; i < nodeList.length; i++) {
           targetViewList.push(target.fromData({ node: nodeList[i] }));
         }
       });
@@ -119,7 +119,7 @@ namespace AtomicPackages {
      * @param targetView[]
     **/
     public static getTargetViewList(createTargetList) {
-      var targetViewList = [];
+      let targetViewList = [];
 
       createTargetList.forEach((createTarget) => {
         targetViewList.push(createTarget);
