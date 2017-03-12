@@ -1,6 +1,6 @@
-/*
- * Author: Daisuke Takayama
- */
+/**
+ * @author Daisuke Takayama
+ **/
 /// <reference path='../_all.ts' />
 /// <reference path='common/Tween.ts' />
 
