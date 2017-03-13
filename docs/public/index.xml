@@ -971,6 +971,8 @@
 
 &lt;h2 id=&#34;breadcrumb-components:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Components&lt;/h2&gt;
 
+&lt;p&gt;Atomic-Packageで用意されている、ベースとなるパンくずリストStyleの一覧です。&lt;/p&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;

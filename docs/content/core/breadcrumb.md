@@ -5,6 +5,8 @@ date = "2016-11-14"
 
 ## Breadcrumb Components
 
+Atomic-Packageで用意されている、ベースとなるパンくずリストStyleの一覧です。
+
 <nav class="breadcrumb">
   <ul class="breadcrumbList">
     <li>
