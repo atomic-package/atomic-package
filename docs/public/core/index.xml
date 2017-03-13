@@ -945,6 +945,8 @@
 
 &lt;p&gt;Atomic-Packageで用意されている、ベースとなるパンくずリストStyleの一覧です。&lt;/p&gt;
 
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -962,45 +964,32 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&#34;breadcrumb-color-variation:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Color Variation&lt;/h3&gt;
 
-&lt;p&gt;default
-&lt;nav class=&#34;breadcrumb&#34;&gt;
-  &lt;ul class=&#34;breadcrumbList&#34;&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;p&gt;default&lt;/p&gt;
 
-&lt;p&gt;primary
-&lt;nav class=&#34;breadcrumb&#34;&gt;
-  &lt;ul class=&#34;breadcrumbList&#34;&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
 
-&lt;p&gt;green
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -1016,45 +1005,30 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
 
-&lt;p&gt;blue
-&lt;nav class=&#34;breadcrumb&#34;&gt;
-  &lt;ul class=&#34;breadcrumbList&#34;&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;orange
-&lt;nav class=&#34;breadcrumb&#34;&gt;
-  &lt;ul class=&#34;breadcrumbList&#34;&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;p&gt;primary&lt;/p&gt;
 
-&lt;p&gt;red
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -1070,11 +1044,188 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;green&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;blue&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;orange&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;red&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;breadcrumb-size-variation:e1d447ea493ad56ea3484f4f8858ca92&#34;&gt;Breadcrumb Size Variation&lt;/h3&gt;
 
-&lt;p&gt;Mini
+&lt;p&gt;Mini&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList mini&#34;&gt;
     &lt;li&gt;
@@ -1090,9 +1241,30 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
 
-&lt;p&gt;Small
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList mini&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Small&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList small&#34;&gt;
     &lt;li&gt;
@@ -1108,9 +1280,30 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
 
-&lt;p&gt;Default
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList small&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Default&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList&#34;&gt;
     &lt;li&gt;
@@ -1126,9 +1319,30 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
 
-&lt;p&gt;Large
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Large&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList large&#34;&gt;
     &lt;li&gt;
@@ -1144,9 +1358,30 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
 
-&lt;p&gt;Big
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList large&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Big&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
 &lt;nav class=&#34;breadcrumb&#34;&gt;
   &lt;ul class=&#34;breadcrumbList big&#34;&gt;
     &lt;li&gt;
@@ -1162,7 +1397,25 @@
       &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList big&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
