@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webcyou/atomic-package.git"
+    "url": "git+https://github.com/atomic-package/atomic-package.git"
   },
   "keywords": [
     "APBCSS",
@@ -26,9 +26,9 @@
   "author": "daisuke.takayama",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webcyou/atomic-package/issues"
+    "url": "https://github.com/atomic-package/atomic-package/issues"
   },
-  "homepage": "https://github.com/webcyou/atomic-package#readme",
+  "homepage": "https://github.com/atomic-package/atomic-package#readme",
   "devDependencies": {
     "babel-plugin-espower": "^2.3.1",
     "babelify": "^7.3.0",
