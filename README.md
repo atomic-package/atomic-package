@@ -21,7 +21,7 @@ http://apbcss.com/
 
 **Clone the repo:**
 ```
-git clone git@github.com:webcyou/atomic-package.git
+git clone git@github.com:atomic-package/atomic-package.git
 ```
 
 **Install with [Bower](http://bower.io):**
@@ -31,7 +31,7 @@ bower install atomic-package
 
 **Install with [npm](https://www.npmjs.com):**
 ```
-npm install atomic-package
+npm install @atomic-package/core
 ```
 ### What's included
 
