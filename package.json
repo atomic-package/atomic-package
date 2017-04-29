@@ -1,5 +1,5 @@
 {
-  "name": "atomic-package",
+  "name": "@atomic-package/core",
   "version": "0.4.0",
   "description": "APB CSS (Atomic Parts Base CSS) + JavaScript framework.",
   "main": "index.js",
