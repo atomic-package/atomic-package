@@ -36,3 +36,14 @@ data-ap-modal
     </div>
 </div>    
 ```
+
+
+<div data-ap-modal="#modalWindow">モーダルウィンドウ オープン</div>
+
+<br>
+<br>
+<br>
+
+```html
+<div data-ap-modal="#modalWindow">モーダルウィンドウ オープン</div>
+```
