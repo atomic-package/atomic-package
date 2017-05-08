@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascripts on Atomic-Package</title>
-    <link>http://atomic-package.com/javascript/</link>
-    <description>Recent content in Javascripts on Atomic-Package</description>
+    <title>Javascript-rsses on Atomic-Package</title>
+    <link>http://atomic-package.com/javascript/index.xml</link>
+    <description>Recent content in Javascript-rsses on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <guid>http://atomic-package.com/javascript/button/</guid>
       <description>
 
-&lt;h2 id=&#34;badge:5f0b882e8393a79400b8f3ce856e4fc5&#34;&gt;Badge&lt;/h2&gt;
+&lt;h2 id=&#34;badge&#34;&gt;Badge&lt;/h2&gt;
 
 &lt;p&gt;Badge&lt;/p&gt;
 </description>
@@ -31,7 +31,7 @@
       <guid>http://atomic-package.com/javascript/dropdown/</guid>
       <description>
 
-&lt;h2 id=&#34;dropdown:9d0491bd00f57d113dec54ca2bf939bc&#34;&gt;Dropdown&lt;/h2&gt;
+&lt;h2 id=&#34;dropdown&#34;&gt;Dropdown&lt;/h2&gt;
 
 &lt;div data-ap-dropdown&gt;
   &lt;div&gt;トリガーボタン&lt;/div&gt;
@@ -54,9 +54,9 @@
       <guid>http://atomic-package.com/javascript/modalwindow/</guid>
       <description>
 
-&lt;h2 id=&#34;modal:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;Modal&lt;/h2&gt;
+&lt;h2 id=&#34;modal&#34;&gt;Modal&lt;/h2&gt;
 
-&lt;h3 id=&#34;usage:e154499163b02fd7a2365c0ebbe8d567&#34;&gt;Usage&lt;/h3&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 
 &lt;p&gt;ModalComponents CSS Class&lt;/p&gt;
 
@@ -83,6 +83,15 @@
     &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;    
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;div data-ap-modal=&#34;#modalWindow&#34;&gt;モーダルウィンドウ オープン&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div data-ap-modal=&amp;quot;#modalWindow&amp;quot;&amp;gt;モーダルウィンドウ オープン&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -94,7 +103,7 @@
       <guid>http://atomic-package.com/javascript/scrollspy/</guid>
       <description>
 
-&lt;h2 id=&#34;scrollspy:c6d666894d6b19e5d7f313217372cd6a&#34;&gt;ScrollSpy&lt;/h2&gt;
+&lt;h2 id=&#34;scrollspy&#34;&gt;ScrollSpy&lt;/h2&gt;
 </description>
     </item>
     
@@ -106,7 +115,7 @@
       <guid>http://atomic-package.com/javascript/sidemenu/</guid>
       <description>
 
-&lt;h2 id=&#34;sidemenu:fe978637f881faf28760de815362a546&#34;&gt;SideMenu&lt;/h2&gt;
+&lt;h2 id=&#34;sidemenu&#34;&gt;SideMenu&lt;/h2&gt;
 </description>
     </item>
     
@@ -118,7 +127,7 @@
       <guid>http://atomic-package.com/javascript/smoothscroll/</guid>
       <description>
 
-&lt;h2 id=&#34;smoothscroll:82805258e9d85e07417e887cb0cf06e9&#34;&gt;SmoothScroll&lt;/h2&gt;
+&lt;h2 id=&#34;smoothscroll&#34;&gt;SmoothScroll&lt;/h2&gt;
 
 &lt;p class=&#34;btn&#34; data-ap-scroll=&#34;#scroll&#34;&gt;
   &lt;a href=&#34;&#34;&gt;スクロールトリガー&lt;/a&gt;
@@ -149,7 +158,7 @@
       <guid>http://atomic-package.com/javascript/switcher/</guid>
       <description>
 
-&lt;h2 id=&#34;switcher:637082e84aac664439a210d81008ad04&#34;&gt;Switcher&lt;/h2&gt;
+&lt;h2 id=&#34;switcher&#34;&gt;Switcher&lt;/h2&gt;
 
 &lt;ul class=&#34;switcher&#34; data-ap-switcher=&#34;#switcherContents&#34;&gt;
   &lt;li&gt;&lt;a href=&#34;&#34;&gt;switcher001&lt;/a&gt;&lt;/li&gt;
@@ -222,7 +231,7 @@
       <guid>http://atomic-package.com/javascript/tab/</guid>
       <description>
 
-&lt;h2 id=&#34;tab:29ec36439a1f92e5faa0b0964bdd65bd&#34;&gt;Tab&lt;/h2&gt;
+&lt;h2 id=&#34;tab&#34;&gt;Tab&lt;/h2&gt;
 
 &lt;nav class=&#34;tab&#34;&gt;
   &lt;ul class=&#34;tabList&#34; data-ap-tab&gt;
@@ -298,7 +307,7 @@
       <guid>http://atomic-package.com/javascript/toggle/</guid>
       <description>
 
-&lt;h2 id=&#34;toggle:135133a5c217dcbb61560d6f66e4dc0a&#34;&gt;Toggle&lt;/h2&gt;
+&lt;h2 id=&#34;toggle&#34;&gt;Toggle&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;&#34; data-ap-toggle=&#34;#toggleContents&#34;&gt;トグル&lt;/a&gt;&lt;/p&gt;
 
@@ -327,7 +336,7 @@
       <guid>http://atomic-package.com/javascript/</guid>
       <description>
 
-&lt;h3 id=&#34;test:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;test&lt;/h3&gt;
+&lt;h3 id=&#34;test&#34;&gt;test&lt;/h3&gt;
 </description>
     </item>
     

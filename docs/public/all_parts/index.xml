@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All_parts on Atomic-Package</title>
-    <link>http://atomic-package.com/all_parts/</link>
-    <description>Recent content in All_parts on Atomic-Package</description>
+    <title>All_parts-rsses on Atomic-Package</title>
+    <link>http://atomic-package.com/all_parts/index.xml</link>
+    <description>Recent content in All_parts-rsses on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <guid>http://atomic-package.com/all_parts/</guid>
       <description>
 
-&lt;h2 id=&#34;all-parts:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;All Parts&lt;/h2&gt;
+&lt;h2 id=&#34;all-parts&#34;&gt;All Parts&lt;/h2&gt;
 
 &lt;p&gt;あ&lt;/p&gt;
 </description>
