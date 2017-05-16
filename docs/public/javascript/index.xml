@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript-rsses on Atomic-Package</title>
-    <link>http://atomic-package.com/javascript/index.xml</link>
-    <description>Recent content in Javascript-rsses on Atomic-Package</description>
+    <title>Javascripts on Atomic-Package</title>
+    <link>http://atomic-package.com/javascript/</link>
+    <description>Recent content in Javascripts on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 14 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://atomic-package.com/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://atomic-package.com/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Badge Component</title>
@@ -15,12 +17,7 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/button/</guid>
-      <description>
-
-&lt;h2 id=&#34;badge&#34;&gt;Badge&lt;/h2&gt;
-
-&lt;p&gt;Badge&lt;/p&gt;
-</description>
+      <description>Badge Badge</description>
     </item>
     
     <item>
@@ -29,21 +26,7 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/dropdown/</guid>
-      <description>
-
-&lt;h2 id=&#34;dropdown&#34;&gt;Dropdown&lt;/h2&gt;
-
-&lt;div data-ap-dropdown&gt;
-  &lt;div&gt;トリガーボタン&lt;/div&gt;
-  &lt;div class=&#34;dropdown&#34;&gt;ドロップダウンコンテンツ&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div data-ap-dropdown&amp;gt;
-  &amp;lt;div&amp;gt;トリガーボタン&amp;lt;/div&amp;gt;
-  &amp;lt;div class=&amp;quot;dropdown&amp;quot;&amp;gt;ドロップダウンコンテンツ&amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Dropdown トリガーボタン ドロップダウンコンテンツ  &amp;lt;div data-ap-dropdown&amp;gt; &amp;lt;div&amp;gt;トリガーボタン&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;dropdown&amp;quot;&amp;gt;ドロップダウンコンテンツ&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  </description>
     </item>
     
     <item>
@@ -52,47 +35,10 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/modalwindow/</guid>
-      <description>
-
-&lt;h2 id=&#34;modal&#34;&gt;Modal&lt;/h2&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;p&gt;ModalComponents CSS Class&lt;/p&gt;
-
-&lt;p&gt;data-ap-modal&lt;/p&gt;
-
-&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;#modalWindow&#34; data-ap-modal&gt;モーダルウィンドウ&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&#34;modalWindow&#34; id=&#34;modalWindow&#34;&gt;
-  &lt;div class=&#34;modalDialog&#34;&gt;
-      &lt;p class=&#34;modalClose&#34; data-ap-modal-close&gt;&lt;/p&gt;
-      &lt;p class=&#34;text&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-    
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p class=&amp;quot;btn primary&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;#modalWindow&amp;quot; data-ap-modal&amp;gt;モーダルウィンドウ&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-
-&amp;lt;div class=&amp;quot;modalWindow&amp;quot; id=&amp;quot;modalWindow&amp;quot;&amp;gt;
-  &amp;lt;div class=&amp;quot;modalDialog&amp;quot;&amp;gt;
-      &amp;lt;p class=&amp;quot;modalClose&amp;quot; data-ap-modal-close&amp;gt;&amp;lt;/p&amp;gt;
-      &amp;lt;p class=&amp;quot;text&amp;quot;&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      &amp;lt;/p&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;    
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div data-ap-modal=&#34;#modalWindow&#34;&gt;モーダルウィンドウ オープン&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div data-ap-modal=&amp;quot;#modalWindow&amp;quot;&amp;gt;モーダルウィンドウ オープン&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Modal Usage ModalComponents CSS Class
+data-ap-modal
+モーダルウィンドウ
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
@@ -101,10 +47,7 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/scrollspy/</guid>
-      <description>
-
-&lt;h2 id=&#34;scrollspy&#34;&gt;ScrollSpy&lt;/h2&gt;
-</description>
+      <description> ScrollSpy </description>
     </item>
     
     <item>
@@ -113,10 +56,7 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/sidemenu/</guid>
-      <description>
-
-&lt;h2 id=&#34;sidemenu&#34;&gt;SideMenu&lt;/h2&gt;
-</description>
+      <description> SideMenu </description>
     </item>
     
     <item>
@@ -125,29 +65,7 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/smoothscroll/</guid>
-      <description>
-
-&lt;h2 id=&#34;smoothscroll&#34;&gt;SmoothScroll&lt;/h2&gt;
-
-&lt;p class=&#34;btn&#34; data-ap-scroll=&#34;#scroll&#34;&gt;
-  &lt;a href=&#34;&#34;&gt;スクロールトリガー&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p class=&#34;btn green&#34; data-ap-scroll=&#34;400&#34;&gt;
-  &lt;a href=&#34;&#34;&gt;スクロールトリガー2&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div id=&#34;scroll&#34;&gt;&lt;/div&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;p class=&amp;quot;btn&amp;quot; data-ap-scroll=&amp;quot;#scroll&amp;quot;&amp;gt;
-  &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;スクロールトリガー&amp;lt;/a&amp;gt;
-&amp;lt;/p&amp;gt;
-
-&amp;lt;p class=&amp;quot;btn green&amp;quot; data-ap-scroll=&amp;quot;400&amp;quot;&amp;gt;
-  &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;スクロールトリガー2&amp;lt;/a&amp;gt;
-&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> SmoothScroll スクロールトリガー スクロールトリガー2  &amp;lt;p class=&amp;quot;btn&amp;quot; data-ap-scroll=&amp;quot;#scroll&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;スクロールトリガー&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p class=&amp;quot;btn green&amp;quot; data-ap-scroll=&amp;quot;400&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;スクロールトリガー2&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt;  </description>
     </item>
     
     <item>
@@ -156,71 +74,9 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/switcher/</guid>
-      <description>
-
-&lt;h2 id=&#34;switcher&#34;&gt;Switcher&lt;/h2&gt;
-
-&lt;ul class=&#34;switcher&#34; data-ap-switcher=&#34;#switcherContents&#34;&gt;
-  &lt;li&gt;&lt;a href=&#34;&#34;&gt;switcher001&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;switcher002&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&#34;&#34;&gt;switcher003&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;div&gt;switcher004&lt;/div&gt;
-    &lt;a href=&#34;&#34;&gt;&lt;/a&gt;
-    &lt;p&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
- 
-
-&lt;ul class=&#34;switcher&#34; data-ap-switcher&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
- 
-
-&lt;div class=&#34;switcherContents&#34; id=&#34;switcherContents&#34;&gt;
-    &lt;div&gt;ああああああ&lt;/div&gt;
-    &lt;div&gt;いいいいいい&lt;/div&gt;
-    &lt;div&gt;ううううう&lt;/div&gt;
-    &lt;div&gt;えええええ&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;style&gt;
-.switcherContents &gt; div {
-    display: none;
-}
-.switcherContents &gt; .show {
-    display: block;
-}
-&lt;/style&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;ul class=&amp;quot;switcher&amp;quot; data-ap-switcher=&amp;quot;#switcherContents&amp;quot;&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;switcher001&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;switcher002&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;switcher003&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;
-    &amp;lt;div&amp;gt;switcher004&amp;lt;/div&amp;gt;
-    &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
-    &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
-  &amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-
-
-&amp;lt;div class=&amp;quot;switcherContents&amp;quot; id=&amp;quot;switcherContents&amp;quot;&amp;gt;
-  &amp;lt;div&amp;gt;ああああああ&amp;lt;/div&amp;gt;
-  &amp;lt;div&amp;gt;いいいいいい&amp;lt;/div&amp;gt;
-  &amp;lt;div&amp;gt;ううううう&amp;lt;/div&amp;gt;
-  &amp;lt;div&amp;gt;えええええ&amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
- 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;ul class=&amp;quot;switcher&amp;quot; data-ap-switcher&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Switcher switcher001 switcher002 switcher003  switcher004  
+    ああああああ いいいいいい ううううう えええええ   .switcherContents  div { display: none; } .switcherContents  .show { display: block; }  
+&amp;lt;ul class=&amp;quot;switcher&amp;quot; data-ap-switcher=&amp;quot;#switcherContents&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;switcher001&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;switcher002&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;switcher003&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;div&amp;gt;switcher004&amp;lt;/div&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;div class=&amp;quot;switcherContents&amp;quot; id=&amp;quot;switcherContents&amp;quot;&amp;gt; &amp;lt;div&amp;gt;ああああああ&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;いいいいいい&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;ううううう&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;えええええ&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  &amp;lt;ul class=&amp;quot;switcher&amp;quot; data-ap-switcher&amp;gt; &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  </description>
     </item>
     
     <item>
@@ -229,74 +85,8 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/tab/</guid>
-      <description>
-
-&lt;h2 id=&#34;tab&#34;&gt;Tab&lt;/h2&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34; data-ap-tab&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;disable&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;tab&amp;quot;&amp;gt;
-  &amp;lt;ul class=&amp;quot;tabList&amp;quot; data-ap-tab&amp;gt;
-    &amp;lt;li&amp;gt;
-      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
-    &amp;lt;/li&amp;gt;
-    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
-      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Pages&amp;lt;/a&amp;gt;
-    &amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;
-      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Pages&amp;lt;/a&amp;gt;
-    &amp;lt;/li&amp;gt;
-    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
-      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;disable&amp;lt;/a&amp;gt;
-    &amp;lt;/li&amp;gt;
-  &amp;lt;/ul&amp;gt;
-&amp;lt;/nav&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;ul class=&amp;quot;tabList&amp;quot; data-ap-tab&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;nav class=&#34;tab&#34;&gt;
-  &lt;ul class=&#34;tabList&#34; data-ap-tab=&#34;#tabContents&#34;&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;active&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;disable&#34;&gt;
-      &lt;a href=&#34;&#34;&gt;disable&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;div class=&#34;tabContents&#34; id=&#34;tabContents&#34;&gt;
-  &lt;div&gt;タブコンテンツ1&lt;/div&gt;
-  &lt;div&gt;タブコンテンツ2&lt;/div&gt;
-  &lt;div&gt;タブコンテンツ3&lt;/div&gt;
-  &lt;div&gt;タブコンテンツ4&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <description> Tab  Home  Pages   Pages  disable    
+&amp;lt;nav class=&amp;quot;tab&amp;quot;&amp;gt; &amp;lt;ul class=&amp;quot;tabList&amp;quot; data-ap-tab&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Pages&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Pages&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;disable&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;  &amp;lt;ul class=&amp;quot;tabList&amp;quot; data-ap-tab&amp;gt;   Home  Pages   Pages  disable    タブコンテンツ1 タブコンテンツ2 タブコンテンツ3 タブコンテンツ4  </description>
     </item>
     
     <item>
@@ -305,27 +95,9 @@
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/toggle/</guid>
-      <description>
-
-&lt;h2 id=&#34;toggle&#34;&gt;Toggle&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;&#34; data-ap-toggle=&#34;#toggleContents&#34;&gt;トグル&lt;/a&gt;&lt;/p&gt;
-
-&lt;p data-ap-toggle=&#34;#toggleContents&#34;&gt;トグル2&lt;/p&gt;
-
-&lt;div id=&#34;toggleContents&#34;&gt;トグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツ&lt;/div&gt;
-
-&lt;style&gt;
-#toggleContents.active {
-    font-size: 20px;
-}
-&lt;/style&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a href=&amp;quot;&amp;quot; data-ap-toggle=&amp;quot;#toggleContents&amp;quot;&amp;gt;トグル&amp;lt;/a&amp;gt;
-
-&amp;lt;p data-ap-toggle=&amp;quot;#toggleContents&amp;quot;&amp;gt;トグル2&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> Toggle トグル
+トグル2
+トグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツ  #toggleContents.active { font-size: 20px; }  &amp;lt;a href=&amp;quot;&amp;quot; data-ap-toggle=&amp;quot;#toggleContents&amp;quot;&amp;gt;トグル&amp;lt;/a&amp;gt; &amp;lt;p data-ap-toggle=&amp;quot;#toggleContents&amp;quot;&amp;gt;トグル2&amp;lt;/p&amp;gt;  </description>
     </item>
     
     <item>
@@ -334,10 +106,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/</guid>
-      <description>
-
-&lt;h3 id=&#34;test&#34;&gt;test&lt;/h3&gt;
-</description>
+      <description> test </description>
     </item>
     
   </channel>
