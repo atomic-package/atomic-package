@@ -225,8 +225,8 @@ namespace ModalWindowModel {
     public open(targetList) {
       for(var i: number = 0; i < this.targetId.length; i++) {
         for(var n: number = 0; n < targetList.length; n++) {
-          if(targetList[i].id === this.targetId[i]) {
-            targetList[i].open();
+          if(targetList[n].id === this.targetId[i]) {
+            targetList[n].open();
           }
         }
       }
@@ -235,8 +235,8 @@ namespace ModalWindowModel {
     public close(targetList) {
       for(var i: number = 0; i < this.targetId.length; i++) {
         for(var n: number = 0; n < targetList.length; n++) {
-          if(targetList[i].id === this.targetId[i]) {
-            targetList[i].close();
+          if(targetList[n].id === this.targetId[i]) {
+            targetList[n].close();
           }
         }
       }
