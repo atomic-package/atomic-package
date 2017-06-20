@@ -2,14 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atomic-Package</title>
-    <link>http://atomic-package.com/</link>
+    <link>http://atomic-package.com/index.xml</link>
     <description>Recent content on Atomic-Package</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 12 Dec 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://atomic-package.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://atomic-package.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Animation Component</title>
@@ -17,7 +15,10 @@
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/animation/</guid>
-      <description> Animation Components </description>
+      <description>
+
+&lt;h2 id=&#34;animation-components&#34;&gt;Animation Components&lt;/h2&gt;
+</description>
     </item>
     
     <item>
@@ -26,7 +27,10 @@
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/footer/</guid>
-      <description> Footer Components </description>
+      <description>
+
+&lt;h2 id=&#34;footer-components&#34;&gt;Footer Components&lt;/h2&gt;
+</description>
     </item>
     
     <item>
@@ -35,19 +39,200 @@
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/header/</guid>
-      <description>Header Components Size Variation - Height lower Atomic package  
-low Atomic package  
-default Atomic package  
-high Atomic package  
-lofty Atomic package  
-Color Variation default Atomic package  
-primary Atomic package  
-green Atomic package
- 
-blue Atomic package  
-orange Atomic package  
-red Atomic package  
-Layout Variation  Home   Pages   Pages   Pages</description>
+      <description>
+
+&lt;h2 id=&#34;header-components&#34;&gt;Header Components&lt;/h2&gt;
+
+&lt;h3 id=&#34;size-variation-height&#34;&gt;Size Variation - Height&lt;/h3&gt;
+
+&lt;p&gt;lower
+&lt;header class=&#34;header lower&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header mini&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;low
+&lt;header class=&#34;header low&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header mini&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;default
+&lt;header class=&#34;header&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;high
+&lt;header class=&#34;header high&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;lofty
+&lt;header class=&#34;header lofty&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h3&gt;
+
+&lt;p&gt;default
+&lt;header class=&#34;header&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;primary
+&lt;header class=&#34;header primary&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header white&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;green
+&lt;header class=&#34;header green&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header white&#34;&gt;Atomic package&lt;/h1&gt;&lt;br /&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;blue
+&lt;header class=&#34;header blue&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header white&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;orange
+&lt;header class=&#34;header orange&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header white&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;p&gt;red
+&lt;header class=&#34;header red&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header white&#34;&gt;Atomic package&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/header&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;layout-variation&#34;&gt;Layout Variation&lt;/h3&gt;
+
+&lt;header class=&#34;header&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+      &lt;nav class=&#34;menu&#34;&gt;
+        &lt;ul class=&#34;menuList right&#34;&gt;
+          &lt;li&gt;
+            &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;header class=&#34;header&#34;&gt;
+  &lt;div class=&#34;box&#34;&gt;
+    &lt;h1 class=&#34;title header&#34;&gt;Atomic package&lt;/h1&gt;
+    &lt;nav class=&#34;menu&#34;&gt;
+      &lt;ul class=&#34;menuList right&#34;&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;ul class=&#34;iconList right&#34;&gt;
+      &lt;li&gt;
+        &lt;p class=&#34;iconBtn&#34;&gt;
+          &lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-github&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p class=&#34;iconBtn&#34;&gt;
+          &lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-rss&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p class=&#34;iconBtn&#34;&gt;
+          &lt;a href=&#34;#&#34;&gt;&lt;span class=&#34;icon ap-twitter&#34;&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;header class=&#34;header&#34;&gt;
+  &lt;div class=&#34;box center&#34;&gt;
+    &lt;nav class=&#34;menu&#34;&gt;
+      &lt;ul class=&#34;menuList&#34;&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;h1 class=&#34;title header&#34;&gt;Atomic package&lt;/h1&gt;
+    &lt;nav class=&#34;menu&#34;&gt;
+      &lt;ul class=&#34;menuList&#34;&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&#34;&#34;&gt;Pages&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -56,7 +241,10 @@ Layout Variation  Home   Pages   Pages   Pages</description>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/overlay/</guid>
-      <description> Overlay Components </description>
+      <description>
+
+&lt;h2 id=&#34;overlay-components&#34;&gt;Overlay Components&lt;/h2&gt;
+</description>
     </item>
     
     <item>
@@ -65,29 +253,259 @@ Layout Variation  Home   Pages   Pages   Pages</description>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/progressbars/</guid>
-      <description>Progressbar Components Atomic-Packageで用意されている、ベースとなるプログレスバーStyle一覧です。
-Default
-  Color Variation Progressbar Componentsにおける、カラーバリエーション一覧となります。
-Primary  
+      <description>
 
-Green  
+&lt;h2 id=&#34;progressbar-components&#34;&gt;Progressbar Components&lt;/h2&gt;
 
-Blue  
+&lt;p&gt;Atomic-Packageで用意されている、ベースとなるプログレスバーStyle一覧です。&lt;/p&gt;
 
-Orange  
+&lt;p&gt;Default&lt;/p&gt;
 
-Red  
-Stacked Progressbar Componentsにおける、StackedStyleの適応例です。
-   Size Variation - width Progressbar Componentsにおける、サイズバリエーション一覧となります。 サイズバリエーションのwidthを適応した例となります。
-narrow  
-short  
-Default  
-long  
-wide  
-free  
-Size Variation - height サイズバリエーションのheightを適応した例となります。
-lower  
-low</description>
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h3&gt;
+
+&lt;p&gt;Progressbar Componentsにおける、カラーバリエーション一覧となります。&lt;/p&gt;
+
+&lt;p&gt;Primary
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value primary&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Green
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value green&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Blue
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value blue&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Orange
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Red
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value red&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;stacked&#34;&gt;Stacked&lt;/h3&gt;
+
+&lt;p&gt;Progressbar Componentsにおける、StackedStyleの適応例です。&lt;/p&gt;
+
+&lt;div class=&#34;progress free&#34;&gt;
+  &lt;span class=&#34;value green&#34; style=&#34;width: 30%;&#34;&gt;&lt;/span&gt;
+  &lt;span class=&#34;value blue&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;size-variation-width&#34;&gt;Size Variation - width&lt;/h3&gt;
+
+&lt;p&gt;Progressbar Componentsにおける、サイズバリエーション一覧となります。
+サイズバリエーションのwidthを適応した例となります。&lt;/p&gt;
+
+&lt;p&gt;narrow
+&lt;div class=&#34;progress narrow&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;short
+&lt;div class=&#34;progress short&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Default
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;long
+&lt;div class=&#34;progress long&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;wide
+&lt;div class=&#34;progress wide&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;free
+&lt;div class=&#34;progress free&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation-height&#34;&gt;Size Variation - height&lt;/h3&gt;
+
+&lt;p&gt;サイズバリエーションのheightを適応した例となります。&lt;/p&gt;
+
+&lt;p&gt;lower
+&lt;div class=&#34;progress lower&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;low
+&lt;div class=&#34;progress low&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Default
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;high
+&lt;div class=&#34;progress high&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;lofty
+&lt;div class=&#34;progress lofty&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation-width-height&#34;&gt;Size Variation - width &amp;amp; height&lt;/h3&gt;
+
+&lt;p&gt;サイズバリエーションのwidthとheightを組み合わせ適応した例となります。&lt;/p&gt;
+
+&lt;p&gt;mini
+&lt;div class=&#34;progress mini&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;small
+&lt;div class=&#34;progress small&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Default
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;large
+&lt;div class=&#34;progress large&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;big
+&lt;div class=&#34;progress big&#34;&gt;
+  &lt;span class=&#34;value&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;striped&#34;&gt;Striped&lt;/h3&gt;
+
+&lt;p&gt;Progressbar Componentsにおける、StripedStyleの適応例です。&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value striped&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value primary striped&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value green striped&#34; style=&#34;width: 70%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value blue striped&#34; style=&#34;width: 50%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value red striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;striped-size-variation&#34;&gt;Striped Size Variation&lt;/h3&gt;
+
+&lt;p&gt;StripedStyleのサイズバリエーション一覧となります。&lt;/p&gt;
+
+&lt;div class=&#34;progress mini&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress small&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress large&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress big&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;striped-size-variation-height&#34;&gt;Striped Size Variation Height&lt;/h3&gt;
+
+&lt;p&gt;StripedStyleのサイズバリエーションのheightを適応した例となります。&lt;/p&gt;
+
+&lt;div class=&#34;progress lower&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress low&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress high&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div class=&#34;progress lofty&#34;&gt;
+  &lt;span class=&#34;value orange striped&#34; style=&#34;width: 60%;&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -96,7 +514,10 @@ low</description>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/thumbnav/</guid>
-      <description> Thumbnail Navigation Components </description>
+      <description>
+
+&lt;h2 id=&#34;thumbnail-navigation-components&#34;&gt;Thumbnail Navigation Components&lt;/h2&gt;
+</description>
     </item>
     
     <item>
@@ -105,10 +526,15 @@ low</description>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/alert/</guid>
-      <description>Alert アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言
-アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言
-アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言
-アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言</description>
+      <description>
+
+&lt;h2 id=&#34;alert&#34;&gt;Alert&lt;/h2&gt;
+
+&lt;p class=&#34;alert&#34;&gt;アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言&lt;/p&gt;
+&lt;p class=&#34;alert green&#34;&gt;アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言&lt;/p&gt;
+&lt;p class=&#34;alert yellow&#34;&gt;アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言&lt;/p&gt;
+&lt;p class=&#34;alert red&#34;&gt;アラート文言アラート文言アラート文言アラート文言アラート文言アラート文言&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -117,7 +543,12 @@ low</description>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/all_parts/</guid>
-      <description>All Parts あ</description>
+      <description>
+
+&lt;h2 id=&#34;all-parts&#34;&gt;All Parts&lt;/h2&gt;
+
+&lt;p&gt;あ&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -126,39 +557,56 @@ low</description>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/badge/</guid>
-      <description>Badge Components Info
-New
-Free
-Badge Notification 1
-10
-100
-1
-10
-100
-Badge Color Variation Info
-New
-Free
-New
-Free
-Free
-1
-10
-100
-1
-10
-100
-Badge Size Variation Info
-New
-Free
-New
-Free
-Free
-1
-1
-1
-1
-1
-1</description>
+      <description>
+
+&lt;h2 id=&#34;badge-components&#34;&gt;Badge Components&lt;/h2&gt;
+
+&lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
+&lt;p class=&#34;badge&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge&#34;&gt;Free&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-notification&#34;&gt;Badge Notification&lt;/h3&gt;
+
+&lt;p class=&#34;notification&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;notification&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;notification&#34;&gt;100&lt;/p&gt;
+
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-color-variation&#34;&gt;Badge Color Variation&lt;/h3&gt;
+
+&lt;p class=&#34;badge&#34;&gt;Info&lt;/p&gt;
+&lt;p class=&#34;badge primary&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge blue&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge green&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge orange&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge red&#34;&gt;Free&lt;/p&gt;
+
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;10&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;100&lt;/p&gt;
+
+&lt;h3 id=&#34;badge-size-variation&#34;&gt;Badge Size Variation&lt;/h3&gt;
+
+&lt;p class=&#34;badge primary mini&#34;&gt;Info&lt;/p&gt;
+&lt;p class=&#34;badge primary small&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge blue&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge green large&#34;&gt;New&lt;/p&gt;
+&lt;p class=&#34;badge orange big&#34;&gt;Free&lt;/p&gt;
+&lt;p class=&#34;badge red&#34;&gt;Free&lt;/p&gt;
+
+&lt;p class=&#34;badge round red mini&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red small&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red large&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red big&#34;&gt;1&lt;/p&gt;
+&lt;p class=&#34;badge round red&#34;&gt;1&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -167,7 +615,12 @@ Free
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/javascript/button/</guid>
-      <description>Badge Badge</description>
+      <description>
+
+&lt;h2 id=&#34;badge&#34;&gt;Badge&lt;/h2&gt;
+
+&lt;p&gt;Badge&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -176,7 +629,305 @@ Free
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/base/</guid>
-      <description>Base Parts Size CSS Class  Atomic Parts Size   Width x Height Width Height     mini narrow lower   small short low   medium or default medium or default medium or default   large long high   big wide lofty   free free free     Parts Color CSS Class  Atomic Parts Color   Skin Name Semantic Name Details     default default 通常のカラー。付与クラスなし   primary primary メインカラークラス   green success グリーンカラークラス。成功の表現   blue info ブルーカラークラス。   orange warnig オレンジカラークラス。   red error レッドカラークラス。     Ruled Line 罫線を表す hr 要素には、デフォルトのスタイルが定義されています。</description>
+      <description>
+
+&lt;h2 id=&#34;base&#34;&gt;Base&lt;/h2&gt;
+
+&lt;h3 id=&#34;parts-size-css-class&#34;&gt;Parts Size CSS Class&lt;/h3&gt;
+
+&lt;div&gt;
+&lt;table class=&#34;table&#34;&gt;
+  &lt;caption&gt;Atomic Parts Size&lt;/caption&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Width x Height&lt;/th&gt;
+        &lt;th&gt;Width&lt;/th&gt;
+        &lt;th&gt;Height&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mini&lt;/td&gt;
+      &lt;td&gt;narrow&lt;/td&gt;
+      &lt;td&gt;lower&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;small&lt;/td&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;large&lt;/td&gt;
+      &lt;td&gt;long&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;big&lt;/td&gt;
+      &lt;td&gt;wide&lt;/td&gt;
+      &lt;td&gt;lofty&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;free&lt;/td&gt;
+      &lt;td&gt;free&lt;/td&gt;
+      &lt;td&gt;free&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;parts-color-css-class&#34;&gt;Parts Color CSS Class&lt;/h3&gt;
+
+&lt;div&gt;
+&lt;table class=&#34;table&#34;&gt;
+  &lt;caption&gt;Atomic Parts Color&lt;/caption&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Skin Name&lt;/th&gt;
+        &lt;th&gt;Semantic Name&lt;/th&gt;
+        &lt;th&gt;Details&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;default&lt;/td&gt;
+      &lt;td&gt;default&lt;/td&gt;
+      &lt;td&gt;通常のカラー。付与クラスなし&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;primary&lt;/td&gt;
+      &lt;td&gt;primary&lt;/td&gt;
+      &lt;td&gt;メインカラークラス&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;green&lt;/td&gt;
+      &lt;td&gt;success&lt;/td&gt;
+      &lt;td&gt;グリーンカラークラス。成功の表現&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;blue&lt;/td&gt;
+      &lt;td&gt;info&lt;/td&gt;
+      &lt;td&gt;ブルーカラークラス。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;orange&lt;/td&gt;
+      &lt;td&gt;warnig&lt;/td&gt;
+      &lt;td&gt;オレンジカラークラス。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;red&lt;/td&gt;
+      &lt;td&gt;error&lt;/td&gt;
+      &lt;td&gt;レッドカラークラス。&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;ruled-line&#34;&gt;Ruled Line&lt;/h3&gt;
+
+&lt;p&gt;罫線を表す &lt;code&gt;hr&lt;/code&gt; 要素には、デフォルトのスタイルが定義されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;double&#34;&gt;Double&lt;/h4&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr class=&#34;double&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;double&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;dotted&#34;&gt;Dotted&lt;/h4&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr class=&#34;dotted&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;dotted&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;dashed&#34;&gt;dashed&lt;/h4&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+&lt;div class=&#34;box article example&#34;&gt;
+  &lt;hr class=&#34;dashed&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;hr class=&amp;quot;dashed&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;size-variation&#34;&gt;Size Variation&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;large&lt;/strong&gt;
+&lt;hr class=&#34;large&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;large dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;large double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;large dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;big&lt;/strong&gt;
+&lt;hr class=&#34;big&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;big dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;big double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;big dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h4&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;primary&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;primary double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;primary dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;primary dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;green&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;green double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;green dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;green dashed&#34;&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;blue&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;blue double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;blue dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;blue dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;orange&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;orange double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;orange dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;orange dashed&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr class=&#34;red&#34;&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;hr class=&#34;red double&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;red dotted&#34;&gt;
+&lt;br&gt;
+&lt;hr class=&#34;red dashed&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;other-elements&#34;&gt;Other Elements&lt;/h4&gt;
+
+&lt;p&gt;Atomic-Packageでは、 hr以外の要素でも罫線を表現することが可能です。&lt;/p&gt;
+
+&lt;p&gt;その際は、要素に &lt;code&gt;hr&lt;/code&gt; classを付与する事によって、罫線の振る舞いをさせることができます。&lt;/p&gt;
+
+&lt;p class=&#34;hr&#34;&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p class=&amp;quot;hr&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;inline-elements&#34;&gt;Inline Elements&lt;/h3&gt;
+
+&lt;p class=&#34;text&#34;&gt;テキストテキストテキストテキストテキストテキストテキスト&lt;/p&gt;
+
+&lt;p class=&#34;text strong&#34;&gt;Strong is used to indicate strong importance&lt;/p&gt;
+
+&lt;p class=&#34;text strong&#34;&gt;Strong is used to &lt;strong&gt;indicate strong importance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p class=&#34;text&#34;&gt;The &lt;u&gt;u element&lt;/u&gt; is text with an unarticulated, though explicitly rendered, non-textual annotation&lt;/p&gt;
+
+&lt;p class=&#34;text link&#34;&gt;&lt;/p&gt;
+
+&lt;p class=&#34;text&#34;&gt;The &lt;i&gt;i element&lt;/i&gt; is text that is set off from the normal text&lt;/p&gt;
+
+&lt;p&gt;The u element is text with an unarticulated, though explicitly rendered, non-textual annotation&lt;/p&gt;
+
+&lt;p&gt;This text is deleted and&lt;/p&gt;
+
+&lt;p&gt;This text has a strikethrough&lt;/p&gt;
+
+&lt;p&gt;Superscript®&lt;/p&gt;
+
+&lt;p&gt;Subscript for things like H2O&lt;/p&gt;
+
+&lt;p&gt;This small text is small for for fine print, etc.&lt;/p&gt;
+
+&lt;p&gt;Abbreviation: HTML&lt;/p&gt;
+
+&lt;p&gt;Keybord input: Cmd&lt;/p&gt;
+
+&lt;p&gt;“This text is a short inline quotation”&lt;/p&gt;
+
+&lt;p&gt;This is a citation&lt;/p&gt;
+
+&lt;p&gt;The dfn element indicates a definition.&lt;/p&gt;
+
+&lt;p&gt;This is what inline code looks like.&lt;/p&gt;
+
+&lt;p&gt;This is sample output from a computer program&lt;/p&gt;
+
+&lt;p&gt;The variarble element, such as x = y&lt;/p&gt;
+
+&lt;h3 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h3&gt;
+
+&lt;p&gt;Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi velit. Mauris turpis nisl, molestie ut ipsum et, suscipit vehicula odio. Vestibulum interdum vestibulum felis ac molestie. Praesent aliquet quam et libero dictum, vitae dignissim leo eleifend. In in turpis turpis. Quisque justo turpis, vestibulum non enim nec, tempor mollis mi. Sed vel tristique quam.&lt;/p&gt;
+
+&lt;h3 id=&#34;time-element&#34;&gt;Time Element&lt;/h3&gt;
+
+&lt;p&gt;time&lt;/p&gt;
+
+&lt;h3 id=&#34;list-element&#34;&gt;List Element&lt;/h3&gt;
+
+&lt;p&gt;list&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -185,8 +936,29 @@ Free
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/box/</guid>
-      <description> Box Components        検索
- </description>
+      <description>
+
+&lt;h2 id=&#34;box-components&#34;&gt;Box Components&lt;/h2&gt;
+
+&lt;div class=&#34;box&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;box&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;box&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;thumbnailBox&#34;&gt;
+    &lt;p class=&#34;thumbnail&#34;&gt;&lt;img src=&#34;&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;
+    &lt;div class=&#34;details&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;userBox&#34;&gt;
+    &lt;p class=&#34;thumbnail&#34;&gt;&lt;img src=&#34;&#34; alt=&#34;&#34;/&gt;&lt;/p&gt;
+    &lt;div class=&#34;details&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;searchBox&#34;&gt;
+    &lt;p class=&#34;input&#34;&gt;&lt;input type=&#34;search&#34;/&gt;&lt;/p&gt;
+    &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;検索&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -195,9 +967,506 @@ Free
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/breadcrumb/</guid>
-      <description>Breadcrumb Components Atomic-Packageで用意されている、ベースとなるパンくずリストStyleの一覧です。
-Example  Home   Blog  Category  Post    Markup &amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt; &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;  Breadcrumb Color Variation default
-Example  Home   Blog  Category  Post    Markup &amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt; &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;  primary</description>
+      <description>
+
+&lt;h2 id=&#34;breadcrumb-components&#34;&gt;Breadcrumb Components&lt;/h2&gt;
+
+&lt;p&gt;Atomic-Packageで用意されている、ベースとなるパンくずリストStyleの一覧です。&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;breadcrumb-color-variation&#34;&gt;Breadcrumb Color Variation&lt;/h3&gt;
+
+&lt;p&gt;default&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;primary&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;green&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;blue&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;orange&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;red&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;breadcrumb-size-variation&#34;&gt;Breadcrumb Size Variation&lt;/h3&gt;
+
+&lt;p&gt;Mini&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList mini&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList mini&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Small&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList small&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList small&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Default&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Large&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList large&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList large&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Big&lt;/p&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Example&lt;/h3&gt;
+
+&lt;nav class=&#34;breadcrumb&#34;&gt;
+  &lt;ul class=&#34;breadcrumbList big&#34;&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&#34;&#34;&gt;Blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;disable&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Category&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;Post&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h3 class=&#34;title article sub&#34;&gt;Markup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;nav class=&amp;quot;breadcrumb&amp;quot;&amp;gt;
+  &amp;lt;ul class=&amp;quot;breadcrumbList big&amp;quot;&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Blog&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Category&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Post&amp;lt;/a&amp;gt;
+    &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -206,38 +1475,184 @@ Example  Home   Blog  Category  Post    Markup &amp;lt;nav class=&amp;quot;bread
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/button/</guid>
-      <description>Button Components Color Variation Default
-Primary
-Success
-Info
-Warning
-Danger
-button Element Default
-Button
-Success
-Info
-Warning
-Danger
-input Element Button Variation active disable Size Variation Mini button
-Small button
-Default button
-Large button
-Big button
-Size Variation - width narrow
-short
-Default button
-long
-wide
-free
-Size Variation - height lower
-low
-Default button
-high
-lofty
-ボタン (Style) Default Default 
-Button Button 
-Success Success 
-Info Info</description>
+      <description>
+
+&lt;h2 id=&#34;button-components&#34;&gt;Button Components&lt;/h2&gt;
+
+&lt;h3 id=&#34;color-variation&#34;&gt;Color Variation&lt;/h3&gt;
+
+&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green&#34;&gt;&lt;a href=&#34;&#34;&gt;Success&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue&#34;&gt;&lt;a href=&#34;&#34;&gt;Info&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange&#34;&gt;&lt;a href=&#34;&#34;&gt;Warning&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red&#34;&gt;&lt;a href=&#34;&#34;&gt;Danger&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;button-element&#34;&gt;button Element&lt;/h3&gt;
+
+&lt;p class=&#34;btn&#34;&gt;&lt;button&gt;Default&lt;/button&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;button&gt;Button&lt;/button&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green&#34;&gt;&lt;button&gt;Success&lt;/button&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue&#34;&gt;&lt;button&gt;Info&lt;/button&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange&#34;&gt;&lt;button&gt;Warning&lt;/button&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red&#34;&gt;&lt;button&gt;Danger&lt;/button&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;input-element&#34;&gt;input Element&lt;/h3&gt;
+
+&lt;p class=&#34;btn&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;button-variation&#34;&gt;Button Variation&lt;/h3&gt;
+
+&lt;h4 id=&#34;active&#34;&gt;active&lt;/h4&gt;
+
+&lt;p class=&#34;btn active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red active&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;disable&#34;&gt;disable&lt;/h4&gt;
+
+&lt;p class=&#34;btn disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn green disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn blue disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn orange disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
+&lt;p class=&#34;btn red disable&#34;&gt;&lt;input type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation&#34;&gt;Size Variation&lt;/h3&gt;
+
+&lt;p class=&#34;btn primary mini&#34;&gt;&lt;a href=&#34;&#34;&gt;Mini button&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary small&#34;&gt;&lt;a href=&#34;&#34;&gt;Small button&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Default button&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary large&#34;&gt;&lt;a href=&#34;&#34;&gt;Large button&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary big&#34;&gt;&lt;a href=&#34;&#34;&gt;Big button&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation-width&#34;&gt;Size Variation - width&lt;/h3&gt;
+
+&lt;p class=&#34;btn primary narrow&#34;&gt;&lt;a href=&#34;&#34;&gt;narrow&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary short&#34;&gt;&lt;a href=&#34;&#34;&gt;short&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Default button&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary long&#34;&gt;&lt;a href=&#34;&#34;&gt;long&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary wide&#34;&gt;&lt;a href=&#34;&#34;&gt;wide&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary free&#34;&gt;&lt;a href=&#34;&#34;&gt;free&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation-height&#34;&gt;Size Variation - height&lt;/h3&gt;
+
+&lt;p class=&#34;btn primary lower&#34;&gt;&lt;a href=&#34;&#34;&gt;lower&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary low&#34;&gt;&lt;a href=&#34;&#34;&gt;low&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Default button&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary high&#34;&gt;&lt;a href=&#34;&#34;&gt;high&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&#34;btn primary lofty&#34;&gt;&lt;a href=&#34;&#34;&gt;lofty&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;ボタン (Style)&lt;/h2&gt;
+&lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;Default&lt;/a&gt;
+&lt;button class=&#34;btn&#34; value=&#34;&#34;&gt;Default&lt;/button&gt;
+&lt;input class=&#34;btn&#34; type=&#34;submit&#34; value=&#34;Default&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&#34;btn primary&#34; href=&#34;&#34;&gt;Button&lt;/a&gt;
+&lt;button class=&#34;btn primary&#34; value=&#34;&#34;&gt;Button&lt;/button&gt;
+&lt;input class=&#34;btn primary&#34; type=&#34;submit&#34; value=&#34;Button&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&#34;btn green&#34; href=&#34;&#34;&gt;Success&lt;/a&gt;
+&lt;button class=&#34;btn green&#34; value=&#34;&#34;&gt;Success&lt;/button&gt;
+&lt;input class=&#34;btn green&#34; type=&#34;submit&#34; value=&#34;Success&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&#34;btn blue&#34; href=&#34;&#34;&gt;Info&lt;/a&gt;
+&lt;button class=&#34;btn blue&#34; value=&#34;&#34;&gt;Info&lt;/button&gt;
+&lt;input class=&#34;btn blue&#34; type=&#34;submit&#34; value=&#34;Info&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&#34;btn orange&#34; href=&#34;&#34;&gt;Warning&lt;/a&gt;
+&lt;button class=&#34;btn orange&#34; value=&#34;&#34;&gt;Warning&lt;/button&gt;
+&lt;input class=&#34;btn orange&#34; type=&#34;submit&#34; value=&#34;Warning&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;Danger&lt;/a&gt;
+&lt;button class=&#34;btn red&#34; value=&#34;&#34;&gt;Danger&lt;/button&gt;
+&lt;input class=&#34;btn red&#34; type=&#34;submit&#34; value=&#34;Danger&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;dropdown&#34;&gt;DropDown&lt;/h2&gt;
+
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn primary&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn green&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn blue&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn orange&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn mini&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn primary small&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn green&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn blue large&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn orange big&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;dropdown&#34;&gt;
+    &lt;a class=&#34;btn red wide&#34; href=&#34;&#34;&gt;DropDown&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;button-group&#34;&gt;Button Group&lt;/h2&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn&#34;&gt;&lt;a href=&#34;&#34;&gt;Default&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;&lt;!--
+    --&gt;&lt;p class=&#34;btn primary&#34;&gt;&lt;a href=&#34;&#34;&gt;Primary&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;btnGroup&#34;&gt;
+    &lt;a class=&#34;btn red&#34; href=&#34;&#34;&gt;Button&lt;/a&gt;&lt;!--
+    --&gt;&lt;button class=&#34;btn orange&#34; value=&#34;&#34;&gt;Button&lt;/button&gt;&lt;!--
+    --&gt;&lt;input class=&#34;btn red&#34; type=&#34;submit&#34; value=&#34;Button&#34;/&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
@@ -246,325 +1661,123 @@ Info Info</description>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>http://atomic-package.com/core/</guid>
-      <description>Core Components こちらのページでは、Atomic-Packageのすべてのコアコンポーネントを一目で確認することができます。
-Atomic-Packageには、30以上のAtomic型UIPartsと拡張可能コンポーネントがあり、それらを組み合わせることができます。
-Size Variation Class Atomic-PackageのAtomic型UIPartsは、それぞれのパーツに対してサイズを自由に変更することが容易に行うことができます。
- Atomic Parts Size   Width x Height Width Height     mini narrow lower   small short low   medium or default medium or default medium or default   large long high   big wide lofty   free free free     Color Variation Class Atomic-PackageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。
-APB CSSの特性により、skin classとSemantic Classは同等の見た目となります。</description>
-    </item>
-    
-    <item>
-      <title>Dropdown Class</title>
-      <link>http://atomic-package.com/javascript/dropdown/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/dropdown/</guid>
-      <description> Dropdown トリガーボタン ドロップダウンコンテンツ  &amp;lt;div data-ap-dropdown&amp;gt; &amp;lt;div&amp;gt;トリガーボタン&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;dropdown&amp;quot;&amp;gt;ドロップダウンコンテンツ&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  </description>
-    </item>
-    
-    <item>
-      <title>Form Component</title>
-      <link>http://atomic-package.com/core/form/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/form/</guid>
-      <description>Form Components Input Element default
-password
-search
-Input WrapElement default
-password
-search
-Input Size Variation Width narrow short default long wide free Height lower low default high lofty Width x Height mini small default large big free Input Validation Status Input warning Input error Input success Input Color Variation Input warning Input error Input success Radio Button Element Radio Color Variation Radio Size Variation CheckBox Element CheckBox Color Variation</description>
-    </item>
-    
-    <item>
-      <title>Icon Component</title>
-      <link>http://atomic-package.com/core/icon/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/icon/</guid>
-      <description>Icon Components Place vector icons anywhere using an icon font.
-Icon mapping glass music search envelope-o heart star star-o user film th-large th th-list check remove close times search-plus search-minus power-off signal gear cog trash-o home file-o clock-o road download arrow-circle-o-down arrow-circle-o-up inbox play-circle-o rotate-right repeat refresh list-alt lock flag headphones volume-off volume-down volume-up qrcode barcode tag tags book bookmark print camera font bold italic text-height text-width align-left align-center align-right align-justify list dedent outdent indent video-camera photo image picture-o pencil map-marker adjust tint edit pencil-square-o share-square-o check-square-o arrows step-backward fast-backward backward play pause stop forward fast-forward step-forward eject chevron-left chevron-right plus-circle minus-circle times-circle check-circle question-circle info-circle crosshairs times-circle-o check-circle-o ban arrow-left arrow-right arrow-up arrow-down mail-forward share expand compress plus minus asterisk exclamation-circle gift leaf fire eye eye-slash warning exclamation-triangle plane calendar random comment magnet chevron-up chevron-down retweet shopping-cart folder folder-open arrows-v arrows-h bar-chart-o bar-chart twitter-square facebook-square camera-retro key gears cogs comments thumbs-o-up thumbs-o-down star-half heart-o sign-out linkedin-square thumb-tack external-link sign-in trophy github-square upload lemon-o phone square-o bookmark-o phone-square twitter facebook-f facebook github unlock credit-card rss hdd-o bullhorn bell certificate hand-o-right hand-o-left hand-o-up hand-o-down arrow-circle-left arrow-circle-right arrow-circle-up arrow-circle-down globe wrench tasks filter briefcase arrows-alt group users chain link cloud flask cut scissors copy files-o paperclip save floppy-o square navicon reorder bars list-ul list-ol strikethrough underline table magic truck pinterest pinterest-square google-plus-square google-plus money caret-down caret-up caret-left caret-right columns unsorted sort sort-down sort-desc sort-up sort-asc envelope linkedin rotate-left undo legal gavel dashboard tachometer comment-o comments-o flash bolt sitemap umbrella paste clipboard lightbulb-o exchange cloud-download cloud-upload user-md stethoscope suitcase bell-o coffee cutlery file-text-o building-o hospital-o ambulance medkit fighter-jet beer h-square plus-square angle-double-left angle-double-right angle-double-up angle-double-down angle-left angle-right angle-up angle-down desktop laptop tablet mobile-phone mobile circle-o quote-left quote-right spinner circle mail-reply reply github-alt folder-o folder-open-o smile-o frown-o meh-o gamepad keyboard-o flag-o flag-checkered terminal code mail-reply-all reply-all star-half-empty star-half-full star-half-o location-arrow crop code-fork unlink chain-broken question info exclamation superscript subscript eraser puzzle-piece microphone microphone-slash shield calendar-o fire-extinguisher rocket maxcdn chevron-circle-left chevron-circle-right chevron-circle-up chevron-circle-down html5 css3 anchor unlock-alt bullseye ellipsis-h ellipsis-v rss-square play-circle ticket minus-square minus-square-o level-up level-down check-square pencil-square external-link-square share-square compass toggle-down caret-square-o-down toggle-up caret-square-o-up toggle-right caret-square-o-right euro eur gbp dollar usd rupee inr cny rmb yen jpy ruble rouble rub won krw bitcoin btc file file-text sort-alpha-asc sort-alpha-desc sort-amount-asc sort-amount-desc sort-numeric-asc sort-numeric-desc thumbs-up thumbs-down youtube-square youtube xing xing-square youtube-play dropbox stack-overflow instagram flickr adn bitbucket bitbucket-square tumblr tumblr-square long-arrow-down long-arrow-up long-arrow-left long-arrow-right apple windows android linux dribbble skype foursquare trello female male gittip gratipay sun-o moon-o archive bug vk weibo renren pagelines stack-exchange arrow-circle-o-right arrow-circle-o-left toggle-left caret-square-o-left dot-circle-o wheelchair vimeo-square turkish-lira try plus-square-o space-shuttle slack envelope-square wordpress openid institution bank university mortar-board graduation-cap yahoo google reddit reddit-square stumbleupon-circle stumbleupon delicious digg pied-piper pied-piper-alt drupal joomla language fax building child paw spoon cube cubes behance behance-square steam steam-square recycle automobile car cab taxi tree spotify deviantart soundcloud database file-pdf-o file-word-o file-excel-o file-powerpoint-o file-photo-o file-picture-o file-image-o file-zip-o file-archive-o file-sound-o file-audio-o file-movie-o file-video-o file-code-o vine codepen jsfiddle life-bouy life-buoy life-saver support life-ring circle-o-notch ra rebel ge empire git-square git hacker-news tencent-weibo qq wechat weixin send paper-plane send-o paper-plane-o history genderless circle-thin header paragraph sliders share-alt share-alt-square bomb soccer-ball-o futbol-o tty binoculars plug slideshare twitch yelp newspaper-o wifi calculator paypal google-wallet cc-visa cc-mastercard cc-discover cc-amex cc-paypal cc-stripe bell-slash bell-slash-o trash copyright at eyedropper paint-brush birthday-cake area-chart pie-chart line-chart lastfm lastfm-square toggle-off toggle-on bicycle bus ioxhost angellist cc shekel sheqel ils meanpath buysellads connectdevelop dashcube forumbee leanpub sellsy shirtsinbulk simplybuilt skyatlas cart-plus cart-arrow-down diamond ship user-secret motorcycle street-view heartbeat venus mars mercury transgender transgender-alt venus-double mars-double venus-mars mars-stroke mars-stroke-v mars-stroke-h neuter facebook-official pinterest-p whatsapp server user-plus user-times hotel bed viacoin train subway medium-logo 500px amazon balance-scale battery-empty battery-0 battery-quarter battery-1 battery-half battery-2 battery-three-quarters battery-3 battery-full battery-4 black-tie calendar-check-o calendar-minus-o calendar-plus-o calendar-times-o cc-diners-club cc-jcb chrome clone commenting commenting-o contao creative-commons expeditedssl firefox fonticons get-pocket gg gg-circle hand-lizard-o hand-stop-o hand-paper-o hand-peace-o hand-pointer-o hand-grab-o hand-rock-o hand-scissors-o hand-spock-o hourglass hourglass-o hourglass-1 hourglass-start hourglass-2 hourglass-half hourglass-3 hourglass-end houzz i-cursor industry internet-explorer map map-o map-pin map-signs mouse-pointer object-group object-ungroup odnoklassniki odnoklassniki-square opencart opera optin-monster registered safari sticky-note sticky-note-o tv television trademark tripadvisor vimeo wikipedia-w yc y-combinator yc-square y-combinator-square // 4.</description>
-    </item>
-    
-    <item>
-      <title>List Component</title>
-      <link>http://atomic-package.com/core/list/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/list/</guid>
-      <description>List Components Atomic-Packageで用意されている、ベースとなるリストStyleの一覧です。
-Example  ul elements list  Markup &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;ul elements list&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example  ol elements list  Markup &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt;ol elements list&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;  Example List disc  Markup &amp;lt;ul class=&amp;quot;list disc&amp;quot;&amp;gt; &amp;lt;li&amp;gt;List disc&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example List circle  Markup &amp;lt;ul class=&amp;quot;list circle&amp;quot;&amp;gt; &amp;lt;li&amp;gt;List circle&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list square  Markup &amp;lt;ul class=&amp;quot;list square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list square&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list lowerRoman  Markup &amp;lt;ul class=&amp;quot;list lowerRoman&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list lowerRoman&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list upperRoman  Markup &amp;lt;ul class=&amp;quot;list upperRoman&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list upperRoman&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list lowerGreek  Markup &amp;lt;ul class=&amp;quot;list lowerGreek&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list lowerGreek&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list decimal  Markup &amp;lt;ul class=&amp;quot;list decimal&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list decimal&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list decimalLeadingZero  Markup &amp;lt;ul class=&amp;quot;list decimalLeadingZero&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list decimalLeadingZero&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list lowerLatin  Markup &amp;lt;ul class=&amp;quot;list lowerLatin&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list lowerLatin&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list lowerAlpha  Markup &amp;lt;ul class=&amp;quot;list lowerAlpha&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list lowerAlpha&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list upperLatin  Markup &amp;lt;ul class=&amp;quot;list upperLatin&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list upperLatin&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list upperAlpha  Markup &amp;lt;ul class=&amp;quot;list upperAlpha&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list upperAlpha&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list cjkIdeographic  Markup &amp;lt;ul class=&amp;quot;list cjkIdeographic&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list cjkIdeographic&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list hiragana  Markup &amp;lt;ul class=&amp;quot;list hiragana&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list hiragana&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list katakana  Markup &amp;lt;ul class=&amp;quot;list katakana&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list katakana&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list hiraganaIroha  Markup &amp;lt;ul class=&amp;quot;list hiraganaIroha&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list hiraganaIroha&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list katakanaIroha  Markup &amp;lt;ul class=&amp;quot;list katakanaIroha&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list katakanaIroha&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list hebrew  Markup &amp;lt;ul class=&amp;quot;list hebrew&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list hebrew&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list armenian  Markup &amp;lt;ul class=&amp;quot;list armenian&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list armenian&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example list georgian  Markup &amp;lt;ul class=&amp;quot;list georgian&amp;quot;&amp;gt; &amp;lt;li&amp;gt;list georgian&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example textList  Markup &amp;lt;ul class=&amp;quot;textList&amp;quot;&amp;gt; &amp;lt;li&amp;gt;textList&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  Example           Markup &amp;lt;ul class=&amp;quot;thumbnailList&amp;quot;&amp;gt; &amp;lt;li&amp;gt; &amp;lt;p class=&amp;quot;thumbnail round&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;img/thumbnail_01.</description>
-    </item>
-    
-    <item>
-      <title>ModalWindow Class</title>
-      <link>http://atomic-package.com/javascript/modalwindow/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/modalwindow/</guid>
-      <description>Modal Usage ModalComponents CSS Class
-data-ap-modal
-モーダルウィンドウ
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>ModalWindow Component</title>
-      <link>http://atomic-package.com/core/modalwindow/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/modalwindow/</guid>
-      <description>ModalWindow Components Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>Nav Component</title>
-      <link>http://atomic-package.com/core/nav/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/nav/</guid>
-      <description> Nav Components Atomic-Packageで用意されている、ベースとなるナビゲーションStyleの一覧です。
-Menu List Components  Home   Pages   Pages   Pages     
-Right Position  Home   Pages   Pages   Pages     
-Center Position  Home   Pages   Pages   Pages     
-Nav List Components Active Item Item  Color Variation Class Active Item Item  Active Item Item  Active Item Item  Active Item Item  Active Item Item  Size Variation Class Active Item Item  Active Item Item  Active Item Item  Active Item Item  Active Item Item  Size Variation - width Active Item Item  Active Item Item  Active Item Item  Active Item Item  Active Item Item  Active Item Item  Size Variation - height Active Item Item  Active Item Item  Active Item Item  Active Item Item  Active Item Item  </description>
-    </item>
-    
-    <item>
-      <title>Navbar Component</title>
-      <link>http://atomic-package.com/core/navbar/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/navbar/</guid>
-      <description>Navbar Components Active Item Item   Active Item Item  Active Item Item    HomesubTitle  ItemsubTitle ItemsubTitle  Link 検索
-  Btn    Active Item Item  検索
-  Btn     Home   Pages   Pages   Pages      ナビバー サイズ Active Item Item  
-Active Item Item   Active Item Item   Active Item Item   Active Item Item   ナビバー カラー Active Item Item</description>
-    </item>
-    
-    <item>
-      <title>Pagination Component</title>
-      <link>http://atomic-package.com/core/pagination/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/pagination/</guid>
-      <description>Pagination Components    1   2  3   4      skin square
-   1   2  3   4      previous &amp;amp; next
-  1   2  3   4  Next     Icon
-   1   2  3   4            1  2               1  2            1   2  3   4         1   2  3   4      Pagination Size Variation mini</description>
-    </item>
-    
-    <item>
-      <title>ScrollSpy Component</title>
-      <link>http://atomic-package.com/javascript/scrollspy/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/scrollspy/</guid>
-      <description> ScrollSpy </description>
-    </item>
-    
-    <item>
-      <title>SideMenu Class</title>
-      <link>http://atomic-package.com/javascript/sidemenu/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/sidemenu/</guid>
-      <description> SideMenu </description>
-    </item>
-    
-    <item>
-      <title>SmoothScroll Component</title>
-      <link>http://atomic-package.com/javascript/smoothscroll/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/smoothscroll/</guid>
-      <description> SmoothScroll スクロールトリガー スクロールトリガー2  &amp;lt;p class=&amp;quot;btn&amp;quot; data-ap-scroll=&amp;quot;#scroll&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;スクロールトリガー&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p class=&amp;quot;btn green&amp;quot; data-ap-scroll=&amp;quot;400&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;スクロールトリガー2&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt;  </description>
-    </item>
-    
-    <item>
-      <title>SubNav Component</title>
-      <link>http://atomic-package.com/core/subnav/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/subnav/</guid>
-      <description> SubNav サブナビリスト list list list  list list list  list list list  サブナビリスト サイズ list list list  list list list  list list list  サブナビリスト カラー list list list  list list list  list list list  </description>
-    </item>
-    
-    <item>
-      <title>Switcher Component</title>
-      <link>http://atomic-package.com/javascript/switcher/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/switcher/</guid>
-      <description> Switcher switcher001 switcher002 switcher003  switcher004  
-    ああああああ いいいいいい ううううう えええええ   .switcherContents  div { display: none; } .switcherContents  .show { display: block; }  
-&amp;lt;ul class=&amp;quot;switcher&amp;quot; data-ap-switcher=&amp;quot;#switcherContents&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;switcher001&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;switcher002&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;switcher003&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;div&amp;gt;switcher004&amp;lt;/div&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;div class=&amp;quot;switcherContents&amp;quot; id=&amp;quot;switcherContents&amp;quot;&amp;gt; &amp;lt;div&amp;gt;ああああああ&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;いいいいいい&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;ううううう&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;えええええ&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  &amp;lt;ul class=&amp;quot;switcher&amp;quot; data-ap-switcher&amp;gt; &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  </description>
-    </item>
-    
-    <item>
-      <title>Tab Component</title>
-      <link>http://atomic-package.com/core/tab/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/tab/</guid>
-      <description>Tab Components  Home  Pages   Pages  disable    
-Tab Color Variation Home   Pages   Pages   Pages    
-Home   Pages   Pages   Pages    
-Home   Pages   Pages   Pages    
-Home   Pages   Pages   Pages</description>
-    </item>
-    
-    <item>
-      <title>Tab Component</title>
-      <link>http://atomic-package.com/javascript/tab/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/tab/</guid>
-      <description> Tab  Home  Pages   Pages  disable    
-&amp;lt;nav class=&amp;quot;tab&amp;quot;&amp;gt; &amp;lt;ul class=&amp;quot;tabList&amp;quot; data-ap-tab&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;active&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Pages&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;Pages&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;disable&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;disable&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;  &amp;lt;ul class=&amp;quot;tabList&amp;quot; data-ap-tab&amp;gt;   Home  Pages   Pages  disable    タブコンテンツ1 タブコンテンツ2 タブコンテンツ3 タブコンテンツ4  </description>
-    </item>
-    
-    <item>
-      <title>Table Component</title>
-      <link>http://atomic-package.com/core/table/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/table/</guid>
-      <description> Table テーブル default Table caption   Table Heading Table Heading Table Heading     Table Footer Table Footer Table Footer     Table Data Table Data Table Data   Table Data Table Data Table Data   Table Data Table Data Table Data    テーブル striped Table caption   Table Heading Table Heading Table Heading     Table Footer Table Footer Table Footer     Table Data Table Data Table Data   Table Data Table Data Table Data   Table Data Table Data Table Data    テーブル color Table caption   Table Heading Table Heading Table Heading     Table Footer Table Footer Table Footer     Table Data Table Data Table Data   Table Data Table Data Table Data   Table Data Table Data Table Data    テーブル border Table caption   Table Heading Table Heading Table Heading     Table Footer Table Footer Table Footer     Table Data Table Data Table Data   Table Data Table Data Table Data   Table Data Table Data Table Data    </description>
-    </item>
-    
-    <item>
-      <title>Text Component</title>
-      <link>http://atomic-package.com/core/text/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/text/</guid>
-      <description>Text Components Defines different styles for the text. Atomic-Packageで用意されている、ベースとなるテキストStyleの一覧です。
-テキストテキストテキストテキストテキストテキストテキスト
-Strong is used to indicate strong importance
-Strong is used to indicate strong importance
-The u element is text with an unarticulated, though explicitly rendered, non-textual annotation
-This is a text link
-The i element is text that is set off from the normal text
-Text Link Size Variation Text Componentsにおける、サイズバリエーションの一覧となります。
-テキストテキストテキストテキストテキストテキストテキスト
-テキストテキストテキストテキストテキストテキストテキスト
-テキストテキストテキストテキストテキストテキストテキスト
-テキストテキストテキストテキストテキストテキストテキスト
-テキストテキストテキストテキストテキストテキストテキスト
-また、Atomic-Packageでは、テキスト単位だけではなく、テキスト最小サイズの1文字単位でも扱うことができます。
-string
-String</description>
-    </item>
-    
-    <item>
-      <title>Thumbnail Component</title>
-      <link>http://atomic-package.com/core/thumbnail/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/thumbnail/</guid>
-      <description>Thumbnail Components Image Elements   Wrap Elements   Color Variation --
+      <description>
 
---
-Size Variation  --   --  
-Size Variation - round --
---
-Size Variation - circle --
---
+&lt;h2 id=&#34;core-components&#34;&gt;Core Components&lt;/h2&gt;
 
-Size Variation - border --
---
+&lt;p&gt;こちらのページでは、Atomic-Packageのすべてのコアコンポーネントを一目で確認することができます。&lt;/p&gt;
 
-Size Variation - frame --
---
-Caption Components Size Variation - Caption title title title title title --</description>
-    </item>
-    
-    <item>
-      <title>Title Component</title>
-      <link>http://atomic-package.com/core/title/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/title/</guid>
-      <description>Title Components Atomic-Packageで用意されている、ベースとなるタイトルStyleの一覧です。
-Headings  h1 Title h2 Title h3 Title h4 Title h5 Title h6 Title  Color Variation Title Componentsにおける、カラーバリエーション一覧となります。
- h1 Title h1 Title h1 Title h1 Title h1 Title h1 Title  Size Variation Title Componentsにおける、サイズバリエーション一覧となります。
- h1 Title h1 Title h1 Title h1 Title h1 Title h2 Title h2 Title h2 Title h2 Title h2 Title h3 Title h3 Title h3 Title h3 Title h3 Title h4 Title h4 Title h4 Title h4 Title h4 Title h5 Title h5 Title h5 Title h5 Title h5 Title h6 Title h6 Title h6 Title h6 Title h6 Title  Border Skin Style Title Componentsにおける、ボーダースキンのバリエーション一覧となります。</description>
-    </item>
-    
-    <item>
-      <title>Toggle Component</title>
-      <link>http://atomic-package.com/javascript/toggle/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/toggle/</guid>
-      <description> Toggle トグル
-トグル2
-トグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツトグルコンテンツ  #toggleContents.active { font-size: 20px; }  &amp;lt;a href=&amp;quot;&amp;quot; data-ap-toggle=&amp;quot;#toggleContents&amp;quot;&amp;gt;トグル&amp;lt;/a&amp;gt; &amp;lt;p data-ap-toggle=&amp;quot;#toggleContents&amp;quot;&amp;gt;トグル2&amp;lt;/p&amp;gt;  </description>
-    </item>
-    
-    <item>
-      <title>Utility</title>
-      <link>http://atomic-package.com/core/utility/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/utility/</guid>
-      <description> Utility </description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>http://atomic-package.com/post/profile/</link>
-      <pubDate>Fri, 24 Jul 2015 11:12:45 +0900</pubDate>
-      
-      <guid>http://atomic-package.com/post/profile/</guid>
-      <description> Profile </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://atomic-package.com/core/column/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/core/column/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://atomic-package.com/get_started/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/get_started/</guid>
-      <description> test </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://atomic-package.com/javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/javascript/</guid>
-      <description> test </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://atomic-package.com/theme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/theme/</guid>
-      <description> test </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://atomic-package.com/tutorials/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://atomic-package.com/tutorials/</guid>
-      <description> test </description>
+&lt;p&gt;Atomic-Packageには、30以上のAtomic型UIPartsと拡張可能コンポーネントがあり、それらを組み合わせることができます。&lt;/p&gt;
+
+&lt;h3 id=&#34;size-variation-class&#34;&gt;Size Variation Class&lt;/h3&gt;
+
+&lt;p&gt;Atomic-PackageのAtomic型UIPartsは、それぞれのパーツに対してサイズを自由に変更することが容易に行うことができます。&lt;/p&gt;
+
+&lt;div&gt;
+&lt;table class=&#34;table&#34;&gt;
+  &lt;caption&gt;Atomic Parts Size&lt;/caption&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Width x Height&lt;/th&gt;
+        &lt;th&gt;Width&lt;/th&gt;
+        &lt;th&gt;Height&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mini&lt;/td&gt;
+      &lt;td&gt;narrow&lt;/td&gt;
+      &lt;td&gt;lower&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;small&lt;/td&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+      &lt;td&gt;medium or default&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;large&lt;/td&gt;
+      &lt;td&gt;long&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;big&lt;/td&gt;
+      &lt;td&gt;wide&lt;/td&gt;
+      &lt;td&gt;lofty&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;free&lt;/td&gt;
+      &lt;td&gt;free&lt;/td&gt;
+      &lt;td&gt;free&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;color-variation-class&#34;&gt;Color Variation Class&lt;/h3&gt;
+
+&lt;p&gt;Atomic-PackageのAtomic型UIPartsは、それぞれのカラーに変更することが容易に行うことができます。&lt;/p&gt;
+
+&lt;p&gt;APB CSSの特性により、skin classとSemantic Classは同等の見た目となります。&lt;/p&gt;
+
+&lt;table class=&#34;table&#34;&gt;
+  &lt;caption&gt;Atomic Parts Color&lt;/caption&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Skin Class&lt;/th&gt;
+        &lt;th&gt;Semantic Class&lt;/th&gt;
+        &lt;th&gt;Details&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;default&lt;/td&gt;
+      &lt;td&gt;default&lt;/td&gt;
+      &lt;td&gt;デフォルトカラー&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;primary&lt;/td&gt;
+      &lt;td&gt;primary&lt;/td&gt;
+      &lt;td&gt;プライマリーカラー&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;green&lt;/td&gt;
+      &lt;td&gt;success&lt;/td&gt;
+      &lt;td&gt;グリーンカラー&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;blue&lt;/td&gt;
+      &lt;td&gt;info&lt;/td&gt;
+      &lt;td&gt;ブルーカラー&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;orange&lt;/td&gt;
+      &lt;td&gt;warning&lt;/td&gt;
+      &lt;td&gt;オレンジカラー&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;red&lt;/td&gt;
+      &lt;td&gt;danger&lt;/td&gt;
+      &lt;td&gt;レッドカラー&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;breakpoints&#34;&gt;Breakpoints&lt;/h3&gt;
+
+&lt;p&gt;Atomic-Packageでは、レスポンシブ対応としてStyle切り替えのBreakpointを設けております。&lt;/p&gt;
+
+&lt;p&gt;各Breakpointは以下の通りとなります。&lt;/p&gt;
+
+&lt;h3 id=&#34;css-architecture&#34;&gt;CSS architecture&lt;/h3&gt;
+
+&lt;p&gt;Atomic-PackageのCSSアーキテクチャには、Atomic Designをベースとした「APBCSS (Atomic Parts Base CSS)」を採用しております。
+よって、それぞれのAtomic型UIPartsには、デフォルトでは margin などによるレイアウトスタイルが適応されていない状態となります。&lt;/p&gt;
+</description>
     </item>
     
   </channel>

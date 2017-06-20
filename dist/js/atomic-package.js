@@ -1091,8 +1091,8 @@ var ModalWindowModel;
         Trigger.prototype.open = function (targetList) {
             for (var i = 0; i < this.targetId.length; i++) {
                 for (var n = 0; n < targetList.length; n++) {
-                    if (targetList[i].id === this.targetId[i]) {
-                        targetList[i].open();
+                    if (targetList[n].id === this.targetId[i]) {
+                        targetList[n].open();
                     }
                 }
             }
@@ -1100,8 +1100,8 @@ var ModalWindowModel;
         Trigger.prototype.close = function (targetList) {
             for (var i = 0; i < this.targetId.length; i++) {
                 for (var n = 0; n < targetList.length; n++) {
-                    if (targetList[i].id === this.targetId[i]) {
-                        targetList[i].close();
+                    if (targetList[n].id === this.targetId[i]) {
+                        targetList[n].close();
                     }
                 }
             }

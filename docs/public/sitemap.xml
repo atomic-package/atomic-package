@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://atomic-package.com/</loc>
+    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://atomic-package.com/core/animation/</loc>
     <lastmod>2016-12-12T00:00:00+00:00</lastmod>
   </url>
@@ -209,61 +214,6 @@
   
   <url>
     <loc>http://atomic-package.com/tutorials/</loc>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/all_parts/</loc>
-    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/</loc>
-    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/core/</loc>
-    <lastmod>2016-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/get_started/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/javascript/</loc>
-    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/post/</loc>
-    <lastmod>2015-07-24T11:12:45+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/theme/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://atomic-package.com/tutorials/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
