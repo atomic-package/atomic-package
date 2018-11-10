@@ -1,3 +1,6 @@
 [submodule "docs"]
 	path = docs
 	url = git@github.com:atomic-package/docs.git
+[submodule "design"]
+	path = design
+	url = git@github.com:atomic-package/design.git
