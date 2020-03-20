@@ -1,6 +1,6 @@
 {
   "name": "atomic-package",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "APB CSS (Atomic Parts Base CSS) + JavaScript framework.",
   "main": "dist/js/atomic-package.min.js",
   "scripts": {
