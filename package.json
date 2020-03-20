@@ -1,8 +1,8 @@
 {
-  "name": "@atomic-package/atomic-package",
-  "version": "0.0.1",
+  "name": "atomic-package",
+  "version": "0.4.2",
   "description": "APB CSS (Atomic Parts Base CSS) + JavaScript framework.",
-  "main": "index.js",
+  "main": "dist/js/atomic-package.min.js",
   "scripts": {
     "boot": "concurrent \"npm run boot:hugo\" \"npm run boot:gulp\"",
     "boot:hugo": "docs/boot.sh",

@@ -3,7 +3,7 @@
 
 ## APB CSS (Atomic Parts Base CSS) + JavaScript framework.
 
-[![GitHub version](https://badge.fury.io/gh/webcyou%2Fatomic-package.svg)](https://badge.fury.io/gh/webcyou%2Fatomic-package)
+[![GitHub version](https://badge.fury.io/gh/atomic-package%2Fatomic-package.svg)](https://badge.fury.io/gh/atomic-package%2Fatomic-package)
 [![npm version](https://badge.fury.io/js/atomic-package.svg)](https://badge.fury.io/js/atomic-package)
 
 **APB CSS**
@@ -54,17 +54,14 @@ atomic-package/
 
 ## Documentation
 
-Atomic Package's documentation, included in this repo in the root directory, is built with Hugo.
+![document_top_green](https://user-images.githubusercontent.com/1584153/76678374-9f899c00-661a-11ea-8fb7-9649847c2fc2.png)
 
-### Running documentation locally
 
-If necessary, install Hugo and other Go.
+* [AtomicPackage Official](https://atomic-package.com/)
 
-```
-npm run boot
-```
+### Documentation Repository
 
-Open `http://localhost:1313` in your browser.
+[atomic-package/docs](https://github.com/atomic-package/docs)
 
 ## Creators
 
