@@ -1,8 +1,0 @@
-{
-  "resolution": "main",
-  "tree": {
-    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/3629661ac281f717087328226a9be23683c5daee/browser-pack/browser-pack.d.ts",
-    "raw": "registry:dt/browser-pack#6.0.1+20160620231204",
-    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/3629661ac281f717087328226a9be23683c5daee/browser-pack/browser-pack.d.ts"
-  }
-}

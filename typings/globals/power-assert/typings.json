@@ -1,8 +1,0 @@
-{
-  "resolution": "main",
-  "tree": {
-    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/695da95a2405a9d6aae11944174227e1e7716e37/power-assert/power-assert.d.ts",
-    "raw": "github:DefinitelyTyped/DefinitelyTyped/power-assert/power-assert.d.ts#695da95a2405a9d6aae11944174227e1e7716e37",
-    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/695da95a2405a9d6aae11944174227e1e7716e37/power-assert/power-assert.d.ts"
-  }
-}
