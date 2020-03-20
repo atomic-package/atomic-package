@@ -9,7 +9,7 @@
     "dist:main:css": "cpx \"./node_modules/@atomic-package/css/dist/css/atomic-package/**\" ./dist/css",
     "dist:theme:css": "cpx \"./node_modules/@atomic-package/css/dist/css/atomic-package-theme/**\" ./dist/css",
     "dist:font": "cpx -C \"./node_modules/@atomic-package/css/dist/font/**\" ./dist/font",
-    "dist:js": "cpx -C \"./node_modules/@atomic-package/core/dist/**\" ./dist/js"
+    "dist:js": "cpx \"./node_modules/@atomic-package/core/dist/**\" ./dist/js"
   },
   "files": [
     "README.md",
