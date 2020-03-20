@@ -63,6 +63,11 @@ atomic-package/
 
 [atomic-package/docs](https://github.com/atomic-package/docs)
 
+
+### Atomic Package Files Build
+
+`yarn dist` to compile all resources
+
 ## Creators
 
 **Daisuke Takayama**

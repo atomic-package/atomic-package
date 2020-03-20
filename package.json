@@ -4,11 +4,12 @@
   "description": "APB CSS (Atomic Parts Base CSS) + JavaScript framework.",
   "main": "dist/js/atomic-package.min.js",
   "scripts": {
-    "boot": "concurrent \"npm run boot:hugo\" \"npm run boot:gulp\"",
-    "boot:hugo": "docs/boot.sh",
-    "boot:gulp": "gulp",
-    "test": "karma start",
-    "test:mocha": "mocha --compilers ts:espower-typescript/guess test/**/*.ts"
+    "setup": "yarn && yarn dist",
+    "dist": "yarn dist:main:css && yarn dist:theme:css && yarn dist:js",
+    "dist:main:css": "cpx \"./node_modules/@atomic-package/css/dist/css/atomic-package/**\" ./dist/css",
+    "dist:theme:css": "cpx \"./node_modules/@atomic-package/css/dist/css/atomic-package-theme/**\" ./dist/css",
+    "dist:font": "cpx -C \"./node_modules/@atomic-package/css/dist/font/**\" ./dist/font",
+    "dist:js": "cpx -C \"./node_modules/@atomic-package/core/dist/**\" ./dist/js"
   },
   "files": [
     "README.md",
@@ -35,5 +36,12 @@
   "bugs": {
     "url": "https://github.com/atomic-package/atomic-package/issues"
   },
-  "homepage": "https://github.com/atomic-package/atomic-package#readme"
+  "homepage": "https://github.com/atomic-package/atomic-package#readme",
+  "dependencies": {
+    "@atomic-package/core": "^0.4.1",
+    "@atomic-package/css": "^0.2.1"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0"
+  }
 }
