@@ -31,7 +31,7 @@ bower install atomic-package
 
 **Install with [npm](https://www.npmjs.com):**
 ```
-npm install @atomic-package/core
+npm install atomic-package
 ```
 ### What's included
 
