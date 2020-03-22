@@ -1,6 +1,6 @@
 {
   "name": "atomic-package",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "APB CSS (Atomic Parts Base CSS) + JavaScript framework.",
   "main": "dist/js/atomic-package.min.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "dist:js": "cpx \"./node_modules/@atomic-package/core/dist/**\" ./dist/js"
   },
   "files": [
+    "CHANGELOG.md",
     "README.md",
     "dist/"
   ],
