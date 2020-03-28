@@ -6,6 +6,18 @@
 [![GitHub version](https://badge.fury.io/gh/atomic-package%2Fatomic-package.svg)](https://badge.fury.io/gh/atomic-package%2Fatomic-package)
 [![npm version](https://badge.fury.io/js/atomic-package.svg)](https://badge.fury.io/js/atomic-package)
 
+## Documentation
+
+![document_top_green](https://user-images.githubusercontent.com/1584153/76678374-9f899c00-661a-11ea-8fb7-9649847c2fc2.png)
+
+
+* [AtomicPackage Official](https://atomic-package.com/)
+
+### Documentation Repository
+
+[atomic-package/docs](https://github.com/atomic-package/docs)
+
+
 **APB CSS**
 http://apbcss.com/
 
@@ -51,18 +63,6 @@ atomic-package/
     ├── fontawesome-webfont.woff
     └── fontawesome-webfont.woff2
 ```
-
-## Documentation
-
-![document_top_green](https://user-images.githubusercontent.com/1584153/76678374-9f899c00-661a-11ea-8fb7-9649847c2fc2.png)
-
-
-* [AtomicPackage Official](https://atomic-package.com/)
-
-### Documentation Repository
-
-[atomic-package/docs](https://github.com/atomic-package/docs)
-
 
 ### Atomic Package Files Build
 
